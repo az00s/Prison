@@ -1,18 +1,35 @@
-﻿
+﻿@model IEnumerable<string>
 @{
-    Layout = null;
+    ViewBag.Title = "Index";
 }
 
-<!DOCTYPE html>
-
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
-</head>
-<body>
-    <div> 
-        <p4>This is the start page!</p4>
+<div class="container">
+    <div class="row">
+        <hr />
+        @using (Html.BeginForm("GetDetaineeByDate", "Home", null, FormMethod.Post))
+    {
+        <div class="form-group">
+            @Html.Label("Дата задержания", htmlAttributes: new { @class = "control-label col-md-3" })
+            <div class="col-md-7 input-group" id="datetimepicker10">
+                <span class="input-group-addon">
+                    <span class="glyphicon-calendar glyphicon"></span>
+                </span>
+                <input type="text" name="date" class="form-control" required data-readonly />
+                <script type="text/javascript">
+                    $(document).ready(function () {
+                        $('#datetimepicker10').datetimepicker({ pickTime: false, language: 'ru' });
+                    });
+                </script>
+            </div>
+            <button type="submit" class="btn btn-success">Показать</button>
+        </div>
+}
     </div>
-</body>
-</html>
+    </div>
+
+
+@section scripts {
+    <script type="text/javascript" src="/Scripts/moment-with-locales.min.js"></script>
+    <script type="text/javascript" src="/Scripts/bootstrap-datetimepicker.min.js"></script>
+    <link rel="stylesheet" href="/Content/bootstrap-datetimepicker.min.css" />
+}
