@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Prison.App.Business.Entities
+namespace Prison.Common.Entities
 {
     public class WorkPlace
     {

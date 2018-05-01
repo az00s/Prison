@@ -1,4 +1,4 @@
-﻿using Prison.App.Business;
+﻿using Prison.Common;
 using Prison.App.Data.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -27,7 +27,7 @@ namespace Prison.App.Data
 
         public void ErrorMethod()
         {
-            throw new StackOverflowException();
+            throw new NullReferenceException();
         }
     }
 }

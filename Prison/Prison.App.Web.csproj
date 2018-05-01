@@ -168,7 +168,7 @@
       <Name>Prison.App.Data</Name>
     </ProjectReference>
     <ProjectReference Include="..\Prison.Common\Prison.Common.csproj">
-      <Project>{a572a09c-eb78-4bc7-86dc-ac2e7d9fd66f}</Project>
+      <Project>{741e6c52-25c9-41cf-bf3c-675a8d982833}</Project>
       <Name>Prison.Common</Name>
     </ProjectReference>
   </ItemGroup>

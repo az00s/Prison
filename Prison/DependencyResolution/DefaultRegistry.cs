@@ -18,6 +18,8 @@
 namespace Prison.DependencyResolution {
     using Prison.App.Data;
     using Prison.App.Data.Interfaces;
+    using Prison.Common;
+    using Prison.Common.Interfaces;
     using StructureMap.Configuration.DSL;
     using StructureMap.Graph;
 	
@@ -32,6 +34,8 @@ namespace Prison.DependencyResolution {
 					scan.With(new ControllerConvention());
                 });
             For<IRepository>().Use<Repository>();
+            For<ILogger>().Use<Logger>();
+
         }
 
         #endregion

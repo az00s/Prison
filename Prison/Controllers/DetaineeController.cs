@@ -9,16 +9,16 @@ namespace Prison.Controllers
 {
     public class DetaineeController : Controller
     {
-        private IRepository _rep;
+        private IRepository db;
 
         public DetaineeController(IRepository rep)
         {
-            _rep = rep;
+            db = rep;
         }
         // GET: Home
         public ActionResult Index()
         {
-            var Detainees = _rep.Detainees;
+            var Detainees = db.Detainees;
 
             return View(Detainees);
         }

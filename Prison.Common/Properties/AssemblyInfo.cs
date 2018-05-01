@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // Следующий GUID служит для идентификации библиотеки типов, если этот проект будет видимым для COM
-[assembly: Guid("a572a09c-eb78-4bc7-86dc-ac2e7d9fd66f")]
+[assembly: Guid("741e6c52-25c9-41cf-bf3c-675a8d982833")]
 
 // Сведения о версии сборки состоят из следующих четырех значений:
 //
@@ -34,3 +34,6 @@ using System.Runtime.InteropServices;
 // [assembly: AssemblyVersion("1.0.*")]
 [assembly: AssemblyVersion("1.0.0.0")]
 [assembly: AssemblyFileVersion("1.0.0.0")]
+[assembly: log4net.Config.XmlConfigurator(ConfigFile = @"..\Prison.Common\Log.config", Watch = true)]
+
+

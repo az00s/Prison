@@ -1,4 +1,4 @@
-﻿namespace Prison.App.Business
+﻿namespace Prison.Common
 {
     public class Address
     {
