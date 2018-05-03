@@ -9,6 +9,7 @@ namespace Prison.Common
 {
     public class Detainee
     {
+        public int DetaineeID { get; set; }
         public string LastName { get; set; }
 
         public string FirstName { get; set; }
@@ -25,7 +26,7 @@ namespace Prison.Common
 
         public string Photo { get; set; }
 
-        public Address ResidenceAddress { get; set; }
+        public string ResidenceAddress { get; set; }
 
         public string AdditionalInfo { get; set; }
 

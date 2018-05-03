@@ -8,6 +8,8 @@ namespace Prison.Common
 {
     public class Detention
     {
+        public int DetentionID { get; set; }
+
         public DateTime DetentionDate { get; set; }
 
         public DateTime DateOfDelivery { get; set; }
@@ -26,7 +28,7 @@ namespace Prison.Common
 
         public Employee DetainedByWhom { get; set; }
 
-        public Address AddressOfStay { get; set; }
+        public string AddressOfStay { get; set; }
 
 
     }

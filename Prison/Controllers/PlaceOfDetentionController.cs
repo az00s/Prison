@@ -9,13 +9,13 @@ using System.Web.Mvc;
 
 namespace Prison.Controllers
 {
-    public class EmployeeController : Controller
+    public class PlaceOfDetentionController : Controller
     {
         private static ILogger log;
 
         private IRepository db;
 
-        public EmployeeController(IRepository rep, ILogger logger)
+        public PlaceOfDetentionController(IRepository rep, ILogger logger)
         {
 
             Helper.NullChecking(rep, logger);
@@ -23,19 +23,12 @@ namespace Prison.Controllers
             db = rep;
             log = logger;
         }
-        // GET: Home
+
         public ActionResult Index()
         {
-            var Employees = db.Employees;
+            var Places = db.PlacesOfDetention;
 
-            return View(Employees);
-        }
-
-        public ActionResult Details(int id)
-        {
-            var Employee = db.Employees.First(d => d.EmployeeID == id);
-
-            return View(Employee);
+            return View(Places);
         }
     }
 }

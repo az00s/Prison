@@ -6,6 +6,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Prison.Common.Interfaces;
+using Prison.Common.Infrastructure;
 
 namespace Prison.Controllers
 {
@@ -17,6 +18,9 @@ namespace Prison.Controllers
 
         public HomeController(IRepository rep, ILogger logger)
         {
+            
+            Helper.NullChecking(rep,logger);
+
             db = rep;
             log = logger;
         }
@@ -36,7 +40,7 @@ namespace Prison.Controllers
         {
             var Detainees = db.Detainees.Where(d => d.Detentions.Any(dt => dt.DetentionDate == date));
 
-            return View(Detainees);
+            return View("DetaineeList",Detainees);
         }
     }
 }
