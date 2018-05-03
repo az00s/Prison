@@ -34,7 +34,7 @@ namespace Prison.DependencyResolution {
 					scan.With(new ControllerConvention());
                 });
             For<IRepository>().Use<Repository>();
-            For<ILogger>().Use<Logger>();
+            ForSingletonOf<ILogger>().Use<Logger>();
 
         }
 

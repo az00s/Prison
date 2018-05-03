@@ -48,12 +48,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Entities\Address.cs" />
     <Compile Include="Entities\Detainee.cs" />
     <Compile Include="Entities\Detention.cs" />
     <Compile Include="Entities\Employee.cs" />
     <Compile Include="Entities\MaritalStatus.cs" />
+    <Compile Include="Entities\PlaceOfDetention.cs" />
     <Compile Include="Entities\WorkPlace.cs" />
+    <Compile Include="Infrastructure\Helper.cs" />
     <Compile Include="Interfaces\ILogger.cs" />
     <Compile Include="Logger.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

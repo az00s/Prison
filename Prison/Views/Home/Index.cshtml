@@ -6,18 +6,18 @@
 <div class="container">
     <div class="row">
         <hr />
-        @using (Html.BeginForm("GetDetaineeByDate", "Home", null, FormMethod.Post))
+        @using (Html.BeginForm("GetDetaineeByDate", "Home", FormMethod.Post))
     {
         <div class="form-group">
             @Html.Label("Дата задержания", htmlAttributes: new { @class = "control-label col-md-3" })
-            <div class="col-md-7 input-group" id="datetimepicker10">
+            <div class="col-md-7 input-group" id="datetimepicker">
                 <span class="input-group-addon">
                     <span class="glyphicon-calendar glyphicon"></span>
                 </span>
-                <input type="text" name="date" class="form-control" required data-readonly />
+                <input type="text" name="date" class="form-control" required />
                 <script type="text/javascript">
                     $(document).ready(function () {
-                        $('#datetimepicker10').datetimepicker({ pickTime: false, language: 'ru' });
+                        $('#datetimepicker').datetimepicker({ pickTime: false, language: 'ru' });
                     });
                 </script>
             </div>

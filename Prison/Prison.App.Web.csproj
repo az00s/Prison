@@ -124,6 +124,7 @@
     <Compile Include="Controllers\DetentionController.cs" />
     <Compile Include="Controllers\EmployeeController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\PlaceOfDetentionController.cs" />
     <Compile Include="DependencyResolution\ControllerConvention.cs" />
     <Compile Include="DependencyResolution\DefaultRegistry.cs" />
     <Compile Include="DependencyResolution\IoC.cs" />
@@ -147,6 +148,12 @@
     <Content Include="Views\Detention\Index.cshtml" />
     <Content Include="Views\Employee\Index.cshtml" />
     <Content Include="Views\Detainee\Index.cshtml" />
+    <Content Include="Views\PlaceOfDetention\Index.cshtml" />
+    <Content Include="Views\Detainee\Details.cshtml" />
+    <Content Include="Views\Employee\Details.cshtml" />
+    <Content Include="Views\Detention\Details.cshtml" />
+    <Content Include="Views\Detainee\Create.cshtml" />
+    <Content Include="Views\Home\DetaineeList.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
