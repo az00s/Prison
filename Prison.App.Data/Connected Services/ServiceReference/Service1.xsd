@@ -12,7 +12,6 @@
       <xs:element minOccurs="0" name="BlurbHeader" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="BlurbID" type="xs:int" />
       <xs:element minOccurs="0" name="Image" nillable="true" type="xs:base64Binary" />
-      <xs:element minOccurs="0" name="ImageUrl" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="Blurb" nillable="true" type="tns:Blurb" />

@@ -11,7 +11,7 @@ namespace Prison.Service.Contracts
     public interface IAdContract
     {
         [OperationContract]
-        IEnumerable<Blurb> GetAds();
+        IEnumerable<Blurb> GetRandomElementsFromRep(int numOfElements);
         
     }
 }

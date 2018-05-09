@@ -8,11 +8,11 @@ namespace Prison.Service.Services
 {
     public class AdService:IAdContract
     {
-        public IEnumerable<Blurb> GetAds()
+        public IEnumerable<Blurb> GetRandomElementsFromRep(int numOfElements)
         {
             Repository rep = new Repository();
 
-            var list = rep.GetRandomElementsFromRep(3);
+            var list = rep.GetRandomElementsFromRep(numOfElements);
 
             //list = null;
             if (list == null)

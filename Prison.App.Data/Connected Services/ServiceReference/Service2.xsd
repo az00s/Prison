@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://Prison.Service.Contracts" elementFormDefault="qualified" targetNamespace="http://Prison.Service.Contracts" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:import schemaLocation="http://localhost:64585/Service.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Prison.Service" />
-  <xs:element name="GetAds">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetAdsResponse">
+  <xs:element name="GetRandomElementsFromRep">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Prison.Service" minOccurs="0" name="GetAdsResult" nillable="true" type="q1:ArrayOfBlurb" />
+        <xs:element minOccurs="0" name="numOfElements" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRandomElementsFromRepResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Prison.Service" minOccurs="0" name="GetRandomElementsFromRepResult" nillable="true" type="q1:ArrayOfBlurb" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

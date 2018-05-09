@@ -21,7 +21,7 @@ namespace Prison.App.Web.Controllers
         public AdvertismentController(ILogger log, IAdvertismentProvider adService)
         {
             ArgumentHelper.ThrowExceptionIfNull(log, "ILogger");
-            ArgumentHelper.ThrowExceptionIfNull(adService, "IAdService");
+            ArgumentHelper.ThrowExceptionIfNull(adService, "IAdvertismentProvider");
 
             _adService = adService;
             _log = log;
@@ -30,20 +30,8 @@ namespace Prison.App.Web.Controllers
         // GET: Advertisment
         public ActionResult GetAdUnit()
         {
-            IEnumerable<Blurb> listOfBlurbs;
-            try
-            {
-                listOfBlurbs = _adService.GetAds();
-                //throw new FaultException();
-            }
-            catch (FaultException ex)
-            {
-                _log.Error(ex.Message);
-
-                listOfBlurbs = new List<Blurb> {
-                    new Blurb { BlurbHeader = "", BlurbContent = "Мы против рекламы" }
-                };
-            }
+            IEnumerable<Blurb> listOfBlurbs = _adService.GetRandomElementsFromRep(3);
+            
             return PartialView("AddUnit",listOfBlurbs);
         }
 

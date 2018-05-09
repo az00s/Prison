@@ -7,16 +7,16 @@
       <xsd:import schemaLocation="http://localhost:64585/Service.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Prison.Service" />
     </xsd:schema>
   </wsdl:types>
-  <wsdl:message name="IAdContract_GetAds_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetAds" />
+  <wsdl:message name="IAdContract_GetRandomElementsFromRep_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRandomElementsFromRep" />
   </wsdl:message>
-  <wsdl:message name="IAdContract_GetAds_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetAdsResponse" />
+  <wsdl:message name="IAdContract_GetRandomElementsFromRep_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRandomElementsFromRepResponse" />
   </wsdl:message>
   <wsdl:portType name="IAdContract">
-    <wsdl:operation name="GetAds">
-      <wsdl:input wsaw:Action="http://Prison.Service.Contracts/IAdContract/GetAds" message="tns:IAdContract_GetAds_InputMessage" />
-      <wsdl:output wsaw:Action="http://Prison.Service.Contracts/IAdContract/GetAdsResponse" message="tns:IAdContract_GetAds_OutputMessage" />
+    <wsdl:operation name="GetRandomElementsFromRep">
+      <wsdl:input wsaw:Action="http://Prison.Service.Contracts/IAdContract/GetRandomElementsFromRep" message="tns:IAdContract_GetRandomElementsFromRep_InputMessage" />
+      <wsdl:output wsaw:Action="http://Prison.Service.Contracts/IAdContract/GetRandomElementsFromRepResponse" message="tns:IAdContract_GetRandomElementsFromRep_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
 </wsdl:definitions>

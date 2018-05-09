@@ -14,9 +14,9 @@ namespace Prison.App.Business.Providers
             _proxy = proxy;
         }
 
-        public IEnumerable<Blurb> GetAds()
+        public IEnumerable<Blurb> GetRandomElementsFromRep(int numOfElements)
         {
-            return _proxy.GetAds();
+            return _proxy.GetRandomElementsFromRep(numOfElements);
         }
 
     }

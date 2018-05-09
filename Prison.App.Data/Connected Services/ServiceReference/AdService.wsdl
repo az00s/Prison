@@ -4,8 +4,8 @@
   <wsdl:types />
   <wsdl:binding name="BasicHttpBinding_IAdContract" type="i0:IAdContract">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <wsdl:operation name="GetAds">
-      <soap:operation soapAction="http://Prison.Service.Contracts/IAdContract/GetAds" style="document" />
+    <wsdl:operation name="GetRandomElementsFromRep">
+      <soap:operation soapAction="http://Prison.Service.Contracts/IAdContract/GetRandomElementsFromRep" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
