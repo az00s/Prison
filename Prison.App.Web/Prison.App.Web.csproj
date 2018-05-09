@@ -60,6 +60,7 @@
     <Reference Include="StructureMap.Web, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\structuremap.web.3.1.0.133\lib\net40\StructureMap.Web.dll</HintPath>
     </Reference>
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -122,6 +123,7 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\StructuremapMvc.cs" />
+    <Compile Include="Controllers\AdvertismentController.cs" />
     <Compile Include="Controllers\DetaineeController.cs" />
     <Compile Include="Controllers\DetentionController.cs" />
     <Compile Include="Controllers\EmployeeController.cs" />
@@ -157,6 +159,8 @@
     <Content Include="Views\Detention\Details.cshtml" />
     <Content Include="Views\Detainee\Create.cshtml" />
     <Content Include="Views\Home\DetaineeList.cshtml" />
+    <Content Include="Views\Home\DateNavigation.cshtml" />
+    <Content Include="Views\Advertisment\AddUnit.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -167,6 +171,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+    <Folder Include="ViewModels\" />
     <Folder Include="Views\Default\" />
   </ItemGroup>
   <ItemGroup>

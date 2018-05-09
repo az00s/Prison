@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Prison.App.Common.Helpers
 {
-    public static class NullCheckingHelper
+    public static class ArgumentHelper
     {   
-        public static void NullChecking(object obj,string name)
+        public static void ThrowExceptionIfNull(object obj,string name)
         {
             
                 if (obj == null) throw new ArgumentNullException(name);

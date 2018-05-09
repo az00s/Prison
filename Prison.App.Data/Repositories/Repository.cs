@@ -7,6 +7,8 @@ namespace Prison.App.Data
 {
     public class Repository : IRepository
     {
+        
+
         public Repository()
         {
             Detainees = new List<Detainee>() { new Detainee { DetaineeID=1,LastName = "Tesla", FirstName = "Nikola", Detentions = new List<Detention> { new Detention { DetentionDate = DateTime.Parse("27-04-2018") } } },

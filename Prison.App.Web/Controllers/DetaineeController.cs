@@ -16,8 +16,8 @@ namespace Prison.App.Web.Controllers
         public DetaineeController(IRepository rep, ILogger logger)
         {
 
-            NullCheckingHelper.NullChecking(rep, "IRepository");
-            NullCheckingHelper.NullChecking(logger, "ILogger");
+            ArgumentHelper.ThrowExceptionIfNull(rep, "IRepository");
+            ArgumentHelper.ThrowExceptionIfNull(logger, "ILogger");
 
             db = rep;
             log = logger;

@@ -74,13 +74,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DependencyResolution\PrisonRegistry.cs" />
+    <Compile Include="DependencyResolution\PrisonAppDependencyRegistry.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Prison.App.Business\Prison.App.Business.csproj">
+      <Project>{EBA13B73-D029-4CB5-8F9C-A25AA2BD3A18}</Project>
+      <Name>Prison.App.Business</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Prison.App.Common\Prison.App.Common.csproj">
       <Project>{741E6C52-25C9-41CF-BF3C-675A8D982833}</Project>
       <Name>Prison.App.Common</Name>

@@ -12,17 +12,19 @@ namespace Prison.App.Common.Loggers
     public class Logger:ILogger
     {
         private const string FILE_NAME = "Log.config";
-        private const string LOGGER_NAME = "RollingLogger";
+        private const string LOGGER_NAME = "PrisonLogger";
 
-        ILog logger;
+
+        private  readonly ILog logger;
 
         public Logger()
         {
             ConfigureLogger();
             logger = LogManager.GetLogger(LOGGER_NAME);
+            
         }
 
-        void ConfigureLogger()
+        private void ConfigureLogger()
         {
             //get base directory
             string baseDirectory = AppDomain.CurrentDomain.SetupInformation.PrivateBinPath;
