@@ -12,9 +12,9 @@ namespace Prison.App.Common.Entities
 
         public DateTime DetentionDate { get; set; }
 
-        public DateTime DateOfDelivery { get; set; }
+        public DateTime DeliveryDate { get; set; }
 
-        public DateTime ReleaseDate { get; set; }
+        public DateTime ReleasеDate { get; set; }
 
         public string PlaceOfDetention { get; set; }
 
@@ -22,13 +22,13 @@ namespace Prison.App.Common.Entities
 
         public decimal PaidAmount { get; set; }
 
-        public Employee DeliveredByWhom { get; set; }
+        public int DeliveredByWhomID { get; set; }
 
-        public Employee ReleasedByWhom { get; set; }
+        public int ReleasedByWhomID { get; set; }
 
-        public Employee DetainedByWhom { get; set; }
+        public int DetainedByWhomID { get; set; }
 
-        public string AddressOfStay { get; set; }
+        public int PlaceOfStayID { get; set; }
 
 
     }

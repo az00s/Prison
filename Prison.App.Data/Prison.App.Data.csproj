@@ -68,8 +68,13 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
     <Compile Include="DependencyResolution\PrisonAppDataRegistry.cs" />
-    <Compile Include="Interfaces\IAdService.cs" />
-    <Compile Include="Interfaces\IRepository.cs" />
+    <Compile Include="Repositories\Common\IDataCommonOperation.cs" />
+    <Compile Include="Repositories\DetaineeRepository.cs" />
+    <Compile Include="Repositories\DetentionRepository.cs" />
+    <Compile Include="Repositories\EmployeeRepository.cs" />
+    <Compile Include="Repositories\PlaceOfStayRepository.cs" />
+    <Compile Include="Services\IAdService.cs" />
+    <Compile Include="Repositories\IRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\Repository.cs" />
     <Compile Include="Services\AdService.cs" />

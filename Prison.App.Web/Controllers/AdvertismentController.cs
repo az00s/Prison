@@ -1,13 +1,8 @@
 ﻿using Prison.App.Business.Interfaces;
+using Prison.App.Common.Entities;
 using Prison.App.Common.Helpers;
 using Prison.App.Common.Interfaces;
-using Prison.App.Data.Interfaces;
-using Prison.App.Data.ServiceReference;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.ServiceModel;
-using System.Web;
 using System.Web.Mvc;
 
 namespace Prison.App.Web.Controllers
@@ -30,7 +25,7 @@ namespace Prison.App.Web.Controllers
         // GET: Advertisment
         public ActionResult GetAdUnit()
         {
-            IEnumerable<Blurb> listOfBlurbs = _adService.GetRandomElementsFromRep(3);
+            IEnumerable<IBlurb> listOfBlurbs = _adService.GetRandomElementsFromRep(3);
             
             return PartialView("AddUnit",listOfBlurbs);
         }

@@ -1,0 +1,55 @@
+﻿
+@{
+    Layout = null;
+}
+
+@*@using (Html.BeginForm("GetDetaineeByDate", "Home", FormMethod.Post))
+{*@
+    <div class="form-group">
+        @Html.Label("Дата задержания", htmlAttributes: new { @class = "control-label col-md-3" })
+        <div class="col-md-7 input-group" id="datetimepicker">
+            <span class="input-group-addon">
+                <span class="glyphicon-calendar glyphicon"></span>
+            </span>
+            <input type="text" name="date" id="dateField" class="form-control" required />
+            <script type="text/javascript">
+                $(document).ready(function () {
+                    $('#datetimepicker').datetimepicker({ pickTime: false, language: 'ru',format:'DD.MM.Y' });
+                    });
+            </script>
+        </div>
+        <button type="submit" id="GetDetaineeBtn" class="btn btn-success">Показать</button>
+    </div>
+@*}*@
+
+<script>
+    
+    
+    $(document).ready(function ()
+    {
+        $("#GetDetaineeBtn").click(function () {
+
+            var WrongDate = $("#dateField").val();
+            var day = WrongDate.substring(3,5);
+            var month = WrongDate.substring(0, 2);
+            var Year = WrongDate.substring(6, 10);
+            var RightDate = day + "." + month +"."+ Year
+
+            $.ajax({
+
+                url: "@Url.Action("GetDetaineeByDate", "Home")",
+                data: {
+                    date: RightDate
+                },
+                success: function (data) {
+
+                    $('#ResultTable').html(data);
+
+                }
+
+           
+            });
+        });
+
+    });
+</script>

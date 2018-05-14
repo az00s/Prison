@@ -105,6 +105,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\bootstrap-datetimepicker.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
@@ -112,12 +113,15 @@
     <Content Include="Global.asax">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Scripts\bootstrap-datetimepicker.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\moment-with-locales.min.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -128,7 +132,7 @@
     <Compile Include="Controllers\DetentionController.cs" />
     <Compile Include="Controllers\EmployeeController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\PlaceOfDetentionController.cs" />
+    <Compile Include="Controllers\PlaceOfStayController.cs" />
     <Compile Include="DependencyResolution\ControllerConvention.cs" />
     <Compile Include="DependencyResolution\DefaultRegistry.cs" />
     <Compile Include="DependencyResolution\IoC.cs" />
@@ -138,6 +142,7 @@
       <DependentUpon>Global.asax</DependentUpon>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
+    <Compile Include="Helpers\ViewHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -153,14 +158,23 @@
     <Content Include="Views\Detention\Index.cshtml" />
     <Content Include="Views\Employee\Index.cshtml" />
     <Content Include="Views\Detainee\Index.cshtml" />
-    <Content Include="Views\PlaceOfDetention\Index.cshtml" />
+    <Content Include="Views\PlaceOfStay\Index.cshtml" />
     <Content Include="Views\Detainee\Details.cshtml" />
     <Content Include="Views\Employee\Details.cshtml" />
     <Content Include="Views\Detention\Details.cshtml" />
     <Content Include="Views\Detainee\Create.cshtml" />
     <Content Include="Views\Home\DetaineeList.cshtml" />
-    <Content Include="Views\Home\DateNavigation.cshtml" />
+    <Content Include="Views\Shared\DateNavigation.cshtml" />
     <Content Include="Views\Advertisment\AddUnit.cshtml" />
+    <Content Include="Views\Detainee\Edit.cshtml" />
+    <Content Include="Views\Detainee\Delete.cshtml" />
+    <Content Include="Views\Employee\Create.cshtml" />
+    <Content Include="Views\Employee\Edit.cshtml" />
+    <Content Include="Views\Employee\Delete.cshtml" />
+    <Content Include="Views\PlaceOfStay\Details.cshtml" />
+    <Content Include="Views\PlaceOfStay\Create.cshtml" />
+    <Content Include="Views\PlaceOfStay\Edit.cshtml" />
+    <Content Include="Views\PlaceOfStay\Delete.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -184,7 +198,7 @@
       <Name>Prison.App.Common</Name>
     </ProjectReference>
     <ProjectReference Include="..\Prison.App.Data\Prison.App.Data.csproj">
-      <Project>{51e26c3c-69c1-4d88-9cbd-7865b9ce7d0c}</Project>
+      <Project>{51E26C3C-69C1-4D88-9CBD-7865B9CE7D0C}</Project>
       <Name>Prison.App.Data</Name>
     </ProjectReference>
     <ProjectReference Include="..\Prison.App.Dependency\Prison.App.Dependency.csproj">

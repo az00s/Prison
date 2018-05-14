@@ -11,13 +11,13 @@
 namespace Prison.App.Data.ServiceReference {
     using System.Runtime.Serialization;
     using System;
-    
-    
+    using Prison.App.Common.Entities;
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Blurb", Namespace="http://schemas.datacontract.org/2004/07/Prison.Service")]
     [System.SerializableAttribute()]
-    public partial class Blurb : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+    public partial class Blurb : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged,IBlurb {
         
         [System.NonSerializedAttribute()]
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;

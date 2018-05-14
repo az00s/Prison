@@ -48,6 +48,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -60,15 +61,21 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DependencyResolution\PrisonAppBusinessRegistry.cs" />
-    <Compile Include="Interfaces\IAdvertismentProvider.cs" />
+    <Compile Include="Providers\DataProvider.cs" />
+    <Compile Include="Providers\IAdvertismentProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Providers\AdvertismentProvider.cs" />
+    <Compile Include="Providers\IDataProvider.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Prison.App.Common\Prison.App.Common.csproj">
+      <Project>{741E6C52-25C9-41CF-BF3C-675A8D982833}</Project>
+      <Name>Prison.App.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Prison.App.Data\Prison.App.Data.csproj">
       <Project>{51E26C3C-69C1-4D88-9CBD-7865B9CE7D0C}</Project>
       <Name>Prison.App.Data</Name>

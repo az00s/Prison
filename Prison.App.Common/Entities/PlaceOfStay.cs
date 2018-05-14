@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Prison.App.Common.Entities
 {
-    public class PlaceOfDetention
+    public class PlaceOfStay
     {
         public int PlaceID { get; set; }
         public string Address { get; set; }

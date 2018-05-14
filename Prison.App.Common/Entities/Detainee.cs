@@ -14,9 +14,9 @@ namespace Prison.App.Common.Entities
 
         public DateTime BirstDate { get; set; }
 
-        public MaritalStatus MaritalStatus { get; set; }
+        public int MaritalStatusID { get; set; }
 
-        public WorkPlace WorkPlace { get; set; }
+        public string WorkPlace { get; set; }
 
         public ICollection<string> PhoneNumbers { get; set; }
 
@@ -24,8 +24,8 @@ namespace Prison.App.Common.Entities
 
         public string ResidenceAddress { get; set; }
 
-        public string AdditionalInfo { get; set; }
+        public string AdditionalData { get; set; }
 
-        public ICollection<Detention> Detentions { get; set; }
+        public IEnumerable<Detention> Detentions { get; set; }
     }
 }

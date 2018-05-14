@@ -27,7 +27,7 @@
             @Html.DisplayNameFor(model => model.ResidenceAddress)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.AdditionalInfo)
+            @Html.DisplayNameFor(model => model.AdditionalData)
         </th>
         <th></th>
     </tr>
@@ -54,7 +54,7 @@
                 @Html.DisplayFor(modelItem => item.ResidenceAddress)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.AdditionalInfo)
+                @Html.DisplayFor(modelItem => item.AdditionalData)
             </td>
         </tr>
     }
@@ -62,4 +62,4 @@
 
 </table>
 
-@Html.ActionLink("Back", "Index", "Home")
+<a href="javascript:void(0);" onclick="history.go(-1);">Back</a>

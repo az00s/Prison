@@ -1,7 +1,7 @@
-﻿using Prison.App.Common.Entities;
+﻿using Prison.App.Business.Providers;
+using Prison.App.Common.Entities;
 using Prison.App.Common.Helpers;
 using Prison.App.Common.Interfaces;
-using Prison.App.Data.Interfaces;
 using System.Linq;
 using System.Web.Mvc;
 
@@ -11,12 +11,12 @@ namespace Prison.App.Web.Controllers
     {
         private static ILogger log;
 
-        private IRepository db;
+        private IDataProvider db;
 
-        public DetaineeController(IRepository rep, ILogger logger)
+        public DetaineeController(IDataProvider rep, ILogger logger)
         {
 
-            ArgumentHelper.ThrowExceptionIfNull(rep, "IRepository");
+            ArgumentHelper.ThrowExceptionIfNull(rep, "IDataProvider");
             ArgumentHelper.ThrowExceptionIfNull(logger, "ILogger");
 
             db = rep;
@@ -25,14 +25,14 @@ namespace Prison.App.Web.Controllers
         // GET: Home
         public ActionResult Index()
         {
-            var Detainees = db.Detainees;
+            var Detainees = db.Detainees.GetAllRecordsFromTable();
 
             return View(Detainees);
         }
 
         public ActionResult Details(int id)
         {
-            var Detainee = db.Detainees.First(d=>d.DetaineeID == id);
+            var Detainee = db.Detainees.GetAllRecordsFromTable().First(d=>d.DetaineeID == id);
 
             return View(Detainee);
         }
@@ -47,10 +47,48 @@ namespace Prison.App.Web.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Detainees.Add(dtn);
+                db.Detainees.Create(dtn);
             }
 
-            return View("Index",db.Detainees);
+            return View("Index", db.Detainees.GetAllRecordsFromTable());
+        }
+
+        public ActionResult Edit(int id)
+        {
+
+            var Detainee = db.Detainees.GetAllRecordsFromTable().First(d => d.DetaineeID == id);
+
+            return View(Detainee);
+        }
+
+        [HttpPost]
+        public ActionResult Edit(Detainee dtn)
+        {
+            if (ModelState.IsValid)
+            {
+                db.Detainees.Update(dtn);
+            }
+
+            return View("Index", db.Detainees.GetAllRecordsFromTable());
+        }
+
+       
+        public ActionResult Delete(int id)
+        {
+
+            var Detainee = db.Detainees.GetAllRecordsFromTable().First(d => d.DetaineeID == id);
+
+            return View(Detainee);
+        }
+
+        [HttpPost]
+        public ActionResult DeleteFromDb(int id)
+        {
+           
+                db.Detainees.Delete(id);
+            
+
+            return View("Index", db.Detainees.GetAllRecordsFromTable());
         }
     }
 }
