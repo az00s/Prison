@@ -17,7 +17,7 @@ namespace Prison.App.Common.Entities
         public string Patronymic { get; set; }
 
         
-        public string Position { get; set; }
+        public int PositionID { get; set; }
         public string Details { get; set; }
     }
 }

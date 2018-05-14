@@ -21,7 +21,7 @@
             @Html.DisplayNameFor(model => model.Patronymic)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Position)
+            @Html.DisplayNameFor(model => model.PositionID)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Details)
@@ -41,15 +41,15 @@
             @Html.DisplayFor(modelItem => item.Patronymic)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Position)
+            @Html.DisplayFor(modelItem => item.PositionID)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Details)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            @Html.ActionLink("Edit", "Edit", new { id=item.EmployeeID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.EmployeeID }) |
+            @Html.ActionLink("Delete", "Delete", new {  id=item.EmployeeID })
         </td>
     </tr>
 }

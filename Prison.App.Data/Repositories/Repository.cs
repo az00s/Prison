@@ -1,41 +1,56 @@
 ﻿using Prison.App.Common.Entities;
 using Prison.App.Data.Interfaces;
+using Prison.App.Data.Repositories;
+using Prison.App.Data.Repositories.Common;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.IO;
 
 namespace Prison.App.Data
 {
     public class Repository : IRepository
     {
-        
+        //config file name
+        private const string FILE_NAME = "app.config";
+
+        private const string CONNECTION_NAME = "PrisonConnection";
+
+        private string _connection;
 
         public Repository()
         {
-            Detainees = new List<Detainee>() { new Detainee { DetaineeID=1,LastName = "Tesla", FirstName = "Nikola", Detentions = new List<Detention> { new Detention { DetentionDate = DateTime.Parse("27-04-2018") } } },
-                                              new Detainee { DetaineeID=2,LastName = "Einstein", FirstName = "Albert", Detentions = new List<Detention> { new Detention { DetentionDate = DateTime.Parse("28-04-2018") } } },
-                                              new Detainee { DetaineeID=3,LastName = "Felini", FirstName = "Federico", Detentions = new List<Detention> { new Detention { DetentionDate = DateTime.Parse("28-04-2018") } } }};
-
-            Detentions = new List<Detention>() { new Detention { DetentionID=1,DetentionDate = DateTime.Parse("27-04-2018") },
-                                                new Detention { DetentionID=2,DetentionDate = DateTime.Parse("28-04-2018") },
-                                                new Detention { DetentionID=3,DetentionDate = DateTime.Parse("28-04-2018") }};
-
-            Employees= new List<Employee>() { new Employee { EmployeeID=1,LastName = "Mentov", FirstName = "Ivan", Position = "Overseer" },
-                                            new Employee { EmployeeID=1,LastName = "Shunyavka", FirstName = "Vasya", Position = "Administrator" },
-                                            new Employee { EmployeeID=1,LastName = "Popov", FirstName = "Igor", Position = "Accountant" }};
-
-            PlacesOfDetention = new List<PlaceOfDetention> { new PlaceOfDetention { PlaceID=1,Address= "212011, г. Могилев, ул. Крупской, 99б" },
-                                                            new PlaceOfDetention { PlaceID=2,Address= "213810, г. Бобруйск, ул. Советская, 7а" },
-                                                            new PlaceOfDetention { PlaceID=3,Address= "213320, г. Быхов, ул. Авиационная, 11" }};
+            InitializeRepository();
         }
+
+        private void InitializeRepository()
+        {
+            //get the full absolute path of config file
+            string absolutePath = Path.Combine
+                (
+                AppDomain.CurrentDomain.SetupInformation.PrivateBinPath,
+                FILE_NAME
+                );
+
+            //build configuration object 
+            Configuration conf = ConfigurationManager.OpenMappedExeConfiguration(
+                new ExeConfigurationFileMap { ExeConfigFilename = absolutePath }, ConfigurationUserLevel.None);
+
+            //get the connection string from section of config file
+            _connection = conf.ConnectionStrings.ConnectionStrings[CONNECTION_NAME].ConnectionString;
+
+             
+        }
+
+        
     
-    
-        public ICollection<Detainee> Detainees { get; set; }
+        public IDataCommonOperation<Detainee> Detainees { get { return new DetaineeRepository(_connection); } }
 
         public ICollection<Detention> Detentions { get; set; } 
 
-        public ICollection<Employee> Employees { get; set; }
+        public IDataCommonOperation<Employee> Employees { get { return new EmployeeRepository(_connection); } }
 
-        public ICollection<PlaceOfDetention> PlacesOfDetention { get; set; }
+        public IDataCommonOperation<PlaceOfStay> PlacesOfStay { get { return new PlaceOfStayRepository(_connection); } }
 
        
 

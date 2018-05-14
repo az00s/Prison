@@ -10,6 +10,7 @@ namespace Prison.App.Common.DependencyResolution
         {
 
             ForSingletonOf<ILogger>().Use<Logger>();
+            
         }
     }
 }

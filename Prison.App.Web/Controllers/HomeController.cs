@@ -1,12 +1,10 @@
-﻿using Prison.App.Common.Helpers;
+﻿using Prison.App.Business.Providers;
+using Prison.App.Common.Entities;
+using Prison.App.Common.Helpers;
 using Prison.App.Common.Interfaces;
-using Prison.App.Data.Interfaces;
-using Prison.App.Data.ServiceReference;
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
-using System.ServiceModel;
 using System.Web.Mvc;
 
 namespace Prison.App.Web.Controllers
@@ -15,14 +13,14 @@ namespace Prison.App.Web.Controllers
     {
         private ILogger log;
 
-        private IRepository db;
+        private IDataProvider db;
 
         
 
-        public HomeController(IRepository rep, ILogger logger)
+        public HomeController(IDataProvider rep, ILogger logger)
         {
 
-            ArgumentHelper.ThrowExceptionIfNull(rep, "IRepository");
+            ArgumentHelper.ThrowExceptionIfNull(rep, "IDataProvider");
             ArgumentHelper.ThrowExceptionIfNull(logger, "ILogger");
 
             db = rep;
@@ -33,16 +31,17 @@ namespace Prison.App.Web.Controllers
         {
             //log.Info("Info message");
             //_rep.ErrorMethod();
-            var DetentionDates = db.Detentions.Select(d => d.DetentionDate.ToShortDateString());
+            //var DetentionDates = db.Detentions.Select(d => d.DetentionDate.ToShortDateString());
 
-            return View(DetentionDates);
+            return View();
         }
 
         public ActionResult GetDetaineeByDate(DateTime date)
         {
-            var Detainees = db.Detainees.Where(d => d.Detentions.Any(dt => dt.DetentionDate == date));
+            IEnumerable<Detainee> Detainees = db.Detainees.GetAllRecordsFromTable();
+            var result=Detainees.Where(dt=>dt.Detentions.Any(dtn=>dtn.DetentionDate== date));
 
-            return View("DetaineeList",Detainees);
+            return View("DetaineeList", result);
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿@model IEnumerable<PlaceOfDetention>
+﻿@model IEnumerable<PlaceOfStay>
 
 @{
     ViewBag.Title = "Index";
@@ -23,9 +23,9 @@
             @Html.DisplayFor(modelItem => item.Address)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            @Html.ActionLink("Edit", "Edit", new {id=item.PlaceID }) |
+            @Html.ActionLink("Details", "Details", new { id = item.PlaceID }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.PlaceID })
         </td>
     </tr>
 }

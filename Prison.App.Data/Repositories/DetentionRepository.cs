@@ -4,14 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Prison.App.Common.Entities
+namespace Prison.App.Data.Repositories
 {
-
-    public enum MaritalStatus
+    class DetentionRepository
     {
-        SINGLE,
-        MARRIED,
-        DIVORCED,
-        WIDOWED
     }
 }

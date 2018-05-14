@@ -1,4 +1,6 @@
-﻿using Prison.App.Common.Helpers;
+﻿using Prison.App.Business.Providers;
+using Prison.App.Common.Entities;
+using Prison.App.Common.Helpers;
 using Prison.App.Common.Interfaces;
 using Prison.App.Data.Interfaces;
 using System.Linq;
@@ -10,30 +12,85 @@ namespace Prison.App.Web.Controllers
     {
         private static ILogger log;
 
-        private IRepository db;
+        private IDataProvider db;
 
-        public EmployeeController(IRepository rep, ILogger logger)
+        public EmployeeController(IDataProvider rep, ILogger logger)
         {
 
-            ArgumentHelper.ThrowExceptionIfNull(rep, "IRepository");
+            ArgumentHelper.ThrowExceptionIfNull(rep, "IDataProvider");
             ArgumentHelper.ThrowExceptionIfNull(logger, "ILogger");
 
             db = rep;
             log = logger;
         }
-        // GET: Home
+        
+
         public ActionResult Index()
         {
-            var Employees = db.Employees;
+            var Employees = db.Employees.GetAllRecordsFromTable();
 
             return View(Employees);
         }
 
         public ActionResult Details(int id)
         {
-            var Employee = db.Employees.First(d => d.EmployeeID == id);
+            var Employee = db.Employees.GetAllRecordsFromTable().First(d => d.EmployeeID == id);
 
             return View(Employee);
+        }
+
+        public ActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Create(Employee emp)
+        {
+            if (ModelState.IsValid)
+            {
+                db.Employees.Create(emp);
+            }
+
+            return View("Index", db.Employees.GetAllRecordsFromTable());
+        }
+
+        public ActionResult Edit(int id)
+        {
+
+            var emp = db.Employees.GetAllRecordsFromTable().First(d => d.EmployeeID == id);
+
+            return View(emp);
+        }
+
+        [HttpPost]
+        public ActionResult Edit(Employee emp)
+        {
+            if (ModelState.IsValid)
+            {
+                db.Employees.Update(emp);
+            }
+
+            return View("Index", db.Employees.GetAllRecordsFromTable());
+        }
+
+
+        public ActionResult Delete(int id)
+        {
+
+            var emp = db.Employees.GetAllRecordsFromTable().First(d => d.EmployeeID == id);
+
+            return View(emp);
+        }
+
+        [HttpPost]
+        public ActionResult DeleteFromDb(int id)
+        {
+
+            db.Employees.Delete(id);
+
+
+            return View("Index", db.Employees.GetAllRecordsFromTable());
         }
     }
 }

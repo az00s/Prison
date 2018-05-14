@@ -1,4 +1,5 @@
-﻿using Prison.App.Common.Helpers;
+﻿using Prison.App.Common.Entities;
+using Prison.App.Common.Helpers;
 using Prison.App.Common.Interfaces;
 using Prison.App.Data.Interfaces;
 using Prison.App.Data.ServiceReference;
@@ -6,21 +7,18 @@ using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.IO;
-using System.Linq;
 using System.ServiceModel;
 using System.ServiceModel.Configuration;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Prison.App.Data.Services
 {
     public class AdService: IAdService
     {
-        const string FILE_NAME = "app.config";
+        private const string FILE_NAME = "app.config";
 
-        ILogger _log;
+        private ILogger _log;
 
-        IAdContract _adService;
+        private IAdContract _adService;
 
         public AdService(ILogger log)
         {
@@ -30,7 +28,7 @@ namespace Prison.App.Data.Services
             InitializeAdService();
         }
 
-        void InitializeAdService()
+        private void InitializeAdService()
         {
             //get the full absolute path of config file
             string absolutePath = Path.Combine
@@ -52,9 +50,10 @@ namespace Prison.App.Data.Services
             _adService = ChannelFactory.CreateChannel();
 
         }
-        public IEnumerable<Blurb> GetRandomElementsFromRep(int numOfElements)
+
+        public IEnumerable<IBlurb> GetRandomElementsFromRep(int numOfElements)
         {
-            IEnumerable<Blurb> listOfBlurbs;
+            IEnumerable<IBlurb> listOfBlurbs;
             try
             {
                 //throw new FaultException();
@@ -66,8 +65,8 @@ namespace Prison.App.Data.Services
                 //log the error
                 _log.Error(ex.Message);
 
-                listOfBlurbs = new List<Blurb> {
-                    new Blurb { BlurbContent = "Мы против рекламы" }
+                listOfBlurbs = new List<IBlurb> {
+                    new ServiceReference.Blurb { BlurbContent = "Мы против рекламы" }
                 };
             }
             return listOfBlurbs;
