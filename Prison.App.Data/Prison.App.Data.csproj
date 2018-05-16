@@ -67,7 +67,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
-    <Compile Include="DependencyResolution\PrisonAppDataRegistry.cs" />
+    <Compile Include="Registers\DataRegistry.cs" />
     <Compile Include="Repositories\Common\IDataCommonOperation.cs" />
     <Compile Include="Repositories\DetaineeRepository.cs" />
     <Compile Include="Repositories\DetentionRepository.cs" />

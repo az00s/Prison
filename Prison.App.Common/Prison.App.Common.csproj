@@ -72,7 +72,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DependencyResolution\PrisonAppCommonRegistry.cs" />
+    <Compile Include="Entities\Blurb.cs" />
     <Compile Include="Entities\Detainee.cs" />
     <Compile Include="Entities\Detention.cs" />
     <Compile Include="Entities\Employee.cs" />
@@ -80,6 +80,7 @@
     <Compile Include="Entities\PlaceOfStay.cs" />
     <Compile Include="Helpers\ArgumentHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Registers\CommonRegistry.cs" />
     <Compile Include="Services\Log\ILogger.cs" />
     <Compile Include="Services\Log\Logger.cs" />
   </ItemGroup>

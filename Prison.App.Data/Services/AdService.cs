@@ -53,11 +53,24 @@ namespace Prison.App.Data.Services
 
         public IEnumerable<IBlurb> GetRandomElementsFromRep(int numOfElements)
         {
-            IEnumerable<IBlurb> listOfBlurbs;
+            List<Common.Entities.Blurb> listOfBlurbs = new List<Common.Entities.Blurb>();
             try
             {
                 //throw new FaultException();
-                listOfBlurbs = _adService.GetRandomElementsFromRep(numOfElements);
+                ServiceReference.Blurb[] listOfBlurbsFromService = _adService.GetRandomElementsFromRep(numOfElements);
+
+                foreach (ServiceReference.Blurb blrb in listOfBlurbsFromService)
+                {
+                    listOfBlurbs.Add(
+                        new Common.Entities.Blurb()
+                        {
+                            BlurbID = blrb.BlurbID,
+                            BlurbHeader = blrb.BlurbHeader,
+                            BlurbContent = blrb.BlurbContent,
+                            Image = blrb.Image
+                        });
+                }
+
             }
 
             catch (FaultException ex)
@@ -65,8 +78,16 @@ namespace Prison.App.Data.Services
                 //log the error
                 _log.Error(ex.Message);
 
-                listOfBlurbs = new List<IBlurb> {
-                    new ServiceReference.Blurb { BlurbContent = "Мы против рекламы" }
+                listOfBlurbs = new List<Common.Entities.Blurb> {
+                    new Common.Entities.Blurb { BlurbContent = "Мы против рекламы" }
+                };
+            }
+            catch (EndpointNotFoundException ex)
+            {
+                _log.Error(ex.Message);
+
+                listOfBlurbs = new List<Common.Entities.Blurb> {
+                    new Common.Entities.Blurb { BlurbContent = "Мы против рекламы" }
                 };
             }
             return listOfBlurbs;

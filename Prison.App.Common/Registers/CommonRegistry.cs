@@ -2,11 +2,11 @@
 using Prison.App.Common.Loggers;
 using StructureMap.Configuration.DSL;
 
-namespace Prison.App.Common.DependencyResolution
+namespace Prison.App.Common.Registers
 {
-    public class PrisonAppCommonRegistry:Registry
+    public class CommonRegistry:Registry
     {
-        public PrisonAppCommonRegistry()
+        public CommonRegistry()
         {
 
             ForSingletonOf<ILogger>().Use<Logger>();

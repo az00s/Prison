@@ -4,11 +4,11 @@ using Prison.App.Data.Interfaces;
 using Prison.App.Data.Services;
 using StructureMap.Configuration.DSL;
 
-namespace Prison.App.Data.DependencyResolution
+namespace Prison.App.Data.Registers
 {
-    public class PrisonAppDataRegistry : Registry
+    public class DataRegistry : Registry
     {
-        public PrisonAppDataRegistry()
+        public DataRegistry()
         {
 
             For<IRepository>().Use<Repository>();

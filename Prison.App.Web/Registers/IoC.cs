@@ -26,7 +26,7 @@ namespace Prison.App.Web.DependencyResolution {
         public static IContainer Initialize() {
             return new Container(
                  c => {
-                     c.AddRegistry<PrisonAppDependencyRegistry>();
+                     c.AddRegistry<DependencyRegistry>();
                  }
                       
             

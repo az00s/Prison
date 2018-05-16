@@ -4,15 +4,15 @@ using Prison.App.Common.Entities;
 using Prison.App.Data.ServiceReference;
 using StructureMap.Configuration.DSL;
 
-namespace Prison.App.Business.DependencyResolution
+namespace Prison.App.Business.Registers
 {
-   public  class PrisonAppBusinessRegistry:Registry
+   public  class BusinessRegistry:Registry
     {
-        public PrisonAppBusinessRegistry()
+        public BusinessRegistry()
         {
             For<IAdvertismentProvider>().Use<AdvertismentProvider>();
             For<IDataProvider>().Use<DataProvider>();
-            For<IBlurb>().Use<Blurb>();
+            For<IBlurb>().Use<Common.Entities.Blurb>();
         }
     }
 }
