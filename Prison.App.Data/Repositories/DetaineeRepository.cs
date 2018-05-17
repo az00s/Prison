@@ -47,7 +47,7 @@ namespace Prison.App.Data.Repositories
                                 DeliveredByWhomID = reader.GetInt32(4),
                                 ReleasеDate = reader.GetDateTime(5),
                                 ReleasedByWhomID = reader.GetInt32(6),
-                                PlaceOfStayID = reader.GetInt32(7),
+                                PlaceID = reader.GetInt32(7),
                                 AmountForStaying = reader.GetDecimal(8),
                                 PaidAmount = reader.GetDecimal(9),
                             });
@@ -83,11 +83,11 @@ namespace Prison.App.Data.Repositories
                                 DetaineeID = reader.GetInt32(0),
                                 FirstName = reader.GetString(1),
                                 LastName = reader.GetString(2),
-                                Patronymic = reader[3].ToString(),
+                                MiddleName = reader[3].ToString(),
                                 BirstDate = reader.GetDateTime(4),
                                 MaritalStatusID = reader.GetInt32(5),
                                 WorkPlace = reader.GetString(6),
-                                Photo = reader.GetString(7),
+                                ImagePath = reader.GetString(7),
                                 ResidenceAddress = reader.GetString(8),
                                 AdditionalData = reader[9].ToString(),
                                 Detentions = GetDetentionsByDetaineeID(reader.GetInt32(0))
@@ -115,11 +115,11 @@ namespace Prison.App.Data.Repositories
                 SqlParameter[] parameters = {
                     new SqlParameter() { ParameterName = "@FirstName", Value = dtn.FirstName },
                     new SqlParameter() { ParameterName = "@LastName", Value = dtn.LastName },
-                    new SqlParameter() { ParameterName = "@Patronymic", Value = dtn.Patronymic },
+                    new SqlParameter() { ParameterName = "@Patronymic", Value = dtn.MiddleName },
                     new SqlParameter() { ParameterName = "@BirstDate", Value = dtn.BirstDate.ToShortDateString() },
                     new SqlParameter() { ParameterName = "@MaritalStatusID", Value = dtn.MaritalStatusID },
                     new SqlParameter() { ParameterName = "@WorkPlace", Value = dtn.WorkPlace },
-                    new SqlParameter() { ParameterName = "@Photo", Value = dtn.Photo },
+                    new SqlParameter() { ParameterName = "@Photo", Value = dtn.ImagePath },
                     new SqlParameter() { ParameterName = "@ResidenceAddress", Value = dtn.ResidenceAddress },
                     new SqlParameter() { ParameterName = "@AdditionalData", Value = dtn.AdditionalData }
                 };
@@ -152,13 +152,13 @@ namespace Prison.App.Data.Repositories
                     new SqlParameter() { ParameterName = "@ID", Value = dtn.DetaineeID },
                     new SqlParameter() { ParameterName = "@FirstName", Value = dtn.FirstName },
                     new SqlParameter() { ParameterName = "@LastName", Value = dtn.LastName },
-                    new SqlParameter() { ParameterName = "@Patronymic", Value = dtn.Patronymic },
+                    new SqlParameter() { ParameterName = "@Patronymic", Value = dtn.MiddleName??"" },
                     new SqlParameter() { ParameterName = "@BirstDate", Value = dtn.BirstDate.ToShortDateString() },
                     new SqlParameter() { ParameterName = "@MaritalStatusID", Value = dtn.MaritalStatusID },
                     new SqlParameter() { ParameterName = "@WorkPlace", Value = dtn.WorkPlace },
-                    new SqlParameter() { ParameterName = "@Photo", Value = dtn.Photo },
+                    new SqlParameter() { ParameterName = "@Photo", Value = dtn.ImagePath },
                     new SqlParameter() { ParameterName = "@ResidenceAddress", Value = dtn.ResidenceAddress },
-                    new SqlParameter() { ParameterName = "@AdditionalData", Value = dtn.AdditionalData }
+                    new SqlParameter() { ParameterName = "@AdditionalData", Value = dtn.AdditionalData??"" }
                 };
 
                 command.Parameters.AddRange(parameters);

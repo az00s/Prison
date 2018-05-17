@@ -10,7 +10,7 @@ namespace Prison.App.Common.Entities
 
         public string FirstName { get; set; }
 
-        public string Patronymic { get; set; }
+        public string MiddleName { get; set; }
 
         public DateTime BirstDate { get; set; }
 
@@ -20,7 +20,7 @@ namespace Prison.App.Common.Entities
 
         public ICollection<string> PhoneNumbers { get; set; }
 
-        public string Photo { get; set; }
+        public string ImagePath { get; set; }
 
         public string ResidenceAddress { get; set; }
 

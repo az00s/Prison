@@ -129,7 +129,7 @@ namespace Prison.App.Data.Repositories
                     new SqlParameter() { ParameterName = "@ID", Value = emp.EmployeeID },
                     new SqlParameter() { ParameterName = "@FirstName", Value = emp.FirstName },
                     new SqlParameter() { ParameterName = "@LastName", Value = emp.LastName },
-                    new SqlParameter() { ParameterName = "@Patronymic", Value = emp.Patronymic },
+                    new SqlParameter() { ParameterName = "@Patronymic", Value = emp.Patronymic??"" },
                     new SqlParameter() { ParameterName = "@PositionID", Value = emp.PositionID },
                     new SqlParameter() { ParameterName = "@Details", Value = emp.Details },
                    

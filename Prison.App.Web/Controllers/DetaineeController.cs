@@ -3,6 +3,7 @@ using Prison.App.Common.Entities;
 using Prison.App.Common.Helpers;
 using Prison.App.Common.Interfaces;
 using System.Linq;
+using System.Web;
 using System.Web.Mvc;
 
 namespace Prison.App.Web.Controllers
@@ -62,10 +63,18 @@ namespace Prison.App.Web.Controllers
         }
 
         [HttpPost]
-        public ActionResult Edit(Detainee dtn)
+        public ActionResult Edit(Detainee dtn, HttpPostedFileBase file)
         {
             if (ModelState.IsValid)
             {
+                if (file != null)
+                {
+                    string pic = System.IO.Path.GetFileName(file.FileName);
+                    string path = System.IO.Path.Combine(Server.MapPath("~/Content/Images/ProfilePhotos"), pic);
+                    file.SaveAs(path);
+                    string FilePath = "/Content/Images/ProfilePhotos/" + pic;
+                    dtn.ImagePath = FilePath;
+                }
                 db.Detainees.Update(dtn);
             }
 
@@ -89,6 +98,14 @@ namespace Prison.App.Web.Controllers
             
 
             return View("Index", db.Detainees.GetAllRecordsFromTable());
+        }
+        
+
+        public ActionResult DetaineePhotoUpload()
+        {
+            
+            // after successfully uploading redirect the user
+            return RedirectToAction("actionname", "controller name");
         }
     }
 }

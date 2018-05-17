@@ -28,7 +28,7 @@ namespace Prison.App.Common.Entities
 
         public int DetainedByWhomID { get; set; }
 
-        public int PlaceOfStayID { get; set; }
+        public int PlaceID { get; set; }
 
 
     }
