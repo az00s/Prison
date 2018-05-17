@@ -1,5 +1,4 @@
 ﻿using Prison.App.Common.Entities;
-using Prison.App.Data.Repositories;
 using Prison.App.Data.Repositories.Common;
 
 namespace Prison.App.Business.Providers

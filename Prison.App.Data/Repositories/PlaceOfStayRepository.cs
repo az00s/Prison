@@ -26,9 +26,6 @@ namespace Prison.App.Data.Repositories
 
                 using (SqlDataReader reader = command.ExecuteReader())
                 {
-                    if (reader.HasRows)
-                    {
-
                         while (reader.Read())
                         {
 
@@ -40,8 +37,6 @@ namespace Prison.App.Data.Repositories
 
                             });
                         }
-                    }
-
                 }
             }
             return list;
@@ -63,7 +58,6 @@ namespace Prison.App.Data.Repositories
                     
                 };
 
-
                 command.Parameters.AddRange(parameters);
 
                 command.ExecuteNonQuery();
@@ -81,8 +75,6 @@ namespace Prison.App.Data.Repositories
                 SqlParameter[] parameters = {
                     new SqlParameter() { ParameterName = "@ID", Value = emp.PlaceID },
                     new SqlParameter() { ParameterName = "@Address", Value = emp.Address }
-                   
-
                 };
 
                 command.Parameters.AddRange(parameters);

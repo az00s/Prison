@@ -10,7 +10,7 @@ namespace Prison.App.Web.Controllers
 {
     public class DetaineeController : Controller
     {
-        private static ILogger log;
+        private  ILogger log;
 
         private IDataProvider db;
 
@@ -23,7 +23,7 @@ namespace Prison.App.Web.Controllers
             db = rep;
             log = logger;
         }
-        // GET: Home
+
         public ActionResult Index()
         {
             var Detainees = db.Detainees.GetAllRecordsFromTable();
@@ -84,7 +84,6 @@ namespace Prison.App.Web.Controllers
        
         public ActionResult Delete(int id)
         {
-
             var Detainee = db.Detainees.GetAllRecordsFromTable().First(d => d.DetaineeID == id);
 
             return View(Detainee);
@@ -93,19 +92,10 @@ namespace Prison.App.Web.Controllers
         [HttpPost]
         public ActionResult DeleteFromDb(int id)
         {
-           
                 db.Detainees.Delete(id);
-            
 
             return View("Index", db.Detainees.GetAllRecordsFromTable());
         }
-        
 
-        public ActionResult DetaineePhotoUpload()
-        {
-            
-            // after successfully uploading redirect the user
-            return RedirectToAction("actionname", "controller name");
-        }
     }
 }

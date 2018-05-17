@@ -1,12 +1,10 @@
-﻿@model IEnumerable<string>
-@{
+﻿@{
     ViewBag.Title = "Index";
 }
 
 <div class="container-fluid">
     <div class="row">
         <article class="col-md-8 article">
-            @*@Html.Partial("DateNavigation")*@
             <div class="page-header text-center text-primary">
                 <h2>Автоматизированная информационная система <strong>"Специальный изолятор"</strong></h2>
             </div>
@@ -25,18 +23,10 @@
                         <li><em class="lead">режим пользователя;</em></li>
                         <li><em class="lead">режим редактора;</em></li>
                         <li><em class="lead">режим администратора.</em></li>
-
-
                     </ul>
-                    
                 </p>
-
-
-
-
         </article>
         <aside class="col-md-4" >
-           
             @Html.Action("GetAdUnit", "Advertisment")
         </aside>
     </div>

@@ -9,10 +9,8 @@ namespace Prison.App.Dependency
     {
         public DependencyRegistry()
         {
-
             Scan(s =>
             {
-                
                 s.AssemblyContainingType<CommonRegistry>();
                 s.AssemblyContainingType<DataRegistry>();
                 s.AssemblyContainingType<BusinessRegistry>();
@@ -20,6 +18,5 @@ namespace Prison.App.Dependency
 
             });
         }
-
     }
 }

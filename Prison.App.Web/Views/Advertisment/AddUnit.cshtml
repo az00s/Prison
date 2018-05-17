@@ -1,31 +1,44 @@
 ﻿@model IEnumerable<Blurb>
 
 <div class="panel panel-default">
-    @*<div class="panel-heading"></div>*@
     <div class="panel-body">
 
         <ul class="media-list list-unstyled">
-            @foreach (var item in Model)
+            @if (Model == null)
             {
                 <li class="media">
                     <hr />
                     <div class="media-body text-center">
-
-                        <h4 class="media-heading text-center">@item.BlurbHeader</h4>
-                        
                         <div class="text-muted">
-                            @item.BlurbContent
+                            Мы против рекламы!
                         </div>
-                        @if (item.Image != null)
-    {
-                    <div>
-                        <a href="#"><img class="img-rounded" width="278" height="182" src=@Html.ConvertByteArrToString(item.Image) /></a>
-                    </div>
-}
-                    
+
                     </div>
 
                 </li>
+            }
+            else
+            {
+                foreach (var item in Model)
+                {
+                    <li class="media">
+                        <hr />
+                        <div class="media-body text-center">
+
+                            <h4 class="media-heading text-center">@item.BlurbHeader</h4>
+
+                            <div class="text-muted">
+                                @item.BlurbContent
+                            </div>
+                                @if (item.Image != null)
+                                {
+                                    <div>
+                                        <a href="#"><img class="img-rounded" width="278" height="182" src=@Html.ConvertByteArrToString(item.Image) /></a>
+                                    </div>
+                                }
+                        </div>
+                    </li>
+                }
             }
         </ul>
     </div>

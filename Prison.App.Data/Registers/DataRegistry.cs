@@ -10,12 +10,9 @@ namespace Prison.App.Data.Registers
     {
         public DataRegistry()
         {
-
             For<IRepository>().Use<Repository>();
             For<IAdService>().Use<AdService>();
             ForSingletonOf<ILogger>().Use<Logger>();
-
         }
-        
     }
 }

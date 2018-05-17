@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 using System.ServiceModel;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Prison.Service.Contracts
 {
-    [ServiceContract(Namespace = "http://Prison.Service.Contracts")]
+    [ServiceContract]
     public interface IAdContract
     {
         [OperationContract]

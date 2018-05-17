@@ -27,10 +27,7 @@ namespace Prison.App.Data
         {
             //get the full absolute path of config file
             string absolutePath = Path.Combine
-                (
-                AppDomain.CurrentDomain.SetupInformation.PrivateBinPath,
-                FILE_NAME
-                );
+                (AppDomain.CurrentDomain.SetupInformation.PrivateBinPath,FILE_NAME);
 
             //build configuration object 
             Configuration conf = ConfigurationManager.OpenMappedExeConfiguration(
@@ -38,11 +35,7 @@ namespace Prison.App.Data
 
             //get the connection string from section of config file
             _connection = conf.ConnectionStrings.ConnectionStrings[CONNECTION_NAME].ConnectionString;
-
-             
         }
-
-        
     
         public IDataCommonOperation<Detainee> Detainees { get { return new DetaineeRepository(_connection); } }
 
@@ -51,8 +44,6 @@ namespace Prison.App.Data
         public IDataCommonOperation<Employee> Employees { get { return new EmployeeRepository(_connection); } }
 
         public IDataCommonOperation<PlaceOfStay> PlacesOfStay { get { return new PlaceOfStayRepository(_connection); } }
-
-       
 
         public void ErrorMethod()
         {

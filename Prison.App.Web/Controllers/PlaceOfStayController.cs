@@ -2,7 +2,6 @@
 using Prison.App.Common.Entities;
 using Prison.App.Common.Helpers;
 using Prison.App.Common.Interfaces;
-using Prison.App.Data.Interfaces;
 using System.Linq;
 using System.Web.Mvc;
 
@@ -10,13 +9,12 @@ namespace Prison.App.Web.Controllers
 {
     public class PlaceOfStayController : Controller
     {
-        private static ILogger log;
+        private ILogger log;
 
         private IDataProvider db;
 
         public PlaceOfStayController(IDataProvider rep, ILogger logger)
         {
-
             ArgumentHelper.ThrowExceptionIfNull(rep, "IDataProvider");
             ArgumentHelper.ThrowExceptionIfNull(logger, "ILogger");
 
@@ -56,7 +54,6 @@ namespace Prison.App.Web.Controllers
 
         public ActionResult Edit(int id)
         {
-
             var place = db.PlacesOfStay.GetAllRecordsFromTable().First(d => d.PlaceID == id);
 
             return View(place);
@@ -76,7 +73,6 @@ namespace Prison.App.Web.Controllers
 
         public ActionResult Delete(int id)
         {
-
             var place = db.PlacesOfStay.GetAllRecordsFromTable().First(d => d.PlaceID == id);
 
             return View(place);
@@ -85,9 +81,7 @@ namespace Prison.App.Web.Controllers
         [HttpPost]
         public ActionResult DeleteFromDb(int id)
         {
-
             db.PlacesOfStay.Delete(id);
-
 
             return View("Index", db.PlacesOfStay.GetAllRecordsFromTable());
         }

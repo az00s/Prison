@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 
 namespace Prison.App.Web.Models
 {
@@ -17,8 +14,6 @@ namespace Prison.App.Web.Models
         public DateTime BirstDate { get; set; }
 
         public string Image { get; set; }
-
-
 
     }
 }

@@ -1,4 +1,4 @@
-﻿@model Prison.App.Common.Entities.PlaceOfStay
+﻿@model PlaceOfStay
 
 @{
     ViewBag.Title = "Create";
@@ -14,7 +14,6 @@
         <h4>PlaceOfStay</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        
 
         <div class="form-group">
             @Html.LabelFor(model => model.Address, htmlAttributes: new { @class = "control-label col-md-2" })

@@ -15,10 +15,10 @@
             @Html.DisplayNameFor(model => model.DetentionDate)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.DateOfDelivery)
+            @Html.DisplayNameFor(model => model.DeliveryDate)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.ReleaseDate)
+            @Html.DisplayNameFor(model => model.ReleasеDate)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.PlaceOfDetention)
@@ -38,10 +38,10 @@
             @Html.ActionLink(item.DetentionDate.ToShortDateString(), "Details", new { id = item.DetentionID })
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.DateOfDelivery)
+            @Html.DisplayFor(modelItem => item.DeliveryDate)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.ReleaseDate)
+            @Html.DisplayFor(modelItem => item.ReleasеDate)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.PlaceOfDetention)

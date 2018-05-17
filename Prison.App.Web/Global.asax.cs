@@ -16,6 +16,7 @@ namespace Prison
         }
     }
 
+    //adding new path for finding Partial Views in folder Shared/"Partials"
     public class PrisonViewEngine : RazorViewEngine
     {
 

@@ -3,9 +3,6 @@ using log4net.Config;
 using Prison.App.Common.Interfaces;
 using System;
 using System.IO;
-using System.Reflection;
-using System.Web;
-using System.Web.Hosting;
 
 namespace Prison.App.Common.Loggers
 {
@@ -13,7 +10,6 @@ namespace Prison.App.Common.Loggers
     {
         private const string FILE_NAME = "Log.config";
         private const string LOGGER_NAME = "PrisonLogger";
-
 
         private  readonly ILog logger;
 
@@ -40,15 +36,8 @@ namespace Prison.App.Common.Loggers
             }
             else
             {
-                throw new FileNotFoundException(
-
-                    String.Format("Logging configuration file {0} on path: {1} not found!", FILE_NAME,filePath)
-
-                                                );
-            }
-            
-
-            
+                throw new FileNotFoundException(String.Format("Logging configuration file {0} on path: {1} not found!", FILE_NAME,filePath));
+            }           
         }
 
 
@@ -58,7 +47,7 @@ namespace Prison.App.Common.Loggers
         }
 
 
-        public void Debug(string message, System.Exception exception)
+        public void Debug(string message, Exception exception)
         {
             logger.Debug(message, exception);
         }
@@ -70,7 +59,7 @@ namespace Prison.App.Common.Loggers
         }
 
 
-        public  void Info(string message, System.Exception exception)
+        public  void Info(string message, Exception exception)
         {
             logger.Info(message, exception);
         }
@@ -80,7 +69,7 @@ namespace Prison.App.Common.Loggers
             logger.Warn(message);
         }
 
-        public  void Warn(string message, System.Exception exception)
+        public  void Warn(string message, Exception exception)
         {
             logger.Warn(message, exception);
         }
@@ -90,7 +79,7 @@ namespace Prison.App.Common.Loggers
             logger.Error(message);
         }
 
-        public  void Error(string message, System.Exception exception)
+        public  void Error(string message, Exception exception)
         {
             logger.Error(message, exception);
         }
@@ -101,11 +90,9 @@ namespace Prison.App.Common.Loggers
             logger.Fatal(message);
         }
 
-        public  void Fatal(string message, System.Exception exception)
+        public  void Fatal(string message, Exception exception)
         {
             logger.Fatal(message, exception);
         }
-
-
     }
 }

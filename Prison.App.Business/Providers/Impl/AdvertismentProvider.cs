@@ -1,7 +1,6 @@
 ﻿using Prison.App.Business.Interfaces;
 using Prison.App.Common.Entities;
 using Prison.App.Data.Interfaces;
-using Prison.App.Data.ServiceReference;
 using System.Collections.Generic;
 
 namespace Prison.App.Business.Providers
@@ -15,9 +14,9 @@ namespace Prison.App.Business.Providers
             _proxy = proxy;
         }
 
-        public IEnumerable<IBlurb> GetRandomElementsFromRep(int numOfElements)
+        public IEnumerable<IBlurb> GetElementsFromRep(int numOfElements)
         {
-            return _proxy.GetRandomElementsFromRep(numOfElements);
+            return _proxy.GetElementsFromRep(numOfElements);
         }
 
     }

@@ -5,6 +5,6 @@ namespace Prison.App.Data.Interfaces
 {
     public interface IAdService
     {
-        IEnumerable<IBlurb> GetRandomElementsFromRep(int numOfElements);
+        IEnumerable<IBlurb> GetElementsFromRep(int numOfElements);
     }
 }

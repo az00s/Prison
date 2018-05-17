@@ -37,11 +37,11 @@
         <tr>
             <td>
                 @if (item.ImagePath != null)
-        {
-            <div>
-                <a href="#"><img class="img-rounded" width="70" height="70" src=@item.ImagePath /></a>
-            </div>
-}
+                    {
+                        <div>
+                            <a href="#"><img class="img-rounded" width="70" height="70" src=@item.ImagePath /></a>
+                        </div>
+                    }
             </td>
             <td>
                 @Html.ActionLink(item.LastName, "Details", new { id = item.DetaineeID })
@@ -55,8 +55,6 @@
             <td>
                 @Html.DisplayFor(modelItem => item.BirstDate)
             </td>
-
-            
             <td>
                 @Html.ActionLink("Edit", "Edit", new { id = item.DetaineeID }) |
                 @Html.ActionLink("Details", "Details", new { id = item.DetaineeID }) |

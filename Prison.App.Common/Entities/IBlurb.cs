@@ -8,7 +8,6 @@
 
         string BlurbContent { get; set; }
 
-
         byte[] Image { get; set; }
     }
 }

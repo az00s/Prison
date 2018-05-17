@@ -14,14 +14,12 @@ namespace Prison.Service.Services
 
             var list = rep.GetRandomElementsFromRep(numOfElements);
 
-            //list = null;
             if (list == null)
             {
                 ArgumentNullException ex = new ArgumentNullException("IEnumerable<Blurb>", "List of Blurbs is empty!");
                 throw new FaultException<ArgumentNullException>(ex,ex.Message);
             }
             return list;
-
         }
     }
 }

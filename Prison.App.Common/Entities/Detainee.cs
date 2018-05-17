@@ -6,6 +6,7 @@ namespace Prison.App.Common.Entities
     public class Detainee
     {
         public int DetaineeID { get; set; }
+
         public string LastName { get; set; }
 
         public string FirstName { get; set; }

@@ -32,8 +32,7 @@ namespace Prison.App.Data.Repositories
 
                 using (SqlDataReader reader = AllDetentionsCommand.ExecuteReader())
                 {
-                    if (reader.HasRows)
-                    {
+                    
 
                         while (reader.Read())
                         {
@@ -52,7 +51,7 @@ namespace Prison.App.Data.Repositories
                                 PaidAmount = reader.GetDecimal(9),
                             });
                         }
-                    }
+                    
 
                 }
             }
@@ -72,9 +71,6 @@ namespace Prison.App.Data.Repositories
 
                 using (SqlDataReader reader = command.ExecuteReader())
                 {
-                    if (reader.HasRows)
-                    {
-
                         while (reader.Read())
                         {
 
@@ -94,8 +90,6 @@ namespace Prison.App.Data.Repositories
 
                             });
                         }
-                    }
-
                 }
             }
             return list;

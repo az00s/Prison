@@ -2,9 +2,7 @@
 using Prison.App.Data.Repositories.Common;
 using System;
 using System.Collections.Generic;
-using System.Configuration;
 using System.Data.SqlClient;
-using System.IO;
 
 namespace Prison.App.Data.Repositories
 {
@@ -31,9 +29,6 @@ namespace Prison.App.Data.Repositories
 
                     using (SqlDataReader reader = command.ExecuteReader())
                     {
-                        if (reader.HasRows)
-                        {
-
                             while (reader.Read())
                             {
 
@@ -44,43 +39,16 @@ namespace Prison.App.Data.Repositories
                                     LastName = reader.GetString(2),
                                     Patronymic = reader[3].ToString(),
                                     PositionID = reader.GetInt32(4),
-                                    Details = reader[5].ToString(),
 
                                 });
                             }
-                        }
-
                     }
                 }
             }
             catch (Exception ex)
             {
                 
-            }
-            //catch (InvalidOperationException ex)    
-            //{
-
-            //}
-            //catch (SqlException ex) 
-            //{
-
-            //}
-            //catch (ConfigurationErrorsException ex) 
-            //{
-
-            //}
-            //catch (InvalidCastException ex) 
-            //{
-
-            //}
-
-            //catch (IOException ex)
-            //{
-                
-            //}
-
-            
-
+            }      
 
             return list;
         }
@@ -93,15 +61,14 @@ namespace Prison.App.Data.Repositories
 
                 var command = new SqlCommand(
                     "Insert into Employee " +
-                            "([FirstName],[LastName],[Patronymic],[PositionID],[Details])" +
-                    " values(@FirstName,@LastName,@Patronymic,@PositionID,@Details)", connection);
+                            "([FirstName],[LastName],[Patronymic],[PositionID])" +
+                    " values(@FirstName,@LastName,@Patronymic,@PositionID)", connection);
 
                 SqlParameter[] parameters = {
                     new SqlParameter() { ParameterName = "@FirstName", Value = emp.FirstName },
                     new SqlParameter() { ParameterName = "@LastName", Value = emp.LastName },
                     new SqlParameter() { ParameterName = "@Patronymic", Value = emp.Patronymic },
                     new SqlParameter() { ParameterName = "@PositionID", Value = emp.PositionID },
-                    new SqlParameter() { ParameterName = "@Details", Value = emp.Details },
                 };
                     
 
@@ -121,8 +88,7 @@ namespace Prison.App.Data.Repositories
                     "SET [FirstName] = @FirstName," +
                     "[LastName] =@LastName," +
                     "[Patronymic] =@Patronymic," +
-                    "[PositionID] = @PositionID," +
-                    "[Details] = @Details " +
+                    "[PositionID] = @PositionID " +
                     "WHERE EmployeeID=@ID ", connection);
 
                 SqlParameter[] parameters = {
@@ -131,7 +97,6 @@ namespace Prison.App.Data.Repositories
                     new SqlParameter() { ParameterName = "@LastName", Value = emp.LastName },
                     new SqlParameter() { ParameterName = "@Patronymic", Value = emp.Patronymic??"" },
                     new SqlParameter() { ParameterName = "@PositionID", Value = emp.PositionID },
-                    new SqlParameter() { ParameterName = "@Details", Value = emp.Details },
                    
                 };
 

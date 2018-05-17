@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Runtime.Serialization;
-using System.Web;
+﻿using System.Runtime.Serialization;
 
 namespace Prison.Service
 {
@@ -19,10 +14,7 @@ namespace Prison.Service
         [DataMember]
         public string BlurbContent { get; set; }
 
-        
         [DataMember]
         public byte[] Image { get; set; }
-
-        
     }
 }

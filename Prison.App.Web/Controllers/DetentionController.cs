@@ -8,7 +8,7 @@ namespace Prison.App.Web.Controllers
 {
     public class DetentionController : Controller
     {
-        private static ILogger log;
+        private ILogger log;
 
         private IRepository db;
 

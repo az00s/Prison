@@ -25,7 +25,7 @@ namespace Prison.App.Web.Controllers
         // GET: Advertisment
         public ActionResult GetAdUnit()
         {
-            IEnumerable<IBlurb> listOfBlurbs = _adService.GetRandomElementsFromRep(3);
+            var listOfBlurbs = _adService.GetElementsFromRep(3);
             
             return PartialView("AddUnit",listOfBlurbs);
         }

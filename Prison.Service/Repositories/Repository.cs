@@ -40,9 +40,6 @@ namespace Prison.Service.Repositories
 
             int[] arrOfRandomNum = new int[numOfElements];
 
-
-            //try
-            //{
                 for (int i = 0,num=0 ; i < numOfElements; i++)
                 {
                     num = rnd.Next(0, _list.Count);
@@ -56,19 +53,8 @@ namespace Prison.Service.Repositories
                     arrOfRandomNum[i] = num;
                     
                 }
-            //}
-
-            //catch (ArgumentNullException ex)
-            //{
-            //    throw ex;
-            //}
-            //catch (ArgumentOutOfRangeException ex)
-            //{
-            //    throw ex;
-            //}
 
             return list;          
-            
         }
 
         public byte[] GetByteArrFromImage(string path)

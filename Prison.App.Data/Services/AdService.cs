@@ -32,16 +32,11 @@ namespace Prison.App.Data.Services
         {
             //get the full absolute path of config file
             string absolutePath = Path.Combine
-                (
-                AppDomain.CurrentDomain.SetupInformation.PrivateBinPath,
-                FILE_NAME
-                );
+                (AppDomain.CurrentDomain.SetupInformation.PrivateBinPath,FILE_NAME);
+
             //get configuration object for using it in ConfigurationChannelFactory
             Configuration configuration = ConfigurationManager.OpenMappedExeConfiguration
-                (
-                new ExeConfigurationFileMap { ExeConfigFilename = absolutePath },
-                ConfigurationUserLevel.None
-                );
+                (new ExeConfigurationFileMap { ExeConfigFilename = absolutePath },ConfigurationUserLevel.None);
 
             //build new factory using configuration object
             ConfigurationChannelFactory<IAdContract> ChannelFactory = new ConfigurationChannelFactory<IAdContract>("BasicHttpBinding_IAdContract", configuration, null);
@@ -51,17 +46,16 @@ namespace Prison.App.Data.Services
 
         }
 
-        public IEnumerable<IBlurb> GetRandomElementsFromRep(int numOfElements)
+        public IEnumerable<IBlurb> GetElementsFromRep(int numOfElements)
         {
-            List<Common.Entities.Blurb> listOfBlurbs = new List<Common.Entities.Blurb>();
+            List<Common.Entities.Blurb> listOfBlurbsOnClient = new List<Common.Entities.Blurb>();
             try
             {
-                //throw new FaultException();
                 ServiceReference.Blurb[] listOfBlurbsFromService = _adService.GetRandomElementsFromRep(numOfElements);
 
                 foreach (ServiceReference.Blurb blrb in listOfBlurbsFromService)
                 {
-                    listOfBlurbs.Add(
+                    listOfBlurbsOnClient.Add(
                         new Common.Entities.Blurb()
                         {
                             BlurbID = blrb.BlurbID,
@@ -75,22 +69,17 @@ namespace Prison.App.Data.Services
 
             catch (FaultException ex)
             {
-                //log the error
                 _log.Error(ex.Message);
+                listOfBlurbsOnClient = null;
 
-                listOfBlurbs = new List<Common.Entities.Blurb> {
-                    new Common.Entities.Blurb { BlurbContent = "Мы против рекламы" }
-                };
             }
             catch (EndpointNotFoundException ex)
             {
                 _log.Error(ex.Message);
+                listOfBlurbsOnClient = null;
 
-                listOfBlurbs = new List<Common.Entities.Blurb> {
-                    new Common.Entities.Blurb { BlurbContent = "Мы против рекламы" }
-                };
             }
-            return listOfBlurbs;
+            return listOfBlurbsOnClient;
         }
     }
 }

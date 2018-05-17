@@ -1,15 +1,10 @@
 ﻿using Prison.App.Common.Entities;
-using Prison.App.Data.ServiceReference;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Prison.App.Business.Interfaces
 {
     public interface IAdvertismentProvider
     {
-        IEnumerable<IBlurb> GetRandomElementsFromRep(int numOfElements);
+        IEnumerable<IBlurb> GetElementsFromRep(int numOfElements);
     }
 }

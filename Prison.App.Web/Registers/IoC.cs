@@ -28,9 +28,6 @@ namespace Prison.App.Web.DependencyResolution {
                  c => {
                      c.AddRegistry<DependencyRegistry>();
                  }
-                      
-            
-            
             );
         }
     }

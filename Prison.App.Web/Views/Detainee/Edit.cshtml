@@ -1,4 +1,4 @@
-﻿@model Prison.App.Common.Entities.Detainee
+﻿@model Detainee
 
 @{
     ViewBag.Title = "Edit";
@@ -73,14 +73,6 @@
             </a>
             <span class='label label-info' id="upload-file-info"></span>
         </div>
-        @*@if (Model.Photo == null)
-        {
-            <div class="form-control-static">Нет картинки</div>
-        }
-        else
-        {
-            <img class="img-thumbnail" width="150" height="150" src="@Url.Action("GetImage", "Home",new { Model.BeverageID })" />
-        }*@
     </div>
    
 
