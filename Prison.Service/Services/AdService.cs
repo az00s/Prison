@@ -13,11 +13,11 @@ namespace Prison.Service.Services
             Repository rep = new Repository();
 
             var list = rep.GetRandomElementsFromRep(numOfElements);
-
+            
             if (list == null)
             {
                 ArgumentNullException ex = new ArgumentNullException("IEnumerable<Blurb>", "List of Blurbs is empty!");
-                throw new FaultException<ArgumentNullException>(ex,ex.Message);
+                throw new FaultException<ArgumentNullException>(ex);
             }
             return list;
         }

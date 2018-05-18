@@ -1,5 +1,6 @@
 ﻿using Prison.App.Business.Interfaces;
 using Prison.App.Common.Entities;
+using Prison.App.Common.Helpers;
 using Prison.App.Data.Interfaces;
 using System.Collections.Generic;
 
@@ -7,16 +8,18 @@ namespace Prison.App.Business.Providers
 {
     public class AdvertismentProvider:IAdvertismentProvider
     {
-        private IAdService _proxy;
+        private IAdService _adService;
 
-        public AdvertismentProvider(IAdService proxy)
+        public AdvertismentProvider(IAdService service)
         {
-            _proxy = proxy;
+            ArgumentHelper.ThrowExceptionIfNull(service, "IAdService");
+
+            _adService = service;
         }
 
         public IEnumerable<IBlurb> GetElementsFromRep(int numOfElements)
         {
-            return _proxy.GetElementsFromRep(numOfElements);
+            return _adService.GetElementsFromRep(numOfElements);
         }
 
     }
