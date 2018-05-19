@@ -2,6 +2,7 @@
 using Prison.App.Common.Entities;
 using Prison.App.Common.Helpers;
 using Prison.App.Common.Interfaces;
+using System.Collections.Generic;
 using System.Linq;
 using System.Web.Mvc;
 
@@ -11,28 +12,32 @@ namespace Prison.App.Web.Controllers
     {
         private ILogger log;
 
-        private IDataProvider db;
+        private IEmployeeProvider db;
 
-        public EmployeeController(IDataProvider rep, ILogger logger)
+        public EmployeeController(IEmployeeProvider rep, ILogger logger)
         {
-            ArgumentHelper.ThrowExceptionIfNull(rep, "IDataProvider");
+            ArgumentHelper.ThrowExceptionIfNull(rep, "IEmployeeProvider");
             ArgumentHelper.ThrowExceptionIfNull(logger, "ILogger");
 
             db = rep;
             log = logger;
         }
-        
+
 
         public ActionResult Index()
         {
-            var Employees = db.Employees.GetAllRecordsFromTable();
+            var Employees = db.GetAllRecordsFromTable();
 
+            if (Employees==null)
+            {
+               return RedirectToAction("action","controller");
+            }
             return View(Employees);
         }
 
         public ActionResult Details(int id)
         {
-            var Employee = db.Employees.GetAllRecordsFromTable().First(d => d.EmployeeID == id);
+            var Employee = db.GetEmployeeByID(id);
 
             return View(Employee);
         }
@@ -47,15 +52,15 @@ namespace Prison.App.Web.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Employees.Create(emp);
+                db.Create(emp);
             }
 
-            return View("Index", db.Employees.GetAllRecordsFromTable());
+            return View("Index", db.GetAllRecordsFromTable());
         }
 
         public ActionResult Edit(int id)
         {
-            var emp = db.Employees.GetAllRecordsFromTable().First(d => d.EmployeeID == id);
+            var emp = db.GetEmployeeByID(id);
 
             return View(emp);
         }
@@ -65,16 +70,16 @@ namespace Prison.App.Web.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Employees.Update(emp);
+                db.Update(emp);
             }
 
-            return View("Index", db.Employees.GetAllRecordsFromTable());
+            return View("Index", db.GetAllRecordsFromTable());
         }
 
 
         public ActionResult Delete(int id)
         {
-            var emp = db.Employees.GetAllRecordsFromTable().First(d => d.EmployeeID == id);
+            var emp = db.GetEmployeeByID(id);
 
             return View(emp);
         }
@@ -82,9 +87,9 @@ namespace Prison.App.Web.Controllers
         [HttpPost]
         public ActionResult DeleteFromDb(int id)
         {
-            db.Employees.Delete(id);
+            db.Delete(id);
 
-            return View("Index", db.Employees.GetAllRecordsFromTable());
+            return View("Index", db.GetAllRecordsFromTable());
         }
     }
 }

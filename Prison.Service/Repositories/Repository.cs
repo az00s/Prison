@@ -24,7 +24,7 @@ namespace Prison.Service.Repositories
                 new Blurb{ BlurbID=7,BlurbHeader="Volvo C30 Electric",BlurbContent="Ваша жизнь слишком дорога, чтобы ездить на чём-то другом.",Image=GetByteArrFromImage("~/Images/Volvo.jpg")},
                 new Blurb{ BlurbID=8,BlurbHeader="Toyota RAV4 EV",BlurbContent="Если бы мы делали девушек,-они бы никогда не ломались.",Image=GetByteArrFromImage("~/Images/Toyota.jpg")},
                 new Blurb{ BlurbID=9,BlurbHeader="Mercedes-Benz Generation EQ",BlurbContent="Электрический кроссовер будущего!",Image=GetByteArrFromImage("~/Images/Mercedes.jpg")},
-                new Blurb{ BlurbID=10,BlurbHeader="Geely Emgrand EV300",BlurbContent="Попробуйте электрическое желе из Китая!"/*,Image=GetByteArrFromImage("~/Images/Geely.jpg")*/}
+                new Blurb{ BlurbID=10,BlurbHeader="Geely Emgrand EV300",BlurbContent="Попробуйте электрическое желе из Китая!",Image=GetByteArrFromImage("~/Images/Geely.jpg")}
             };
         }
 

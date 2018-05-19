@@ -60,11 +60,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Providers\Impl\DataProvider.cs" />
     <Compile Include="Providers\IAdvertismentProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Providers\IDetaineeProvider.cs" />
+    <Compile Include="Providers\IEmployeeProvider.cs" />
     <Compile Include="Providers\Impl\AdvertismentProvider.cs" />
     <Compile Include="Providers\IDataProvider.cs" />
+    <Compile Include="Providers\Impl\DetaineeProvider.cs" />
+    <Compile Include="Providers\Impl\EmployeeProvider.cs" />
+    <Compile Include="Providers\Impl\PlaceOfStayProvider.cs" />
+    <Compile Include="Providers\IPlaceOfStayProvider.cs" />
     <Compile Include="Registers\BusinessRegistry.cs" />
   </ItemGroup>
   <ItemGroup />

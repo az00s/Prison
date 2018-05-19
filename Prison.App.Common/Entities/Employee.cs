@@ -8,7 +8,7 @@
 
         public string FirstName { get; set; }
 
-        public string Patronymic { get; set; }
+        public string MiddleName { get; set; }
         
         public int PositionID { get; set; }
     }

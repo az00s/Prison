@@ -21,6 +21,7 @@ namespace Prison.App.Web.DependencyResolution {
     using Prison.App.Data.Interfaces;
     using StructureMap;
     using Prison.App.Dependency;
+    using Prison.App.Common.Helpers;
 
     public static class IoC {
         public static IContainer Initialize() {

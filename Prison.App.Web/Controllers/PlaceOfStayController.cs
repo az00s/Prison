@@ -11,11 +11,11 @@ namespace Prison.App.Web.Controllers
     {
         private ILogger log;
 
-        private IDataProvider db;
+        private IPlaceOfStayProvider db;
 
-        public PlaceOfStayController(IDataProvider rep, ILogger logger)
+        public PlaceOfStayController(IPlaceOfStayProvider rep, ILogger logger)
         {
-            ArgumentHelper.ThrowExceptionIfNull(rep, "IDataProvider");
+            ArgumentHelper.ThrowExceptionIfNull(rep, "IPlaceOfStayProvider");
             ArgumentHelper.ThrowExceptionIfNull(logger, "ILogger");
 
             db = rep;
@@ -24,16 +24,16 @@ namespace Prison.App.Web.Controllers
 
         public ActionResult Index()
         {
-            var Places = db.PlacesOfStay.GetAllRecordsFromTable();
+            var Places = db.GetAllRecordsFromTable();
 
             return View(Places);
         }
 
         public ActionResult Details(int id)
         {
-            var places = db.PlacesOfStay.GetAllRecordsFromTable().First(d => d.PlaceID == id);
+            var place = db.GetPlaceOfStayByID(id);
 
-            return View(places);
+            return View(place);
         }
 
         public ActionResult Create()
@@ -46,15 +46,15 @@ namespace Prison.App.Web.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.PlacesOfStay.Create(dtn);
+                db.Create(dtn);
             }
 
-            return View("Index", db.PlacesOfStay.GetAllRecordsFromTable());
+            return View("Index", db.GetAllRecordsFromTable());
         }
 
         public ActionResult Edit(int id)
         {
-            var place = db.PlacesOfStay.GetAllRecordsFromTable().First(d => d.PlaceID == id);
+            var place = db.GetPlaceOfStayByID(id);
 
             return View(place);
         }
@@ -64,16 +64,16 @@ namespace Prison.App.Web.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.PlacesOfStay.Update(dtn);
+                db.Update(dtn);
             }
 
-            return View("Index", db.PlacesOfStay.GetAllRecordsFromTable());
+            return View("Index", db.GetAllRecordsFromTable());
         }
 
 
         public ActionResult Delete(int id)
         {
-            var place = db.PlacesOfStay.GetAllRecordsFromTable().First(d => d.PlaceID == id);
+            var place = db.GetPlaceOfStayByID(id);
 
             return View(place);
         }
@@ -81,9 +81,9 @@ namespace Prison.App.Web.Controllers
         [HttpPost]
         public ActionResult DeleteFromDb(int id)
         {
-            db.PlacesOfStay.Delete(id);
+            db.Delete(id);
 
-            return View("Index", db.PlacesOfStay.GetAllRecordsFromTable());
+            return View("Index", db.GetAllRecordsFromTable());
         }
     }
 }

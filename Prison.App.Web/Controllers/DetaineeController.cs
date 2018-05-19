@@ -2,6 +2,7 @@
 using Prison.App.Common.Entities;
 using Prison.App.Common.Helpers;
 using Prison.App.Common.Interfaces;
+using System;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -12,12 +13,12 @@ namespace Prison.App.Web.Controllers
     {
         private  ILogger log;
 
-        private IDataProvider db;
+        private IDetaineeProvider db;
 
-        public DetaineeController(IDataProvider rep, ILogger logger)
+        public DetaineeController(IDetaineeProvider rep, ILogger logger)
         {
 
-            ArgumentHelper.ThrowExceptionIfNull(rep, "IDataProvider");
+            ArgumentHelper.ThrowExceptionIfNull(rep, "IDetaineeProvider");
             ArgumentHelper.ThrowExceptionIfNull(logger, "ILogger");
 
             db = rep;
@@ -26,14 +27,14 @@ namespace Prison.App.Web.Controllers
 
         public ActionResult Index()
         {
-            var Detainees = db.Detainees.GetAllRecordsFromTable();
+            var Detainees = db.GetAllRecordsFromTable();
 
             return View(Detainees);
         }
 
         public ActionResult Details(int id)
         {
-            var Detainee = db.Detainees.GetAllRecordsFromTable().First(d=>d.DetaineeID == id);
+            var Detainee = db.GetDetaineeByID(id);
 
             return View(Detainee);
         }
@@ -48,16 +49,16 @@ namespace Prison.App.Web.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Detainees.Create(dtn);
+                db.Create(dtn);
             }
 
-            return View("Index", db.Detainees.GetAllRecordsFromTable());
+            return View("Index", db.GetAllRecordsFromTable());
         }
 
         public ActionResult Edit(int id)
         {
 
-            var Detainee = db.Detainees.GetAllRecordsFromTable().First(d => d.DetaineeID == id);
+            var Detainee = db.GetDetaineeByID(id);
 
             return View(Detainee);
         }
@@ -75,16 +76,16 @@ namespace Prison.App.Web.Controllers
                     string FilePath = "/Content/Images/ProfilePhotos/" + pic;
                     dtn.ImagePath = FilePath;
                 }
-                db.Detainees.Update(dtn);
+                db.Update(dtn);
             }
 
-            return View("Index", db.Detainees.GetAllRecordsFromTable());
+            return View("Index", db.GetAllRecordsFromTable());
         }
 
-       
+
         public ActionResult Delete(int id)
         {
-            var Detainee = db.Detainees.GetAllRecordsFromTable().First(d => d.DetaineeID == id);
+            var Detainee = db.GetDetaineeByID(id);
 
             return View(Detainee);
         }
@@ -92,9 +93,16 @@ namespace Prison.App.Web.Controllers
         [HttpPost]
         public ActionResult DeleteFromDb(int id)
         {
-                db.Detainees.Delete(id);
+            db.Delete(id);
 
-            return View("Index", db.Detainees.GetAllRecordsFromTable());
+            return View("Index", db.GetAllRecordsFromTable());
+        }
+
+        public ActionResult GetDetaineeByDate(DateTime date)
+        {
+            var Detainees = db.GetDetaineesByDate(date);
+
+            return View("DetaineeList", Detainees);
         }
 
     }

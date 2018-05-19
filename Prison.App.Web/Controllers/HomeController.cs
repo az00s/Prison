@@ -11,14 +11,10 @@ namespace Prison.App.Web.Controllers
     {
         private ILogger log;
 
-        private IDataProvider db;
-
-        public HomeController(IDataProvider rep, ILogger logger)
+        public HomeController(ILogger logger)
         {
-            ArgumentHelper.ThrowExceptionIfNull(rep, "IDataProvider");
             ArgumentHelper.ThrowExceptionIfNull(logger, "ILogger");
 
-            db = rep;
             log = logger;
         }
 
@@ -27,13 +23,6 @@ namespace Prison.App.Web.Controllers
             return View();
         }
 
-        public ActionResult GetDetaineeByDate(DateTime date)
-        {
-            var Detainees = db.Detainees
-                .GetAllRecordsFromTable()
-                .Where(dt=>dt.Detentions.Any(dtn=>dtn.DetentionDate== date));
-
-            return View("DetaineeList", Detainees);
-        }
+        
     }
 }

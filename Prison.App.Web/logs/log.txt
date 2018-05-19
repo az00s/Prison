@@ -1,149 +1,134 @@
-2018-05-08 00:54:22,744 ERROR PrisonLogger - Значение не может быть неопределенным.
-Имя параметра: List of Blurbs is empty!
-2018-05-08 00:56:58,903 ERROR PrisonLogger - List of Blurbs is empty!
-Имя параметра: IEnumerable<Blurb>
-2018-05-08 11:16:50,394 ERROR PrisonLogger - List of Blurbs is empty!
-Имя параметра: IEnumerable<Blurb>
-2018-05-08 11:17:33,351 ERROR PrisonLogger - List of Blurbs is empty!
-Имя параметра: IEnumerable<Blurb>
-2018-05-08 11:18:06,071 ERROR PrisonLogger - List of Blurbs is empty!
-Имя параметра: IEnumerable<Blurb>
-2018-05-08 11:41:50,130 ERROR PrisonLogger - List of Blurbs is empty!
-Имя параметра: IEnumerable<Blurb>
-2018-05-08 11:42:18,837 ERROR PrisonLogger - List of Blurbs is empty!
-Имя параметра: IEnumerable<Blurb>
-2018-05-08 11:42:40,106 ERROR PrisonLogger - List of Blurbs is empty!
-Имя параметра: IEnumerable<Blurb>
-2018-05-08 11:42:42,997 ERROR PrisonLogger - List of Blurbs is empty!
-Имя параметра: IEnumerable<Blurb>
-2018-05-08 11:42:46,149 ERROR PrisonLogger - List of Blurbs is empty!
-Имя параметра: IEnumerable<Blurb>
-2018-05-08 11:43:02,580 ERROR PrisonLogger - List of Blurbs is empty!
-Имя параметра: IEnumerable<Blurb>
-2018-05-08 12:01:46,420 ERROR PrisonLogger - List of Blurbs is empty!
-Имя параметра: IEnumerable<Blurb>
-2018-05-08 12:03:17,106 ERROR PrisonLogger - List of Blurbs is empty!
-Имя параметра: IEnumerable<Blurb>
-2018-05-08 12:03:49,952 ERROR PrisonLogger - List of Blurbs is empty!
-Имя параметра: IEnumerable<Blurb>
-2018-05-08 12:04:30,988 ERROR PrisonLogger - List of Blurbs is empty!
-Имя параметра: IEnumerable<Blurb>
-2018-05-08 12:05:17,820 ERROR PrisonLogger - List of Blurbs is empty!
-Имя параметра: IEnumerable<Blurb>
-2018-05-08 12:05:29,767 ERROR PrisonLogger - List of Blurbs is empty!
-Имя параметра: IEnumerable<Blurb>
-2018-05-08 12:06:35,823 ERROR PrisonLogger - List of Blurbs is empty!
-Имя параметра: IEnumerable<Blurb>
-2018-05-08 12:06:56,130 ERROR PrisonLogger - List of Blurbs is empty!
-Имя параметра: IEnumerable<Blurb>
-2018-05-08 12:08:17,477 ERROR PrisonLogger - List of Blurbs is empty!
-Имя параметра: IEnumerable<Blurb>
-2018-05-08 12:08:50,952 ERROR PrisonLogger - List of Blurbs is empty!
-Имя параметра: IEnumerable<Blurb>
-2018-05-08 12:10:26,379 ERROR PrisonLogger - List of Blurbs is empty!
-Имя параметра: IEnumerable<Blurb>
-2018-05-08 12:11:08,982 ERROR PrisonLogger - List of Blurbs is empty!
-Имя параметра: IEnumerable<Blurb>
-2018-05-08 12:12:42,401 ERROR PrisonLogger - List of Blurbs is empty!
-Имя параметра: IEnumerable<Blurb>
-2018-05-08 12:13:04,712 ERROR PrisonLogger - List of Blurbs is empty!
-Имя параметра: IEnumerable<Blurb>
-2018-05-08 12:13:44,812 ERROR PrisonLogger - List of Blurbs is empty!
-Имя параметра: IEnumerable<Blurb>
-2018-05-08 12:14:09,437 ERROR PrisonLogger - List of Blurbs is empty!
-Имя параметра: IEnumerable<Blurb>
-2018-05-08 12:15:03,013 ERROR PrisonLogger - List of Blurbs is empty!
-Имя параметра: IEnumerable<Blurb>
-2018-05-08 12:15:43,838 ERROR PrisonLogger - List of Blurbs is empty!
-Имя параметра: IEnumerable<Blurb>
-2018-05-08 12:15:49,342 ERROR PrisonLogger - List of Blurbs is empty!
-Имя параметра: IEnumerable<Blurb>
-2018-05-08 12:16:11,395 ERROR PrisonLogger - List of Blurbs is empty!
-Имя параметра: IEnumerable<Blurb>
-2018-05-08 12:16:45,094 ERROR PrisonLogger - List of Blurbs is empty!
-Имя параметра: IEnumerable<Blurb>
-2018-05-08 12:17:00,497 ERROR PrisonLogger - List of Blurbs is empty!
-Имя параметра: IEnumerable<Blurb>
-2018-05-08 12:18:48,589 ERROR PrisonLogger - List of Blurbs is empty!
-Имя параметра: IEnumerable<Blurb>
-2018-05-08 12:19:04,238 ERROR PrisonLogger - List of Blurbs is empty!
-Имя параметра: IEnumerable<Blurb>
-2018-05-08 12:19:19,237 ERROR PrisonLogger - List of Blurbs is empty!
-Имя параметра: IEnumerable<Blurb>
-2018-05-08 12:19:42,420 ERROR PrisonLogger - List of Blurbs is empty!
-Имя параметра: IEnumerable<Blurb>
-2018-05-08 12:20:02,566 ERROR PrisonLogger - List of Blurbs is empty!
-Имя параметра: IEnumerable<Blurb>
-2018-05-08 12:20:33,605 ERROR PrisonLogger - List of Blurbs is empty!
-Имя параметра: IEnumerable<Blurb>
-2018-05-08 12:21:12,497 ERROR PrisonLogger - List of Blurbs is empty!
-Имя параметра: IEnumerable<Blurb>
-2018-05-08 12:23:37,990 ERROR PrisonLogger - List of Blurbs is empty!
-Имя параметра: IEnumerable<Blurb>
-2018-05-08 12:50:50,106 ERROR PrisonLogger - List of Blurbs is empty!
-Имя параметра: IEnumerable<Blurb>
-2018-05-09 00:18:04,504 ERROR PrisonLogger - Сервер не смог обработать запрос в связи с внутренней ошибкой.  Для получения дополнительных сведений об ошибке либо включите IncludeExceptionDetailInFaults (с помощью атрибута ServiceBehaviorAttribute или через поведение < serviceDebug >) на сервере для того чтобы выслать информацию об исключении назад клиенту, или включить трассировку согласно инструкции Microsoft .NET Framework SDK и проверить записи журнала трассировки клиента.
-2018-05-09 00:18:22,991 ERROR PrisonLogger - Сервер не смог обработать запрос в связи с внутренней ошибкой.  Для получения дополнительных сведений об ошибке либо включите IncludeExceptionDetailInFaults (с помощью атрибута ServiceBehaviorAttribute или через поведение < serviceDebug >) на сервере для того чтобы выслать информацию об исключении назад клиенту, или включить трассировку согласно инструкции Microsoft .NET Framework SDK и проверить записи журнала трассировки клиента.
-2018-05-09 00:27:01,335 ERROR PrisonLogger - Сервер не смог обработать запрос в связи с внутренней ошибкой.  Для получения дополнительных сведений об ошибке либо включите IncludeExceptionDetailInFaults (с помощью атрибута ServiceBehaviorAttribute или через поведение < serviceDebug >) на сервере для того чтобы выслать информацию об исключении назад клиенту, или включить трассировку согласно инструкции Microsoft .NET Framework SDK и проверить записи журнала трассировки клиента.
-2018-05-09 00:27:29,764 ERROR PrisonLogger - Сервер не смог обработать запрос в связи с внутренней ошибкой.  Для получения дополнительных сведений об ошибке либо включите IncludeExceptionDetailInFaults (с помощью атрибута ServiceBehaviorAttribute или через поведение < serviceDebug >) на сервере для того чтобы выслать информацию об исключении назад клиенту, или включить трассировку согласно инструкции Microsoft .NET Framework SDK и проверить записи журнала трассировки клиента.
-2018-05-09 00:36:06,355 ERROR PrisonLogger - 'C:/Users/Константин/source/repos/Prison/Prison.Service/Images/Volvo.jpg' является физическим путем, а требуется виртуальный путь.
-2018-05-09 00:36:29,331 ERROR PrisonLogger - 'C:/Users/Константин/source/repos/Prison/Prison.Service/Images/Nissan.jpg' является физическим путем, а требуется виртуальный путь.
-2018-05-09 00:42:10,772 ERROR PrisonLogger - 'C:/Users/Константин/source/repos/Prison/Prison.Service/Images/Nissan.jpg' является физическим путем, а требуется виртуальный путь.
-2018-05-09 01:00:49,530 ERROR PrisonLogger - Форматтер сгенерировал исключение при попытке десериализовать сообщение: Ошибка десериализации параметра http://Prison.Service.Contracts:GetAdsResult. Сообщение InnerException было "Ошибка десериализации объекта типа Prison.App.Data.ServiceReference.Blurb[]. Превышена квота максимальной длины массива (16384) при чтении данных XML. Эту квоту можно увеличить, изменив свойство MaxArrayLength объекта XmlDictionaryReaderQuotas, используемого при создании устройства чтения XML. Строка 1, позиция 2326.".  Подробнее см. InnerException.
-2018-05-09 01:00:49,530 ERROR PrisonLogger - Форматтер сгенерировал исключение при попытке десериализовать сообщение: Ошибка десериализации параметра http://Prison.Service.Contracts:GetAdsResult. Сообщение InnerException было "Ошибка десериализации объекта типа Prison.App.Data.ServiceReference.Blurb[]. Превышена квота максимальной длины массива (16384) при чтении данных XML. Эту квоту можно увеличить, изменив свойство MaxArrayLength объекта XmlDictionaryReaderQuotas, используемого при создании устройства чтения XML. Строка 1, позиция 2326.".  Подробнее см. InnerException.
-2018-05-09 01:01:04,987 ERROR PrisonLogger - Форматтер сгенерировал исключение при попытке десериализовать сообщение: Ошибка десериализации параметра http://Prison.Service.Contracts:GetAdsResult. Сообщение InnerException было "Ошибка десериализации объекта типа Prison.App.Data.ServiceReference.Blurb[]. Превышена квота максимальной длины массива (16384) при чтении данных XML. Эту квоту можно увеличить, изменив свойство MaxArrayLength объекта XmlDictionaryReaderQuotas, используемого при создании устройства чтения XML. Строка 1, позиция 2326.".  Подробнее см. InnerException.
-2018-05-09 01:04:17,356 ERROR PrisonLogger - Форматтер сгенерировал исключение при попытке десериализовать сообщение: Ошибка десериализации параметра http://Prison.Service.Contracts:GetAdsResult. Сообщение InnerException было "Ошибка десериализации объекта типа Prison.App.Data.ServiceReference.Blurb[]. Превышена квота максимальной длины массива (16384) при чтении данных XML. Эту квоту можно увеличить, изменив свойство MaxArrayLength объекта XmlDictionaryReaderQuotas, используемого при создании устройства чтения XML. Строка 1, позиция 2326.".  Подробнее см. InnerException.
-2018-05-09 01:07:07,443 ERROR PrisonLogger - Форматтер сгенерировал исключение при попытке десериализовать сообщение: Ошибка десериализации параметра http://Prison.Service.Contracts:GetAdsResult. Сообщение InnerException было "Ошибка десериализации объекта типа Prison.App.Data.ServiceReference.Blurb[]. Превышена квота максимальной длины массива (16384) при чтении данных XML. Эту квоту можно увеличить, изменив свойство MaxArrayLength объекта XmlDictionaryReaderQuotas, используемого при создании устройства чтения XML. Строка 1, позиция 2326.".  Подробнее см. InnerException.
-2018-05-09 01:07:22,288 ERROR PrisonLogger - Форматтер сгенерировал исключение при попытке десериализовать сообщение: Ошибка десериализации параметра http://Prison.Service.Contracts:GetAdsResult. Сообщение InnerException было "Ошибка десериализации объекта типа Prison.App.Data.ServiceReference.Blurb[]. Превышена квота максимальной длины массива (16384) при чтении данных XML. Эту квоту можно увеличить, изменив свойство MaxArrayLength объекта XmlDictionaryReaderQuotas, используемого при создании устройства чтения XML. Строка 1, позиция 2326.".  Подробнее см. InnerException.
-2018-05-09 01:08:59,736 ERROR PrisonLogger - Форматтер сгенерировал исключение при попытке десериализовать сообщение: Ошибка десериализации параметра http://Prison.Service.Contracts:GetAdsResult. Сообщение InnerException было "Ошибка десериализации объекта типа Prison.App.Data.ServiceReference.Blurb[]. Превышена квота максимальной длины массива (16384) при чтении данных XML. Эту квоту можно увеличить, изменив свойство MaxArrayLength объекта XmlDictionaryReaderQuotas, используемого при создании устройства чтения XML. Строка 1, позиция 2326.".  Подробнее см. InnerException.
-2018-05-09 01:27:56,547 ERROR PrisonLogger - Форматтер сгенерировал исключение при попытке десериализовать сообщение: Ошибка десериализации параметра http://Prison.Service.Contracts:GetAdsResult. Сообщение InnerException было "Ошибка десериализации объекта типа Prison.App.Data.ServiceReference.Blurb[]. Превышена квота максимальной длины массива (16384) при чтении данных XML. Эту квоту можно увеличить, изменив свойство MaxArrayLength объекта XmlDictionaryReaderQuotas, используемого при создании устройства чтения XML. Строка 1, позиция 2326.".  Подробнее см. InnerException.
-2018-05-09 01:28:09,468 ERROR PrisonLogger - Форматтер сгенерировал исключение при попытке десериализовать сообщение: Ошибка десериализации параметра http://Prison.Service.Contracts:GetAdsResult. Сообщение InnerException было "Ошибка десериализации объекта типа Prison.App.Data.ServiceReference.Blurb[]. Превышена квота максимальной длины массива (16384) при чтении данных XML. Эту квоту можно увеличить, изменив свойство MaxArrayLength объекта XmlDictionaryReaderQuotas, используемого при создании устройства чтения XML. Строка 1, позиция 2326.".  Подробнее см. InnerException.
-2018-05-09 01:28:32,672 ERROR PrisonLogger - Форматтер сгенерировал исключение при попытке десериализовать сообщение: Ошибка десериализации параметра http://Prison.Service.Contracts:GetAdsResult. Сообщение InnerException было "Ошибка десериализации объекта типа Prison.App.Data.ServiceReference.Blurb[]. Превышена квота максимальной длины массива (16384) при чтении данных XML. Эту квоту можно увеличить, изменив свойство MaxArrayLength объекта XmlDictionaryReaderQuotas, используемого при создании устройства чтения XML. Строка 1, позиция 2326.".  Подробнее см. InnerException.
-2018-05-09 13:50:22,044 ERROR PrisonLogger - Файл 'C:\Users\Константин\source\repos\Prison\Prison.Service\Images\BMW.ipg' не найден.
-2018-05-09 13:50:32,234 ERROR PrisonLogger - Файл 'C:\Users\Константин\source\repos\Prison\Prison.Service\Images\BMW.ipg' не найден.
-2018-05-09 13:50:34,680 ERROR PrisonLogger - Файл 'C:\Users\Константин\source\repos\Prison\Prison.Service\Images\BMW.ipg' не найден.
-2018-05-09 13:51:33,032 ERROR PrisonLogger - Файл 'C:\Users\Константин\source\repos\Prison\Prison.Service\Images\Logo_Fanta.png' не найден.
-2018-05-09 13:55:23,817 ERROR PrisonLogger - Файл 'C:\Users\Константин\source\repos\Prison\Prison.Service\Images\Logo_Fanta.png' не найден.
-2018-05-09 13:57:41,015 ERROR PrisonLogger - Файл 'C:\Users\Константин\source\repos\Prison\Prison.Service\Images\BMW.ipg' не найден.
-2018-05-09 14:12:32,108 ERROR PrisonLogger - Индекс за пределами диапазона. Индекс должен быть положительным числом, а его размер не должен превышать размер коллекции.
-Имя параметра: index
-2018-05-09 14:14:03,253 ERROR PrisonLogger - Индекс за пределами диапазона. Индекс должен быть положительным числом, а его размер не должен превышать размер коллекции.
-Имя параметра: index
-2018-05-09 15:49:56,099 ERROR PrisonLogger - Создатель этой ошибки не указал Reason.
-2018-05-09 15:52:32,794 ERROR PrisonLogger - Создатель этой ошибки не указал Reason.
-2018-05-09 15:52:54,328 ERROR PrisonLogger - Создатель этой ошибки не указал Reason.
-2018-05-09 15:58:28,933 ERROR PrisonLogger - Создатель этой ошибки не указал Reason.
-2018-05-09 15:58:33,034 ERROR PrisonLogger - Создатель этой ошибки не указал Reason.
-2018-05-10 19:25:17,031 ERROR PrisonLogger - List of Blurbs is empty!
-Имя параметра: IEnumerable<Blurb>
-2018-05-10 22:47:40,631 ERROR PrisonLogger - Форматтер сгенерировал исключение при попытке десериализовать сообщение: Ошибка десериализации параметра http://Prison.Service.Contracts:GetRandomElementsFromRepResult. Сообщение InnerException было "Ошибка десериализации объекта типа Prison.App.Data.ServiceReference.Blurb[]. Превышена квота максимальной длины массива (5) при чтении данных XML. Эту квоту можно увеличить, изменив свойство MaxArrayLength объекта XmlDictionaryReaderQuotas, используемого при создании устройства чтения XML. Строка 1, позиция 2362.".  Подробнее см. InnerException.
-2018-05-10 22:47:49,293 ERROR PrisonLogger - Форматтер сгенерировал исключение при попытке десериализовать сообщение: Ошибка десериализации параметра http://Prison.Service.Contracts:GetRandomElementsFromRepResult. Сообщение InnerException было "Ошибка десериализации объекта типа Prison.App.Data.ServiceReference.Blurb[]. Превышена квота максимальной длины массива (5) при чтении данных XML. Эту квоту можно увеличить, изменив свойство MaxArrayLength объекта XmlDictionaryReaderQuotas, используемого при создании устройства чтения XML. Строка 1, позиция 2362.".  Подробнее см. InnerException.
-2018-05-11 00:37:56,461 ERROR PrisonLogger - Форматтер сгенерировал исключение при попытке десериализовать сообщение: Ошибка десериализации параметра http://Prison.Service.Contracts:GetRandomElementsFromRepResult. Сообщение InnerException было "Ошибка десериализации объекта типа Prison.App.Data.ServiceReference.Blurb[]. Превышена квота максимальной длины массива (5) при чтении данных XML. Эту квоту можно увеличить, изменив свойство MaxArrayLength объекта XmlDictionaryReaderQuotas, используемого при создании устройства чтения XML. Строка 1, позиция 2362.".  Подробнее см. InnerException.
-2018-05-11 00:37:57,341 ERROR PrisonLogger - Форматтер сгенерировал исключение при попытке десериализовать сообщение: Ошибка десериализации параметра http://Prison.Service.Contracts:GetRandomElementsFromRepResult. Сообщение InnerException было "Ошибка десериализации объекта типа Prison.App.Data.ServiceReference.Blurb[]. Превышена квота максимальной длины массива (5) при чтении данных XML. Эту квоту можно увеличить, изменив свойство MaxArrayLength объекта XmlDictionaryReaderQuotas, используемого при создании устройства чтения XML. Строка 1, позиция 2362.".  Подробнее см. InnerException.
-2018-05-11 00:41:42,178 ERROR PrisonLogger - Форматтер сгенерировал исключение при попытке десериализовать сообщение: Ошибка десериализации параметра http://Prison.Service.Contracts:GetRandomElementsFromRepResult. Сообщение InnerException было "Ошибка десериализации объекта типа Prison.App.Data.ServiceReference.Blurb[]. Превышена квота максимальной длины массива (4) при чтении данных XML. Эту квоту можно увеличить, изменив свойство MaxArrayLength объекта XmlDictionaryReaderQuotas, используемого при создании устройства чтения XML. Строка 1, позиция 2362.".  Подробнее см. InnerException.
-2018-05-11 00:41:43,105 ERROR PrisonLogger - Форматтер сгенерировал исключение при попытке десериализовать сообщение: Ошибка десериализации параметра http://Prison.Service.Contracts:GetRandomElementsFromRepResult. Сообщение InnerException было "Ошибка десериализации объекта типа Prison.App.Data.ServiceReference.Blurb[]. Превышена квота максимальной длины массива (4) при чтении данных XML. Эту квоту можно увеличить, изменив свойство MaxArrayLength объекта XmlDictionaryReaderQuotas, используемого при создании устройства чтения XML. Строка 1, позиция 2362.".  Подробнее см. InnerException.
-2018-05-11 00:42:40,498 ERROR PrisonLogger - Форматтер сгенерировал исключение при попытке десериализовать сообщение: Ошибка десериализации параметра http://Prison.Service.Contracts:GetRandomElementsFromRepResult. Сообщение InnerException было "Ошибка десериализации объекта типа Prison.App.Data.ServiceReference.Blurb[]. Превышена квота максимальной длины массива (4) при чтении данных XML. Эту квоту можно увеличить, изменив свойство MaxArrayLength объекта XmlDictionaryReaderQuotas, используемого при создании устройства чтения XML. Строка 1, позиция 2362.".  Подробнее см. InnerException.
-2018-05-11 00:42:40,946 ERROR PrisonLogger - Форматтер сгенерировал исключение при попытке десериализовать сообщение: Ошибка десериализации параметра http://Prison.Service.Contracts:GetRandomElementsFromRepResult. Сообщение InnerException было "Ошибка десериализации объекта типа Prison.App.Data.ServiceReference.Blurb[]. Превышена квота максимальной длины массива (4) при чтении данных XML. Эту квоту можно увеличить, изменив свойство MaxArrayLength объекта XmlDictionaryReaderQuotas, используемого при создании устройства чтения XML. Строка 1, позиция 2362.".  Подробнее см. InnerException.
-2018-05-11 00:44:35,514 ERROR PrisonLogger - Форматтер сгенерировал исключение при попытке десериализовать сообщение: Ошибка десериализации параметра http://Prison.Service.Contracts:GetRandomElementsFromRepResult. Сообщение InnerException было "Ошибка десериализации объекта типа Prison.App.Data.ServiceReference.Blurb[]. Превышена квота максимальной длины массива (5) при чтении данных XML. Эту квоту можно увеличить, изменив свойство MaxArrayLength объекта XmlDictionaryReaderQuotas, используемого при создании устройства чтения XML. Строка 1, позиция 2362.".  Подробнее см. InnerException.
-2018-05-11 00:44:36,326 ERROR PrisonLogger - Форматтер сгенерировал исключение при попытке десериализовать сообщение: Ошибка десериализации параметра http://Prison.Service.Contracts:GetRandomElementsFromRepResult. Сообщение InnerException было "Ошибка десериализации объекта типа Prison.App.Data.ServiceReference.Blurb[]. Превышена квота максимальной длины массива (5) при чтении данных XML. Эту квоту можно увеличить, изменив свойство MaxArrayLength объекта XmlDictionaryReaderQuotas, используемого при создании устройства чтения XML. Строка 1, позиция 2362.".  Подробнее см. InnerException.
-2018-05-16 16:32:02,082 ERROR PrisonLogger - Прослушивание на http://localhost/Service/Service.svc не выполняла ни одна конечная точка, которая могла бы принять сообщение. Среди прочих причин это могло быть вызвано неправильным адресом или действием SOAP. Подробнее см. в описании InnerException (если имеется).
-2018-05-16 16:32:50,296 ERROR PrisonLogger - Прослушивание на http://localhost/Service/Service.svc не выполняла ни одна конечная точка, которая могла бы принять сообщение. Среди прочих причин это могло быть вызвано неправильным адресом или действием SOAP. Подробнее см. в описании InnerException (если имеется).
-2018-05-16 16:41:20,250 ERROR PrisonLogger - Прослушивание на http://localhost/Service/Service.svc не выполняла ни одна конечная точка, которая могла бы принять сообщение. Среди прочих причин это могло быть вызвано неправильным адресом или действием SOAP. Подробнее см. в описании InnerException (если имеется).
-2018-05-16 22:24:25,750 ERROR PrisonLogger - Прослушивание на http://localhost/Service/Service.svc не выполняла ни одна конечная точка, которая могла бы принять сообщение. Среди прочих причин это могло быть вызвано неправильным адресом или действием SOAP. Подробнее см. в описании InnerException (если имеется).
-2018-05-16 23:43:45,185 ERROR PrisonLogger - Прослушивание на http://localhost/Service/Service.svc не выполняла ни одна конечная точка, которая могла бы принять сообщение. Среди прочих причин это могло быть вызвано неправильным адресом или действием SOAP. Подробнее см. в описании InnerException (если имеется).
-2018-05-17 00:06:23,213 ERROR PrisonLogger - Прослушивание на http://localhost/Service/Service.svc не выполняла ни одна конечная точка, которая могла бы принять сообщение. Среди прочих причин это могло быть вызвано неправильным адресом или действием SOAP. Подробнее см. в описании InnerException (если имеется).
-2018-05-17 00:08:44,247 ERROR PrisonLogger - Прослушивание на http://localhost/Service/Service.svc не выполняла ни одна конечная точка, которая могла бы принять сообщение. Среди прочих причин это могло быть вызвано неправильным адресом или действием SOAP. Подробнее см. в описании InnerException (если имеется).
-2018-05-17 00:09:47,929 ERROR PrisonLogger - Прослушивание на http://localhost/Service/Service.svc не выполняла ни одна конечная точка, которая могла бы принять сообщение. Среди прочих причин это могло быть вызвано неправильным адресом или действием SOAP. Подробнее см. в описании InnerException (если имеется).
-2018-05-17 00:17:14,705 ERROR PrisonLogger - Прослушивание на http://localhost/Service/Service.svc не выполняла ни одна конечная точка, которая могла бы принять сообщение. Среди прочих причин это могло быть вызвано неправильным адресом или действием SOAP. Подробнее см. в описании InnerException (если имеется).
-2018-05-17 14:58:34,815 ERROR PrisonLogger - Прослушивание на http://localhost/Service/Service.svc не выполняла ни одна конечная точка, которая могла бы принять сообщение. Среди прочих причин это могло быть вызвано неправильным адресом или действием SOAP. Подробнее см. в описании InnerException (если имеется).
-2018-05-17 15:02:39,041 ERROR PrisonLogger - Прослушивание на http://localhost/Service/Service.svc не выполняла ни одна конечная точка, которая могла бы принять сообщение. Среди прочих причин это могло быть вызвано неправильным адресом или действием SOAP. Подробнее см. в описании InnerException (если имеется).
-2018-05-17 15:12:13,333 ERROR PrisonLogger - Прослушивание на http://localhost/Service/Service.svc не выполняла ни одна конечная точка, которая могла бы принять сообщение. Среди прочих причин это могло быть вызвано неправильным адресом или действием SOAP. Подробнее см. в описании InnerException (если имеется).
-2018-05-17 15:14:07,861 ERROR PrisonLogger - Прослушивание на http://localhost/Service/Service.svc не выполняла ни одна конечная точка, которая могла бы принять сообщение. Среди прочих причин это могло быть вызвано неправильным адресом или действием SOAP. Подробнее см. в описании InnerException (если имеется).
-2018-05-17 15:15:13,686 ERROR PrisonLogger - Прослушивание на http://localhost/Service/Service.svc не выполняла ни одна конечная точка, которая могла бы принять сообщение. Среди прочих причин это могло быть вызвано неправильным адресом или действием SOAP. Подробнее см. в описании InnerException (если имеется).
-2018-05-17 15:17:36,585 ERROR PrisonLogger - Прослушивание на http://localhost/Service/Service.svc не выполняла ни одна конечная точка, которая могла бы принять сообщение. Среди прочих причин это могло быть вызвано неправильным адресом или действием SOAP. Подробнее см. в описании InnerException (если имеется).
-2018-05-17 16:48:21,747 ERROR PrisonLogger - Прослушивание на http://localhost/Service/Service.svc не выполняла ни одна конечная точка, которая могла бы принять сообщение. Среди прочих причин это могло быть вызвано неправильным адресом или действием SOAP. Подробнее см. в описании InnerException (если имеется).
-2018-05-17 16:51:07,753 ERROR PrisonLogger - Прослушивание на http://localhost:8000/Service.svc не выполняла ни одна конечная точка, которая могла бы принять сообщение. Среди прочих причин это могло быть вызвано неправильным адресом или действием SOAP. Подробнее см. в описании InnerException (если имеется).
-2018-05-17 16:54:17,249 ERROR PrisonLogger - Прослушивание на http://localhost:8000/Service.svc не выполняла ни одна конечная точка, которая могла бы принять сообщение. Среди прочих причин это могло быть вызвано неправильным адресом или действием SOAP. Подробнее см. в описании InnerException (если имеется).
-2018-05-17 16:55:06,679 ERROR PrisonLogger - Прослушивание на http://localhost:8000/Service.svc не выполняла ни одна конечная точка, которая могла бы принять сообщение. Среди прочих причин это могло быть вызвано неправильным адресом или действием SOAP. Подробнее см. в описании InnerException (если имеется).
-2018-05-17 16:55:54,780 ERROR PrisonLogger - Прослушивание на http://localhost:8000/Service.svc не выполняла ни одна конечная точка, которая могла бы принять сообщение. Среди прочих причин это могло быть вызвано неправильным адресом или действием SOAP. Подробнее см. в описании InnerException (если имеется).
-2018-05-17 16:56:22,255 ERROR PrisonLogger - Прослушивание на http://localhost:8000/Service.svc не выполняла ни одна конечная точка, которая могла бы принять сообщение. Среди прочих причин это могло быть вызвано неправильным адресом или действием SOAP. Подробнее см. в описании InnerException (если имеется).
+2018-05-19 14:36:24,766 ERROR PrisonLogger - Не удалось найти хранимую процедуру "SelectAllEmployees".
+2018-05-19 14:37:20,285 ERROR PrisonLogger - Не удалось найти хранимую процедуру "SelectAllEmployees".
+2018-05-19 14:37:38,355 ERROR PrisonLogger - Не удалось найти хранимую процедуру "SelectAllEmployees".
+2018-05-19 14:38:17,683 ERROR PrisonLogger - Не удалось найти хранимую процедуру "SelectAllEmployees".
+2018-05-19 14:39:18,500 ERROR PrisonLogger - Не удалось найти хранимую процедуру "SelectAllEmployees".
+2018-05-19 14:39:51,134 ERROR PrisonLogger - Не удалось найти хранимую процедуру "SelectAllEmployees".
+2018-05-19 14:40:15,667 ERROR PrisonLogger - Не удалось найти хранимую процедуру "SelectAllEmployees".
+2018-05-19 14:41:31,727 ERROR PrisonLogger - Свойство ConnectionString не инициализировано.
+2018-05-19 16:49:48,802 ERROR PrisonLogger - Конфликт инструкции INSERT с ограничением FOREIGN KEY "FK_Employee_Position". Конфликт произошел в базе данных "Prison", таблица "dbo.Position", column 'PositionID'.
+Выполнение данной инструкции было прервано.
+2018-05-19 17:47:43,629 ERROR PrisonLogger - Не удалось найти хранимую процедуру "GetDetentionsByDetaineeID".
+2018-05-19 17:47:43,647 ERROR PrisonLogger - Не удалось найти хранимую процедуру "GetDetentionsByDetaineeID".
+2018-05-19 17:47:43,648 ERROR PrisonLogger - Не удалось найти хранимую процедуру "GetDetentionsByDetaineeID".
+2018-05-19 17:47:43,649 ERROR PrisonLogger - Не удалось найти хранимую процедуру "GetDetentionsByDetaineeID".
+2018-05-19 17:47:43,650 ERROR PrisonLogger - Не удалось найти хранимую процедуру "GetDetentionsByDetaineeID".
+2018-05-19 17:47:43,651 ERROR PrisonLogger - Не удалось найти хранимую процедуру "GetDetentionsByDetaineeID".
+2018-05-19 17:47:43,652 ERROR PrisonLogger - Не удалось найти хранимую процедуру "GetDetentionsByDetaineeID".
+2018-05-19 17:47:49,155 ERROR PrisonLogger - Не удалось найти хранимую процедуру "GetDetentionsByDetaineeID".
+2018-05-19 17:47:49,157 ERROR PrisonLogger - Не удалось найти хранимую процедуру "GetDetentionsByDetaineeID".
+2018-05-19 17:47:49,158 ERROR PrisonLogger - Не удалось найти хранимую процедуру "GetDetentionsByDetaineeID".
+2018-05-19 17:47:49,160 ERROR PrisonLogger - Не удалось найти хранимую процедуру "GetDetentionsByDetaineeID".
+2018-05-19 17:47:49,161 ERROR PrisonLogger - Не удалось найти хранимую процедуру "GetDetentionsByDetaineeID".
+2018-05-19 17:47:49,163 ERROR PrisonLogger - Не удалось найти хранимую процедуру "GetDetentionsByDetaineeID".
+2018-05-19 17:47:49,165 ERROR PrisonLogger - Не удалось найти хранимую процедуру "GetDetentionsByDetaineeID".
+2018-05-19 17:51:21,785 ERROR PrisonLogger - Не удалось найти хранимую процедуру "GetDetentionsByDetaineeID".
+2018-05-19 17:51:21,787 ERROR PrisonLogger - Не удалось найти хранимую процедуру "GetDetentionsByDetaineeID".
+2018-05-19 17:51:21,788 ERROR PrisonLogger - Не удалось найти хранимую процедуру "GetDetentionsByDetaineeID".
+2018-05-19 17:51:21,789 ERROR PrisonLogger - Не удалось найти хранимую процедуру "GetDetentionsByDetaineeID".
+2018-05-19 17:51:21,790 ERROR PrisonLogger - Не удалось найти хранимую процедуру "GetDetentionsByDetaineeID".
+2018-05-19 17:51:21,791 ERROR PrisonLogger - Не удалось найти хранимую процедуру "GetDetentionsByDetaineeID".
+2018-05-19 17:51:21,792 ERROR PrisonLogger - Не удалось найти хранимую процедуру "GetDetentionsByDetaineeID".
+2018-05-19 17:52:18,177 ERROR PrisonLogger - Не удалось найти хранимую процедуру "GetDetentionsByDetaineeID".
+2018-05-19 17:52:18,179 ERROR PrisonLogger - Не удалось найти хранимую процедуру "GetDetentionsByDetaineeID".
+2018-05-19 17:52:18,181 ERROR PrisonLogger - Не удалось найти хранимую процедуру "GetDetentionsByDetaineeID".
+2018-05-19 17:52:18,184 ERROR PrisonLogger - Не удалось найти хранимую процедуру "GetDetentionsByDetaineeID".
+2018-05-19 17:52:18,185 ERROR PrisonLogger - Не удалось найти хранимую процедуру "GetDetentionsByDetaineeID".
+2018-05-19 17:52:18,187 ERROR PrisonLogger - Не удалось найти хранимую процедуру "GetDetentionsByDetaineeID".
+2018-05-19 17:52:18,188 ERROR PrisonLogger - Не удалось найти хранимую процедуру "GetDetentionsByDetaineeID".
+2018-05-19 17:52:44,009 ERROR PrisonLogger - Не удалось найти хранимую процедуру "GetDetentionsByDetaineeID".
+2018-05-19 17:52:44,011 ERROR PrisonLogger - Не удалось найти хранимую процедуру "GetDetentionsByDetaineeID".
+2018-05-19 17:52:44,013 ERROR PrisonLogger - Не удалось найти хранимую процедуру "GetDetentionsByDetaineeID".
+2018-05-19 17:52:44,014 ERROR PrisonLogger - Не удалось найти хранимую процедуру "GetDetentionsByDetaineeID".
+2018-05-19 17:52:44,016 ERROR PrisonLogger - Не удалось найти хранимую процедуру "GetDetentionsByDetaineeID".
+2018-05-19 17:52:44,017 ERROR PrisonLogger - Не удалось найти хранимую процедуру "GetDetentionsByDetaineeID".
+2018-05-19 17:52:44,018 ERROR PrisonLogger - Не удалось найти хранимую процедуру "GetDetentionsByDetaineeID".
+2018-05-19 17:54:29,174 ERROR PrisonLogger - Не удалось найти хранимую процедуру "GetDetentionsByDetaineeID".
+2018-05-19 17:54:29,175 ERROR PrisonLogger - Не удалось найти хранимую процедуру "GetDetentionsByDetaineeID".
+2018-05-19 17:54:29,176 ERROR PrisonLogger - Не удалось найти хранимую процедуру "GetDetentionsByDetaineeID".
+2018-05-19 17:54:29,178 ERROR PrisonLogger - Не удалось найти хранимую процедуру "GetDetentionsByDetaineeID".
+2018-05-19 17:54:29,179 ERROR PrisonLogger - Не удалось найти хранимую процедуру "GetDetentionsByDetaineeID".
+2018-05-19 17:54:29,181 ERROR PrisonLogger - Не удалось найти хранимую процедуру "GetDetentionsByDetaineeID".
+2018-05-19 17:54:29,184 ERROR PrisonLogger - Не удалось найти хранимую процедуру "GetDetentionsByDetaineeID".
+2018-05-19 17:54:34,912 ERROR PrisonLogger - Не удалось найти хранимую процедуру "GetDetentionsByDetaineeID".
+2018-05-19 17:54:34,913 ERROR PrisonLogger - Не удалось найти хранимую процедуру "GetDetentionsByDetaineeID".
+2018-05-19 17:54:34,915 ERROR PrisonLogger - Не удалось найти хранимую процедуру "GetDetentionsByDetaineeID".
+2018-05-19 17:54:34,917 ERROR PrisonLogger - Не удалось найти хранимую процедуру "GetDetentionsByDetaineeID".
+2018-05-19 17:54:34,919 ERROR PrisonLogger - Не удалось найти хранимую процедуру "GetDetentionsByDetaineeID".
+2018-05-19 17:54:34,921 ERROR PrisonLogger - Не удалось найти хранимую процедуру "GetDetentionsByDetaineeID".
+2018-05-19 17:54:34,923 ERROR PrisonLogger - Не удалось найти хранимую процедуру "GetDetentionsByDetaineeID".
+2018-05-19 17:54:49,282 ERROR PrisonLogger - Не удалось найти хранимую процедуру "GetDetentionsByDetaineeID".
+2018-05-19 17:54:49,284 ERROR PrisonLogger - Не удалось найти хранимую процедуру "GetDetentionsByDetaineeID".
+2018-05-19 17:54:49,285 ERROR PrisonLogger - Не удалось найти хранимую процедуру "GetDetentionsByDetaineeID".
+2018-05-19 17:54:49,286 ERROR PrisonLogger - Не удалось найти хранимую процедуру "GetDetentionsByDetaineeID".
+2018-05-19 17:54:49,287 ERROR PrisonLogger - Не удалось найти хранимую процедуру "GetDetentionsByDetaineeID".
+2018-05-19 17:54:49,288 ERROR PrisonLogger - Не удалось найти хранимую процедуру "GetDetentionsByDetaineeID".
+2018-05-19 17:54:49,289 ERROR PrisonLogger - Не удалось найти хранимую процедуру "GetDetentionsByDetaineeID".
+2018-05-19 17:54:56,412 ERROR PrisonLogger - Процедура или функция "UpdateDetainee" ожидает параметр "@Photo", который не был указан.
+2018-05-19 17:54:56,415 ERROR PrisonLogger - Не удалось найти хранимую процедуру "GetDetentionsByDetaineeID".
+2018-05-19 17:54:56,416 ERROR PrisonLogger - Не удалось найти хранимую процедуру "GetDetentionsByDetaineeID".
+2018-05-19 17:54:56,418 ERROR PrisonLogger - Не удалось найти хранимую процедуру "GetDetentionsByDetaineeID".
+2018-05-19 17:54:56,426 ERROR PrisonLogger - Не удалось найти хранимую процедуру "GetDetentionsByDetaineeID".
+2018-05-19 17:54:56,428 ERROR PrisonLogger - Не удалось найти хранимую процедуру "GetDetentionsByDetaineeID".
+2018-05-19 17:54:56,429 ERROR PrisonLogger - Не удалось найти хранимую процедуру "GetDetentionsByDetaineeID".
+2018-05-19 17:54:56,431 ERROR PrisonLogger - Не удалось найти хранимую процедуру "GetDetentionsByDetaineeID".
+2018-05-19 17:55:00,108 ERROR PrisonLogger - Не удалось найти хранимую процедуру "GetDetentionsByDetaineeID".
+2018-05-19 17:55:00,110 ERROR PrisonLogger - Не удалось найти хранимую процедуру "GetDetentionsByDetaineeID".
+2018-05-19 17:55:00,111 ERROR PrisonLogger - Не удалось найти хранимую процедуру "GetDetentionsByDetaineeID".
+2018-05-19 17:55:00,112 ERROR PrisonLogger - Не удалось найти хранимую процедуру "GetDetentionsByDetaineeID".
+2018-05-19 17:55:00,113 ERROR PrisonLogger - Не удалось найти хранимую процедуру "GetDetentionsByDetaineeID".
+2018-05-19 17:55:00,114 ERROR PrisonLogger - Не удалось найти хранимую процедуру "GetDetentionsByDetaineeID".
+2018-05-19 17:55:00,115 ERROR PrisonLogger - Не удалось найти хранимую процедуру "GetDetentionsByDetaineeID".
+2018-05-19 17:55:06,004 ERROR PrisonLogger - Не удалось найти хранимую процедуру "GetDetentionsByDetaineeID".
+2018-05-19 17:55:06,006 ERROR PrisonLogger - Не удалось найти хранимую процедуру "GetDetentionsByDetaineeID".
+2018-05-19 17:55:06,007 ERROR PrisonLogger - Не удалось найти хранимую процедуру "GetDetentionsByDetaineeID".
+2018-05-19 17:55:06,009 ERROR PrisonLogger - Не удалось найти хранимую процедуру "GetDetentionsByDetaineeID".
+2018-05-19 17:55:06,010 ERROR PrisonLogger - Не удалось найти хранимую процедуру "GetDetentionsByDetaineeID".
+2018-05-19 17:55:06,011 ERROR PrisonLogger - Не удалось найти хранимую процедуру "GetDetentionsByDetaineeID".
+2018-05-19 17:55:06,013 ERROR PrisonLogger - Не удалось найти хранимую процедуру "GetDetentionsByDetaineeID".
+2018-05-19 17:55:09,261 ERROR PrisonLogger - Не удалось найти хранимую процедуру "GetDetentionsByDetaineeID".
+2018-05-19 17:55:09,263 ERROR PrisonLogger - Не удалось найти хранимую процедуру "GetDetentionsByDetaineeID".
+2018-05-19 17:55:09,264 ERROR PrisonLogger - Не удалось найти хранимую процедуру "GetDetentionsByDetaineeID".
+2018-05-19 17:55:09,266 ERROR PrisonLogger - Не удалось найти хранимую процедуру "GetDetentionsByDetaineeID".
+2018-05-19 17:55:09,267 ERROR PrisonLogger - Не удалось найти хранимую процедуру "GetDetentionsByDetaineeID".
+2018-05-19 17:55:09,269 ERROR PrisonLogger - Не удалось найти хранимую процедуру "GetDetentionsByDetaineeID".
+2018-05-19 17:55:09,271 ERROR PrisonLogger - Не удалось найти хранимую процедуру "GetDetentionsByDetaineeID".
+2018-05-19 17:55:11,485 ERROR PrisonLogger - Не удалось найти хранимую процедуру "GetDetentionsByDetaineeID".
+2018-05-19 17:55:11,486 ERROR PrisonLogger - Не удалось найти хранимую процедуру "GetDetentionsByDetaineeID".
+2018-05-19 17:55:11,487 ERROR PrisonLogger - Не удалось найти хранимую процедуру "GetDetentionsByDetaineeID".
+2018-05-19 17:55:11,488 ERROR PrisonLogger - Не удалось найти хранимую процедуру "GetDetentionsByDetaineeID".
+2018-05-19 17:55:11,489 ERROR PrisonLogger - Не удалось найти хранимую процедуру "GetDetentionsByDetaineeID".
+2018-05-19 17:55:11,490 ERROR PrisonLogger - Не удалось найти хранимую процедуру "GetDetentionsByDetaineeID".
+2018-05-19 17:55:11,491 ERROR PrisonLogger - Не удалось найти хранимую процедуру "GetDetentionsByDetaineeID".
+2018-05-19 17:55:16,283 ERROR PrisonLogger - Процедура или функция "UpdateDetainee" ожидает параметр "@Photo", который не был указан.
+2018-05-19 17:55:16,287 ERROR PrisonLogger - Не удалось найти хранимую процедуру "GetDetentionsByDetaineeID".
+2018-05-19 17:55:16,293 ERROR PrisonLogger - Не удалось найти хранимую процедуру "GetDetentionsByDetaineeID".
+2018-05-19 17:55:16,296 ERROR PrisonLogger - Не удалось найти хранимую процедуру "GetDetentionsByDetaineeID".
+2018-05-19 17:55:16,297 ERROR PrisonLogger - Не удалось найти хранимую процедуру "GetDetentionsByDetaineeID".
+2018-05-19 17:55:16,300 ERROR PrisonLogger - Не удалось найти хранимую процедуру "GetDetentionsByDetaineeID".
+2018-05-19 17:55:16,302 ERROR PrisonLogger - Не удалось найти хранимую процедуру "GetDetentionsByDetaineeID".
+2018-05-19 17:55:16,309 ERROR PrisonLogger - Не удалось найти хранимую процедуру "GetDetentionsByDetaineeID".
+2018-05-19 17:55:18,941 ERROR PrisonLogger - Не удалось найти хранимую процедуру "GetDetentionsByDetaineeID".
+2018-05-19 17:55:18,942 ERROR PrisonLogger - Не удалось найти хранимую процедуру "GetDetentionsByDetaineeID".
+2018-05-19 17:55:18,943 ERROR PrisonLogger - Не удалось найти хранимую процедуру "GetDetentionsByDetaineeID".
+2018-05-19 17:55:18,944 ERROR PrisonLogger - Не удалось найти хранимую процедуру "GetDetentionsByDetaineeID".
+2018-05-19 17:55:18,945 ERROR PrisonLogger - Не удалось найти хранимую процедуру "GetDetentionsByDetaineeID".
+2018-05-19 17:55:18,946 ERROR PrisonLogger - Не удалось найти хранимую процедуру "GetDetentionsByDetaineeID".
+2018-05-19 17:55:18,946 ERROR PrisonLogger - Не удалось найти хранимую процедуру "GetDetentionsByDetaineeID".
+2018-05-19 18:05:59,123 ERROR PrisonLogger - Процедура или функция "UpdateDetainee" ожидает параметр "@Photo", который не был указан.
+2018-05-19 18:07:17,608 ERROR PrisonLogger - Процедура или функция "UpdateDetainee" ожидает параметр "@Photo", который не был указан.
+2018-05-19 18:08:30,664 ERROR PrisonLogger - Процедура или функция "UpdateDetainee" ожидает параметр "@Photo", который не был указан.
+2018-05-19 18:09:09,058 ERROR PrisonLogger - Процедура или функция "UpdateDetainee" ожидает параметр "@Photo", который не был указан.
+2018-05-19 18:17:31,681 ERROR PrisonLogger - Процедура или функция "UpdateDetainee" ожидает параметр "@Photo", который не был указан.
+2018-05-19 18:17:38,106 ERROR PrisonLogger - Процедура или функция "UpdateDetainee" ожидает параметр "@Photo", который не был указан.
+2018-05-19 18:18:31,395 ERROR PrisonLogger - Процедура или функция "UpdateDetainee" ожидает параметр "@Photo", который не был указан.
+2018-05-19 18:18:43,697 ERROR PrisonLogger - Процедура или функция "UpdateDetainee" ожидает параметр "@Photo", который не был указан.
+2018-05-19 18:19:54,015 ERROR PrisonLogger - Процедура или функция "CreateDetainee" ожидает параметр "@MiddleName", который не был указан.
+2018-05-19 18:20:49,688 ERROR PrisonLogger - Процедура или функция "CreateDetainee" ожидает параметр "@Photo", который не был указан.
+2018-05-19 18:22:14,855 ERROR PrisonLogger - Процедура или функция "CreateDetainee" ожидает параметр "@Photo", который не был указан.
+2018-05-19 18:23:28,655 ERROR PrisonLogger - Процедура или функция "CreateDetainee" ожидает параметр "@Photo", который не был указан.
+2018-05-19 18:25:04,440 ERROR PrisonLogger - Процедура или функция "UpdateDetainee" ожидает параметр "@Photo", который не был указан.
+2018-05-19 18:25:22,530 ERROR PrisonLogger - Процедура или функция "UpdateDetainee" ожидает параметр "@Photo", который не был указан.
+2018-05-19 20:41:40,838 ERROR PrisonLogger - Недопустимая попытка чтения при отсутствии данных.
+2018-05-19 23:18:19,261 ERROR PrisonLogger - Недопустимое имя столбца "PlaceOfStayID".
+2018-05-19 23:57:27,062 ERROR PrisonLogger - Недопустимое имя столбца "PlaceOfStayID".

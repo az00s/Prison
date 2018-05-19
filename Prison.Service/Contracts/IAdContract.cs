@@ -3,7 +3,7 @@ using System.ServiceModel;
 
 namespace Prison.Service.Contracts
 {
-    [ServiceContract]
+    [ServiceContract(Namespace = "http://Prison.Service.Contracts")]
     public interface IAdContract
     {
         [OperationContract]

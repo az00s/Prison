@@ -10,30 +10,27 @@ namespace Prison.App.Web.Controllers
     {
         private ILogger log;
 
-        private IRepository db;
 
-        public DetentionController(IRepository rep, ILogger logger)
+        public DetentionController( ILogger logger)
         {
 
-            ArgumentHelper.ThrowExceptionIfNull(rep, "IRepository");
             ArgumentHelper.ThrowExceptionIfNull(logger, "ILogger");
 
-            db = rep;
             log = logger;
         }
         // GET: Home
-        public ActionResult Index()
-        {
-            var Detentions = db.Detentions;
+        //public ActionResult Index()
+        //{
+        //    var Detentions = db.Detentions;
 
-            return View(Detentions);
-        }
+        //    return View(Detentions);
+        //}
 
-        public ActionResult Details(int id)
-        {
-            var Detention = db.Detentions.First(d => d.DetentionID == id);
+        //public ActionResult Details(int id)
+        //{
+        //    var Detention = db.Detentions.First(d => d.DetentionID == id);
 
-            return View(Detention);
-        }
+        //    return View(Detention);
+        //}
     }
 }

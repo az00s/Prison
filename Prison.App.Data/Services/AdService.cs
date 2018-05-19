@@ -120,7 +120,7 @@ namespace Prison.App.Data.Services
             catch (CommunicationException ex)
             {
                 ((IClientChannel)_adService).Abort();
-                _log.Error(ex.StackTrace);
+                _log.Error(ex.Message);
                 listOfBlurbsOnClient = null;
             }
 
