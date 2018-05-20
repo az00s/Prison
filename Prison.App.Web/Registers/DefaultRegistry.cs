@@ -35,7 +35,7 @@ namespace Prison.App.Web.DependencyResolution
 					scan.With(new ControllerConvention());
                 });
             //For<IRepository>().Use<Repository>();
-            //ForSingletonOf<ILogger>().Use<Logger>();
+            ForSingletonOf<ILogger>().Use<Logger>();
 
         }
 

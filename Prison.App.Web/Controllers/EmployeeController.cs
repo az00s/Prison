@@ -5,6 +5,7 @@ using Prison.App.Common.Interfaces;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Mvc;
+using System.Web.Routing;
 
 namespace Prison.App.Web.Controllers
 {
@@ -28,7 +29,7 @@ namespace Prison.App.Web.Controllers
         {
             var Employees = db.GetAllRecordsFromTable();
 
-            if (Employees==null)
+            if (Employees == null)
             {
                 return RedirectToAction("Index", "Error");
             }
@@ -116,8 +117,15 @@ namespace Prison.App.Web.Controllers
             }
             else
             {
-                return RedirectToAction("Index", "Error");
+                log.Error("EmployeeID is not valid!");
+
+                return RedirectToAction(
+                    "CustomError",
+                    "Error", 
+                    new { message = "Указан неверный идентификатор пользователя. Пожалуйста введите целое числовое значение большее нуля." });
             }
         }
+
+       
     }
 }

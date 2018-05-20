@@ -1,4 +1,5 @@
-﻿using Prison.App.Web;
+﻿using Prison.App.Common.Interfaces;
+using Prison.App.Web;
 using System.Linq;
 using System.Web.Mvc;
 using System.Web.Routing;
@@ -14,7 +15,10 @@ namespace Prison
             ViewEngines.Engines.Add(new PrisonViewEngine());
 
         }
+
     }
+
+
 
     //adding new path for finding Partial Views in folder Shared/"Partials"
     public class PrisonViewEngine : RazorViewEngine
