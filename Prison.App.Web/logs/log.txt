@@ -2,3 +2,56 @@
 Выполнение данной инструкции было прервано.
 2018-05-20 15:58:59,802 ERROR PrisonLogger - Недопустимое имя столбца "PlaceOfStayID".
 2018-05-20 16:00:28,675 ERROR PrisonLogger - EmployeeID is not valid!
+2018-05-20 18:21:15,622 ERROR PrisonLogger - Прослушивание на http://localhost:64585/Service.svc не выполняла ни одна конечная точка, которая могла бы принять сообщение. Среди прочих причин это могло быть вызвано неправильным адресом или действием SOAP. Подробнее см. в описании InnerException (если имеется).
+2018-05-20 18:55:50,858 ERROR PrisonLogger - Прослушивание на http://localhost:64585/Service.svc не выполняла ни одна конечная точка, которая могла бы принять сообщение. Среди прочих причин это могло быть вызвано неправильным адресом или действием SOAP. Подробнее см. в описании InnerException (если имеется).
+2018-05-20 19:20:09,062 ERROR PrisonLogger - Прослушивание на http://localhost:64585/Service.svc не выполняла ни одна конечная точка, которая могла бы принять сообщение. Среди прочих причин это могло быть вызвано неправильным адресом или действием SOAP. Подробнее см. в описании InnerException (если имеется).
+2018-05-20 19:23:37,934 ERROR PrisonLogger - Прослушивание на http://localhost:64585/Service.svc не выполняла ни одна конечная точка, которая могла бы принять сообщение. Среди прочих причин это могло быть вызвано неправильным адресом или действием SOAP. Подробнее см. в описании InnerException (если имеется).
+2018-05-20 19:25:26,605 ERROR PrisonLogger - Прослушивание на http://localhost:64585/Service.svc не выполняла ни одна конечная точка, которая могла бы принять сообщение. Среди прочих причин это могло быть вызвано неправильным адресом или действием SOAP. Подробнее см. в описании InnerException (если имеется).
+2018-05-20 20:10:55,675 ERROR PrisonLogger - Процедура или функция "CreateEmployee" ожидает параметр "@FirstName", который не был указан.
+2018-05-20 20:13:52,751 ERROR PrisonLogger - Недопустимое имя столбца "PlaceOfStayID".
+2018-05-20 20:36:22,372 ERROR PrisonLogger - Недопустимое имя столбца "PlaceOfStayID".
+2018-05-20 20:50:18,969 ERROR PrisonLogger - Недопустимое имя столбца "PlaceOfStayID".
+2018-05-20 20:51:25,506 ERROR PrisonLogger - Недопустимое имя столбца "PlaceOfStayID".
+2018-05-20 20:56:55,496 ERROR PrisonLogger - Недопустимое имя столбца "PlaceOfStayID".
+2018-05-20 21:07:21,162 ERROR PrisonLogger - Недопустимое имя столбца "PlaceOfStayID".
+2018-05-20 21:07:33,986 ERROR PrisonLogger - Недопустимое имя столбца "PlaceOfStayID".
+2018-05-20 21:07:39,219 ERROR PrisonLogger - Недопустимое имя столбца "PlaceOfStayID".
+2018-05-20 21:25:30,691 ERROR PrisonLogger - Недопустимое имя столбца "PlaceOfStayID".
+2018-05-20 21:25:54,772 ERROR PrisonLogger - Недопустимое имя столбца "Photo".
+2018-05-20 21:26:44,470 ERROR PrisonLogger - Недопустимое имя столбца "PlaceOfStayID".
+2018-05-20 21:26:49,785 ERROR PrisonLogger - Недопустимое имя столбца "PlaceOfStayID".
+2018-05-20 21:29:35,512 ERROR PrisonLogger - Недопустимое имя столбца "PlaceOfStayID".
+2018-05-20 21:29:38,848 ERROR PrisonLogger - Недопустимое имя столбца "PlaceOfStayID".
+2018-05-20 21:29:45,514 ERROR PrisonLogger - Недопустимое имя столбца "Photo".
+2018-05-20 21:29:48,240 ERROR PrisonLogger - Недопустимое имя столбца "PlaceOfStayID".
+2018-05-20 21:31:10,145 ERROR PrisonLogger - Недопустимое имя столбца "PlaceOfStayID".
+2018-05-20 21:37:26,514 ERROR PrisonLogger - Недопустимое имя столбца "PlaceOfStayID".
+2018-05-20 21:37:28,613 ERROR PrisonLogger - Недопустимое имя столбца "PlaceOfStayID".
+2018-05-20 21:37:34,052 ERROR PrisonLogger - Недопустимое имя столбца "PlaceOfStayID".
+2018-05-20 21:37:37,833 ERROR PrisonLogger - Недопустимое имя столбца "PlaceOfStayID".
+2018-05-20 21:37:44,229 ERROR PrisonLogger - Недопустимое имя столбца "PlaceOfStayID".
+2018-05-20 21:37:46,384 ERROR PrisonLogger - Недопустимое имя столбца "PlaceOfStayID".
+2018-05-20 21:37:51,796 ERROR PrisonLogger - Недопустимое имя столбца "PlaceOfStayID".
+2018-05-20 21:44:26,834 ERROR PrisonLogger - Недопустимое имя столбца "PlaceOfStayID".
+2018-05-20 21:47:20,139 ERROR PrisonLogger - Недопустимое имя столбца "Photo".
+2018-05-20 21:50:04,532 ERROR PrisonLogger - Недопустимое имя столбца "PlaceOfStayID".
+2018-05-20 21:50:36,477 ERROR PrisonLogger - Недопустимое имя столбца "PlaceOfStayID".
+2018-05-20 21:50:41,790 ERROR PrisonLogger - Недопустимое имя столбца "PlaceOfStayID".
+2018-05-20 21:50:50,923 ERROR PrisonLogger - Недопустимое имя столбца "PlaceOfStayID".
+2018-05-20 22:06:05,447 ERROR PrisonLogger - Недопустимое имя столбца "PlaceOfStayID".
+2018-05-20 22:06:06,915 ERROR PrisonLogger - Недопустимое имя столбца "PlaceOfStayID".
+2018-05-20 22:10:39,946 ERROR PrisonLogger - Недопустимое имя столбца "PlaceOfStayID".
+2018-05-20 22:10:57,624 ERROR PrisonLogger - Недопустимое имя столбца "PlaceOfStayID".
+2018-05-20 22:11:39,483 ERROR PrisonLogger - Недопустимое имя столбца "PlaceOfStayID".
+2018-05-20 22:13:58,243 ERROR PrisonLogger - Недопустимое имя столбца "PlaceOfStayID".
+2018-05-20 22:15:23,691 ERROR PrisonLogger - Недопустимое имя столбца "PlaceOfStayID".
+2018-05-20 22:16:45,913 ERROR PrisonLogger - Недопустимое имя столбца "PlaceOfStayID".
+2018-05-20 22:18:19,103 ERROR PrisonLogger - Недопустимое имя столбца "PlaceOfStayID".
+2018-05-20 22:19:53,245 ERROR PrisonLogger - Недопустимое имя столбца "PlaceOfStayID".
+2018-05-20 22:20:30,825 ERROR PrisonLogger - Недопустимое имя столбца "PlaceOfStayID".
+2018-05-20 22:20:54,366 ERROR PrisonLogger - Недопустимое имя столбца "PlaceOfStayID".
+2018-05-20 22:20:57,366 ERROR PrisonLogger - Недопустимое имя столбца "PlaceOfStayID".
+2018-05-20 22:21:00,505 ERROR PrisonLogger - Недопустимое имя столбца "PlaceOfStayID".
+2018-05-20 22:21:03,256 ERROR PrisonLogger - Недопустимое имя столбца "PlaceOfStayID".
+2018-05-20 22:21:06,466 ERROR PrisonLogger - Недопустимое имя столбца "PlaceOfStayID".
+2018-05-20 22:21:10,151 ERROR PrisonLogger - Недопустимое имя столбца "PlaceOfStayID".

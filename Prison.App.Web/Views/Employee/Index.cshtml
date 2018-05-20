@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Employee>
+﻿@model IEnumerable<EmployeeIndexViewModel>
 
 @{
     ViewBag.Title = "Index";
@@ -21,7 +21,7 @@
             @Html.DisplayNameFor(model => model.MiddleName)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.PositionID)
+            @Html.DisplayNameFor(model => model.Position)
         </th>
         <th></th>
     </tr>
@@ -38,7 +38,7 @@
             @Html.DisplayFor(modelItem => item.MiddleName)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.PositionID)
+            @Html.DisplayFor(modelItem => item.Position)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.EmployeeID }) |

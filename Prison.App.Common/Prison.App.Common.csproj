@@ -78,7 +78,9 @@
     <Compile Include="Entities\Detention.cs" />
     <Compile Include="Entities\Employee.cs" />
     <Compile Include="Entities\IBlurb.cs" />
+    <Compile Include="Entities\MaritalStatus.cs" />
     <Compile Include="Entities\PlaceOfStay.cs" />
+    <Compile Include="Entities\Position.cs" />
     <Compile Include="Helpers\ArgumentHelper.cs" />
     <Compile Include="Helpers\ConnectionStringHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

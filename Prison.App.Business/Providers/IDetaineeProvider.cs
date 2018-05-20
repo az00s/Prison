@@ -9,6 +9,7 @@ namespace Prison.App.Business.Providers
         IEnumerable<Detainee> GetAllRecordsFromTable();
         IEnumerable<Detainee> GetDetaineesByDate(DateTime date);
         Detainee GetDetaineeByID(int id);
+        IEnumerable<MaritalStatus> GetAllMaritalStatusesFromTable();
         void Create(Detainee dtn);
         void Update(Detainee dtn);
         void Delete(int id);

@@ -289,8 +289,8 @@ namespace Prison.App.Data.Repositories
                         MiddleName = reader[3].ToString(),
                         BirstDate = reader.GetDateTime(4),
                         MaritalStatusID = reader.GetInt32(5),
-                        WorkPlace = reader.GetString(6),
-                        ImagePath = reader.GetString(7),
+                        ImagePath = reader.GetString(6),
+                        WorkPlace = reader.GetString(7),
                         ResidenceAddress = reader.GetString(8),
                         AdditionalData = reader[9].ToString(),
 
@@ -333,6 +333,67 @@ namespace Prison.App.Data.Repositories
             return list;
         }
 
+        public IEnumerable<MaritalStatus> GetAllMaritalStatusesFromTable()
+        {
+            List<MaritalStatus> list = new List<MaritalStatus>();
+
+            SqlConnection conn = new SqlConnection(_connection);
+            SqlCommand command = new SqlCommand("SelectAllMaritalStatuses", conn) { CommandType = CommandType.StoredProcedure };
+
+            SqlDataReader reader = null;
+
+            try
+            {
+                conn.Open();
+                reader = command.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    list.Add(new MaritalStatus
+                    {
+                        StatusID = reader.GetInt32(0),
+                        StatusName = reader.GetString(1),
+
+                    });
+                }
+                reader.Close();
+
+                conn.Close();
+            }
+            catch (InvalidOperationException ex)
+            {
+                _log.Error(ex.Message);
+                list = null;
+            }
+
+            catch (SqlException ex)
+            {
+                _log.Error(ex.Message);
+                list = null;
+            }
+
+            catch (InvalidCastException ex)
+            {
+                _log.Error(ex.Message);
+                list = null;
+            }
+            finally
+            {
+                if (conn != null)
+                {
+                    conn.Dispose();
+                }
+
+                if (reader != null)
+                {
+                    reader.Dispose();
+                }
+            }
+
+            return list;
+        }
+
+
 
         public void Create(Detainee dtn)
         {
@@ -350,7 +411,7 @@ namespace Prison.App.Data.Repositories
                     new SqlParameter() { ParameterName = "@BirstDate", Value = dtn.BirstDate.ToShortDateString() },
                     new SqlParameter() { ParameterName = "@MaritalStatusID", Value = dtn.MaritalStatusID },
                     new SqlParameter() { ParameterName = "@WorkPlace", Value = dtn.WorkPlace },
-                    new SqlParameter() { ParameterName = "@Photo", Value = dtn.ImagePath??"no photo" },
+                    new SqlParameter() { ParameterName = "@ImagePath", Value = dtn.ImagePath??"no photo" },
                     new SqlParameter() { ParameterName = "@ResidenceAddress", Value = dtn.ResidenceAddress },
                     new SqlParameter() { ParameterName = "@AdditionalData", Value = dtn.AdditionalData??"" }
                 };
@@ -403,7 +464,7 @@ namespace Prison.App.Data.Repositories
                     new SqlParameter() { ParameterName = "@BirstDate", Value = dtn.BirstDate.ToShortDateString() },
                     new SqlParameter() { ParameterName = "@MaritalStatusID", Value = dtn.MaritalStatusID },
                     new SqlParameter() { ParameterName = "@WorkPlace", Value = dtn.WorkPlace },
-                    new SqlParameter() { ParameterName = "@Photo", Value = dtn.ImagePath??"no photo" },
+                    new SqlParameter() { ParameterName = "@ImagePath", Value = dtn.ImagePath??"no photo" },
                     new SqlParameter() { ParameterName = "@ResidenceAddress", Value = dtn.ResidenceAddress },
                     new SqlParameter() { ParameterName = "@AdditionalData", Value = dtn.AdditionalData??"" }
                 };

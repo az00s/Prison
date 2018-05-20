@@ -1,4 +1,4 @@
-﻿@model Employee
+﻿@model EmployeeIndexViewModel
 
 @{
     ViewBag.Title = "Details";
@@ -35,11 +35,11 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.PositionID)
+            @Html.DisplayNameFor(model => model.Position)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.PositionID)
+            @Html.DisplayFor(model => model.Position)
         </dd>
     </dl>
 </div>

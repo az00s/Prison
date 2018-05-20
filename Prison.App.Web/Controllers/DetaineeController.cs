@@ -2,6 +2,8 @@
 using Prison.App.Common.Entities;
 using Prison.App.Common.Helpers;
 using Prison.App.Common.Interfaces;
+using Prison.App.Web.Helpers;
+using Prison.App.Web.Models;
 using System;
 using System.Linq;
 using System.Web;
@@ -29,7 +31,9 @@ namespace Prison.App.Web.Controllers
         {
             var Detainees = db.GetAllRecordsFromTable();
 
-            return View(Detainees);
+            var resultList=ViewModelHelper.ToDetaineeIndexViewModel(Detainees);
+
+            return View(resultList);
         }
 
         public ActionResult Details(int id)
@@ -38,17 +42,27 @@ namespace Prison.App.Web.Controllers
             {
                 var Detainee = db.GetDetaineeByID(id);
 
-                return View(Detainee);
+                var ViewModel=ViewModelHelper.ToDetaineeDetailsViewModel(Detainee,db);
+                 
+                return View(ViewModel);
             }
             else
             {
-                return RedirectToAction("","");
+                return RedirectToAction("Index","Error");
             }
         }
 
         public ActionResult Create()
         {
-            return View();
+            var statuses = db.GetAllMaritalStatusesFromTable();
+
+            var ViewModel = new DetaineeEditViewModel
+            {
+                MaritalStatus = statuses,
+                
+            };
+
+            return View(ViewModel);
         }
 
         [HttpPost]
@@ -59,7 +73,7 @@ namespace Prison.App.Web.Controllers
                 db.Create(dtn);
             }
 
-            return View("Index", db.GetAllRecordsFromTable());
+            return RedirectToAction("Index");
         }
 
         public ActionResult Edit(int id)
@@ -68,7 +82,9 @@ namespace Prison.App.Web.Controllers
             {
                 var Detainee = db.GetDetaineeByID(id);
 
-                return View(Detainee);
+                var ViewModel = ViewModelHelper.ToDetaineeEditViewModel(Detainee,db);
+
+                return View(ViewModel);
             }
             else
             {
@@ -92,7 +108,7 @@ namespace Prison.App.Web.Controllers
                 db.Update(dtn);
             }
 
-            return View("Index", db.GetAllRecordsFromTable());
+            return RedirectToAction("Index");
         }
 
 
@@ -117,7 +133,7 @@ namespace Prison.App.Web.Controllers
             {
                 db.Delete(id);
 
-                return View("Index", db.GetAllRecordsFromTable());
+                return RedirectToAction("Index");
             }
             else
             {
@@ -130,8 +146,8 @@ namespace Prison.App.Web.Controllers
             if (ArgumentHelper.IsValidDate(date))
             {
                 var Detainees = db.GetDetaineesByDate(date);
-
-                return View("DetaineeList", Detainees);
+                var resultList = ViewModelHelper.ToDetaineeIndexViewModel(Detainees);
+                return View("DetaineeList", resultList);
             }
             else
             {

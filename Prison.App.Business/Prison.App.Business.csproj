@@ -69,7 +69,9 @@
     <Compile Include="Providers\Impl\DetaineeProvider.cs" />
     <Compile Include="Providers\Impl\EmployeeProvider.cs" />
     <Compile Include="Providers\Impl\PlaceOfStayProvider.cs" />
+    <Compile Include="Providers\Impl\PositionProvider.cs" />
     <Compile Include="Providers\IPlaceOfStayProvider.cs" />
+    <Compile Include="Providers\IPositionProvider.cs" />
     <Compile Include="Registers\BusinessRegistry.cs" />
   </ItemGroup>
   <ItemGroup />

@@ -1,7 +1,10 @@
 ﻿using Prison.App.Business.Providers;
+using Prison.App.Business.Providers.Impl;
 using Prison.App.Common.Entities;
 using Prison.App.Common.Helpers;
 using Prison.App.Common.Interfaces;
+using Prison.App.Web.Helpers;
+using Prison.App.Web.Models;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Mvc;
@@ -11,38 +14,46 @@ namespace Prison.App.Web.Controllers
 {
     public class EmployeeController : Controller
     {
-        private ILogger log;
+        private ILogger _log;
 
-        private IEmployeeProvider db;
+        private IEmployeeProvider _emp;
 
-        public EmployeeController(IEmployeeProvider rep, ILogger logger)
+        private IPositionProvider _pos;
+
+        public EmployeeController(IEmployeeProvider rep, ILogger logger, IPositionProvider pos)
         {
+            ArgumentHelper.ThrowExceptionIfNull(pos, "IPositionProvider");
             ArgumentHelper.ThrowExceptionIfNull(rep, "IEmployeeProvider");
             ArgumentHelper.ThrowExceptionIfNull(logger, "ILogger");
 
-            db = rep;
-            log = logger;
+            _pos = pos;
+            _emp = rep;
+            _log = logger;
         }
 
 
         public ActionResult Index()
         {
-            var Employees = db.GetAllRecordsFromTable();
+            var Employees = _emp.GetAllRecordsFromTable();
 
-            if (Employees == null)
+            var ViewModelList = ViewModelHelper.ToEmployeeIndexViewModel(Employees,_pos);
+
+            if (ViewModelList == null)
             {
                 return RedirectToAction("Index", "Error");
             }
-            return View(Employees);
+            return View(ViewModelList);
         }
 
         public ActionResult Details(int id)
         {
             if (ArgumentHelper.IsValidID(id))
             {
-                var Employee = db.GetEmployeeByID(id);
+                var Employee = _emp.GetEmployeeByID(id);
 
-                return View(Employee);
+                var ViewModel=ViewModelHelper.ToEmployeeIndexViewModel(Employee, _pos);
+
+                return View(ViewModel);
             }
             else
             {
@@ -52,7 +63,14 @@ namespace Prison.App.Web.Controllers
 
         public ActionResult Create()
         {
-            return View();
+            var positions = _pos.GetAllRecordsFromTable();
+
+            var ViewModel = new EmployeeEditViewModel
+            {
+                Positions = positions
+            };
+
+            return View(ViewModel);
         }
 
         [HttpPost]
@@ -60,19 +78,21 @@ namespace Prison.App.Web.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Create(emp);
+                _emp.Create(emp);
             }
 
-            return View("Index", db.GetAllRecordsFromTable());
+            return RedirectToAction("Index");
         }
 
         public ActionResult Edit(int id)
         {
             if (ArgumentHelper.IsValidID(id))
             {
-                var emp = db.GetEmployeeByID(id);
+                var emp = _emp.GetEmployeeByID(id);
 
-                return View(emp);
+                var ViewModel = ViewModelHelper.ToEmployeeEditViewModel(emp, _pos);
+
+                return View(ViewModel);
             }
             else
             {
@@ -85,10 +105,10 @@ namespace Prison.App.Web.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Update(emp);
+                _emp.Update(emp);
             }
 
-            return View("Index", db.GetAllRecordsFromTable());
+            return RedirectToAction("Index");
         }
 
 
@@ -96,9 +116,11 @@ namespace Prison.App.Web.Controllers
         {
             if (ArgumentHelper.IsValidID(id))
             {
-                var emp = db.GetEmployeeByID(id);
+                var Employee = _emp.GetEmployeeByID(id);
 
-                return View(emp);
+                var ViewModel = ViewModelHelper.ToEmployeeIndexViewModel(Employee, _pos);
+
+                return View(ViewModel);
             }
             else
             {
@@ -111,13 +133,13 @@ namespace Prison.App.Web.Controllers
         {
             if (ArgumentHelper.IsValidID(id))
             {
-                db.Delete(id);
+                _emp.Delete(id);
 
-                return View("Index", db.GetAllRecordsFromTable());
+                return RedirectToAction("Index");
             }
             else
             {
-                log.Error("EmployeeID is not valid!");
+                _log.Error("EmployeeID is not valid!");
 
                 return RedirectToAction(
                     "CustomError",

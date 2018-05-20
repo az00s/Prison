@@ -36,6 +36,11 @@ namespace Prison.App.Business.Providers.Impl
         {
             return _rep.GetDetaineesByDate(date);
         }
+
+        public IEnumerable<MaritalStatus> GetAllMaritalStatusesFromTable()
+        {
+            return _rep.GetAllMaritalStatusesFromTable();
+        }
         public void Create(Detainee dtn)
         {
             _rep.Create(dtn);

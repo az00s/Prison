@@ -15,6 +15,7 @@ namespace Prison.App.Business.Registers
             For<IEmployeeProvider>().Use<EmployeeProvider>();
             For<IDetaineeProvider>().Use<DetaineeProvider>();
             For<IPlaceOfStayProvider>().Use<PlaceOfStayProvider>();
+            For<IPositionProvider>().Use<PositionProvider>();
         }
     }
 }
