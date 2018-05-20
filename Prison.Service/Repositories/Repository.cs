@@ -30,7 +30,8 @@ namespace Prison.Service.Repositories
 
         public IEnumerable<Blurb> GetRandomElementsFromRep(int numOfElements)
         {
-            if (numOfElements > _list.Count) throw new IndexOutOfRangeException("The requested number of items is greater than the items in the list!");
+            if (numOfElements > _list.Count ) throw new IndexOutOfRangeException("The requested number of items is greater than the items in the list!");
+            if (numOfElements < 1) throw new ArgumentException("Invalid number of elements!");
 
             if (numOfElements == _list.Count) return _list;
 

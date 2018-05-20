@@ -34,9 +34,16 @@ namespace Prison.App.Web.Controllers
 
         public ActionResult Details(int id)
         {
-            var Detainee = db.GetDetaineeByID(id);
+            if (ArgumentHelper.IsValidID(id))
+            {
+                var Detainee = db.GetDetaineeByID(id);
 
-            return View(Detainee);
+                return View(Detainee);
+            }
+            else
+            {
+                return RedirectToAction("","");
+            }
         }
 
         public ActionResult Create()
@@ -57,10 +64,16 @@ namespace Prison.App.Web.Controllers
 
         public ActionResult Edit(int id)
         {
+            if (ArgumentHelper.IsValidID(id))
+            {
+                var Detainee = db.GetDetaineeByID(id);
 
-            var Detainee = db.GetDetaineeByID(id);
-
-            return View(Detainee);
+                return View(Detainee);
+            }
+            else
+            {
+                return RedirectToAction("Index", "Error");
+            }
         }
 
         [HttpPost]
@@ -85,24 +98,45 @@ namespace Prison.App.Web.Controllers
 
         public ActionResult Delete(int id)
         {
-            var Detainee = db.GetDetaineeByID(id);
+            if (ArgumentHelper.IsValidID(id))
+            {
+                var Detainee = db.GetDetaineeByID(id);
 
-            return View(Detainee);
+                return View(Detainee);
+            }
+            else
+            {
+                return RedirectToAction("Index", "Error");
+            }
         }
 
         [HttpPost]
         public ActionResult DeleteFromDb(int id)
         {
-            db.Delete(id);
+            if (ArgumentHelper.IsValidID(id))
+            {
+                db.Delete(id);
 
-            return View("Index", db.GetAllRecordsFromTable());
+                return View("Index", db.GetAllRecordsFromTable());
+            }
+            else
+            {
+                return RedirectToAction("Index", "Error");
+            }
         }
 
         public ActionResult GetDetaineeByDate(DateTime date)
         {
-            var Detainees = db.GetDetaineesByDate(date);
+            if (ArgumentHelper.IsValidDate(date))
+            {
+                var Detainees = db.GetDetaineesByDate(date);
 
-            return View("DetaineeList", Detainees);
+                return View("DetaineeList", Detainees);
+            }
+            else
+            {
+                return RedirectToAction("Index","Error");
+            }
         }
 
     }

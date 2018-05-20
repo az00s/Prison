@@ -31,9 +31,16 @@ namespace Prison.App.Web.Controllers
 
         public ActionResult Details(int id)
         {
-            var place = db.GetPlaceOfStayByID(id);
+            if (ArgumentHelper.IsValidID(id))
+            {
+                var place = db.GetPlaceOfStayByID(id);
 
-            return View(place);
+                return View(place);
+            }
+            else
+            {
+                return RedirectToAction("Index", "Error");
+            }
         }
 
         public ActionResult Create()
@@ -54,9 +61,16 @@ namespace Prison.App.Web.Controllers
 
         public ActionResult Edit(int id)
         {
-            var place = db.GetPlaceOfStayByID(id);
+            if (ArgumentHelper.IsValidID(id))
+            {
+                var place = db.GetPlaceOfStayByID(id);
 
-            return View(place);
+                return View(place);
+            }
+            else
+            {
+                return RedirectToAction("Index", "Error");
+            }
         }
 
         [HttpPost]
@@ -73,17 +87,31 @@ namespace Prison.App.Web.Controllers
 
         public ActionResult Delete(int id)
         {
-            var place = db.GetPlaceOfStayByID(id);
+            if (ArgumentHelper.IsValidID(id))
+            {
+                var place = db.GetPlaceOfStayByID(id);
 
-            return View(place);
+                return View(place);
+            }
+            else
+            {
+                return RedirectToAction("Index", "Error");
+            }
         }
 
         [HttpPost]
         public ActionResult DeleteFromDb(int id)
         {
-            db.Delete(id);
+            if (ArgumentHelper.IsValidID(id))
+            {
+                db.Delete(id);
 
-            return View("Index", db.GetAllRecordsFromTable());
+                return View("Index", db.GetAllRecordsFromTable());
+            }
+            else
+            {
+                return RedirectToAction("Index", "Error");
+            }
         }
     }
 }

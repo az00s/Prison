@@ -25,9 +25,20 @@ namespace Prison.App.Web.Controllers
         // GET: Advertisment
         public ActionResult GetAdUnit()
         {
-            var listOfBlurbs = _adService.GetElementsFromRep(3);
+            int blurbsCount = 3;
+
+            if (ArgumentHelper.IsValidNumber(blurbsCount))
+            {
+                var listOfBlurbs = _adService.GetElementsFromRep(3);
+
+                return PartialView("AddUnit", listOfBlurbs);
+            }
+            else
+            {
+                return RedirectToAction("Index","Error");
+            }
             
-            return PartialView("AddUnit",listOfBlurbs);
+            
         }
 
     }
