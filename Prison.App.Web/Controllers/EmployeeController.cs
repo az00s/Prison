@@ -19,7 +19,7 @@ namespace Prison.App.Web.Controllers
         private IEmployeeProvider _emp;
 
         private IPositionProvider _pos;
-
+        
         public EmployeeController(IEmployeeProvider rep, ILogger logger, IPositionProvider pos)
         {
             ArgumentHelper.ThrowExceptionIfNull(pos, "IPositionProvider");
@@ -42,6 +42,7 @@ namespace Prison.App.Web.Controllers
             {
                 return RedirectToAction("Index", "Error");
             }
+
             return View(ViewModelList);
         }
 
@@ -57,7 +58,12 @@ namespace Prison.App.Web.Controllers
             }
             else
             {
-                return RedirectToAction("Index", "Error");
+                _log.Error($"EmployeeID {id} is not valid!");
+
+                return RedirectToAction(
+                    "CustomError",
+                    "Error",
+                    new { message = $"Сотрудник с идентификатором -'{id}' не найден. Пожалуйста введите целое числовое значение большее нуля." });
             }
         }
 
@@ -65,6 +71,10 @@ namespace Prison.App.Web.Controllers
         {
             var positions = _pos.GetAllRecordsFromTable();
 
+            if (positions == null)
+            {
+                return RedirectToAction("Index", "Error");
+            }
             var ViewModel = new EmployeeEditViewModel
             {
                 Positions = positions
@@ -92,11 +102,24 @@ namespace Prison.App.Web.Controllers
 
                 var ViewModel = ViewModelHelper.ToEmployeeEditViewModel(emp, _pos);
 
+                if (ViewModel == null)
+                {
+                    return RedirectToAction("Index", "Error");
+                }
                 return View(ViewModel);
             }
             else
             {
-                return RedirectToAction("Index", "Error");
+                _log.Warn($"EmployeeID {id} is not valid! Controller:{RouteData.Values["controller"]}, Action:{RouteData.Values["action"]}");
+
+                return RedirectToAction(
+                    "CustomError",
+                    "Error",
+                    new
+                    {
+                        message = $"Неверно указан идентификатор -'{id}'." +
+                                    $" Пожалуйста введите целое числовое значение большее нуля."
+                    });
             }
         }
 
@@ -116,15 +139,29 @@ namespace Prison.App.Web.Controllers
         {
             if (ArgumentHelper.IsValidID(id))
             {
+                
                 var Employee = _emp.GetEmployeeByID(id);
 
                 var ViewModel = ViewModelHelper.ToEmployeeIndexViewModel(Employee, _pos);
 
+                if (ViewModel==null)
+                {
+                    return RedirectToAction("Index", "Error");
+                }
                 return View(ViewModel);
             }
             else
             {
-                return RedirectToAction("Index", "Error");
+                _log.Warn($"EmployeeID {id} is not valid! Controller:{RouteData.Values["controller"]}, Action:{RouteData.Values["action"]}");
+
+                return RedirectToAction(
+                    "CustomError",
+                    "Error",
+                    new
+                    {
+                        message = $"Неверно указан идентификатор -'{id}'." +
+                                    $" Пожалуйста введите целое числовое значение большее нуля."
+                    });
             }
         }
 
@@ -139,12 +176,13 @@ namespace Prison.App.Web.Controllers
             }
             else
             {
-                _log.Error("EmployeeID is not valid!");
+                _log.Warn($"EmployeeID {id} is not valid! Controller:{RouteData.Values["controller"]}, Action:{RouteData.Values["action"]}");
 
                 return RedirectToAction(
                     "CustomError",
-                    "Error", 
-                    new { message = "Указан неверный идентификатор пользователя. Пожалуйста введите целое числовое значение большее нуля." });
+                    "Error",
+                    new { message = $"Неверно указан идентификатор -'{id}'." +
+                                    $" Пожалуйста введите целое числовое значение большее нуля." });
             }
         }
 

@@ -3,7 +3,10 @@
 namespace Prison.App.Common.Helpers
 {
     public static class ArgumentHelper
-    {   
+    {
+        private const string START_DATE = "2018-05-01";
+
+        private const int MAX_NUMBER_OF_ADS = 100;
 
         public static void ThrowExceptionIfNull(object obj,string name)
         {
@@ -29,7 +32,7 @@ namespace Prison.App.Common.Helpers
 
         public static bool IsValidNumber(int id)
         {
-            if (id > 0 && id <=100)
+            if (id > 0 && id <= MAX_NUMBER_OF_ADS)
             {
                 return true;
             }
@@ -41,7 +44,7 @@ namespace Prison.App.Common.Helpers
 
         public static bool IsValidDate(DateTime date)
         {
-            DateTime startDate = new DateTime(2018,5,1);
+            DateTime startDate = DateTime.Parse(START_DATE);
             DateTime endDate = DateTime.Now;
 
             if (date >= startDate && date <= endDate)

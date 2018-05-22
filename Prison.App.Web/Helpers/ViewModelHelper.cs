@@ -13,6 +13,11 @@ namespace Prison.App.Web.Helpers
         public static IEnumerable<EmployeeIndexViewModel> ToEmployeeIndexViewModel(IEnumerable<Employee> list,IPositionProvider pos)
         {
             var Positions = pos.GetAllRecordsFromTable();
+
+            if (list == null || Positions == null)
+            {
+                return null;
+            }
             List<EmployeeIndexViewModel> ResultList = new List<EmployeeIndexViewModel>();
             foreach (Employee item in list)
             {
@@ -32,6 +37,12 @@ namespace Prison.App.Web.Helpers
         public static EmployeeIndexViewModel ToEmployeeIndexViewModel(Employee emp, IPositionProvider pos)
         {
             var Positions = pos.GetAllRecordsFromTable();
+
+            if (emp == null || Positions == null)
+            {
+                return null;
+            }
+
             EmployeeIndexViewModel Result = new EmployeeIndexViewModel
                 {
                     EmployeeID = emp.EmployeeID,
@@ -47,6 +58,11 @@ namespace Prison.App.Web.Helpers
         public static EmployeeEditViewModel ToEmployeeEditViewModel(Employee emp, IPositionProvider pos)
         {
             var Positions = pos.GetAllRecordsFromTable();
+
+            if (emp == null || Positions == null)
+            {
+                return null;
+            }
             EmployeeEditViewModel Result = new EmployeeEditViewModel
             {
                 EmployeeID = emp.EmployeeID,
@@ -63,7 +79,10 @@ namespace Prison.App.Web.Helpers
         public static DetaineeDetailsViewModel ToDetaineeDetailsViewModel(Detainee dtn,IDetaineeProvider db)
         {
             var statuses = db.GetAllMaritalStatusesFromTable();
-
+            if (dtn == null || statuses == null)
+            {
+                return null;
+            }
             DetaineeDetailsViewModel Result = new DetaineeDetailsViewModel
             {
                 DetaineeID = dtn.DetaineeID,
@@ -86,7 +105,10 @@ namespace Prison.App.Web.Helpers
         public static IEnumerable<DetaineeIndexViewModel> ToDetaineeIndexViewModel(IEnumerable<Detainee> list)
         {
             List<DetaineeIndexViewModel> ResultList = new List<DetaineeIndexViewModel>();
-
+            if (list == null)
+            {
+                return null;
+            }
             foreach (Detainee item in list)
             {
                 ResultList.Add(new DetaineeIndexViewModel
@@ -108,6 +130,11 @@ namespace Prison.App.Web.Helpers
         public static DetaineeEditViewModel ToDetaineeEditViewModel(Detainee dtn, IDetaineeProvider db)
         {
             var statuses = db.GetAllMaritalStatusesFromTable();
+
+            if (dtn == null || statuses == null)
+            {
+                return null;
+            }
 
             DetaineeEditViewModel Result = new DetaineeEditViewModel
             {
