@@ -7,7 +7,7 @@ GO
 
 
 ALTER TABLE [dbo].[Detention]  
-WITH CHECK ADD  CONSTRAINT [FK_Detention_PlaceOfDetention] FOREIGN KEY([PlaceOfStayID])
+WITH CHECK ADD  CONSTRAINT [FK_Detention_PlaceOfDetention] FOREIGN KEY([PlaceID])
 REFERENCES [dbo].[PlaceOfStay] ([PlaceID])
 GO
 

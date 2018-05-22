@@ -1,5 +1,3 @@
-use master
-go
 CREATE DATABASE Prison
 go
 ALTER DATABASE Prison 

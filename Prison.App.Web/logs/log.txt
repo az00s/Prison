@@ -55,3 +55,8 @@
 2018-05-20 22:21:03,256 ERROR PrisonLogger - Недопустимое имя столбца "PlaceOfStayID".
 2018-05-20 22:21:06,466 ERROR PrisonLogger - Недопустимое имя столбца "PlaceOfStayID".
 2018-05-20 22:21:10,151 ERROR PrisonLogger - Недопустимое имя столбца "PlaceOfStayID".
+2018-05-22 14:11:54,216 ERROR PrisonLogger - Прослушивание на http://localhost:64585/Service.svc не выполняла ни одна конечная точка, которая могла бы принять сообщение. Среди прочих причин это могло быть вызвано неправильным адресом или действием SOAP. Подробнее см. в описании InnerException (если имеется).
+2018-05-22 14:12:56,168 ERROR PrisonLogger - Не удалось найти хранимую процедуру "SelectDetaineeByID".
+2018-05-22 14:20:37,679 ERROR PrisonLogger - Не удалось найти хранимую процедуру "SelectDetentionsByDetaineeID".
+2018-05-22 14:20:49,280 ERROR PrisonLogger - Не удалось найти хранимую процедуру "SelectDetentionsByDetaineeID".
+2018-05-22 14:21:12,704 ERROR PrisonLogger - Не удалось найти хранимую процедуру "SelectDetentionsByDetaineeID".

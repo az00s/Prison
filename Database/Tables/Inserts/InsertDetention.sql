@@ -8,7 +8,7 @@ INSERT INTO [dbo].[Detention]
            ,[DeliveredByWhomID]
            ,[ReleasåDate]
            ,[ReleasedByWhomID]
-           ,[PlaceOfStayID]
+           ,[PlaceID]
            ,[AmountForStaying]
            ,[PaidAmount])
      VALUES

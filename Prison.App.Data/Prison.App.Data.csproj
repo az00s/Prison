@@ -69,7 +69,6 @@
     </Compile>
     <Compile Include="Registers\DataRegistry.cs" />
     <Compile Include="Repositories\Impl\DetaineeRepository.cs" />
-    <Compile Include="Repositories\DetentionRepository.cs" />
     <Compile Include="Repositories\Impl\EmployeeRepository.cs" />
     <Compile Include="Repositories\IDetaineeRepository.cs" />
     <Compile Include="Repositories\IEmployeeRepository.cs" />

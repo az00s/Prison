@@ -8,7 +8,7 @@ CREATE TABLE [dbo].[Detention](
 	[DeliveredByWhomID] [int] NOT NULL,
 	[ReleasåDate] [date] NOT NULL,
 	[ReleasedByWhomID] [int] NOT NULL,
-	[PlaceOfStayID] [int] NOT NULL,
+	[PlaceID] [int] NOT NULL,
 	[AmountForStaying] [decimal](18, 0) NOT NULL,
 	[PaidAmount] [decimal](18, 0) NOT NULL,
 ) 

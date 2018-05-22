@@ -171,9 +171,6 @@ namespace Prison.App.Data.Repositories
 
             SqlConnection conn = new SqlConnection(_connection);
             SqlCommand command = new SqlCommand("SelectAllDetainees", conn) { CommandType=CommandType.StoredProcedure};
-            //SqlDataReader reader = null;
-
-            //------------------
             SqlDataAdapter adapter = new SqlDataAdapter(command);
             DataSet dataset = new DataSet();
             
@@ -206,28 +203,6 @@ namespace Prison.App.Data.Repositories
 
                     });
                 }
-                //conn.Open();
-                //reader = command.ExecuteReader();
-
-                //while (reader.Read())
-                //{
-                //    list.Add(new Detainee
-                //    {
-                //        DetaineeID = reader.GetInt32(0),
-                //        FirstName = reader.GetString(1),
-                //        LastName = reader.GetString(2),
-                //        MiddleName = reader[3].ToString(),
-                //        BirstDate = reader.GetDateTime(4),
-                //        MaritalStatusID = reader.GetInt32(5),
-                //        WorkPlace = reader.GetString(6),
-                //        ImagePath = reader.GetString(7),
-                //        ResidenceAddress = reader.GetString(8),
-                //        AdditionalData = reader[9].ToString(),
-                //        Detentions = GetDetentionsByDetaineeID(reader.GetInt32(0))
-
-                //    });
-                //}
-                //reader.Close();
 
                 conn.Close();
             }
