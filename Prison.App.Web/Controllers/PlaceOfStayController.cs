@@ -2,11 +2,13 @@
 using Prison.App.Common.Entities;
 using Prison.App.Common.Helpers;
 using Prison.App.Common.Interfaces;
-using System.Linq;
 using System.Web.Mvc;
+using Prison.App.Business.Attributes;
 
 namespace Prison.App.Web.Controllers
 {
+
+
     public class PlaceOfStayController : Controller
     {
         private ILogger log;
@@ -22,6 +24,7 @@ namespace Prison.App.Web.Controllers
             log = logger;
         }
 
+        [User]
         public ActionResult Index()
         {
             var Places = db.GetAllRecordsFromTable();
@@ -29,6 +32,7 @@ namespace Prison.App.Web.Controllers
             return View(Places);
         }
 
+        [Editor]
         public ActionResult Details(int id)
         {
             if (ArgumentHelper.IsValidID(id))
@@ -43,11 +47,13 @@ namespace Prison.App.Web.Controllers
             }
         }
 
+        [Editor]
         public ActionResult Create()
         {
             return View();
         }
 
+        [Editor]
         [HttpPost]
         public ActionResult Create(PlaceOfStay dtn)
         {
@@ -59,6 +65,7 @@ namespace Prison.App.Web.Controllers
             return View("Index", db.GetAllRecordsFromTable());
         }
 
+        [Editor]
         public ActionResult Edit(int id)
         {
             if (ArgumentHelper.IsValidID(id))
@@ -73,6 +80,7 @@ namespace Prison.App.Web.Controllers
             }
         }
 
+        [Editor]
         [HttpPost]
         public ActionResult Edit(PlaceOfStay dtn)
         {
@@ -84,7 +92,7 @@ namespace Prison.App.Web.Controllers
             return View("Index", db.GetAllRecordsFromTable());
         }
 
-
+        [Editor]
         public ActionResult Delete(int id)
         {
             if (ArgumentHelper.IsValidID(id))
@@ -99,6 +107,7 @@ namespace Prison.App.Web.Controllers
             }
         }
 
+        [Editor]
         [HttpPost]
         public ActionResult DeleteFromDb(int id)
         {

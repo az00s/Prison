@@ -90,14 +90,12 @@ namespace Prison.App.Data.Services
             }
             catch (FaultException<ArgumentNullException> ex)
             {
-                ((IClientChannel)_adService).Abort();
                 _log.Error(ex.Detail.Message);
                 listOfBlurbsOnClient = null;
             }
 
             catch (FaultException ex)
             {
-                ((IClientChannel)_adService).Abort();
                 _log.Error(ex.Message);
                 listOfBlurbsOnClient = null;
 
@@ -105,21 +103,18 @@ namespace Prison.App.Data.Services
            
             catch (EndpointNotFoundException ex)
             {
-                ((IClientChannel)_adService).Abort();
                 _log.Error(ex.Message);
                 listOfBlurbsOnClient = null;
             }
 
             catch (TimeoutException ex)
             {
-                ((IClientChannel)_adService).Abort();
                 _log.Error(ex.Message);
                 listOfBlurbsOnClient = null;
             }
 
             catch (CommunicationException ex)
             {
-                ((IClientChannel)_adService).Abort();
                 _log.Error(ex.Message);
                 listOfBlurbsOnClient = null;
             }

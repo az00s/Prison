@@ -81,6 +81,8 @@
     <Compile Include="Entities\MaritalStatus.cs" />
     <Compile Include="Entities\PlaceOfStay.cs" />
     <Compile Include="Entities\Position.cs" />
+    <Compile Include="Entities\Role.cs" />
+    <Compile Include="Entities\User.cs" />
     <Compile Include="Helpers\ArgumentHelper.cs" />
     <Compile Include="Helpers\ConnectionStringHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

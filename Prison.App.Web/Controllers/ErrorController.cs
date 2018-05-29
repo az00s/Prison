@@ -1,12 +1,11 @@
 ﻿using Prison.App.Web.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
+using Prison.App.Business.Attributes;
+
 
 namespace Prison.App.Web.Controllers
 {
+    [User]
     public class ErrorController : Controller
     {
         // GET: Error

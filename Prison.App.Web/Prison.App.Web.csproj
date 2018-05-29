@@ -51,6 +51,9 @@
     <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\CommonServiceLocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="StructureMap, Version=3.1.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\structuremap.3.1.1.134\lib\net40\StructureMap.dll</HintPath>
     </Reference>
@@ -108,6 +111,10 @@
     <Content Include="Content\bootstrap-datetimepicker.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\img\Prison.jpg" />
+    <Content Include="Content\Login.css" />
+    <Content Include="Scripts\AddDeleteRoleScript.js" />
+    <Content Include="Scripts\Login.js" />
     <Content Include="Content\Site.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax">
@@ -128,6 +135,7 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\StructuremapMvc.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AdvertismentController.cs" />
     <Compile Include="Controllers\DetaineeController.cs" />
     <Compile Include="Controllers\DetentionController.cs" />
@@ -135,18 +143,24 @@
     <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PlaceOfStayController.cs" />
+    <Compile Include="Controllers\RoleController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="Helpers\ViewHelper.cs" />
     <Compile Include="Helpers\ViewModelHelper.cs" />
-    <Compile Include="Models\DetaineeEditViewModel.cs" />
-    <Compile Include="Models\DetaineeIndexViewModel.cs" />
-    <Compile Include="Models\DetaineeDetailsViewModel.cs" />
-    <Compile Include="Models\EmployeeEditViewModel.cs" />
-    <Compile Include="Models\EmployeeIndexViewModel.cs" />
+    <Compile Include="Models\Detainee\DetaineeEditViewModel.cs" />
+    <Compile Include="Models\Detainee\DetaineeIndexViewModel.cs" />
+    <Compile Include="Models\Detainee\DetaineeDetailsViewModel.cs" />
+    <Compile Include="Models\Employee\EmployeeEditViewModel.cs" />
+    <Compile Include="Models\Employee\EmployeeIndexViewModel.cs" />
     <Compile Include="Models\ErrorViewModel.cs" />
+    <Compile Include="Models\User\UserCreateViewModel.cs" />
+    <Compile Include="Models\User\UserEditViewModel.cs" />
+    <Compile Include="Models\User\UserIndexViewModel.cs" />
+    <Compile Include="Models\User\UserLoginViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Registers\ControllerConvention.cs" />
     <Compile Include="Registers\DefaultRegistry.cs" />
@@ -189,6 +203,17 @@
     <Content Include="Views\Error\ServerError.cshtml" />
     <Content Include="Views\Error\CustomError.cshtml" />
     <Content Include="Views\Shared\CustomError.cshtml" />
+    <Content Include="Views\Account\LogIn.cshtml" />
+    <Content Include="Views\Shared\Partials\_LogInPartial.cshtml" />
+    <Content Include="Views\User\Index.cshtml" />
+    <Content Include="Views\User\Details.cshtml" />
+    <Content Include="Views\User\Delete.cshtml" />
+    <Content Include="Views\User\Edit.cshtml" />
+    <Content Include="Views\User\Create.cshtml" />
+    <Content Include="Views\Role\Index.cshtml" />
+    <Content Include="Views\Role\Create.cshtml" />
+    <Content Include="Views\Role\Edit.cshtml" />
+    <Content Include="Views\Role\Delete.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -198,7 +223,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Account\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Prison.App.Business\Prison.App.Business.csproj">

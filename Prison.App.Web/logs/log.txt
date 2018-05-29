@@ -69,3 +69,40 @@
 2018-05-22 23:00:47,329 ERROR PrisonLogger - EmployeeID -1 is not valid! Controller:Employee, Action:DeleteFromDb
 2018-05-22 23:02:06,723 ERROR PrisonLogger - Прослушивание на http://localhost:64585/Service.svc не выполняла ни одна конечная точка, которая могла бы принять сообщение. Среди прочих причин это могло быть вызвано неправильным адресом или действием SOAP. Подробнее см. в описании InnerException (если имеется).
 2018-05-22 23:02:24,420 WARN PrisonLogger - EmployeeID 0 is not valid! Controller:Employee, Action:DeleteFromDb
+2018-05-27 17:27:22,512 ERROR PrisonLogger - Процедура или функция "SelectUserByLogin" ожидает параметр "@Login", который не был указан.
+2018-05-27 17:27:22,529 WARN PrisonLogger - User 'Плохиш' not found!
+2018-05-27 20:19:19,985 ERROR PrisonLogger - Не удалось найти хранимую процедуру "SelectUserByLogin".
+2018-05-27 20:19:20,022 WARN PrisonLogger - User 'Пуаро' not found!
+2018-05-27 20:20:49,753 ERROR PrisonLogger - Не удалось найти хранимую процедуру "SelectUserByLogin".
+2018-05-27 20:20:49,753 WARN PrisonLogger - User 'Пуаро' not found!
+2018-05-27 20:21:03,755 ERROR PrisonLogger - Не удалось найти хранимую процедуру "SelectUserByLogin".
+2018-05-27 20:21:03,755 WARN PrisonLogger - User 'Пуаро' not found!
+2018-05-27 20:38:54,182 WARN PrisonLogger - Login 'Пуароwertwt' not fount!
+2018-05-27 20:39:13,017 WARN PrisonLogger - Login 'Пуароwertwtetruytyutyu' not fount!
+2018-05-28 13:25:26,266 ERROR PrisonLogger - Конфликт инструкции DELETE с ограничением REFERENCE "FK_User_UserRoles". Конфликт произошел в базе данных "Prison", таблица "dbo.UserRoles", column 'UserID'.
+Выполнение данной инструкции было прервано.
+2018-05-28 13:26:09,776 ERROR PrisonLogger - Конфликт инструкции DELETE с ограничением REFERENCE "FK_User_UserRoles". Конфликт произошел в базе данных "Prison", таблица "dbo.UserRoles", column 'UserID'.
+Выполнение данной инструкции было прервано.
+2018-05-28 13:35:11,514 ERROR PrisonLogger - Конфликт инструкции DELETE с ограничением REFERENCE "FK_User_UserRoles". Конфликт произошел в базе данных "Prison", таблица "dbo.UserRoles", column 'UserID'.
+Выполнение данной инструкции было прервано.
+2018-05-28 15:19:18,069 ERROR PrisonLogger - Не удалось найти хранимую процедуру "SelectUnoccupiedEmployeeNames".
+2018-05-28 15:20:21,369 ERROR PrisonLogger - Не удалось найти хранимую процедуру "SelectUnoccupiedEmployeeNames".
+2018-05-28 15:21:55,255 ERROR PrisonLogger - Не удалось найти хранимую процедуру "SelectUnoccupiedEmployeeNames".
+2018-05-28 15:44:38,368 ERROR PrisonLogger - Процедура или функция "CreateUser" ожидает параметр "@Email", который не был указан.
+2018-05-28 15:44:42,215 ERROR PrisonLogger - Процедура или функция "CreateUser" ожидает параметр "@Email", который не был указан.
+2018-05-28 15:44:49,196 ERROR PrisonLogger - Процедура или функция "CreateUser" ожидает параметр "@Email", который не был указан.
+2018-05-28 15:45:02,488 ERROR PrisonLogger - Процедура или функция "CreateUser" ожидает параметр "@Email", который не был указан.
+2018-05-28 15:45:11,302 ERROR PrisonLogger - Процедура или функция "CreateUser" ожидает параметр "@Email", который не был указан.
+2018-05-29 01:24:00,859 ERROR PrisonLogger - Для процедуры или функции CreateUser указано слишком много аргументов.
+2018-05-29 01:33:43,021 ERROR PrisonLogger - Для процедуры или функции CreateUser указано слишком много аргументов.
+2018-05-29 09:56:57,100 ERROR PrisonLogger - Конфликт инструкции INSERT с ограничением FOREIGN KEY "FK_Role_UserRoles". Конфликт произошел в базе данных "Prison", таблица "dbo.Role", column 'RoleID'.
+Выполнение данной инструкции было прервано.
+2018-05-29 09:58:55,358 ERROR PrisonLogger - Для процедуры или функции CreateUser указано слишком много аргументов.
+2018-05-29 11:32:09,971 ERROR PrisonLogger - Конфликт типов операндов: dbo.RoleIdTable несовместим с dbo.RoleIdList
+2018-05-29 11:32:20,496 ERROR PrisonLogger - Конфликт типов операндов: dbo.RoleIdTable несовместим с dbo.RoleIdList
+2018-05-29 13:26:50,119 ERROR PrisonLogger - Процедура "CreateUser" не имеет параметра "@Table".
+2018-05-29 13:27:06,333 ERROR PrisonLogger - Процедура "CreateUser" не имеет параметра "@Table".
+2018-05-29 13:29:39,481 ERROR PrisonLogger - Нарушено "PK_UserRoles" ограничения PRIMARY KEY. Не удается вставить повторяющийся ключ в объект "dbo.UserRoles". Повторяющееся значение ключа: (8, 2).
+Выполнение данной инструкции было прервано.
+2018-05-29 13:31:14,022 ERROR PrisonLogger - Нарушено "PK_UserRoles" ограничения PRIMARY KEY. Не удается вставить повторяющийся ключ в объект "dbo.UserRoles". Повторяющееся значение ключа: (8, 3).
+Выполнение данной инструкции было прервано.

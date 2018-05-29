@@ -1,12 +1,12 @@
-﻿using Prison.App.Business.Providers;
-using Prison.App.Common.Helpers;
+﻿using Prison.App.Common.Helpers;
 using Prison.App.Common.Interfaces;
-using System;
-using System.Linq;
 using System.Web.Mvc;
+using Prison.App.Business.Attributes;
 
 namespace Prison.App.Web.Controllers
 {
+    
+    [User]
     public class HomeController : Controller
     {
         private ILogger log;

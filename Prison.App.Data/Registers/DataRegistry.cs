@@ -16,6 +16,8 @@ namespace Prison.App.Data.Registers
             For<IDetaineeRepository>().Use<DetaineeRepository>();
             For<IPlaceOfStayRepository>().Use<PlaceOfStayRepository>();
             For<IPositionRepository>().Use<PositionRepository>();
+            For<IRoleRepository>().Use<RoleRepository>();
+            For<IUserRepository>().Use<UserRepository>();
             For<IAdService>().Use<AdService>();
             ForSingletonOf<ILogger>().Use<Logger>();
         }

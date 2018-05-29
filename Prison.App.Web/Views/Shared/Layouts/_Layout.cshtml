@@ -25,9 +25,12 @@
                     <li>@Html.ActionLink("Задержанные", "Index", "Detainee")</li>
                     <li>@Html.ActionLink("Сотрудники", "Index", "Employee")</li>
                     <li>@Html.ActionLink("Места содержания", "Index", "PlaceOfStay")</li>
-
+                    
                 </ul>
+                @Html.Partial("_LogInPartial")
+                
             </div>
+            
         </div>
     </div>
 

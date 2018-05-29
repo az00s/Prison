@@ -5,12 +5,13 @@ using Prison.App.Common.Interfaces;
 using Prison.App.Web.Helpers;
 using Prison.App.Web.Models;
 using System;
-using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Prison.App.Business.Attributes;
 
 namespace Prison.App.Web.Controllers
 {
+    
     public class DetaineeController : Controller
     {
         private  ILogger log;
@@ -27,6 +28,8 @@ namespace Prison.App.Web.Controllers
             log = logger;
         }
 
+        
+        [User]
         public ActionResult Index()
         {
             var Detainees = db.GetAllRecordsFromTable();
@@ -35,7 +38,8 @@ namespace Prison.App.Web.Controllers
 
             return View(resultList);
         }
-
+        
+        [User]
         public ActionResult Details(int id)
         {
             if (ArgumentHelper.IsValidID(id))
@@ -52,6 +56,7 @@ namespace Prison.App.Web.Controllers
             }
         }
 
+        [Editor]
         public ActionResult Create()
         {
             var statuses = db.GetAllMaritalStatusesFromTable();
@@ -65,6 +70,7 @@ namespace Prison.App.Web.Controllers
             return View(ViewModel);
         }
 
+        [Editor]
         [HttpPost]
         public ActionResult Create(Detainee dtn)
         {
@@ -76,6 +82,7 @@ namespace Prison.App.Web.Controllers
             return RedirectToAction("Index");
         }
 
+        [Editor]
         public ActionResult Edit(int id)
         {
             if (ArgumentHelper.IsValidID(id))
@@ -92,6 +99,7 @@ namespace Prison.App.Web.Controllers
             }
         }
 
+        [Editor]
         [HttpPost]
         public ActionResult Edit(Detainee dtn, HttpPostedFileBase file)
         {
@@ -111,7 +119,7 @@ namespace Prison.App.Web.Controllers
             return RedirectToAction("Index");
         }
 
-
+        [Editor]
         public ActionResult Delete(int id)
         {
             if (ArgumentHelper.IsValidID(id))
@@ -126,6 +134,7 @@ namespace Prison.App.Web.Controllers
             }
         }
 
+        [Editor]
         [HttpPost]
         public ActionResult DeleteFromDb(int id)
         {
@@ -140,7 +149,8 @@ namespace Prison.App.Web.Controllers
                 return RedirectToAction("Index", "Error");
             }
         }
-
+        
+        [User]
         public ActionResult GetDetaineeByDate(DateTime date)
         {
             if (ArgumentHelper.IsValidDate(date))

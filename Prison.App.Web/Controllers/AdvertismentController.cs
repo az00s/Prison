@@ -2,11 +2,12 @@
 using Prison.App.Common.Entities;
 using Prison.App.Common.Helpers;
 using Prison.App.Common.Interfaces;
-using System.Collections.Generic;
 using System.Web.Mvc;
+using Prison.App.Business.Attributes;
 
 namespace Prison.App.Web.Controllers
 {
+    [User]
     public class AdvertismentController : Controller
     {
         private ILogger _log;

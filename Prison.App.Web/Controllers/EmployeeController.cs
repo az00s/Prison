@@ -1,17 +1,16 @@
-﻿using Prison.App.Business.Providers;
-using Prison.App.Business.Providers.Impl;
+﻿using Prison.App.Business.Attributes;
+using Prison.App.Business.Providers;
 using Prison.App.Common.Entities;
 using Prison.App.Common.Helpers;
 using Prison.App.Common.Interfaces;
 using Prison.App.Web.Helpers;
 using Prison.App.Web.Models;
-using System.Collections.Generic;
-using System.Linq;
 using System.Web.Mvc;
 using System.Web.Routing;
 
 namespace Prison.App.Web.Controllers
 {
+    
     public class EmployeeController : Controller
     {
         private ILogger _log;
@@ -31,7 +30,7 @@ namespace Prison.App.Web.Controllers
             _log = logger;
         }
 
-
+        [User]
         public ActionResult Index()
         {
             var Employees = _emp.GetAllRecordsFromTable();
@@ -46,6 +45,7 @@ namespace Prison.App.Web.Controllers
             return View(ViewModelList);
         }
 
+        [Editor]
         public ActionResult Details(int id)
         {
             if (ArgumentHelper.IsValidID(id))
@@ -58,15 +58,16 @@ namespace Prison.App.Web.Controllers
             }
             else
             {
-                _log.Error($"EmployeeID {id} is not valid!");
+                _log.Error($"UserID {id} is not valid!");
 
                 return RedirectToAction(
                     "CustomError",
                     "Error",
-                    new { message = $"Сотрудник с идентификатором -'{id}' не найден. Пожалуйста введите целое числовое значение большее нуля." });
+                    new { message = $"Пользователь с идентификатором -'{id}' не найден. Пожалуйста введите целое числовое значение большее нуля." });
             }
         }
 
+        [Editor]
         public ActionResult Create()
         {
             var positions = _pos.GetAllRecordsFromTable();
@@ -83,6 +84,7 @@ namespace Prison.App.Web.Controllers
             return View(ViewModel);
         }
 
+        [Editor]
         [HttpPost]
         public ActionResult Create(Employee emp)
         {
@@ -94,6 +96,7 @@ namespace Prison.App.Web.Controllers
             return RedirectToAction("Index");
         }
 
+        [Editor]
         public ActionResult Edit(int id)
         {
             if (ArgumentHelper.IsValidID(id))
@@ -123,6 +126,7 @@ namespace Prison.App.Web.Controllers
             }
         }
 
+        [Editor]
         [HttpPost]
         public ActionResult Edit(Employee emp)
         {
@@ -134,7 +138,7 @@ namespace Prison.App.Web.Controllers
             return RedirectToAction("Index");
         }
 
-
+        [Editor]
         public ActionResult Delete(int id)
         {
             if (ArgumentHelper.IsValidID(id))
@@ -165,6 +169,7 @@ namespace Prison.App.Web.Controllers
             }
         }
 
+        [Editor]
         [HttpPost]
         public ActionResult DeleteFromDb(int id)
         {

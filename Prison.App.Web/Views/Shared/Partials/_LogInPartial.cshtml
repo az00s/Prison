@@ -1,0 +1,25 @@
+﻿
+
+@{ if (User.Identity.IsAuthenticated)
+    {
+        using (Html.BeginForm("LogOut", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
+        {
+            <ul class="nav navbar-nav navbar-right">
+                <li class="text-center">
+                    @Html.ActionLink(User.Identity.Name, "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage", @class = "navbar-link" })
+                </li>
+
+                <li>
+                    <a href="javascript:document.getElementById('logoutForm').submit()">Выйти</a>
+                </li>
+
+            </ul>
+        }
+    }
+    else
+    {
+            <ul class="nav navbar-nav navbar-right">
+                <li>@Html.ActionLink("Войти", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
+            </ul>
+    }
+}

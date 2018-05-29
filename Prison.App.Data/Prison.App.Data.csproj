@@ -72,10 +72,14 @@
     <Compile Include="Repositories\Impl\EmployeeRepository.cs" />
     <Compile Include="Repositories\IDetaineeRepository.cs" />
     <Compile Include="Repositories\IEmployeeRepository.cs" />
+    <Compile Include="Repositories\Impl\UserRepository.cs" />
+    <Compile Include="Repositories\IUserRepository.cs" />
     <Compile Include="Repositories\Impl\PositionRepository.cs" />
+    <Compile Include="Repositories\Impl\RoleRepository.cs" />
     <Compile Include="Repositories\IPlaceOfStayRepository.cs" />
     <Compile Include="Repositories\Impl\PlaceOfStayRepository.cs" />
     <Compile Include="Repositories\IPositionRepository.cs" />
+    <Compile Include="Repositories\IRoleRepository.cs" />
     <Compile Include="Services\IAdService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\AdService.cs" />
