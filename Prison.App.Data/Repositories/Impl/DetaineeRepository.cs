@@ -368,6 +368,102 @@ namespace Prison.App.Data.Repositories
             return list;
         }
 
+        public IEnumerable<Detainee> GetDetaineesByParams(string DetentionDate=null, string FirstName = null, string LastName = null, string MiddleName = null, string ResidenceAddress = null)
+        {
+            List<Detainee> list = new List<Detainee>();
+
+            string[] arr = { FirstName, LastName, MiddleName, ResidenceAddress };
+            for (int i=0;i<arr.Length;i++)
+            {
+                if (arr[i] == null)
+                {
+                    arr[i] = "%";
+                }
+                else
+                {
+                    arr[i] = $"%{arr[i]}%";
+                }
+            }
+
+            if (DetentionDate == null)
+            {
+                DetentionDate = "";
+            }
+            SqlConnection conn = new SqlConnection(_connection);
+            SqlCommand command = new SqlCommand("SelectDetaineeByParams", conn) { CommandType = CommandType.StoredProcedure };
+
+            SqlParameter[] parameters = {
+                    new SqlParameter() { ParameterName = "@FirstName", Value = arr[0] },
+                    new SqlParameter() { ParameterName = "@LastName", Value = arr[1] },
+                    new SqlParameter() { ParameterName = "@MiddleName", Value = arr[2] },
+                    new SqlParameter() { ParameterName = "@DetentionDate", Value = DetentionDate },
+                    new SqlParameter() { ParameterName = "@Address", Value = arr[3] },
+
+                };
+
+
+            command.Parameters.AddRange(parameters);
+            SqlDataReader reader = null;
+
+            try
+            {
+
+                conn.Open();
+                reader = command.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    list.Add(new Detainee
+                    {
+                        DetaineeID = reader.GetInt32(0),
+                        FirstName = reader.GetString(1),
+                        LastName = reader.GetString(2),
+                        MiddleName = reader[3].ToString(),
+                        BirstDate = reader.GetDateTime(4),
+                        MaritalStatusID = reader.GetInt32(5),
+                        ImagePath = reader.GetString(6),
+                        WorkPlace = reader.GetString(7),
+                        ResidenceAddress = reader.GetString(8),
+                        AdditionalData = reader[9].ToString(),
+
+                    });
+                }
+                reader.Close();
+
+                conn.Close();
+            }
+            catch (InvalidOperationException ex)
+            {
+                _log.Error(ex.Message);
+                list = null;
+            }
+
+            catch (SqlException ex)
+            {
+                _log.Error(ex.Message);
+                list = null;
+            }
+
+            catch (InvalidCastException ex)
+            {
+                _log.Error(ex.Message);
+                list = null;
+            }
+            finally
+            {
+                if (conn != null)
+                {
+                    conn.Dispose();
+                }
+
+                if (reader != null)
+                {
+                    reader.Dispose();
+                }
+            }
+
+            return list;
+        }
 
 
         public void Create(Detainee dtn)

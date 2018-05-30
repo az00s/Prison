@@ -55,5 +55,10 @@ namespace Prison.App.Business.Providers.Impl
         {
             _rep.Delete(id);
         }
+
+        public IEnumerable<Detainee> GetDetaineesByParams(string DetentionDate=null, string FirstName = null, string LastName = null, string MiddleName = null, string ResidenceAddress = null)
+        {
+            return _rep.GetDetaineesByParams(DetentionDate, FirstName, LastName, MiddleName, ResidenceAddress);
+        }
     }
 }

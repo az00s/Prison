@@ -165,5 +165,19 @@ namespace Prison.App.Web.Controllers
             }
         }
 
+        public ActionResult Search()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Search(SearchViewModel model)
+        {
+            
+            var Detainees = db.GetDetaineesByParams(model.DetentionDate,model.FirstName,model.LastName,model.Middlename,model.ResidenceAddress);
+            var resultList = ViewModelHelper.ToDetaineeIndexViewModel(Detainees);
+            return View("DetaineeList", resultList);
+        }
+
     }
 }

@@ -13,5 +13,6 @@ namespace Prison.App.Business.Providers
         void Create(Detainee dtn);
         void Update(Detainee dtn);
         void Delete(int id);
+        IEnumerable<Detainee> GetDetaineesByParams(string DetentionDate=null, string FirstName = null, string LastName = null, string MiddleName = null, string ResidenceAddress = null);
     }
 }

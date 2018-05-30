@@ -1,0 +1,84 @@
+﻿@model SearchViewModel
+
+@{
+    ViewBag.Title = "Поиск";
+}
+<script type="text/javascript" src="~/Scripts/SearchViewScript.js"></script>
+
+<div class="container-fluid">
+    <div class="row">
+        <hr />
+        <div class="form-horizontal">
+            <div class="col-md-2">
+                <div class="form-group">
+                    <div class="col-md-12">
+                        @Html.LabelFor(model => model.FirstName, htmlAttributes: new { @class = "control-label" })
+                        @Html.EditorFor(model => model.FirstName, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.FirstName, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="form-group">
+                    <div class="col-md-12">
+                        @Html.LabelFor(model => model.LastName, htmlAttributes: new { @class = "control-label" })
+                        @Html.EditorFor(model => model.LastName, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.LastName, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="form-group">
+                    <div class="col-md-12">
+                        @Html.LabelFor(model => model.Middlename, htmlAttributes: new { @class = "control-label" })
+                        @Html.EditorFor(model => model.Middlename, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Middlename, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="form-group">
+                    <div class="col-md-12">
+                        @Html.LabelFor(model => model.ResidenceAddress, htmlAttributes: new { @class = "control-label" })
+                        @Html.EditorFor(model => model.ResidenceAddress, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.ResidenceAddress, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group">
+                    <row>
+                        @Html.LabelFor(model => model.DetentionDate, htmlAttributes: new { @class = "control-label col-md-offset-1" })
+                        <div class="col-md-8">
+                            <div class="input-group" id="datetimepicker">
+                                <span class="input-group-addon">
+                                    <span class="glyphicon-calendar glyphicon"></span>
+                                </span>
+                                @Html.EditorFor(model => model.DetentionDate, new { htmlAttributes = new { @class = "form-control", @id = "dateField" } })
+                            </div>
+                                @Html.ValidationMessageFor(model => model.DetentionDate, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="col-md-4">
+                                <a class="btn btn-success" id="btnSearchDetainee">Поиск</a>
+
+                                @*This input helps to get right url address of action using Url helper.-becaue of @Url helper is not work inside .js script*@
+                                <input type="hidden" id="urlField" value="@Url.Action("Search", "Detainee")" />
+
+                            </div>
+</row>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="ResultTable">
+
+</div>
+
+@section scripts {
+    <script type="text/javascript" src="~/Scripts/moment-with-locales.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/bootstrap-datetimepicker.min.js"></script>
+    <link rel="stylesheet" href="~/Content/bootstrap-datetimepicker.min.css" />
+}

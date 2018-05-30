@@ -114,6 +114,7 @@
     <Content Include="Content\img\Prison.jpg" />
     <Content Include="Content\Login.css" />
     <Content Include="Scripts\AddDeleteRoleScript.js" />
+    <Content Include="Scripts\SearchViewScript.js" />
     <Content Include="Scripts\Login.js" />
     <Content Include="Content\Site.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -138,7 +139,6 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AdvertismentController.cs" />
     <Compile Include="Controllers\DetaineeController.cs" />
-    <Compile Include="Controllers\DetentionController.cs" />
     <Compile Include="Controllers\EmployeeController.cs" />
     <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -157,6 +157,7 @@
     <Compile Include="Models\Employee\EmployeeEditViewModel.cs" />
     <Compile Include="Models\Employee\EmployeeIndexViewModel.cs" />
     <Compile Include="Models\ErrorViewModel.cs" />
+    <Compile Include="Models\SearchViewModel.cs" />
     <Compile Include="Models\User\UserCreateViewModel.cs" />
     <Compile Include="Models\User\UserEditViewModel.cs" />
     <Compile Include="Models\User\UserIndexViewModel.cs" />
@@ -214,6 +215,7 @@
     <Content Include="Views\Role\Create.cshtml" />
     <Content Include="Views\Role\Edit.cshtml" />
     <Content Include="Views\Role\Delete.cshtml" />
+    <Content Include="Views\Detainee\Search.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
