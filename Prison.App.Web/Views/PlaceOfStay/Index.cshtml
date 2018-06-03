@@ -1,16 +1,17 @@
-﻿@model IEnumerable<PlaceOfStay>
+﻿@model IEnumerable<PlaceOfStayViewModel>
 
 @{
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Места содержания задержанных</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Добавить место", "Create")
 </p>
 <table class="table">
     <tr>
+        
         <th>
             @Html.DisplayNameFor(model => model.Address)
         </th>
@@ -25,9 +26,8 @@
             @Html.DisplayFor(modelItem => item.Address)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new {id=item.PlaceID }) |
-            @Html.ActionLink("Details", "Details", new { id = item.PlaceID }) |
-            @Html.ActionLink("Delete", "Delete", new { id = item.PlaceID })
+            @Html.ActionLink("Редактировать", "Edit", new {id=item.PlaceID }) |
+            @Html.ActionLink("Удалить", "Delete", new { id = item.PlaceID })
         </td>
     </tr>
 }

@@ -38,10 +38,7 @@ namespace Prison.App.Web.DependencyResolution {
         #region Constructors and Destructors
 
         public StructureMapDependencyScope(IContainer container) {
-            if (container == null) {
-                throw new ArgumentNullException("container");
-            }
-            Container = container;
+            Container = container ?? throw new ArgumentNullException("container");
         }
 
         #endregion

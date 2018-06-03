@@ -1,13 +1,12 @@
 ﻿@model DetaineeDetailsViewModel
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "Детали";
 }
 
-<h2>Details</h2>
+<h2>О задержанном</h2>
 
 <div>
-    <h4>Detainee</h4>
     <hr />
         @if (Model.ImagePath != null)
         {
@@ -85,6 +84,6 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.DetaineeID }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Редактировать", "Edit", new { id = Model.DetaineeID }) |
+    @Html.ActionLink("Назад", "Index")
 </p>

@@ -1,12 +1,12 @@
 ﻿using System.Web;
 using System.Web.Mvc;
 
-namespace Prison.App.Business.Attributes
+namespace Prison.App.Web.Attributes
 {
-    public class EditorAttribute:AuthorizeAttribute
+    public class UserAttribute: AuthorizeAttribute
     {
-        //because of 'admin' role is including 'editor' role this attribute checks not only 'editor', but admin role too.
-        private string[] RoleArray = {"editor", "admin" };
+        //because of 'admin' role is including 'editor' and 'user' roles this attribute checks not only 'user', but editor and admin roles too.
+        private string[] RoleArray = {"user","editor","admin"};
 
         protected override bool AuthorizeCore(HttpContextBase httpContext)
         {
@@ -21,6 +21,7 @@ namespace Prison.App.Business.Attributes
                 }
 
                 return false;
+
             }
 
             return false;

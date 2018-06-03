@@ -7,7 +7,9 @@ using Prison.App.Web.Models;
 using System;
 using System.Web;
 using System.Web.Mvc;
-using Prison.App.Business.Attributes;
+using Prison.App.Web.Attributes;
+using System.Linq;
+using System.Collections.Generic;
 
 namespace Prison.App.Web.Controllers
 {
@@ -34,26 +36,20 @@ namespace Prison.App.Web.Controllers
         {
             var Detainees = db.GetAllRecordsFromTable();
 
-            var resultList=ViewModelHelper.ToDetaineeIndexViewModel(Detainees);
+            var ViewModel = ToDetaineeIndexViewModel(Detainees);
 
-            return View(resultList);
+            return View(ViewModel);
         }
         
         [User]
         public ActionResult Details(int id)
         {
-            if (ArgumentHelper.IsValidID(id))
-            {
-                var Detainee = db.GetDetaineeByID(id);
+            var Detainee = db.GetDetaineeByID(id);
 
-                var ViewModel=ViewModelHelper.ToDetaineeDetailsViewModel(Detainee,db);
-                 
-                return View(ViewModel);
-            }
-            else
-            {
-                return RedirectToAction("Index","Error");
-            }
+            var ViewModel =ToDetaineeDetailsViewModel(Detainee);
+
+            return View(ViewModel);
+            
         }
 
         [Editor]
@@ -72,11 +68,12 @@ namespace Prison.App.Web.Controllers
 
         [Editor]
         [HttpPost]
-        public ActionResult Create(Detainee dtn)
+        public ActionResult Create(DetaineeEditViewModel dtn)
         {
             if (ModelState.IsValid)
             {
-                db.Create(dtn);
+                var Entity = ToDetainee(dtn);
+                db.Create(Entity);
             }
 
             return RedirectToAction("Index");
@@ -85,35 +82,30 @@ namespace Prison.App.Web.Controllers
         [Editor]
         public ActionResult Edit(int id)
         {
-            if (ArgumentHelper.IsValidID(id))
-            {
-                var Detainee = db.GetDetaineeByID(id);
+            var Detainee = db.GetDetaineeByID(id);
 
-                var ViewModel = ViewModelHelper.ToDetaineeEditViewModel(Detainee,db);
+            var ViewModel = ToDetaineeEditViewModel(Detainee);
 
-                return View(ViewModel);
-            }
-            else
-            {
-                return RedirectToAction("Index", "Error");
-            }
+            return View(ViewModel);
         }
 
         [Editor]
         [HttpPost]
-        public ActionResult Edit(Detainee dtn, HttpPostedFileBase file)
+        public ActionResult Edit(DetaineeEditViewModel dtn, HttpPostedFileBase file)
         {
             if (ModelState.IsValid)
             {
                 if (file != null)
                 {
-                    string pic = System.IO.Path.GetFileName(file.FileName);
-                    string path = System.IO.Path.Combine(Server.MapPath("~/Content/Images/ProfilePhotos"), pic);
-                    file.SaveAs(path);
-                    string FilePath = "/Content/Images/ProfilePhotos/" + pic;
-                    dtn.ImagePath = FilePath;
+                    FileHelper.SaveFileOnServer(file);
+                    
+                    dtn.ImagePath = FileHelper.GetFilePath(file.FileName);
+
                 }
-                db.Update(dtn);
+
+                var Entity = ToDetainee(dtn);
+
+                db.Update(Entity);
             }
 
             return RedirectToAction("Index");
@@ -122,62 +114,144 @@ namespace Prison.App.Web.Controllers
         [Editor]
         public ActionResult Delete(int id)
         {
-            if (ArgumentHelper.IsValidID(id))
-            {
-                var Detainee = db.GetDetaineeByID(id);
-
-                return View(Detainee);
-            }
-            else
-            {
-                return RedirectToAction("Index", "Error");
-            }
+            var Detainee = db.GetDetaineeByID(id);
+            var ViewModel = ToDetaineeEditViewModel(Detainee);
+            return View(ViewModel);
         }
 
         [Editor]
         [HttpPost]
         public ActionResult DeleteFromDb(int id)
         {
-            if (ArgumentHelper.IsValidID(id))
-            {
-                db.Delete(id);
+            db.Delete(id);
 
-                return RedirectToAction("Index");
-            }
-            else
-            {
-                return RedirectToAction("Index", "Error");
-            }
+            return RedirectToAction("Index");
         }
         
         [User]
         public ActionResult GetDetaineeByDate(DateTime date)
         {
-            if (ArgumentHelper.IsValidDate(date))
-            {
-                var Detainees = db.GetDetaineesByDate(date);
-                var resultList = ViewModelHelper.ToDetaineeIndexViewModel(Detainees);
-                return View("DetaineeList", resultList);
-            }
-            else
-            {
-                return RedirectToAction("Index","Error");
-            }
+            var Detainees = db.GetDetaineesByDate(date);
+            var ViewModel = ToDetaineeIndexViewModel(Detainees);
+            return View("DetaineeList", ViewModel);
         }
 
+        [User]
         public ActionResult Search()
         {
             return View();
         }
 
+        [User]
         [HttpPost]
         public ActionResult Search(SearchViewModel model)
         {
+            if (!ModelState.IsValid)
+            {
+                return View("ValidationError", model);
+            }
+
+            var Detainees = db.GetDetaineesByParams(model.DetentionDate, model.FirstName, model.LastName, model.Middlename, model.ResidenceAddress);
             
-            var Detainees = db.GetDetaineesByParams(model.DetentionDate,model.FirstName,model.LastName,model.Middlename,model.ResidenceAddress);
-            var resultList = ViewModelHelper.ToDetaineeIndexViewModel(Detainees);
+            var resultList = ToDetaineeIndexViewModel(Detainees);
             return View("DetaineeList", resultList);
+            
         }
+
+        #region ModelViewHelpers
+        private DetaineeDetailsViewModel ToDetaineeDetailsViewModel(Detainee dtn)
+        {
+            var statuses = db.GetAllMaritalStatusesFromTable();
+
+            DetaineeDetailsViewModel Result = new DetaineeDetailsViewModel
+            {
+                DetaineeID = dtn.DetaineeID,
+                FirstName = dtn.FirstName,
+                LastName = dtn.LastName,
+                MiddleName = dtn.MiddleName,
+                BirstDate = dtn.BirstDate.ToLongDateString(),
+                MaritalStatus = statuses.First(s => s.StatusID == dtn.MaritalStatusID).StatusName,
+                ImagePath = dtn.ImagePath,
+                WorkPlace = dtn.WorkPlace,
+                ResidenceAddress = dtn.ResidenceAddress,
+                AdditionalData = dtn.AdditionalData,
+                Detentions = dtn.Detentions,
+                PhoneNumbers = dtn.PhoneNumbers
+            };
+
+            return Result;
+        }
+
+        private IEnumerable<DetaineeIndexViewModel> ToDetaineeIndexViewModel(IEnumerable<Detainee> list)
+        {
+            List<DetaineeIndexViewModel> ResultList = new List<DetaineeIndexViewModel>();
+
+            foreach (Detainee item in list)
+            {
+                ResultList.Add(new DetaineeIndexViewModel
+                {
+                    DetaineeID = item.DetaineeID,
+                    FirstName = item.FirstName,
+                    LastName = item.LastName,
+                    MiddleName = item.MiddleName,
+                    BirstDate = item.BirstDate.ToShortDateString(),
+                    ImagePath = item.ImagePath
+                });
+            }
+
+
+
+            return ResultList;
+        }
+
+        private Detainee ToDetainee(DetaineeEditViewModel dtn)
+        {
+            return new Detainee
+            {
+                DetaineeID=dtn.DetaineeID,
+                FirstName=dtn.FirstName,
+                LastName=dtn.LastName,
+                MiddleName=dtn.MiddleName,
+                BirstDate=dtn.BirstDate,
+                WorkPlace=dtn.WorkPlace,
+                ResidenceAddress=dtn.ResidenceAddress,
+                MaritalStatusID=dtn.MaritalStatusID,
+                ImagePath=dtn.ImagePath,
+                PhoneNumbers=dtn.PhoneNumbers,
+                AdditionalData=dtn.AdditionalData,
+                Detentions=dtn.Detentions
+
+            };
+        }
+
+        private DetaineeEditViewModel ToDetaineeEditViewModel(Detainee dtn)
+        {
+            var statuses = db.GetAllMaritalStatusesFromTable();
+
+            DetaineeEditViewModel Result = new DetaineeEditViewModel
+            {
+                DetaineeID = dtn.DetaineeID,
+                FirstName = dtn.FirstName,
+                LastName = dtn.LastName,
+                MiddleName = dtn.MiddleName,
+                BirstDate = dtn.BirstDate.ToLocalTime(),
+                MaritalStatus = statuses,
+                MaritalStatusID = dtn.MaritalStatusID,
+                ImagePath = dtn.ImagePath,
+                WorkPlace = dtn.WorkPlace,
+                ResidenceAddress = dtn.ResidenceAddress,
+                AdditionalData = dtn.AdditionalData,
+                Detentions = dtn.Detentions,
+                PhoneNumbers = dtn.PhoneNumbers
+            };
+
+            return Result;
+        }
+
+
+        #endregion
+
+        
 
     }
 }

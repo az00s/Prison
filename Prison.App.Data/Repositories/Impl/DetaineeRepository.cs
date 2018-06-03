@@ -372,32 +372,16 @@ namespace Prison.App.Data.Repositories
         {
             List<Detainee> list = new List<Detainee>();
 
-            string[] arr = { FirstName, LastName, MiddleName, ResidenceAddress };
-            for (int i=0;i<arr.Length;i++)
-            {
-                if (arr[i] == null)
-                {
-                    arr[i] = "%";
-                }
-                else
-                {
-                    arr[i] = $"%{arr[i]}%";
-                }
-            }
-
-            if (DetentionDate == null)
-            {
-                DetentionDate = "";
-            }
+            
             SqlConnection conn = new SqlConnection(_connection);
             SqlCommand command = new SqlCommand("SelectDetaineeByParams", conn) { CommandType = CommandType.StoredProcedure };
 
             SqlParameter[] parameters = {
-                    new SqlParameter() { ParameterName = "@FirstName", Value = arr[0] },
-                    new SqlParameter() { ParameterName = "@LastName", Value = arr[1] },
-                    new SqlParameter() { ParameterName = "@MiddleName", Value = arr[2] },
+                    new SqlParameter() { ParameterName = "@FirstName", Value = FirstName },
+                    new SqlParameter() { ParameterName = "@LastName", Value = LastName },
+                    new SqlParameter() { ParameterName = "@MiddleName", Value = MiddleName },
                     new SqlParameter() { ParameterName = "@DetentionDate", Value = DetentionDate },
-                    new SqlParameter() { ParameterName = "@Address", Value = arr[3] },
+                    new SqlParameter() { ParameterName = "@Address", Value = ResidenceAddress },
 
                 };
 

@@ -2,6 +2,7 @@
 using Prison.App.Business.Providers;
 using Prison.App.Business.Providers.Impl;
 using Prison.App.Business.Services;
+using Prison.App.Business.Services.Impl;
 using Prison.App.Common.Entities;
 using StructureMap.Configuration.DSL;
 
@@ -20,6 +21,8 @@ namespace Prison.App.Business.Registers
             For<IUserProvider>().Use<UserProvider>();
             For<IRoleProvider>().Use<RoleProvider>();
             For<ILogInService>().Use<LogInService>();
+            ForSingletonOf<ICachingService>().Use<СachingService>();
+
 
         }
     }

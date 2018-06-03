@@ -51,6 +51,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Caching" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Mvc, Version=4.0.0.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -68,15 +69,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Attributes\AdminAttribute.cs" />
-    <Compile Include="Attributes\EditorAttribute.cs" />
-    <Compile Include="Attributes\UserAttribute.cs" />
     <Compile Include="Providers\IAdvertismentProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Providers\IDetaineeProvider.cs" />
     <Compile Include="Providers\IEmployeeProvider.cs" />
     <Compile Include="Providers\Impl\AdvertismentProvider.cs" />
-    <Compile Include="Providers\IDataProvider.cs" />
     <Compile Include="Providers\Impl\DetaineeProvider.cs" />
     <Compile Include="Providers\Impl\EmployeeProvider.cs" />
     <Compile Include="Providers\Impl\PlaceOfStayProvider.cs" />
@@ -88,9 +85,11 @@
     <Compile Include="Providers\IRoleProvider.cs" />
     <Compile Include="Providers\IUserProvider.cs" />
     <Compile Include="Registers\BusinessRegistry.cs" />
+    <Compile Include="Services\ICachingService.cs" />
     <Compile Include="Services\ILogInService.cs" />
     <Compile Include="Services\Impl\LogInService.cs" />
     <Compile Include="Models\UserPrincipal.cs" />
+    <Compile Include="Services\Impl\СachingService.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

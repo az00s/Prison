@@ -19,7 +19,7 @@
                 LastName: $("input[name='LastName']").val(),
                 Middlename: $("input[name='Middlename']").val(),
                 ResidenceAddress: $("input[name='ResidenceAddress']").val(),
-                DetentionDate: $("#dateField").val(),
+                DetentionDate: $("#dateField").val()
             },
             success: function (data) {
 

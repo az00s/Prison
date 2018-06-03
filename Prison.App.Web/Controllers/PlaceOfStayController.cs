@@ -3,7 +3,9 @@ using Prison.App.Common.Entities;
 using Prison.App.Common.Helpers;
 using Prison.App.Common.Interfaces;
 using System.Web.Mvc;
-using Prison.App.Business.Attributes;
+using Prison.App.Web.Attributes;
+using Prison.App.Web.Models;
+using System.Collections.Generic;
 
 namespace Prison.App.Web.Controllers
 {
@@ -28,23 +30,16 @@ namespace Prison.App.Web.Controllers
         public ActionResult Index()
         {
             var Places = db.GetAllRecordsFromTable();
-
-            return View(Places);
+            var ViewModel = ToPlaceOfStayIndexViewModel(Places);
+            return View(ViewModel);
         }
 
         [Editor]
         public ActionResult Details(int id)
         {
-            if (ArgumentHelper.IsValidID(id))
-            {
-                var place = db.GetPlaceOfStayByID(id);
+            var place = db.GetPlaceOfStayByID(id);
 
-                return View(place);
-            }
-            else
-            {
-                return RedirectToAction("Index", "Error");
-            }
+            return View(place);
         }
 
         [Editor]
@@ -55,72 +50,87 @@ namespace Prison.App.Web.Controllers
 
         [Editor]
         [HttpPost]
-        public ActionResult Create(PlaceOfStay dtn)
+        public ActionResult Create(PlaceOfStayViewModel model)
         {
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
-                db.Create(dtn);
+                return View(model);
             }
 
-            return View("Index", db.GetAllRecordsFromTable());
+            var place = ToPlaceOfStay(model);
+
+            db.Create(place);
+
+            return RedirectToAction("Index");
         }
 
         [Editor]
         public ActionResult Edit(int id)
         {
-            if (ArgumentHelper.IsValidID(id))
-            {
-                var place = db.GetPlaceOfStayByID(id);
-
-                return View(place);
-            }
-            else
-            {
-                return RedirectToAction("Index", "Error");
-            }
+            var place = db.GetPlaceOfStayByID(id);
+            var ViewModel = ToPlaceOfStayViewModel(place);
+            return View(ViewModel);
         }
 
         [Editor]
         [HttpPost]
-        public ActionResult Edit(PlaceOfStay dtn)
+        public ActionResult Edit(PlaceOfStayViewModel model)
         {
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
-                db.Update(dtn);
+                return View(model);
             }
+            var place = ToPlaceOfStay(model);
+            db.Update(place);
 
-            return View("Index", db.GetAllRecordsFromTable());
+            return RedirectToAction("Index");
         }
 
         [Editor]
         public ActionResult Delete(int id)
         {
-            if (ArgumentHelper.IsValidID(id))
-            {
-                var place = db.GetPlaceOfStayByID(id);
+            var place = db.GetPlaceOfStayByID(id);
 
-                return View(place);
-            }
-            else
-            {
-                return RedirectToAction("Index", "Error");
-            }
+            return View(place);
         }
 
         [Editor]
         [HttpPost]
         public ActionResult DeleteFromDb(int id)
         {
-            if (ArgumentHelper.IsValidID(id))
-            {
-                db.Delete(id);
+            db.Delete(id);
 
-                return View("Index", db.GetAllRecordsFromTable());
-            }
-            else
-            {
-                return RedirectToAction("Index", "Error");
-            }
+            return RedirectToAction("Index");
         }
+
+        #region ViewModelHelper
+
+        private PlaceOfStay ToPlaceOfStay(PlaceOfStayViewModel model)
+        {
+            return new PlaceOfStay { PlaceID = model.PlaceID, Address = model.Address };
+        }
+
+        private PlaceOfStayViewModel ToPlaceOfStayViewModel(PlaceOfStay place)
+        {
+            return new PlaceOfStayViewModel { PlaceID=place.PlaceID,Address = place.Address };
+        }
+
+        private IEnumerable<PlaceOfStayViewModel> ToPlaceOfStayIndexViewModel(IEnumerable<PlaceOfStay> list)
+        {
+            List<PlaceOfStayViewModel> ResultList = new List<PlaceOfStayViewModel>();
+            foreach (PlaceOfStay item in list)
+            {
+                ResultList.Add(new PlaceOfStayViewModel
+                {
+                    PlaceID=item.PlaceID,
+                    Address = item.Address
+                });
+            }
+
+            return ResultList;
+
+        }
+
+        #endregion
     }
 }

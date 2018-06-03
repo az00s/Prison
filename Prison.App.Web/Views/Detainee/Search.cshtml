@@ -9,6 +9,8 @@
     <div class="row">
         <hr />
         <div class="form-horizontal">
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
             <div class="col-md-2">
                 <div class="form-group">
                     <div class="col-md-12">
@@ -54,18 +56,25 @@
                                 <span class="input-group-addon">
                                     <span class="glyphicon-calendar glyphicon"></span>
                                 </span>
-                                @Html.EditorFor(model => model.DetentionDate, new { htmlAttributes = new { @class = "form-control", @id = "dateField" } })
+                                @Html.EditorFor(model => model.DetentionDate, new { htmlAttributes = new { @class = "form-control", @id = "dateField", @readonly = "readonly" } })
+                               
+                                @*<span class="input-group-btn">
+                                    <button class="btn btn-default" type="button">
+                                        <i class="glyphicon glyphicon-remove"></i>
+                                    </button>
+                                </span>*@
+                              
                             </div>
-                                @Html.ValidationMessageFor(model => model.DetentionDate, "", new { @class = "text-danger" })
-                            </div>
-                            <div class="col-md-4">
-                                <a class="btn btn-success" id="btnSearchDetainee">Поиск</a>
+                            @Html.ValidationMessageFor(model => model.DetentionDate, "", new { @class = "text-danger" })
+                        </div>
+                        <div class="col-md-4">
+                            <a class="btn btn-success" id="btnSearchDetainee">Поиск</a>
 
-                                @*This input helps to get right url address of action using Url helper.-becaue of @Url helper is not work inside .js script*@
-                                <input type="hidden" id="urlField" value="@Url.Action("Search", "Detainee")" />
+                            @*This input helps to get right url address of action using Url helper.-becaue of @Url helper is not work inside .js script*@
+                            <input type="hidden" id="urlField" value="@Url.Action("Search", "Detainee")" />
 
-                            </div>
-</row>
+                        </div>
+                    </row>
 
                 </div>
             </div>

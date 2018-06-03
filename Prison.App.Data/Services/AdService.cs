@@ -36,8 +36,10 @@ namespace Prison.App.Data.Services
                 (AppDomain.CurrentDomain.SetupInformation.PrivateBinPath,FILE_NAME);
 
             //set config file for using it in configuration object
-            ExeConfigurationFileMap fileMap = new ExeConfigurationFileMap();
-            fileMap.ExeConfigFilename = absolutePath;
+            ExeConfigurationFileMap fileMap = new ExeConfigurationFileMap
+            {
+                ExeConfigFilename = absolutePath
+            };
 
             //get configuration object for using it in ConfigurationChannelFactory
             Configuration configuration = ConfigurationManager.OpenMappedExeConfiguration(fileMap, ConfigurationUserLevel.None);

@@ -136,6 +136,9 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\StructuremapMvc.cs" />
+    <Compile Include="Attributes\AdminAttribute.cs" />
+    <Compile Include="Attributes\EditorAttribute.cs" />
+    <Compile Include="Attributes\UserAttribute.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AdvertismentController.cs" />
     <Compile Include="Controllers\DetaineeController.cs" />
@@ -149,14 +152,15 @@
       <DependentUpon>Global.asax</DependentUpon>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
+    <Compile Include="Helpers\FileHelper.cs" />
     <Compile Include="Helpers\ViewHelper.cs" />
-    <Compile Include="Helpers\ViewModelHelper.cs" />
     <Compile Include="Models\Detainee\DetaineeEditViewModel.cs" />
     <Compile Include="Models\Detainee\DetaineeIndexViewModel.cs" />
     <Compile Include="Models\Detainee\DetaineeDetailsViewModel.cs" />
     <Compile Include="Models\Employee\EmployeeEditViewModel.cs" />
     <Compile Include="Models\Employee\EmployeeIndexViewModel.cs" />
     <Compile Include="Models\ErrorViewModel.cs" />
+    <Compile Include="Models\PlaceOfStay\PlaceOfStayViewModel.cs" />
     <Compile Include="Models\SearchViewModel.cs" />
     <Compile Include="Models\User\UserCreateViewModel.cs" />
     <Compile Include="Models\User\UserEditViewModel.cs" />
@@ -195,7 +199,6 @@
     <Content Include="Views\Employee\Create.cshtml" />
     <Content Include="Views\Employee\Edit.cshtml" />
     <Content Include="Views\Employee\Delete.cshtml" />
-    <Content Include="Views\PlaceOfStay\Details.cshtml" />
     <Content Include="Views\PlaceOfStay\Create.cshtml" />
     <Content Include="Views\PlaceOfStay\Edit.cshtml" />
     <Content Include="Views\PlaceOfStay\Delete.cshtml" />
@@ -216,6 +219,8 @@
     <Content Include="Views\Role\Edit.cshtml" />
     <Content Include="Views\Role\Delete.cshtml" />
     <Content Include="Views\Detainee\Search.cshtml" />
+    <Content Include="Views\Error\Unauthorized.cshtml" />
+    <Content Include="Views\Shared\ValidationError.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

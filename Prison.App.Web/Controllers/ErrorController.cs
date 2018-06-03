@@ -1,14 +1,11 @@
 ﻿using Prison.App.Web.Models;
 using System.Web.Mvc;
-using Prison.App.Business.Attributes;
-
 
 namespace Prison.App.Web.Controllers
 {
-    [User]
+
     public class ErrorController : Controller
     {
-        // GET: Error
         public ActionResult Index()
         {
             return View();
@@ -28,6 +25,11 @@ namespace Prison.App.Web.Controllers
         {
 
             return View("CustomError",new ErrorViewModel { Message = message });
+        }
+
+        public ViewResult Unauthorized()
+        {
+            return View();
         }
     }
 }

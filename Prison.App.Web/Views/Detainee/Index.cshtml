@@ -1,14 +1,14 @@
 ﻿@model IEnumerable<DetaineeIndexViewModel>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Задержанные";
 }
 
 <hr/>
 @Html.Partial("DateNavigation")
 <div id="ResultTable">
     <p>
-        @Html.ActionLink("Create New", "Create")
+        @Html.ActionLink("Добавить задержанного", "Create")
     </p>
     <table class="table">
         <tr>
@@ -56,9 +56,9 @@
                 @Html.DisplayFor(modelItem => item.BirstDate)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.DetaineeID }) |
-                @Html.ActionLink("Details", "Details", new { id = item.DetaineeID }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.DetaineeID })
+                @Html.ActionLink("Редактировать", "Edit", new { id = item.DetaineeID }) |
+                @Html.ActionLink("Подробнее", "Details", new { id = item.DetaineeID }) |
+                @Html.ActionLink("Удалить", "Delete", new { id = item.DetaineeID })
             </td>
         </tr>
         }

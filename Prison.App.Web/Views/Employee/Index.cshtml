@@ -1,13 +1,13 @@
 ﻿@model IEnumerable<EmployeeIndexViewModel>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Сотрудники";
 }
 
-<h2>Index</h2>
+<h2>Сотрудники изолятора</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Добавить сотрудника", "Create")
 </p>
 <table class="table">
     <tr>
@@ -41,9 +41,9 @@
             @Html.DisplayFor(modelItem => item.Position)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.EmployeeID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.EmployeeID }) |
-            @Html.ActionLink("Delete", "Delete", new {  id=item.EmployeeID })
+            @Html.ActionLink("Редактировать", "Edit", new { id=item.EmployeeID }) |
+            @Html.ActionLink("Подробнее", "Details", new { id=item.EmployeeID }) |
+            @Html.ActionLink("Удалить", "Delete", new {  id=item.EmployeeID })
         </td>
     </tr>
 }

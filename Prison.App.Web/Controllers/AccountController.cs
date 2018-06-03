@@ -3,7 +3,7 @@ using Prison.App.Common.Helpers;
 using Prison.App.Common.Interfaces;
 using Prison.App.Web.Models;
 using System.Web.Mvc;
-using Prison.App.Business.Attributes;
+using Prison.App.Web.Attributes;
 
 namespace Prison.App.Web.Controllers
 {
@@ -23,7 +23,7 @@ namespace Prison.App.Web.Controllers
             _log = log;
         }
 
-
+        [OutputCache(CacheProfile = "LoginAccountCacheProfile")]
         public ActionResult Login(string returnUrl)
         {
             ViewBag.ReturnUrl = returnUrl;
@@ -58,7 +58,6 @@ namespace Prison.App.Web.Controllers
 
         private ActionResult RedirectToLocal(string returnUrl)
         {
-
             if (Url.IsLocalUrl(returnUrl))
             {
                 return Redirect(returnUrl);

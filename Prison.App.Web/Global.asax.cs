@@ -8,6 +8,8 @@ using System.Web.Security;
 using Newtonsoft.Json;
 using Prison.App.Business.Services;
 using Prison.App.Common.Entities;
+using Prison.App.Web.DependencyResolution;
+using Prison.App.Common.Interfaces;
 
 namespace Prison
 {
@@ -39,6 +41,23 @@ namespace Prison
                     //put IPrincipal impl in context
                     HttpContext.Current.User = userPrincipal;
             }
+        }
+
+        protected void Application_Error(Object sender, EventArgs e)
+        {
+            Exception exc = Server.GetLastError();
+            Server.ClearError();
+            Response.Clear();
+
+            string errorType = "ServerError";
+
+            using (var container = IoC.Initialize())
+            {
+                var log = container.GetInstance<ILogger>();
+                log.Error(exc.Message,exc);
+            }
+
+            Response.Redirect($"~/Error/{errorType}");
         }
 
     }
