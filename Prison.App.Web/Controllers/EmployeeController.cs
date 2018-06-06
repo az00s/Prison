@@ -9,6 +9,7 @@ using System.Web.Mvc;
 using System.Web.Routing;
 using System.Collections.Generic;
 using System.Linq;
+using Prison.App.Business.Services;
 
 namespace Prison.App.Web.Controllers
 {
@@ -17,25 +18,29 @@ namespace Prison.App.Web.Controllers
     {
         private ILogger _log;
 
-        private IEmployeeProvider _emp;
+        private IEmployeeProvider _employeeProvider;
 
-        private IPositionProvider _pos;
-        
-        public EmployeeController(IEmployeeProvider rep, ILogger logger, IPositionProvider pos)
+        private IPositionProvider _positionProvider;
+
+        private IEmployeeService _employeeService;
+
+        public EmployeeController(IEmployeeProvider employeeProvider, ILogger log, IPositionProvider positionProvider, IEmployeeService employeeService)
         {
-            ArgumentHelper.ThrowExceptionIfNull(pos, "IPositionProvider");
-            ArgumentHelper.ThrowExceptionIfNull(rep, "IEmployeeProvider");
-            ArgumentHelper.ThrowExceptionIfNull(logger, "ILogger");
+            ArgumentHelper.ThrowExceptionIfNull(positionProvider, "IPositionProvider");
+            ArgumentHelper.ThrowExceptionIfNull(employeeProvider, "IEmployeeProvider");
+            ArgumentHelper.ThrowExceptionIfNull(employeeService, "IEmployeeService");
+            ArgumentHelper.ThrowExceptionIfNull(log, "ILogger");
 
-            _pos = pos;
-            _emp = rep;
-            _log = logger;
+            _positionProvider = positionProvider;
+            _employeeProvider = employeeProvider;
+            _employeeService = employeeService;
+            _log = log;
         }
 
         [User]
         public ActionResult Index()
         {
-            var Employees = _emp.GetAllRecordsFromTable();
+            var Employees = _employeeProvider.GetAllEmployees();
 
             var ViewModelList = ToEmployeeIndexViewModel(Employees);
 
@@ -45,7 +50,7 @@ namespace Prison.App.Web.Controllers
         [Editor]
         public ActionResult Details(int id)
         {
-            var Employee = _emp.GetEmployeeByID(id);
+            var Employee = _employeeProvider.GetEmployeeByID(id);
 
             var ViewModel=ToEmployeeIndexViewModel(Employee);
 
@@ -57,7 +62,7 @@ namespace Prison.App.Web.Controllers
         [HttpGet]
         public ActionResult Create()
         {
-            var positions = _pos.GetAllRecordsFromTable();
+            var positions = _positionProvider.GetAllPositions();
 
             var ViewModel = new EmployeeEditViewModel
             {
@@ -72,14 +77,14 @@ namespace Prison.App.Web.Controllers
         {
             if (!ModelState.IsValid)
             {
-                model.Positions= _pos.GetAllRecordsFromTable();
+                model.Positions= _positionProvider.GetAllPositions();
 
                 return View(model);
             }
 
             var emp = ToEmployee(model);
 
-            _emp.Create(emp);
+            _employeeService.Create(emp);
 
             return RedirectToAction("Index");
         }
@@ -87,7 +92,7 @@ namespace Prison.App.Web.Controllers
         [Editor]
         public ActionResult Edit(int id)
         {
-            var emp = _emp.GetEmployeeByID(id);
+            var emp = _employeeProvider.GetEmployeeByID(id);
 
             var ViewModel = ToEmployeeEditViewModel(emp);
 
@@ -101,14 +106,14 @@ namespace Prison.App.Web.Controllers
             
             if (!ModelState.IsValid)
             {
-                model.Positions = _pos.GetAllRecordsFromTable();
+                model.Positions = _positionProvider.GetAllPositions();
 
                 return View(model);
             }
 
             var emp = ToEmployee(model);
 
-            _emp.Update(emp);
+            _employeeService.Update(emp);
 
             return RedirectToAction("Index");
         }
@@ -116,7 +121,7 @@ namespace Prison.App.Web.Controllers
         [Editor]
         public ActionResult Delete(int id)
         {
-            var Employee = _emp.GetEmployeeByID(id);
+            var Employee = _employeeProvider.GetEmployeeByID(id);
 
             var ViewModel = ToEmployeeIndexViewModel(Employee);
 
@@ -127,7 +132,7 @@ namespace Prison.App.Web.Controllers
         [HttpPost]
         public ActionResult DeleteFromDb(int id)
         {
-            _emp.Delete(id);
+            _employeeService.Delete(id);
 
             return RedirectToAction("Index");
         }
@@ -136,7 +141,7 @@ namespace Prison.App.Web.Controllers
 
         private IEnumerable<EmployeeIndexViewModel> ToEmployeeIndexViewModel(IEnumerable<Employee> list)
         {
-            var Positions = _pos.GetAllRecordsFromTable();
+            var Positions = _positionProvider.GetAllPositions();
 
             List<EmployeeIndexViewModel> ResultList = new List<EmployeeIndexViewModel>();
             foreach (Employee item in list)
@@ -156,7 +161,7 @@ namespace Prison.App.Web.Controllers
 
         private EmployeeIndexViewModel ToEmployeeIndexViewModel(Employee emp)
         {
-            var Positions =_pos.GetAllRecordsFromTable();
+            var Positions = _positionProvider.GetAllPositions();
 
             EmployeeIndexViewModel Result = new EmployeeIndexViewModel
             {
@@ -172,7 +177,7 @@ namespace Prison.App.Web.Controllers
 
         private EmployeeEditViewModel ToEmployeeEditViewModel(Employee emp)
         {
-            var Positions = _pos.GetAllRecordsFromTable();
+            var Positions = _positionProvider.GetAllPositions();
 
             EmployeeEditViewModel Result = new EmployeeEditViewModel
             {

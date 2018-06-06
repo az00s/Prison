@@ -5,7 +5,7 @@ namespace Prison.App.Data.Repositories
 {
     public interface IUserRepository
     {
-        IEnumerable<User> GetAllRecordsFromTable();
+        IEnumerable<User> GetAllUsers();
 
         IEnumerable<string> GetAllLogins();
 

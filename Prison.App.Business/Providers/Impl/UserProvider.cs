@@ -2,32 +2,24 @@
 using Prison.App.Common.Helpers;
 using Prison.App.Common.Interfaces;
 using Prison.App.Data.Repositories;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Prison.App.Business.Providers.Impl
 {
     public class UserProvider:IUserProvider
     {
-        private ILogger _log;
-
         private IUserRepository _rep;
 
         public UserProvider(ILogger log, IUserRepository rep)
         {
-            ArgumentHelper.ThrowExceptionIfNull(log, "ILogger");
             ArgumentHelper.ThrowExceptionIfNull(rep, "IUserRepository");
 
-            _log = log;
             _rep = rep;
         }
 
-        public IEnumerable<User> GetAllRecordsFromTable()
+        public IEnumerable<User> GetAllUsers()
         {
-            return _rep.GetAllRecordsFromTable();
+            return _rep.GetAllUsers();
         }
 
         public IEnumerable<string> GetAllLogins()
@@ -60,20 +52,6 @@ namespace Prison.App.Business.Providers.Impl
             return _rep.GetUserByID(id);
         }
 
-        public void Create(User plc)
-        {
-            _rep.Create(plc);
-        }
-
-        public void Update(User plc)
-        {
-            _rep.Update(plc);
-        }
-
-        public void Delete(int id)
-        {
-            _rep.Delete(id);
-        }
 
     }
 }

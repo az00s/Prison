@@ -26,7 +26,7 @@ namespace Prison.App.Data.Repositories.Impl
             _log = log;
         }
 
-        public IEnumerable<User> GetAllRecordsFromTable()
+        public IEnumerable<User> GetAllUsers()
         {
             List<User> list = new List<User>();
             SqlConnection conn = new SqlConnection(_connection);

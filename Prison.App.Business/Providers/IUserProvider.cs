@@ -5,7 +5,7 @@ namespace Prison.App.Business.Providers
 {
     public interface IUserProvider
     {
-        IEnumerable<User> GetAllRecordsFromTable();
+        IEnumerable<User> GetAllUsers();
 
         IEnumerable<string> GetAllLogins();
 
@@ -18,10 +18,5 @@ namespace Prison.App.Business.Providers
 
         User GetUserByID(int id);
 
-        void Create(User plc);
-
-        void Update(User plc);
-
-        void Delete(int id);
     }
 }

@@ -5,7 +5,7 @@ namespace Prison.App.Data.Repositories
 {
     public interface IRoleRepository
     {
-        IEnumerable<Role> GetAllRecordsFromTable();
+        IEnumerable<Role> GetAllRoles();
         void Create(Role emp);
         void Update(Role emp);
         void Delete(int id);

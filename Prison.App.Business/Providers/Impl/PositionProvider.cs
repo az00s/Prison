@@ -13,24 +13,20 @@ namespace Prison.App.Business.Providers.Impl
 {
     public class PositionProvider : IPositionProvider
     {
-        private ILogger _log;
-
         private IPositionRepository _rep;
 
         private ICachingService _cacheService;
 
-        public PositionProvider(ILogger log, IPositionRepository rep, ICachingService cacheService)
+        public PositionProvider(IPositionRepository rep, ICachingService cacheService)
         {
-            ArgumentHelper.ThrowExceptionIfNull(log, "ILogger");
             ArgumentHelper.ThrowExceptionIfNull(rep, "IPositionRepository");
             ArgumentHelper.ThrowExceptionIfNull(cacheService, "ICachingService");
 
             _cacheService = cacheService;
-            _log = log;
             _rep = rep;
         }
 
-        public IEnumerable<Position> GetAllRecordsFromTable()
+        public IEnumerable<Position> GetAllPositions()
         {
             //get data from cache
             var result = _cacheService.Get<IEnumerable<Position>>("AllPositionList");
@@ -38,7 +34,7 @@ namespace Prison.App.Business.Providers.Impl
             if (result == null)
             {
                 //get data from dataBase if cache hasn't this data
-                result = _rep.GetAllRecordsFromTable();
+                result = _rep.GetAllPositions();
 
                 if (result == null)
                 {

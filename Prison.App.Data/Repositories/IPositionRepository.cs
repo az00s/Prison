@@ -6,6 +6,6 @@ namespace Prison.App.Data.Repositories
     public interface IPositionRepository
     {
         
-            IEnumerable<Position> GetAllRecordsFromTable();
+            IEnumerable<Position> GetAllPositions();
     }
 }

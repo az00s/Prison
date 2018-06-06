@@ -8,22 +8,18 @@ namespace Prison.App.Business.Providers.Impl
 {
     public class RoleProvider:IRoleProvider
     {
-        private ILogger _log;
-
         private IRoleRepository _rep;
 
-        public RoleProvider(ILogger log, IRoleRepository rep)
+        public RoleProvider(IRoleRepository rep)
         {
-            ArgumentHelper.ThrowExceptionIfNull(log, "ILogger");
             ArgumentHelper.ThrowExceptionIfNull(rep, "IRoleRepository");
 
-            _log = log;
             _rep = rep;
         }
 
-        public IEnumerable<Role> GetAllRecordsFromTable()
+        public IEnumerable<Role> GetAllRoles()
         {
-            return _rep.GetAllRecordsFromTable();
+            return _rep.GetAllRoles();
         }
 
         public Role GetRoleByID(int id)
@@ -31,17 +27,5 @@ namespace Prison.App.Business.Providers.Impl
             return _rep.GetRoleByID(id);
         }
 
-        public void Create(Role emp)
-        {
-            _rep.Create(emp);
-        }
-        public void Update(Role emp)
-        {
-            _rep.Update(emp);
-        }
-        public void Delete(int id)
-        {
-            _rep.Delete(id);
-        }
     }
 }

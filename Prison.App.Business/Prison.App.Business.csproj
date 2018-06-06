@@ -76,20 +76,30 @@
     <Compile Include="Providers\Impl\AdvertismentProvider.cs" />
     <Compile Include="Providers\Impl\DetaineeProvider.cs" />
     <Compile Include="Providers\Impl\EmployeeProvider.cs" />
-    <Compile Include="Providers\Impl\PlaceOfStayProvider.cs" />
+    <Compile Include="Providers\Impl\PlaceProvider.cs" />
     <Compile Include="Providers\Impl\PositionProvider.cs" />
     <Compile Include="Providers\Impl\RoleProvider.cs" />
     <Compile Include="Providers\Impl\UserProvider.cs" />
-    <Compile Include="Providers\IPlaceOfStayProvider.cs" />
+    <Compile Include="Providers\IPlaceProvider.cs" />
     <Compile Include="Providers\IPositionProvider.cs" />
     <Compile Include="Providers\IRoleProvider.cs" />
     <Compile Include="Providers\IUserProvider.cs" />
     <Compile Include="Registers\BusinessRegistry.cs" />
     <Compile Include="Services\ICachingService.cs" />
+    <Compile Include="Services\IDetaineeService.cs" />
+    <Compile Include="Services\IEmployeeService.cs" />
     <Compile Include="Services\ILogInService.cs" />
+    <Compile Include="Services\Impl\DetaineeService.cs" />
+    <Compile Include="Services\Impl\EmployeeService.cs" />
     <Compile Include="Services\Impl\LogInService.cs" />
     <Compile Include="Models\UserPrincipal.cs" />
+    <Compile Include="Services\Impl\PlaceService.cs" />
+    <Compile Include="Services\Impl\RoleService.cs" />
+    <Compile Include="Services\Impl\UserService.cs" />
     <Compile Include="Services\Impl\СachingService.cs" />
+    <Compile Include="Services\IPlaceService.cs" />
+    <Compile Include="Services\IRoleService.cs" />
+    <Compile Include="Services\IUserService.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

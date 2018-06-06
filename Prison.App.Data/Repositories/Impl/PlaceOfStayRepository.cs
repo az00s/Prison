@@ -23,7 +23,7 @@ namespace Prison.App.Data.Repositories
             _log = log;
         }
 
-        public IEnumerable<PlaceOfStay> GetAllRecordsFromTable()
+        public IEnumerable<PlaceOfStay> GetAllPlaces()
         {
             List<PlaceOfStay> list = new List<PlaceOfStay>();
 
@@ -83,9 +83,7 @@ namespace Prison.App.Data.Repositories
             return list;
         }
 
-        
-
-        public PlaceOfStay GetPlaceOfStayByID(int id)
+        public PlaceOfStay GetPlaceByID(int id)
         {
             PlaceOfStay place = null;
 

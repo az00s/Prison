@@ -27,7 +27,7 @@ namespace Prison.App.Data.Repositories.Impl
                 _log = log;
             }
 
-            public IEnumerable<Position> GetAllRecordsFromTable()
+            public IEnumerable<Position> GetAllPositions()
             {
                 List<Position> list = new List<Position>();
                 SqlConnection conn = new SqlConnection(_connection);

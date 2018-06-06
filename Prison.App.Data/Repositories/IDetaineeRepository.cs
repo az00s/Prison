@@ -6,10 +6,10 @@ namespace Prison.App.Data.Repositories
 {
     public interface IDetaineeRepository
     {
-        IEnumerable<Detainee> GetAllRecordsFromTable();
+        IEnumerable<Detainee> GetAllDetainees();
         Detainee GetDetaineeByID(int id);
         IEnumerable<Detainee> GetDetaineesByDate(DateTime date);
-        IEnumerable<MaritalStatus> GetAllMaritalStatusesFromTable();
+        IEnumerable<MaritalStatus> GetAllMaritalStatuses();
         void Create(Detainee dtn);
         void Update(Detainee dtn);
         void Delete(int id);

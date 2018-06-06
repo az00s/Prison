@@ -10,37 +10,27 @@ namespace Prison.App.Business.Providers.Impl
 {
     public class DetaineeProvider: IDetaineeProvider
     {
-        private ILogger _log;
-
         private IDetaineeRepository _rep;
 
         private ICachingService _cacheService;
 
 
-        public DetaineeProvider(ILogger log, IDetaineeRepository rep,ICachingService cacheService)
+        public DetaineeProvider(IDetaineeRepository rep,ICachingService cacheService)
         {
-            ArgumentHelper.ThrowExceptionIfNull(log, "ILogger");
             ArgumentHelper.ThrowExceptionIfNull(rep, "IDetaineeRepository");
             ArgumentHelper.ThrowExceptionIfNull(cacheService, "ICachingService");
-            _log = log;
             _rep = rep;
             _cacheService = cacheService;
         }
 
-        public IEnumerable<Detainee> GetAllRecordsFromTable()
-        {
-            IEnumerable<Detainee> result;
-
-            if (_cacheService.Contains("AllDetaineeList"))
-            {
-                //get data from cache
-                result = _cacheService.Get<IEnumerable<Detainee>>("AllDetaineeList");
-            }
-
-            else
+        public IEnumerable<Detainee> GetAllDetainees()
+        {           
+            var  result = _cacheService.Get<IEnumerable<Detainee>>("AllDetaineeList");
+            
+            if(result==null)
             {
                 //get data from dataBase if cache hasn't this data
-                result = _rep.GetAllRecordsFromTable();
+                result = _rep.GetAllDetainees();
 
                 if (result == null)
                 {
@@ -60,15 +50,11 @@ namespace Prison.App.Business.Providers.Impl
 
             if (ArgumentHelper.IsValidID(id))
             {
-                Detainee result;
+                //get data from cache
+                var  result = _cacheService.Get<Detainee>($"Detainee{id}");
+                
 
-                if (_cacheService.Contains($"Detainee{id}"))
-                {
-                    //get data from cache
-                    result = _cacheService.Get<Detainee>($"Detainee{id}");
-                }
-
-                else
+                if(result==null)
                 {
                     //get data from dataBase if cache hasn't this data
                     result = _rep.GetDetaineeByID(id);
@@ -79,7 +65,7 @@ namespace Prison.App.Business.Providers.Impl
                     }
 
                     //put data into cache
-                    else _cacheService.Add($"Detainee{id}", result, 300);
+                    else _cacheService.Add($"Detainee{id}", result, 60);
                 }
 
                 return result;
@@ -94,15 +80,10 @@ namespace Prison.App.Business.Providers.Impl
         {
             if (ArgumentHelper.IsValidDate(date))
             {
-                IEnumerable<Detainee> result;
+                //get data from cache
+                var result = _cacheService.Get<IEnumerable<Detainee>>($"DetaineesBy{date}");
 
-                if (_cacheService.Contains($"DetaineesBy{date}"))
-                {
-                    //get data from cache
-                    result = _cacheService.Get<IEnumerable<Detainee>>($"DetaineesBy{date}");
-                }
-
-                else
+                if(result==null)
                 {
                     //get data from dataBase if cache hasn't this data
                     result = _rep.GetDetaineesByDate(date);
@@ -125,20 +106,15 @@ namespace Prison.App.Business.Providers.Impl
             }
         }
 
-        public IEnumerable<MaritalStatus> GetAllMaritalStatusesFromTable()
+        public IEnumerable<MaritalStatus> GetAllMaritalStatuses()
         {
-            IEnumerable<MaritalStatus> result;
+            //get data from cache
+            var result = _cacheService.Get<IEnumerable<MaritalStatus>>("AllMaritalStatusList");
 
-            if (_cacheService.Contains("AllMaritalStatusList"))
-            {
-                //get data from cache
-                result = _cacheService.Get<IEnumerable<MaritalStatus>>("AllMaritalStatusList");
-            }
-
-            else
+            if(result==null)
             {
                 //get data from dataBase if cache hasn't this data
-                result = _rep.GetAllMaritalStatusesFromTable();
+                result = _rep.GetAllMaritalStatuses();
 
                 if (result == null)
                 {
@@ -151,40 +127,6 @@ namespace Prison.App.Business.Providers.Impl
 
             return result;
 
-        }
-        public void Create(Detainee dtn)
-        {
-            _rep.Create(dtn);
-        }
-
-        public void Update(Detainee dtn)
-        {
-            _rep.Update(dtn);
-
-            //get data from cache
-
-            if (_cacheService.Contains($"Detainee{dtn.DetaineeID}"))
-            {
-                _cacheService.Update($"Detainee{dtn.DetaineeID}", dtn, 300);
-            }
-
-            else //put data into cache
-                _cacheService.Add($"Detainee{dtn.DetaineeID}", dtn, 300);
-        }
-
-        public void Delete(int id)
-        {
-            if (ArgumentHelper.IsValidID(id))
-            {
-                _rep.Delete(id);
-
-                _cacheService.Delete($"Detainee{id}");
-
-            }
-            else
-            {
-                throw new ArgumentException($"Идентификатор задержанного указан неверно.Пожалуйста укажите значение от 0 до {int.MaxValue}");
-            }
         }
 
         public IEnumerable<Detainee> GetDetaineesByParams(string DetentionDate=null, string FirstName = null, string LastName = null, string MiddleName = null, string ResidenceAddress = null)

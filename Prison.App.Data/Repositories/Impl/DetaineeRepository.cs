@@ -165,7 +165,7 @@ namespace Prison.App.Data.Repositories
             return list;
         }
 
-        public IEnumerable<Detainee> GetAllRecordsFromTable()
+        public IEnumerable<Detainee> GetAllDetainees()
         {
             List<Detainee> list = new List<Detainee>();
 
@@ -199,7 +199,7 @@ namespace Prison.App.Data.Repositories
                         ImagePath = row["ImagePath"].ToString(),
                         ResidenceAddress = row["ResidenceAddress"].ToString(),
                         AdditionalData = row["AdditionalData"].ToString(),
-                        Detentions = FromDataTableToDetentionList(DetentionTable, (int)row["DetaineeID"])
+                        Detentions = ToDetentionList(DetentionTable, (int)row["DetaineeID"])
 
                     });
                 }
@@ -308,7 +308,7 @@ namespace Prison.App.Data.Repositories
             return list;
         }
 
-        public IEnumerable<MaritalStatus> GetAllMaritalStatusesFromTable()
+        public IEnumerable<MaritalStatus> GetAllMaritalStatuses()
         {
             List<MaritalStatus> list = new List<MaritalStatus>();
 
@@ -600,7 +600,7 @@ namespace Prison.App.Data.Repositories
 
         }
 
-        private IEnumerable<Detention> FromDataTableToDetentionList(DataTable table,int id)
+        private IEnumerable<Detention> ToDetentionList(DataTable table,int id)
         {
             List <Detention> resultList= new List<Detention>();
             var rowCollection=table.AsEnumerable().Where(dr => dr.Field<int>("DetaineeID") == id);

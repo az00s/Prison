@@ -23,7 +23,7 @@ namespace Prison.App.Data.Repositories.Impl
             _log = log;
         }
 
-        public IEnumerable<Role> GetAllRecordsFromTable()
+        public IEnumerable<Role> GetAllRoles()
         {
             List<Role> list = new List<Role>();
             SqlConnection conn = new SqlConnection(_connection);

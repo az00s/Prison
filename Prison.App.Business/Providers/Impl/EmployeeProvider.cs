@@ -10,36 +10,27 @@ namespace Prison.App.Business.Providers.Impl
 {
     public class EmployeeProvider:IEmployeeProvider
     {
-        private ILogger _log;
-
         private IEmployeeRepository _rep;
 
         private ICachingService _cacheService;
 
-        public EmployeeProvider(ILogger log,IEmployeeRepository rep, ICachingService cacheService)
+        public EmployeeProvider(IEmployeeRepository rep, ICachingService cacheService)
         {
-            ArgumentHelper.ThrowExceptionIfNull(log, "ILogger");
             ArgumentHelper.ThrowExceptionIfNull(rep, "IEmployeeRepository");
             ArgumentHelper.ThrowExceptionIfNull(cacheService, "ICachingService");
-            _log = log;
             _rep = rep;
             _cacheService = cacheService;
         }
 
-        public IEnumerable<Employee> GetAllRecordsFromTable()
+        public IEnumerable<Employee> GetAllEmployees()
         {
-            IEnumerable<Employee> result;
+            //get data from cache
+            var  result = _cacheService.Get<IEnumerable<Employee>>("AllEmployeeList");
 
-            if (_cacheService.Contains("AllEmployeeList"))
-            {
-                //get data from cache
-                result = _cacheService.Get<IEnumerable<Employee>>("AllEmployeeList");
-            }
-
-            else
+            if(result==null)
             {
                 //get data from dataBase if cache hasn't this data
-                result = _rep.GetAllRecordsFromTable();
+                result = _rep.GetAllEmployees();
 
                 if (result == null)
                 {
@@ -57,15 +48,10 @@ namespace Prison.App.Business.Providers.Impl
         {
             if (ArgumentHelper.IsValidID(id))
             {
-                Employee result;
-
-                if (_cacheService.Contains($"Employee{id}"))
-                {
                     //get data from cache
-                    result = _cacheService.Get<Employee>($"Employee{id}");
-                }
+                var result = _cacheService.Get<Employee>($"Employee{id}");
 
-                else
+                if (result == null)
                 {
                     //get data from dataBase if cache hasn't this data
                     result = _rep.GetEmployeeByID(id);
@@ -87,39 +73,5 @@ namespace Prison.App.Business.Providers.Impl
             }
         }
 
-        public void Create(Employee emp)
-        {
-            _rep.Create(emp);
-        }
-
-        public void Update(Employee emp)
-        {
-            _rep.Update(emp);
-
-            //get data from cache
-
-            if (_cacheService.Contains($"Employee{emp.EmployeeID}"))
-            {
-                _cacheService.Update($"Employee{emp.EmployeeID}", emp, 300);
-            }
-
-            else //put data into cache
-                _cacheService.Add($"Employee{emp.EmployeeID}", emp, 300); 
-        }
-
-        public void Delete(int id)
-        {
-            if (ArgumentHelper.IsValidID(id))
-            {
-                _rep.Delete(id);
-
-                _cacheService.Delete($"Employee{id}");
-
-            }
-            else
-            {
-                throw new ArgumentException($"Идентификатор сотрудника указан неверно.Пожалуйста укажите значение от 0 до {int.MaxValue}");
-            }
-        }
     }
 }

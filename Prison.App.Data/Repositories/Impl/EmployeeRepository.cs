@@ -23,7 +23,7 @@ namespace Prison.App.Data.Repositories
             _log = log;
         }
 
-        public IEnumerable<Employee> GetAllRecordsFromTable()
+        public IEnumerable<Employee> GetAllEmployees()
         {
             List<Employee> list = new List<Employee>();
             SqlConnection conn = new SqlConnection(_connection);
@@ -88,10 +88,6 @@ namespace Prison.App.Data.Repositories
 
             return list;
         }
-
-
-
-
 
         public Employee GetEmployeeByID(int id)
         {
