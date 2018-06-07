@@ -1036,3 +1036,34 @@ System.Web.HttpException (0x80004005):  онтроллер дл€ пути "/no" не найден или н
    в System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
    в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
    в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-07 16:31:34,901 ERROR PrisonLogger - ѕрослушивание на http://localhost:64585/Service.svc не выполн€ла ни одна конечна€ точка, котора€ могла бы прин€ть сообщение. —реди прочих причин это могло быть вызвано неправильным адресом или действием SOAP. ѕодробнее см. в описании InnerException (если имеетс€).
+2018-06-07 16:31:52,825 ERROR PrisonLogger - —войство ConnectionString не инициализировано.
+2018-06-07 16:31:52,908 ERROR PrisonLogger - «адержанный с идентификатором: 1 не найден!
+System.NullReferenceException: «адержанный с идентификатором: 1 не найден!
+   в Prison.App.Business.Providers.Impl.DetaineeProvider.GetDetaineeByID(Int32 id) в C:\Users\ онстантин\source\repos\Prison\Prison.App.Business\Providers\Impl\DetaineeProvider.cs:строка 78
+   в Prison.App.Web.Controllers.DetaineeController.Details(Int32 id) в C:\Users\ онстантин\source\repos\Prison\Prison.App.Web\Controllers\DetaineeController.cs:строка 47
+   в lambda_method(Closure , ControllerBase , Object[] )
+   в System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   в System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.<BeginInvokeSynchronousActionMethod>b__39(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3d()
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.<BeginExecuteCore>b__1d(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   в System.Web.Mvc.MvcHandler.<BeginProcessRequest>b__5(IAsyncResult asyncResult, ProcessRequestState innerState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   в System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-07 16:34:46,348 ERROR PrisonLogger - ѕрослушивание на http://localhost:64585/Service.svc не выполн€ла ни одна конечна€ точка, котора€ могла бы прин€ть сообщение. —реди прочих причин это могло быть вызвано неправильным адресом или действием SOAP. ѕодробнее см. в описании InnerException (если имеетс€).
+2018-06-07 16:45:10,795 ERROR PrisonLogger - ѕрослушивание на http://localhost:64585/Service.svc не выполн€ла ни одна конечна€ точка, котора€ могла бы прин€ть сообщение. —реди прочих причин это могло быть вызвано неправильным адресом или действием SOAP. ѕодробнее см. в описании InnerException (если имеетс€).

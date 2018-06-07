@@ -11,15 +11,17 @@ namespace Prison.App.Data.Repositories
 {
     public class DetaineeRepository: IDetaineeRepository
     {
-        private string _connection;
-
         private ILogger _log;
 
-        public DetaineeRepository(Logger log)
-        {
-            _connection = ConnectionStringHelper.GetConnectionStringFromConfig();
-            ArgumentHelper.ThrowExceptionIfNull(log, "ILogger");
+        private string _connection=null;
+        IDetaineeDataContext _detaineeContext;
 
+        public DetaineeRepository(Logger log, IDetaineeDataContext detaineeContext)
+        {
+            ArgumentHelper.ThrowExceptionIfNull(log, "ILogger");
+            ArgumentHelper.ThrowExceptionIfNull(detaineeContext, "IDetaineeDataContext");
+
+            _detaineeContext = detaineeContext;
             _log = log;
         }
 
@@ -96,7 +98,7 @@ namespace Prison.App.Data.Repositories
         }
 
 
-        IEnumerable<Detention> GetDetentionsByDetaineeID(int id)
+        private IEnumerable<Detention> GetDetentionsByDetaineeID(int id)
         {
             List<Detention> list = new List<Detention>();
             SqlConnection conn = new SqlConnection(_connection);
@@ -167,76 +169,7 @@ namespace Prison.App.Data.Repositories
 
         public IEnumerable<Detainee> GetAllRecordsFromTable()
         {
-            List<Detainee> list = new List<Detainee>();
-
-            SqlConnection conn = new SqlConnection(_connection);
-            SqlCommand command = new SqlCommand("SelectAllDetainees", conn) { CommandType=CommandType.StoredProcedure};
-            SqlDataAdapter adapter = new SqlDataAdapter(command);
-            DataSet dataset = new DataSet();
-            
-            try
-            {
-                if (adapter != null)
-                {
-                    conn.Open();
-                    adapter.Fill(dataset);
-                }
-
-                var DetaineeTable = dataset.Tables[0];
-                var DetentionTable = dataset.Tables[1];
-
-                foreach (var row in DetaineeTable.AsEnumerable())
-                {
-                    list.Add(new Detainee
-                    {
-                        DetaineeID = (int)row["DetaineeID"],
-                        FirstName = row["FirstName"].ToString(),
-                        LastName = row["LastName"].ToString(),
-                        MiddleName = row["MiddleName"].ToString(),
-                        BirstDate = (DateTime)row["BirstDate"],
-                        MaritalStatusID = (int)row["MaritalStatusID"],
-                        WorkPlace = row["WorkPlace"].ToString(),
-                        ImagePath = row["ImagePath"].ToString(),
-                        ResidenceAddress = row["ResidenceAddress"].ToString(),
-                        AdditionalData = row["AdditionalData"].ToString(),
-                        Detentions = FromDataTableToDetentionList(DetentionTable, (int)row["DetaineeID"])
-
-                    });
-                }
-
-                conn.Close();
-            }
-            catch (InvalidOperationException ex)
-            {
-                _log.Error(ex.Message);
-                list = null;
-            }
-
-            catch (SqlException ex)
-            {
-                _log.Error(ex.Message);
-                list = null;
-            }
-
-            catch (InvalidCastException ex)
-            {
-                _log.Error(ex.Message);
-                list = null;
-            }
-            finally
-            {
-                if (conn != null)
-                {
-                    conn.Dispose();
-                }
-
-                if (adapter != null)
-                {
-                    adapter.Dispose();
-                }
-            }
-
-            return list;
+           return _detaineeContext.GetAll();
         }
 
         public IEnumerable<Detainee> GetDetaineesByDate(DateTime date)
@@ -600,7 +533,7 @@ namespace Prison.App.Data.Repositories
 
         }
 
-        private IEnumerable<Detention> FromDataTableToDetentionList(DataTable table,int id)
+        private IEnumerable<Detention> ToDetentionList(DataTable table,int id)
         {
             List <Detention> resultList= new List<Detention>();
             var rowCollection=table.AsEnumerable().Where(dr => dr.Field<int>("DetaineeID") == id);

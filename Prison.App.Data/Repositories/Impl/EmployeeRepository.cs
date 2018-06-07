@@ -17,7 +17,7 @@ namespace Prison.App.Data.Repositories
         public EmployeeRepository(ILogger log)
         {
             
-            _connection = ConnectionStringHelper.GetConnectionStringFromConfig();
+            _connection = ConnectionStringHelper.GetConnectionString();
             ArgumentHelper.ThrowExceptionIfNull(log, "ILogger");
 
             _log = log;

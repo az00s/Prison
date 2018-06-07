@@ -21,7 +21,7 @@ namespace Prison.App.Data.Repositories.Impl
             public PositionRepository(ILogger log)
             {
 
-                _connection = ConnectionStringHelper.GetConnectionStringFromConfig();
+                _connection = ConnectionStringHelper.GetConnectionString();
                 ArgumentHelper.ThrowExceptionIfNull(log, "ILogger");
 
                 _log = log;

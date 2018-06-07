@@ -17,7 +17,7 @@ namespace Prison.App.Data.Repositories
 
         public PlaceOfStayRepository(Logger log)
         {
-            _connection = ConnectionStringHelper.GetConnectionStringFromConfig();
+            _connection = ConnectionStringHelper.GetConnectionString();
             ArgumentHelper.ThrowExceptionIfNull(log, "ILogger");
 
             _log = log;

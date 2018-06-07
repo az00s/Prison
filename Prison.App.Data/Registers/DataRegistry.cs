@@ -1,4 +1,5 @@
-﻿using Prison.App.Common.Interfaces;
+﻿using Prison.App.Common.Entities;
+using Prison.App.Common.Interfaces;
 using Prison.App.Common.Loggers;
 using Prison.App.Data.Interfaces;
 using Prison.App.Data.Repositories;
@@ -20,6 +21,9 @@ namespace Prison.App.Data.Registers
             For<IUserRepository>().Use<UserRepository>();
             For<IAdService>().Use<AdService>();
             ForSingletonOf<ILogger>().Use<Logger>();
+            For<IDetaineeDataContext>().Use<DetaineeDataContext>();
+            For(typeof(IDataContext<>)).Use(typeof(DataContext<>));
+
         }
     }
 }

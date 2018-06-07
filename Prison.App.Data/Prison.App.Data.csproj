@@ -68,6 +68,10 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
     <Compile Include="Registers\DataRegistry.cs" />
+    <Compile Include="Repositories\IDataContext.cs" />
+    <Compile Include="Repositories\IDetaineeDataContext.cs" />
+    <Compile Include="Repositories\Impl\DataContext.cs" />
+    <Compile Include="Repositories\Impl\DetaineeDataContext.cs" />
     <Compile Include="Repositories\Impl\DetaineeRepository.cs" />
     <Compile Include="Repositories\Impl\EmployeeRepository.cs" />
     <Compile Include="Repositories\IDetaineeRepository.cs" />
