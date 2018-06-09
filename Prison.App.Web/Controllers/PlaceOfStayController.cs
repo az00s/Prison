@@ -6,30 +6,34 @@ using System.Web.Mvc;
 using Prison.App.Web.Attributes;
 using Prison.App.Web.Models;
 using System.Collections.Generic;
+using Prison.App.Business.Services;
 
 namespace Prison.App.Web.Controllers
 {
 
-
     public class PlaceOfStayController : Controller
     {
-        private ILogger log;
+        private ILogger _log;
 
-        private IPlaceOfStayProvider db;
+        private IPlaceProvider _placeProvider;
 
-        public PlaceOfStayController(IPlaceOfStayProvider rep, ILogger logger)
+        private IPlaceService _placeService;
+
+        public PlaceOfStayController(IPlaceProvider placeProvider, ILogger log, IPlaceService placeService)
         {
-            ArgumentHelper.ThrowExceptionIfNull(rep, "IPlaceOfStayProvider");
-            ArgumentHelper.ThrowExceptionIfNull(logger, "ILogger");
+            ArgumentHelper.ThrowExceptionIfNull(placeProvider, "IPlaceProvider");
+            ArgumentHelper.ThrowExceptionIfNull(placeService, "IPlaceService");
+            ArgumentHelper.ThrowExceptionIfNull(log, "ILogger");
 
-            db = rep;
-            log = logger;
+            _placeService = placeService;
+            _placeProvider = placeProvider;
+            _log = log;
         }
 
         [User]
         public ActionResult Index()
         {
-            var Places = db.GetAllRecordsFromTable();
+            var Places = _placeProvider.GetAllPlaces();
             var ViewModel = ToPlaceOfStayIndexViewModel(Places);
             return View(ViewModel);
         }
@@ -37,7 +41,7 @@ namespace Prison.App.Web.Controllers
         [Editor]
         public ActionResult Details(int id)
         {
-            var place = db.GetPlaceOfStayByID(id);
+            var place = _placeProvider.GetPlaceByID(id);
 
             return View(place);
         }
@@ -59,7 +63,7 @@ namespace Prison.App.Web.Controllers
 
             var place = ToPlaceOfStay(model);
 
-            db.Create(place);
+            _placeService.Create(place);
 
             return RedirectToAction("Index");
         }
@@ -67,7 +71,7 @@ namespace Prison.App.Web.Controllers
         [Editor]
         public ActionResult Edit(int id)
         {
-            var place = db.GetPlaceOfStayByID(id);
+            var place = _placeProvider.GetPlaceByID(id);
             var ViewModel = ToPlaceOfStayViewModel(place);
             return View(ViewModel);
         }
@@ -81,7 +85,7 @@ namespace Prison.App.Web.Controllers
                 return View(model);
             }
             var place = ToPlaceOfStay(model);
-            db.Update(place);
+            _placeService.Update(place);
 
             return RedirectToAction("Index");
         }
@@ -89,7 +93,7 @@ namespace Prison.App.Web.Controllers
         [Editor]
         public ActionResult Delete(int id)
         {
-            var place = db.GetPlaceOfStayByID(id);
+            var place = _placeProvider.GetPlaceByID(id);
 
             return View(place);
         }
@@ -98,7 +102,7 @@ namespace Prison.App.Web.Controllers
         [HttpPost]
         public ActionResult DeleteFromDb(int id)
         {
-            db.Delete(id);
+            _placeService.Delete(id);
 
             return RedirectToAction("Index");
         }

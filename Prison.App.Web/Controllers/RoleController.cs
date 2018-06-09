@@ -4,6 +4,7 @@ using Prison.App.Business.Providers;
 using Prison.App.Common.Interfaces;
 using Prison.App.Common.Helpers;
 using Prison.App.Common.Entities;
+using Prison.App.Business.Services;
 
 namespace Prison.App.Web.Controllers
 {
@@ -12,21 +13,24 @@ namespace Prison.App.Web.Controllers
     {
         private ILogger _log;
 
-        private IRoleProvider _roles;
+        private IRoleProvider _roleProvider;
 
+        private IRoleService _roleService;
 
-        public RoleController(ILogger logger, IRoleProvider roles)
+        public RoleController(ILogger log, IRoleProvider roleProvider, IRoleService roleService)
         {
-            ArgumentHelper.ThrowExceptionIfNull(roles, "IRoleProvider");
-            ArgumentHelper.ThrowExceptionIfNull(logger, "ILogger");
+            ArgumentHelper.ThrowExceptionIfNull(roleProvider, "IRoleProvider");
+            ArgumentHelper.ThrowExceptionIfNull(roleService, "IRoleService");
+            ArgumentHelper.ThrowExceptionIfNull(log, "ILogger");
 
-            _roles = roles;
-            _log = logger;
+            _roleService = roleService;
+            _roleProvider = roleProvider;
+            _log = log;
         }
 
         public ActionResult Index()
         {
-            var roles = _roles.GetAllRoles();
+            var roles = _roleProvider.GetAllRoles();
 
 
             if (roles == null)
@@ -48,7 +52,7 @@ namespace Prison.App.Web.Controllers
             if (ModelState.IsValid)
             {
 
-                _roles.Create(model);
+                _roleService.Create(model);
             }
 
             return RedirectToAction("Index");
@@ -58,7 +62,7 @@ namespace Prison.App.Web.Controllers
         {
             if (ArgumentHelper.IsValidID(id))
             {
-                var role = _roles.GetRoleByID(id);
+                var role = _roleProvider.GetRoleByID(id);
 
                 return View(role);
             }
@@ -82,7 +86,7 @@ namespace Prison.App.Web.Controllers
         {
             if (ModelState.IsValid)
             {
-                _roles.Update(model);
+                _roleService.Update(model);
             }
 
             return RedirectToAction("Index");
@@ -93,7 +97,7 @@ namespace Prison.App.Web.Controllers
             if (ArgumentHelper.IsValidID(id))
             {
 
-                var role = _roles.GetRoleByID(id);
+                var role = _roleProvider.GetRoleByID(id);
 
                 return View(role);
             }
@@ -117,7 +121,7 @@ namespace Prison.App.Web.Controllers
         {
             if (ArgumentHelper.IsValidID(id))
             {
-                _roles.Delete(id);
+                _roleService.Delete(id);
 
                 return RedirectToAction("Index");
             }

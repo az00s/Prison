@@ -18,6 +18,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prison.App.Dependency", "Pr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prison.Service", "Prison.Service\Prison.Service.csproj", "{AAA0E36B-1D25-4567-821C-E0A916079C32}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prison.App.Business.Tests", "Prison.App.Business.Tests\Prison.App.Business.Tests.csproj", "{8917D783-33D0-4452-93CD-37602948CEB7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prison.App.Data.Tests", "Prison.App.Data.Tests\Prison.App.Data.Tests.csproj", "{1B0B38B8-8D73-4934-89CE-4E3F7AE152ED}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -48,6 +52,14 @@ Global
 		{AAA0E36B-1D25-4567-821C-E0A916079C32}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AAA0E36B-1D25-4567-821C-E0A916079C32}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AAA0E36B-1D25-4567-821C-E0A916079C32}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8917D783-33D0-4452-93CD-37602948CEB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8917D783-33D0-4452-93CD-37602948CEB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8917D783-33D0-4452-93CD-37602948CEB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8917D783-33D0-4452-93CD-37602948CEB7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B0B38B8-8D73-4934-89CE-4E3F7AE152ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B0B38B8-8D73-4934-89CE-4E3F7AE152ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B0B38B8-8D73-4934-89CE-4E3F7AE152ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B0B38B8-8D73-4934-89CE-4E3F7AE152ED}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

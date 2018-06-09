@@ -18,10 +18,5 @@ namespace Prison.App.Business.Providers
 
         User GetUserByID(int id);
 
-        void Create(User plc);
-
-        void Update(User plc);
-
-        void Delete(int id);
     }
 }

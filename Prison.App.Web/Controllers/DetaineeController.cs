@@ -10,31 +10,36 @@ using System.Web.Mvc;
 using Prison.App.Web.Attributes;
 using System.Linq;
 using System.Collections.Generic;
+using Prison.App.Business.Services;
 
 namespace Prison.App.Web.Controllers
 {
     
     public class DetaineeController : Controller
     {
-        private  ILogger log;
+        private  ILogger _log;
 
-        private IDetaineeProvider db;
+        private IDetaineeProvider _detaineeProvider;
 
-        public DetaineeController(IDetaineeProvider rep, ILogger logger)
+        private IDetaineeService _detaineeService;
+
+        public DetaineeController(IDetaineeProvider detaineeProvider, ILogger log, IDetaineeService detaineeService)
         {
 
-            ArgumentHelper.ThrowExceptionIfNull(rep, "IDetaineeProvider");
-            ArgumentHelper.ThrowExceptionIfNull(logger, "ILogger");
+            ArgumentHelper.ThrowExceptionIfNull(detaineeProvider, "IDetaineeProvider");
+            ArgumentHelper.ThrowExceptionIfNull(detaineeService, "IDetaineeService");
+            ArgumentHelper.ThrowExceptionIfNull(log, "ILogger");
 
-            db = rep;
-            log = logger;
+            _detaineeService = detaineeService;
+            _detaineeProvider = detaineeProvider;
+            _log = log;
         }
 
         
         [User]
         public ActionResult Index()
         {
-            var Detainees = db.GetAllRecordsFromTable();
+            var Detainees = _detaineeProvider.GetAllDetainees();
 
             var ViewModel = ToDetaineeIndexViewModel(Detainees);
 
@@ -44,7 +49,7 @@ namespace Prison.App.Web.Controllers
         [User]
         public ActionResult Details(int id)
         {
-            var Detainee = db.GetDetaineeByID(id);
+            var Detainee = _detaineeProvider.GetDetaineeByID(id);
 
             var ViewModel =ToDetaineeDetailsViewModel(Detainee);
 
@@ -55,7 +60,7 @@ namespace Prison.App.Web.Controllers
         [Editor]
         public ActionResult Create()
         {
-            var statuses = db.GetAllMaritalStatusesFromTable();
+            var statuses = _detaineeProvider.GetAllMaritalStatuses();
 
             var ViewModel = new DetaineeEditViewModel
             {
@@ -73,7 +78,7 @@ namespace Prison.App.Web.Controllers
             if (ModelState.IsValid)
             {
                 var Entity = ToDetainee(dtn);
-                db.Create(Entity);
+                _detaineeService.Create(Entity);
             }
 
             return RedirectToAction("Index");
@@ -82,7 +87,7 @@ namespace Prison.App.Web.Controllers
         [Editor]
         public ActionResult Edit(int id)
         {
-            var Detainee = db.GetDetaineeByID(id);
+            var Detainee = _detaineeProvider.GetDetaineeByID(id);
 
             var ViewModel = ToDetaineeEditViewModel(Detainee);
 
@@ -105,7 +110,7 @@ namespace Prison.App.Web.Controllers
 
                 var Entity = ToDetainee(dtn);
 
-                db.Update(Entity);
+                _detaineeService.Update(Entity);
             }
 
             return RedirectToAction("Index");
@@ -114,7 +119,7 @@ namespace Prison.App.Web.Controllers
         [Editor]
         public ActionResult Delete(int id)
         {
-            var Detainee = db.GetDetaineeByID(id);
+            var Detainee = _detaineeProvider.GetDetaineeByID(id);
             var ViewModel = ToDetaineeEditViewModel(Detainee);
             return View(ViewModel);
         }
@@ -123,7 +128,7 @@ namespace Prison.App.Web.Controllers
         [HttpPost]
         public ActionResult DeleteFromDb(int id)
         {
-            db.Delete(id);
+            _detaineeService.Delete(id);
 
             return RedirectToAction("Index");
         }
@@ -131,7 +136,7 @@ namespace Prison.App.Web.Controllers
         [User]
         public ActionResult GetDetaineeByDate(DateTime date)
         {
-            var Detainees = db.GetDetaineesByDate(date);
+            var Detainees = _detaineeProvider.GetDetaineesByDate(date);
             var ViewModel = ToDetaineeIndexViewModel(Detainees);
             return View("DetaineeList", ViewModel);
         }
@@ -151,7 +156,7 @@ namespace Prison.App.Web.Controllers
                 return View("ValidationError", model);
             }
 
-            var Detainees = db.GetDetaineesByParams(model.DetentionDate, model.FirstName, model.LastName, model.Middlename, model.ResidenceAddress);
+            var Detainees = _detaineeProvider.GetDetaineesByParams(model.DetentionDate, model.FirstName, model.LastName, model.Middlename, model.ResidenceAddress);
             
             var resultList = ToDetaineeIndexViewModel(Detainees);
             return View("DetaineeList", resultList);
@@ -161,7 +166,7 @@ namespace Prison.App.Web.Controllers
         #region ModelViewHelpers
         private DetaineeDetailsViewModel ToDetaineeDetailsViewModel(Detainee dtn)
         {
-            var statuses = db.GetAllMaritalStatusesFromTable();
+            var statuses = _detaineeProvider.GetAllMaritalStatuses();
 
             DetaineeDetailsViewModel Result = new DetaineeDetailsViewModel
             {
@@ -226,7 +231,7 @@ namespace Prison.App.Web.Controllers
 
         private DetaineeEditViewModel ToDetaineeEditViewModel(Detainee dtn)
         {
-            var statuses = db.GetAllMaritalStatusesFromTable();
+            var statuses = _detaineeProvider.GetAllMaritalStatuses();
 
             DetaineeEditViewModel Result = new DetaineeEditViewModel
             {

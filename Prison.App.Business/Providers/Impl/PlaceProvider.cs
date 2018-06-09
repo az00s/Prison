@@ -8,37 +8,27 @@ using System.Collections.Generic;
 
 namespace Prison.App.Business.Providers.Impl
 {
-    public class PlaceOfStayProvider:IPlaceOfStayProvider
+    public class PlaceProvider:IPlaceProvider
     {
-        private ILogger _log;
-
         private IPlaceOfStayRepository _rep;
 
         private ICachingService _cacheService;
 
-        public PlaceOfStayProvider(ILogger log, IPlaceOfStayRepository rep, ICachingService cacheService)
+        public PlaceProvider(IPlaceOfStayRepository rep, ICachingService cacheService)
         {
-            ArgumentHelper.ThrowExceptionIfNull(log, "ILogger");
             ArgumentHelper.ThrowExceptionIfNull(rep, "IPlaceOfStayRepository");
             ArgumentHelper.ThrowExceptionIfNull(cacheService, "ICachingService");
 
-            _log = log;
             _rep = rep;
             _cacheService = cacheService;
         }
 
-        public IEnumerable<PlaceOfStay> GetAllRecordsFromTable()
-        {
+        public IEnumerable<PlaceOfStay> GetAllPlaces()
+        {            
+            //get data from cache
+            var  result = _cacheService.Get<IEnumerable<PlaceOfStay>>("AllPlaceOfStayList");
 
-            IEnumerable<PlaceOfStay> result;
-
-            if (_cacheService.Contains("AllPlaceOfStayList"))
-            {
-                //get data from cache
-                result = _cacheService.Get<IEnumerable<PlaceOfStay>>("AllPlaceOfStayList");
-            }
-
-            else
+            if (result == null)
             {
                 //get data from dataBase if cache hasn't this data
                 result = _rep.GetAllPlaces();
@@ -56,20 +46,15 @@ namespace Prison.App.Business.Providers.Impl
 
         }
 
-        public PlaceOfStay GetPlaceOfStayByID(int id)
+        public PlaceOfStay GetPlaceByID(int id)
         {
 
             if (ArgumentHelper.IsValidID(id))
             {
-                PlaceOfStay result;
+                //get data from cache
+                var result = _cacheService.Get<PlaceOfStay>($"PlaceOfStay{id}");
 
-                if (_cacheService.Contains($"PlaceOfStay{id}"))
-                {
-                    //get data from cache
-                    result = _cacheService.Get<PlaceOfStay>($"PlaceOfStay{id}");
-                }
-
-                else
+                if (result == null)
                 {
                     //get data from dataBase if cache hasn't this data
                     result = _rep.GetPlaceByID(id);
@@ -92,37 +77,5 @@ namespace Prison.App.Business.Providers.Impl
             
         }
 
-        public void Create(PlaceOfStay plc)
-        {
-            _rep.Create(plc);
-        }
-
-        public void Update(PlaceOfStay plc)
-        {
-            _rep.Update(plc);
-
-            if (_cacheService.Contains($"PlaceOfStay{plc.PlaceID}"))
-            {
-                _cacheService.Update($"PlaceOfStay{plc.PlaceID}", plc, 300);
-            }
-
-            else //put data into cache
-                _cacheService.Add($"PlaceOfStay{plc.PlaceID}", plc, 300);
-        }
-
-        public void Delete(int id)
-        {
-            if (ArgumentHelper.IsValidID(id))
-            {
-                _rep.Delete(id);
-
-                _cacheService.Delete($"PlaceOfStay{id}");
-
-            }
-            else
-            {
-                throw new ArgumentException($"Идентификатор Места содержания указан неверно.Пожалуйста укажите значение от 0 до {int.MaxValue}");
-            }
-        }
     }
 }

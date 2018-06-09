@@ -7,6 +7,7 @@ using Prison.App.Common.Entities;
 using Prison.App.Common.Helpers;
 using Prison.App.Common.Interfaces;
 using Prison.App.Web.Models.User;
+using Prison.App.Business.Services;
 
 namespace Prison.App.Web.Controllers
 {
@@ -15,25 +16,29 @@ namespace Prison.App.Web.Controllers
     {
         private ILogger _log;
 
-        private IUserProvider _usr;
+        private IUserProvider _userProvider;
 
-        private IRoleProvider _roles;
+        private IUserService _userService;
+
+        private IRoleProvider _roleProvider;
 
 
-        public UserController(IUserProvider rep, ILogger logger, IRoleProvider roles)
+        public UserController(IUserProvider userProvider, ILogger log, IRoleProvider roleProvider, IUserService userService)
         {
-            ArgumentHelper.ThrowExceptionIfNull(roles, "IRoleProvider");
-            ArgumentHelper.ThrowExceptionIfNull(rep, "IUserProvider");
-            ArgumentHelper.ThrowExceptionIfNull(logger, "ILogger");
+            ArgumentHelper.ThrowExceptionIfNull(roleProvider, "IRoleProvider");
+            ArgumentHelper.ThrowExceptionIfNull(userProvider, "IUserProvider");
+            ArgumentHelper.ThrowExceptionIfNull(userService, "IUserService");
+            ArgumentHelper.ThrowExceptionIfNull(log, "ILogger");
 
-            _roles = roles;
-            _usr = rep;
-            _log = logger;
+            _roleProvider = roleProvider;
+            _userProvider = userProvider;
+            _userService = userService;
+            _log = log;
         }
 
         public ActionResult Index()
         {
-            var users = _usr.GetAllUsers();
+            var users = _userProvider.GetAllUsers();
 
             var ViewModelList = ToUserIndexViewModel(users);
 
@@ -47,8 +52,8 @@ namespace Prison.App.Web.Controllers
 
         public ActionResult Create()
         {
-            var Roles = _roles.GetAllRoles();
-            var EmployeeNames = _usr.GetUnoccupiedEmployeeNames();
+            var Roles = _roleProvider.GetAllRoles();
+            var EmployeeNames = _userProvider.GetUnoccupiedEmployeeNames();
 
             if (EmployeeNames == null)
             {
@@ -82,7 +87,7 @@ namespace Prison.App.Web.Controllers
             {
                 var user = ToUser(model);
 
-                _usr.Create(user);
+                _userService.Create(user);
             }
 
             return RedirectToAction("Index");
@@ -94,7 +99,7 @@ namespace Prison.App.Web.Controllers
         {
             if (ArgumentHelper.IsValidID(id))
             {
-                var User = _usr.GetUserByID(id);
+                var User = _userProvider.GetUserByID(id);
 
                 var ViewModel = ToUserEditViewModel(User);
 
@@ -115,7 +120,7 @@ namespace Prison.App.Web.Controllers
         {
             if (ArgumentHelper.IsValidID(id))
             {
-                var User = _usr.GetUserByID(id);
+                var User = _userProvider.GetUserByID(id);
 
                 var ViewModel = ToUserEditViewModel(User);
 
@@ -146,7 +151,7 @@ namespace Prison.App.Web.Controllers
             if (ModelState.IsValid)
             {
                 var user = ToUser(model);
-                _usr.Update(user);
+                _userService.Update(user);
             }
 
             return RedirectToAction("Index");
@@ -157,7 +162,7 @@ namespace Prison.App.Web.Controllers
             if (ArgumentHelper.IsValidID(id))
             {
 
-                var User = _usr.GetUserByID(id);
+                var User = _userProvider.GetUserByID(id);
 
                 var ViewModel = ToUserEditViewModel(User);
 
@@ -187,7 +192,7 @@ namespace Prison.App.Web.Controllers
         {
             if (ArgumentHelper.IsValidID(id))
             {
-                _usr.Delete(id);
+                _userService.Delete(id);
 
                 return RedirectToAction("Index");
             }
@@ -244,7 +249,7 @@ namespace Prison.App.Web.Controllers
                 Email = usr.Email,
                 Password = usr.Password,
                 Roles = usr.Roles,
-                AllRoles = _roles.GetAllRoles()
+                AllRoles = _roleProvider.GetAllRoles()
                 };
             
 

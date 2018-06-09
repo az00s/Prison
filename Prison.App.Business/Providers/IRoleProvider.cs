@@ -6,9 +6,6 @@ namespace Prison.App.Business.Providers
     public interface IRoleProvider
     {
         IEnumerable<Role> GetAllRoles();
-        void Create(Role emp);
-        void Update(Role emp);
-        void Delete(int id);
         Role GetRoleByID(int id);
     }
 }

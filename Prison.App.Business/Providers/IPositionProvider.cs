@@ -5,6 +5,6 @@ namespace Prison.App.Business.Providers
 {
     public interface IPositionProvider
     {
-        IEnumerable<Position> GetAllRecordsFromTable();
+        IEnumerable<Position> GetAllPositions();
     }
 }
