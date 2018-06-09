@@ -1,0 +1,31 @@
+﻿@model Prison.App.Web.Models.StatusViewModel
+
+@{
+    ViewBag.Title = "Удалить";
+}
+
+<h3>Вы действительно хотите удалить этот семейный статус?</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StatusName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StatusName)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm("DeleteFromDb", "Status", new { id = Model.StatusID })) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Удалить" class="btn btn-default" /> |
+            @Html.ActionLink("Назад", "Index")
+        </div>
+    }
+</div>

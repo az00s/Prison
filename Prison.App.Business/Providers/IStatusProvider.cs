@@ -1,12 +1,11 @@
-﻿using System;
+﻿using Prison.App.Common.Entities;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Prison.App.Business.Providers
 {
     public interface IStatusProvider
     {
+        IEnumerable<MaritalStatus> GetAllStatuses();
+        MaritalStatus GetStatusByID(int id);
     }
 }

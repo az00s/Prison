@@ -76,10 +76,13 @@
     <Compile Include="Providers\Impl\AdvertismentProvider.cs" />
     <Compile Include="Providers\Impl\DetaineeProvider.cs" />
     <Compile Include="Providers\Impl\EmployeeProvider.cs" />
+    <Compile Include="Providers\Impl\PhoneNumberProvider.cs" />
     <Compile Include="Providers\Impl\PlaceProvider.cs" />
     <Compile Include="Providers\Impl\PositionProvider.cs" />
     <Compile Include="Providers\Impl\RoleProvider.cs" />
+    <Compile Include="Providers\Impl\StatusProvider.cs" />
     <Compile Include="Providers\Impl\UserProvider.cs" />
+    <Compile Include="Providers\IPhoneNumberProvider.cs" />
     <Compile Include="Providers\IPlaceProvider.cs" />
     <Compile Include="Providers\IPositionProvider.cs" />
     <Compile Include="Providers\IRoleProvider.cs" />
@@ -94,12 +97,18 @@
     <Compile Include="Services\Impl\EmployeeService.cs" />
     <Compile Include="Services\Impl\LogInService.cs" />
     <Compile Include="Models\UserPrincipal.cs" />
+    <Compile Include="Services\Impl\PhoneNumberService.cs" />
     <Compile Include="Services\Impl\PlaceService.cs" />
+    <Compile Include="Services\Impl\PositionService.cs" />
     <Compile Include="Services\Impl\RoleService.cs" />
+    <Compile Include="Services\Impl\StatusService.cs" />
     <Compile Include="Services\Impl\UserService.cs" />
     <Compile Include="Services\Impl\СachingService.cs" />
+    <Compile Include="Services\IPhoneNumberService.cs" />
     <Compile Include="Services\IPlaceService.cs" />
+    <Compile Include="Services\IPositionService.cs" />
     <Compile Include="Services\IRoleService.cs" />
+    <Compile Include="Services\IStatusService.cs" />
     <Compile Include="Services\IUserService.cs" />
   </ItemGroup>
   <ItemGroup />

@@ -1,0 +1,37 @@
+﻿@model Prison.App.Web.Models.PositionViewModel
+
+@{
+    ViewBag.Title = "Удалить";
+}
+
+<h3>Вы действительно хотите удалить эту должность?</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PositionID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PositionID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PositionName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PositionName)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm("DeleteFromDb", "Position", new { id = Model.PositionID })) {
+                @Html.AntiForgeryToken()
+
+                <div class="form-actions no-color">
+            <input type="submit" value="Удалить" class="btn btn-default" /> |
+            @Html.ActionLink("Назад", "Index")
+        </div>
+    }
+</div>

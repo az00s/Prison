@@ -13,6 +13,10 @@ namespace Prison.App.Business.Registers
         public BusinessRegistry()
         {
             For<IBlurb>().Use<Common.Entities.Blurb>();
+
+            For<ILogInService>().Use<LogInService>();
+            ForSingletonOf<ICachingService>().Use<СachingService>();
+
             For<IAdvertismentProvider>().Use<AdvertismentProvider>();
             For<IEmployeeProvider>().Use<EmployeeProvider>();
             For<IDetaineeProvider>().Use<DetaineeProvider>();
@@ -20,13 +24,17 @@ namespace Prison.App.Business.Registers
             For<IPositionProvider>().Use<PositionProvider>();
             For<IUserProvider>().Use<UserProvider>();
             For<IRoleProvider>().Use<RoleProvider>();
-            For<ILogInService>().Use<LogInService>();
-            ForSingletonOf<ICachingService>().Use<СachingService>();
+            For<IStatusProvider>().Use<StatusProvider>();
+            For<IPhoneNumberProvider>().Use<PhoneNumberProvider>();
+
             For<IEmployeeService>().Use<EmployeeService>();
             For<IDetaineeService>().Use<DetaineeService>();
             For<IPlaceService>().Use<PlaceService>();
             For<IUserService>().Use<UserService>();
             For<IRoleService>().Use<RoleService>();
+            For<IPositionService>().Use<PositionService>();
+            For<IStatusService>().Use<StatusService>();
+            For<IPhoneNumberService>().Use<PhoneNumberService>();
 
 
         }

@@ -114,6 +114,7 @@
     <Content Include="Content\img\Prison.jpg" />
     <Content Include="Content\Login.css" />
     <Content Include="Scripts\AddDeleteRoleScript.js" />
+    <Content Include="Scripts\CommonScripts.js" />
     <Content Include="Scripts\SearchViewScript.js" />
     <Content Include="Scripts\Login.js" />
     <Content Include="Content\Site.css" />
@@ -145,6 +146,9 @@
     <Compile Include="Controllers\EmployeeController.cs" />
     <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\StatusController.cs" />
+    <Compile Include="Controllers\PositionController.cs" />
+    <Compile Include="Controllers\PhoneNumberController.cs" />
     <Compile Include="Controllers\PlaceOfStayController.cs" />
     <Compile Include="Controllers\RoleController.cs" />
     <Compile Include="Controllers\UserController.cs" />
@@ -160,8 +164,11 @@
     <Compile Include="Models\Employee\EmployeeEditViewModel.cs" />
     <Compile Include="Models\Employee\EmployeeIndexViewModel.cs" />
     <Compile Include="Models\ErrorViewModel.cs" />
+    <Compile Include="Models\NumberViewModel.cs" />
     <Compile Include="Models\PlaceOfStay\PlaceOfStayViewModel.cs" />
+    <Compile Include="Models\PositionViewModel.cs" />
     <Compile Include="Models\SearchViewModel.cs" />
+    <Compile Include="Models\StatusViewModel.cs" />
     <Compile Include="Models\User\UserCreateViewModel.cs" />
     <Compile Include="Models\User\UserEditViewModel.cs" />
     <Compile Include="Models\User\UserIndexViewModel.cs" />
@@ -221,6 +228,21 @@
     <Content Include="Views\Detainee\Search.cshtml" />
     <Content Include="Views\Error\Unauthorized.cshtml" />
     <Content Include="Views\Shared\ValidationError.cshtml" />
+    <Content Include="Views\Status\Index.cshtml" />
+    <Content Include="Views\Status\Details.cshtml" />
+    <Content Include="Views\Status\Create.cshtml" />
+    <Content Include="Views\Status\Edit.cshtml" />
+    <Content Include="Views\Status\Delete.cshtml" />
+    <Content Include="Views\Position\Index.cshtml" />
+    <Content Include="Views\Position\Details.cshtml" />
+    <Content Include="Views\Position\Create.cshtml" />
+    <Content Include="Views\Position\Edit.cshtml" />
+    <Content Include="Views\Position\Delete.cshtml" />
+    <Content Include="Views\PhoneNumber\Index.cshtml" />
+    <Content Include="Views\PhoneNumber\Details.cshtml" />
+    <Content Include="Views\PhoneNumber\Create.cshtml" />
+    <Content Include="Views\PhoneNumber\Edit.cshtml" />
+    <Content Include="Views\PhoneNumber\Delete.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

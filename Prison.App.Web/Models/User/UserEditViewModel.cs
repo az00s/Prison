@@ -21,7 +21,7 @@ namespace Prison.App.Web.Models.User
         [Display(Name = "Роли")]
         public IEnumerable<Role> AllRoles { get; set; }
 
-        [Display(Name = "Роли пользователя")]
+        [Display(Name = "Роль пользователя")]
         public Role[] Roles { get; set; }
     }
 }

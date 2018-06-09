@@ -1063,3 +1063,666 @@ System.Web.HttpException (0x80004005): Контроллер для пути "/no" не найден или н
    в System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
    в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
    в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-09 19:28:07,455 ERROR PrisonLogger - Прослушивание на http://localhost:64585/Service.svc не выполняла ни одна конечная точка, которая могла бы принять сообщение. Среди прочих причин это могло быть вызвано неправильным адресом или действием SOAP. Подробнее см. в описании InnerException (если имеется).
+2018-06-09 19:30:25,591 ERROR PrisonLogger - Прослушивание на http://localhost:64585/Service.svc не выполняла ни одна конечная точка, которая могла бы принять сообщение. Среди прочих причин это могло быть вызвано неправильным адресом или действием SOAP. Подробнее см. в описании InnerException (если имеется).
+2018-06-09 19:31:12,882 ERROR PrisonLogger - Прослушивание на http://localhost:64585/Service.svc не выполняла ни одна конечная точка, которая могла бы принять сообщение. Среди прочих причин это могло быть вызвано неправильным адресом или действием SOAP. Подробнее см. в описании InnerException (если имеется).
+2018-06-09 19:33:51,574 ERROR PrisonLogger - Прослушивание на http://localhost:64585/Service.svc не выполняла ни одна конечная точка, которая могла бы принять сообщение. Среди прочих причин это могло быть вызвано неправильным адресом или действием SOAP. Подробнее см. в описании InnerException (если имеется).
+2018-06-09 19:35:29,300 ERROR PrisonLogger - Прослушивание на http://localhost:64585/Service.svc не выполняла ни одна конечная точка, которая могла бы принять сообщение. Среди прочих причин это могло быть вызвано неправильным адресом или действием SOAP. Подробнее см. в описании InnerException (если имеется).
+2018-06-09 19:36:23,148 ERROR PrisonLogger - Прослушивание на http://localhost:64585/Service.svc не выполняла ни одна конечная точка, которая могла бы принять сообщение. Среди прочих причин это могло быть вызвано неправильным адресом или действием SOAP. Подробнее см. в описании InnerException (если имеется).
+2018-06-09 19:36:48,319 ERROR PrisonLogger - Прослушивание на http://localhost:64585/Service.svc не выполняла ни одна конечная точка, которая могла бы принять сообщение. Среди прочих причин это могло быть вызвано неправильным адресом или действием SOAP. Подробнее см. в описании InnerException (если имеется).
+2018-06-09 19:37:22,786 ERROR PrisonLogger - Прослушивание на http://localhost:64585/Service.svc не выполняла ни одна конечная точка, которая могла бы принять сообщение. Среди прочих причин это могло быть вызвано неправильным адресом или действием SOAP. Подробнее см. в описании InnerException (если имеется).
+2018-06-09 19:38:09,703 ERROR PrisonLogger - Прослушивание на http://localhost:64585/Service.svc не выполняла ни одна конечная точка, которая могла бы принять сообщение. Среди прочих причин это могло быть вызвано неправильным адресом или действием SOAP. Подробнее см. в описании InnerException (если имеется).
+2018-06-09 19:38:33,887 ERROR PrisonLogger - Прослушивание на http://localhost:64585/Service.svc не выполняла ни одна конечная точка, которая могла бы принять сообщение. Среди прочих причин это могло быть вызвано неправильным адресом или действием SOAP. Подробнее см. в описании InnerException (если имеется).
+2018-06-09 19:41:33,906 ERROR PrisonLogger - Прослушивание на http://localhost:64585/Service.svc не выполняла ни одна конечная точка, которая могла бы принять сообщение. Среди прочих причин это могло быть вызвано неправильным адресом или действием SOAP. Подробнее см. в описании InnerException (если имеется).
+2018-06-09 19:42:12,121 ERROR PrisonLogger - Прослушивание на http://localhost:64585/Service.svc не выполняла ни одна конечная точка, которая могла бы принять сообщение. Среди прочих причин это могло быть вызвано неправильным адресом или действием SOAP. Подробнее см. в описании InnerException (если имеется).
+2018-06-09 19:42:21,326 ERROR PrisonLogger - Прослушивание на http://localhost:64585/Service.svc не выполняла ни одна конечная точка, которая могла бы принять сообщение. Среди прочих причин это могло быть вызвано неправильным адресом или действием SOAP. Подробнее см. в описании InnerException (если имеется).
+2018-06-09 19:44:05,960 ERROR PrisonLogger - Прослушивание на http://localhost:64585/Service.svc не выполняла ни одна конечная точка, которая могла бы принять сообщение. Среди прочих причин это могло быть вызвано неправильным адресом или действием SOAP. Подробнее см. в описании InnerException (если имеется).
+2018-06-09 19:50:45,878 ERROR PrisonLogger - Прослушивание на http://localhost:64585/Service.svc не выполняла ни одна конечная точка, которая могла бы принять сообщение. Среди прочих причин это могло быть вызвано неправильным адресом или действием SOAP. Подробнее см. в описании InnerException (если имеется).
+2018-06-09 19:51:49,774 ERROR PrisonLogger - Прослушивание на http://localhost:64585/Service.svc не выполняла ни одна конечная точка, которая могла бы принять сообщение. Среди прочих причин это могло быть вызвано неправильным адресом или действием SOAP. Подробнее см. в описании InnerException (если имеется).
+2018-06-09 19:52:32,050 ERROR PrisonLogger - Прослушивание на http://localhost:64585/Service.svc не выполняла ни одна конечная точка, которая могла бы принять сообщение. Среди прочих причин это могло быть вызвано неправильным адресом или действием SOAP. Подробнее см. в описании InnerException (если имеется).
+2018-06-09 19:53:35,277 ERROR PrisonLogger - Прослушивание на http://localhost:64585/Service.svc не выполняла ни одна конечная точка, которая могла бы принять сообщение. Среди прочих причин это могло быть вызвано неправильным адресом или действием SOAP. Подробнее см. в описании InnerException (если имеется).
+2018-06-09 19:55:37,567 ERROR PrisonLogger - Прослушивание на http://localhost:64585/Service.svc не выполняла ни одна конечная точка, которая могла бы принять сообщение. Среди прочих причин это могло быть вызвано неправильным адресом или действием SOAP. Подробнее см. в описании InnerException (если имеется).
+2018-06-09 19:56:04,156 ERROR PrisonLogger - Прослушивание на http://localhost:64585/Service.svc не выполняла ни одна конечная точка, которая могла бы принять сообщение. Среди прочих причин это могло быть вызвано неправильным адресом или действием SOAP. Подробнее см. в описании InnerException (если имеется).
+2018-06-09 19:56:25,257 ERROR PrisonLogger - Прослушивание на http://localhost:64585/Service.svc не выполняла ни одна конечная точка, которая могла бы принять сообщение. Среди прочих причин это могло быть вызвано неправильным адресом или действием SOAP. Подробнее см. в описании InnerException (если имеется).
+2018-06-09 19:57:59,709 ERROR PrisonLogger - Прослушивание на http://localhost:64585/Service.svc не выполняла ни одна конечная точка, которая могла бы принять сообщение. Среди прочих причин это могло быть вызвано неправильным адресом или действием SOAP. Подробнее см. в описании InnerException (если имеется).
+2018-06-09 19:59:48,417 ERROR PrisonLogger - Прослушивание на http://localhost:64585/Service.svc не выполняла ни одна конечная точка, которая могла бы принять сообщение. Среди прочих причин это могло быть вызвано неправильным адресом или действием SOAP. Подробнее см. в описании InnerException (если имеется).
+2018-06-09 20:00:02,214 ERROR PrisonLogger - Прослушивание на http://localhost:64585/Service.svc не выполняла ни одна конечная точка, которая могла бы принять сообщение. Среди прочих причин это могло быть вызвано неправильным адресом или действием SOAP. Подробнее см. в описании InnerException (если имеется).
+2018-06-09 20:04:52,815 ERROR PrisonLogger - Прослушивание на http://localhost:64585/Service.svc не выполняла ни одна конечная точка, которая могла бы принять сообщение. Среди прочих причин это могло быть вызвано неправильным адресом или действием SOAP. Подробнее см. в описании InnerException (если имеется).
+2018-06-09 20:04:56,367 ERROR PrisonLogger - Контроллер для пути "/__browserLink/requestData/f3f1fd9c3f5e43899af49c325741e727" не найден или не реализует интерфейс IController.
+System.Web.HttpException (0x80004005): Контроллер для пути "/__browserLink/requestData/f3f1fd9c3f5e43899af49c325741e727" не найден или не реализует интерфейс IController.
+   в System.Web.Mvc.DefaultControllerFactory.GetControllerInstance(RequestContext requestContext, Type controllerType)
+   в System.Web.Mvc.DefaultControllerFactory.CreateController(RequestContext requestContext, String controllerName)
+   в System.Web.Mvc.MvcHandler.ProcessRequestInit(HttpContextBase httpContext, IController& controller, IControllerFactory& factory)
+   в System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContextBase httpContext, AsyncCallback callback, Object state)
+   в System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-09 20:05:28,371 ERROR PrisonLogger - Прослушивание на http://localhost:64585/Service.svc не выполняла ни одна конечная точка, которая могла бы принять сообщение. Среди прочих причин это могло быть вызвано неправильным адресом или действием SOAP. Подробнее см. в описании InnerException (если имеется).
+2018-06-09 20:05:49,032 ERROR PrisonLogger - Прослушивание на http://localhost:64585/Service.svc не выполняла ни одна конечная точка, которая могла бы принять сообщение. Среди прочих причин это могло быть вызвано неправильным адресом или действием SOAP. Подробнее см. в описании InnerException (если имеется).
+2018-06-09 20:06:13,265 ERROR PrisonLogger - Прослушивание на http://localhost:64585/Service.svc не выполняла ни одна конечная точка, которая могла бы принять сообщение. Среди прочих причин это могло быть вызвано неправильным адресом или действием SOAP. Подробнее см. в описании InnerException (если имеется).
+2018-06-09 20:08:32,252 ERROR PrisonLogger - Прослушивание на http://localhost:64585/Service.svc не выполняла ни одна конечная точка, которая могла бы принять сообщение. Среди прочих причин это могло быть вызвано неправильным адресом или действием SOAP. Подробнее см. в описании InnerException (если имеется).
+2018-06-09 20:09:49,766 ERROR PrisonLogger - Прослушивание на http://localhost:64585/Service.svc не выполняла ни одна конечная точка, которая могла бы принять сообщение. Среди прочих причин это могло быть вызвано неправильным адресом или действием SOAP. Подробнее см. в описании InnerException (если имеется).
+2018-06-09 20:10:24,664 ERROR PrisonLogger - Прослушивание на http://localhost:64585/Service.svc не выполняла ни одна конечная точка, которая могла бы принять сообщение. Среди прочих причин это могло быть вызвано неправильным адресом или действием SOAP. Подробнее см. в описании InnerException (если имеется).
+2018-06-09 20:11:16,832 ERROR PrisonLogger - Прослушивание на http://localhost:64585/Service.svc не выполняла ни одна конечная точка, которая могла бы принять сообщение. Среди прочих причин это могло быть вызвано неправильным адресом или действием SOAP. Подробнее см. в описании InnerException (если имеется).
+2018-06-09 20:11:44,801 ERROR PrisonLogger - Прослушивание на http://localhost:64585/Service.svc не выполняла ни одна конечная точка, которая могла бы принять сообщение. Среди прочих причин это могло быть вызвано неправильным адресом или действием SOAP. Подробнее см. в описании InnerException (если имеется).
+2018-06-09 20:12:04,856 ERROR PrisonLogger - Прослушивание на http://localhost:64585/Service.svc не выполняла ни одна конечная точка, которая могла бы принять сообщение. Среди прочих причин это могло быть вызвано неправильным адресом или действием SOAP. Подробнее см. в описании InnerException (если имеется).
+2018-06-09 20:13:03,886 ERROR PrisonLogger - Прослушивание на http://localhost:64585/Service.svc не выполняла ни одна конечная точка, которая могла бы принять сообщение. Среди прочих причин это могло быть вызвано неправильным адресом или действием SOAP. Подробнее см. в описании InnerException (если имеется).
+2018-06-09 20:14:47,025 ERROR PrisonLogger - Прослушивание на http://localhost:64585/Service.svc не выполняла ни одна конечная точка, которая могла бы принять сообщение. Среди прочих причин это могло быть вызвано неправильным адресом или действием SOAP. Подробнее см. в описании InnerException (если имеется).
+2018-06-09 20:18:28,150 ERROR PrisonLogger - Прослушивание на http://localhost:64585/Service.svc не выполняла ни одна конечная точка, которая могла бы принять сообщение. Среди прочих причин это могло быть вызвано неправильным адресом или действием SOAP. Подробнее см. в описании InnerException (если имеется).
+2018-06-09 20:19:22,363 ERROR PrisonLogger - Прослушивание на http://localhost:64585/Service.svc не выполняла ни одна конечная точка, которая могла бы принять сообщение. Среди прочих причин это могло быть вызвано неправильным адресом или действием SOAP. Подробнее см. в описании InnerException (если имеется).
+2018-06-09 20:20:45,006 ERROR PrisonLogger - Прослушивание на http://localhost:64585/Service.svc не выполняла ни одна конечная точка, которая могла бы принять сообщение. Среди прочих причин это могло быть вызвано неправильным адресом или действием SOAP. Подробнее см. в описании InnerException (если имеется).
+2018-06-09 20:21:05,875 ERROR PrisonLogger - Прослушивание на http://localhost:64585/Service.svc не выполняла ни одна конечная точка, которая могла бы принять сообщение. Среди прочих причин это могло быть вызвано неправильным адресом или действием SOAP. Подробнее см. в описании InnerException (если имеется).
+2018-06-09 20:22:55,919 ERROR PrisonLogger - Прослушивание на http://localhost:64585/Service.svc не выполняла ни одна конечная точка, которая могла бы принять сообщение. Среди прочих причин это могло быть вызвано неправильным адресом или действием SOAP. Подробнее см. в описании InnerException (если имеется).
+2018-06-09 20:24:16,104 ERROR PrisonLogger - Прослушивание на http://localhost:64585/Service.svc не выполняла ни одна конечная точка, которая могла бы принять сообщение. Среди прочих причин это могло быть вызвано неправильным адресом или действием SOAP. Подробнее см. в описании InnerException (если имеется).
+2018-06-09 20:24:49,066 ERROR PrisonLogger - Прослушивание на http://localhost:64585/Service.svc не выполняла ни одна конечная точка, которая могла бы принять сообщение. Среди прочих причин это могло быть вызвано неправильным адресом или действием SOAP. Подробнее см. в описании InnerException (если имеется).
+2018-06-09 20:26:24,939 ERROR PrisonLogger - Прослушивание на http://localhost:64585/Service.svc не выполняла ни одна конечная точка, которая могла бы принять сообщение. Среди прочих причин это могло быть вызвано неправильным адресом или действием SOAP. Подробнее см. в описании InnerException (если имеется).
+2018-06-09 20:28:06,682 ERROR PrisonLogger - Прослушивание на http://localhost:64585/Service.svc не выполняла ни одна конечная точка, которая могла бы принять сообщение. Среди прочих причин это могло быть вызвано неправильным адресом или действием SOAP. Подробнее см. в описании InnerException (если имеется).
+2018-06-09 20:28:20,159 ERROR PrisonLogger - Прослушивание на http://localhost:64585/Service.svc не выполняла ни одна конечная точка, которая могла бы принять сообщение. Среди прочих причин это могло быть вызвано неправильным адресом или действием SOAP. Подробнее см. в описании InnerException (если имеется).
+2018-06-09 20:28:30,306 ERROR PrisonLogger - Прослушивание на http://localhost:64585/Service.svc не выполняла ни одна конечная точка, которая могла бы принять сообщение. Среди прочих причин это могло быть вызвано неправильным адресом или действием SOAP. Подробнее см. в описании InnerException (если имеется).
+2018-06-09 20:28:43,388 ERROR PrisonLogger - Произошла ошибка при попытке создать контроллер типа "Prison.App.Web.Controllers.PositionController". Убедитесь в том, что контроллер имеет общедоступный конструктор без параметров.
+System.InvalidOperationException: Произошла ошибка при попытке создать контроллер типа "Prison.App.Web.Controllers.PositionController". Убедитесь в том, что контроллер имеет общедоступный конструктор без параметров. ---> System.MissingMethodException: Для данного объекта не определено беспараметрических конструкторов.
+   в System.RuntimeTypeHandle.CreateInstance(RuntimeType type, Boolean publicOnly, Boolean noCheck, Boolean& canBeCached, RuntimeMethodHandleInternal& ctor, Boolean& bNeedSecurityCheck)
+   в System.RuntimeType.CreateInstanceSlow(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   в System.Activator.CreateInstance(Type type, Boolean nonPublic)
+   в System.Activator.CreateInstance(Type type)
+   в System.Web.Mvc.DefaultControllerFactory.DefaultControllerActivator.Create(RequestContext requestContext, Type controllerType)
+   --- Конец трассировки внутреннего стека исключений ---
+   в System.Web.Mvc.DefaultControllerFactory.DefaultControllerActivator.Create(RequestContext requestContext, Type controllerType)
+   в System.Web.Mvc.DefaultControllerFactory.CreateController(RequestContext requestContext, String controllerName)
+   в System.Web.Mvc.MvcHandler.ProcessRequestInit(HttpContextBase httpContext, IController& controller, IControllerFactory& factory)
+   в System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContextBase httpContext, AsyncCallback callback, Object state)
+   в System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-09 20:29:15,387 ERROR PrisonLogger - Произошла ошибка при попытке создать контроллер типа "Prison.App.Web.Controllers.PhoneNumberController". Убедитесь в том, что контроллер имеет общедоступный конструктор без параметров.
+System.InvalidOperationException: Произошла ошибка при попытке создать контроллер типа "Prison.App.Web.Controllers.PhoneNumberController". Убедитесь в том, что контроллер имеет общедоступный конструктор без параметров. ---> System.MissingMethodException: Для данного объекта не определено беспараметрических конструкторов.
+   в System.RuntimeTypeHandle.CreateInstance(RuntimeType type, Boolean publicOnly, Boolean noCheck, Boolean& canBeCached, RuntimeMethodHandleInternal& ctor, Boolean& bNeedSecurityCheck)
+   в System.RuntimeType.CreateInstanceSlow(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   в System.Activator.CreateInstance(Type type, Boolean nonPublic)
+   в System.Activator.CreateInstance(Type type)
+   в System.Web.Mvc.DefaultControllerFactory.DefaultControllerActivator.Create(RequestContext requestContext, Type controllerType)
+   --- Конец трассировки внутреннего стека исключений ---
+   в System.Web.Mvc.DefaultControllerFactory.DefaultControllerActivator.Create(RequestContext requestContext, Type controllerType)
+   в System.Web.Mvc.DefaultControllerFactory.CreateController(RequestContext requestContext, String controllerName)
+   в System.Web.Mvc.MvcHandler.ProcessRequestInit(HttpContextBase httpContext, IController& controller, IControllerFactory& factory)
+   в System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContextBase httpContext, AsyncCallback callback, Object state)
+   в System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-09 20:29:17,139 ERROR PrisonLogger - Произошла ошибка при попытке создать контроллер типа "Prison.App.Web.Controllers.StatusController". Убедитесь в том, что контроллер имеет общедоступный конструктор без параметров.
+System.InvalidOperationException: Произошла ошибка при попытке создать контроллер типа "Prison.App.Web.Controllers.StatusController". Убедитесь в том, что контроллер имеет общедоступный конструктор без параметров. ---> System.MissingMethodException: Для данного объекта не определено беспараметрических конструкторов.
+   в System.RuntimeTypeHandle.CreateInstance(RuntimeType type, Boolean publicOnly, Boolean noCheck, Boolean& canBeCached, RuntimeMethodHandleInternal& ctor, Boolean& bNeedSecurityCheck)
+   в System.RuntimeType.CreateInstanceSlow(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   в System.Activator.CreateInstance(Type type, Boolean nonPublic)
+   в System.Activator.CreateInstance(Type type)
+   в System.Web.Mvc.DefaultControllerFactory.DefaultControllerActivator.Create(RequestContext requestContext, Type controllerType)
+   --- Конец трассировки внутреннего стека исключений ---
+   в System.Web.Mvc.DefaultControllerFactory.DefaultControllerActivator.Create(RequestContext requestContext, Type controllerType)
+   в System.Web.Mvc.DefaultControllerFactory.CreateController(RequestContext requestContext, String controllerName)
+   в System.Web.Mvc.MvcHandler.ProcessRequestInit(HttpContextBase httpContext, IController& controller, IControllerFactory& factory)
+   в System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContextBase httpContext, AsyncCallback callback, Object state)
+   в System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-09 20:29:32,255 ERROR PrisonLogger - Прослушивание на http://localhost:64585/Service.svc не выполняла ни одна конечная точка, которая могла бы принять сообщение. Среди прочих причин это могло быть вызвано неправильным адресом или действием SOAP. Подробнее см. в описании InnerException (если имеется).
+2018-06-09 20:32:55,465 ERROR PrisonLogger - Прослушивание на http://localhost:64585/Service.svc не выполняла ни одна конечная точка, которая могла бы принять сообщение. Среди прочих причин это могло быть вызвано неправильным адресом или действием SOAP. Подробнее см. в описании InnerException (если имеется).
+2018-06-09 20:33:28,772 ERROR PrisonLogger - Не удалось найти хранимую процедуру "SelectPositionByID". 
+Connection string:Data Source=.\SQLEXPRESS;Initial Catalog=Prison;Integrated Security=True, 
+QueryText:SelectPositionByID
+2018-06-09 20:33:28,918 ERROR PrisonLogger - Невозможно найти таблицу 0.
+System.IndexOutOfRangeException: Невозможно найти таблицу 0.
+   в System.Data.DataTableCollection.get_Item(Int32 index)
+   в Prison.App.Data.DataContext.Impl.PositionDataContext.ToPosition(DataSet dataset) в C:\Users\Константин\source\repos\Prison\Prison.App.Data\DataContext\Impl\PositionDataContext.cs:строка 101
+   в Prison.App.Business.Providers.Impl.PositionProvider.GetPositionByID(Int32 id) в C:\Users\Константин\source\repos\Prison\Prison.App.Business\Providers\Impl\PositionProvider.cs:строка 61
+   в Prison.App.Web.Controllers.PositionController.Edit(Int32 id) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Controllers\PositionController.cs:строка 74
+   в lambda_method(Closure , ControllerBase , Object[] )
+   в System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   в System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.<BeginInvokeSynchronousActionMethod>b__39(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3d()
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.<BeginExecuteCore>b__1d(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   в System.Web.Mvc.MvcHandler.<BeginProcessRequest>b__5(IAsyncResult asyncResult, ProcessRequestState innerState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   в System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-09 20:33:33,532 ERROR PrisonLogger - Не удалось найти хранимую процедуру "SelectPositionByID". 
+Connection string:Data Source=.\SQLEXPRESS;Initial Catalog=Prison;Integrated Security=True, 
+QueryText:SelectPositionByID
+2018-06-09 20:33:33,556 ERROR PrisonLogger - Невозможно найти таблицу 0.
+System.IndexOutOfRangeException: Невозможно найти таблицу 0.
+   в System.Data.DataTableCollection.get_Item(Int32 index)
+   в Prison.App.Data.DataContext.Impl.PositionDataContext.ToPosition(DataSet dataset) в C:\Users\Константин\source\repos\Prison\Prison.App.Data\DataContext\Impl\PositionDataContext.cs:строка 101
+   в Prison.App.Business.Providers.Impl.PositionProvider.GetPositionByID(Int32 id) в C:\Users\Константин\source\repos\Prison\Prison.App.Business\Providers\Impl\PositionProvider.cs:строка 61
+   в lambda_method(Closure , ControllerBase , Object[] )
+   в System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   в System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.<BeginInvokeSynchronousActionMethod>b__39(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3d()
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.<BeginExecuteCore>b__1d(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   в System.Web.Mvc.MvcHandler.<BeginProcessRequest>b__5(IAsyncResult asyncResult, ProcessRequestState innerState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   в System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-09 20:35:27,648 ERROR PrisonLogger - Элемент модели, переданный в словарь, имеет тип "Prison.App.Common.Entities.Position", но для этого словаря требуется элемент модели типа "Prison.App.Web.Models.PositionViewModel".
+System.InvalidOperationException: Элемент модели, переданный в словарь, имеет тип "Prison.App.Common.Entities.Position", но для этого словаря требуется элемент модели типа "Prison.App.Web.Models.PositionViewModel".
+   в System.Web.Mvc.ViewDataDictionary`1.SetModel(Object value)
+   в System.Web.Mvc.ViewDataDictionary..ctor(ViewDataDictionary dictionary)
+   в System.Web.Mvc.WebViewPage`1.SetViewData(ViewDataDictionary viewData)
+   в System.Web.Mvc.RazorView.RenderView(ViewContext viewContext, TextWriter writer, Object instance)
+   в System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   в System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   в System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   в System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.<BeginExecuteCore>b__1d(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   в System.Web.Mvc.MvcHandler.<BeginProcessRequest>b__5(IAsyncResult asyncResult, ProcessRequestState innerState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   в System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-09 20:37:08,826 ERROR PrisonLogger - Прослушивание на http://localhost:64585/Service.svc не выполняла ни одна конечная точка, которая могла бы принять сообщение. Среди прочих причин это могло быть вызвано неправильным адресом или действием SOAP. Подробнее см. в описании InnerException (если имеется).
+2018-06-09 20:37:21,645 ERROR PrisonLogger - Прослушивание на http://localhost:64585/Service.svc не выполняла ни одна конечная точка, которая могла бы принять сообщение. Среди прочих причин это могло быть вызвано неправильным адресом или действием SOAP. Подробнее см. в описании InnerException (если имеется).
+2018-06-09 20:37:41,255 ERROR PrisonLogger - Элемент модели, переданный в словарь, имеет тип "Prison.App.Common.Entities.Position", но для этого словаря требуется элемент модели типа "Prison.App.Web.Models.PositionViewModel".
+System.InvalidOperationException: Элемент модели, переданный в словарь, имеет тип "Prison.App.Common.Entities.Position", но для этого словаря требуется элемент модели типа "Prison.App.Web.Models.PositionViewModel".
+   в System.Web.Mvc.ViewDataDictionary`1.SetModel(Object value)
+   в System.Web.Mvc.ViewDataDictionary..ctor(ViewDataDictionary dictionary)
+   в System.Web.Mvc.WebViewPage`1.SetViewData(ViewDataDictionary viewData)
+   в System.Web.Mvc.RazorView.RenderView(ViewContext viewContext, TextWriter writer, Object instance)
+   в System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   в System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   в System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   в System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.<BeginExecuteCore>b__1d(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   в System.Web.Mvc.MvcHandler.<BeginProcessRequest>b__5(IAsyncResult asyncResult, ProcessRequestState innerState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   в System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-09 20:38:37,445 ERROR PrisonLogger - Прослушивание на http://localhost:64585/Service.svc не выполняла ни одна конечная точка, которая могла бы принять сообщение. Среди прочих причин это могло быть вызвано неправильным адресом или действием SOAP. Подробнее см. в описании InnerException (если имеется).
+2018-06-09 20:38:43,066 ERROR PrisonLogger - Элемент модели, переданный в словарь, имеет тип "Prison.App.Common.Entities.Position", но для этого словаря требуется элемент модели типа "Prison.App.Web.Models.PositionViewModel".
+System.InvalidOperationException: Элемент модели, переданный в словарь, имеет тип "Prison.App.Common.Entities.Position", но для этого словаря требуется элемент модели типа "Prison.App.Web.Models.PositionViewModel".
+   в System.Web.Mvc.ViewDataDictionary`1.SetModel(Object value)
+   в System.Web.Mvc.ViewDataDictionary..ctor(ViewDataDictionary dictionary)
+   в System.Web.Mvc.WebViewPage`1.SetViewData(ViewDataDictionary viewData)
+   в System.Web.Mvc.RazorView.RenderView(ViewContext viewContext, TextWriter writer, Object instance)
+   в System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   в System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   в System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   в System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.<BeginExecuteCore>b__1d(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   в System.Web.Mvc.MvcHandler.<BeginProcessRequest>b__5(IAsyncResult asyncResult, ProcessRequestState innerState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   в System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-09 20:38:56,159 ERROR PrisonLogger - Прослушивание на http://localhost:64585/Service.svc не выполняла ни одна конечная точка, которая могла бы принять сообщение. Среди прочих причин это могло быть вызвано неправильным адресом или действием SOAP. Подробнее см. в описании InnerException (если имеется).
+2018-06-09 20:39:01,062 ERROR PrisonLogger - Элемент модели, переданный в словарь, имеет тип "Prison.App.Common.Entities.Position", но для этого словаря требуется элемент модели типа "Prison.App.Web.Models.PositionViewModel".
+System.InvalidOperationException: Элемент модели, переданный в словарь, имеет тип "Prison.App.Common.Entities.Position", но для этого словаря требуется элемент модели типа "Prison.App.Web.Models.PositionViewModel".
+   в System.Web.Mvc.ViewDataDictionary`1.SetModel(Object value)
+   в System.Web.Mvc.ViewDataDictionary..ctor(ViewDataDictionary dictionary)
+   в System.Web.Mvc.WebViewPage`1.SetViewData(ViewDataDictionary viewData)
+   в System.Web.Mvc.RazorView.RenderView(ViewContext viewContext, TextWriter writer, Object instance)
+   в System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   в System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   в System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   в System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.<BeginExecuteCore>b__1d(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   в System.Web.Mvc.MvcHandler.<BeginProcessRequest>b__5(IAsyncResult asyncResult, ProcessRequestState innerState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   в System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-09 20:39:46,869 ERROR PrisonLogger - Прослушивание на http://localhost:64585/Service.svc не выполняла ни одна конечная точка, которая могла бы принять сообщение. Среди прочих причин это могло быть вызвано неправильным адресом или действием SOAP. Подробнее см. в описании InnerException (если имеется).
+2018-06-09 20:39:54,877 ERROR PrisonLogger - Конфликт инструкции DELETE с ограничением REFERENCE "FK_Employee_Position". Конфликт произошел в базе данных "Prison", таблица "dbo.Employee", column 'PositionID'.
+Выполнение данной инструкции было прервано. 
+Connection string:Data Source=.\SQLEXPRESS;Initial Catalog=Prison;Integrated Security=True, 
+QueryText:DeletePosition
+2018-06-09 20:43:45,565 ERROR PrisonLogger - Прослушивание на http://localhost:64585/Service.svc не выполняла ни одна конечная точка, которая могла бы принять сообщение. Среди прочих причин это могло быть вызвано неправильным адресом или действием SOAP. Подробнее см. в описании InnerException (если имеется).
+2018-06-09 20:44:25,123 ERROR PrisonLogger - Прослушивание на http://localhost:64585/Service.svc не выполняла ни одна конечная точка, которая могла бы принять сообщение. Среди прочих причин это могло быть вызвано неправильным адресом или действием SOAP. Подробнее см. в описании InnerException (если имеется).
+2018-06-09 20:44:27,149 ERROR PrisonLogger - Прослушивание на http://localhost:64585/Service.svc не выполняла ни одна конечная точка, которая могла бы принять сообщение. Среди прочих причин это могло быть вызвано неправильным адресом или действием SOAP. Подробнее см. в описании InnerException (если имеется).
+2018-06-09 20:45:13,720 ERROR PrisonLogger - Прослушивание на http://localhost:64585/Service.svc не выполняла ни одна конечная точка, которая могла бы принять сообщение. Среди прочих причин это могло быть вызвано неправильным адресом или действием SOAP. Подробнее см. в описании InnerException (если имеется).
+2018-06-09 20:45:15,751 ERROR PrisonLogger - Прослушивание на http://localhost:64585/Service.svc не выполняла ни одна конечная точка, которая могла бы принять сообщение. Среди прочих причин это могло быть вызвано неправильным адресом или действием SOAP. Подробнее см. в описании InnerException (если имеется).
+2018-06-09 20:45:47,910 ERROR PrisonLogger - Прослушивание на http://localhost:64585/Service.svc не выполняла ни одна конечная точка, которая могла бы принять сообщение. Среди прочих причин это могло быть вызвано неправильным адресом или действием SOAP. Подробнее см. в описании InnerException (если имеется).
+2018-06-09 20:45:50,752 ERROR PrisonLogger - Контроллер для пути "/__browserLink/requestData/d8e4de261f8e4e04a3bb80af3ea8ed75" не найден или не реализует интерфейс IController.
+System.Web.HttpException (0x80004005): Контроллер для пути "/__browserLink/requestData/d8e4de261f8e4e04a3bb80af3ea8ed75" не найден или не реализует интерфейс IController.
+   в System.Web.Mvc.DefaultControllerFactory.GetControllerInstance(RequestContext requestContext, Type controllerType)
+   в System.Web.Mvc.DefaultControllerFactory.CreateController(RequestContext requestContext, String controllerName)
+   в System.Web.Mvc.MvcHandler.ProcessRequestInit(HttpContextBase httpContext, IController& controller, IControllerFactory& factory)
+   в System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContextBase httpContext, AsyncCallback callback, Object state)
+   в System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-09 20:45:54,704 ERROR PrisonLogger - Прослушивание на http://localhost:64585/Service.svc не выполняла ни одна конечная точка, которая могла бы принять сообщение. Среди прочих причин это могло быть вызвано неправильным адресом или действием SOAP. Подробнее см. в описании InnerException (если имеется).
+2018-06-09 20:45:54,733 ERROR PrisonLogger - Прослушивание на http://localhost:64585/Service.svc не выполняла ни одна конечная точка, которая могла бы принять сообщение. Среди прочих причин это могло быть вызвано неправильным адресом или действием SOAP. Подробнее см. в описании InnerException (если имеется).
+2018-06-09 21:14:35,360 ERROR PrisonLogger - C:\Users\Константин\source\repos\Prison\Prison.App.Web\Views\PhoneNumber\Index.cshtml(18): error CS1061: 'NumberViewModel' does not contain a definition for 'DetaineeLastname' and no extension method 'DetaineeLastname' accepting a first argument of type 'NumberViewModel' could be found (are you missing a using directive or an assembly reference?)
+System.Web.HttpCompileException (0x80004005): C:\Users\Константин\source\repos\Prison\Prison.App.Web\Views\PhoneNumber\Index.cshtml(18): error CS1061: 'NumberViewModel' does not contain a definition for 'DetaineeLastname' and no extension method 'DetaineeLastname' accepting a first argument of type 'NumberViewModel' could be found (are you missing a using directive or an assembly reference?)
+   в System.Web.Compilation.AssemblyBuilder.Compile()
+   в System.Web.Compilation.BuildProvidersCompiler.PerformBuild()
+   в System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   в System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   в System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   в System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
+   в System.Web.Compilation.BuildManager.GetCompiledType(VirtualPath virtualPath)
+   в System.Web.Mvc.BuildManagerCompiledView.Render(ViewContext viewContext, TextWriter writer)
+   в System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   в System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   в System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   в System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.<BeginExecuteCore>b__1d(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   в System.Web.Mvc.MvcHandler.<BeginProcessRequest>b__5(IAsyncResult asyncResult, ProcessRequestState innerState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   в System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-09 21:26:28,094 ERROR PrisonLogger - Ссылка на объект не указывает на экземпляр объекта.
+System.NullReferenceException: Ссылка на объект не указывает на экземпляр объекта.
+   в ASP._Page_Views_PhoneNumber_Create_cshtml.Execute() в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Views\PhoneNumber\Create.cshtml:строка 29
+   в System.Web.WebPages.WebPageBase.ExecutePageHierarchy()
+   в System.Web.Mvc.WebViewPage.ExecutePageHierarchy()
+   в System.Web.WebPages.StartPage.ExecutePageHierarchy()
+   в System.Web.WebPages.WebPageBase.ExecutePageHierarchy(WebPageContext pageContext, TextWriter writer, WebPageRenderingBase startPage)
+   в System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   в System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   в System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   в System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.<BeginExecuteCore>b__1d(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   в System.Web.Mvc.MvcHandler.<BeginProcessRequest>b__5(IAsyncResult asyncResult, ProcessRequestState innerState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   в System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-09 21:26:37,271 ERROR PrisonLogger - Ссылка на объект не указывает на экземпляр объекта.
+System.NullReferenceException: Ссылка на объект не указывает на экземпляр объекта.
+   в ASP._Page_Views_PhoneNumber_Create_cshtml.Execute() в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Views\PhoneNumber\Create.cshtml:строка 29
+   в System.Web.WebPages.WebPageBase.ExecutePageHierarchy()
+   в System.Web.Mvc.WebViewPage.ExecutePageHierarchy()
+   в System.Web.WebPages.StartPage.ExecutePageHierarchy()
+   в System.Web.WebPages.WebPageBase.ExecutePageHierarchy(WebPageContext pageContext, TextWriter writer, WebPageRenderingBase startPage)
+   в System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   в System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   в System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   в System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.<BeginExecuteCore>b__1d(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   в System.Web.Mvc.MvcHandler.<BeginProcessRequest>b__5(IAsyncResult asyncResult, ProcessRequestState innerState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   в System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-09 21:28:20,805 ERROR PrisonLogger - DataBinding: 'Prison.App.Common.Entities.Detainee' не содержит свойство с именем NumberID. 
+System.Web.HttpException (0x80004005): DataBinding: 'Prison.App.Common.Entities.Detainee' не содержит свойство с именем NumberID. 
+   в System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName)
+   в System.Web.UI.DataBinder.Eval(Object container, String[] expressionParts)
+   в System.Web.Mvc.MultiSelectList.Eval(Object container, String expression)
+   в System.Web.Mvc.MultiSelectList.<>c__DisplayClass2.<GetListItemsWithValueField>b__1(Object item)
+   в System.Linq.Enumerable.WhereSelectEnumerableIterator`2.MoveNext()
+   в System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   в System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   в System.Web.Mvc.MultiSelectList.GetEnumerator()
+   в System.Web.Mvc.Html.SelectExtensions.GetSelectListWithDefaultValue(IEnumerable`1 selectList, Object defaultValue, Boolean allowMultiple)
+   в System.Web.Mvc.Html.SelectExtensions.SelectInternal(HtmlHelper htmlHelper, ModelMetadata metadata, String optionLabel, String name, IEnumerable`1 selectList, Boolean allowMultiple, IDictionary`2 htmlAttributes)
+   в System.Web.Mvc.Html.SelectExtensions.DropDownList(HtmlHelper htmlHelper, String name, IEnumerable`1 selectList, Object htmlAttributes)
+   в ASP._Page_Views_PhoneNumber_Create_cshtml.Execute() в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Views\PhoneNumber\Create.cshtml:строка 29
+   в System.Web.WebPages.WebPageBase.ExecutePageHierarchy()
+   в System.Web.Mvc.WebViewPage.ExecutePageHierarchy()
+   в System.Web.WebPages.StartPage.ExecutePageHierarchy()
+   в System.Web.WebPages.WebPageBase.ExecutePageHierarchy(WebPageContext pageContext, TextWriter writer, WebPageRenderingBase startPage)
+   в System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   в System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   в System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   в System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.<BeginExecuteCore>b__1d(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   в System.Web.Mvc.MvcHandler.<BeginProcessRequest>b__5(IAsyncResult asyncResult, ProcessRequestState innerState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   в System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-09 21:29:22,582 ERROR PrisonLogger - Элемент модели, переданный в словарь, имеет тип "Prison.App.Common.Entities.PhoneNumber", но для этого словаря требуется элемент модели типа "Prison.App.Web.Models.NumberViewModel".
+System.InvalidOperationException: Элемент модели, переданный в словарь, имеет тип "Prison.App.Common.Entities.PhoneNumber", но для этого словаря требуется элемент модели типа "Prison.App.Web.Models.NumberViewModel".
+   в System.Web.Mvc.ViewDataDictionary`1.SetModel(Object value)
+   в System.Web.Mvc.ViewDataDictionary..ctor(ViewDataDictionary dictionary)
+   в System.Web.Mvc.WebViewPage`1.SetViewData(ViewDataDictionary viewData)
+   в System.Web.Mvc.RazorView.RenderView(ViewContext viewContext, TextWriter writer, Object instance)
+   в System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   в System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   в System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   в System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.<BeginExecuteCore>b__1d(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   в System.Web.Mvc.MvcHandler.<BeginProcessRequest>b__5(IAsyncResult asyncResult, ProcessRequestState innerState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   в System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-09 21:29:39,094 ERROR PrisonLogger - Последовательность не содержит соответствующий элемент
+System.InvalidOperationException: Последовательность не содержит соответствующий элемент
+   в System.Linq.Enumerable.First[TSource](IEnumerable`1 source, Func`2 predicate)
+   в Prison.App.Web.Controllers.PhoneNumberController.ToNumberViewModel(PhoneNumber number) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Controllers\PhoneNumberController.cs:строка 124
+   в Prison.App.Web.Controllers.PhoneNumberController.Edit(Int32 id) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Controllers\PhoneNumberController.cs:строка 80
+   в lambda_method(Closure , ControllerBase , Object[] )
+   в System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   в System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.<BeginInvokeSynchronousActionMethod>b__39(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3d()
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.<BeginExecuteCore>b__1d(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   в System.Web.Mvc.MvcHandler.<BeginProcessRequest>b__5(IAsyncResult asyncResult, ProcessRequestState innerState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   в System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-09 21:32:45,251 ERROR PrisonLogger - Словарь параметров содержит запись со значением NULL для параметра "id" типа "System.Int32", не допускающего значение NULL, для метода "System.Web.Mvc.ActionResult Edit(Int32)" в "Prison.App.Web.Controllers.PhoneNumberController". Необязательный параметр должен иметь ссылочный тип, тип, допускающий значение NULL, либо он должен быть объявлен как необязательный параметр.
+Имя параметра: parameters
+System.ArgumentException: Словарь параметров содержит запись со значением NULL для параметра "id" типа "System.Int32", не допускающего значение NULL, для метода "System.Web.Mvc.ActionResult Edit(Int32)" в "Prison.App.Web.Controllers.PhoneNumberController". Необязательный параметр должен иметь ссылочный тип, тип, допускающий значение NULL, либо он должен быть объявлен как необязательный параметр.
+Имя параметра: parameters
+   в System.Web.Mvc.ActionDescriptor.ExtractParameterFromDictionary(ParameterInfo parameterInfo, IDictionary`2 parameters, MethodInfo methodInfo)
+   в System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   в System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.<BeginInvokeSynchronousActionMethod>b__39(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3d()
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.<BeginExecuteCore>b__1d(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   в System.Web.Mvc.MvcHandler.<BeginProcessRequest>b__5(IAsyncResult asyncResult, ProcessRequestState innerState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   в System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-09 21:33:30,032 ERROR PrisonLogger - Последовательность не содержит соответствующий элемент
+System.InvalidOperationException: Последовательность не содержит соответствующий элемент
+   в System.Linq.Enumerable.First[TSource](IEnumerable`1 source, Func`2 predicate)
+   в Prison.App.Web.Controllers.PhoneNumberController.ToNumberViewModel(PhoneNumber number) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Controllers\PhoneNumberController.cs:строка 124
+   в Prison.App.Web.Controllers.PhoneNumberController.Edit(Int32 id) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Controllers\PhoneNumberController.cs:строка 80
+   в lambda_method(Closure , ControllerBase , Object[] )
+   в System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   в System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.<BeginInvokeSynchronousActionMethod>b__39(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3d()
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.<BeginExecuteCore>b__1d(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   в System.Web.Mvc.MvcHandler.<BeginProcessRequest>b__5(IAsyncResult asyncResult, ProcessRequestState innerState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   в System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-09 21:37:04,971 ERROR PrisonLogger - Элемент модели, переданный в словарь, имеет тип "Prison.App.Common.Entities.PhoneNumber", но для этого словаря требуется элемент модели типа "Prison.App.Web.Models.NumberViewModel".
+System.InvalidOperationException: Элемент модели, переданный в словарь, имеет тип "Prison.App.Common.Entities.PhoneNumber", но для этого словаря требуется элемент модели типа "Prison.App.Web.Models.NumberViewModel".
+   в System.Web.Mvc.ViewDataDictionary`1.SetModel(Object value)
+   в System.Web.Mvc.ViewDataDictionary.set_Model(Object value)
+   в System.Web.Mvc.ViewDataDictionary..ctor(ViewDataDictionary dictionary)
+   в System.Web.Mvc.ViewDataDictionary`1..ctor(ViewDataDictionary viewDataDictionary)
+   в System.Web.Mvc.WebViewPage`1.SetViewData(ViewDataDictionary viewData)
+   в System.Web.Mvc.WebViewPage.set_ViewData(ViewDataDictionary value)
+   в System.Web.Mvc.RazorView.RenderView(ViewContext viewContext, TextWriter writer, Object instance)
+   в System.Web.Mvc.BuildManagerCompiledView.Render(ViewContext viewContext, TextWriter writer)
+   в System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   в System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   в System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   в System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   в System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   в System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.<BeginExecuteCore>b__1d(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   в System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   в System.Web.Mvc.Async.AsyncResultWrapper.End(IAsyncResult asyncResult, Object tag)
+   в System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.<BeginExecute>b__15(IAsyncResult asyncResult, Controller controller)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   в System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   в System.Web.Mvc.Async.AsyncResultWrapper.End(IAsyncResult asyncResult, Object tag)
+   в System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.System.Web.Mvc.Async.IAsyncController.EndExecute(IAsyncResult asyncResult)
+   в System.Web.Mvc.MvcHandler.<BeginProcessRequest>b__5(IAsyncResult asyncResult, ProcessRequestState innerState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   в System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   в System.Web.Mvc.Async.AsyncResultWrapper.End(IAsyncResult asyncResult, Object tag)
+   в System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   в System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.EndProcessRequest(IAsyncResult result)
+   в System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-09 21:43:54,073 ERROR PrisonLogger - Элемент модели, переданный в словарь, имеет тип "Prison.App.Common.Entities.PhoneNumber", но для этого словаря требуется элемент модели типа "Prison.App.Web.Models.NumberViewModel".
+System.InvalidOperationException: Элемент модели, переданный в словарь, имеет тип "Prison.App.Common.Entities.PhoneNumber", но для этого словаря требуется элемент модели типа "Prison.App.Web.Models.NumberViewModel".
+   в System.Web.Mvc.ViewDataDictionary`1.SetModel(Object value)
+   в System.Web.Mvc.ViewDataDictionary..ctor(ViewDataDictionary dictionary)
+   в System.Web.Mvc.WebViewPage`1.SetViewData(ViewDataDictionary viewData)
+   в System.Web.Mvc.RazorView.RenderView(ViewContext viewContext, TextWriter writer, Object instance)
+   в System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   в System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   в System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   в System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.<BeginExecuteCore>b__1d(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   в System.Web.Mvc.MvcHandler.<BeginProcessRequest>b__5(IAsyncResult asyncResult, ProcessRequestState innerState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   в System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-09 21:46:52,585 ERROR PrisonLogger - Словарь параметров содержит запись со значением NULL для параметра "id" типа "System.Int32", не допускающего значение NULL, для метода "System.Web.Mvc.ActionResult Details(Int32)" в "Prison.App.Web.Controllers.PhoneNumberController". Необязательный параметр должен иметь ссылочный тип, тип, допускающий значение NULL, либо он должен быть объявлен как необязательный параметр.
+Имя параметра: parameters
+System.ArgumentException: Словарь параметров содержит запись со значением NULL для параметра "id" типа "System.Int32", не допускающего значение NULL, для метода "System.Web.Mvc.ActionResult Details(Int32)" в "Prison.App.Web.Controllers.PhoneNumberController". Необязательный параметр должен иметь ссылочный тип, тип, допускающий значение NULL, либо он должен быть объявлен как необязательный параметр.
+Имя параметра: parameters
+   в System.Web.Mvc.ActionDescriptor.ExtractParameterFromDictionary(ParameterInfo parameterInfo, IDictionary`2 parameters, MethodInfo methodInfo)
+   в System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   в System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.<BeginInvokeSynchronousActionMethod>b__39(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3d()
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.<BeginExecuteCore>b__1d(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   в System.Web.Mvc.MvcHandler.<BeginProcessRequest>b__5(IAsyncResult asyncResult, ProcessRequestState innerState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   в System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-09 21:49:07,264 ERROR PrisonLogger - Элемент модели, переданный в словарь, имеет тип "Prison.App.Common.Entities.MaritalStatus", но для этого словаря требуется элемент модели типа "Prison.App.Web.Models.StatusViewModel".
+System.InvalidOperationException: Элемент модели, переданный в словарь, имеет тип "Prison.App.Common.Entities.MaritalStatus", но для этого словаря требуется элемент модели типа "Prison.App.Web.Models.StatusViewModel".
+   в System.Web.Mvc.ViewDataDictionary`1.SetModel(Object value)
+   в System.Web.Mvc.ViewDataDictionary..ctor(ViewDataDictionary dictionary)
+   в System.Web.Mvc.WebViewPage`1.SetViewData(ViewDataDictionary viewData)
+   в System.Web.Mvc.RazorView.RenderView(ViewContext viewContext, TextWriter writer, Object instance)
+   в System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   в System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   в System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   в System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.<BeginExecuteCore>b__1d(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   в System.Web.Mvc.MvcHandler.<BeginProcessRequest>b__5(IAsyncResult asyncResult, ProcessRequestState innerState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   в System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-09 21:49:10,369 ERROR PrisonLogger - Элемент модели, переданный в словарь, имеет тип "Prison.App.Common.Entities.MaritalStatus", но для этого словаря требуется элемент модели типа "Prison.App.Web.Models.StatusViewModel".
+System.InvalidOperationException: Элемент модели, переданный в словарь, имеет тип "Prison.App.Common.Entities.MaritalStatus", но для этого словаря требуется элемент модели типа "Prison.App.Web.Models.StatusViewModel".
+   в System.Web.Mvc.ViewDataDictionary`1.SetModel(Object value)
+   в System.Web.Mvc.ViewDataDictionary..ctor(ViewDataDictionary dictionary)
+   в System.Web.Mvc.WebViewPage`1.SetViewData(ViewDataDictionary viewData)
+   в System.Web.Mvc.RazorView.RenderView(ViewContext viewContext, TextWriter writer, Object instance)
+   в System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   в System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   в System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   в System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.<BeginExecuteCore>b__1d(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   в System.Web.Mvc.MvcHandler.<BeginProcessRequest>b__5(IAsyncResult asyncResult, ProcessRequestState innerState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   в System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-09 22:43:27,040 ERROR PrisonLogger - Элемент модели, переданный в словарь, имеет тип "Prison.App.Common.Entities.MaritalStatus", но для этого словаря требуется элемент модели типа "Prison.App.Web.Models.StatusViewModel".
+System.InvalidOperationException: Элемент модели, переданный в словарь, имеет тип "Prison.App.Common.Entities.MaritalStatus", но для этого словаря требуется элемент модели типа "Prison.App.Web.Models.StatusViewModel".
+   в System.Web.Mvc.ViewDataDictionary`1.SetModel(Object value)
+   в System.Web.Mvc.ViewDataDictionary..ctor(ViewDataDictionary dictionary)
+   в System.Web.Mvc.WebViewPage`1.SetViewData(ViewDataDictionary viewData)
+   в System.Web.Mvc.RazorView.RenderView(ViewContext viewContext, TextWriter writer, Object instance)
+   в System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   в System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   в System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   в System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.<BeginExecuteCore>b__1d(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   в System.Web.Mvc.MvcHandler.<BeginProcessRequest>b__5(IAsyncResult asyncResult, ProcessRequestState innerState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   в System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)

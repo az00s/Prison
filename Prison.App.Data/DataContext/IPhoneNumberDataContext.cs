@@ -7,6 +7,7 @@ namespace Prison.App.Data.DataContext
     {
         IEnumerable<PhoneNumber> GetAllNumbers();
         PhoneNumber GetNumberByID(int id);
+        IEnumerable<Detainee> GetAllDetaineeLastNames();
         void Create(PhoneNumber dtn);
         void Update(PhoneNumber dtn);
         void Delete(int id);

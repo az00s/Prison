@@ -27,6 +27,10 @@ namespace Prison.App.Data.Repositories.Impl
             return _numberContext.GetNumberByID(id);
         }
 
+        public IEnumerable<Detainee> GetAllDetaineeLastNames()
+        {
+            return _numberContext.GetAllDetaineeLastNames();
+        }
         public void Create(PhoneNumber emp)
         {
             _numberContext.Create(emp);

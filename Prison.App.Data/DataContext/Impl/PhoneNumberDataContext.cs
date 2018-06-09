@@ -28,6 +28,17 @@ namespace Prison.App.Data.DataContext.Impl
             return numberList;
         }
 
+        public IEnumerable<Detainee> GetAllDetaineeLastNames()
+        {
+            IEnumerable<Detainee> numberList = new List<Detainee>();
+
+            var dataSet = _context.ExecuteQuery("SelectAllDetaineeLastNames", null, CommandType.StoredProcedure);
+
+            numberList = ToDetaineeList(dataSet);
+
+            return numberList;
+        }
+
         public PhoneNumber GetNumberByID(int id)
         {
             PhoneNumber number;
@@ -97,6 +108,24 @@ namespace Prison.App.Data.DataContext.Impl
             return list;
         }
 
+        private IEnumerable<Detainee> ToDetaineeList(DataSet dataset)
+        {
+            List<Detainee> list = new List<Detainee>();
+
+            var numberTable = dataset.Tables[0];
+
+            foreach (var row in numberTable.AsEnumerable())
+            {
+                list.Add(new Detainee {
+                    DetaineeID = row.Field<int>(0),
+                    LastName= row.Field<string>(1)
+                }
+                     );
+            }
+            return list;
+        }
+
+
         private PhoneNumber ToNumber(DataSet dataset)
         {
             var row = dataset.Tables[0].Rows[0];
@@ -105,7 +134,7 @@ namespace Prison.App.Data.DataContext.Impl
             {
                 NumberID = row.Field<int>("NumberID"),
                 Number = row.Field<string>("Number"),
-                DetaineeID= row.Field<int>("NumberID")
+                DetaineeID= row.Field<int>("DetaineeID")
 
             };
         }
