@@ -1,16 +1,12 @@
-﻿using Prison.App.Common.Entities;
-using Prison.App.Common.Helpers;
+﻿using Prison.App.Common.Helpers;
 using Prison.App.Common.Interfaces;
 using Prison.App.Common.Loggers;
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Prison.App.Data.Repositories.Impl
+namespace Prison.App.Data.DataContext.Impl
 {
     internal class DataContext<T>: IDataContext<T>
     {
@@ -83,8 +79,103 @@ namespace Prison.App.Data.Repositories.Impl
             return dataset;
         }
 
+        public void ExecuteNonQuery(string cmdText, IDictionary<string, object> parameters, CommandType commandType)
+        {
+            SqlConnection connection = null;
+            SqlCommand command = null;
+            
+            try
+            {
+                connection = new SqlConnection(_connection);
+                command = GetCommand(cmdText, connection, parameters, commandType);
+
+                connection.Open();
+
+                command.ExecuteNonQuery();
+
+                connection.Close();
+            }
+
+            catch (InvalidOperationException ex)
+            {
+                _log.Error(ex.Message + $" \nConnection string:{connection.ConnectionString}, \nQueryText:{cmdText}");
+            }
+
+            catch (SqlException ex)
+            {
+                _log.Error(ex.Message + $" \nConnection string:{connection.ConnectionString}, \nQueryText:{cmdText}");
+            }
+
+            catch (InvalidCastException ex)
+            {
+                _log.Error(ex.Message + $" \nConnection string:{connection.ConnectionString}, \nQueryText:{cmdText}");
+            }
+            finally
+            {
+                if (connection != null)
+                {
+                    connection.Dispose();
+                }
+
+                if (command != null)
+                {
+                    command.Dispose();
+                }
+
+            }
+
+        }
+
+        public void ExecuteNonQuery(string cmdText, SqlParameter[] parameters, CommandType commandType)
+        {
+            SqlConnection connection = null;
+            SqlCommand command = null;
+
+            try
+            {
+                connection = new SqlConnection(_connection);
+                command = GetCommand(cmdText, connection, parameters, commandType);
+
+                connection.Open();
+
+                command.ExecuteNonQuery();
+
+                connection.Close();
+            }
+
+            catch (InvalidOperationException ex)
+            {
+                _log.Error(ex.Message + $" \nConnection string:{connection.ConnectionString}, \nQueryText:{cmdText}");
+            }
+
+            catch (SqlException ex)
+            {
+                _log.Error(ex.Message + $" \nConnection string:{connection.ConnectionString}, \nQueryText:{cmdText}");
+            }
+
+            catch (InvalidCastException ex)
+            {
+                _log.Error(ex.Message + $" \nConnection string:{connection.ConnectionString}, \nQueryText:{cmdText}");
+            }
+            finally
+            {
+                if (connection != null)
+                {
+                    connection.Dispose();
+                }
+
+                if (command != null)
+                {
+                    command.Dispose();
+                }
+
+            }
+
+        }
 
 
+
+        #region HelperMethods
         private SqlCommand GetCommand(string cmdText, SqlConnection connection, IDictionary<string, object> parameters, CommandType commandType)
         {
             SqlCommand command=new SqlCommand(cmdText, connection) { CommandType = commandType };
@@ -105,12 +196,12 @@ namespace Prison.App.Data.Repositories.Impl
             return command;
         }
 
-        public SqlParameter CreateParameter(string parameterName, object value, SqlDbType sqlDbType=SqlDbType.Variant,string typeName=null)
+        public SqlParameter CreateCustomParameter(string parameterName, IEnumerable<int> value, SqlDbType sqlDbType=SqlDbType.Variant,string typeName=null)
         {
             return new SqlParameter()
             {
                 ParameterName = parameterName,
-                Value = value,
+                Value = CreateDataTable(value),
                 SqlDbType = sqlDbType,
                 TypeName = typeName
             };
@@ -132,11 +223,35 @@ namespace Prison.App.Data.Repositories.Impl
 
             foreach (var param in parameters)
             {
-                resultArray[index++]= CreateParameter(param.Key, param.Value);
+                resultArray[index++] = CreateParameter(param.Key, param.Value);
             }
             return resultArray;
         }
 
+        public List<SqlParameter> GetParameterList(IDictionary<string, object> parameters)
+        {
+            List<SqlParameter> resultList = new List<SqlParameter>();
+
+            foreach (var param in parameters)
+            {
+                resultList.Add(CreateParameter(param.Key, param.Value));
+            }
+            return resultList;
+        }
+
+        private DataTable CreateDataTable(IEnumerable<int> ids)
+        {
+            DataTable table = new DataTable();
+            table.Columns.Add("RoleID", typeof(int));
+            foreach (int id in ids)
+            {
+                table.Rows.Add(id);
+            }
+            return table;
+        }
+
+
+        #endregion
 
 
 

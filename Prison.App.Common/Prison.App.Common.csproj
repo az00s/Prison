@@ -79,6 +79,7 @@
     <Compile Include="Entities\Employee.cs" />
     <Compile Include="Entities\IBlurb.cs" />
     <Compile Include="Entities\MaritalStatus.cs" />
+    <Compile Include="Entities\PhoneNumber.cs" />
     <Compile Include="Entities\PlaceOfStay.cs" />
     <Compile Include="Entities\Position.cs" />
     <Compile Include="Entities\Role.cs" />

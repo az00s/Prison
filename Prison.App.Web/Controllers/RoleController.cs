@@ -26,7 +26,7 @@ namespace Prison.App.Web.Controllers
 
         public ActionResult Index()
         {
-            var roles = _roles.GetAllRecordsFromTable();
+            var roles = _roles.GetAllRoles();
 
 
             if (roles == null)

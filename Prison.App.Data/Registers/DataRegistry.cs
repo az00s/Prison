@@ -1,6 +1,7 @@
-﻿using Prison.App.Common.Entities;
-using Prison.App.Common.Interfaces;
+﻿using Prison.App.Common.Interfaces;
 using Prison.App.Common.Loggers;
+using Prison.App.Data.DataContext;
+using Prison.App.Data.DataContext.Impl;
 using Prison.App.Data.Interfaces;
 using Prison.App.Data.Repositories;
 using Prison.App.Data.Repositories.Impl;
@@ -13,16 +14,28 @@ namespace Prison.App.Data.Registers
     {
         public DataRegistry()
         {
+            ForSingletonOf<ILogger>().Use<Logger>();
+
+            For<IAdService>().Use<AdService>();
+
             For<IEmployeeRepository>().Use<EmployeeRepository>();
             For<IDetaineeRepository>().Use<DetaineeRepository>();
             For<IPlaceOfStayRepository>().Use<PlaceOfStayRepository>();
             For<IPositionRepository>().Use<PositionRepository>();
             For<IRoleRepository>().Use<RoleRepository>();
             For<IUserRepository>().Use<UserRepository>();
-            For<IAdService>().Use<AdService>();
-            ForSingletonOf<ILogger>().Use<Logger>();
-            For<IDetaineeDataContext>().Use<DetaineeDataContext>();
+            For<IStatusRepository>().Use<StatusRepository>();
+            For<IPhoneNumberRepository>().Use<PhoneNumberRepository>();
+
             For(typeof(IDataContext<>)).Use(typeof(DataContext<>));
+            For<IDetaineeDataContext>().Use<DetaineeDataContext>();
+            For<IEmployeeDataContext>().Use<EmployeeDataContext>();
+            For<IPlaceDataContext>().Use<PlaceDataContext>();
+            For<IPositionDataContext>().Use<PositionDataContext>();
+            For<IUserDataContext>().Use<UserDataContext>();
+            For<IRoleDataContext>().Use<RoleDataContext>();
+            For<IMaritalStatusDataContext>().Use<MaritalStatusDataContext>();
+            For<IPhoneNumberDataContext>().Use<PhoneNumberDataContext>();
 
         }
     }

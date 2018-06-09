@@ -39,7 +39,7 @@ namespace Prison.App.Business.Providers.Impl
             else
             {
                 //get data from dataBase if cache hasn't this data
-                result = _rep.GetAllRecordsFromTable();
+                result = _rep.GetAllEmployees();
 
                 if (result == null)
                 {

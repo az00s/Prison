@@ -41,7 +41,7 @@ namespace Prison.App.Business.Providers.Impl
             else
             {
                 //get data from dataBase if cache hasn't this data
-                result = _rep.GetAllRecordsFromTable();
+                result = _rep.GetAllPlaces();
 
                 if (result == null)
                 {
@@ -72,7 +72,7 @@ namespace Prison.App.Business.Providers.Impl
                 else
                 {
                     //get data from dataBase if cache hasn't this data
-                    result = _rep.GetPlaceOfStayByID(id);
+                    result = _rep.GetPlaceByID(id);
 
                     if (result == null)
                     {

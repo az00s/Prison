@@ -1,25 +1,19 @@
 ﻿using Prison.App.Common.Entities;
 using System.Collections.Generic;
 
-namespace Prison.App.Data.Repositories
+namespace Prison.App.Data.DataContext
 {
-    public interface IUserRepository
+    public interface IUserDataContext
     {
         IEnumerable<User> GetAllUsers();
-
-        IEnumerable<string> GetAllLogins();
-
-        IEnumerable<string> GetUserRoles(string login);
-        IEnumerable<Employee> GetUnoccupiedEmployeeNames();
-        string GetUserPasswordByLogin(string login);
-
-        User GetUserByLogin(string login);
         User GetUserByID(int id);
-
-        void Create(User emp);
-
-        void Update(User emp);
+        IEnumerable<string> GetAllLogins();
+        IEnumerable<string> GetUserRoles(string login);
+        string GetUserPasswordByLogin(string login);
+        User GetUserByLogin(string login);
+        IEnumerable<Employee> GetUnoccupiedEmployeeNames();
+        void Create(User dtn);
+        void Update(User dtn);
         void Delete(int id);
-
     }
 }

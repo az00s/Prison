@@ -33,7 +33,7 @@ namespace Prison.App.Web.Controllers
 
         public ActionResult Index()
         {
-            var users = _usr.GetAllRecordsFromTable();
+            var users = _usr.GetAllUsers();
 
             var ViewModelList = ToUserIndexViewModel(users);
 
@@ -47,7 +47,7 @@ namespace Prison.App.Web.Controllers
 
         public ActionResult Create()
         {
-            var Roles = _roles.GetAllRecordsFromTable();
+            var Roles = _roles.GetAllRoles();
             var EmployeeNames = _usr.GetUnoccupiedEmployeeNames();
 
             if (EmployeeNames == null)
@@ -244,7 +244,7 @@ namespace Prison.App.Web.Controllers
                 Email = usr.Email,
                 Password = usr.Password,
                 Roles = usr.Roles,
-                AllRoles = _roles.GetAllRecordsFromTable()
+                AllRoles = _roles.GetAllRoles()
                 };
             
 

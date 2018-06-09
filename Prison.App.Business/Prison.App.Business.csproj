@@ -83,6 +83,7 @@
     <Compile Include="Providers\IPlaceOfStayProvider.cs" />
     <Compile Include="Providers\IPositionProvider.cs" />
     <Compile Include="Providers\IRoleProvider.cs" />
+    <Compile Include="Providers\IStatusProvider.cs" />
     <Compile Include="Providers\IUserProvider.cs" />
     <Compile Include="Registers\BusinessRegistry.cs" />
     <Compile Include="Services\ICachingService.cs" />

@@ -21,9 +21,9 @@ namespace Prison.App.Business.Providers.Impl
             _rep = rep;
         }
 
-        public IEnumerable<Role> GetAllRecordsFromTable()
+        public IEnumerable<Role> GetAllRoles()
         {
-            return _rep.GetAllRecordsFromTable();
+            return _rep.GetAllRoles();
         }
 
         public Role GetRoleByID(int id)

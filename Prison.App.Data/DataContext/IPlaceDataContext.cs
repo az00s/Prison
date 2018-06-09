@@ -1,14 +1,14 @@
 ﻿using Prison.App.Common.Entities;
 using System.Collections.Generic;
 
-namespace Prison.App.Data.Repositories
+namespace Prison.App.Data.DataContext
 {
-    public interface IPlaceOfStayRepository
+    public interface IPlaceDataContext
     {
         IEnumerable<PlaceOfStay> GetAllPlaces();
         PlaceOfStay GetPlaceByID(int id);
-        void Create(PlaceOfStay plc);
-        void Update(PlaceOfStay plc);
+        void Create(PlaceOfStay dtn);
+        void Update(PlaceOfStay dtn);
         void Delete(int id);
     }
 }

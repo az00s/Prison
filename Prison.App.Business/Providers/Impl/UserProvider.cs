@@ -25,9 +25,9 @@ namespace Prison.App.Business.Providers.Impl
             _rep = rep;
         }
 
-        public IEnumerable<User> GetAllRecordsFromTable()
+        public IEnumerable<User> GetAllUsers()
         {
-            return _rep.GetAllRecordsFromTable();
+            return _rep.GetAllUsers();
         }
 
         public IEnumerable<string> GetAllLogins()

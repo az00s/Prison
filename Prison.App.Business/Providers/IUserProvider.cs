@@ -5,7 +5,7 @@ namespace Prison.App.Business.Providers
 {
     public interface IUserProvider
     {
-        IEnumerable<User> GetAllRecordsFromTable();
+        IEnumerable<User> GetAllUsers();
 
         IEnumerable<string> GetAllLogins();
 
