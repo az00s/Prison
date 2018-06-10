@@ -189,6 +189,11 @@ namespace Prison.App.Web.Controllers
 
         private IEnumerable<DetaineeIndexViewModel> ToDetaineeIndexViewModel(IEnumerable<Detainee> list)
         {
+            if (list==null)
+            {
+                return null;
+            }
+
             List<DetaineeIndexViewModel> ResultList = new List<DetaineeIndexViewModel>();
 
             foreach (Detainee item in list)

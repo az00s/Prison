@@ -117,18 +117,18 @@ namespace Prison.App.Business.Tests
             Assert.AreEqual(_testlist[0].PhoneNumbers, resultList[0].PhoneNumbers);
             Assert.AreEqual(_testlist[0].Detentions.ToList()[0].DetentionDate, resultList[0].Detentions.ToList()[0].DetentionDate);
 
-            Assert.AreEqual(2, resultList[1].DetaineeID);
-            Assert.AreEqual("Doe", resultList[1].LastName);
-            Assert.AreEqual("John", resultList[1].FirstName);
-            Assert.AreEqual("empty", resultList[1].MiddleName);
-            Assert.AreEqual("somewhere", resultList[1].WorkPlace);
-            Assert.AreEqual("someplace", resultList[1].ResidenceAddress);
-            Assert.AreEqual("some data", resultList[1].AdditionalData);
-            Assert.AreEqual(DateTime.MaxValue, resultList[1].BirstDate);
-            Assert.AreEqual(null, resultList[1].ImagePath);
-            Assert.AreEqual(2, resultList[1].MaritalStatusID);
-            Assert.AreEqual(null, resultList[1].PhoneNumbers);
-            Assert.AreEqual(null, resultList[1].Detentions);
+            Assert.AreEqual(_testlist[1].DetaineeID, resultList[1].DetaineeID);
+            Assert.AreEqual(_testlist[1].LastName, resultList[1].LastName);
+            Assert.AreEqual(_testlist[1].FirstName, resultList[1].FirstName);
+            Assert.AreEqual(_testlist[1].MiddleName, resultList[1].MiddleName);
+            Assert.AreEqual(_testlist[1].WorkPlace, resultList[1].WorkPlace);
+            Assert.AreEqual(_testlist[1].ResidenceAddress, resultList[1].ResidenceAddress);
+            Assert.AreEqual(_testlist[1].AdditionalData, resultList[1].AdditionalData);
+            Assert.AreEqual(_testlist[1].BirstDate, resultList[1].BirstDate);
+            Assert.AreEqual(_testlist[1].ImagePath, resultList[1].ImagePath);
+            Assert.AreEqual(_testlist[1].MaritalStatusID, resultList[1].MaritalStatusID);
+            Assert.AreEqual(_testlist[1].PhoneNumbers, resultList[1].PhoneNumbers);
+            Assert.AreEqual(_testlist[1].Detentions, resultList[1].Detentions);
 
             _cacheService.Verify(c => c.Get<IEnumerable<Detainee>>(It.IsAny<string>()), Times.Once);
             _detaineeRepository.Verify(r => r.GetAllDetainees(), Times.Once);
@@ -137,7 +137,7 @@ namespace Prison.App.Business.Tests
         }
 
         [TestMethod]
-        public void GetDetaineeByID_ArgumentInt2_DetaineeWithID2Returned()
+        public void GetDetaineeByID_ValidId_DetaineeReturned()
         {
             //arrange
             int id = 2;
@@ -150,12 +150,62 @@ namespace Prison.App.Business.Tests
             //assert
             Assert.AreEqual(id,result.DetaineeID);
             _cacheService.Verify(c => c.Get<Detainee>(It.IsAny<string>()), Times.Once);
+            _cacheService.Verify(c => c.Add<Detainee>(It.IsAny<string>(),It.IsAny<Detainee>(),It.IsAny<int>()), Times.Once);
             _detaineeRepository.Verify(r => r.GetDetaineeByID(It.IsAny<int>()), Times.Once);
 
         }
 
         [TestMethod]
-        public void GetDetaineesByDate_inputValidDate03052018_DetaineeListReturned()
+        public void GetDetaineeByID_ValidId_DetaineeReturnedFromCache()
+        {
+            //arrange
+            int id = _detainee.DetaineeID;
+            _cacheService.Setup(c => c.Get<Detainee>(It.IsAny<string>())).Returns(_detainee);
+
+            //act
+            Detainee result = _detaineeProvider.GetDetaineeByID(id);
+
+            //assert
+            Assert.AreEqual(id, _detainee.DetaineeID);
+            _cacheService.Verify(c => c.Get<Detainee>(It.IsAny<string>()), Times.Once);
+            _cacheService.Verify(c => c.Add<Detainee>(It.IsAny<string>(), It.IsAny<Detainee>(), It.IsAny<int>()), Times.Never);
+            _detaineeRepository.Verify(r => r.GetDetaineeByID(It.IsAny<int>()), Times.Never);
+
+        }
+
+        [TestMethod]
+        public void GetDetaineeByID_InvalidId_ExceptionReturned()
+        {
+            //arrange
+            int id = -1;
+
+            //act
+            //assert
+            Assert.ThrowsException<ArgumentException>(()=>_detaineeProvider.GetDetaineeByID(id));
+            _cacheService.Verify(c => c.Get<Detainee>(It.IsAny<string>()), Times.Never);
+            _detaineeRepository.Verify(r => r.GetDetaineeByID(It.IsAny<int>()), Times.Never);
+
+        }
+
+        [TestMethod]
+        public void GetDetaineeByID_ValidId_ExceptionReturned()
+        {
+            //arrange
+            int id = 2;
+            _detaineeRepository.Setup(m => m.GetDetaineeByID(It.IsAny<int>())).Returns<Detainee>(null);
+            _cacheService.Setup(c => c.Get<Detainee>(It.IsAny<string>())).Returns<Detainee>(null);
+
+
+            //act
+            //assert
+            Assert.ThrowsException<NullReferenceException>(() => _detaineeProvider.GetDetaineeByID(id));
+            _cacheService.Verify(c => c.Get<Detainee>(It.IsAny<string>()), Times.Once);
+            _detaineeRepository.Verify(r => r.GetDetaineeByID(It.IsAny<int>()), Times.Once);
+
+        }
+
+        [TestMethod]
+        public void GetDetaineesByDate_ValidDate_DetaineeListReturned()
         {
             //arrange
             DateTime date = new DateTime(2018,5,3);
@@ -163,11 +213,108 @@ namespace Prison.App.Business.Tests
             _cacheService.Setup(c => c.Get<IEnumerable<Detainee>>(It.IsAny<string>())).Returns<IEnumerable<Detainee>>(null);
 
             //act
-            List<Detainee> result = _detaineeProvider.GetDetaineesByDate(date).ToList();
+            List<Detainee> resultList = _detaineeProvider.GetDetaineesByDate(date).ToList();
 
             //assert
-            Assert.IsNotNull(result);
-            Assert.IsTrue(result.Count>0);
+            Assert.IsNotNull(resultList);
+            Assert.IsTrue(resultList.Count>0);
+            Assert.AreEqual(_testlist[0].DetaineeID, resultList[0].DetaineeID);
+            Assert.AreEqual(_testlist[0].LastName, resultList[0].LastName);
+            Assert.AreEqual(_testlist[0].FirstName, resultList[0].FirstName);
+            Assert.AreEqual(_testlist[0].MiddleName, resultList[0].MiddleName);
+            Assert.AreEqual(_testlist[0].WorkPlace, resultList[0].WorkPlace);
+            Assert.AreEqual(_testlist[0].ResidenceAddress, resultList[0].ResidenceAddress);
+            Assert.AreEqual(_testlist[0].AdditionalData, resultList[0].AdditionalData);
+            Assert.AreEqual(_testlist[0].BirstDate, resultList[0].BirstDate);
+            Assert.AreEqual(_testlist[0].ImagePath, resultList[0].ImagePath);
+            Assert.AreEqual(_testlist[0].MaritalStatusID, resultList[0].MaritalStatusID);
+            Assert.AreEqual(_testlist[0].PhoneNumbers, resultList[0].PhoneNumbers);
+            Assert.AreEqual(_testlist[0].Detentions.ToList()[0].DetentionDate, resultList[0].Detentions.ToList()[0].DetentionDate);
+
+            Assert.AreEqual(_testlist[1].DetaineeID, resultList[1].DetaineeID);
+            Assert.AreEqual(_testlist[1].LastName, resultList[1].LastName);
+            Assert.AreEqual(_testlist[1].FirstName, resultList[1].FirstName);
+            Assert.AreEqual(_testlist[1].MiddleName, resultList[1].MiddleName);
+            Assert.AreEqual(_testlist[1].WorkPlace, resultList[1].WorkPlace);
+            Assert.AreEqual(_testlist[1].ResidenceAddress, resultList[1].ResidenceAddress);
+            Assert.AreEqual(_testlist[1].AdditionalData, resultList[1].AdditionalData);
+            Assert.AreEqual(_testlist[1].BirstDate, resultList[1].BirstDate);
+            Assert.AreEqual(_testlist[1].ImagePath, resultList[1].ImagePath);
+            Assert.AreEqual(_testlist[1].MaritalStatusID, resultList[1].MaritalStatusID);
+            Assert.AreEqual(_testlist[1].PhoneNumbers, resultList[1].PhoneNumbers);
+            Assert.AreEqual(_testlist[1].Detentions, resultList[1].Detentions);
+            _cacheService.Verify(c => c.Get<IEnumerable<Detainee>>(It.IsAny<string>()), Times.Once);
+            _detaineeRepository.Verify(r => r.GetDetaineesByDate(It.IsAny<DateTime>()), Times.Once);
+        }
+
+        [TestMethod]
+        public void GetDetaineesByDate_ValidDate_DetaineeListReturnedFromCache()
+        {
+            //arrange
+            DateTime date = new DateTime(2018, 5, 3);
+            _cacheService.Setup(c => c.Get<IEnumerable<Detainee>>(It.IsAny<string>())).Returns(_testlist);
+
+            //act
+            List<Detainee> resultList = _detaineeProvider.GetDetaineesByDate(date).ToList();
+
+            //assert
+            Assert.IsNotNull(resultList);
+            Assert.IsTrue(resultList.Count > 0);
+            Assert.AreEqual(_testlist[0].DetaineeID, resultList[0].DetaineeID);
+            Assert.AreEqual(_testlist[0].LastName, resultList[0].LastName);
+            Assert.AreEqual(_testlist[0].FirstName, resultList[0].FirstName);
+            Assert.AreEqual(_testlist[0].MiddleName, resultList[0].MiddleName);
+            Assert.AreEqual(_testlist[0].WorkPlace, resultList[0].WorkPlace);
+            Assert.AreEqual(_testlist[0].ResidenceAddress, resultList[0].ResidenceAddress);
+            Assert.AreEqual(_testlist[0].AdditionalData, resultList[0].AdditionalData);
+            Assert.AreEqual(_testlist[0].BirstDate, resultList[0].BirstDate);
+            Assert.AreEqual(_testlist[0].ImagePath, resultList[0].ImagePath);
+            Assert.AreEqual(_testlist[0].MaritalStatusID, resultList[0].MaritalStatusID);
+            Assert.AreEqual(_testlist[0].PhoneNumbers, resultList[0].PhoneNumbers);
+            Assert.AreEqual(_testlist[0].Detentions.ToList()[0].DetentionDate, resultList[0].Detentions.ToList()[0].DetentionDate);
+
+            Assert.AreEqual(_testlist[1].DetaineeID, resultList[1].DetaineeID);
+            Assert.AreEqual(_testlist[1].LastName, resultList[1].LastName);
+            Assert.AreEqual(_testlist[1].FirstName, resultList[1].FirstName);
+            Assert.AreEqual(_testlist[1].MiddleName, resultList[1].MiddleName);
+            Assert.AreEqual(_testlist[1].WorkPlace, resultList[1].WorkPlace);
+            Assert.AreEqual(_testlist[1].ResidenceAddress, resultList[1].ResidenceAddress);
+            Assert.AreEqual(_testlist[1].AdditionalData, resultList[1].AdditionalData);
+            Assert.AreEqual(_testlist[1].BirstDate, resultList[1].BirstDate);
+            Assert.AreEqual(_testlist[1].ImagePath, resultList[1].ImagePath);
+            Assert.AreEqual(_testlist[1].MaritalStatusID, resultList[1].MaritalStatusID);
+            Assert.AreEqual(_testlist[1].PhoneNumbers, resultList[1].PhoneNumbers);
+            Assert.AreEqual(_testlist[1].Detentions, resultList[1].Detentions);
+            _cacheService.Verify(c => c.Get<IEnumerable<Detainee>>(It.IsAny<string>()), Times.Once);
+            _cacheService.Verify(c => c.Add(It.IsAny<string>(), It.IsAny<IEnumerable<Detainee>>(), It.IsAny<int>()), Times.Never);
+            _detaineeRepository.Verify(r => r.GetDetaineesByDate(It.IsAny<DateTime>()), Times.Never);
+        }
+
+        [TestMethod]
+        public void GetDetaineesByDate_InvalidDate_ExceptionReturned()
+        {
+            //arrange
+            DateTime date = new DateTime(2019, 5, 3);
+
+            //act
+            //assert
+            Assert.ThrowsException<ArgumentException>(()=> _detaineeProvider.GetDetaineesByDate(date));
+            _cacheService.Verify(c => c.Get<IEnumerable<Detainee>>(It.IsAny<string>()), Times.Never);
+            _detaineeRepository.Verify(r => r.GetDetaineesByDate(It.IsAny<DateTime>()), Times.Never);
+        }
+
+        [TestMethod]
+        public void GetDetaineesByDate_ValidDate_ExceptionReturned()
+        {
+            //arrange
+            DateTime date = new DateTime(2018, 5, 3);
+            _detaineeRepository.Setup(m => m.GetDetaineesByDate(It.IsAny<DateTime>())).Returns<IEnumerable<Detainee>>(null);
+            _cacheService.Setup(c => c.Get<IEnumerable<Detainee>>(It.IsAny<string>())).Returns<IEnumerable<Detainee>>(null);
+
+
+            //act
+            //assert
+            Assert.ThrowsException<NullReferenceException>(() => _detaineeProvider.GetDetaineesByDate(date));
             _cacheService.Verify(c => c.Get<IEnumerable<Detainee>>(It.IsAny<string>()), Times.Once);
             _detaineeRepository.Verify(r => r.GetDetaineesByDate(It.IsAny<DateTime>()), Times.Once);
         }
@@ -216,6 +363,22 @@ namespace Prison.App.Business.Tests
             Assert.AreEqual(MiddleName, result[2].MiddleName);
             Assert.AreEqual(ResidenceAddress, result[2].ResidenceAddress);
             Assert.AreEqual(DetentionDate, result[2].Detentions.ToList()[0].DetentionDate.ToShortDateString());
+
+            _detaineeRepository.Verify(r => r.GetDetaineesByParams(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>()), Times.Once);
+        }
+
+        [TestMethod]
+        public void GetDetaineesByParams_InvalidArguments_NullReturned()
+        {
+            //arrange
+            string DetentionDate = "-----";
+            _detaineeRepository.Setup(m => m.GetDetaineesByParams(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>())).Returns(()=>null);
+
+            //act
+            var result = _detaineeProvider.GetDetaineesByParams(DetentionDate, null, null, null, null);
+
+            //assert
+            Assert.IsNull(result);
 
             _detaineeRepository.Verify(r => r.GetDetaineesByParams(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>()), Times.Once);
         }

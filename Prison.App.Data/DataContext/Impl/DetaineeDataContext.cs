@@ -144,6 +144,10 @@ namespace Prison.App.Data.Repositories.Impl
         #region Converters
         private IEnumerable<Detainee> ToDetaineeList(DataSet dataset)
         {
+            if (dataset.Tables.Count < 1)
+            {
+                return null;
+            }
             List<Detainee> list = new List<Detainee>();
             var DetaineeTable = dataset.Tables[0];
 

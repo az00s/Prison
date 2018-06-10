@@ -121,8 +121,8 @@ namespace Prison.App.Business.Providers.Impl
                     throw new NullReferenceException($"Не удалось получить список семейных статусов!");
                 }
 
-                //because of Marital satauses are not changing all time or could be changed rarely, cache for it was setted to 15 min
-                else _cacheService.Add("AllMaritalStatusList", result, 900);
+                //because of Marital satauses are not changing all time or could be changed rarely, cache for it was setted to 5 min
+                else _cacheService.Add("AllMaritalStatusList", result, 300);
             }
 
             return result;
