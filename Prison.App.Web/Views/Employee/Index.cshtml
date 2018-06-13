@@ -4,48 +4,57 @@
     ViewBag.Title = "Сотрудники";
 }
 
-<h2>Сотрудники изолятора</h2>
-
-<p>
-    @Html.ActionLink("Добавить сотрудника", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.LastName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.FirstName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.MiddleName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Position)
-        </th>
-        <th></th>
-    </tr>
-
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.ActionLink(item.LastName, "Details", new { id = item.EmployeeID })
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.FirstName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.MiddleName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Position)
-        </td>
-        <td>
-            @Html.ActionLink("Редактировать", "Edit", new { id=item.EmployeeID }) |
-            @Html.ActionLink("Подробнее", "Details", new { id=item.EmployeeID }) |
-            @Html.ActionLink("Удалить", "Delete", new {  id=item.EmployeeID })
-        </td>
-    </tr>
+@if (User.IsInRole("editor") || User.IsInRole("admin"))
+{
+    <p>
+        @Html.ActionLink("Добавить сотрудника", "Create")
+    </p>
 }
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.LastName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MiddleName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Position)
+            </th>
+            <th></th>
+        </tr>
 
-</table>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.ActionLink(item.LastName, "Details", new { id = item.EmployeeID })
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FirstName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MiddleName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Position)
+                </td>
+                <td>
+                    @if (User.IsInRole("editor") || User.IsInRole("admin"))
+                    {
+                        @Html.ActionLink("Редактировать", "Edit", new { id = item.EmployeeID })
+                    }
+                        @Html.ActionLink("Подробнее", "Details", new { id = item.EmployeeID }) 
+
+                     @if (User.IsInRole("editor") || User.IsInRole("admin"))
+                     {
+                        @Html.ActionLink("Удалить", "Delete", new { id = item.EmployeeID })
+                     }
+                </td>
+            </tr>
+        }
+
+    </table>

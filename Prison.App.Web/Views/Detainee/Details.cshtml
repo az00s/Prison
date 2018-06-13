@@ -23,7 +23,12 @@
 
 <div id="dvReleaseModal"></div>
 <div id="dvDetentionDetailsModal"></div>
-<h2>О задержанном<small><span class="pull-right @elementClass" id="btnReleaseDetainee">@elementName</span></small></h2>
+<h2>О задержанном
+    @if (User.IsInRole("editor") || User.IsInRole("admin"))
+    {
+        <small><span class="pull-right @elementClass" id="btnReleaseDetainee">@elementName</span></small>
+    }
+    </h2>
 <hr />
 <div class="row">
     <div class="col-md-2">
@@ -138,7 +143,11 @@
           
         </dl>
         <p>
-            @Html.ActionLink("Редактировать", "Edit", new { id = Model.DetaineeID }) |
+            @{ if (User.IsInRole("editor") || User.IsInRole("admin"))
+                {
+                    @Html.ActionLink("Редактировать", "Edit", new { id = Model.DetaineeID })
+                }
+            }
             @Html.ActionLink("Назад", "Index")
         </p>
 

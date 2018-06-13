@@ -209,7 +209,7 @@
     <Content Include="Views\Detention\Details.cshtml" />
     <Content Include="Views\Detainee\Create.cshtml" />
     <Content Include="Views\Detainee\DetaineeList.cshtml" />
-    <Content Include="Views\Shared\Partials\DateNavigation.cshtml" />
+    <Content Include="Views\Detainee\DateNavigation.cshtml" />
     <Content Include="Views\Advertisment\AddUnit.cshtml" />
     <Content Include="Views\Detainee\Edit.cshtml" />
     <Content Include="Views\Detainee\Delete.cshtml" />
