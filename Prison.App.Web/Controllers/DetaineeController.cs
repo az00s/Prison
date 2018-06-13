@@ -14,7 +14,7 @@ using Prison.App.Business.Services;
 
 namespace Prison.App.Web.Controllers
 {
-    
+
     public class DetaineeController : Controller
     {
         private  ILogger _log;
@@ -23,15 +23,24 @@ namespace Prison.App.Web.Controllers
 
         private IDetaineeService _detaineeService;
 
-        public DetaineeController(IDetaineeProvider detaineeProvider, ILogger log, IDetaineeService detaineeService)
+        private IPlaceProvider _placeProvider;
+
+        private IEmployeeProvider _employeeProvider;
+
+
+        public DetaineeController(IDetaineeProvider detaineeProvider, ILogger log, IDetaineeService detaineeService, IPlaceProvider placeProvider, IEmployeeProvider employeeProvider)
         {
 
             ArgumentHelper.ThrowExceptionIfNull(detaineeProvider, "IDetaineeProvider");
             ArgumentHelper.ThrowExceptionIfNull(detaineeService, "IDetaineeService");
+            ArgumentHelper.ThrowExceptionIfNull(placeProvider, "IPlaceProvider");
+            ArgumentHelper.ThrowExceptionIfNull(employeeProvider, "IEmployeeProvider");
             ArgumentHelper.ThrowExceptionIfNull(log, "ILogger");
 
             _detaineeService = detaineeService;
             _detaineeProvider = detaineeProvider;
+            _placeProvider = placeProvider;
+            _employeeProvider = employeeProvider;
             _log = log;
         }
 
@@ -73,12 +82,13 @@ namespace Prison.App.Web.Controllers
 
         [Editor]
         [HttpPost]
-        public ActionResult Create(DetaineeEditViewModel dtn)
+        public ActionResult Create(DetaineeEditViewModel detaineeModel)
         {
             if (ModelState.IsValid)
             {
-                var Entity = ToDetainee(dtn);
-                _detaineeService.Create(Entity);
+                var detainee = ToDetainee(detaineeModel);
+
+                _detaineeService.Create(detainee);
             }
 
             return RedirectToAction("Index");
@@ -163,6 +173,52 @@ namespace Prison.App.Web.Controllers
             
         }
 
+        public ActionResult CreateDetention()
+        {
+            var model = new DetentionCreateViewModel {
+                Places = _placeProvider.GetAllPlaces(),
+                Employees=_employeeProvider.GetAllEmployees()
+            };
+            return View("CreateDetention",model);
+        }
+
+        public ActionResult GetDetentions()
+        {
+            var list = _detaineeProvider.GetAllDetentions();
+            var model = ToDetentionDropDownViewModel(list);
+            return View("_DetentionsField", model);
+        }
+
+        public ActionResult ReleaseDetainee(int id)
+        {
+            var model = new DetentionReleaseDetaineeViewModel
+            {
+                DetentionID = _detaineeProvider.GetLastDetention(id).DetentionID,
+                Employees = _employeeProvider.GetAllEmployees()
+            };
+            return View("ReleaseDetainee", model);
+        }
+
+        [HttpPost]
+        public ActionResult ReleaseDetainee(DetentionReleaseDetaineeViewModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                var detention = ToDetention(model);
+
+                _detaineeService.ReleaseDetainee(detention);
+            }
+
+            return RedirectToAction("Index");
+        }
+
+        public ActionResult DetentionDetails(int id)
+        {
+            var detention = _detaineeProvider.GetDetentionByID(id);
+            var model = ToDetentionDetailsViewModel(detention);
+            return View(model);
+        }
+
         #region ModelViewHelpers
         private DetaineeDetailsViewModel ToDetaineeDetailsViewModel(Detainee dtn)
         {
@@ -180,7 +236,7 @@ namespace Prison.App.Web.Controllers
                 WorkPlace = dtn.WorkPlace,
                 ResidenceAddress = dtn.ResidenceAddress,
                 AdditionalData = dtn.AdditionalData,
-                Detentions = dtn.Detentions,
+                Detentions = ToDetentionListViewModel(dtn.Detentions),
                 PhoneNumbers = dtn.PhoneNumbers
             };
 
@@ -214,6 +270,30 @@ namespace Prison.App.Web.Controllers
             return ResultList;
         }
 
+        private IEnumerable<DetentionDropDownViewModel> ToDetentionDropDownViewModel(IEnumerable<Detention> list)
+        {
+            if (list == null)
+            {
+                return null;
+            }
+
+            List<DetentionDropDownViewModel> ResultList = new List<DetentionDropDownViewModel>();
+            IEnumerable<Employee> employees = _employeeProvider.GetAllEmployees();
+            foreach (Detention item in list)
+            {
+                ResultList.Add(new DetentionDropDownViewModel
+                {
+                    DetentionID = item.DetentionID,
+                    DetentionHeader=$"№{item.DetentionID} от {item.DetentionDate.ToShortDateString()}, Задерживал: {employees.First(e=>e.EmployeeID==item.DetainedByWhomID).LastName}"
+                });
+            }
+
+
+
+            return ResultList;
+        }
+
+
         private Detainee ToDetainee(DetaineeEditViewModel dtn)
         {
             return new Detainee
@@ -233,6 +313,21 @@ namespace Prison.App.Web.Controllers
 
             };
         }
+
+        private Detention ToDetention(DetentionReleaseDetaineeViewModel model)
+        {
+            return new Detention
+            {
+                DetentionID=model.DetentionID,
+                ReleasedByWhomID = model.ReleasedByWhomID,
+                ReleasеDate = model.ReleasеDate,
+                AmountForStaying = model.AmountForStaying,
+                PaidAmount = model.PaidAmount,
+
+
+            };
+        }
+
 
         private DetaineeEditViewModel ToDetaineeEditViewModel(Detainee dtn)
         {
@@ -258,10 +353,65 @@ namespace Prison.App.Web.Controllers
             return Result;
         }
 
+        private IEnumerable<DetentionListViewModel> ToDetentionListViewModel(IEnumerable<Detention> list)
+        {
+            if (list == null)
+            {
+                return null;
+            }
+
+            List<DetentionListViewModel> ResultList = new List<DetentionListViewModel>();
+
+            foreach (var item in list)
+            {
+                ResultList.Add(new DetentionListViewModel
+                {
+                    DetentionID = item.DetentionID,
+                    DetentionDate = item.DetentionDate,
+                    Employee = _employeeProvider.GetEmployeeByID(item.DetainedByWhomID).LastName,
+                    ReleasеDate=item.ReleasеDate,
+                    ReleasedByWhomID=item.ReleasedByWhomID,
+                    DeliveryDate=item.DeliveryDate,
+                    DeliveredByWhomID=item.DeliveredByWhomID,
+                    PlaceID=item.PlaceID,
+                    AmountForStaying=item.AmountForStaying,
+                    PaidAmount=item.PaidAmount
+                });
+            }
+
+
+
+            return ResultList;
+        }
+
+        private DetentionDetailsViewModel ToDetentionDetailsViewModel(Detention detention)
+        {
+            if (detention == null)
+            {
+                return null;
+            }
+               return new DetentionDetailsViewModel
+               {
+                   DetentionID = detention.DetentionID,
+                   DetentionDate = detention.DetentionDate,
+                   DeliveryDate = detention.DeliveryDate,
+                   DeliveredByWhom = _employeeProvider.GetEmployeeByID(detention.DeliveredByWhomID).LastName,
+                   DetainedByWhom = _employeeProvider.GetEmployeeByID(detention.DetainedByWhomID).LastName,
+                   ReleasеDate = detention.ReleasеDate==DateTime.MinValue?"-": detention.ReleasеDate.ToShortDateString(),
+                   ReleasedByWhom = detention.ReleasedByWhomID==0?"-":_employeeProvider.GetEmployeeByID(detention.ReleasedByWhomID).LastName,
+                   Place = _placeProvider.GetPlaceByID(detention.PlaceID).Address,
+                   PaidAmount=detention.PaidAmount,
+                   AmountForStaying=detention.AmountForStaying
+                };
+
+
+
+           
+        }
 
         #endregion
 
-        
+
 
     }
 }

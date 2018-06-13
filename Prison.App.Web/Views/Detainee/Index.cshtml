@@ -3,9 +3,8 @@
 @{
     ViewBag.Title = "Задержанные";
 }
-<h2>Задержанные</h2>
 
-<hr />
+
 @Html.Partial("DateNavigation")
 <div id="ResultTable">
     <p>
@@ -40,7 +39,7 @@
                     @if (item.ImagePath != null)
                     {
                         <div>
-                            <a href="#"><img class="img-rounded" width="70" height="70" src=@item.ImagePath /></a>
+                            <a href="@Url.Action("Details", new { id = item.DetaineeID })"><img class="img-rounded" width="70" height="70" src=@item.ImagePath /></a>
                         </div>
                     }
                 </td>

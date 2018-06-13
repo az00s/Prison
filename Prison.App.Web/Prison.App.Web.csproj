@@ -115,7 +115,12 @@
     <Content Include="Content\Login.css" />
     <Content Include="Scripts\AddDeleteRoleScript.js" />
     <Content Include="Scripts\CommonScripts.js" />
-    <Content Include="Scripts\SearchViewScript.js" />
+    <Content Include="Scripts\Detainee\CreateDetaineeScript.js" />
+    <Content Include="Scripts\Detainee\DetailsDetaineeScripts.js" />
+    <Content Include="Scripts\DetentionListScript.js" />
+    <Content Include="Scripts\Detainee\EditDetaineeScript.js" />
+    <Content Include="Scripts\Detainee\ReleaseDetaineeScripts.js" />
+    <Content Include="Scripts\Detainee\SearchViewScript.js" />
     <Content Include="Scripts\Login.js" />
     <Content Include="Content\Site.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -127,7 +132,7 @@
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
-    <Content Include="Scripts\DateNavigationViewScript.js" />
+    <Content Include="Scripts\Detainee\DateNavigationViewScript.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
@@ -161,6 +166,11 @@
     <Compile Include="Models\Detainee\DetaineeEditViewModel.cs" />
     <Compile Include="Models\Detainee\DetaineeIndexViewModel.cs" />
     <Compile Include="Models\Detainee\DetaineeDetailsViewModel.cs" />
+    <Compile Include="Models\Detention\DetentionCreateViewModel.cs" />
+    <Compile Include="Models\Detention\DetentionDetailsViewModel.cs" />
+    <Compile Include="Models\Detention\DetentionDropDownViewModel.cs" />
+    <Compile Include="Models\Detention\DetentionListViewModel.cs" />
+    <Compile Include="Models\Detention\DetentionReleaseDetaineeViewModel.cs" />
     <Compile Include="Models\Employee\EmployeeEditViewModel.cs" />
     <Compile Include="Models\Employee\EmployeeIndexViewModel.cs" />
     <Compile Include="Models\ErrorViewModel.cs" />
@@ -243,6 +253,11 @@
     <Content Include="Views\PhoneNumber\Create.cshtml" />
     <Content Include="Views\PhoneNumber\Edit.cshtml" />
     <Content Include="Views\PhoneNumber\Delete.cshtml" />
+    <Content Include="Views\Detainee\CreateDetention.cshtml" />
+    <Content Include="Views\Detainee\_DetentionsField.cshtml" />
+    <Content Include="Views\Detainee\_DetentionList.cshtml" />
+    <Content Include="Views\Detainee\ReleaseDetainee.cshtml" />
+    <Content Include="Views\Detainee\DetentionDetails.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

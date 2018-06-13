@@ -1,7 +1,6 @@
 ﻿using Prison.App.Business.Services;
 using Prison.App.Common.Entities;
 using Prison.App.Common.Helpers;
-using Prison.App.Common.Interfaces;
 using Prison.App.Data.Repositories;
 using System;
 using System.Collections.Generic;
@@ -45,6 +44,10 @@ namespace Prison.App.Business.Providers.Impl
 
         }
 
+        public IEnumerable<Detention> GetAllDetentions()
+        {
+            return _rep.GetAllDetentions();
+        }
         public Detainee GetDetaineeByID(int id)
         {
 
@@ -74,6 +77,15 @@ namespace Prison.App.Business.Providers.Impl
             {
                 throw new ArgumentException($"Идентификатор задержанного указан неверно.Пожалуйста укажите значение от 0 до {int.MaxValue}");
             }
+        }
+
+        public Detention GetDetentionByID(int id)
+        {
+            return _rep.GetDetentionByID(id);
+        }
+        public Detention GetLastDetention(int id)
+        {
+            return _rep.GetLastDetention(id);
         }
 
         public IEnumerable<Detainee> GetDetaineesByDate(DateTime date)

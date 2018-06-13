@@ -42,7 +42,7 @@ namespace Prison.App.Web.Controllers
                 return View(user);
             }
 
-            _logInService.LogIn(user.UserName, user.Password);
+           _logInService.LogIn(user.UserName, user.Password);
 
             return RedirectToLocal(ReturnUrl);
         }

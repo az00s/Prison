@@ -172,7 +172,7 @@ namespace Prison.App.Business.Tests
             _detaineeRepository.Verify(r => r.GetDetaineeByID(It.IsAny<int>()), Times.Never);
 
         }
-
+        //[ExpectedException]
         [TestMethod]
         public void GetDetaineeByID_InvalidId_ExceptionReturned()
         {

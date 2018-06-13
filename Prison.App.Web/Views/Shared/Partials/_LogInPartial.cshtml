@@ -6,7 +6,7 @@
         {
             <ul class="nav navbar-nav navbar-right">
                 <li class="text-center">
-                    @Html.ActionLink(User.Identity.Name, "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage", @class = "navbar-link" })
+                    <a class="navbar-link">@User.Identity.Name</a>
                 </li>
 
                 <li>

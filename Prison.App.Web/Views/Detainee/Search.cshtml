@@ -3,7 +3,7 @@
 @{
     ViewBag.Title = "Поиск";
 }
-<script type="text/javascript" src="~/Scripts/SearchViewScript.js"></script>
+<script type="text/javascript" src="~/Scripts/Detainee/SearchViewScript.js"></script>
 
 <div class="container-fluid">
     <div class="row">
@@ -57,13 +57,7 @@
                                     <span class="glyphicon-calendar glyphicon"></span>
                                 </span>
                                 @Html.EditorFor(model => model.DetentionDate, new { htmlAttributes = new { @class = "form-control", @id = "dateField", @readonly = "readonly" } })
-                               
-                                @*<span class="input-group-btn">
-                                    <button class="btn btn-default" type="button">
-                                        <i class="glyphicon glyphicon-remove"></i>
-                                    </button>
-                                </span>*@
-                              
+                                                             
                             </div>
                             @Html.ValidationMessageFor(model => model.DetentionDate, "", new { @class = "text-danger" })
                         </div>

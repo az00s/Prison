@@ -10,6 +10,10 @@ namespace Prison.App.Data.Repositories
         Detainee GetDetaineeByID(int id);
         IEnumerable<Detainee> GetDetaineesByDate(DateTime date);
         IEnumerable<MaritalStatus> GetAllMaritalStatuses();
+        IEnumerable<Detention> GetAllDetentions();
+        Detention GetLastDetention(int id);
+        Detention GetDetentionByID(int id);
+        void ReleaseDetainee(Detention detention);
         void Create(Detainee dtn);
         void Update(Detainee dtn);
         void Delete(int id);

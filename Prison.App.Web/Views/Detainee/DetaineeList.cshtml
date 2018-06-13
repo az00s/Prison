@@ -38,7 +38,7 @@ else
             @if (item.ImagePath != null)
             {
                     <div>
-                        <a href="#"><img class="img-rounded" width="70" height="70" src=@item.ImagePath /></a>
+                        <a href="@Url.Action("Details", new { id = item.DetaineeID })"><img class="img-rounded" width="70" height="70" src=@item.ImagePath /></a>
                     </div>
             }
         </td>
