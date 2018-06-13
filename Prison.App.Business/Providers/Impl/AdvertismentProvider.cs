@@ -26,7 +26,7 @@ namespace Prison.App.Business.Providers
             }
             else
             {
-                throw new ArgumentException($"Неверное число требуемых объявлений объявлений!");
+                throw new ArgumentException($"Неверное число требуемых объявлений!");
             }
         }
 

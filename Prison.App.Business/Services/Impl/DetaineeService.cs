@@ -1,12 +1,7 @@
 ﻿using Prison.App.Common.Entities;
 using Prison.App.Common.Helpers;
-using Prison.App.Common.Interfaces;
 using Prison.App.Data.Repositories;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Prison.App.Business.Services.Impl
 {
@@ -24,7 +19,10 @@ namespace Prison.App.Business.Services.Impl
             _cacheService = cacheService;
         }
 
-
+        public void ReleaseDetainee(Detention detention)
+        {
+            _rep.ReleaseDetainee(detention);
+        }
         public void Create(Detainee dtn)
         {
             _rep.Create(dtn);

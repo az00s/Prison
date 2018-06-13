@@ -18,8 +18,9 @@ namespace Prison.App.Web.Models
         [Display(Name = "Отчество")]
         public string MiddleName { get; set; }
 
+        [DisplayFormat(DataFormatString ="{0:dd.MM.yyyy}", ApplyFormatInEditMode=true)]
         [Display(Name = "Дата рождения")]
-        public DateTime BirstDate { get; set; }
+        public DateTime BirstDate { get; set; } = DateTime.Today;
 
         [Display(Name = "Фото")]
         public string ImagePath { get; set; }
@@ -33,7 +34,7 @@ namespace Prison.App.Web.Models
         public string WorkPlace { get; set; }
 
         [Display(Name = "Телефон")]
-        public ICollection<string> PhoneNumbers { get; set; }
+        public IEnumerable<string> PhoneNumbers { get; set; }
 
         [Display(Name = "Место жительства")]
         public string ResidenceAddress { get; set; }

@@ -27,6 +27,11 @@ namespace Prison.App.Data.Repositories
            return _detaineeContext.GetAllDetainees();
         }
 
+        public IEnumerable<Detention> GetAllDetentions()
+        {
+            return _detaineeContext.GetAllDetentions();
+        }
+
         public IEnumerable<Detainee> GetDetaineesByDate(DateTime date)
         {
             return _detaineeContext.GetDetaineesByDate(date);
@@ -39,9 +44,23 @@ namespace Prison.App.Data.Repositories
 
         public IEnumerable<Detainee> GetDetaineesByParams(string DetentionDate=null, string FirstName = null, string LastName = null, string MiddleName = null, string ResidenceAddress = null)
         {
-            return _detaineeContext.GetDetaineesByParams(DetentionDate, FirstName, LastName,MiddleName,ResidenceAddress);
+            return _detaineeContext.Find(DetentionDate, FirstName, LastName,MiddleName,ResidenceAddress);
         }
 
+        public void ReleaseDetainee(Detention detention)
+        {
+            _detaineeContext.ReleaseDetainee(detention);
+        }
+
+        public Detention GetLastDetention(int id)
+        {
+            return _detaineeContext.GetLastDetention(id);
+        }
+
+        public Detention GetDetentionByID(int id)
+        {
+            return _detaineeContext.GetDetentionByID(id);
+        }
 
         public void Create(Detainee dtn)
         {

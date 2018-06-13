@@ -11,7 +11,7 @@ $("#btnAddRoles").click(function () {
         NewDropDownList.appendTo("#dvRolesDrdwn");
     }
 
-})
+});
 
 $("#btnRemoveRoles").click(function () {
     if (num > 0) {
@@ -19,4 +19,4 @@ $("#btnRemoveRoles").click(function () {
 
         num = num - 1;
     }
-})
+});

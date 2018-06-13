@@ -119,7 +119,7 @@ namespace Prison.App.Data.DataContext.Impl
 
             //create complex parameter, which correlates with custom type in db "RoleIdTable"
             //stored procedure "CreateUser" needs this complex parameter
-            var customParameter = _context.CreateCustomParameter("@Table", RoleIDs,SqlDbType.Structured, "RoleIdTable");
+            var customParameter = _context.CreateCustomParameter("@Table", RoleIDs, "RoleID", SqlDbType.Structured, "RoleIdTable");
 
             //get all simpleparameters
             var parameters = _context.GetParameterList(parametersDictionary);
@@ -146,7 +146,7 @@ namespace Prison.App.Data.DataContext.Impl
 
             //create complex parameter, which correlates with custom type in db "RoleIdTable"
             //stored procedure "CreateUser" needs this complex parameter
-            var customParameter = _context.CreateCustomParameter("@Table", RoleIDs, SqlDbType.Structured, "RoleIdTable");
+            var customParameter = _context.CreateCustomParameter("@Table", RoleIDs, "RoleID", SqlDbType.Structured, "RoleIdTable");
 
             //get all simpleparameters
             var parameters = _context.GetParameterList(parametersDictionary);

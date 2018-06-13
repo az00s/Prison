@@ -26,20 +26,21 @@
                 <div class="navbar-collapse collapse">
 
                     <ul class="nav navbar-nav">
-                        <li>@Html.ActionLink("Задержанные", "Index", "Detainee")</li>
-                        <li>@Html.ActionLink("Сотрудники", "Index", "Employee")</li>
-                        <li>@Html.ActionLink("Места содержания", "Index", "PlaceOfStay")</li>
 
                         @{ if (User.IsInRole("editor") || User.IsInRole("admin"))
                             {
+                                <li>@Html.ActionLink("Задержанные", "Index", "Detainee")</li>
+                                <li>@Html.ActionLink("Сотрудники", "Index", "Employee")</li>
+                                <li>@Html.ActionLink("Места содержания", "Index", "PlaceOfStay")</li>
                                 <li>@Html.ActionLink("Должности", "Index", "Position")</li>
                                 <li>@Html.ActionLink("Номера телефонов", "Index", "PhoneNumber")</li>
                                 <li>@Html.ActionLink("Семейные положения", "Index", "Status")</li>
+                                 <li>@Html.ActionLink("Поиск", "Search", "Detainee")</li>
                             }
                         }
 
 
-                        <li>@Html.ActionLink("Поиск", "Search", "Detainee")</li>
+                       
                     </ul>
                     @{ if (User.IsInRole("admin"))
                         {
@@ -64,9 +65,7 @@
 
     <div class="container body-content">
         @RenderBody()
-        <hr />
-        <footer>
-        </footer>
+        
     </div>
 
    

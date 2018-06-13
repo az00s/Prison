@@ -1,7 +1,9 @@
-﻿using Prison.App.Common.Helpers;
+﻿using Prison.App.Common.Entities;
+using Prison.App.Common.Helpers;
 using Prison.App.Common.Interfaces;
 using Prison.App.Common.Loggers;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -196,7 +198,18 @@ namespace Prison.App.Data.DataContext.Impl
             return command;
         }
 
-        public SqlParameter CreateCustomParameter(string parameterName, IEnumerable<int> value, SqlDbType sqlDbType=SqlDbType.Variant,string typeName=null)
+        public SqlParameter CreateCustomParameter(string parameterName, IEnumerable values, string columnName, SqlDbType sqlDbType=SqlDbType.Variant,string typeName=null)
+        {
+            return new SqlParameter()
+            {
+                ParameterName = parameterName,
+                Value = CreateDataTable(values, columnName),
+                SqlDbType = sqlDbType,
+                TypeName = typeName
+            };
+        }
+
+        public SqlParameter CreateCustomParameter(string parameterName, Detention value, SqlDbType sqlDbType = SqlDbType.Variant, string typeName = null)
         {
             return new SqlParameter()
             {
@@ -206,6 +219,7 @@ namespace Prison.App.Data.DataContext.Impl
                 TypeName = typeName
             };
         }
+
 
         private SqlParameter CreateParameter(string parameterName, object value)
         {
@@ -239,16 +253,40 @@ namespace Prison.App.Data.DataContext.Impl
             return resultList;
         }
 
-        private DataTable CreateDataTable(IEnumerable<int> ids)
+
+        private DataTable CreateDataTable(Detention detention)
         {
             DataTable table = new DataTable();
-            table.Columns.Add("RoleID", typeof(int));
-            foreach (int id in ids)
+            table.Columns.Add("DetentionID", typeof(int));
+            table.Columns.Add("DetentionDate", typeof(DateTime));
+            table.Columns.Add("DetainedByWhomID", typeof(int));
+            table.Columns.Add("DeliveryDate", typeof(DateTime));
+            table.Columns.Add("DeliveredByWhomID", typeof(int));
+            table.Columns.Add("PlaceID", typeof(int));
+
+            table.Rows.Add(
+                detention.DetentionID,
+                detention.DetentionDate,
+                detention.DetainedByWhomID,
+                detention.DeliveryDate,
+                detention.DeliveredByWhomID,
+                detention.PlaceID);
+
+            return table;
+        }
+
+        private DataTable CreateDataTable(IEnumerable values, string columnName)
+        {
+            DataTable table = new DataTable();
+            table.Columns.Add(columnName);
+            foreach (var val in values)
             {
-                table.Rows.Add(id);
+                table.Rows.Add(val);
             }
             return table;
         }
+
+
 
 
         #endregion

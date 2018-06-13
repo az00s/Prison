@@ -10,7 +10,9 @@ namespace Prison.App.Business.Providers
         IEnumerable<Detainee> GetDetaineesByDate(DateTime date);
         Detainee GetDetaineeByID(int id);
         IEnumerable<MaritalStatus> GetAllMaritalStatuses();
-       
+        IEnumerable<Detention> GetAllDetentions();
+        Detention GetLastDetention(int id);
+        Detention GetDetentionByID(int id);
         IEnumerable<Detainee> GetDetaineesByParams(string DetentionDate=null, string FirstName = null, string LastName = null, string MiddleName = null, string ResidenceAddress = null);
     }
 }

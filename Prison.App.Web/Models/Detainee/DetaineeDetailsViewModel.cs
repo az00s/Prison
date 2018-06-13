@@ -30,7 +30,7 @@ namespace Prison.App.Web.Models
         public string WorkPlace { get; set; }
 
         [Display(Name = "Телефон")]
-        public ICollection<string> PhoneNumbers { get; set; }
+        public IEnumerable<string> PhoneNumbers { get; set; }
 
         [Display(Name = "Место жительства")]
         public string ResidenceAddress { get; set; }
@@ -39,7 +39,7 @@ namespace Prison.App.Web.Models
         public string AdditionalData { get; set; }
 
         [Display(Name = "Задержания")]
-        public IEnumerable<Detention> Detentions { get; set; }
+        public IEnumerable<DetentionListViewModel> Detentions { get; set; }
 
     }
 }

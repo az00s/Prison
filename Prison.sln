@@ -16,7 +16,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prison.App.Web", "Prison.Ap
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prison.App.Dependency", "Prison.App.Dependency\Prison.App.Dependency.csproj", "{6959DCD5-FB05-4027-B768-3C94DE74790B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prison.Service", "Prison.Service\Prison.Service.csproj", "{AAA0E36B-1D25-4567-821C-E0A916079C32}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prison.AdvertismentService", "Prison.Service\Prison.AdvertismentService.csproj", "{AAA0E36B-1D25-4567-821C-E0A916079C32}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prison.App.Business.Tests", "Prison.App.Business.Tests\Prison.App.Business.Tests.csproj", "{8917D783-33D0-4452-93CD-37602948CEB7}"
 EndProject

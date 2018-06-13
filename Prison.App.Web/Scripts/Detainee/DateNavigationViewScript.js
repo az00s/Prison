@@ -1,6 +1,5 @@
 ﻿$(document).ready(function () {
 
-    $('#datetimepicker').datetimepicker({ pickTime: false, language: 'ru', format: 'DD.MM.Y' });
 
     $("#GetDetaineeBtn").click(function () {
 
@@ -8,7 +7,7 @@
         var day = WrongDate.substring(3, 5);
         var month = WrongDate.substring(0, 2);
         var Year = WrongDate.substring(6, 10);
-        var RightDate = day + "." + month + "." + Year
+        var RightDate = day + "." + month + "." + Year;
         var URL = $("#urlField").val();
 
         $.ajax({

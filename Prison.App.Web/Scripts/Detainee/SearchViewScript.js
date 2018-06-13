@@ -12,7 +12,7 @@
         var URL = $("#urlField").val();
 
         $.ajax({
-            method:'POST',
+            method:'GET',
             url: URL,
             data: {
                 FirstName: $("input[name='FirstName']").val(),

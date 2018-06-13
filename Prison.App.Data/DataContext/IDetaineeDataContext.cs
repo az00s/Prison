@@ -10,7 +10,11 @@ namespace Prison.App.Data.DataContext
         Detainee GetDetaineeByID(int id);
         IEnumerable<MaritalStatus> GetAllMaritalStatuses();
         IEnumerable<Detainee> GetDetaineesByDate(DateTime date);
-        IEnumerable<Detainee> GetDetaineesByParams(string DetentionDate = null, string FirstName = null, string LastName = null, string MiddleName = null, string ResidenceAddress = null);
+        IEnumerable<Detention> GetAllDetentions();
+        IEnumerable<Detainee> Find(string DetentionDate = null, string FirstName = null, string LastName = null, string MiddleName = null, string ResidenceAddress = null);
+        Detention GetLastDetention(int id);
+        void ReleaseDetainee(Detention detention);
+        Detention GetDetentionByID(int id);
         void Create(Detainee dtn);
         void Update(Detainee dtn);
         void Delete(int id);
