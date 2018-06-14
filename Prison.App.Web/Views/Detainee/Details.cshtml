@@ -142,14 +142,16 @@
 
           
         </dl>
-        <p>
-            @{ if (User.IsInRole("editor") || User.IsInRole("admin"))
-                {
-                    @Html.ActionLink("Редактировать", "Edit", new { id = Model.DetaineeID })
-                }
-            }
-            @Html.ActionLink("Назад", "Index")
-        </p>
+        <div class="btn-group">
+            @Html.ActionLink("Назад", "Index",null, new { @class = "btn btn-default" })
+            @if (User.IsInRole("editor") || User.IsInRole("admin"))
+                    {
+                        @Html.ActionLink("Редактировать", "Edit", new { id = Model.DetaineeID },new { @class="btn btn-primary"})
+                        @Html.ActionLink("Удалить", "Delete", new { id = Model.DetaineeID }, new { @class = "btn btn-danger" })
+
+                    }
+            
+        </div>
 
     </div>
 

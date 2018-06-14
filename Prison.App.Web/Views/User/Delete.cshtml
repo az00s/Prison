@@ -45,9 +45,11 @@
     @using (Html.BeginForm("DeleteFromDb","User",new { id=Model.UserID})) {
         @Html.AntiForgeryToken()
 
-        <div class="form-actions no-color">
-            <input type="submit" value="Удалить" class="btn btn-default" /> |
-            @Html.ActionLink("Назад", "Index")
+    <div class="form-actions no-color">
+        <div class="btn-group">
+            @Html.ActionLink("Назад", "Index", null, new { @class = "btn btn-default" })
+            <input type="submit" value="Удалить" class="btn btn-danger" />
         </div>
+    </div>
     }
 </div>

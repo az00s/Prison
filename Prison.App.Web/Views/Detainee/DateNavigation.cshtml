@@ -4,19 +4,23 @@
 
 <script type="text/javascript" src="~/Scripts/Detainee/DateNavigationViewScript.js"></script>
 
-<div class="form-group">
-    @Html.Label("Дата задержания", htmlAttributes: new { @class = "control-label col-md-3" })
-    <div class="col-md-7 input-group datetimepicker" id="datetimepicker">
-        <span class="input-group-addon">
-            <span class="glyphicon-calendar glyphicon"></span>
-        </span>
-        <input type="text" name="date" id="dateField" class="form-control" required />
+<div class="form-group nav">
+    <div class="input-group">
+        @Html.Label("Навигация по дате", htmlAttributes: new { @class = "col-md-8 text-muted" })
+
+        <div class="col-md-8 input-group datetimepicker">
+            <span class="input-group-addon">
+                <span class="glyphicon-calendar glyphicon"></span>
+            </span>
+            <input type="text" placeholder="Дата задержания" name="date" id="dateField" class="form-control" required readonly />
+            <span type="submit" id="GetDetaineeBtn" class="btn btn-default input-group-addon">Показать</span>
+        </div>
+
+
+
     </div>
-
-    @*This input helps to get right url address of action using Url helper.-becaue of @Url helper is not work inside .js script*@
-    <input type="hidden" id="urlField" value="@Url.Action("GetDetaineeByDate", "Detainee")" />
-
-    <button type="submit" id="GetDetaineeBtn" class="btn btn-success">Показать</button>
 </div>
+@*This input helps to get right url address of action using Url helper.-becaue of @Url helper is not work inside .js script*@
+<input type="hidden" id="urlField" value="@Url.Action("GetDetaineeByDate", "Detainee")" />
 
 

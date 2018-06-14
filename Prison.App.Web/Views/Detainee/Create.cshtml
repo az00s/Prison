@@ -102,28 +102,41 @@
                             @Html.ValidationMessageFor(model => model.PhoneNumbers, "", new { @class = "text-danger" })
                         </div>
                     </div>
-                    <div id="dvDetentionsField">
-                    </div>
+
                     <div class="form-group">
-                        <div class="col-md-offset-4 col-md-8">
-                            <a class="btn btn-xs btn-success" id="btnCreateDetention">Добавить задержание</a>
-                            <a class="btn btn-xs btn-success" id="btnChooseDetention">Выбрать задержание</a>
+                        @Html.Label("Задержание", htmlAttributes: new { @class = "control-label col-md-4" })
+                        <div class="col-md-6">
+                            <div class="btn-group" data-toggle="buttons">
+                                <label class="btn btn-primary" id="btnCreateDetention">
+                                    <input type="radio" name="options" autocomplete="off" checked>Добавить
+                                </label>
+                                <label class="btn btn-primary" id="btnChooseDetention">
+                                    <input type="radio" name="options" autocomplete="off">Выбрать задержание
+                                </label>
+
+
+
+                            </div>
                             @*This input helps to get right url address of action using Url helper.-becaue of @Url helper is not work inside .js script*@
                             <input type="hidden" id="urlField" value="@Url.Action("CreateDetention", "Detainee")" />
                             <input type="hidden" id="urlDetentionsField" value="@Url.Action("GetDetentions", "Detainee")" />
                         </div>
                     </div>
+                    <div id="dvDetentionsField">
+                    </div>
                     <div class="form-group">
-                        <div class="col-md-offset-4 col-md-8">
-                            <input type="submit" value="Добавить" class="btn btn-default" />
+                        <div class="col-md-offset-4 col-md-6">
+                            <div class="btn-group">
+                                @Html.ActionLink("Назад", "Index", null, new { @class = "btn btn-default" })
+                                <input type="submit" value="Записать" class="btn btn-success" />
+                            </div>
                         </div>
                     </div>
                 </div>
 
 
-                <div>
-                    @Html.ActionLink("Назад", "Index")
-                </div>
+               
+                
             </div>
         </div>
         <div class="col-md-6">

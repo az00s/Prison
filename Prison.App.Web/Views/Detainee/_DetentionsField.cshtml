@@ -3,8 +3,8 @@
     Layout = null;
 }
 <div class="form-group">
-    @Html.Label("Задержание", htmlAttributes: new { @class = "control-label col-md-4" })
-    <div class="col-md-8">
+    
+    <div class="col-md-8 col-md-offset-4">
         @Html.DropDownList("Detentions[0].DetentionID", new SelectList(Model, "DetentionID", "DetentionHeader"), new { @class = "form-control" })
     </div>
 </div>

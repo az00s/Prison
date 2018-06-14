@@ -48,8 +48,10 @@
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <a class="btn btn-primary" id="btnAddRoles">Добавить роль</a>
-                <a class="btn btn-danger" id="btnRemoveRoles">Удалить роль</a>
+                <div class="btn-group">
+                    <a class="btn btn-primary" id="btnAddRoles">Добавить роль</a>
+                    <a class="btn btn-danger" id="btnRemoveRoles">Удалить роль</a>
+                </div>
 
             </div>
         </div>
@@ -57,13 +59,13 @@
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Сохранить" class="btn btn-success" />         
+                <div class="btn-group">
+                    @Html.ActionLink("Назад", "Index", null, new { @class = "btn btn-default" })
+                    <input type="submit" value="Записать" class="btn btn-success" />
+                </div>
 
             </div>
         </div>
     </div>
 }
     <script src="~/Scripts/AddDeleteRoleScript.js"></script>
-<div>
-    @Html.ActionLink("Назад", "Index")
-</div>
