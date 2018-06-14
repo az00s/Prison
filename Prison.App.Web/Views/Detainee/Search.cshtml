@@ -7,65 +7,82 @@
 
 <div class="container-fluid">
     <div class="row">
-        <hr />
-        <div class="form-horizontal">
+        
+        <div class="form-horizontal text-center">
             @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div class="col-md-2">
+                <div class="form-group">
+                    <div class="col-md-12">
+                        <div class="input-group">
+                            @Html.EditorFor(model => model.LastName, new { htmlAttributes = new { @class = "form-control", @placeholder = "Фамилия" } })
+                            @Html.ValidationMessageFor(model => model.LastName, "", new { @class = "text-danger" })
 
-            <div class="col-md-2">
-                <div class="form-group">
-                    <div class="col-md-12">
-                        @Html.LabelFor(model => model.FirstName, htmlAttributes: new { @class = "control-label" })
-                        @Html.EditorFor(model => model.FirstName, new { htmlAttributes = new { @class = "form-control" } })
-                        @Html.ValidationMessageFor(model => model.FirstName, "", new { @class = "text-danger" })
+                            <span class="input-group-addon btn btn-default clear">×</span>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="col-md-2">
                 <div class="form-group">
                     <div class="col-md-12">
-                        @Html.LabelFor(model => model.LastName, htmlAttributes: new { @class = "control-label" })
-                        @Html.EditorFor(model => model.LastName, new { htmlAttributes = new { @class = "form-control" } })
-                        @Html.ValidationMessageFor(model => model.LastName, "", new { @class = "text-danger" })
+
+                        <div class="input-group">
+                            @Html.EditorFor(model => model.FirstName, new { htmlAttributes = new { @class = "form-control", @placeholder = "Имя" } })
+                            @Html.ValidationMessageFor(model => model.FirstName, "", new { @class = "text-danger" })
+
+                            <span class="input-group-addon btn btn-default clear">×</span>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="col-md-2">
                 <div class="form-group">
                     <div class="col-md-12">
-                        @Html.LabelFor(model => model.Middlename, htmlAttributes: new { @class = "control-label" })
-                        @Html.EditorFor(model => model.Middlename, new { htmlAttributes = new { @class = "form-control" } })
-                        @Html.ValidationMessageFor(model => model.Middlename, "", new { @class = "text-danger" })
+
+                        <div class="input-group">
+                            @Html.EditorFor(model => model.Middlename, new { htmlAttributes = new { @class = "form-control", @placeholder = "Отчество" } })
+                            @Html.ValidationMessageFor(model => model.Middlename, "", new { @class = "text-danger" })
+
+                            <span class="input-group-addon btn btn-default clear">×</span>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="col-md-2">
                 <div class="form-group">
                     <div class="col-md-12">
-                        @Html.LabelFor(model => model.ResidenceAddress, htmlAttributes: new { @class = "control-label" })
-                        @Html.EditorFor(model => model.ResidenceAddress, new { htmlAttributes = new { @class = "form-control" } })
-                        @Html.ValidationMessageFor(model => model.ResidenceAddress, "", new { @class = "text-danger" })
+
+                        <div class="input-group">
+                            @Html.EditorFor(model => model.ResidenceAddress, new { htmlAttributes = new { @class = "form-control", @placeholder = "Адрес прописки" } })
+                            @Html.ValidationMessageFor(model => model.ResidenceAddress, "", new { @class = "text-danger" })
+
+                            <span class="input-group-addon btn btn-default clear">×</span>
+                        </div>
+
                     </div>
                 </div>
             </div>
             <div class="col-md-3">
-                <div class="form-group">
+                <div class="form-group text-left">
                     <row>
-                        @Html.LabelFor(model => model.DetentionDate, htmlAttributes: new { @class = "control-label col-md-offset-1" })
-                        <div class="col-md-8">
-                            <div class="input-group" id="datetimepicker">
-                                <span class="input-group-addon">
-                                    <span class="glyphicon-calendar glyphicon"></span>
-                                </span>
-                                @Html.EditorFor(model => model.DetentionDate, new { htmlAttributes = new { @class = "form-control", @id = "dateField", @readonly = "readonly" } })
-                                                             
+                        <div class="col-md-10">
+                            <div class="input-group">
+                                <div class="input-group datetimepicker">
+                                    <span class="input-group-addon">
+                                        <span class="glyphicon-calendar glyphicon"></span>
+                                    </span>
+                                    @Html.EditorFor(model => model.DetentionDate, new { htmlAttributes = new { @class = "form-control", @id = "dateField", @readonly = "readonly", @placeholder = "Дата задержания" } })
+                                    <span class="btn btn-default input-group-addon clear">×</span>
+
+                                </div>
+                                @Html.ValidationMessageFor(model => model.DetentionDate, "", new { @class = "text-danger" })
                             </div>
-                            @Html.ValidationMessageFor(model => model.DetentionDate, "", new { @class = "text-danger" })
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-md-2">
                             <a class="btn btn-success" id="btnSearchDetainee">Поиск</a>
 
                             @*This input helps to get right url address of action using Url helper.-becaue of @Url helper is not work inside .js script*@
-                            <input type="hidden" id="urlField" value="@Url.Action("Search", "Detainee")" />
+                            <input type="hidden" id="urlField" value="@Url.Action("FindDetainees", "Detainee")" />
 
                         </div>
                     </row>
@@ -77,7 +94,7 @@
 </div>
 
 <div id="ResultTable">
-
+    <hr />
 </div>
 
 @section scripts {

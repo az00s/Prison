@@ -158,8 +158,7 @@ namespace Prison.App.Web.Controllers
         }
 
         [User]
-        [HttpPost]
-        public ActionResult Search(SearchViewModel model)
+        public ActionResult FindDetainees(SearchViewModel model)
         {
             if (!ModelState.IsValid)
             {
