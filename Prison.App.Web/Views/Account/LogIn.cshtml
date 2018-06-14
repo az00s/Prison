@@ -23,7 +23,7 @@
                 </div>
             </div>
         </div>
-        @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @role = "form", @class = "form-horizontal", @id = "LoginForm" }))
+        @using (Html.BeginForm("Login", "Account", FormMethod.Post, new { @role = "form", @class = "form-horizontal", @id = "LoginForm" }))
         {
             <div class="row">
                 <div class="col-xs-1 col-sm-3 col-md-4 col-lg-4.5 ">

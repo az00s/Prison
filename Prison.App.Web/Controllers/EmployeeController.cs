@@ -13,7 +13,7 @@ using Prison.App.Business.Services;
 
 namespace Prison.App.Web.Controllers
 {
-    
+    [Editor]
     public class EmployeeController : Controller
     {
         private ILogger _log;
@@ -37,7 +37,6 @@ namespace Prison.App.Web.Controllers
             _log = log;
         }
 
-        [User]
         public ActionResult Index()
         {
             var Employees = _employeeProvider.GetAllEmployees();
@@ -47,7 +46,6 @@ namespace Prison.App.Web.Controllers
             return View(ViewModelList);
         }
 
-        [Editor]
         public ActionResult Details(int id)
         {
             var Employee = _employeeProvider.GetEmployeeByID(id);
@@ -58,7 +56,6 @@ namespace Prison.App.Web.Controllers
             
         }
 
-        [Editor]
         [HttpGet]
         public ActionResult Create()
         {
@@ -72,7 +69,7 @@ namespace Prison.App.Web.Controllers
             return View(ViewModel);
         }
 
-        
+        [HttpPost]
         public ActionResult Create(EmployeeEditViewModel model)
         {
             if (!ModelState.IsValid)
@@ -89,7 +86,6 @@ namespace Prison.App.Web.Controllers
             return RedirectToAction("Index");
         }
 
-        [Editor]
         public ActionResult Edit(int id)
         {
             var emp = _employeeProvider.GetEmployeeByID(id);
@@ -99,7 +95,6 @@ namespace Prison.App.Web.Controllers
             return View(ViewModel);
         }
 
-        [Editor]
         [HttpPost]
         public ActionResult Edit(EmployeeEditViewModel model)
         {
@@ -118,7 +113,6 @@ namespace Prison.App.Web.Controllers
             return RedirectToAction("Index");
         }
 
-        [Editor]
         public ActionResult Delete(int id)
         {
             var Employee = _employeeProvider.GetEmployeeByID(id);
@@ -128,7 +122,6 @@ namespace Prison.App.Web.Controllers
             return View(ViewModel);
         }
 
-        [Editor]
         [HttpPost]
         public ActionResult DeleteFromDb(int id)
         {

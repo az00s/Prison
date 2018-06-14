@@ -443,3 +443,9 @@ System.ArgumentException: Словарь параметров содержит запись со значением NULL д
    в System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
    в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
    в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-14 15:43:35,955 WARN PrisonLogger - Login 'rwtyeryrt' not fount!
+2018-06-14 15:43:45,770 WARN PrisonLogger - Login 'Пуаро444' not fount!
+2018-06-14 15:43:51,553 WARN PrisonLogger - Invalid Password for 'Пуаро'!
+2018-06-14 15:44:48,363 WARN PrisonLogger - Login '444444' not fount!
+2018-06-14 15:55:34,530 WARN PrisonLogger - Invalid Password for 'Пуаро'!
+2018-06-14 15:55:52,776 WARN PrisonLogger - Login 'Пуаро4' not fount!

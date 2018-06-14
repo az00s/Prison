@@ -73,6 +73,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entities\Account\LoginResult.cs" />
     <Compile Include="Entities\Blurb.cs" />
     <Compile Include="Entities\Detainee.cs" />
     <Compile Include="Entities\Detention.cs" />

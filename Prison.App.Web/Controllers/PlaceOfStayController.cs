@@ -10,7 +10,7 @@ using Prison.App.Business.Services;
 
 namespace Prison.App.Web.Controllers
 {
-
+    [Editor]
     public class PlaceOfStayController : Controller
     {
         private ILogger _log;
@@ -30,7 +30,6 @@ namespace Prison.App.Web.Controllers
             _log = log;
         }
 
-        [User]
         public ActionResult Index()
         {
             var Places = _placeProvider.GetAllPlaces();
@@ -38,7 +37,6 @@ namespace Prison.App.Web.Controllers
             return View(ViewModel);
         }
 
-        [Editor]
         public ActionResult Details(int id)
         {
             var place = _placeProvider.GetPlaceByID(id);
@@ -46,13 +44,11 @@ namespace Prison.App.Web.Controllers
             return View(place);
         }
 
-        [Editor]
         public ActionResult Create()
         {
             return View();
         }
 
-        [Editor]
         [HttpPost]
         public ActionResult Create(PlaceOfStayViewModel model)
         {
@@ -68,7 +64,6 @@ namespace Prison.App.Web.Controllers
             return RedirectToAction("Index");
         }
 
-        [Editor]
         public ActionResult Edit(int id)
         {
             var place = _placeProvider.GetPlaceByID(id);
@@ -76,7 +71,6 @@ namespace Prison.App.Web.Controllers
             return View(ViewModel);
         }
 
-        [Editor]
         [HttpPost]
         public ActionResult Edit(PlaceOfStayViewModel model)
         {
@@ -90,7 +84,6 @@ namespace Prison.App.Web.Controllers
             return RedirectToAction("Index");
         }
 
-        [Editor]
         public ActionResult Delete(int id)
         {
             var place = _placeProvider.GetPlaceByID(id);
@@ -98,7 +91,6 @@ namespace Prison.App.Web.Controllers
             return View(place);
         }
 
-        [Editor]
         [HttpPost]
         public ActionResult DeleteFromDb(int id)
         {
