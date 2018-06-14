@@ -6,9 +6,12 @@
 
 <h2>Пользователи</h2>
 
-<p>
-    @Html.ActionLink("Добавить", "Create")
-</p>
+@if (User.IsInRole("editor") || User.IsInRole("admin"))
+{
+    <p>
+        @Html.ActionLink("Добавить", "Create", null, new { @class = "btn btn-primary" })
+    </p>
+}
 <table class="table">
     <tr>
         <th>
@@ -23,23 +26,34 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.UserID)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.UserName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Email)
-        </td>
-        <td>
-            @Html.ActionLink("Редактировать", "Edit", new { id=item.UserID  }) |
-            @Html.ActionLink("Подробнее", "Details", new { id=item.UserID  }) |
-            @Html.ActionLink("Удалить", "Delete", new { id=item.UserID  })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.ActionLink(item.UserID.ToString(),"Details",new { id=item.UserID})
+            </td>
+            <td>
+                <div class="btn-group">
+                        <div class="input-group-btn">
+                            @Html.ActionLink(item.UserName, "Details", new { id = item.UserID },new {@class= "btn btn-link btn-default dropdown-toggle", @data_toggle="dropdown" })
+                            <ul class="dropdown-menu">
+                                <li>@Html.ActionLink("Подробнее", "Details", new { id = item.UserID })</li>
+                                @if (User.IsInRole("editor") || User.IsInRole("admin"))
+                                {
+                                    <li>@Html.ActionLink("Редактировать", "Edit", new { id = item.UserID })</li>
+                                    <li class="divider"></li>
+                                    <li class = "text-danger">@Html.ActionLink("Удалить", "Delete", new { id = item.UserID }, new { @class = "text-danger" })</li>
+                                }                                
+                            </ul>
+                        </div>
+                    </div>
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+            </td>
+        </tr>
+    }
 
 </table>

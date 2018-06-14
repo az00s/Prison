@@ -7,75 +7,81 @@
 
 @Html.Partial("DateNavigation")
 <div id="ResultTable">
-    @{ if (User.IsInRole("editor")|| User.IsInRole("admin"))
+    @if (User.IsInRole("editor") || User.IsInRole("admin"))
         {
             <p>
-                @Html.ActionLink("Добавить задержанного", "Create")
+                @Html.ActionLink("Добавить", "Create",null,new { @class= "btn btn-primary" })
             </p>
         }
-     }
-            <table class="table">
-                <tr>
-                    <th>
-                        @Html.DisplayNameFor(model => model.ImagePath)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(model => model.LastName)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(model => model.FirstName)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(model => model.MiddleName)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(model => model.BirstDate)
-                    </th>
+    
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ImagePath)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LastName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MiddleName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BirstDate)
+            </th>
 
 
-                    <th></th>
-                </tr>
+            <th></th>
+        </tr>
 
-                @foreach (var item in Model)
-                {
-                    <tr>
-                        <td>
-                            @if (item.ImagePath != null)
-                            {
-                                <div>
-                                    <a href="@Url.Action("Details", new { id = item.DetaineeID })"><img class="img-rounded" width="70" height="70" src=@item.ImagePath /></a>
-                                </div>
-                            }
-                        </td>
-                        <td>
-                            @Html.ActionLink(item.LastName, "Details", new { id = item.DetaineeID })
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.FirstName)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.MiddleName)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.BirstDate)
-                        </td>
-                        <td>@if (User.IsInRole("editor") || User.IsInRole("admin"))
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @if (item.ImagePath != null)
+                    {
+                        <div>
+                            <a href="@Url.Action("Details", new { id = item.DetaineeID })"><img class="img-rounded" width="70" height="70" src=@item.ImagePath /></a>
+                        </div>
+                    }
+                </td>
+                <td>
+                    <div class="btn-group">
+                        <div class="input-group-btn">
+                            @Html.ActionLink(item.LastName, "Details", new { id = item.DetaineeID },new {@class= "btn btn-link btn-default dropdown-toggle", @data_toggle="dropdown" })
+                            <ul class="dropdown-menu">
+                                <li>@Html.ActionLink("Подробнее", "Details", new { id = item.DetaineeID })</li>
+                                @if (User.IsInRole("editor") || User.IsInRole("admin"))
                                 {
-                                    @Html.ActionLink("Редактировать", "Edit", new { id = item.DetaineeID })
-                                }
-                            
+                                    <li>@Html.ActionLink("Редактировать", "Edit", new { id = item.DetaineeID })</li>
+                                    <li class="divider"></li>
+                                    <li class = "text-danger">@Html.ActionLink("Удалить", "Delete", new { id = item.DetaineeID }, new { @class = "text-danger" })</li>
+                                }                                
+                            </ul>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FirstName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MiddleName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.BirstDate)
+                </td>
+                <td>
+                   
 
-                            @if (User.IsInRole("editor") || User.IsInRole("admin"))
-                                {
-                                    @Html.ActionLink("Удалить", "Delete", new { id = item.DetaineeID })
-                                }
-                            
-                        </td>
-                    </tr>
-                }
+                  
+            </td>
+        </tr>
+    }
 
-            </table>
-        </div>
+    </table>
+</div>
 
 
 @section scripts {

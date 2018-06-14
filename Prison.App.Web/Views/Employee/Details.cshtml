@@ -42,7 +42,14 @@
         </dd>
     </dl>
 </div>
-<p>
-    @Html.ActionLink("Редактировать", "Edit", new { id = Model.EmployeeID }) |
-    @Html.ActionLink("Назад", "Index")
-</p>
+<div class="btn-group">
+    @Html.ActionLink("Назад", "Index", null, new { @class = "btn btn-default" })
+    @if (User.IsInRole("editor") || User.IsInRole("admin"))
+    {
+        @Html.ActionLink("Редактировать", "Edit", new { id = Model.EmployeeID }, new { @class = "btn btn-primary" })
+        @Html.ActionLink("Удалить", "Delete", new { id = Model.EmployeeID }, new { @class = "btn btn-danger" })
+
+    }
+
+</div>
+
