@@ -22,7 +22,6 @@ namespace Prison.App.Web.Controllers
 
         private IRoleProvider _roleProvider;
 
-
         public UserController(IUserProvider userProvider, ILogger log, IRoleProvider roleProvider, IUserService userService)
         {
             ArgumentHelper.ThrowExceptionIfNull(roleProvider, "IRoleProvider");
@@ -92,8 +91,6 @@ namespace Prison.App.Web.Controllers
 
             return RedirectToAction("Index");
         }
-
-
 
         public ActionResult Details(int id)
         {

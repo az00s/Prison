@@ -173,6 +173,7 @@ namespace Prison.App.Web.Controllers
             
         }
 
+        [Editor]
         public ActionResult CreateDetention()
         {
             var model = new DetentionCreateViewModel {
@@ -182,6 +183,7 @@ namespace Prison.App.Web.Controllers
             return View("CreateDetention",model);
         }
 
+        [Editor]
         public ActionResult GetDetentions()
         {
             var list = _detaineeProvider.GetAllDetentions();
@@ -189,6 +191,7 @@ namespace Prison.App.Web.Controllers
             return View("_DetentionsField", model);
         }
 
+        [Editor]
         public ActionResult ReleaseDetainee(int id)
         {
             var model = new DetentionReleaseDetaineeViewModel
@@ -199,6 +202,7 @@ namespace Prison.App.Web.Controllers
             return View("ReleaseDetainee", model);
         }
 
+        [Editor]
         [HttpPost]
         public ActionResult ReleaseDetainee(DetentionReleaseDetaineeViewModel model)
         {
@@ -212,6 +216,7 @@ namespace Prison.App.Web.Controllers
             return RedirectToAction("Index");
         }
 
+        [User]
         public ActionResult DetentionDetails(int id)
         {
             var detention = _detaineeProvider.GetDetentionByID(id);
@@ -293,7 +298,6 @@ namespace Prison.App.Web.Controllers
             return ResultList;
         }
 
-
         private Detainee ToDetainee(DetaineeEditViewModel dtn)
         {
             return new Detainee
@@ -327,7 +331,6 @@ namespace Prison.App.Web.Controllers
 
             };
         }
-
 
         private DetaineeEditViewModel ToDetaineeEditViewModel(Detainee dtn)
         {
