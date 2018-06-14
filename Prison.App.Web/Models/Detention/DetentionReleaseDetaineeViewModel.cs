@@ -19,7 +19,7 @@ namespace Prison.App.Web.Models
         [Display(Name = "Оплачено за содержание")]
         public decimal PaidAmount { get; set; }
 
-
+        [Required(ErrorMessage = "Выберите сотрудника!")]
         [Display(Name = "Освобожден сотрудником")]
         public int ReleasedByWhomID { get; set; }
 

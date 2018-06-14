@@ -55,7 +55,7 @@
     <div class="form-group">
         @Html.LabelFor(model => model.MaritalStatus, htmlAttributes: new { @class = "control-label col-md-2" })
         <div class="col-md-3">
-            @Html.DropDownList("MaritalStatusID", new SelectList(Model.MaritalStatus, "StatusID", "StatusName", Model.MaritalStatusID), new { @class = "form-control" })
+            @Html.Action("GetMaritalDropDown", "Status",new { selectedID = Model.MaritalStatusID})
             @Html.ValidationMessageFor(model => model.MaritalStatus, "", new { @class = "text-danger" })
         </div>
     </div>
@@ -113,7 +113,7 @@
                             <span class="input-group-addon">
                                 <span class="glyphicon-plus-sign glyphicon" id="btnAddNumber"></span>
                             </span>
-                                @Html.TextBox($"PhoneNumbers[{i}]", Model.PhoneNumbers.ToList()[i], new { @class = "form-control" })
+                                @Html.TextBox($"PhoneNumbers[{i}]", Model.PhoneNumbers.ToList()[i], new { @class = "form-control",@required="required" })
                             <span class="input-group-addon">
                                 <span class="glyphicon-minus-sign glyphicon" id="btnRemoveNumber"></span>
                             </span>
@@ -122,7 +122,7 @@
                 }
                 else
                 {
-                    @Html.TextBox($"PhoneNumbers[{i}]", Model.PhoneNumbers.ToList()[i], new { @class = "form-control" })
+                    @Html.TextBox($"PhoneNumbers[{i}]", Model.PhoneNumbers.ToList()[i], new { @class = "form-control", @required = "required" })
 
                 }
             }

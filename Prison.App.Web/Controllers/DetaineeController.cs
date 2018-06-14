@@ -69,27 +69,22 @@ namespace Prison.App.Web.Controllers
         [Editor]
         public ActionResult Create()
         {
-            var statuses = _detaineeProvider.GetAllMaritalStatuses();
 
-            var ViewModel = new DetaineeEditViewModel
-            {
-                MaritalStatus = statuses,
-                
-            };
-
-            return View(ViewModel);
+            return View();
         }
 
         [Editor]
         [HttpPost]
-        public ActionResult Create(DetaineeEditViewModel detaineeModel)
+        public ActionResult Create(DetaineeEditViewModel model)
         {
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
-                var detainee = ToDetainee(detaineeModel);
+                return View(model);
+            }
+            var detainee = ToDetainee(model);
 
                 _detaineeService.Create(detainee);
-            }
+            
 
             return RedirectToAction("Index");
         }
@@ -305,7 +300,7 @@ namespace Prison.App.Web.Controllers
                 FirstName=dtn.FirstName,
                 LastName=dtn.LastName,
                 MiddleName=dtn.MiddleName,
-                BirstDate=dtn.BirstDate,
+                BirstDate=DateTime.Parse(dtn.BirstDate),
                 WorkPlace=dtn.WorkPlace,
                 ResidenceAddress=dtn.ResidenceAddress,
                 MaritalStatusID=dtn.MaritalStatusID,
@@ -341,7 +336,7 @@ namespace Prison.App.Web.Controllers
                 FirstName = dtn.FirstName,
                 LastName = dtn.LastName,
                 MiddleName = dtn.MiddleName,
-                BirstDate = dtn.BirstDate.ToLocalTime(),
+                BirstDate = dtn.BirstDate.ToShortDateString(),
                 MaritalStatus = statuses,
                 MaritalStatusID = dtn.MaritalStatusID,
                 ImagePath = dtn.ImagePath,

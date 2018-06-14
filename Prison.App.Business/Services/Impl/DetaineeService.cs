@@ -31,14 +31,6 @@ namespace Prison.App.Business.Services.Impl
         public void Update(Detainee dtn)
         {
             _rep.Update(dtn);
-
-            if (_cacheService.Contains($"Detainee{dtn.DetaineeID}"))
-            {
-                _cacheService.Update($"Detainee{dtn.DetaineeID}", dtn, 60);
-            }
-
-            else //put data into cache
-                _cacheService.Add($"Detainee{dtn.DetaineeID}", dtn, 60);
         }
 
         public void Delete(int id)

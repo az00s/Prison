@@ -99,6 +99,16 @@ namespace Prison.App.Web.Controllers
             return RedirectToAction("Index");
         }
 
+        public ActionResult GetMaritalDropDown(int selectedID=0)
+        {
+            var list= _statusProvider.GetAllStatuses();
+            var model = new MaritalDropDownViewModel {
+                Statuses = list,
+                SelectedID= selectedID
+            };
+            return View("_MaritalDropDown",model);
+        }
+
         #region ViewModelHelper
 
         private MaritalStatus ToStatus(StatusViewModel model)

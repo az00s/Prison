@@ -15,6 +15,8 @@
 
 
         });
+
+        $("#btnCreateDetainee").removeAttr("disabled");
     });
 
     $("#btnChooseDetention").click(function () {
@@ -32,6 +34,9 @@
 
 
         });
+
+        $("#btnCreateDetainee").removeAttr("disabled");
+
     });
 
     var num = $("input[name^='PhoneNumbers[']").length - 1;
@@ -56,4 +61,5 @@
             num = num - 1;
         }
     });
+
 });

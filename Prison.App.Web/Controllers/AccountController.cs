@@ -27,14 +27,14 @@ namespace Prison.App.Web.Controllers
         [OutputCache(CacheProfile = "LoginAccountCacheProfile")]
         public ActionResult Login()
         {
-            var Model = new UserLoginViewModel();
+            var Model = new LoginViewModel();
 
             return View(Model);
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Login(UserLoginViewModel model)
+        public ActionResult Login(LoginViewModel model)
         {
             if (!ModelState.IsValid)
             {
