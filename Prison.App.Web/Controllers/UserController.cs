@@ -82,13 +82,15 @@ namespace Prison.App.Web.Controllers
         [HttpPost]
         public ActionResult Create(UserCreateViewModel model)
         {
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
-                var user = ToUser(model);
-
-                _userService.Create(user);
+                return View(model);
             }
 
+            var user = ToUser(model);
+
+            _userService.Create(user);
+            
             return RedirectToAction("Index");
         }
 
@@ -145,12 +147,14 @@ namespace Prison.App.Web.Controllers
         [HttpPost]
         public ActionResult Edit(UserEditViewModel model)
         {
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
-                var user = ToUser(model);
-                _userService.Update(user);
+                return View(model);
             }
 
+            var user = ToUser(model);
+            _userService.Update(user);
+           
             return RedirectToAction("Index");
         }
 

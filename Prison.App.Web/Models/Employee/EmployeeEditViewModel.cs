@@ -26,7 +26,7 @@ namespace Prison.App.Web.Models
         [Display(Name = "Должность")]
         public IEnumerable<Position> Positions { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Выберите должность!")]
         public int PositionID { get; set; }
 
 

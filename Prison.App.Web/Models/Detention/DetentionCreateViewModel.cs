@@ -30,15 +30,19 @@ namespace Prison.App.Web.Models
         [Display(Name = "Оплачено за содержание")]
         public decimal PaidAmount { get; set; }
 
+        [Required(ErrorMessage = "Выберите сотрудника!")]
         [Display(Name = "Доставлен сотрудником")]
         public int DeliveredByWhomID { get; set; }
 
+        [Required(ErrorMessage = "Выберите сотрудника!")]
         [Display(Name = "Освобожден сотрудником")]
         public int ReleasedByWhomID { get; set; }
 
+        [Required(ErrorMessage = "Выберите сотрудника!")]
         [Display(Name = "Задержан сотрудником")]
         public int DetainedByWhomID { get; set; }
 
+        [Required(ErrorMessage = "Выберите место содержания!")]
         [Display(Name = "Место содержания")]
         public int PlaceID { get; set; }
 
