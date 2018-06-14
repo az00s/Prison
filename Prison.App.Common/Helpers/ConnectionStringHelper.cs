@@ -15,7 +15,7 @@ namespace Prison.App.Common.Helpers
 
         private const string CONNECTION_NAME = "PrisonConnection";
                                
-        public static string GetConnectionStringFromConfig()
+        public static string GetConnectionString()
         {
             if (_connString != null) return _connString;
             try

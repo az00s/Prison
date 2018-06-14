@@ -51,6 +51,9 @@
     <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\CommonServiceLocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="StructureMap, Version=3.1.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\structuremap.3.1.1.134\lib\net40\StructureMap.dll</HintPath>
     </Reference>
@@ -70,6 +73,9 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\..\SpecialDetentionCenter\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
@@ -108,6 +114,19 @@
     <Content Include="Content\bootstrap-datetimepicker.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\img\Prison.jpg" />
+    <Content Include="Content\Login.css" />
+    <Content Include="Scripts\AddDeleteRoleScript.js" />
+    <Content Include="Scripts\CommonScripts.js" />
+    <Content Include="Scripts\Detainee\CreateDetaineeScript.js" />
+    <Content Include="Scripts\Detainee\DetailsDetaineeScripts.js" />
+    <Content Include="Scripts\DetentionListScript.js" />
+    <Content Include="Scripts\Detainee\EditDetaineeScript.js" />
+    <Content Include="Scripts\Detainee\ReleaseDetaineeScripts.js" />
+    <Content Include="Scripts\Detainee\SearchViewScript.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\Login.js" />
     <Content Include="Content\Site.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax">
@@ -118,35 +137,59 @@
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
-    <Content Include="Scripts\DateNavigationViewScript.js" />
+    <Content Include="Scripts\Detainee\DateNavigationViewScript.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
-    <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\moment-with-locales.min.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\StructuremapMvc.cs" />
+    <Compile Include="Attributes\AdminAttribute.cs" />
+    <Compile Include="Attributes\EditorAttribute.cs" />
+    <Compile Include="Attributes\UserAttribute.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AdvertismentController.cs" />
     <Compile Include="Controllers\DetaineeController.cs" />
-    <Compile Include="Controllers\DetentionController.cs" />
     <Compile Include="Controllers\EmployeeController.cs" />
     <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\StatusController.cs" />
+    <Compile Include="Controllers\PositionController.cs" />
+    <Compile Include="Controllers\PhoneNumberController.cs" />
     <Compile Include="Controllers\PlaceOfStayController.cs" />
+    <Compile Include="Controllers\RoleController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
+    <Compile Include="Helpers\FileHelper.cs" />
     <Compile Include="Helpers\ViewHelper.cs" />
-    <Compile Include="Helpers\ViewModelHelper.cs" />
-    <Compile Include="Models\DetaineeEditViewModel.cs" />
-    <Compile Include="Models\DetaineeIndexViewModel.cs" />
-    <Compile Include="Models\DetaineeDetailsViewModel.cs" />
-    <Compile Include="Models\EmployeeEditViewModel.cs" />
-    <Compile Include="Models\EmployeeIndexViewModel.cs" />
+    <Compile Include="Models\Detainee\DetaineeEditViewModel.cs" />
+    <Compile Include="Models\Detainee\DetaineeIndexViewModel.cs" />
+    <Compile Include="Models\Detainee\DetaineeDetailsViewModel.cs" />
+    <Compile Include="Models\Detention\DetentionCreateViewModel.cs" />
+    <Compile Include="Models\Detention\DetentionDetailsViewModel.cs" />
+    <Compile Include="Models\Detention\DetentionDropDownViewModel.cs" />
+    <Compile Include="Models\Detention\DetentionListViewModel.cs" />
+    <Compile Include="Models\Detention\DetentionReleaseDetaineeViewModel.cs" />
+    <Compile Include="Models\Employee\EmployeeEditViewModel.cs" />
+    <Compile Include="Models\Employee\EmployeeIndexViewModel.cs" />
     <Compile Include="Models\ErrorViewModel.cs" />
+    <Compile Include="Models\MaritalDropDownViewModel.cs" />
+    <Compile Include="Models\NumberViewModel.cs" />
+    <Compile Include="Models\PlaceOfStay\PlaceOfStayViewModel.cs" />
+    <Compile Include="Models\PositionViewModel.cs" />
+    <Compile Include="Models\RoleViewModel.cs" />
+    <Compile Include="Models\SearchViewModel.cs" />
+    <Compile Include="Models\StatusViewModel.cs" />
+    <Compile Include="Models\User\UserCreateViewModel.cs" />
+    <Compile Include="Models\User\UserEditViewModel.cs" />
+    <Compile Include="Models\User\UserIndexViewModel.cs" />
+    <Compile Include="Models\LoginViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Registers\ControllerConvention.cs" />
     <Compile Include="Registers\DefaultRegistry.cs" />
@@ -173,14 +216,13 @@
     <Content Include="Views\Detention\Details.cshtml" />
     <Content Include="Views\Detainee\Create.cshtml" />
     <Content Include="Views\Detainee\DetaineeList.cshtml" />
-    <Content Include="Views\Shared\Partials\DateNavigation.cshtml" />
+    <Content Include="Views\Detainee\DateNavigation.cshtml" />
     <Content Include="Views\Advertisment\AddUnit.cshtml" />
     <Content Include="Views\Detainee\Edit.cshtml" />
     <Content Include="Views\Detainee\Delete.cshtml" />
     <Content Include="Views\Employee\Create.cshtml" />
     <Content Include="Views\Employee\Edit.cshtml" />
     <Content Include="Views\Employee\Delete.cshtml" />
-    <Content Include="Views\PlaceOfStay\Details.cshtml" />
     <Content Include="Views\PlaceOfStay\Create.cshtml" />
     <Content Include="Views\PlaceOfStay\Edit.cshtml" />
     <Content Include="Views\PlaceOfStay\Delete.cshtml" />
@@ -189,6 +231,39 @@
     <Content Include="Views\Error\ServerError.cshtml" />
     <Content Include="Views\Error\CustomError.cshtml" />
     <Content Include="Views\Shared\CustomError.cshtml" />
+    <Content Include="Views\Account\LogIn.cshtml" />
+    <Content Include="Views\Shared\Partials\_LogInPartial.cshtml" />
+    <Content Include="Views\User\Index.cshtml" />
+    <Content Include="Views\User\Details.cshtml" />
+    <Content Include="Views\User\Delete.cshtml" />
+    <Content Include="Views\User\Edit.cshtml" />
+    <Content Include="Views\User\Create.cshtml" />
+    <Content Include="Views\Role\Index.cshtml" />
+    <Content Include="Views\Role\Create.cshtml" />
+    <Content Include="Views\Role\Edit.cshtml" />
+    <Content Include="Views\Role\Delete.cshtml" />
+    <Content Include="Views\Detainee\Search.cshtml" />
+    <Content Include="Views\Error\Unauthorized.cshtml" />
+    <Content Include="Views\Shared\ValidationError.cshtml" />
+    <Content Include="Views\Status\Index.cshtml" />
+    <Content Include="Views\Status\Create.cshtml" />
+    <Content Include="Views\Status\Edit.cshtml" />
+    <Content Include="Views\Status\Delete.cshtml" />
+    <Content Include="Views\Position\Index.cshtml" />
+    <Content Include="Views\Position\Create.cshtml" />
+    <Content Include="Views\Position\Edit.cshtml" />
+    <Content Include="Views\Position\Delete.cshtml" />
+    <Content Include="Views\PhoneNumber\Index.cshtml" />
+    <Content Include="Views\PhoneNumber\Details.cshtml" />
+    <Content Include="Views\PhoneNumber\Create.cshtml" />
+    <Content Include="Views\PhoneNumber\Edit.cshtml" />
+    <Content Include="Views\PhoneNumber\Delete.cshtml" />
+    <Content Include="Views\Detainee\CreateDetention.cshtml" />
+    <Content Include="Views\Detainee\_DetentionsField.cshtml" />
+    <Content Include="Views\Detainee\_DetentionList.cshtml" />
+    <Content Include="Views\Detainee\ReleaseDetainee.cshtml" />
+    <Content Include="Views\Detainee\DetentionDetails.cshtml" />
+    <Content Include="Views\Status\_MaritalDropDown.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -198,7 +273,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Account\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Prison.App.Business\Prison.App.Business.csproj">

@@ -1,0 +1,32 @@
+﻿@model RoleViewModel
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+
+<h3>Вы действительно хотите удалить эту роль?</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.RoleName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RoleName)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm("DeleteFromDb","Role",new { id=Model.RoleID})) {
+        @Html.AntiForgeryToken()
+
+    <div class="form-actions no-color">
+        <div class="btn-group">
+            @Html.ActionLink("Назад", "Index", null, new { @class = "btn btn-default" })
+            <input type="submit" value="Удалить" class="btn btn-danger" />
+        </div>
+    </div>
+    }
+</div>

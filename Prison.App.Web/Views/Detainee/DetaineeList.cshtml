@@ -1,11 +1,16 @@
 ﻿@model IEnumerable<DetaineeIndexViewModel>
 
 @{
-    ViewBag.Title = "DetaineeList";
+    ViewBag.Title = "Список задержанных";
+    Layout = null;
 }
-
-<h2>DetaineeList</h2>
-
+@if (Model == null || Model.Count() < 1)
+{
+    <hr />
+    <p class="text-center">Ничего не найдено.</p>
+}
+else
+{
 <table class="table">
     <tr>
         <th>
@@ -32,14 +37,28 @@
     <tr>
         <td>
             @if (item.ImagePath != null)
-                {
+            {
                     <div>
-                        <a href="#"><img class="img-rounded" width="70" height="70" src=@item.ImagePath /></a>
+                        <a href="@Url.Action("Details", new { id = item.DetaineeID })"><img class="img-rounded" width="70" height="70" src=@item.ImagePath /></a>
                     </div>
-                }
+            }
         </td>
         <td>
-            @Html.ActionLink(item.LastName, "Details", "Detainee", new { id = item.DetaineeID }, null)
+                <div class="btn-group">
+                        <div class="input-group-btn">
+                            @Html.ActionLink(item.LastName, "Details", new { id = item.DetaineeID },new {@class= "btn btn-link btn-default dropdown-toggle", @data_toggle="dropdown" })
+                            <ul class="dropdown-menu">
+                                <li>@Html.ActionLink("Подробнее", "Details", new { id = item.DetaineeID })</li>
+                                @if (User.IsInRole("editor") || User.IsInRole("admin"))
+                                {
+                                    <li>@Html.ActionLink("Редактировать", "Edit", new { id = item.DetaineeID })</li>
+                                    <li class="divider"></li>
+                                    <li class = "text-danger">@Html.ActionLink("Удалить", "Delete", new { id = item.DetaineeID }, new { @class = "text-danger" })</li>
+                                }                                
+                            </ul>
+                        </div>
+                    </div>
+
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.FirstName)
@@ -59,4 +78,4 @@
 
 </table>
 
-<a href="javascript:void(0);" onclick="history.go(-1);">Back</a>
+}

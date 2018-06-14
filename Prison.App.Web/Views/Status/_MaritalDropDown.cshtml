@@ -1,0 +1,7 @@
+﻿@model MaritalDropDownViewModel
+
+@{ 
+    Layout = null;
+}
+
+@Html.DropDownList("MaritalStatusID", new SelectList(Model.Statuses, "StatusID", "StatusName",Model.SelectedID), new { @class = "form-control" })

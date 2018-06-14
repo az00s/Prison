@@ -19,8 +19,6 @@ namespace Prison.App.Web.DependencyResolution
 {
     using Prison.App.Common.Interfaces;
     using Prison.App.Common.Loggers;
-    using Prison.App.Data;
-    using Prison.App.Data.Interfaces;
     using StructureMap.Configuration.DSL;
     using StructureMap.Graph;
 
@@ -34,7 +32,6 @@ namespace Prison.App.Web.DependencyResolution
                     scan.WithDefaultConventions();
 					scan.With(new ControllerConvention());
                 });
-            //For<IRepository>().Use<Repository>();
             ForSingletonOf<ILogger>().Use<Logger>();
 
         }
