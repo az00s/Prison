@@ -3,6 +3,8 @@ go
 ALTER TABLE [dbo].[DetentionsOfDetainees]  
 WITH CHECK ADD  CONSTRAINT [FK_DetentionsOfDetainee_Detainee] FOREIGN KEY([DetaineeID])
 REFERENCES [dbo].[Detainee] ([DetaineeID])
+on update cascade
+on delete cascade
 
 GO
 

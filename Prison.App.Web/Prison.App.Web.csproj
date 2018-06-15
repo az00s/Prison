@@ -114,6 +114,14 @@
     <Content Include="Content\bootstrap-datetimepicker.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Images\ProfilePhotos\Codd.jpg" />
+    <Content Include="Content\Images\ProfilePhotos\Edison.jpg" />
+    <Content Include="Content\Images\ProfilePhotos\Einstein.jpg" />
+    <Content Include="Content\Images\ProfilePhotos\Felini.jpg" />
+    <Content Include="Content\Images\ProfilePhotos\Li.jpg" />
+    <Content Include="Content\Images\ProfilePhotos\Musk.jpg" />
+    <Content Include="Content\Images\ProfilePhotos\noavatar.png" />
+    <Content Include="Content\Images\ProfilePhotos\Tesla.jpg" />
     <Content Include="Content\img\Prison.jpg" />
     <Content Include="Content\Login.css" />
     <Content Include="Scripts\AddDeleteRoleScript.js" />
