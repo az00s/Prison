@@ -16,7 +16,6 @@ namespace Prison.App.Web.Controllers
             log = logger;
         }
 
-        [OutputCache(CacheProfile = "IndexHomeCacheProfile")]
         public ActionResult Index()
         {
             return View();

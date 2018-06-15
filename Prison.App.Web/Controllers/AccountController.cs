@@ -24,7 +24,6 @@ namespace Prison.App.Web.Controllers
             _log = log;
         }
 
-        [OutputCache(CacheProfile = "LoginAccountCacheProfile")]
         public ActionResult Login()
         {
             var Model = new LoginViewModel();
