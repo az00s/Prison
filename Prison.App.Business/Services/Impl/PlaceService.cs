@@ -29,14 +29,6 @@ namespace Prison.App.Business.Services.Impl
         public void Update(PlaceOfStay plc)
         {
             _rep.Update(plc);
-
-            if (_cacheService.Contains($"PlaceOfStay{plc.PlaceID}"))
-            {
-                _cacheService.Update($"PlaceOfStay{plc.PlaceID}", plc, 300);
-            }
-
-            else //put data into cache
-                _cacheService.Add($"PlaceOfStay{plc.PlaceID}", plc, 300);
         }
 
         public void Delete(int id)
@@ -44,9 +36,6 @@ namespace Prison.App.Business.Services.Impl
             if (ArgumentHelper.IsValidID(id))
             {
                 _rep.Delete(id);
-
-                _cacheService.Delete($"PlaceOfStay{id}");
-
             }
             else
             {

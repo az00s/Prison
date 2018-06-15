@@ -38,7 +38,7 @@ namespace Prison.App.Business.Providers.Impl
                 }
 
                 //put data into cache
-                else _cacheService.Add("AllNumbersList", result, 7);
+                else _cacheService.Add("AllNumbersList", result, 10);
             }
 
             return result;
@@ -47,24 +47,13 @@ namespace Prison.App.Business.Providers.Impl
 
         public PhoneNumber GetNumberByID(int id)
         {
-
             if (ArgumentHelper.IsValidID(id))
             {
-                //get data from cache
-                var result = _cacheService.Get<PhoneNumber>($"PhoneNumber{id}");
+                var  result = _rep.GetNumberByID(id);
 
                 if (result == null)
                 {
-                    //get data from dataBase if cache hasn't this data
-                    result = _rep.GetNumberByID(id);
-
-                    if (result == null)
-                    {
-                        throw new NullReferenceException($"Телефон с идентификатором: {id} не найдено!");
-                    }
-
-                    //put data into cache
-                    else _cacheService.Add($"PhoneNumber{id}", result, 15);
+                    throw new NullReferenceException($"Телефон с идентификатором: {id} не найдено!");
                 }
 
                 return result;

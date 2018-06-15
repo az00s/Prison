@@ -2,11 +2,9 @@
 using Prison.App.Common.Helpers;
 using Prison.App.Common.Interfaces;
 using System.Web.Mvc;
-using System.Web;
 
 namespace Prison.App.Web.Controllers
 {
-
     public class AdvertismentController : Controller
     {
         private ILogger _log;
@@ -24,18 +22,12 @@ namespace Prison.App.Web.Controllers
 
         public ActionResult GetAdUnit()
         {
-            Response.Cache.SetCacheability(HttpCacheability.NoCache);
-
             //because of home page must show 3 Ad
             int blurbsCount = 3;
            
-            var listOfBlurbs = _adService.GetElementsFromRep(blurbsCount);
+            var listOfBlurbs = _adService.GetAds(blurbsCount);
 
             return PartialView("AddUnit", listOfBlurbs);
-            
-            
-            
         }
-
     }
 }

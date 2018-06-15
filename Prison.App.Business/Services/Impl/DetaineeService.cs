@@ -23,14 +23,23 @@ namespace Prison.App.Business.Services.Impl
         {
             _rep.ReleaseDetainee(detention);
         }
+
         public void Create(Detainee dtn)
         {
             _rep.Create(dtn);
+
+            //when new detainee added - detaineeList removed from cache because it's not valid
+           _cacheService.Delete("AllDetaineeList");
+
         }
 
         public void Update(Detainee dtn)
         {
             _rep.Update(dtn);
+
+            //when new data changed - detaineeList removed from cache because it's not valid
+            _cacheService.Delete("AllDetaineeList");
+
         }
 
         public void Delete(int id)
@@ -39,8 +48,8 @@ namespace Prison.App.Business.Services.Impl
             {
                 _rep.Delete(id);
 
-                _cacheService.Delete($"Detainee{id}");
-
+                //when new data changed - detaineeList removed from cache because it's not valid
+                _cacheService.Delete("AllDetaineeList");
             }
             else
             {

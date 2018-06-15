@@ -75,7 +75,6 @@ namespace Prison.App.Data.Services
 
                 ServiceReference.Blurb[] listOfBlurbsFromService = _adService.GetRandomElementsFromRep(numOfElements);
 
-
                 foreach (ServiceReference.Blurb blrb in listOfBlurbsFromService)
                 {
                     listOfBlurbsOnClient.Add(
