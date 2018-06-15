@@ -38,7 +38,7 @@ namespace Prison.App.Business.Providers.Impl
                 }
 
                 //put data into cache
-                else _cacheService.Add("AllEmployeeList", result, 7);
+                else _cacheService.Add("AllEmployeeList", result, 10);
             }
 
             return result;
@@ -48,21 +48,11 @@ namespace Prison.App.Business.Providers.Impl
         {
             if (ArgumentHelper.IsValidID(id))
             {
-                    //get data from cache
-                var result = _cacheService.Get<Employee>($"Employee{id}");
+                var result = _rep.GetEmployeeByID(id);
 
                 if (result == null)
                 {
-                    //get data from dataBase if cache hasn't this data
-                    result = _rep.GetEmployeeByID(id);
-
-                    if (result == null)
-                    {
-                        throw new NullReferenceException($"Сотрудник с идентификатором: {id} не найден!");
-                    }
-
-                    //put data into cache
-                    else _cacheService.Add($"Employee{id}", result, 300);
+                    throw new NullReferenceException($"Сотрудник с идентификатором: {id} не найден!");
                 }
 
                 return result;

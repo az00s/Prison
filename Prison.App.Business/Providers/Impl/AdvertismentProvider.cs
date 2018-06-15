@@ -1,4 +1,5 @@
 ﻿using Prison.App.Business.Interfaces;
+using Prison.App.Business.Services;
 using Prison.App.Common.Entities;
 using Prison.App.Common.Helpers;
 using Prison.App.Data.Interfaces;
@@ -11,18 +12,31 @@ namespace Prison.App.Business.Providers
     {
         private IAdService _adService;
 
-        public AdvertismentProvider(IAdService service)
+        private ICachingService _cacheService;
+
+        public AdvertismentProvider(IAdService service, ICachingService cacheService)
         {
             ArgumentHelper.ThrowExceptionIfNull(service, "IAdService");
+            ArgumentHelper.ThrowExceptionIfNull(cacheService, "ICachingService");
 
             _adService = service;
+            _cacheService = cacheService;
         }
 
-        public IEnumerable<IBlurb> GetElementsFromRep(int numOfElements)
+        public IEnumerable<IBlurb> GetAds(int numOfElements)
         {
             if (ArgumentHelper.IsValidNumber(numOfElements))
             {
-                return _adService.GetElementsFromRep(numOfElements);
+                var result = _cacheService.Get<IEnumerable<IBlurb>>("Ads");
+
+                if (result == null)
+                {
+                    result=_adService.GetElementsFromRep(numOfElements);
+
+                    _cacheService.Add("Ads",result,20);
+                }
+
+                return result;
             }
             else
             {
