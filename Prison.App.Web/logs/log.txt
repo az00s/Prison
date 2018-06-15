@@ -1606,3 +1606,100 @@ System.Web.HttpCompileException (0x80004005): C:\Users\Константин\AppData\Local\
 Выполнение данной инструкции было прервано. 
 Connection string:Data Source=.\SQLEXPRESS;Initial Catalog=Prison;Integrated Security=True, 
 QueryText:DeleteEmployee
+2018-06-15 10:48:14,543 ERROR PrisonLogger - Невозможно найти таблицу 1.
+System.IndexOutOfRangeException: Невозможно найти таблицу 1.
+   в System.Data.DataTableCollection.get_Item(Int32 index)
+   в Prison.App.Data.Repositories.Impl.DetaineeDataContext.ToDetainee(DataSet dataset) в C:\Users\Константин\source\repos\Prison\Prison.App.Data\DataContext\Impl\DetaineeDataContext.cs:строка 364
+   в Prison.App.Business.Providers.Impl.DetaineeProvider.GetDetaineeByID(Int32 id) в C:\Users\Константин\source\repos\Prison\Prison.App.Business\Providers\Impl\DetaineeProvider.cs:строка 63
+   в Prison.App.Web.Controllers.DetaineeController.Details(Int32 id) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Controllers\DetaineeController.cs:строка 61
+   в lambda_method(Closure , ControllerBase , Object[] )
+   в System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   в System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.<BeginInvokeSynchronousActionMethod>b__39(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3d()
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.<BeginExecuteCore>b__1d(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   в System.Web.Mvc.MvcHandler.<BeginProcessRequest>b__5(IAsyncResult asyncResult, ProcessRequestState innerState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   в System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-15 10:50:45,691 ERROR PrisonLogger - Невозможно найти таблицу 2.
+System.IndexOutOfRangeException: Невозможно найти таблицу 2.
+   в System.Data.DataTableCollection.get_Item(Int32 index)
+   в Prison.App.Data.Repositories.Impl.DetaineeDataContext.ToDetainee(DataSet dataset) в C:\Users\Константин\source\repos\Prison\Prison.App.Data\DataContext\Impl\DetaineeDataContext.cs:строка 364
+   в Prison.App.Business.Providers.Impl.DetaineeProvider.GetDetaineeByID(Int32 id) в C:\Users\Константин\source\repos\Prison\Prison.App.Business\Providers\Impl\DetaineeProvider.cs:строка 63
+   в Prison.App.Web.Controllers.DetaineeController.Details(Int32 id) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Controllers\DetaineeController.cs:строка 61
+   в lambda_method(Closure , ControllerBase , Object[] )
+   в System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   в System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.<BeginInvokeSynchronousActionMethod>b__39(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3d()
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.<BeginExecuteCore>b__1d(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   в System.Web.Mvc.MvcHandler.<BeginProcessRequest>b__5(IAsyncResult asyncResult, ProcessRequestState innerState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   в System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-15 10:52:22,222 ERROR PrisonLogger - Не удалось привести тип объекта "System.Int32" к типу "System.String".
+System.InvalidCastException: Не удалось привести тип объекта "System.Int32" к типу "System.String".
+   в System.Data.DataRowExtensions.UnboxT`1.ReferenceField(Object value)
+   в Prison.App.Data.Repositories.Impl.DetaineeDataContext.ToPhoneNumberList(DataTable table) в C:\Users\Константин\source\repos\Prison\Prison.App.Data\DataContext\Impl\DetaineeDataContext.cs:строка 357
+   в Prison.App.Data.Repositories.Impl.DetaineeDataContext.ToDetainee(DataSet dataset) в C:\Users\Константин\source\repos\Prison\Prison.App.Data\DataContext\Impl\DetaineeDataContext.cs:строка 367
+   в Prison.App.Business.Providers.Impl.DetaineeProvider.GetDetaineeByID(Int32 id) в C:\Users\Константин\source\repos\Prison\Prison.App.Business\Providers\Impl\DetaineeProvider.cs:строка 63
+   в Prison.App.Web.Controllers.DetaineeController.Details(Int32 id) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Controllers\DetaineeController.cs:строка 61
+   в lambda_method(Closure , ControllerBase , Object[] )
+   в System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   в System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.<BeginInvokeSynchronousActionMethod>b__39(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3d()
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.<BeginExecuteCore>b__1d(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   в System.Web.Mvc.MvcHandler.<BeginProcessRequest>b__5(IAsyncResult asyncResult, ProcessRequestState innerState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   в System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-15 10:58:03,042 ERROR PrisonLogger - Попытка передачи параметра, возвращающего табличное значение, из 1 столбцов, тогда как в соответствующем определяемом пользователем типе предусмотрено 2 столбцов. 
+Connection string:Data Source=.\SQLEXPRESS;Initial Catalog=Prison;Integrated Security=True, 
+QueryText:CreateDetainee
+2018-06-15 11:07:28,020 ERROR PrisonLogger - Процедура "UpdateDetainee" не имеет параметра "@PhoneTable". 
+Connection string:Data Source=.\SQLEXPRESS;Initial Catalog=Prison;Integrated Security=True, 
+QueryText:UpdateDetainee
+2018-06-15 11:09:40,504 ERROR PrisonLogger - Процедура "UpdateDetainee" не имеет параметра "@PhoneTable". 
+Connection string:Data Source=.\SQLEXPRESS;Initial Catalog=Prison;Integrated Security=True, 
+QueryText:UpdateDetainee
