@@ -15,4 +15,4 @@ How to deploy:
 2. If the database "Prison" is created, -go to step 4, if the database is not created, go to step 3
 3. Open and run the "Summary.sql" file on your server.
 4. Run Prison.sln and deploy Prison.App.Web on local storage. Then make new app in IIS.- specify the Site Name: "Prison" (port 80).
-5. Deploy Prison.AdvertismentService on the IIS,- specify the Site Name: "Prison" (port 80).
+5. Deploy Prison.AdvertismentService on the IIS,- specify port 80.
