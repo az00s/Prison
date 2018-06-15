@@ -2,45 +2,46 @@
 using Prison.App.Common.Entities;
 using Prison.App.Common.Helpers;
 using Prison.App.Common.Interfaces;
-using System.Linq;
 using System.Web.Mvc;
+using Prison.App.Web.Attributes;
+using Prison.App.Web.Models;
+using System.Collections.Generic;
+using Prison.App.Business.Services;
 
 namespace Prison.App.Web.Controllers
 {
+    [Editor]
     public class PlaceOfStayController : Controller
     {
-        private ILogger log;
+        private ILogger _log;
 
-        private IPlaceOfStayProvider db;
+        private IPlaceProvider _placeProvider;
 
-        public PlaceOfStayController(IPlaceOfStayProvider rep, ILogger logger)
+        private IPlaceService _placeService;
+
+        public PlaceOfStayController(IPlaceProvider placeProvider, ILogger log, IPlaceService placeService)
         {
-            ArgumentHelper.ThrowExceptionIfNull(rep, "IPlaceOfStayProvider");
-            ArgumentHelper.ThrowExceptionIfNull(logger, "ILogger");
+            ArgumentHelper.ThrowExceptionIfNull(placeProvider, "IPlaceProvider");
+            ArgumentHelper.ThrowExceptionIfNull(placeService, "IPlaceService");
+            ArgumentHelper.ThrowExceptionIfNull(log, "ILogger");
 
-            db = rep;
-            log = logger;
+            _placeService = placeService;
+            _placeProvider = placeProvider;
+            _log = log;
         }
 
         public ActionResult Index()
         {
-            var Places = db.GetAllRecordsFromTable();
-
-            return View(Places);
+            var Places = _placeProvider.GetAllPlaces();
+            var ViewModel = ToPlaceOfStayIndexViewModel(Places);
+            return View(ViewModel);
         }
 
         public ActionResult Details(int id)
         {
-            if (ArgumentHelper.IsValidID(id))
-            {
-                var place = db.GetPlaceOfStayByID(id);
+            var place = _placeProvider.GetPlaceByID(id);
 
-                return View(place);
-            }
-            else
-            {
-                return RedirectToAction("Index", "Error");
-            }
+            return View(place);
         }
 
         public ActionResult Create()
@@ -49,69 +50,83 @@ namespace Prison.App.Web.Controllers
         }
 
         [HttpPost]
-        public ActionResult Create(PlaceOfStay dtn)
+        public ActionResult Create(PlaceOfStayViewModel model)
         {
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
-                db.Create(dtn);
+                return View(model);
             }
 
-            return View("Index", db.GetAllRecordsFromTable());
+            var place = ToPlaceOfStay(model);
+
+            _placeService.Create(place);
+
+            return RedirectToAction("Index");
         }
 
         public ActionResult Edit(int id)
         {
-            if (ArgumentHelper.IsValidID(id))
-            {
-                var place = db.GetPlaceOfStayByID(id);
-
-                return View(place);
-            }
-            else
-            {
-                return RedirectToAction("Index", "Error");
-            }
+            var place = _placeProvider.GetPlaceByID(id);
+            var ViewModel = ToPlaceOfStayViewModel(place);
+            return View(ViewModel);
         }
 
         [HttpPost]
-        public ActionResult Edit(PlaceOfStay dtn)
+        public ActionResult Edit(PlaceOfStayViewModel model)
         {
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
-                db.Update(dtn);
+                return View(model);
             }
+            var place = ToPlaceOfStay(model);
+            _placeService.Update(place);
 
-            return View("Index", db.GetAllRecordsFromTable());
+            return RedirectToAction("Index");
         }
-
 
         public ActionResult Delete(int id)
         {
-            if (ArgumentHelper.IsValidID(id))
-            {
-                var place = db.GetPlaceOfStayByID(id);
+            var place = _placeProvider.GetPlaceByID(id);
 
-                return View(place);
-            }
-            else
-            {
-                return RedirectToAction("Index", "Error");
-            }
+            return View(place);
         }
 
         [HttpPost]
         public ActionResult DeleteFromDb(int id)
         {
-            if (ArgumentHelper.IsValidID(id))
-            {
-                db.Delete(id);
+            _placeService.Delete(id);
 
-                return View("Index", db.GetAllRecordsFromTable());
-            }
-            else
-            {
-                return RedirectToAction("Index", "Error");
-            }
+            return RedirectToAction("Index");
         }
+
+        #region ViewModelHelper
+
+        private PlaceOfStay ToPlaceOfStay(PlaceOfStayViewModel model)
+        {
+            return new PlaceOfStay { PlaceID = model.PlaceID, Address = model.Address };
+        }
+
+        private PlaceOfStayViewModel ToPlaceOfStayViewModel(PlaceOfStay place)
+        {
+            return new PlaceOfStayViewModel { PlaceID=place.PlaceID,Address = place.Address };
+        }
+
+        private IEnumerable<PlaceOfStayViewModel> ToPlaceOfStayIndexViewModel(IEnumerable<PlaceOfStay> list)
+        {
+            List<PlaceOfStayViewModel> ResultList = new List<PlaceOfStayViewModel>();
+            foreach (PlaceOfStay item in list)
+            {
+                ResultList.Add(new PlaceOfStayViewModel
+                {
+                    PlaceID=item.PlaceID,
+                    Address = item.Address
+                });
+            }
+
+            return ResultList;
+
+        }
+
+        #endregion
     }
 }

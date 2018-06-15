@@ -1,90 +1,168 @@
 ﻿@model DetaineeDetailsViewModel
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "Детали";
+
+    string elementName;
+    string elementClass;
+
+    if (Model.Detentions.Last().ReleasеDate == DateTime.MinValue)
+    {
+        elementName = "Освободить";
+        elementClass = "btn btn-success";
+    }
+    else
+    {
+
+        elementName = "Освобожден";
+        elementClass = "label label-danger";
+
+    }
 }
 
-<h2>Details</h2>
 
-<div>
-    <h4>Detainee</h4>
-    <hr />
+<div id="dvReleaseModal"></div>
+<div id="dvDetentionDetailsModal"></div>
+<h2>О задержанном
+    @if (User.IsInRole("editor") || User.IsInRole("admin"))
+    {
+        <small><span class="pull-right @elementClass" id="btnReleaseDetainee">@elementName</span></small>
+    }
+    </h2>
+<hr />
+<div class="row">
+    <div class="col-md-2">
         @if (Model.ImagePath != null)
         {
-            <div>
-                <a href="#"><img class="img-rounded" width="70" height="70" src=@Model.ImagePath /></a>
-            </div>
+        <img class="img-rounded pull-left" width="170" height="170" src=@Model.ImagePath />
         }
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.LastName)
-        </dt>
+    </div>
+    <div class="col-md-5">
+        <dl class="dl-horizontal text-left">
+            <dt>
+                @Html.DisplayNameFor(model => model.LastName)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.LastName)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.LastName)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.FirstName)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.FirstName)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.FirstName)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.FirstName)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.MiddleName)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.MiddleName)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.MiddleName)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.MiddleName)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.BirstDate)
-        </dt>
+              <dt>
+                @Html.DisplayNameFor(model => model.BirstDate)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.BirstDate)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.BirstDate)
+            </dd>
 
-        
 
-        <dt>
-            @Html.DisplayNameFor(model => model.MaritalStatus)
-        </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.MaritalStatus)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.MaritalStatus)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.WorkPlace)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.MaritalStatus)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.WorkPlace)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.WorkPlace)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.ResidenceAddress)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.WorkPlace)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.ResidenceAddress)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.ResidenceAddress)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.AdditionalData)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.ResidenceAddress)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.AdditionalData)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.PhoneNumbers)
+            </dt>
+            <dd>
+                @foreach (var number in Model.PhoneNumbers)
+                {
+                    <span>@number,</span>
+                }
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.AdditionalData)
+            </dt>
 
-    </dl>
+            <dd>
+                @Html.DisplayFor(model => model.AdditionalData)
+            </dd>
+            @Html.HiddenFor(model => model.DetaineeID)
+        </dl>
+
+    </div>
+    <div class="col-md-5 ">
+        <div class="panel panel-default">
+            <div class="panel-heading text-center">Задержания</div>
+            <div class="panel-body">
+                @Html.Partial("_DetentionList", Model.Detentions)
+            </div>
+        </div>
+    </div>
+
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.DetaineeID }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+
+
+
+<div class="row">
+    <hr />
+
+
+    <div class="col-md-6">
+
+
+        <dl class="dl-horizontal">
+            
+
+          
+        </dl>
+        <div class="btn-group">
+            @Html.ActionLink("Назад", "Index",null, new { @class = "btn btn-default" })
+            @if (User.IsInRole("editor") || User.IsInRole("admin"))
+                    {
+                        @Html.ActionLink("Редактировать", "Edit", new { id = Model.DetaineeID },new { @class="btn btn-primary"})
+                        @Html.ActionLink("Удалить", "Delete", new { id = Model.DetaineeID }, new { @class = "btn btn-danger" })
+
+                    }
+            
+        </div>
+
+    </div>
+
+    <div class="col-md-5 col-md-offset-1">
+        
+    </div>
+    <input type="hidden" id="urlField" value="@Url.Action("ReleaseDetainee", "Detainee")" />
+</div>
+@section scripts {
+    <script type="text/javascript" src="~/Scripts/moment-with-locales.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/bootstrap-datetimepicker.min.js"></script>
+    <link rel="stylesheet" href="~/Content/bootstrap-datetimepicker.min.css" />
+    <script src="~/Scripts/Detainee/DetailsDetaineeScripts.js"></script>
+}

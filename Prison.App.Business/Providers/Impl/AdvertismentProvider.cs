@@ -2,6 +2,7 @@
 using Prison.App.Common.Entities;
 using Prison.App.Common.Helpers;
 using Prison.App.Data.Interfaces;
+using System;
 using System.Collections.Generic;
 
 namespace Prison.App.Business.Providers
@@ -19,7 +20,14 @@ namespace Prison.App.Business.Providers
 
         public IEnumerable<IBlurb> GetElementsFromRep(int numOfElements)
         {
-            return _adService.GetElementsFromRep(numOfElements);
+            if (ArgumentHelper.IsValidNumber(numOfElements))
+            {
+                return _adService.GetElementsFromRep(numOfElements);
+            }
+            else
+            {
+                throw new ArgumentException($"Неверное число требуемых объявлений!");
+            }
         }
 
     }

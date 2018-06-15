@@ -1,0 +1,41 @@
+﻿@model Prison.App.Web.Models.NumberViewModel
+
+@{
+    ViewBag.Title = "Удалить";
+}
+
+<h3>Вы действительно хотите удалить этот номер телефона?</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        
+
+        
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Number)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Number)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DetaineeLastname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DetaineeLastname)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm("DeleteFromDb", "PhoneNumber", new { id = Model.NumberID })) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Удалить" class="btn btn-default" /> |
+            @Html.ActionLink("Назад", "Index")
+        </div>
+    }
+</div>

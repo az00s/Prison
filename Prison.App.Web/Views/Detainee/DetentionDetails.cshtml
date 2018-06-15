@@ -1,0 +1,120 @@
+﻿@model Prison.App.Web.Models.DetentionDetailsViewModel
+@{
+    Layout = null;
+}
+
+<div id="DetentionModal" class="modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title text-center">Сведения о задержании</h4>
+            </div>
+            <div class="modal-body">
+                <div>
+                    <dl class="dl-horizontal">
+                        <dt>
+                            @Html.DisplayNameFor(model => model.DetentionID)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.DetentionID)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.DetentionDate)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.DetentionDate)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.DetainedByWhom)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.DetainedByWhom)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.DeliveryDate)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.DeliveryDate)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.DeliveredByWhom)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.DeliveredByWhom)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.ReleasеDate)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.ReleasеDate)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.ReleasedByWhom)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.ReleasedByWhom)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.AmountForStaying)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.AmountForStaying)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.PaidAmount)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.PaidAmount)
+                        </dd>
+
+
+
+
+
+
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Place)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.Place)
+                        </dd>
+
+                    </dl>
+                </div>
+
+            </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal" data-toggle="modal">Закрыть</button>
+                </div>
+
+            
+        </div>
+    </div>
+</div>
+
+
+<script>
+   
+</script>

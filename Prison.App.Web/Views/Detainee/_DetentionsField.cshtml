@@ -1,0 +1,10 @@
+﻿@model IEnumerable<DetentionDropDownViewModel>
+@{ 
+    Layout = null;
+}
+<div class="form-group">
+    
+    <div class="col-md-8 col-md-offset-4">
+        @Html.DropDownList("Detentions[0].DetentionID", new SelectList(Model, "DetentionID", "DetentionHeader"), new { @class = "form-control" })
+    </div>
+</div>

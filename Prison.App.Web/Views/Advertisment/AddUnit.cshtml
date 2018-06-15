@@ -7,7 +7,7 @@
             @if (Model == null)
             {
                 <li class="media">
-                    <hr />
+                   
                     <div class="media-body text-center">
                         <div class="text-muted">
                             Мы против рекламы!
@@ -22,7 +22,7 @@
                 foreach (var item in Model)
                 {
                     <li class="media">
-                        <hr />
+                        
                         <div class="media-body text-center">
 
                             <h4 class="media-heading text-center">@item.BlurbHeader</h4>
@@ -33,7 +33,7 @@
                                 @if (item.Image != null)
                                 {
                                     <div>
-                                        <a href="#"><img class="img-rounded" width="278" height="182" src=@Html.ConvertByteArrToString(item.Image) /></a>
+                                        <a href="#"><img class="img-rounded" width="258" height="162" src=@Html.ConvertByteArrToString(item.Image) /></a>
                                     </div>
                                 }
                         </div>

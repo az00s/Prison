@@ -37,6 +37,9 @@
       <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="StructureMap, Version=3.1.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\structuremap.3.1.1.134\lib\net40\StructureMap.dll</HintPath>
     </Reference>
@@ -48,7 +51,13 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Caching" />
     <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Mvc, Version=4.0.0.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\SpecialDetentionCenter\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -65,14 +74,42 @@
     <Compile Include="Providers\IDetaineeProvider.cs" />
     <Compile Include="Providers\IEmployeeProvider.cs" />
     <Compile Include="Providers\Impl\AdvertismentProvider.cs" />
-    <Compile Include="Providers\IDataProvider.cs" />
     <Compile Include="Providers\Impl\DetaineeProvider.cs" />
     <Compile Include="Providers\Impl\EmployeeProvider.cs" />
-    <Compile Include="Providers\Impl\PlaceOfStayProvider.cs" />
+    <Compile Include="Providers\Impl\PhoneNumberProvider.cs" />
+    <Compile Include="Providers\Impl\PlaceProvider.cs" />
     <Compile Include="Providers\Impl\PositionProvider.cs" />
-    <Compile Include="Providers\IPlaceOfStayProvider.cs" />
+    <Compile Include="Providers\Impl\RoleProvider.cs" />
+    <Compile Include="Providers\Impl\StatusProvider.cs" />
+    <Compile Include="Providers\Impl\UserProvider.cs" />
+    <Compile Include="Providers\IPhoneNumberProvider.cs" />
+    <Compile Include="Providers\IPlaceProvider.cs" />
     <Compile Include="Providers\IPositionProvider.cs" />
+    <Compile Include="Providers\IRoleProvider.cs" />
+    <Compile Include="Providers\IStatusProvider.cs" />
+    <Compile Include="Providers\IUserProvider.cs" />
     <Compile Include="Registers\BusinessRegistry.cs" />
+    <Compile Include="Services\ICachingService.cs" />
+    <Compile Include="Services\IDetaineeService.cs" />
+    <Compile Include="Services\IEmployeeService.cs" />
+    <Compile Include="Services\ILogInService.cs" />
+    <Compile Include="Services\Impl\DetaineeService.cs" />
+    <Compile Include="Services\Impl\EmployeeService.cs" />
+    <Compile Include="Services\Impl\LogInService.cs" />
+    <Compile Include="Models\UserPrincipal.cs" />
+    <Compile Include="Services\Impl\PhoneNumberService.cs" />
+    <Compile Include="Services\Impl\PlaceService.cs" />
+    <Compile Include="Services\Impl\PositionService.cs" />
+    <Compile Include="Services\Impl\RoleService.cs" />
+    <Compile Include="Services\Impl\StatusService.cs" />
+    <Compile Include="Services\Impl\UserService.cs" />
+    <Compile Include="Services\Impl\СachingService.cs" />
+    <Compile Include="Services\IPhoneNumberService.cs" />
+    <Compile Include="Services\IPlaceService.cs" />
+    <Compile Include="Services\IPositionService.cs" />
+    <Compile Include="Services\IRoleService.cs" />
+    <Compile Include="Services\IStatusService.cs" />
+    <Compile Include="Services\IUserService.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
