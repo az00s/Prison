@@ -103,7 +103,7 @@
     <Compile Include="Services\Impl\RoleService.cs" />
     <Compile Include="Services\Impl\StatusService.cs" />
     <Compile Include="Services\Impl\UserService.cs" />
-    <Compile Include="Services\Impl\СachingService.cs" />
+    <Compile Include="Services\Impl\CachingService.cs" />
     <Compile Include="Services\IPhoneNumberService.cs" />
     <Compile Include="Services\IPlaceService.cs" />
     <Compile Include="Services\IPositionService.cs" />

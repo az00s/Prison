@@ -5,13 +5,13 @@ using System.Runtime.Caching;
 
 namespace Prison.App.Business.Services.Impl
 {
-    public class СachingService: ICachingService
+    public class CachingService : ICachingService
     {
         private ILogger _log;
 
         private MemoryCache _cache;
 
-        public СachingService(ILogger log)
+        public CachingService(ILogger log)
         {
             ArgumentHelper.ThrowExceptionIfNull(log, "ILogger");
             _log = log;
