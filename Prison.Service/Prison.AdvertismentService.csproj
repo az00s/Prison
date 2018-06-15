@@ -61,6 +61,16 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Images\BMW.jpg" />
+    <Content Include="Images\Ford.jpg" />
+    <Content Include="Images\Geely.jpg" />
+    <Content Include="Images\Mercedes.jpg" />
+    <Content Include="Images\Nissan.jpg" />
+    <Content Include="Images\Renault.jpg" />
+    <Content Include="Images\Tesla.jpg" />
+    <Content Include="Images\Toyota.jpg" />
+    <Content Include="Images\Volkswagen.jpg" />
+    <Content Include="Images\Volvo.jpg" />
     <Content Include="Service.svc" />
     <Content Include="Web.config" />
   </ItemGroup>

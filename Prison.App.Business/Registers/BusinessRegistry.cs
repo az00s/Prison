@@ -15,7 +15,7 @@ namespace Prison.App.Business.Registers
             For<IBlurb>().Use<Common.Entities.Blurb>();
 
             For<ILogInService>().Use<LogInService>();
-            ForSingletonOf<ICachingService>().Use<СachingService>();
+            ForSingletonOf<ICachingService>().Use<CachingService>();
 
             For<IAdvertismentProvider>().Use<AdvertismentProvider>();
             For<IEmployeeProvider>().Use<EmployeeProvider>();

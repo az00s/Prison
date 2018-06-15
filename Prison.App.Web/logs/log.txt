@@ -1703,3 +1703,803 @@ QueryText:UpdateDetainee
 2018-06-15 11:09:40,504 ERROR PrisonLogger - Процедура "UpdateDetainee" не имеет параметра "@PhoneTable". 
 Connection string:Data Source=.\SQLEXPRESS;Initial Catalog=Prison;Integrated Security=True, 
 QueryText:UpdateDetainee
+2018-06-15 14:11:14,348 ERROR PrisonLogger - Ошибка при выполнении криптографической операции.
+System.Security.Cryptography.CryptographicException: Ошибка при выполнении криптографической операции.
+   в System.Web.Security.Cryptography.HomogenizingCryptoServiceWrapper.HomogenizeErrors(Func`2 func, Byte[] input)
+   в System.Web.Security.FormsAuthentication.Decrypt(String encryptedTicket)
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 36
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-15 14:11:14,469 ERROR PrisonLogger - Ошибка при выполнении криптографической операции.
+System.Security.Cryptography.CryptographicException: Ошибка при выполнении криптографической операции.
+   в System.Web.Security.Cryptography.HomogenizingCryptoServiceWrapper.HomogenizeErrors(Func`2 func, Byte[] input)
+   в System.Web.Security.FormsAuthentication.Decrypt(String encryptedTicket)
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 36
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-15 14:11:14,501 ERROR PrisonLogger - Ошибка при выполнении криптографической операции.
+System.Security.Cryptography.CryptographicException: Ошибка при выполнении криптографической операции.
+   в System.Web.Security.Cryptography.HomogenizingCryptoServiceWrapper.HomogenizeErrors(Func`2 func, Byte[] input)
+   в System.Web.Security.FormsAuthentication.Decrypt(String encryptedTicket)
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 36
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-15 14:11:14,537 ERROR PrisonLogger - Ошибка при выполнении криптографической операции.
+System.Security.Cryptography.CryptographicException: Ошибка при выполнении криптографической операции.
+   в System.Web.Security.Cryptography.HomogenizingCryptoServiceWrapper.HomogenizeErrors(Func`2 func, Byte[] input)
+   в System.Web.Security.FormsAuthentication.Decrypt(String encryptedTicket)
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 36
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-15 14:11:14,566 ERROR PrisonLogger - Ошибка при выполнении криптографической операции.
+System.Security.Cryptography.CryptographicException: Ошибка при выполнении криптографической операции.
+   в System.Web.Security.Cryptography.HomogenizingCryptoServiceWrapper.HomogenizeErrors(Func`2 func, Byte[] input)
+   в System.Web.Security.FormsAuthentication.Decrypt(String encryptedTicket)
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 36
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-15 14:11:14,597 ERROR PrisonLogger - Ошибка при выполнении криптографической операции.
+System.Security.Cryptography.CryptographicException: Ошибка при выполнении криптографической операции.
+   в System.Web.Security.Cryptography.HomogenizingCryptoServiceWrapper.HomogenizeErrors(Func`2 func, Byte[] input)
+   в System.Web.Security.FormsAuthentication.Decrypt(String encryptedTicket)
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 36
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-15 14:11:14,633 ERROR PrisonLogger - Ошибка при выполнении криптографической операции.
+System.Security.Cryptography.CryptographicException: Ошибка при выполнении криптографической операции.
+   в System.Web.Security.Cryptography.HomogenizingCryptoServiceWrapper.HomogenizeErrors(Func`2 func, Byte[] input)
+   в System.Web.Security.FormsAuthentication.Decrypt(String encryptedTicket)
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 36
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-15 14:11:14,671 ERROR PrisonLogger - Ошибка при выполнении криптографической операции.
+System.Security.Cryptography.CryptographicException: Ошибка при выполнении криптографической операции.
+   в System.Web.Security.Cryptography.HomogenizingCryptoServiceWrapper.HomogenizeErrors(Func`2 func, Byte[] input)
+   в System.Web.Security.FormsAuthentication.Decrypt(String encryptedTicket)
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 36
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-15 14:11:14,705 ERROR PrisonLogger - Ошибка при выполнении криптографической операции.
+System.Security.Cryptography.CryptographicException: Ошибка при выполнении криптографической операции.
+   в System.Web.Security.Cryptography.HomogenizingCryptoServiceWrapper.HomogenizeErrors(Func`2 func, Byte[] input)
+   в System.Web.Security.FormsAuthentication.Decrypt(String encryptedTicket)
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 36
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-15 14:11:14,741 ERROR PrisonLogger - Ошибка при выполнении криптографической операции.
+System.Security.Cryptography.CryptographicException: Ошибка при выполнении криптографической операции.
+   в System.Web.Security.Cryptography.HomogenizingCryptoServiceWrapper.HomogenizeErrors(Func`2 func, Byte[] input)
+   в System.Web.Security.FormsAuthentication.Decrypt(String encryptedTicket)
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 36
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-15 14:11:14,777 ERROR PrisonLogger - Ошибка при выполнении криптографической операции.
+System.Security.Cryptography.CryptographicException: Ошибка при выполнении криптографической операции.
+   в System.Web.Security.Cryptography.HomogenizingCryptoServiceWrapper.HomogenizeErrors(Func`2 func, Byte[] input)
+   в System.Web.Security.FormsAuthentication.Decrypt(String encryptedTicket)
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 36
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-15 14:11:14,810 ERROR PrisonLogger - Ошибка при выполнении криптографической операции.
+System.Security.Cryptography.CryptographicException: Ошибка при выполнении криптографической операции.
+   в System.Web.Security.Cryptography.HomogenizingCryptoServiceWrapper.HomogenizeErrors(Func`2 func, Byte[] input)
+   в System.Web.Security.FormsAuthentication.Decrypt(String encryptedTicket)
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 36
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-15 14:11:14,841 ERROR PrisonLogger - Ошибка при выполнении криптографической операции.
+System.Security.Cryptography.CryptographicException: Ошибка при выполнении криптографической операции.
+   в System.Web.Security.Cryptography.HomogenizingCryptoServiceWrapper.HomogenizeErrors(Func`2 func, Byte[] input)
+   в System.Web.Security.FormsAuthentication.Decrypt(String encryptedTicket)
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 36
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-15 14:11:14,872 ERROR PrisonLogger - Ошибка при выполнении криптографической операции.
+System.Security.Cryptography.CryptographicException: Ошибка при выполнении криптографической операции.
+   в System.Web.Security.Cryptography.HomogenizingCryptoServiceWrapper.HomogenizeErrors(Func`2 func, Byte[] input)
+   в System.Web.Security.FormsAuthentication.Decrypt(String encryptedTicket)
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 36
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-15 14:11:14,900 ERROR PrisonLogger - Ошибка при выполнении криптографической операции.
+System.Security.Cryptography.CryptographicException: Ошибка при выполнении криптографической операции.
+   в System.Web.Security.Cryptography.HomogenizingCryptoServiceWrapper.HomogenizeErrors(Func`2 func, Byte[] input)
+   в System.Web.Security.FormsAuthentication.Decrypt(String encryptedTicket)
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 36
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-15 14:11:14,935 ERROR PrisonLogger - Ошибка при выполнении криптографической операции.
+System.Security.Cryptography.CryptographicException: Ошибка при выполнении криптографической операции.
+   в System.Web.Security.Cryptography.HomogenizingCryptoServiceWrapper.HomogenizeErrors(Func`2 func, Byte[] input)
+   в System.Web.Security.FormsAuthentication.Decrypt(String encryptedTicket)
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 36
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-15 14:11:14,961 ERROR PrisonLogger - Ошибка при выполнении криптографической операции.
+System.Security.Cryptography.CryptographicException: Ошибка при выполнении криптографической операции.
+   в System.Web.Security.Cryptography.HomogenizingCryptoServiceWrapper.HomogenizeErrors(Func`2 func, Byte[] input)
+   в System.Web.Security.FormsAuthentication.Decrypt(String encryptedTicket)
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 36
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-15 14:11:14,989 ERROR PrisonLogger - Ошибка при выполнении криптографической операции.
+System.Security.Cryptography.CryptographicException: Ошибка при выполнении криптографической операции.
+   в System.Web.Security.Cryptography.HomogenizingCryptoServiceWrapper.HomogenizeErrors(Func`2 func, Byte[] input)
+   в System.Web.Security.FormsAuthentication.Decrypt(String encryptedTicket)
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 36
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-15 14:11:15,017 ERROR PrisonLogger - Ошибка при выполнении криптографической операции.
+System.Security.Cryptography.CryptographicException: Ошибка при выполнении криптографической операции.
+   в System.Web.Security.Cryptography.HomogenizingCryptoServiceWrapper.HomogenizeErrors(Func`2 func, Byte[] input)
+   в System.Web.Security.FormsAuthentication.Decrypt(String encryptedTicket)
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 36
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-15 14:11:15,044 ERROR PrisonLogger - Ошибка при выполнении криптографической операции.
+System.Security.Cryptography.CryptographicException: Ошибка при выполнении криптографической операции.
+   в System.Web.Security.Cryptography.HomogenizingCryptoServiceWrapper.HomogenizeErrors(Func`2 func, Byte[] input)
+   в System.Web.Security.FormsAuthentication.Decrypt(String encryptedTicket)
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 36
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-15 14:11:15,415 ERROR PrisonLogger - Ошибка при выполнении криптографической операции.
+System.Security.Cryptography.CryptographicException: Ошибка при выполнении криптографической операции.
+   в System.Web.Security.Cryptography.HomogenizingCryptoServiceWrapper.HomogenizeErrors(Func`2 func, Byte[] input)
+   в System.Web.Security.FormsAuthentication.Decrypt(String encryptedTicket)
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 36
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-15 14:11:15,449 ERROR PrisonLogger - Ошибка при выполнении криптографической операции.
+System.Security.Cryptography.CryptographicException: Ошибка при выполнении криптографической операции.
+   в System.Web.Security.Cryptography.HomogenizingCryptoServiceWrapper.HomogenizeErrors(Func`2 func, Byte[] input)
+   в System.Web.Security.FormsAuthentication.Decrypt(String encryptedTicket)
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 36
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-15 14:11:15,481 ERROR PrisonLogger - Ошибка при выполнении криптографической операции.
+System.Security.Cryptography.CryptographicException: Ошибка при выполнении криптографической операции.
+   в System.Web.Security.Cryptography.HomogenizingCryptoServiceWrapper.HomogenizeErrors(Func`2 func, Byte[] input)
+   в System.Web.Security.FormsAuthentication.Decrypt(String encryptedTicket)
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 36
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-15 14:11:15,510 ERROR PrisonLogger - Ошибка при выполнении криптографической операции.
+System.Security.Cryptography.CryptographicException: Ошибка при выполнении криптографической операции.
+   в System.Web.Security.Cryptography.HomogenizingCryptoServiceWrapper.HomogenizeErrors(Func`2 func, Byte[] input)
+   в System.Web.Security.FormsAuthentication.Decrypt(String encryptedTicket)
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 36
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-15 14:11:15,541 ERROR PrisonLogger - Ошибка при выполнении криптографической операции.
+System.Security.Cryptography.CryptographicException: Ошибка при выполнении криптографической операции.
+   в System.Web.Security.Cryptography.HomogenizingCryptoServiceWrapper.HomogenizeErrors(Func`2 func, Byte[] input)
+   в System.Web.Security.FormsAuthentication.Decrypt(String encryptedTicket)
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 36
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-15 14:11:15,571 ERROR PrisonLogger - Ошибка при выполнении криптографической операции.
+System.Security.Cryptography.CryptographicException: Ошибка при выполнении криптографической операции.
+   в System.Web.Security.Cryptography.HomogenizingCryptoServiceWrapper.HomogenizeErrors(Func`2 func, Byte[] input)
+   в System.Web.Security.FormsAuthentication.Decrypt(String encryptedTicket)
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 36
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-15 14:11:15,601 ERROR PrisonLogger - Ошибка при выполнении криптографической операции.
+System.Security.Cryptography.CryptographicException: Ошибка при выполнении криптографической операции.
+   в System.Web.Security.Cryptography.HomogenizingCryptoServiceWrapper.HomogenizeErrors(Func`2 func, Byte[] input)
+   в System.Web.Security.FormsAuthentication.Decrypt(String encryptedTicket)
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 36
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-15 14:11:15,631 ERROR PrisonLogger - Ошибка при выполнении криптографической операции.
+System.Security.Cryptography.CryptographicException: Ошибка при выполнении криптографической операции.
+   в System.Web.Security.Cryptography.HomogenizingCryptoServiceWrapper.HomogenizeErrors(Func`2 func, Byte[] input)
+   в System.Web.Security.FormsAuthentication.Decrypt(String encryptedTicket)
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 36
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-15 14:11:15,661 ERROR PrisonLogger - Ошибка при выполнении криптографической операции.
+System.Security.Cryptography.CryptographicException: Ошибка при выполнении криптографической операции.
+   в System.Web.Security.Cryptography.HomogenizingCryptoServiceWrapper.HomogenizeErrors(Func`2 func, Byte[] input)
+   в System.Web.Security.FormsAuthentication.Decrypt(String encryptedTicket)
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 36
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-15 14:11:15,693 ERROR PrisonLogger - Ошибка при выполнении криптографической операции.
+System.Security.Cryptography.CryptographicException: Ошибка при выполнении криптографической операции.
+   в System.Web.Security.Cryptography.HomogenizingCryptoServiceWrapper.HomogenizeErrors(Func`2 func, Byte[] input)
+   в System.Web.Security.FormsAuthentication.Decrypt(String encryptedTicket)
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 36
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-15 14:11:15,723 ERROR PrisonLogger - Ошибка при выполнении криптографической операции.
+System.Security.Cryptography.CryptographicException: Ошибка при выполнении криптографической операции.
+   в System.Web.Security.Cryptography.HomogenizingCryptoServiceWrapper.HomogenizeErrors(Func`2 func, Byte[] input)
+   в System.Web.Security.FormsAuthentication.Decrypt(String encryptedTicket)
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 36
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-15 14:11:15,756 ERROR PrisonLogger - Ошибка при выполнении криптографической операции.
+System.Security.Cryptography.CryptographicException: Ошибка при выполнении криптографической операции.
+   в System.Web.Security.Cryptography.HomogenizingCryptoServiceWrapper.HomogenizeErrors(Func`2 func, Byte[] input)
+   в System.Web.Security.FormsAuthentication.Decrypt(String encryptedTicket)
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 36
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-15 14:11:15,787 ERROR PrisonLogger - Ошибка при выполнении криптографической операции.
+System.Security.Cryptography.CryptographicException: Ошибка при выполнении криптографической операции.
+   в System.Web.Security.Cryptography.HomogenizingCryptoServiceWrapper.HomogenizeErrors(Func`2 func, Byte[] input)
+   в System.Web.Security.FormsAuthentication.Decrypt(String encryptedTicket)
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 36
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-15 14:11:15,826 ERROR PrisonLogger - Ошибка при выполнении криптографической операции.
+System.Security.Cryptography.CryptographicException: Ошибка при выполнении криптографической операции.
+   в System.Web.Security.Cryptography.HomogenizingCryptoServiceWrapper.HomogenizeErrors(Func`2 func, Byte[] input)
+   в System.Web.Security.FormsAuthentication.Decrypt(String encryptedTicket)
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 36
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-15 14:11:15,866 ERROR PrisonLogger - Ошибка при выполнении криптографической операции.
+System.Security.Cryptography.CryptographicException: Ошибка при выполнении криптографической операции.
+   в System.Web.Security.Cryptography.HomogenizingCryptoServiceWrapper.HomogenizeErrors(Func`2 func, Byte[] input)
+   в System.Web.Security.FormsAuthentication.Decrypt(String encryptedTicket)
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 36
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-15 14:11:15,898 ERROR PrisonLogger - Ошибка при выполнении криптографической операции.
+System.Security.Cryptography.CryptographicException: Ошибка при выполнении криптографической операции.
+   в System.Web.Security.Cryptography.HomogenizingCryptoServiceWrapper.HomogenizeErrors(Func`2 func, Byte[] input)
+   в System.Web.Security.FormsAuthentication.Decrypt(String encryptedTicket)
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 36
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-15 14:11:15,928 ERROR PrisonLogger - Ошибка при выполнении криптографической операции.
+System.Security.Cryptography.CryptographicException: Ошибка при выполнении криптографической операции.
+   в System.Web.Security.Cryptography.HomogenizingCryptoServiceWrapper.HomogenizeErrors(Func`2 func, Byte[] input)
+   в System.Web.Security.FormsAuthentication.Decrypt(String encryptedTicket)
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 36
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-15 14:11:15,964 ERROR PrisonLogger - Ошибка при выполнении криптографической операции.
+System.Security.Cryptography.CryptographicException: Ошибка при выполнении криптографической операции.
+   в System.Web.Security.Cryptography.HomogenizingCryptoServiceWrapper.HomogenizeErrors(Func`2 func, Byte[] input)
+   в System.Web.Security.FormsAuthentication.Decrypt(String encryptedTicket)
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 36
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-15 14:11:15,989 ERROR PrisonLogger - Ошибка при выполнении криптографической операции.
+System.Security.Cryptography.CryptographicException: Ошибка при выполнении криптографической операции.
+   в System.Web.Security.Cryptography.HomogenizingCryptoServiceWrapper.HomogenizeErrors(Func`2 func, Byte[] input)
+   в System.Web.Security.FormsAuthentication.Decrypt(String encryptedTicket)
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 36
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-15 14:11:16,021 ERROR PrisonLogger - Ошибка при выполнении криптографической операции.
+System.Security.Cryptography.CryptographicException: Ошибка при выполнении криптографической операции.
+   в System.Web.Security.Cryptography.HomogenizingCryptoServiceWrapper.HomogenizeErrors(Func`2 func, Byte[] input)
+   в System.Web.Security.FormsAuthentication.Decrypt(String encryptedTicket)
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 36
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-15 14:11:21,047 ERROR PrisonLogger - Ошибка при выполнении криптографической операции.
+System.Security.Cryptography.CryptographicException: Ошибка при выполнении криптографической операции.
+   в System.Web.Security.Cryptography.HomogenizingCryptoServiceWrapper.HomogenizeErrors(Func`2 func, Byte[] input)
+   в System.Web.Security.FormsAuthentication.Decrypt(String encryptedTicket)
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 36
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-15 14:11:21,077 ERROR PrisonLogger - Ошибка при выполнении криптографической операции.
+System.Security.Cryptography.CryptographicException: Ошибка при выполнении криптографической операции.
+   в System.Web.Security.Cryptography.HomogenizingCryptoServiceWrapper.HomogenizeErrors(Func`2 func, Byte[] input)
+   в System.Web.Security.FormsAuthentication.Decrypt(String encryptedTicket)
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 36
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-15 14:11:21,110 ERROR PrisonLogger - Ошибка при выполнении криптографической операции.
+System.Security.Cryptography.CryptographicException: Ошибка при выполнении криптографической операции.
+   в System.Web.Security.Cryptography.HomogenizingCryptoServiceWrapper.HomogenizeErrors(Func`2 func, Byte[] input)
+   в System.Web.Security.FormsAuthentication.Decrypt(String encryptedTicket)
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 36
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-15 14:11:21,143 ERROR PrisonLogger - Ошибка при выполнении криптографической операции.
+System.Security.Cryptography.CryptographicException: Ошибка при выполнении криптографической операции.
+   в System.Web.Security.Cryptography.HomogenizingCryptoServiceWrapper.HomogenizeErrors(Func`2 func, Byte[] input)
+   в System.Web.Security.FormsAuthentication.Decrypt(String encryptedTicket)
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 36
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-15 14:11:21,175 ERROR PrisonLogger - Ошибка при выполнении криптографической операции.
+System.Security.Cryptography.CryptographicException: Ошибка при выполнении криптографической операции.
+   в System.Web.Security.Cryptography.HomogenizingCryptoServiceWrapper.HomogenizeErrors(Func`2 func, Byte[] input)
+   в System.Web.Security.FormsAuthentication.Decrypt(String encryptedTicket)
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 36
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-15 14:11:21,205 ERROR PrisonLogger - Ошибка при выполнении криптографической операции.
+System.Security.Cryptography.CryptographicException: Ошибка при выполнении криптографической операции.
+   в System.Web.Security.Cryptography.HomogenizingCryptoServiceWrapper.HomogenizeErrors(Func`2 func, Byte[] input)
+   в System.Web.Security.FormsAuthentication.Decrypt(String encryptedTicket)
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 36
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-15 14:11:21,241 ERROR PrisonLogger - Ошибка при выполнении криптографической операции.
+System.Security.Cryptography.CryptographicException: Ошибка при выполнении криптографической операции.
+   в System.Web.Security.Cryptography.HomogenizingCryptoServiceWrapper.HomogenizeErrors(Func`2 func, Byte[] input)
+   в System.Web.Security.FormsAuthentication.Decrypt(String encryptedTicket)
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 36
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-15 14:11:21,267 ERROR PrisonLogger - Ошибка при выполнении криптографической операции.
+System.Security.Cryptography.CryptographicException: Ошибка при выполнении криптографической операции.
+   в System.Web.Security.Cryptography.HomogenizingCryptoServiceWrapper.HomogenizeErrors(Func`2 func, Byte[] input)
+   в System.Web.Security.FormsAuthentication.Decrypt(String encryptedTicket)
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 36
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-15 14:11:21,291 ERROR PrisonLogger - Ошибка при выполнении криптографической операции.
+System.Security.Cryptography.CryptographicException: Ошибка при выполнении криптографической операции.
+   в System.Web.Security.Cryptography.HomogenizingCryptoServiceWrapper.HomogenizeErrors(Func`2 func, Byte[] input)
+   в System.Web.Security.FormsAuthentication.Decrypt(String encryptedTicket)
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 36
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-15 14:11:21,317 ERROR PrisonLogger - Ошибка при выполнении криптографической операции.
+System.Security.Cryptography.CryptographicException: Ошибка при выполнении криптографической операции.
+   в System.Web.Security.Cryptography.HomogenizingCryptoServiceWrapper.HomogenizeErrors(Func`2 func, Byte[] input)
+   в System.Web.Security.FormsAuthentication.Decrypt(String encryptedTicket)
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 36
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-15 14:11:21,343 ERROR PrisonLogger - Ошибка при выполнении криптографической операции.
+System.Security.Cryptography.CryptographicException: Ошибка при выполнении криптографической операции.
+   в System.Web.Security.Cryptography.HomogenizingCryptoServiceWrapper.HomogenizeErrors(Func`2 func, Byte[] input)
+   в System.Web.Security.FormsAuthentication.Decrypt(String encryptedTicket)
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 36
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-15 14:11:21,370 ERROR PrisonLogger - Ошибка при выполнении криптографической операции.
+System.Security.Cryptography.CryptographicException: Ошибка при выполнении криптографической операции.
+   в System.Web.Security.Cryptography.HomogenizingCryptoServiceWrapper.HomogenizeErrors(Func`2 func, Byte[] input)
+   в System.Web.Security.FormsAuthentication.Decrypt(String encryptedTicket)
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 36
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-15 14:11:21,394 ERROR PrisonLogger - Ошибка при выполнении криптографической операции.
+System.Security.Cryptography.CryptographicException: Ошибка при выполнении криптографической операции.
+   в System.Web.Security.Cryptography.HomogenizingCryptoServiceWrapper.HomogenizeErrors(Func`2 func, Byte[] input)
+   в System.Web.Security.FormsAuthentication.Decrypt(String encryptedTicket)
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 36
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-15 14:11:21,419 ERROR PrisonLogger - Ошибка при выполнении криптографической операции.
+System.Security.Cryptography.CryptographicException: Ошибка при выполнении криптографической операции.
+   в System.Web.Security.Cryptography.HomogenizingCryptoServiceWrapper.HomogenizeErrors(Func`2 func, Byte[] input)
+   в System.Web.Security.FormsAuthentication.Decrypt(String encryptedTicket)
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 36
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-15 14:11:21,447 ERROR PrisonLogger - Ошибка при выполнении криптографической операции.
+System.Security.Cryptography.CryptographicException: Ошибка при выполнении криптографической операции.
+   в System.Web.Security.Cryptography.HomogenizingCryptoServiceWrapper.HomogenizeErrors(Func`2 func, Byte[] input)
+   в System.Web.Security.FormsAuthentication.Decrypt(String encryptedTicket)
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 36
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-15 14:11:21,473 ERROR PrisonLogger - Ошибка при выполнении криптографической операции.
+System.Security.Cryptography.CryptographicException: Ошибка при выполнении криптографической операции.
+   в System.Web.Security.Cryptography.HomogenizingCryptoServiceWrapper.HomogenizeErrors(Func`2 func, Byte[] input)
+   в System.Web.Security.FormsAuthentication.Decrypt(String encryptedTicket)
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 36
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-15 14:11:21,498 ERROR PrisonLogger - Ошибка при выполнении криптографической операции.
+System.Security.Cryptography.CryptographicException: Ошибка при выполнении криптографической операции.
+   в System.Web.Security.Cryptography.HomogenizingCryptoServiceWrapper.HomogenizeErrors(Func`2 func, Byte[] input)
+   в System.Web.Security.FormsAuthentication.Decrypt(String encryptedTicket)
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 36
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-15 14:11:21,524 ERROR PrisonLogger - Ошибка при выполнении криптографической операции.
+System.Security.Cryptography.CryptographicException: Ошибка при выполнении криптографической операции.
+   в System.Web.Security.Cryptography.HomogenizingCryptoServiceWrapper.HomogenizeErrors(Func`2 func, Byte[] input)
+   в System.Web.Security.FormsAuthentication.Decrypt(String encryptedTicket)
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 36
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-15 14:11:21,549 ERROR PrisonLogger - Ошибка при выполнении криптографической операции.
+System.Security.Cryptography.CryptographicException: Ошибка при выполнении криптографической операции.
+   в System.Web.Security.Cryptography.HomogenizingCryptoServiceWrapper.HomogenizeErrors(Func`2 func, Byte[] input)
+   в System.Web.Security.FormsAuthentication.Decrypt(String encryptedTicket)
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 36
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-15 14:11:21,575 ERROR PrisonLogger - Ошибка при выполнении криптографической операции.
+System.Security.Cryptography.CryptographicException: Ошибка при выполнении криптографической операции.
+   в System.Web.Security.Cryptography.HomogenizingCryptoServiceWrapper.HomogenizeErrors(Func`2 func, Byte[] input)
+   в System.Web.Security.FormsAuthentication.Decrypt(String encryptedTicket)
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 36
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-15 14:11:51,606 ERROR PrisonLogger - Ошибка при выполнении криптографической операции.
+System.Security.Cryptography.CryptographicException: Ошибка при выполнении криптографической операции.
+   в System.Web.Security.Cryptography.HomogenizingCryptoServiceWrapper.HomogenizeErrors(Func`2 func, Byte[] input)
+   в System.Web.Security.FormsAuthentication.Decrypt(String encryptedTicket)
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 36
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-15 14:11:51,629 ERROR PrisonLogger - Ошибка при выполнении криптографической операции.
+System.Security.Cryptography.CryptographicException: Ошибка при выполнении криптографической операции.
+   в System.Web.Security.Cryptography.HomogenizingCryptoServiceWrapper.HomogenizeErrors(Func`2 func, Byte[] input)
+   в System.Web.Security.FormsAuthentication.Decrypt(String encryptedTicket)
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 36
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-15 14:11:51,649 ERROR PrisonLogger - Ошибка при выполнении криптографической операции.
+System.Security.Cryptography.CryptographicException: Ошибка при выполнении криптографической операции.
+   в System.Web.Security.Cryptography.HomogenizingCryptoServiceWrapper.HomogenizeErrors(Func`2 func, Byte[] input)
+   в System.Web.Security.FormsAuthentication.Decrypt(String encryptedTicket)
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 36
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-15 14:11:51,684 ERROR PrisonLogger - Ошибка при выполнении криптографической операции.
+System.Security.Cryptography.CryptographicException: Ошибка при выполнении криптографической операции.
+   в System.Web.Security.Cryptography.HomogenizingCryptoServiceWrapper.HomogenizeErrors(Func`2 func, Byte[] input)
+   в System.Web.Security.FormsAuthentication.Decrypt(String encryptedTicket)
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 36
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-15 14:11:51,721 ERROR PrisonLogger - Ошибка при выполнении криптографической операции.
+System.Security.Cryptography.CryptographicException: Ошибка при выполнении криптографической операции.
+   в System.Web.Security.Cryptography.HomogenizingCryptoServiceWrapper.HomogenizeErrors(Func`2 func, Byte[] input)
+   в System.Web.Security.FormsAuthentication.Decrypt(String encryptedTicket)
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 36
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-15 14:11:51,756 ERROR PrisonLogger - Ошибка при выполнении криптографической операции.
+System.Security.Cryptography.CryptographicException: Ошибка при выполнении криптографической операции.
+   в System.Web.Security.Cryptography.HomogenizingCryptoServiceWrapper.HomogenizeErrors(Func`2 func, Byte[] input)
+   в System.Web.Security.FormsAuthentication.Decrypt(String encryptedTicket)
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 36
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-15 14:11:51,793 ERROR PrisonLogger - Ошибка при выполнении криптографической операции.
+System.Security.Cryptography.CryptographicException: Ошибка при выполнении криптографической операции.
+   в System.Web.Security.Cryptography.HomogenizingCryptoServiceWrapper.HomogenizeErrors(Func`2 func, Byte[] input)
+   в System.Web.Security.FormsAuthentication.Decrypt(String encryptedTicket)
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 36
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-15 14:11:51,827 ERROR PrisonLogger - Ошибка при выполнении криптографической операции.
+System.Security.Cryptography.CryptographicException: Ошибка при выполнении криптографической операции.
+   в System.Web.Security.Cryptography.HomogenizingCryptoServiceWrapper.HomogenizeErrors(Func`2 func, Byte[] input)
+   в System.Web.Security.FormsAuthentication.Decrypt(String encryptedTicket)
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 36
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-15 14:11:51,857 ERROR PrisonLogger - Ошибка при выполнении криптографической операции.
+System.Security.Cryptography.CryptographicException: Ошибка при выполнении криптографической операции.
+   в System.Web.Security.Cryptography.HomogenizingCryptoServiceWrapper.HomogenizeErrors(Func`2 func, Byte[] input)
+   в System.Web.Security.FormsAuthentication.Decrypt(String encryptedTicket)
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 36
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-15 14:11:51,891 ERROR PrisonLogger - Ошибка при выполнении криптографической операции.
+System.Security.Cryptography.CryptographicException: Ошибка при выполнении криптографической операции.
+   в System.Web.Security.Cryptography.HomogenizingCryptoServiceWrapper.HomogenizeErrors(Func`2 func, Byte[] input)
+   в System.Web.Security.FormsAuthentication.Decrypt(String encryptedTicket)
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 36
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-15 14:11:51,919 ERROR PrisonLogger - Ошибка при выполнении криптографической операции.
+System.Security.Cryptography.CryptographicException: Ошибка при выполнении криптографической операции.
+   в System.Web.Security.Cryptography.HomogenizingCryptoServiceWrapper.HomogenizeErrors(Func`2 func, Byte[] input)
+   в System.Web.Security.FormsAuthentication.Decrypt(String encryptedTicket)
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 36
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-15 14:11:51,947 ERROR PrisonLogger - Ошибка при выполнении криптографической операции.
+System.Security.Cryptography.CryptographicException: Ошибка при выполнении криптографической операции.
+   в System.Web.Security.Cryptography.HomogenizingCryptoServiceWrapper.HomogenizeErrors(Func`2 func, Byte[] input)
+   в System.Web.Security.FormsAuthentication.Decrypt(String encryptedTicket)
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 36
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-15 14:11:51,977 ERROR PrisonLogger - Ошибка при выполнении криптографической операции.
+System.Security.Cryptography.CryptographicException: Ошибка при выполнении криптографической операции.
+   в System.Web.Security.Cryptography.HomogenizingCryptoServiceWrapper.HomogenizeErrors(Func`2 func, Byte[] input)
+   в System.Web.Security.FormsAuthentication.Decrypt(String encryptedTicket)
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 36
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-15 14:11:52,006 ERROR PrisonLogger - Ошибка при выполнении криптографической операции.
+System.Security.Cryptography.CryptographicException: Ошибка при выполнении криптографической операции.
+   в System.Web.Security.Cryptography.HomogenizingCryptoServiceWrapper.HomogenizeErrors(Func`2 func, Byte[] input)
+   в System.Web.Security.FormsAuthentication.Decrypt(String encryptedTicket)
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 36
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-15 14:11:52,037 ERROR PrisonLogger - Ошибка при выполнении криптографической операции.
+System.Security.Cryptography.CryptographicException: Ошибка при выполнении криптографической операции.
+   в System.Web.Security.Cryptography.HomogenizingCryptoServiceWrapper.HomogenizeErrors(Func`2 func, Byte[] input)
+   в System.Web.Security.FormsAuthentication.Decrypt(String encryptedTicket)
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 36
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-15 14:11:52,068 ERROR PrisonLogger - Ошибка при выполнении криптографической операции.
+System.Security.Cryptography.CryptographicException: Ошибка при выполнении криптографической операции.
+   в System.Web.Security.Cryptography.HomogenizingCryptoServiceWrapper.HomogenizeErrors(Func`2 func, Byte[] input)
+   в System.Web.Security.FormsAuthentication.Decrypt(String encryptedTicket)
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 36
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-15 14:11:52,097 ERROR PrisonLogger - Ошибка при выполнении криптографической операции.
+System.Security.Cryptography.CryptographicException: Ошибка при выполнении криптографической операции.
+   в System.Web.Security.Cryptography.HomogenizingCryptoServiceWrapper.HomogenizeErrors(Func`2 func, Byte[] input)
+   в System.Web.Security.FormsAuthentication.Decrypt(String encryptedTicket)
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 36
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-15 14:11:52,122 ERROR PrisonLogger - Ошибка при выполнении криптографической операции.
+System.Security.Cryptography.CryptographicException: Ошибка при выполнении криптографической операции.
+   в System.Web.Security.Cryptography.HomogenizingCryptoServiceWrapper.HomogenizeErrors(Func`2 func, Byte[] input)
+   в System.Web.Security.FormsAuthentication.Decrypt(String encryptedTicket)
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 36
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-15 14:11:52,148 ERROR PrisonLogger - Ошибка при выполнении криптографической операции.
+System.Security.Cryptography.CryptographicException: Ошибка при выполнении криптографической операции.
+   в System.Web.Security.Cryptography.HomogenizingCryptoServiceWrapper.HomogenizeErrors(Func`2 func, Byte[] input)
+   в System.Web.Security.FormsAuthentication.Decrypt(String encryptedTicket)
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 36
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-15 14:11:52,176 ERROR PrisonLogger - Ошибка при выполнении криптографической операции.
+System.Security.Cryptography.CryptographicException: Ошибка при выполнении криптографической операции.
+   в System.Web.Security.Cryptography.HomogenizingCryptoServiceWrapper.HomogenizeErrors(Func`2 func, Byte[] input)
+   в System.Web.Security.FormsAuthentication.Decrypt(String encryptedTicket)
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 36
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-15 14:12:52,217 ERROR PrisonLogger - Ошибка при выполнении криптографической операции.
+System.Security.Cryptography.CryptographicException: Ошибка при выполнении криптографической операции.
+   в System.Web.Security.Cryptography.HomogenizingCryptoServiceWrapper.HomogenizeErrors(Func`2 func, Byte[] input)
+   в System.Web.Security.FormsAuthentication.Decrypt(String encryptedTicket)
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 36
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-15 14:12:52,240 ERROR PrisonLogger - Ошибка при выполнении криптографической операции.
+System.Security.Cryptography.CryptographicException: Ошибка при выполнении криптографической операции.
+   в System.Web.Security.Cryptography.HomogenizingCryptoServiceWrapper.HomogenizeErrors(Func`2 func, Byte[] input)
+   в System.Web.Security.FormsAuthentication.Decrypt(String encryptedTicket)
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 36
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-15 14:12:52,283 ERROR PrisonLogger - Ошибка при выполнении криптографической операции.
+System.Security.Cryptography.CryptographicException: Ошибка при выполнении криптографической операции.
+   в System.Web.Security.Cryptography.HomogenizingCryptoServiceWrapper.HomogenizeErrors(Func`2 func, Byte[] input)
+   в System.Web.Security.FormsAuthentication.Decrypt(String encryptedTicket)
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 36
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-15 14:12:52,324 ERROR PrisonLogger - Ошибка при выполнении криптографической операции.
+System.Security.Cryptography.CryptographicException: Ошибка при выполнении криптографической операции.
+   в System.Web.Security.Cryptography.HomogenizingCryptoServiceWrapper.HomogenizeErrors(Func`2 func, Byte[] input)
+   в System.Web.Security.FormsAuthentication.Decrypt(String encryptedTicket)
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 36
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-15 14:12:52,359 ERROR PrisonLogger - Ошибка при выполнении криптографической операции.
+System.Security.Cryptography.CryptographicException: Ошибка при выполнении криптографической операции.
+   в System.Web.Security.Cryptography.HomogenizingCryptoServiceWrapper.HomogenizeErrors(Func`2 func, Byte[] input)
+   в System.Web.Security.FormsAuthentication.Decrypt(String encryptedTicket)
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 36
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-15 14:12:52,397 ERROR PrisonLogger - Ошибка при выполнении криптографической операции.
+System.Security.Cryptography.CryptographicException: Ошибка при выполнении криптографической операции.
+   в System.Web.Security.Cryptography.HomogenizingCryptoServiceWrapper.HomogenizeErrors(Func`2 func, Byte[] input)
+   в System.Web.Security.FormsAuthentication.Decrypt(String encryptedTicket)
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 36
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-15 14:12:52,444 ERROR PrisonLogger - Ошибка при выполнении криптографической операции.
+System.Security.Cryptography.CryptographicException: Ошибка при выполнении криптографической операции.
+   в System.Web.Security.Cryptography.HomogenizingCryptoServiceWrapper.HomogenizeErrors(Func`2 func, Byte[] input)
+   в System.Web.Security.FormsAuthentication.Decrypt(String encryptedTicket)
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 36
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-15 14:12:52,474 ERROR PrisonLogger - Ошибка при выполнении криптографической операции.
+System.Security.Cryptography.CryptographicException: Ошибка при выполнении криптографической операции.
+   в System.Web.Security.Cryptography.HomogenizingCryptoServiceWrapper.HomogenizeErrors(Func`2 func, Byte[] input)
+   в System.Web.Security.FormsAuthentication.Decrypt(String encryptedTicket)
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 36
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-15 14:12:52,505 ERROR PrisonLogger - Ошибка при выполнении криптографической операции.
+System.Security.Cryptography.CryptographicException: Ошибка при выполнении криптографической операции.
+   в System.Web.Security.Cryptography.HomogenizingCryptoServiceWrapper.HomogenizeErrors(Func`2 func, Byte[] input)
+   в System.Web.Security.FormsAuthentication.Decrypt(String encryptedTicket)
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 36
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-15 14:12:52,537 ERROR PrisonLogger - Ошибка при выполнении криптографической операции.
+System.Security.Cryptography.CryptographicException: Ошибка при выполнении криптографической операции.
+   в System.Web.Security.Cryptography.HomogenizingCryptoServiceWrapper.HomogenizeErrors(Func`2 func, Byte[] input)
+   в System.Web.Security.FormsAuthentication.Decrypt(String encryptedTicket)
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 36
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-15 14:12:52,567 ERROR PrisonLogger - Ошибка при выполнении криптографической операции.
+System.Security.Cryptography.CryptographicException: Ошибка при выполнении криптографической операции.
+   в System.Web.Security.Cryptography.HomogenizingCryptoServiceWrapper.HomogenizeErrors(Func`2 func, Byte[] input)
+   в System.Web.Security.FormsAuthentication.Decrypt(String encryptedTicket)
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 36
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-15 14:12:52,597 ERROR PrisonLogger - Ошибка при выполнении криптографической операции.
+System.Security.Cryptography.CryptographicException: Ошибка при выполнении криптографической операции.
+   в System.Web.Security.Cryptography.HomogenizingCryptoServiceWrapper.HomogenizeErrors(Func`2 func, Byte[] input)
+   в System.Web.Security.FormsAuthentication.Decrypt(String encryptedTicket)
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 36
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-15 14:12:52,626 ERROR PrisonLogger - Ошибка при выполнении криптографической операции.
+System.Security.Cryptography.CryptographicException: Ошибка при выполнении криптографической операции.
+   в System.Web.Security.Cryptography.HomogenizingCryptoServiceWrapper.HomogenizeErrors(Func`2 func, Byte[] input)
+   в System.Web.Security.FormsAuthentication.Decrypt(String encryptedTicket)
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 36
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-15 14:12:52,651 ERROR PrisonLogger - Ошибка при выполнении криптографической операции.
+System.Security.Cryptography.CryptographicException: Ошибка при выполнении криптографической операции.
+   в System.Web.Security.Cryptography.HomogenizingCryptoServiceWrapper.HomogenizeErrors(Func`2 func, Byte[] input)
+   в System.Web.Security.FormsAuthentication.Decrypt(String encryptedTicket)
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 36
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-15 14:12:52,675 ERROR PrisonLogger - Ошибка при выполнении криптографической операции.
+System.Security.Cryptography.CryptographicException: Ошибка при выполнении криптографической операции.
+   в System.Web.Security.Cryptography.HomogenizingCryptoServiceWrapper.HomogenizeErrors(Func`2 func, Byte[] input)
+   в System.Web.Security.FormsAuthentication.Decrypt(String encryptedTicket)
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 36
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-15 14:12:52,701 ERROR PrisonLogger - Ошибка при выполнении криптографической операции.
+System.Security.Cryptography.CryptographicException: Ошибка при выполнении криптографической операции.
+   в System.Web.Security.Cryptography.HomogenizingCryptoServiceWrapper.HomogenizeErrors(Func`2 func, Byte[] input)
+   в System.Web.Security.FormsAuthentication.Decrypt(String encryptedTicket)
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 36
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-15 14:12:52,727 ERROR PrisonLogger - Ошибка при выполнении криптографической операции.
+System.Security.Cryptography.CryptographicException: Ошибка при выполнении криптографической операции.
+   в System.Web.Security.Cryptography.HomogenizingCryptoServiceWrapper.HomogenizeErrors(Func`2 func, Byte[] input)
+   в System.Web.Security.FormsAuthentication.Decrypt(String encryptedTicket)
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 36
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-15 14:12:52,754 ERROR PrisonLogger - Ошибка при выполнении криптографической операции.
+System.Security.Cryptography.CryptographicException: Ошибка при выполнении криптографической операции.
+   в System.Web.Security.Cryptography.HomogenizingCryptoServiceWrapper.HomogenizeErrors(Func`2 func, Byte[] input)
+   в System.Web.Security.FormsAuthentication.Decrypt(String encryptedTicket)
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 36
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-15 14:12:52,781 ERROR PrisonLogger - Ошибка при выполнении криптографической операции.
+System.Security.Cryptography.CryptographicException: Ошибка при выполнении криптографической операции.
+   в System.Web.Security.Cryptography.HomogenizingCryptoServiceWrapper.HomogenizeErrors(Func`2 func, Byte[] input)
+   в System.Web.Security.FormsAuthentication.Decrypt(String encryptedTicket)
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 36
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-15 14:12:52,812 ERROR PrisonLogger - Ошибка при выполнении криптографической операции.
+System.Security.Cryptography.CryptographicException: Ошибка при выполнении криптографической операции.
+   в System.Web.Security.Cryptography.HomogenizingCryptoServiceWrapper.HomogenizeErrors(Func`2 func, Byte[] input)
+   в System.Web.Security.FormsAuthentication.Decrypt(String encryptedTicket)
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 36
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
