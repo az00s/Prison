@@ -16,7 +16,7 @@ namespace Prison.App.Data.Repositories.Impl
             _statusContext = statusContext;
         }
 
-        public IEnumerable<MaritalStatus> GetAllStatuses()
+        public IReadOnlyCollection<MaritalStatus> GetAllStatuses()
         {
             return _statusContext.GetAllStatuses();
         }

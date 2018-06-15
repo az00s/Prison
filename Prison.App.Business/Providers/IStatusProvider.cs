@@ -5,7 +5,7 @@ namespace Prison.App.Business.Providers
 {
     public interface IStatusProvider
     {
-        IEnumerable<MaritalStatus> GetAllStatuses();
+        IReadOnlyCollection<MaritalStatus> GetAllStatuses();
         MaritalStatus GetStatusByID(int id);
     }
 }

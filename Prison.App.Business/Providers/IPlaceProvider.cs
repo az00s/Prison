@@ -5,7 +5,7 @@ namespace Prison.App.Business.Providers
 {
     public interface IPlaceProvider
     {
-        IEnumerable<PlaceOfStay> GetAllPlaces();
+        IReadOnlyCollection<PlaceOfStay> GetAllPlaces();
         PlaceOfStay GetPlaceByID(int id);
     }
 }

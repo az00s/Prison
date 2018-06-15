@@ -214,14 +214,14 @@ namespace Prison.App.Web.Controllers
 
         #region ModelViewHelpers
 
-        private IEnumerable<UserIndexViewModel> ToUserIndexViewModel(IEnumerable<User> list)
+        private IReadOnlyCollection<UserIndexViewModel> ToUserIndexViewModel(IReadOnlyCollection<User> list)
         {
             if (list == null)
             {
                 return null;
             }
 
-            List<UserIndexViewModel> ResultList = new List<UserIndexViewModel>();
+            var ResultList = new List<UserIndexViewModel>();
 
             foreach (var item in list)
             {
@@ -294,8 +294,6 @@ namespace Prison.App.Web.Controllers
 
             return Model;
         }
-
-
 
         #endregion
     }

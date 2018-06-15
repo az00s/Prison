@@ -5,14 +5,14 @@ namespace Prison.App.Business.Providers
 {
     public interface IUserProvider
     {
-        IEnumerable<User> GetAllUsers();
+        IReadOnlyCollection<User> GetAllUsers();
 
-        IEnumerable<string> GetAllLogins();
+        IReadOnlyCollection<string> GetAllLogins();
 
-        IEnumerable<string> GetUserRoles(string user);
+        IReadOnlyCollection<string> GetUserRoles(string user);
 
         string GetUserPasswordByLogin(string user);
-        IEnumerable<Employee> GetUnoccupiedEmployeeNames();
+        IReadOnlyCollection<Employee> GetUnoccupiedEmployeeNames();
 
         User GetUserByLogin(string login);
 

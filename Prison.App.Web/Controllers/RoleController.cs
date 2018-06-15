@@ -96,7 +96,7 @@ namespace Prison.App.Web.Controllers
 
         #region ViewModelHelpers
 
-        private IEnumerable<RoleViewModel> ToRoleIndexViewModel(IEnumerable<Role> list)
+        private IReadOnlyCollection<RoleViewModel> ToRoleIndexViewModel(IReadOnlyCollection<Role> list)
         {
             List<RoleViewModel> ResultList = new List<RoleViewModel>();
             foreach (var item in list)
@@ -113,12 +113,20 @@ namespace Prison.App.Web.Controllers
 
         private Role ToRole(RoleViewModel model)
         {
-            return new Role { RoleID = model.RoleID, RoleName = model.RoleName };
+            return new Role
+            {
+                RoleID = model.RoleID,
+                RoleName = model.RoleName
+            };
         }
 
         private RoleViewModel ToRoleViewModel(Role role)
         {
-            return new RoleViewModel { RoleID = role.RoleID, RoleName = role.RoleName };
+            return new RoleViewModel
+            {
+                RoleID = role.RoleID,
+                RoleName = role.RoleName
+            };
         }
 
         #endregion

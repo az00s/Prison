@@ -22,10 +22,10 @@ namespace Prison.App.Business.Providers.Impl
             _cacheService = cacheService;
         }
 
-        public IEnumerable<Employee> GetAllEmployees()
+        public IReadOnlyCollection<Employee> GetAllEmployees()
         {
             //get data from cache
-            var  result = _cacheService.Get<IEnumerable<Employee>>("AllEmployeeList");
+            var  result = _cacheService.Get<IReadOnlyCollection<Employee>>("AllEmployeeList");
 
             if(result==null)
             {

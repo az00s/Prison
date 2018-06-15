@@ -5,8 +5,7 @@ namespace Prison.App.Business.Providers
 {
     public interface IEmployeeProvider
     {
-        IEnumerable<Employee> GetAllEmployees();
+        IReadOnlyCollection<Employee> GetAllEmployees();
         Employee GetEmployeeByID(int id);
-        
     }
 }

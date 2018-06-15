@@ -5,7 +5,7 @@ namespace Prison.App.Business.Providers
 {
     public interface IRoleProvider
     {
-        IEnumerable<Role> GetAllRoles();
+        IReadOnlyCollection<Role> GetAllRoles();
         Role GetRoleByID(int id);
     }
 }

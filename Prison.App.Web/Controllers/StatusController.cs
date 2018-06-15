@@ -113,17 +113,25 @@ namespace Prison.App.Web.Controllers
 
         private MaritalStatus ToStatus(StatusViewModel model)
         {
-            return new MaritalStatus { StatusID = model.StatusID, StatusName = model.StatusName };
+            return new MaritalStatus
+            {
+                StatusID = model.StatusID,
+                StatusName = model.StatusName
+            };
         }
 
         private StatusViewModel ToStatusViewModel(MaritalStatus place)
         {
-            return new StatusViewModel { StatusID=place.StatusID,StatusName = place.StatusName };
+            return new StatusViewModel
+            {
+                StatusID =place.StatusID,
+                StatusName = place.StatusName
+            };
         }
 
-        private IEnumerable<StatusViewModel> ToStatusIndexViewModel(IEnumerable<MaritalStatus> list)
+        private IReadOnlyCollection<StatusViewModel> ToStatusIndexViewModel(IReadOnlyCollection<MaritalStatus> list)
         {
-            List<StatusViewModel> ResultList = new List<StatusViewModel>();
+            var ResultList = new List<StatusViewModel>();
             foreach (MaritalStatus item in list)
             {
                 ResultList.Add(new StatusViewModel
@@ -134,7 +142,6 @@ namespace Prison.App.Web.Controllers
             }
 
             return ResultList;
-
         }
 
         #endregion

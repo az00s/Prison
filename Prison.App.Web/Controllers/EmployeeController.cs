@@ -10,6 +10,7 @@ using System.Web.Routing;
 using System.Collections.Generic;
 using System.Linq;
 using Prison.App.Business.Services;
+using System.Data.SqlClient;
 
 namespace Prison.App.Web.Controllers
 {
@@ -122,6 +123,7 @@ namespace Prison.App.Web.Controllers
             return View(ViewModel);
         }
 
+        [HandleError(ExceptionType =typeof(SqlException),View ="EmployeeReferenceError")]
         [HttpPost]
         public ActionResult DeleteFromDb(int id)
         {
