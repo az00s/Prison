@@ -67,15 +67,41 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="DataContext\IEmployeeDataContext.cs" />
+    <Compile Include="DataContext\IMaritalStatusDataContext.cs" />
+    <Compile Include="DataContext\Impl\EmployeeDataContext.cs" />
+    <Compile Include="DataContext\Impl\MaritalStatusDataContext.cs" />
+    <Compile Include="DataContext\Impl\PhoneNumberDataContext.cs" />
+    <Compile Include="DataContext\Impl\PlaceDataContext.cs" />
+    <Compile Include="DataContext\Impl\PositionDataContext.cs" />
+    <Compile Include="DataContext\Impl\RoleDataContext.cs" />
+    <Compile Include="DataContext\Impl\UserDataContext.cs" />
+    <Compile Include="DataContext\IPhoneNumberDataContext.cs" />
+    <Compile Include="DataContext\IPlaceDataContext.cs" />
+    <Compile Include="DataContext\IPositionDataContext.cs" />
+    <Compile Include="DataContext\IRoleDataContext.cs" />
+    <Compile Include="DataContext\IUserDataContext.cs" />
     <Compile Include="Registers\DataRegistry.cs" />
+    <Compile Include="DataContext\IDataContext.cs" />
+    <Compile Include="DataContext\IDetaineeDataContext.cs" />
+    <Compile Include="DataContext\Impl\DataContext.cs" />
+    <Compile Include="DataContext\Impl\DetaineeDataContext.cs" />
     <Compile Include="Repositories\Impl\DetaineeRepository.cs" />
     <Compile Include="Repositories\Impl\EmployeeRepository.cs" />
     <Compile Include="Repositories\IDetaineeRepository.cs" />
     <Compile Include="Repositories\IEmployeeRepository.cs" />
+    <Compile Include="Repositories\Impl\PhoneNumberRepository.cs" />
+    <Compile Include="Repositories\Impl\StatusRepository.cs" />
+    <Compile Include="Repositories\Impl\UserRepository.cs" />
+    <Compile Include="Repositories\IPhoneNumberRepository.cs" />
+    <Compile Include="Repositories\IStatusRepository.cs" />
+    <Compile Include="Repositories\IUserRepository.cs" />
     <Compile Include="Repositories\Impl\PositionRepository.cs" />
+    <Compile Include="Repositories\Impl\RoleRepository.cs" />
     <Compile Include="Repositories\IPlaceOfStayRepository.cs" />
     <Compile Include="Repositories\Impl\PlaceOfStayRepository.cs" />
     <Compile Include="Repositories\IPositionRepository.cs" />
+    <Compile Include="Repositories\IRoleRepository.cs" />
     <Compile Include="Services\IAdService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\AdService.cs" />

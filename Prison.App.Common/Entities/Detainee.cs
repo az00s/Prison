@@ -19,7 +19,7 @@ namespace Prison.App.Common.Entities
 
         public string WorkPlace { get; set; }
 
-        public ICollection<string> PhoneNumbers { get; set; }
+        public IEnumerable<string> PhoneNumbers { get; set; }
 
         public string ImagePath { get; set; }
 

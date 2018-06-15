@@ -6,11 +6,11 @@ CREATE TABLE [dbo].[Detention](
 	[DetainedByWhomID] [int] NOT NULL,
 	[DeliveryDate] [date] NOT NULL,
 	[DeliveredByWhomID] [int] NOT NULL,
-	[ReleasåDate] [date] NOT NULL,
-	[ReleasedByWhomID] [int] NOT NULL,
+	[ReleasåDate] [date] NULL,
+	[ReleasedByWhomID] [int] NULL,
 	[PlaceID] [int] NOT NULL,
-	[AmountForStaying] [decimal](18, 0) NOT NULL,
-	[PaidAmount] [decimal](18, 0) NOT NULL,
+	[AmountForStaying] [decimal](18, 0) NULL,
+	[PaidAmount] [decimal](18, 0) NULL,
 ) 
 
 GO

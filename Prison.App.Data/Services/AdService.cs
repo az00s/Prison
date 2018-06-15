@@ -36,8 +36,10 @@ namespace Prison.App.Data.Services
                 (AppDomain.CurrentDomain.SetupInformation.PrivateBinPath,FILE_NAME);
 
             //set config file for using it in configuration object
-            ExeConfigurationFileMap fileMap = new ExeConfigurationFileMap();
-            fileMap.ExeConfigFilename = absolutePath;
+            ExeConfigurationFileMap fileMap = new ExeConfigurationFileMap
+            {
+                ExeConfigFilename = absolutePath
+            };
 
             //get configuration object for using it in ConfigurationChannelFactory
             Configuration configuration = ConfigurationManager.OpenMappedExeConfiguration(fileMap, ConfigurationUserLevel.None);
@@ -73,7 +75,6 @@ namespace Prison.App.Data.Services
 
                 ServiceReference.Blurb[] listOfBlurbsFromService = _adService.GetRandomElementsFromRep(numOfElements);
 
-
                 foreach (ServiceReference.Blurb blrb in listOfBlurbsFromService)
                 {
                     listOfBlurbsOnClient.Add(
@@ -90,14 +91,12 @@ namespace Prison.App.Data.Services
             }
             catch (FaultException<ArgumentNullException> ex)
             {
-                ((IClientChannel)_adService).Abort();
                 _log.Error(ex.Detail.Message);
                 listOfBlurbsOnClient = null;
             }
 
             catch (FaultException ex)
             {
-                ((IClientChannel)_adService).Abort();
                 _log.Error(ex.Message);
                 listOfBlurbsOnClient = null;
 
@@ -105,21 +104,18 @@ namespace Prison.App.Data.Services
            
             catch (EndpointNotFoundException ex)
             {
-                ((IClientChannel)_adService).Abort();
                 _log.Error(ex.Message);
                 listOfBlurbsOnClient = null;
             }
 
             catch (TimeoutException ex)
             {
-                ((IClientChannel)_adService).Abort();
                 _log.Error(ex.Message);
                 listOfBlurbsOnClient = null;
             }
 
             catch (CommunicationException ex)
             {
-                ((IClientChannel)_adService).Abort();
                 _log.Error(ex.Message);
                 listOfBlurbsOnClient = null;
             }

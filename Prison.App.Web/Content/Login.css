@@ -1,0 +1,21 @@
+﻿body {
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.4;
+    color: #222222;
+    background-color: #ffffff;
+    background: url(../Content/img/Prison.jpg);
+    background-size:cover;
+}
+
+#LoginForm 
+{
+    margin-top:10%;
+}
+
+.text-danger ul {
+    margin-left:30%;
+    margin-top:3%;
+}
+
+

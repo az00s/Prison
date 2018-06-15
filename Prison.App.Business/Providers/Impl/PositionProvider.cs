@@ -1,33 +1,57 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Prison.App.Business.Services;
 using Prison.App.Common.Entities;
 using Prison.App.Common.Helpers;
-using Prison.App.Common.Interfaces;
 using Prison.App.Data.Repositories;
 
 namespace Prison.App.Business.Providers.Impl
 {
     public class PositionProvider : IPositionProvider
     {
-        private ILogger _log;
-
         private IPositionRepository _rep;
 
-        public PositionProvider(ILogger log, IPositionRepository rep)
-        {
-            ArgumentHelper.ThrowExceptionIfNull(log, "ILogger");
-            ArgumentHelper.ThrowExceptionIfNull(rep, "IPositionRepository");
+        private ICachingService _cacheService;
 
-            _log = log;
+        public PositionProvider(IPositionRepository rep, ICachingService cacheService)
+        {
+            ArgumentHelper.ThrowExceptionIfNull(rep, "IPositionRepository");
+            ArgumentHelper.ThrowExceptionIfNull(cacheService, "ICachingService");
+
+            _cacheService = cacheService;
             _rep = rep;
         }
 
-        public IEnumerable<Position> GetAllRecordsFromTable()
+        public IEnumerable<Position> GetAllPositions()
         {
-            return _rep.GetAllRecordsFromTable();
+            var result = _rep.GetAllPositions();
+
+            if (result == null)
+            {
+                throw new NullReferenceException("Не удалось получить список должностей!");
+            }
+
+        return result;
         }
+
+        public Position GetPositionByID(int id)
+        {
+            if (ArgumentHelper.IsValidID(id))
+            {
+                var result = _rep.GetPositionByID(id);
+
+                if (result == null)
+                {
+                    throw new NullReferenceException($"Должность с идентификатором: {id} не найдено!");
+                }
+
+                return result;
+            }
+            else
+            {
+                throw new ArgumentException($"Идентификатор должности указан неверно.Пожалуйста укажите значение от 0 до {int.MaxValue}");
+            }
+        }
+
     }
 }

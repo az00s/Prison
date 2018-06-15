@@ -1,8 +1,6 @@
 ﻿using Prison.App.Business.Interfaces;
-using Prison.App.Common.Entities;
 using Prison.App.Common.Helpers;
 using Prison.App.Common.Interfaces;
-using System.Collections.Generic;
 using System.Web.Mvc;
 
 namespace Prison.App.Web.Controllers
@@ -22,24 +20,14 @@ namespace Prison.App.Web.Controllers
             _log = log;
         }
 
-        // GET: Advertisment
         public ActionResult GetAdUnit()
         {
+            //because of home page must show 3 Ad
             int blurbsCount = 3;
+           
+            var listOfBlurbs = _adService.GetAds(blurbsCount);
 
-            if (ArgumentHelper.IsValidNumber(blurbsCount))
-            {
-                var listOfBlurbs = _adService.GetElementsFromRep(3);
-
-                return PartialView("AddUnit", listOfBlurbs);
-            }
-            else
-            {
-                return RedirectToAction("Index","Error");
-            }
-            
-            
+            return PartialView("AddUnit", listOfBlurbs);
         }
-
     }
 }
