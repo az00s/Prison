@@ -194,7 +194,7 @@ namespace Prison.App.Data.Tests
             string DetentionDate = "03.05.2018";
 
             _testlist.Add(_detainee);
-            _detaineeContext.Setup(m => m.GetDetaineesByParams(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>())).Returns(_testlist);
+            _detaineeContext.Setup(m => m.Find(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>())).Returns(_testlist);
 
             //act
             List<Detainee> result = _detaineeRepository.GetDetaineesByParams(DetentionDate, FirstName, LastName, MiddleName, ResidenceAddress).ToList();
@@ -206,7 +206,7 @@ namespace Prison.App.Data.Tests
             Assert.AreEqual(ResidenceAddress, result[2].ResidenceAddress);
             Assert.AreEqual(DetentionDate, result[2].Detentions.ToList()[0].DetentionDate.ToShortDateString());
 
-            _detaineeContext.Verify(r => r.GetDetaineesByParams(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>()), Times.Once);
+            _detaineeContext.Verify(r => r.Find(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>()), Times.Once);
         }
 
     }
