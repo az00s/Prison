@@ -17,7 +17,7 @@ namespace Prison.App.Data.Repositories.Impl
 
         }
 
-        public IEnumerable<PhoneNumber> GetAllNumbers()
+        public IReadOnlyCollection<PhoneNumber> GetAllNumbers()
         {
             return _numberContext.GetAllNumbers();
         }
@@ -27,7 +27,7 @@ namespace Prison.App.Data.Repositories.Impl
             return _numberContext.GetNumberByID(id);
         }
 
-        public IEnumerable<Detainee> GetAllDetaineeLastNames()
+        public IReadOnlyCollection<Detainee> GetAllDetaineeLastNames()
         {
             return _numberContext.GetAllDetaineeLastNames();
         }

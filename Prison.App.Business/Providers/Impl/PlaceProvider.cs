@@ -22,7 +22,7 @@ namespace Prison.App.Business.Providers.Impl
             _cacheService = cacheService;
         }
 
-        public IEnumerable<PlaceOfStay> GetAllPlaces()
+        public IReadOnlyCollection<PlaceOfStay> GetAllPlaces()
         {            
             var  result = _rep.GetAllPlaces();
 

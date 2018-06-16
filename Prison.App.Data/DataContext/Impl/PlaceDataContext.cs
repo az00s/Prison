@@ -17,13 +17,11 @@ namespace Prison.App.Data.DataContext.Impl
             _context = context;
         }
 
-        public IEnumerable<PlaceOfStay> GetAllPlaces()
+        public IReadOnlyCollection<PlaceOfStay> GetAllPlaces()
         {
-            IEnumerable<PlaceOfStay> placeList = new List<PlaceOfStay>();
-
             var dataSet = _context.ExecuteQuery("SelectAllPlacesOfStay", null, CommandType.StoredProcedure);
 
-            placeList = ToPlaceList(dataSet);
+            var placeList = ToPlaceList(dataSet);
 
             return placeList;
         }
@@ -44,7 +42,7 @@ namespace Prison.App.Data.DataContext.Impl
 
         public void Create(PlaceOfStay dtn)
         {
-            IDictionary<string, object> parameters =
+            var parameters =
                 new Dictionary<string, object>
                 {
                     { "@Address", dtn.Address },
@@ -55,7 +53,7 @@ namespace Prison.App.Data.DataContext.Impl
 
         public void Update(PlaceOfStay dtn)
         {
-            IDictionary<string, object> parameters =
+            var parameters =
                  new Dictionary<string, object>
                  {
                     { "@ID", dtn.PlaceID },
@@ -67,7 +65,7 @@ namespace Prison.App.Data.DataContext.Impl
 
         public void Delete(int id)
         {
-            IDictionary<string, object> parameters =
+            var parameters =
                 new Dictionary<string, object>
                 {
                     { "@ID", id },
@@ -79,9 +77,9 @@ namespace Prison.App.Data.DataContext.Impl
 
 
         #region Converters
-        private IEnumerable<PlaceOfStay> ToPlaceList(DataSet dataset)
+        private IReadOnlyCollection<PlaceOfStay> ToPlaceList(DataSet dataset)
         {
-            List<PlaceOfStay> list = new List<PlaceOfStay>();
+            var list = new List<PlaceOfStay>();
 
             var placeTable = dataset.Tables[0];
 

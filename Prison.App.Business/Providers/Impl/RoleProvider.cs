@@ -17,7 +17,7 @@ namespace Prison.App.Business.Providers.Impl
             _rep = rep;
         }
 
-        public IEnumerable<Role> GetAllRoles()
+        public IReadOnlyCollection<Role> GetAllRoles()
         {
             return _rep.GetAllRoles();
         }

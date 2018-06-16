@@ -27,6 +27,6 @@ namespace Prison.App.Common.Entities
 
         public string AdditionalData { get; set; }
 
-        public IEnumerable<Detention> Detentions { get; set; }
+        public IReadOnlyCollection<Detention> Detentions { get; set; }
     }
 }

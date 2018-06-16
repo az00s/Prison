@@ -19,9 +19,9 @@ namespace Prison.App.Data.Repositories.Impl
             _context = context;
         }
 
-        public IEnumerable<Detainee> GetAllDetainees()
+        public IReadOnlyCollection<Detainee> GetAllDetainees()
         {
-            IEnumerable<Detainee> detaineeList = new List<Detainee>();
+            IReadOnlyCollection<Detainee> detaineeList = new List<Detainee>();
 
             var dataSet = _context.ExecuteQuery("SelectAllDetainees", null, CommandType.StoredProcedure);
 
@@ -30,9 +30,9 @@ namespace Prison.App.Data.Repositories.Impl
             return detaineeList;
         }
 
-        public IEnumerable<Detention> GetAllDetentions()
+        public IReadOnlyCollection<Detention> GetAllDetentions()
         {
-            IEnumerable<Detention> detentionList = new List<Detention>();
+            IReadOnlyCollection<Detention> detentionList = new List<Detention>();
 
             var dataSet = _context.ExecuteQuery("SelectAllDetentions", null, CommandType.StoredProcedure);
 
@@ -40,7 +40,6 @@ namespace Prison.App.Data.Repositories.Impl
 
             return detentionList;
         }
-
 
         public Detainee GetDetaineeByID(int id)
         {
@@ -56,20 +55,18 @@ namespace Prison.App.Data.Repositories.Impl
 
         }
 
-        public IEnumerable<MaritalStatus> GetAllMaritalStatuses()
+        public IReadOnlyCollection<MaritalStatus> GetAllMaritalStatuses()
         {
-            IEnumerable<MaritalStatus> statusList = new List<MaritalStatus>();
-
             var dataSet = _context.ExecuteQuery("SelectAllMaritalStatuses", null, CommandType.StoredProcedure);
 
-            statusList = ToMaritalStatusList(dataSet);
+            var statusList = ToMaritalStatusList(dataSet);
 
             return statusList;
         }
 
-        public IEnumerable<Detainee> GetDetaineesByDate(DateTime date)
+        public IReadOnlyCollection<Detainee> GetDetaineesByDate(DateTime date)
         {
-            IEnumerable<Detainee> detaineeList = new List<Detainee>();
+            IReadOnlyCollection<Detainee> detaineeList = new List<Detainee>();
 
             IDictionary<string, object> parameters = new Dictionary<string, object> { { "@Date", date } };
 
@@ -80,11 +77,9 @@ namespace Prison.App.Data.Repositories.Impl
             return detaineeList;
         }
 
-        public IEnumerable<Detainee> Find(string DetentionDate = null, string FirstName = null, string LastName = null, string MiddleName = null, string ResidenceAddress = null)
+        public IReadOnlyCollection<Detainee> Find(string DetentionDate = null, string FirstName = null, string LastName = null, string MiddleName = null, string ResidenceAddress = null)
         {
-            IEnumerable<Detainee> detaineeList = new List<Detainee>();
-
-            IDictionary<string, object> parameters = 
+            var parameters = 
                 new Dictionary<string, object>
                 {
                     { "@FirstName", FirstName },
@@ -96,7 +91,7 @@ namespace Prison.App.Data.Repositories.Impl
 
             var dataSet = _context.ExecuteQuery("SelectDetaineeByParams", parameters, CommandType.StoredProcedure);
 
-            detaineeList = ToDetaineeList(dataSet);
+            var detaineeList = ToDetaineeList(dataSet);
 
             return detaineeList;
         }
@@ -202,7 +197,6 @@ namespace Prison.App.Data.Repositories.Impl
             return detention;
         }
 
-
         public void Delete(int id)
         {
             IDictionary<string, object> parameters =
@@ -214,16 +208,15 @@ namespace Prison.App.Data.Repositories.Impl
             _context.ExecuteNonQuery("DeleteDetainee", parameters, CommandType.StoredProcedure);
         }
 
-
-
         #region Converters
-        private IEnumerable<Detainee> ToDetaineeList(DataSet dataset)
+        private IReadOnlyCollection<Detainee> ToDetaineeList(DataSet dataset)
         {
             if (dataset.Tables.Count < 1)
             {
                 return null;
             }
-            List<Detainee> list = new List<Detainee>();
+
+            var list = new List<Detainee>();
             var DetaineeTable = dataset.Tables[0];
 
             foreach (var row in DetaineeTable.AsEnumerable())
@@ -246,7 +239,7 @@ namespace Prison.App.Data.Repositories.Impl
             return list;
         }
 
-        private IEnumerable<Detention> ToDetentionList(DataTable table, int id)
+        private IReadOnlyCollection<Detention> ToDetentionList(DataTable table, int id)
         {
             List<Detention> resultList = new List<Detention>();
             var rowCollection = table.AsEnumerable().Where(dr => dr.Field<int>("DetaineeID") == id);
@@ -272,9 +265,9 @@ namespace Prison.App.Data.Repositories.Impl
             return resultList;
         }
 
-        private IEnumerable<Detention> ToDetentionList(DataSet dataset)
+        private IReadOnlyCollection<Detention> ToDetentionList(DataSet dataset)
         {
-            List<Detention> resultList = new List<Detention>();
+            var resultList = new List<Detention>();
             var rowCollection = dataset.Tables[0].AsEnumerable();
 
             foreach (var row in rowCollection)
@@ -320,10 +313,9 @@ namespace Prison.App.Data.Repositories.Impl
              
         }
 
-
-        private IEnumerable<Detention> ToDetentionList(DataTable table)
+        private IReadOnlyCollection<Detention> ToDetentionList(DataTable table)
         {
-            List<Detention> resultList = new List<Detention>();
+            var resultList = new List<Detention>();
             var rowCollection = table.AsEnumerable();
 
             foreach (var row in rowCollection)
@@ -347,9 +339,9 @@ namespace Prison.App.Data.Repositories.Impl
             return resultList;
         }
 
-        private IEnumerable<string> ToPhoneNumberList(DataTable table)
+        private IReadOnlyCollection<string> ToPhoneNumberList(DataTable table)
         {
-            List<string> resultList = new List<string>();
+            var resultList = new List<string>();
             var rowCollection = table.AsEnumerable();
 
             foreach (var row in rowCollection)
@@ -393,9 +385,9 @@ namespace Prison.App.Data.Repositories.Impl
             };
         }
 
-        private IEnumerable<MaritalStatus> ToMaritalStatusList(DataSet dataset)
+        private IReadOnlyCollection<MaritalStatus> ToMaritalStatusList(DataSet dataset)
         {
-            List<MaritalStatus> list = new List<MaritalStatus>();
+            var list = new List<MaritalStatus>();
             var statusTable = dataset.Tables[0];
 
             foreach (var row in statusTable.AsEnumerable())

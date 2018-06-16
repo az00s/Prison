@@ -56,7 +56,7 @@ namespace Prison.App.Web.Models
         public string AdditionalData { get; set; }
 
         [Display(Name = "Задержания")]
-        public IEnumerable<Detention> Detentions { get; set; }
+        public IReadOnlyCollection<Detention> Detentions { get; set; }
 
     }
 }

@@ -1,14 +1,7 @@
 ﻿using Prison.App.Common.Entities;
 using Prison.App.Common.Helpers;
-using Prison.App.Common.Interfaces;
 using Prison.App.Data.DataContext;
-using System;
 using System.Collections.Generic;
-using System.Data;
-using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Prison.App.Data.Repositories.Impl
 {
@@ -23,17 +16,17 @@ namespace Prison.App.Data.Repositories.Impl
             _userContext = userContext;
         }
 
-        public IEnumerable<User> GetAllUsers()
+        public IReadOnlyCollection<User> GetAllUsers()
         {
             return _userContext.GetAllUsers();
         }
 
-        public IEnumerable<string> GetAllLogins()
+        public IReadOnlyCollection<string> GetAllLogins()
         {
             return _userContext.GetAllLogins();
         }
 
-        public IEnumerable<string> GetUserRoles(string login)
+        public IReadOnlyCollection<string> GetUserRoles(string login)
         {
             return _userContext.GetUserRoles(login);
         }
@@ -53,7 +46,7 @@ namespace Prison.App.Data.Repositories.Impl
             return _userContext.GetUserByID(id);
         }
 
-        public IEnumerable<Employee> GetUnoccupiedEmployeeNames()
+        public IReadOnlyCollection<Employee> GetUnoccupiedEmployeeNames()
         {
             return _userContext.GetUnoccupiedEmployeeNames();
         }

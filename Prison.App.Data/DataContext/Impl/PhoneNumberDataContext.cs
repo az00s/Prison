@@ -17,24 +17,20 @@ namespace Prison.App.Data.DataContext.Impl
             _context = context;
         }
 
-        public IEnumerable<PhoneNumber> GetAllNumbers()
+        public IReadOnlyCollection<PhoneNumber> GetAllNumbers()
         {
-            IEnumerable<PhoneNumber> numberList = new List<PhoneNumber>();
-
             var dataSet = _context.ExecuteQuery("SelectAllNumbers", null, CommandType.StoredProcedure);
 
-            numberList = ToNumberList(dataSet);
+            var numberList = ToNumberList(dataSet);
 
             return numberList;
         }
 
-        public IEnumerable<Detainee> GetAllDetaineeLastNames()
+        public IReadOnlyCollection<Detainee> GetAllDetaineeLastNames()
         {
-            IEnumerable<Detainee> numberList = new List<Detainee>();
-
             var dataSet = _context.ExecuteQuery("SelectAllDetaineeLastNames", null, CommandType.StoredProcedure);
 
-            numberList = ToDetaineeList(dataSet);
+            var numberList = ToDetaineeList(dataSet);
 
             return numberList;
         }
@@ -55,7 +51,7 @@ namespace Prison.App.Data.DataContext.Impl
 
         public void Create(PhoneNumber dtn)
         {
-            IDictionary<string, object> parameters =
+            var parameters =
                 new Dictionary<string, object>
                 {
                     { "@Number", dtn.Number },
@@ -67,7 +63,7 @@ namespace Prison.App.Data.DataContext.Impl
 
         public void Update(PhoneNumber dtn)
         {
-            IDictionary<string, object> parameters =
+            var parameters =
                  new Dictionary<string, object>
                  {
                      { "@ID", dtn.NumberID },
@@ -80,7 +76,7 @@ namespace Prison.App.Data.DataContext.Impl
 
         public void Delete(int id)
         {
-            IDictionary<string, object> parameters =
+            var parameters =
                 new Dictionary<string, object>
                 {
                     { "@ID", id },
@@ -90,9 +86,9 @@ namespace Prison.App.Data.DataContext.Impl
         }
 
         #region Converters
-        private IEnumerable<PhoneNumber> ToNumberList(DataSet dataset)
+        private IReadOnlyCollection<PhoneNumber> ToNumberList(DataSet dataset)
         {
-            List<PhoneNumber> list = new List<PhoneNumber>();
+            var list = new List<PhoneNumber>();
 
             var numberTable = dataset.Tables[0];
 
@@ -108,9 +104,9 @@ namespace Prison.App.Data.DataContext.Impl
             return list;
         }
 
-        private IEnumerable<Detainee> ToDetaineeList(DataSet dataset)
+        private IReadOnlyCollection<Detainee> ToDetaineeList(DataSet dataset)
         {
-            List<Detainee> list = new List<Detainee>();
+            var list = new List<Detainee>();
 
             var numberTable = dataset.Tables[0];
 

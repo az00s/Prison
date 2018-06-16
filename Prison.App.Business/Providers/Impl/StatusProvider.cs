@@ -22,7 +22,7 @@ namespace Prison.App.Business.Providers.Impl
             _cacheService = cacheService;
         }
 
-        public IEnumerable<MaritalStatus> GetAllStatuses()
+        public IReadOnlyCollection<MaritalStatus> GetAllStatuses()
         {
             var result = _rep.GetAllStatuses();
 
