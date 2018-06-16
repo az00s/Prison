@@ -161,7 +161,7 @@ namespace Prison.App.Web.Controllers
                 return View("ValidationError", model);
             }
 
-            var Detainees = _detaineeProvider.GetDetaineesByParams(model.DetentionDate, model.FirstName, model.LastName, model.Middlename, model.ResidenceAddress);
+            var Detainees = _detaineeProvider.Find(model.DetentionDate, model.FirstName, model.LastName, model.Middlename, model.ResidenceAddress);
             
             var resultList = ToDetaineeIndexViewModel(Detainees);
             return View("DetaineeList", resultList);

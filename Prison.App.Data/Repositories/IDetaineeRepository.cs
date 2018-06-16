@@ -17,6 +17,8 @@ namespace Prison.App.Data.Repositories
         void Create(Detainee dtn);
         void Update(Detainee dtn);
         void Delete(int id);
-        IReadOnlyCollection<Detainee> GetDetaineesByParams(string DetentionDate=null, string FirstName = null, string LastName = null, string MiddleName = null, string ResidenceAddress = null);
+
+        IReadOnlyCollection<Detainee> Find(string DetentionDate=null, string FirstName = null, string LastName = null, string MiddleName = null, string ResidenceAddress = null);
+
     }
 }
