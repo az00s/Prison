@@ -49,13 +49,6 @@ namespace Prison.App.Data.Services
             //get bindingConfiguration name of first end point
             string endpointConfigurationName = serviceModel.Client.Endpoints[0].BindingConfiguration;
 
-            //------------------------------------------------------------------------------------------------
-            ////get collection of end points from the config file
-            //ChannelEndpointElementCollection endpointCollection = (ChannelEndpointElementCollection)configuration.SectionGroups["system.serviceModel"].Sections["client"].ElementInformation.Properties[""].Value;
-            ////get bindingConfiguration name of first end point
-            //string endpointConfigurationName = endpointCollection[0].BindingConfiguration;
-            //-------------------------------------------------------------------------------------------------
-
 
             //build new factory using configuration object
             ConfigurationChannelFactory<IAdContract> ChannelFactory = new ConfigurationChannelFactory<IAdContract>(endpointConfigurationName, configuration, null);
@@ -65,15 +58,17 @@ namespace Prison.App.Data.Services
 
         }
 
-        public IEnumerable<IBlurb> GetElementsFromRep(int numOfElements)
+        public IReadOnlyCollection<IBlurb> GetAds(int numOfElements)
         {
-            List<Common.Entities.Blurb> listOfBlurbsOnClient = new List<Common.Entities.Blurb>();
+            List<Common.Entities.Blurb> listOfBlurbsOnClient=null;
 
             try
             {
                 ((IClientChannel)_adService).Open();
 
                 ServiceReference.Blurb[] listOfBlurbsFromService = _adService.GetRandomElementsFromRep(numOfElements);
+
+                listOfBlurbsOnClient = new List<Common.Entities.Blurb>();
 
                 foreach (ServiceReference.Blurb blrb in listOfBlurbsFromService)
                 {
@@ -89,35 +84,24 @@ namespace Prison.App.Data.Services
 
 
             }
-            catch (FaultException<ArgumentNullException> ex)
-            {
-                _log.Error(ex.Detail.Message);
-                listOfBlurbsOnClient = null;
-            }
-
             catch (FaultException ex)
             {
-                _log.Error(ex.Message);
-                listOfBlurbsOnClient = null;
-
+                _log.Error(ex.Message, ex);
             }
            
             catch (EndpointNotFoundException ex)
             {
-                _log.Error(ex.Message);
-                listOfBlurbsOnClient = null;
+                _log.Error(ex.InnerException.Message,ex);
             }
 
             catch (TimeoutException ex)
             {
-                _log.Error(ex.Message);
-                listOfBlurbsOnClient = null;
+                _log.Error(ex.Message,ex);
             }
 
             catch (CommunicationException ex)
             {
-                _log.Error(ex.Message);
-                listOfBlurbsOnClient = null;
+                _log.Error(ex.Message, ex);
             }
 
             finally
