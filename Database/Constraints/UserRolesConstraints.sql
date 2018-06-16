@@ -16,6 +16,4 @@ alter table[UserRoles]
 with check add constraint [FK_Role_UserRoles] 
 foreign key (RoleID) 
 references [Role](RoleID)
-on update cascade
-on delete cascade
 go 
