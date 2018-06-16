@@ -17,13 +17,11 @@ namespace Prison.App.Data.DataContext.Impl
             _context = context;
         }
 
-        public IEnumerable<Position> GetAllPositions()
+        public IReadOnlyCollection<Position> GetAllPositions()
         {
-            IEnumerable<Position> positionList = new List<Position>();
-
             var dataSet = _context.ExecuteQuery("SelectAllPositions", null, CommandType.StoredProcedure);
 
-            positionList = ToPositionList(dataSet);
+            var positionList = ToPositionList(dataSet);
 
             return positionList;
         }
@@ -44,7 +42,7 @@ namespace Prison.App.Data.DataContext.Impl
 
         public void Create(Position dtn)
         {
-            IDictionary<string, object> parameters =
+            var parameters =
                 new Dictionary<string, object>
                 {
                     { "@PositionName", dtn.PositionName },
@@ -55,7 +53,7 @@ namespace Prison.App.Data.DataContext.Impl
 
         public void Update(Position dtn)
         {
-            IDictionary<string, object> parameters =
+            var parameters =
                  new Dictionary<string, object>
                  {
                     { "@ID", dtn.PositionID },
@@ -67,7 +65,7 @@ namespace Prison.App.Data.DataContext.Impl
 
         public void Delete(int id)
         {
-            IDictionary<string, object> parameters =
+            var parameters =
                 new Dictionary<string, object>
                 {
                     { "@ID", id },
@@ -76,12 +74,10 @@ namespace Prison.App.Data.DataContext.Impl
             _context.ExecuteNonQuery("DeletePosition", parameters, CommandType.StoredProcedure);
         }
 
-
-
         #region Converters
-        private IEnumerable<Position> ToPositionList(DataSet dataset)
+        private IReadOnlyCollection<Position> ToPositionList(DataSet dataset)
         {
-            List<Position> list = new List<Position>();
+            var list = new List<Position>();
 
             var positionTable = dataset.Tables[0];
 

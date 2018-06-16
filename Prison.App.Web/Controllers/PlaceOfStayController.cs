@@ -111,9 +111,9 @@ namespace Prison.App.Web.Controllers
             return new PlaceOfStayViewModel { PlaceID=place.PlaceID,Address = place.Address };
         }
 
-        private IEnumerable<PlaceOfStayViewModel> ToPlaceOfStayIndexViewModel(IEnumerable<PlaceOfStay> list)
+        private IReadOnlyCollection<PlaceOfStayViewModel> ToPlaceOfStayIndexViewModel(IReadOnlyCollection<PlaceOfStay> list)
         {
-            List<PlaceOfStayViewModel> ResultList = new List<PlaceOfStayViewModel>();
+            var ResultList = new List<PlaceOfStayViewModel>();
             foreach (PlaceOfStay item in list)
             {
                 ResultList.Add(new PlaceOfStayViewModel

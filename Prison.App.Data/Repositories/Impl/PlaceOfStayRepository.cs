@@ -17,7 +17,7 @@ namespace Prison.App.Data.Repositories
 
         }
 
-        public IEnumerable<PlaceOfStay> GetAllPlaces()
+        public IReadOnlyCollection<PlaceOfStay> GetAllPlaces()
         {
             return _placeContext.GetAllPlaces();
         }

@@ -16,7 +16,7 @@ namespace Prison.App.Data.Repositories.Impl
             _roleContext = roleContext;
         }
 
-        public IEnumerable<Role> GetAllRoles()
+        public IReadOnlyCollection<Role> GetAllRoles()
         {
             return _roleContext.GetAllRoles();
         }

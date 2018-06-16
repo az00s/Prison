@@ -104,17 +104,25 @@ namespace Prison.App.Web.Controllers
 
         private Position ToPosition(PositionViewModel model)
         {
-            return new Position { PositionID = model.PositionID, PositionName = model.PositionName };
+            return new Position
+            {
+                PositionID = model.PositionID,
+                PositionName = model.PositionName
+            };
         }
 
         private PositionViewModel ToPositionViewModel(Position position)
         {
-            return new PositionViewModel { PositionID= position.PositionID,PositionName = position.PositionName };
+            return new PositionViewModel
+            {
+                PositionID = position.PositionID,
+                PositionName = position.PositionName
+            };
         }
 
-        private IEnumerable<PositionViewModel> ToPositionIndexViewModel(IEnumerable<Position> list)
+        private IReadOnlyCollection<PositionViewModel> ToPositionIndexViewModel(IReadOnlyCollection<Position> list)
         {
-            List<PositionViewModel> ResultList = new List<PositionViewModel>();
+            var ResultList = new List<PositionViewModel>();
             foreach (Position item in list)
             {
                 ResultList.Add(new PositionViewModel

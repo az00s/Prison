@@ -22,7 +22,7 @@ namespace Prison.App.Business.Providers.Impl
             _rep = rep;
         }
 
-        public IEnumerable<Position> GetAllPositions()
+        public IReadOnlyCollection<Position> GetAllPositions()
         {
             var result = _rep.GetAllPositions();
 

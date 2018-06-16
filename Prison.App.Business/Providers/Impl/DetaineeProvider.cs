@@ -13,7 +13,6 @@ namespace Prison.App.Business.Providers.Impl
 
         private ICachingService _cacheService;
 
-
         public DetaineeProvider(IDetaineeRepository rep,ICachingService cacheService)
         {
             ArgumentHelper.ThrowExceptionIfNull(rep, "IDetaineeRepository");
@@ -22,9 +21,9 @@ namespace Prison.App.Business.Providers.Impl
             _cacheService = cacheService;
         }
 
-        public IEnumerable<Detainee> GetAllDetainees()
+        public IReadOnlyCollection<Detainee> GetAllDetainees()
         {           
-            var  result = _cacheService.Get<IEnumerable<Detainee>>("AllDetaineeList");
+            var  result = _cacheService.Get<IReadOnlyCollection<Detainee>>("AllDetaineeList");
             
             if(result==null)
             {
@@ -44,7 +43,7 @@ namespace Prison.App.Business.Providers.Impl
 
         }
 
-        public IEnumerable<Detention> GetAllDetentions()
+        public IReadOnlyCollection<Detention> GetAllDetentions()
         {
             return _rep.GetAllDetentions();
         }
@@ -78,7 +77,7 @@ namespace Prison.App.Business.Providers.Impl
             return _rep.GetLastDetention(id);
         }
 
-        public IEnumerable<Detainee> GetDetaineesByDate(DateTime date)
+        public IReadOnlyCollection<Detainee> GetDetaineesByDate(DateTime date)
         {
             if (ArgumentHelper.IsValidDate(date))
             {
@@ -97,7 +96,7 @@ namespace Prison.App.Business.Providers.Impl
             }
         }
 
-        public IEnumerable<MaritalStatus> GetAllMaritalStatuses()
+        public IReadOnlyCollection<MaritalStatus> GetAllMaritalStatuses()
         {
                 var result = _rep.GetAllMaritalStatuses();
 
@@ -110,9 +109,9 @@ namespace Prison.App.Business.Providers.Impl
 
         }
 
-        public IEnumerable<Detainee> GetDetaineesByParams(string DetentionDate=null, string FirstName = null, string LastName = null, string MiddleName = null, string ResidenceAddress = null)
+        public IReadOnlyCollection<Detainee> Find(string DetentionDate=null, string FirstName = null, string LastName = null, string MiddleName = null, string ResidenceAddress = null)
         {
-            return _rep.GetDetaineesByParams(DetentionDate, FirstName, LastName, MiddleName, ResidenceAddress);
+            return _rep.Find(DetentionDate, FirstName, LastName, MiddleName, ResidenceAddress);
         }
     }
 }

@@ -5,9 +5,9 @@ namespace Prison.App.Data.Repositories
 {
     public interface IPhoneNumberRepository
     {
-        IEnumerable<PhoneNumber> GetAllNumbers();
+        IReadOnlyCollection<PhoneNumber> GetAllNumbers();
         PhoneNumber GetNumberByID(int id);
-        IEnumerable<Detainee> GetAllDetaineeLastNames();
+        IReadOnlyCollection<Detainee> GetAllDetaineeLastNames();
         void Create(PhoneNumber emp);
         void Update(PhoneNumber emp);
         void Delete(int id);

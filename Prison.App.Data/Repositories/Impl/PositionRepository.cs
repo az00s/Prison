@@ -25,7 +25,7 @@ namespace Prison.App.Data.Repositories.Impl
 
         }
 
-        public IEnumerable<Position> GetAllPositions()
+        public IReadOnlyCollection<Position> GetAllPositions()
         {
             return _positionContext.GetAllPositions();
         }

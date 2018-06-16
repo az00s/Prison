@@ -22,27 +22,27 @@ namespace Prison.App.Data.Repositories
             return _detaineeContext.GetDetaineeByID(id);
         }
 
-        public IEnumerable<Detainee> GetAllDetainees()
+        public IReadOnlyCollection<Detainee> GetAllDetainees()
         {
            return _detaineeContext.GetAllDetainees();
         }
 
-        public IEnumerable<Detention> GetAllDetentions()
+        public IReadOnlyCollection<Detention> GetAllDetentions()
         {
             return _detaineeContext.GetAllDetentions();
         }
 
-        public IEnumerable<Detainee> GetDetaineesByDate(DateTime date)
+        public IReadOnlyCollection<Detainee> GetDetaineesByDate(DateTime date)
         {
             return _detaineeContext.GetDetaineesByDate(date);
         }
 
-        public IEnumerable<MaritalStatus> GetAllMaritalStatuses()
+        public IReadOnlyCollection<MaritalStatus> GetAllMaritalStatuses()
         {
            return _detaineeContext.GetAllMaritalStatuses();
         }
 
-        public IEnumerable<Detainee> GetDetaineesByParams(string DetentionDate=null, string FirstName = null, string LastName = null, string MiddleName = null, string ResidenceAddress = null)
+        public IReadOnlyCollection<Detainee> Find(string DetentionDate=null, string FirstName = null, string LastName = null, string MiddleName = null, string ResidenceAddress = null)
         {
             return _detaineeContext.Find(DetentionDate, FirstName, LastName,MiddleName,ResidenceAddress);
         }

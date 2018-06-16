@@ -17,17 +17,17 @@ namespace Prison.App.Business.Providers.Impl
             _rep = rep;
         }
 
-        public IEnumerable<User> GetAllUsers()
+        public IReadOnlyCollection<User> GetAllUsers()
         {
             return _rep.GetAllUsers();
         }
 
-        public IEnumerable<string> GetAllLogins()
+        public IReadOnlyCollection<string> GetAllLogins()
         {
             return _rep.GetAllLogins();
         }
 
-        public IEnumerable<string> GetUserRoles(string user)
+        public IReadOnlyCollection<string> GetUserRoles(string user)
         {
             return _rep.GetUserRoles(user);
         }
@@ -42,7 +42,7 @@ namespace Prison.App.Business.Providers.Impl
             return _rep.GetUserByLogin(login);
         }
 
-        public IEnumerable<Employee> GetUnoccupiedEmployeeNames()
+        public IReadOnlyCollection<Employee> GetUnoccupiedEmployeeNames()
         {
             return _rep.GetUnoccupiedEmployeeNames();
         }
