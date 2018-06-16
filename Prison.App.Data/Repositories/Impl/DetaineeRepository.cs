@@ -42,9 +42,8 @@ namespace Prison.App.Data.Repositories
            return _detaineeContext.GetAllMaritalStatuses();
         }
 
-
-        public IReadOnlyCollection<Detainee> Find(string DetentionDate=null, string FirstName = null, string LastName = null, string MiddleName = null, string ResidenceAddress = null)
-
+        public IReadOnlyCollection<Detainee> Find(string DetentionDate, string FirstName, string LastName, string MiddleName, string ResidenceAddress)
+        { 
             return _detaineeContext.Find(DetentionDate, FirstName, LastName,MiddleName,ResidenceAddress);
         }
 

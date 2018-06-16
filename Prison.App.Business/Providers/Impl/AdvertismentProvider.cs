@@ -31,9 +31,12 @@ namespace Prison.App.Business.Providers
 
                 if (result == null)
                 {
-                    result=_adService.GetElementsFromRep(numOfElements);
+                    result=_adService.GetAds(numOfElements);
 
-                    _cacheService.Add("Ads",result,20);
+                    if (result != null)
+                    {
+                        _cacheService.Add("Ads", result, 20);
+                    }
                 }
 
                 return result;
