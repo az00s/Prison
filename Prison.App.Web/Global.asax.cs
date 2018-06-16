@@ -10,6 +10,7 @@ using Prison.App.Business.Services;
 using Prison.App.Common.Entities;
 using Prison.App.Web.DependencyResolution;
 using Prison.App.Common.Interfaces;
+using System.Data.SqlClient;
 
 namespace Prison
 {
@@ -45,19 +46,46 @@ namespace Prison
 
         protected void Application_Error(Object sender, EventArgs e)
         {
-            Exception exc = Server.GetLastError();
-            Server.ClearError();
+            var exc = Server.GetLastError();
             Response.Clear();
 
-            string errorType = "ServerError";
+            string action = "ServerError";
+            string entity = null;
+
+            if (exc.GetType() == typeof(SqlException))
+            {
+                if ((exc as SqlException).Number == 547 && exc.Message.Contains("DELETE"))
+                {
+                    string controller=Request.RequestContext.RouteData.Values["controller"].ToString();
+                    action = "CustomError";
+                    entity = $"?entity={controller}";
+
+                }
+            }
+
+            if (exc.GetType() == typeof(HttpException))
+            {
+                switch ((exc as HttpException).GetHttpCode())
+                {
+                    case 404:
+                        action = "NotFound";
+                        break;
+                    default:
+                        action = "ServerError";
+                        break;
+                }
+            }
 
             using (var container = IoC.Initialize())
             {
                 var log = container.GetInstance<ILogger>();
-                log.Error(exc.Message,exc);
+                log.Error(exc.Message, exc);
             }
 
-            Response.Redirect($"~/Error/{errorType}");
+            Server.ClearError();
+
+
+            Response.Redirect($"~/Error/{action}"+$"/{entity}");
         }
 
     }
