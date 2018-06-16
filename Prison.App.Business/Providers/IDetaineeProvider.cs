@@ -13,6 +13,9 @@ namespace Prison.App.Business.Providers
         IReadOnlyCollection<Detention> GetAllDetentions();
         Detention GetLastDetention(int id);
         Detention GetDetentionByID(int id);
+
         IReadOnlyCollection<Detainee> Find(string DetentionDate=null, string FirstName = null, string LastName = null, string MiddleName = null, string ResidenceAddress = null);
+
+        
     }
 }

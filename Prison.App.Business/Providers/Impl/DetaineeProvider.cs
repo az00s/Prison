@@ -109,7 +109,9 @@ namespace Prison.App.Business.Providers.Impl
 
         }
 
+
         public IReadOnlyCollection<Detainee> Find(string DetentionDate=null, string FirstName = null, string LastName = null, string MiddleName = null, string ResidenceAddress = null)
+
         {
             return _rep.Find(DetentionDate, FirstName, LastName, MiddleName, ResidenceAddress);
         }

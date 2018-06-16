@@ -129,6 +129,7 @@ namespace Prison.App.Web.Controllers
             return View(ViewModel);
         }
 
+        
         [Editor]
         [HttpPost]
         public ActionResult DeleteFromDb(int id)
