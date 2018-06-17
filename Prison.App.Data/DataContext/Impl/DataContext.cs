@@ -11,44 +11,59 @@ namespace Prison.App.Data.DataContext.Impl
 {
     internal class DataContext<T>: IDataContext<T>
     {
-        private string _connection;
+        private readonly string _connection;
 
-        public DataContext()
+        public DataContext(IConnectionStringHelper connHelper)
         {
-            _connection = ConnectionStringHelper.GetConnectionString();
+            ArgumentHelper.ThrowExceptionIfNull(connHelper, "IConnectionStringHelper");
+            _connection = connHelper.GetConnectionString();
         }
 
         public DataSet ExecuteQuery(string cmdText,IDictionary<string,object> parameters, CommandType commandType)
         {
             using (IDbConnection connection = new SqlConnection(_connection))
-            using (IDbCommand command= GetCommand(cmdText, connection, parameters, commandType))
-            using (DbDataAdapter adapter = new SqlDataAdapter(command as SqlCommand))
-            {   
-                var dataset = new DataSet();
-                adapter.Fill(dataset);
-                return dataset;
+            {
+                using (IDbCommand command = GetCommand(cmdText, connection, parameters, commandType))
+                {
+                    using (DbDataAdapter adapter = new SqlDataAdapter(command as SqlCommand))
+                    {
+                        var dataset = new DataSet();
+                        adapter.Fill(dataset);
+                        return dataset;
+                    }
+                }
             }
+
+            
         }
 
         public void ExecuteNonQuery(string cmdText, IDictionary<string, object> parameters, CommandType commandType)
         {
             using (IDbConnection connection = new SqlConnection(_connection))
-            using (IDbCommand command = GetCommand(cmdText, connection, parameters, commandType))
-            using (DbDataAdapter adapter = new SqlDataAdapter(command as SqlCommand))
             {
-                connection.Open();
-                command.ExecuteNonQuery();
+                using (IDbCommand command = GetCommand(cmdText, connection, parameters, commandType))
+                {
+                    using (DbDataAdapter adapter = new SqlDataAdapter(command as SqlCommand))
+                    {
+                        connection.Open();
+                        command.ExecuteNonQuery();
+                    }
+                }
             }
         }
 
         public void ExecuteNonQuery(string cmdText, IDataParameter[] parameters, CommandType commandType)
         {
             using (IDbConnection connection = new SqlConnection(_connection))
-            using (IDbCommand command = GetCommand(cmdText, connection, parameters, commandType))
-            using (DbDataAdapter adapter = new SqlDataAdapter(command as SqlCommand))
             {
-                connection.Open();
-                command.ExecuteNonQuery();
+                using (IDbCommand command = GetCommand(cmdText, connection, parameters, commandType))
+                {
+                    using (DbDataAdapter adapter = new SqlDataAdapter(command as SqlCommand))
+                    {
+                        connection.Open();
+                        command.ExecuteNonQuery();
+                    }
+                }
             }
 
         }

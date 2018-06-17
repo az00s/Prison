@@ -8,7 +8,7 @@ namespace Prison.App.Data.DataContext.Impl
 {
     internal class PlaceDataContext:IPlaceDataContext
     {
-        private IDataContext<PlaceOfStay> _context;
+        private readonly IDataContext<PlaceOfStay> _context;
 
         public PlaceDataContext(IDataContext<PlaceOfStay> context)
         {
@@ -28,13 +28,11 @@ namespace Prison.App.Data.DataContext.Impl
 
         public PlaceOfStay GetPlaceByID(int id)
         {
-            PlaceOfStay place;
-
-            IDictionary<string, object> parameters = new Dictionary<string, object> { { "@ID", id } };
+            var parameters = new Dictionary<string, object> { { "@ID", id } };
 
             var dataSet = _context.ExecuteQuery("SelectPlaceOfStayByID", parameters, CommandType.StoredProcedure);
 
-            place = ToPlace(dataSet);
+            var place = ToPlace(dataSet);
 
             return place;
 
@@ -74,24 +72,17 @@ namespace Prison.App.Data.DataContext.Impl
             _context.ExecuteNonQuery("DeletePlaceOfStay", parameters, CommandType.StoredProcedure);
         }
 
-
-
         #region Converters
         private IReadOnlyCollection<PlaceOfStay> ToPlaceList(DataSet dataset)
         {
-            var list = new List<PlaceOfStay>();
+            return dataset.Tables[0].AsEnumerable().Select(row=>
+                new PlaceOfStay
+                    {
+                        PlaceID = row.Field<int>("PlaceID"),
+                        Address = row.Field<string>("Address")
+                    }
+            ).ToList();
 
-            var placeTable = dataset.Tables[0];
-
-            foreach (var row in placeTable.AsEnumerable())
-            {
-                list.Add(new PlaceOfStay
-                {
-                    PlaceID = row.Field<int>("PlaceID"),
-                    Address = row.Field<string>("Address")
-                });
-            }
-            return list;
         }
 
         private PlaceOfStay ToPlace(DataSet dataset)
@@ -102,7 +93,6 @@ namespace Prison.App.Data.DataContext.Impl
             {
                 PlaceID = row.Field<int>("PlaceID"),
                 Address = row.Field<string>("Address"),
-
             };
         }
 

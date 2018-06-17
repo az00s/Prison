@@ -24,6 +24,7 @@ namespace Prison.App.Web.Controllers
             _log = log;
         }
 
+       
         public ActionResult Login()
         {
             var Model = new LoginViewModel();
