@@ -8,7 +8,7 @@ namespace Prison.App.Data.DataContext.Impl
 {
     internal class RoleDataContext:IRoleDataContext
     {
-        private IDataContext<Role> _context;
+        private readonly IDataContext<Role> _context;
 
         public RoleDataContext(IDataContext<Role> context)
         {
@@ -28,16 +28,13 @@ namespace Prison.App.Data.DataContext.Impl
 
         public Role GetRoleByID(int id)
         {
-            Role role;
-
-            IDictionary<string, object> parameters = new Dictionary<string, object> { { "@ID", id } };
+            var parameters = new Dictionary<string, object> { { "@ID", id } };
 
             var dataSet = _context.ExecuteQuery("SelectRoleByID", parameters, CommandType.StoredProcedure);
 
-            role = ToRole(dataSet);
+            var role = ToRole(dataSet);
 
             return role;
-
         }
 
         public void Create(Role dtn)
@@ -77,19 +74,13 @@ namespace Prison.App.Data.DataContext.Impl
         #region Converters
         private IReadOnlyCollection<Role> ToRoleList(DataSet dataset)
         {
-            var list = new List<Role>();
-
-            var roleTable = dataset.Tables[0];
-
-            foreach (var row in roleTable.AsEnumerable())
-            {
-                list.Add(new Role
+           return dataset.Tables[0].AsEnumerable().Select(row=>
+                new Role
                 {
                     RoleID = row.Field<int>("RoleID"),
                     RoleName = row.Field<string>("RoleName")
-                });
-            }
-            return list;
+                }
+            ).ToList();
         }
 
         private Role ToRole(DataSet dataset)

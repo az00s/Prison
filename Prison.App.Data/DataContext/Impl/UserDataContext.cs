@@ -8,7 +8,7 @@ namespace Prison.App.Data.DataContext.Impl
 {
     internal class UserDataContext:IUserDataContext
     {
-        private IDataContext<User> _context;
+        private readonly IDataContext<User> _context;
 
         public UserDataContext(IDataContext<User> context)
         {
@@ -28,13 +28,11 @@ namespace Prison.App.Data.DataContext.Impl
 
         public User GetUserByID(int id)
         {
-            User user;
-
-            IDictionary<string, object> parameters = new Dictionary<string, object> { { "@ID", id } };
+            var parameters = new Dictionary<string, object> { { "@ID", id } };
 
             var dataSet = _context.ExecuteQuery("SelectUserByID", parameters, CommandType.StoredProcedure);
 
-            user = ToUser(dataSet);
+            var user = ToUser(dataSet);
 
             return user;
 
@@ -62,13 +60,11 @@ namespace Prison.App.Data.DataContext.Impl
 
         public string GetUserPasswordByLogin(string login)
         {
-            string password;
-
-            IDictionary<string, object> parameters = new Dictionary<string, object> { { "@Login", login } };
+            var parameters = new Dictionary<string, object> { { "@Login", login } };
 
             var dataSet = _context.ExecuteQuery("SelectPasswordByLogin", parameters, CommandType.StoredProcedure);
 
-            password = dataSet.Tables[0].Rows[0].Field<string>(0);
+            var password = dataSet.Tables[0].Rows[0].Field<string>(0);
 
             return password;
         }
@@ -149,7 +145,7 @@ namespace Prison.App.Data.DataContext.Impl
 
         public void Delete(int id)
         {
-            IDictionary<string, object> parameters =
+            var parameters =
                 new Dictionary<string, object>
                 {
                     { "@ID", id },
@@ -158,57 +154,35 @@ namespace Prison.App.Data.DataContext.Impl
             _context.ExecuteNonQuery("DeleteUser", parameters, CommandType.StoredProcedure);
         }
 
-
-
         #region Converters
         private IReadOnlyCollection<User> ToUserList(DataSet dataset)
         {
-            var list = new List<User>();
-
-            var userTable = dataset.Tables[0];
-
-            foreach (var row in userTable.AsEnumerable())
-            {
-                list.Add(new User
+            return dataset.Tables[0].AsEnumerable().Select(row=>
+                new User
                 {
                     UserID = row.Field<int>("UserID"),
                     UserName = row.Field<string>("UserName"),
                     Email = row.Field<string>("Email"),
                     Password = row.Field<string>("Password"),
-                });
-            }
-            return list;
+                }
+            ).ToList();
         }
 
         private IReadOnlyCollection<Employee> ToEmployeeList(DataSet dataset)
         {
-           var list = new List<Employee>();
-
-            var empTable = dataset.Tables[0];
-
-            foreach (var row in empTable.AsEnumerable())
-            {
-                list.Add(new Employee
+            return dataset.Tables[0].AsEnumerable().Select(row=>
+                new Employee
                 {
                     EmployeeID = row.Field<int>(0),
                     LastName = row.Field<string>(1),
-                    
-                });
-            }
-            return list;
+
+                }
+            ).ToList();
         }
 
         private IReadOnlyCollection<string> ToStringList(DataSet dataset)
         {
-            var list = new List<string>();
-
-            var loginTable = dataset.Tables[0];
-
-            foreach (var row in loginTable.AsEnumerable())
-            {
-                list.Add(row.Field<string>(0));
-            }
-            return list;
+            return dataset.Tables[0].AsEnumerable().Select(row=> row.Field<string>(0)).ToList();
         }
 
 

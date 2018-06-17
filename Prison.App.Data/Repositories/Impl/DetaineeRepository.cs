@@ -44,7 +44,7 @@ namespace Prison.App.Data.Repositories
 
 
         public IReadOnlyCollection<Detainee> Find(string DetentionDate=null, string FirstName = null, string LastName = null, string MiddleName = null, string ResidenceAddress = null)
-
+        { 
             return _detaineeContext.Find(DetentionDate, FirstName, LastName,MiddleName,ResidenceAddress);
         }
 

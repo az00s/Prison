@@ -8,7 +8,7 @@ namespace Prison.App.Data.DataContext.Impl
 {
     internal class PositionDataContext:IPositionDataContext
     {
-        private IDataContext<Position> _context;
+        private readonly IDataContext<Position> _context;
 
         public PositionDataContext(IDataContext<Position> context)
         {
@@ -28,16 +28,13 @@ namespace Prison.App.Data.DataContext.Impl
 
         public Position GetPositionByID(int id)
         {
-            Position position;
-
-            IDictionary<string, object> parameters = new Dictionary<string, object> { { "@ID", id } };
+            var parameters = new Dictionary<string, object> { { "@ID", id } };
 
             var dataSet = _context.ExecuteQuery("SelectPositionByID", parameters, CommandType.StoredProcedure);
 
-            position = ToPosition(dataSet);
+            var position = ToPosition(dataSet);
 
             return position;
-
         }
 
         public void Create(Position dtn)
@@ -77,19 +74,13 @@ namespace Prison.App.Data.DataContext.Impl
         #region Converters
         private IReadOnlyCollection<Position> ToPositionList(DataSet dataset)
         {
-            var list = new List<Position>();
-
-            var positionTable = dataset.Tables[0];
-
-            foreach (var row in positionTable.AsEnumerable())
-            {
-                list.Add(new Position
+            return dataset.Tables[0].AsEnumerable().Select(row=>
+                new Position
                 {
                     PositionID = row.Field<int>("PositionID"),
                     PositionName = row.Field<string>("PositionName")
-                });
-            }
-            return list;
+                }
+            ).ToList();
         }
 
         private Position ToPosition(DataSet dataset)

@@ -2,7 +2,7 @@
 
 namespace Prison.App.Common.Helpers
 {
-    public static class ArgumentHelper
+    public class ArgumentHelper
     {
         private const string START_DATE = "2018-05-01";
 

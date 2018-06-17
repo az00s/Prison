@@ -8,7 +8,7 @@ namespace Prison.App.Data.DataContext.Impl
 {
     internal class MaritalStatusDataContext:IMaritalStatusDataContext
     {
-        private IDataContext<MaritalStatus> _context;
+        private readonly IDataContext<MaritalStatus> _context;
 
         public MaritalStatusDataContext(IDataContext<MaritalStatus> context)
         {
@@ -28,16 +28,13 @@ namespace Prison.App.Data.DataContext.Impl
 
         public MaritalStatus GetStatusByID(int id)
         {
-            MaritalStatus status;
-
-            IDictionary<string, object> parameters = new Dictionary<string, object> { { "@ID", id } };
+            var parameters = new Dictionary<string, object> { { "@ID", id } };
 
             var dataSet = _context.ExecuteQuery("SelectStatusByID", parameters, CommandType.StoredProcedure);
 
-            status = ToStatus(dataSet);
+            var status = ToStatus(dataSet);
 
             return status;
-
         }
 
         public void Create(MaritalStatus dtn)
@@ -75,19 +72,14 @@ namespace Prison.App.Data.DataContext.Impl
         #region Converters
         private IReadOnlyCollection<MaritalStatus> ToStatusList(DataSet dataset)
         {
-            List<MaritalStatus> list = new List<MaritalStatus>();
-
-            var statusTable = dataset.Tables[0];
-
-            foreach (var row in statusTable.AsEnumerable())
-            {
-                list.Add(new MaritalStatus
+            return dataset.Tables[0].AsEnumerable().Select(row=>
+                new MaritalStatus
                 {
                     StatusID = row.Field<int>("StatusID"),
                     StatusName = row.Field<string>("StatusName")
-                });
-            }
-            return list;
+                }
+            ).ToList();
+
         }
 
         private MaritalStatus ToStatus(DataSet dataset)
