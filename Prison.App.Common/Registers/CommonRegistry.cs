@@ -9,10 +9,8 @@ namespace Prison.App.Common.Registers
     {
         public CommonRegistry()
         {
-
             ForSingletonOf<ILogger>().Use<Logger>();
             For<IConnectionStringHelper>().Use<ConnectionStringHelper>();
-            
         }
     }
 }

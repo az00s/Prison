@@ -1,5 +1,4 @@
 ﻿using Prison.App.Common.Entities;
-using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
@@ -56,7 +55,7 @@ namespace Prison.App.Web.Models
         public string AdditionalData { get; set; }
 
         [Display(Name = "Задержания")]
-        public IReadOnlyCollection<Detention> Detentions { get; set; }
+        public IEnumerable<Detention> Detentions { get; set; }
 
     }
 }

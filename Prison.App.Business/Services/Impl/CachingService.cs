@@ -18,6 +18,7 @@ namespace Prison.App.Business.Services.Impl
             _cache= MemoryCache.Default;
 
         }
+
         public T Get<T>(string key) where T:class
         {
             return _cache[key] as T;

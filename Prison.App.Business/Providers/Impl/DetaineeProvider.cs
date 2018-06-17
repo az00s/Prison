@@ -40,7 +40,6 @@ namespace Prison.App.Business.Providers.Impl
             }
 
             return result;
-
         }
 
         public IReadOnlyCollection<Detention> GetAllDetentions()
@@ -106,13 +105,15 @@ namespace Prison.App.Business.Providers.Impl
                 }
 
             return result;
-
         }
 
-
-        public IReadOnlyCollection<Detainee> Find(string DetentionDate=null, string FirstName = null, string LastName = null, string MiddleName = null, string ResidenceAddress = null)
-
+        public IReadOnlyCollection<Detainee> Find(string DetentionDate, string FirstName, string LastName, string MiddleName, string ResidenceAddress)
         {
+            if (string.IsNullOrEmpty(DetentionDate) && string.IsNullOrEmpty(FirstName) && string.IsNullOrEmpty(LastName) && string.IsNullOrEmpty(MiddleName) && string.IsNullOrEmpty(ResidenceAddress))
+            {
+                return null;
+            }
+
             return _rep.Find(DetentionDate, FirstName, LastName, MiddleName, ResidenceAddress);
         }
     }

@@ -35,7 +35,6 @@ namespace Prison.App.Data.DataContext.Impl
             var user = ToUser(dataSet);
 
             return user;
-
         }
 
         public IReadOnlyCollection<string> GetAllLogins()
@@ -185,7 +184,6 @@ namespace Prison.App.Data.DataContext.Impl
             return dataset.Tables[0].AsEnumerable().Select(row=> row.Field<string>(0)).ToList();
         }
 
-
         private User ToUser(DataSet dataset)
         {
             var row = dataset.Tables[0].Rows[0];
@@ -217,7 +215,6 @@ namespace Prison.App.Data.DataContext.Impl
             }
             return UserRoles;
         }
-
 
         #endregion
     }

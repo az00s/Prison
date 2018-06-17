@@ -6,8 +6,8 @@ namespace Prison.App.Data.Repositories
     public interface IRoleRepository
     {
         IReadOnlyCollection<Role> GetAllRoles();
-        void Create(Role emp);
-        void Update(Role emp);
+        void Create(Role role);
+        void Update(Role role);
         void Delete(int id);
         Role GetRoleByID(int id);
     }

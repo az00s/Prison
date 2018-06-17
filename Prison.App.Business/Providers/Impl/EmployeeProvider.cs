@@ -1,7 +1,6 @@
 ﻿using Prison.App.Business.Services;
 using Prison.App.Common.Entities;
 using Prison.App.Common.Helpers;
-using Prison.App.Common.Interfaces;
 using Prison.App.Data.Repositories;
 using System;
 using System.Collections.Generic;
@@ -62,6 +61,5 @@ namespace Prison.App.Business.Providers.Impl
                 throw new ArgumentException($"Идентификатор сотрудника указан неверно.Пожалуйста укажите значение от 0 до {int.MaxValue}");
             }
         }
-
     }
 }

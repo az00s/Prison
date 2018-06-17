@@ -54,11 +54,9 @@ namespace Prison.App.Web.Controllers
             var Roles = _roleProvider.GetAllRoles();
             var EmployeeNames = _userProvider.GetUnoccupiedEmployeeNames();
 
-            if (EmployeeNames == null)
+            if (EmployeeNames.Count <1)
             {
-                return RedirectToAction(
-                        "CustomError",
-                        "Error",
+                return RedirectToAction("CustomError", "Error",
                         new
                         {
                             message ="Все сотрудники уже имеют учетные записи.Чтобы добавить новую учетную запись нужно создать нового сотрудника"
@@ -66,10 +64,15 @@ namespace Prison.App.Web.Controllers
 
             }
 
-            if (Roles == null)
+            if (Roles.Count<1)
             {
-                return RedirectToAction("Index", "Error");
+                return RedirectToAction("CustomError", "Error",
+                        new
+                        {
+                            message = "Роли не найдены.Чтобы добавить новую учетную запись нужно создать хотя бы одну роль!"
+                        });
             }
+
             var ViewModel = new UserCreateViewModel
             {
                 UserName=EmployeeNames,
@@ -96,52 +99,20 @@ namespace Prison.App.Web.Controllers
 
         public ActionResult Details(int id)
         {
-            if (ArgumentHelper.IsValidID(id))
-            {
-                var User = _userProvider.GetUserByID(id);
+            var User = _userProvider.GetUserByID(id);
 
-                var ViewModel = ToUserEditViewModel(User);
+            var ViewModel = ToUserEditViewModel(User);
 
-                return View(ViewModel);
-            }
-            else
-            {
-                _log.Error($"UserID {id} is not valid!");
-
-                return RedirectToAction(
-                    "CustomError",
-                    "Error",
-                    new { message = $"Пользователь с идентификатором -'{id}' не найден. Пожалуйста введите целое числовое значение большее нуля." });
-            }
+            return View(ViewModel);
         }
 
         public ActionResult Edit(int id)
         {
-            if (ArgumentHelper.IsValidID(id))
-            {
-                var User = _userProvider.GetUserByID(id);
+            var User = _userProvider.GetUserByID(id);
 
-                var ViewModel = ToUserEditViewModel(User);
+            var ViewModel = ToUserEditViewModel(User);
 
-                if (ViewModel == null)
-                {
-                    return RedirectToAction("Index", "Error");
-                }
-                return View(ViewModel);
-            }
-            else
-            {
-                _log.Warn($"UserID {id} is not valid! Controller:{RouteData.Values["controller"]}, Action:{RouteData.Values["action"]}");
-
-                return RedirectToAction(
-                    "CustomError",
-                    "Error",
-                    new
-                    {
-                        message = $"Неверно указан идентификатор -'{id}'." +
-                                    $" Пожалуйста введите целое числовое значение большее нуля."
-                    });
-            }
+            return View(ViewModel);
         }
 
         [HttpPost]
@@ -153,6 +124,7 @@ namespace Prison.App.Web.Controllers
             }
 
             var user = ToUser(model);
+
             _userService.Update(user);
            
             return RedirectToAction("Index");
@@ -160,67 +132,25 @@ namespace Prison.App.Web.Controllers
 
         public ActionResult Delete(int id)
         {
-            if (ArgumentHelper.IsValidID(id))
-            {
+            var User = _userProvider.GetUserByID(id);
 
-                var User = _userProvider.GetUserByID(id);
+            var ViewModel = ToUserEditViewModel(User);
 
-                var ViewModel = ToUserEditViewModel(User);
-
-                if (ViewModel == null)
-                {
-                    return RedirectToAction("Index", "Error");
-                }
-                return View(ViewModel);
-            }
-            else
-            {
-                _log.Warn($"UserID {id} is not valid! Controller:{RouteData.Values["controller"]}, Action:{RouteData.Values["action"]}");
-
-                return RedirectToAction(
-                    "CustomError",
-                    "Error",
-                    new
-                    {
-                        message = $"Неверно указан идентификатор -'{id}'." +
-                                    $" Пожалуйста введите целое числовое значение большее нуля."
-                    });
-            }
+            return View(ViewModel);
         }
 
         [HttpPost]
-        public ActionResult DeleteFromDb(int id)
+        public ActionResult DeleteConfirmed(int id)
         {
-            if (ArgumentHelper.IsValidID(id))
-            {
-                _userService.Delete(id);
+            _userService.Delete(id);
 
-                return RedirectToAction("Index");
-            }
-            else
-            {
-                _log.Warn($"UserID {id} is not valid! Controller:{RouteData.Values["controller"]}, Action:{RouteData.Values["action"]}");
-
-                return RedirectToAction(
-                    "CustomError",
-                    "Error",
-                    new
-                    {
-                        message = $"Неверно указан идентификатор -'{id}'." +
-                                    $" Пожалуйста введите целое числовое значение большее нуля."
-                    });
-            }
+            return RedirectToAction("Index");
         }
 
         #region ModelViewHelpers
 
         private IReadOnlyCollection<UserIndexViewModel> ToUserIndexViewModel(IReadOnlyCollection<User> list)
         {
-            if (list == null)
-            {
-                return null;
-            }
-
             var ResultList = new List<UserIndexViewModel>();
 
             foreach (var item in list)
@@ -238,11 +168,6 @@ namespace Prison.App.Web.Controllers
 
         private UserEditViewModel ToUserEditViewModel(User usr)
         {
-            if (usr == null)
-            {
-                return null;
-            }
-
             var Model = new UserEditViewModel
             {
                 UserID = usr.UserID,
@@ -251,19 +176,13 @@ namespace Prison.App.Web.Controllers
                 Password = usr.Password,
                 Roles = usr.Roles,
                 AllRoles = _roleProvider.GetAllRoles()
-                };
-            
+            };
 
             return Model;
         }
 
         private User ToUser(UserCreateViewModel usr)
         {
-            if (usr == null)
-            {
-                return null;
-            }
-
             var Model = new User
             {
                 UserID = usr.UserID,
@@ -271,18 +190,12 @@ namespace Prison.App.Web.Controllers
                 Password = usr.Password,
                 Roles = usr.Roles
             };
-
 
             return Model;
         }
 
         private User ToUser(UserEditViewModel usr)
         {
-            if (usr == null)
-            {
-                return null;
-            }
-
             var Model = new User
             {
                 UserID = usr.UserID,
@@ -290,7 +203,6 @@ namespace Prison.App.Web.Controllers
                 Password = usr.Password,
                 Roles = usr.Roles
             };
-
 
             return Model;
         }

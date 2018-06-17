@@ -71,12 +71,10 @@
     <Compile Include="DataContext\IMaritalStatusDataContext.cs" />
     <Compile Include="DataContext\Impl\EmployeeDataContext.cs" />
     <Compile Include="DataContext\Impl\MaritalStatusDataContext.cs" />
-    <Compile Include="DataContext\Impl\PhoneNumberDataContext.cs" />
     <Compile Include="DataContext\Impl\PlaceDataContext.cs" />
     <Compile Include="DataContext\Impl\PositionDataContext.cs" />
     <Compile Include="DataContext\Impl\RoleDataContext.cs" />
     <Compile Include="DataContext\Impl\UserDataContext.cs" />
-    <Compile Include="DataContext\IPhoneNumberDataContext.cs" />
     <Compile Include="DataContext\IPlaceDataContext.cs" />
     <Compile Include="DataContext\IPositionDataContext.cs" />
     <Compile Include="DataContext\IRoleDataContext.cs" />
@@ -90,10 +88,8 @@
     <Compile Include="Repositories\Impl\EmployeeRepository.cs" />
     <Compile Include="Repositories\IDetaineeRepository.cs" />
     <Compile Include="Repositories\IEmployeeRepository.cs" />
-    <Compile Include="Repositories\Impl\PhoneNumberRepository.cs" />
     <Compile Include="Repositories\Impl\StatusRepository.cs" />
     <Compile Include="Repositories\Impl\UserRepository.cs" />
-    <Compile Include="Repositories\IPhoneNumberRepository.cs" />
     <Compile Include="Repositories\IStatusRepository.cs" />
     <Compile Include="Repositories\IUserRepository.cs" />
     <Compile Include="Repositories\Impl\PositionRepository.cs" />

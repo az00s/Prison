@@ -46,6 +46,5 @@ namespace Prison.App.Business.Providers
                 throw new ArgumentException($"Неверное число требуемых объявлений!");
             }
         }
-
     }
 }

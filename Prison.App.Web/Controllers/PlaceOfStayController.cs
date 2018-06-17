@@ -1,7 +1,6 @@
 ﻿using Prison.App.Business.Providers;
 using Prison.App.Common.Entities;
 using Prison.App.Common.Helpers;
-using Prison.App.Common.Interfaces;
 using System.Web.Mvc;
 using Prison.App.Web.Attributes;
 using Prison.App.Web.Models;
@@ -13,21 +12,17 @@ namespace Prison.App.Web.Controllers
     [Editor]
     public class PlaceOfStayController : Controller
     {
-        private ILogger _log;
-
         private IPlaceProvider _placeProvider;
 
         private IPlaceService _placeService;
 
-        public PlaceOfStayController(IPlaceProvider placeProvider, ILogger log, IPlaceService placeService)
+        public PlaceOfStayController(IPlaceProvider placeProvider, IPlaceService placeService)
         {
             ArgumentHelper.ThrowExceptionIfNull(placeProvider, "IPlaceProvider");
             ArgumentHelper.ThrowExceptionIfNull(placeService, "IPlaceService");
-            ArgumentHelper.ThrowExceptionIfNull(log, "ILogger");
 
             _placeService = placeService;
             _placeProvider = placeProvider;
-            _log = log;
         }
 
         public ActionResult Index()
@@ -92,7 +87,7 @@ namespace Prison.App.Web.Controllers
         }
 
         [HttpPost]
-        public ActionResult DeleteFromDb(int id)
+        public ActionResult DeleteConfirmed(int id)
         {
             _placeService.Delete(id);
 
@@ -103,17 +98,26 @@ namespace Prison.App.Web.Controllers
 
         private PlaceOfStay ToPlaceOfStay(PlaceOfStayViewModel model)
         {
-            return new PlaceOfStay { PlaceID = model.PlaceID, Address = model.Address };
+            return new PlaceOfStay
+            {
+                PlaceID = model.PlaceID,
+                Address = model.Address
+            };
         }
 
         private PlaceOfStayViewModel ToPlaceOfStayViewModel(PlaceOfStay place)
         {
-            return new PlaceOfStayViewModel { PlaceID=place.PlaceID,Address = place.Address };
+            return new PlaceOfStayViewModel
+            {
+                PlaceID =place.PlaceID,
+                Address = place.Address
+            };
         }
 
         private IReadOnlyCollection<PlaceOfStayViewModel> ToPlaceOfStayIndexViewModel(IReadOnlyCollection<PlaceOfStay> list)
         {
             var ResultList = new List<PlaceOfStayViewModel>();
+
             foreach (PlaceOfStay item in list)
             {
                 ResultList.Add(new PlaceOfStayViewModel
@@ -124,7 +128,6 @@ namespace Prison.App.Web.Controllers
             }
 
             return ResultList;
-
         }
 
         #endregion

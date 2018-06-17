@@ -26,14 +26,14 @@ namespace Prison.App.Data.Repositories.Impl
             return _roleContext.GetRoleByID(id);
         }
 
-        public void Create(Role emp)
+        public void Create(Role role)
         {
-            _roleContext.Create(emp);
+            _roleContext.Create(role);
         }
 
-        public void Update(Role emp)
+        public void Update(Role role)
         {
-            _roleContext.Update(emp);
+            _roleContext.Update(role);
         }
 
         public void Delete(int id)

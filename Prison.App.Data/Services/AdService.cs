@@ -14,7 +14,6 @@ namespace Prison.App.Data.Services
 {
     public class AdService: IAdService
     {
-
         private const string FILE_NAME = "app.config";
 
         private ILogger _log;
@@ -46,16 +45,15 @@ namespace Prison.App.Data.Services
 
             //get service model section from config
             var serviceModel = ServiceModelSectionGroup.GetSectionGroup(configuration);
+
             //get bindingConfiguration name of first end point
             string endpointConfigurationName = serviceModel.Client.Endpoints[0].BindingConfiguration;
-
 
             //build new factory using configuration object
             ConfigurationChannelFactory<IAdContract> ChannelFactory = new ConfigurationChannelFactory<IAdContract>(endpointConfigurationName, configuration, null);
 
             //create channel and initialize field
             _adService = ChannelFactory.CreateChannel();
-
         }
 
         public IReadOnlyCollection<IBlurb> GetAds(int numOfElements)

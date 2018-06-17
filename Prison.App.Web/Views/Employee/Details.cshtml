@@ -43,7 +43,7 @@
     </dl>
 </div>
 <div class="btn-group">
-    @Html.ActionLink("Назад", "Index", null, new { @class = "btn btn-default" })
+    <input type="button" onclick="history.back()" class="btn btn-default" value="Назад">
     @if (User.IsInRole("editor") || User.IsInRole("admin"))
     {
         @Html.ActionLink("Редактировать", "Edit", new { id = Model.EmployeeID }, new { @class = "btn btn-primary" })

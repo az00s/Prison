@@ -1,5 +1,4 @@
-﻿using Prison.App.Common.Entities;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace Prison.App.Web.Models

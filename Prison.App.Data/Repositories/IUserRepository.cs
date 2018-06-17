@@ -10,16 +10,19 @@ namespace Prison.App.Data.Repositories
         IReadOnlyCollection<string> GetAllLogins();
 
         IReadOnlyCollection<string> GetUserRoles(string login);
+
         IReadOnlyCollection<Employee> GetUnoccupiedEmployeeNames();
+
         string GetUserPasswordByLogin(string login);
 
         User GetUserByLogin(string login);
+
         User GetUserByID(int id);
 
-        void Create(User emp);
+        void Create(User user);
 
-        void Update(User emp);
+        void Update(User user);
+
         void Delete(int id);
-
     }
 }

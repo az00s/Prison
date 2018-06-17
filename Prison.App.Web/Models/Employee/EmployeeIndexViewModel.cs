@@ -14,6 +14,5 @@ namespace Prison.App.Web.Models
         public string MiddleName { get; set; }
         [Display(Name = "Должность")]
         public string Position { get; set; }
-
     }
 }

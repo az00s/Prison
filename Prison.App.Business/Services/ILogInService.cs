@@ -6,6 +6,5 @@ namespace Prison.App.Business.Services
     {
         LoginResult LogIn(string login, string password);
         void LogOut();
-
     }
 }

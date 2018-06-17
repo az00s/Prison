@@ -1,7 +1,4 @@
-﻿using Prison.App.Common.Entities;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace Prison.App.Web.Models
 {
@@ -23,7 +20,5 @@ namespace Prison.App.Web.Models
 
         [Display(Name = "Фото")]
         public string ImagePath { get; set; }
-
-
     }
 }
