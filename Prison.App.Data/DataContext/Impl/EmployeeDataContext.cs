@@ -6,9 +6,9 @@ using System.Linq;
 
 namespace Prison.App.Data.DataContext.Impl
 {
-    internal class EmployeeDataContext:IEmployeeDataContext
+    internal class EmployeeDataContext : IEmployeeDataContext
     {
-        private IDataContext<Employee> _context;
+        private readonly IDataContext<Employee> _context;
 
         public EmployeeDataContext(IDataContext<Employee> context)
         {
@@ -17,34 +17,29 @@ namespace Prison.App.Data.DataContext.Impl
             _context = context;
         }
 
-        public IEnumerable<Employee> GetAllEmployees()
+        public IReadOnlyCollection<Employee> GetAllEmployees()
         {
-            IEnumerable<Employee> employeeList = new List<Employee>();
-
             var dataSet = _context.ExecuteQuery("SelectAllEmployees", null, CommandType.StoredProcedure);
 
-            employeeList = ToEmployeeList(dataSet);
+            var employeeList = ToEmployeeList(dataSet);
 
             return employeeList;
         }
 
         public Employee GetEmployeeByID(int id)
         {
-            Employee employee;
-
-            IDictionary<string, object> parameters = new Dictionary<string, object> { { "@ID", id } };
+            var parameters = new Dictionary<string, object> { { "@ID", id } };
 
             var dataSet = _context.ExecuteQuery("SelectEmployeeByID", parameters, CommandType.StoredProcedure);
 
-            employee = ToEmployee(dataSet);
+            var employee = ToEmployee(dataSet);
 
             return employee;
-
         }
 
         public void Create(Employee dtn)
         {
-            IDictionary<string, object> parameters =
+            var parameters =
                 new Dictionary<string, object>
                 {
                     { "@FirstName", dtn.FirstName },
@@ -58,7 +53,7 @@ namespace Prison.App.Data.DataContext.Impl
 
         public void Update(Employee dtn)
         {
-            IDictionary<string, object> parameters =
+            var parameters =
                  new Dictionary<string, object>
                  {
                      { "@ID", dtn.EmployeeID },
@@ -73,7 +68,7 @@ namespace Prison.App.Data.DataContext.Impl
 
         public void Delete(int id)
         {
-            IDictionary<string, object> parameters =
+            var parameters =
                 new Dictionary<string, object>
                 {
                     { "@ID", id },
@@ -82,27 +77,21 @@ namespace Prison.App.Data.DataContext.Impl
             _context.ExecuteNonQuery("DeleteEmployee", parameters, CommandType.StoredProcedure);
         }
 
-
-
         #region Converters
-        private IEnumerable<Employee> ToEmployeeList(DataSet dataset)
+        private IReadOnlyCollection<Employee> ToEmployeeList(DataSet dataset)
         {
-            List<Employee> list = new List<Employee>();
-
-            var employeeTable = dataset.Tables[0];
-
-            foreach (var row in employeeTable.AsEnumerable())
-            {
-                list.Add(new Employee
+           return dataset.Tables[0].AsEnumerable().Select(x =>
+                new Employee
                 {
-                    EmployeeID = row.Field<int>("EmployeeID"),
-                    FirstName = row.Field<string>("FirstName"),
-                    LastName = row.Field<string>("LastName"),
-                    MiddleName = row.Field<string>("MiddleName"),
-                    PositionID = row.Field<int>("PositionID")
-                });
-            }
-            return list;
+                    EmployeeID = x.Field<int>("EmployeeID"),
+                    FirstName = x.Field<string>("FirstName"),
+                    LastName = x.Field<string>("LastName"),
+                    MiddleName = x.Field<string>("MiddleName"),
+                    PositionID = x.Field<int>("PositionID")
+                }
+
+            ).ToList();
+
         }
 
         private Employee ToEmployee(DataSet dataset)

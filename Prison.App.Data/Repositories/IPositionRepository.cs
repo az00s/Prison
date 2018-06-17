@@ -5,10 +5,10 @@ namespace Prison.App.Data.Repositories
 {
     public interface IPositionRepository
     {
-        IEnumerable<Position> GetAllPositions();
+        IReadOnlyCollection<Position> GetAllPositions();
         Position GetPositionByID(int id);
-        void Create(Position emp);
-        void Update(Position emp);
+        void Create(Position position);
+        void Update(Position position);
         void Delete(int id);
     }
 }

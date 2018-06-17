@@ -5,15 +5,15 @@ namespace Prison.App.Data.DataContext
 {
     public interface IUserDataContext
     {
-        IEnumerable<User> GetAllUsers();
+        IReadOnlyCollection<User> GetAllUsers();
         User GetUserByID(int id);
-        IEnumerable<string> GetAllLogins();
-        IEnumerable<string> GetUserRoles(string login);
+        IReadOnlyCollection<string> GetAllLogins();
+        IReadOnlyCollection<string> GetUserRoles(string login);
         string GetUserPasswordByLogin(string login);
         User GetUserByLogin(string login);
-        IEnumerable<Employee> GetUnoccupiedEmployeeNames();
-        void Create(User dtn);
-        void Update(User dtn);
+        IReadOnlyCollection<Employee> GetUnoccupiedEmployeeNames();
+        void Create(User user);
+        void Update(User user);
         void Delete(int id);
     }
 }

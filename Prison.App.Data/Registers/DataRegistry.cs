@@ -14,10 +14,11 @@ namespace Prison.App.Data.Registers
     {
         public DataRegistry()
         {
+            //services
             ForSingletonOf<ILogger>().Use<Logger>();
-
             For<IAdService>().Use<AdService>();
 
+            //Repositories
             For<IEmployeeRepository>().Use<EmployeeRepository>();
             For<IDetaineeRepository>().Use<DetaineeRepository>();
             For<IPlaceOfStayRepository>().Use<PlaceOfStayRepository>();
@@ -25,8 +26,8 @@ namespace Prison.App.Data.Registers
             For<IRoleRepository>().Use<RoleRepository>();
             For<IUserRepository>().Use<UserRepository>();
             For<IStatusRepository>().Use<StatusRepository>();
-            For<IPhoneNumberRepository>().Use<PhoneNumberRepository>();
 
+            //dataContext
             For(typeof(IDataContext<>)).Use(typeof(DataContext<>));
             For<IDetaineeDataContext>().Use<DetaineeDataContext>();
             For<IEmployeeDataContext>().Use<EmployeeDataContext>();
@@ -35,8 +36,6 @@ namespace Prison.App.Data.Registers
             For<IUserDataContext>().Use<UserDataContext>();
             For<IRoleDataContext>().Use<RoleDataContext>();
             For<IMaritalStatusDataContext>().Use<MaritalStatusDataContext>();
-            For<IPhoneNumberDataContext>().Use<PhoneNumberDataContext>();
-
         }
     }
 }

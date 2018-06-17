@@ -8,7 +8,7 @@ namespace Prison.App.Data.DataContext.Impl
 {
     internal class UserDataContext:IUserDataContext
     {
-        private IDataContext<User> _context;
+        private readonly IDataContext<User> _context;
 
         public UserDataContext(IDataContext<User> context)
         {
@@ -17,88 +17,73 @@ namespace Prison.App.Data.DataContext.Impl
             _context = context;
         }
 
-        public IEnumerable<User> GetAllUsers()
+        public IReadOnlyCollection<User> GetAllUsers()
         {
-            IEnumerable<User> userList = new List<User>();
-
             var dataSet = _context.ExecuteQuery("SelectAllUsers", null, CommandType.StoredProcedure);
 
-            userList = ToUserList(dataSet);
+            var userList = ToUserList(dataSet);
 
             return userList;
         }
 
         public User GetUserByID(int id)
         {
-            User user;
-
-            IDictionary<string, object> parameters = new Dictionary<string, object> { { "@ID", id } };
+            var parameters = new Dictionary<string, object> { { "@ID", id } };
 
             var dataSet = _context.ExecuteQuery("SelectUserByID", parameters, CommandType.StoredProcedure);
 
-            user = ToUser(dataSet);
+            var user = ToUser(dataSet);
 
             return user;
-
         }
 
-        public IEnumerable<string> GetAllLogins()
+        public IReadOnlyCollection<string> GetAllLogins()
         {
-            IEnumerable<string> loginList = new List<string>();
-
             var dataSet = _context.ExecuteQuery("SelectAllLogins", null, CommandType.StoredProcedure);
 
-            loginList = ToStringList(dataSet);
+            var loginList = ToStringList(dataSet);
 
             return loginList;
         }
 
-        public IEnumerable<string> GetUserRoles(string login)
+        public IReadOnlyCollection<string> GetUserRoles(string login)
         {
-            IEnumerable<string> userRoles = new List<string>();
-
-            IDictionary<string, object> parameters = new Dictionary<string, object> { { "@Login", login } };
+            var parameters = new Dictionary<string, object> { { "@Login", login } };
 
             var dataSet = _context.ExecuteQuery("SelectAllUserRoles", parameters, CommandType.StoredProcedure);
 
-            userRoles = ToStringList(dataSet);
+            var userRoles = ToStringList(dataSet);
 
             return userRoles;
         }
 
         public string GetUserPasswordByLogin(string login)
         {
-            string password;
-
-            IDictionary<string, object> parameters = new Dictionary<string, object> { { "@Login", login } };
+            var parameters = new Dictionary<string, object> { { "@Login", login } };
 
             var dataSet = _context.ExecuteQuery("SelectPasswordByLogin", parameters, CommandType.StoredProcedure);
 
-            password = dataSet.Tables[0].Rows[0].Field<string>(0);
+            var password = dataSet.Tables[0].Rows[0].Field<string>(0);
 
             return password;
         }
 
         public User GetUserByLogin(string login)
         {
-            User user;
-
-            IDictionary<string, object> parameters = new Dictionary<string, object> { { "@Login", login } };
+            var parameters = new Dictionary<string, object> { { "@Login", login } };
 
             var dataSet = _context.ExecuteQuery("SelectUserByLogin", parameters, CommandType.StoredProcedure);
 
-            user = ToUser(dataSet);
+            var user = ToUser(dataSet);
 
             return user;
         }
 
-        public IEnumerable<Employee> GetUnoccupiedEmployeeNames()
+        public IReadOnlyCollection<Employee> GetUnoccupiedEmployeeNames()
         {
-            IEnumerable<Employee> empList = new List<Employee>();
-
             var dataSet = _context.ExecuteQuery("SelectUnoccupiedEmployeeNames", null, CommandType.StoredProcedure);
 
-            empList = ToEmployeeList(dataSet);
+            var empList = ToEmployeeList(dataSet);
 
             return empList;
         }
@@ -106,10 +91,10 @@ namespace Prison.App.Data.DataContext.Impl
         public void Create(User usr)
         {
             //get id numbers of user roles
-            IEnumerable<int> RoleIDs = usr.Roles.Select(r => r.RoleID).Distinct();
+            var RoleIDs = usr.Roles.Select(r => r.RoleID).Distinct();
 
             //create dictionary for parameters
-            IDictionary<string, object> parametersDictionary =
+            var parametersDictionary =
                 new Dictionary<string, object>
                 {
                     { "@ID", usr.UserID },
@@ -133,10 +118,10 @@ namespace Prison.App.Data.DataContext.Impl
         public void Update(User usr)
         {
             //get id numbers of user roles
-            IEnumerable<int> RoleIDs = usr.Roles.Select(r => r.RoleID).Distinct();
+            var RoleIDs = usr.Roles.Select(r => r.RoleID).Distinct();
 
             //create dictionary for parameters
-            IDictionary<string, object> parametersDictionary =
+            var parametersDictionary =
                 new Dictionary<string, object>
                 {
                     { "@ID", usr.UserID },
@@ -159,7 +144,7 @@ namespace Prison.App.Data.DataContext.Impl
 
         public void Delete(int id)
         {
-            IDictionary<string, object> parameters =
+            var parameters =
                 new Dictionary<string, object>
                 {
                     { "@ID", id },
@@ -168,59 +153,36 @@ namespace Prison.App.Data.DataContext.Impl
             _context.ExecuteNonQuery("DeleteUser", parameters, CommandType.StoredProcedure);
         }
 
-
-
         #region Converters
-        private IEnumerable<User> ToUserList(DataSet dataset)
+        private IReadOnlyCollection<User> ToUserList(DataSet dataset)
         {
-            List<User> list = new List<User>();
-
-            var userTable = dataset.Tables[0];
-
-            foreach (var row in userTable.AsEnumerable())
-            {
-                list.Add(new User
+            return dataset.Tables[0].AsEnumerable().Select(row=>
+                new User
                 {
                     UserID = row.Field<int>("UserID"),
                     UserName = row.Field<string>("UserName"),
                     Email = row.Field<string>("Email"),
                     Password = row.Field<string>("Password"),
-                });
-            }
-            return list;
+                }
+            ).ToList();
         }
 
-        private IEnumerable<Employee> ToEmployeeList(DataSet dataset)
+        private IReadOnlyCollection<Employee> ToEmployeeList(DataSet dataset)
         {
-            List<Employee> list = new List<Employee>();
-
-            var empTable = dataset.Tables[0];
-
-            foreach (var row in empTable.AsEnumerable())
-            {
-                list.Add(new Employee
+            return dataset.Tables[0].AsEnumerable().Select(row=>
+                new Employee
                 {
                     EmployeeID = row.Field<int>(0),
                     LastName = row.Field<string>(1),
-                    
-                });
-            }
-            return list;
+
+                }
+            ).ToList();
         }
 
-        private IEnumerable<string> ToStringList(DataSet dataset)
+        private IReadOnlyCollection<string> ToStringList(DataSet dataset)
         {
-            List<string> list = new List<string>();
-
-            var loginTable = dataset.Tables[0];
-
-            foreach (var row in loginTable.AsEnumerable())
-            {
-                list.Add(row.Field<string>(0));
-            }
-            return list;
+            return dataset.Tables[0].AsEnumerable().Select(row=> row.Field<string>(0)).ToList();
         }
-
 
         private User ToUser(DataSet dataset)
         {
@@ -238,7 +200,7 @@ namespace Prison.App.Data.DataContext.Impl
 
         private Role[] GetUserRoles(DataTable table)
         {
-            Role[] UserRoles = new Role[table.Rows.Count];
+            var UserRoles = new Role[table.Rows.Count];
 
             for (int i = 0; i < UserRoles.Length; i++)
             {
@@ -253,7 +215,6 @@ namespace Prison.App.Data.DataContext.Impl
             }
             return UserRoles;
         }
-
 
         #endregion
     }

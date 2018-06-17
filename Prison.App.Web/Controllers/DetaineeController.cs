@@ -27,10 +27,8 @@ namespace Prison.App.Web.Controllers
 
         private IEmployeeProvider _employeeProvider;
 
-
         public DetaineeController(IDetaineeProvider detaineeProvider, ILogger log, IDetaineeService detaineeService, IPlaceProvider placeProvider, IEmployeeProvider employeeProvider)
         {
-
             ArgumentHelper.ThrowExceptionIfNull(detaineeProvider, "IDetaineeProvider");
             ArgumentHelper.ThrowExceptionIfNull(detaineeService, "IDetaineeService");
             ArgumentHelper.ThrowExceptionIfNull(placeProvider, "IPlaceProvider");
@@ -44,7 +42,6 @@ namespace Prison.App.Web.Controllers
             _log = log;
         }
 
-        
         [User]
         public ActionResult Index()
         {
@@ -63,13 +60,11 @@ namespace Prison.App.Web.Controllers
             var ViewModel =ToDetaineeDetailsViewModel(Detainee);
 
             return View(ViewModel);
-            
         }
 
         [Editor]
         public ActionResult Create()
         {
-
             return View();
         }
 
@@ -83,9 +78,8 @@ namespace Prison.App.Web.Controllers
             }
             var detainee = ToDetainee(model);
 
-                _detaineeService.Create(detainee);
+            _detaineeService.Create(detainee);
             
-
             return RedirectToAction("Index");
         }
 
@@ -110,7 +104,6 @@ namespace Prison.App.Web.Controllers
                     FileHelper.SaveFileOnServer(file);
                     
                     dtn.ImagePath = FileHelper.GetFilePath(file.FileName);
-
                 }
 
                 var Entity = ToDetainee(dtn);
@@ -131,7 +124,7 @@ namespace Prison.App.Web.Controllers
 
         [Editor]
         [HttpPost]
-        public ActionResult DeleteFromDb(int id)
+        public ActionResult DeleteConfirmed(int id)
         {
             _detaineeService.Delete(id);
 
@@ -160,11 +153,11 @@ namespace Prison.App.Web.Controllers
                 return View("ValidationError", model);
             }
 
-            var Detainees = _detaineeProvider.GetDetaineesByParams(model.DetentionDate, model.FirstName, model.LastName, model.Middlename, model.ResidenceAddress);
+            var Detainees = _detaineeProvider.Find(model.DetentionDate, model.FirstName, model.LastName, model.Middlename, model.ResidenceAddress);
             
             var resultList = ToDetaineeIndexViewModel(Detainees);
+
             return View("DetaineeList", resultList);
-            
         }
 
         [Editor]
@@ -242,14 +235,14 @@ namespace Prison.App.Web.Controllers
             return Result;
         }
 
-        private IEnumerable<DetaineeIndexViewModel> ToDetaineeIndexViewModel(IEnumerable<Detainee> list)
+        private IReadOnlyCollection<DetaineeIndexViewModel> ToDetaineeIndexViewModel(IEnumerable<Detainee> list)
         {
-            if (list==null)
+            if (list == null)
             {
                 return null;
             }
 
-            List<DetaineeIndexViewModel> ResultList = new List<DetaineeIndexViewModel>();
+            var ResultList = new List<DetaineeIndexViewModel>();
 
             foreach (Detainee item in list)
             {
@@ -264,20 +257,13 @@ namespace Prison.App.Web.Controllers
                 });
             }
 
-
-
             return ResultList;
         }
 
-        private IEnumerable<DetentionDropDownViewModel> ToDetentionDropDownViewModel(IEnumerable<Detention> list)
+        private IReadOnlyCollection<DetentionDropDownViewModel> ToDetentionDropDownViewModel(IEnumerable<Detention> list)
         {
-            if (list == null)
-            {
-                return null;
-            }
-
-            List<DetentionDropDownViewModel> ResultList = new List<DetentionDropDownViewModel>();
-            IEnumerable<Employee> employees = _employeeProvider.GetAllEmployees();
+            var ResultList = new List<DetentionDropDownViewModel>();
+            var employees = _employeeProvider.GetAllEmployees();
             foreach (Detention item in list)
             {
                 ResultList.Add(new DetentionDropDownViewModel
@@ -286,8 +272,6 @@ namespace Prison.App.Web.Controllers
                     DetentionHeader=$"№{item.DetentionID} от {item.DetentionDate.ToShortDateString()}, Задерживал: {employees.First(e=>e.EmployeeID==item.DetainedByWhomID).LastName}"
                 });
             }
-
-
 
             return ResultList;
         }
@@ -321,8 +305,6 @@ namespace Prison.App.Web.Controllers
                 ReleasеDate = model.ReleasеDate,
                 AmountForStaying = model.AmountForStaying,
                 PaidAmount = model.PaidAmount,
-
-
             };
         }
 
@@ -350,14 +332,9 @@ namespace Prison.App.Web.Controllers
             return Result;
         }
 
-        private IEnumerable<DetentionListViewModel> ToDetentionListViewModel(IEnumerable<Detention> list)
+        private IReadOnlyCollection<DetentionListViewModel> ToDetentionListViewModel(IEnumerable<Detention> list)
         {
-            if (list == null)
-            {
-                return null;
-            }
-
-            List<DetentionListViewModel> ResultList = new List<DetentionListViewModel>();
+            var ResultList = new List<DetentionListViewModel>();
 
             foreach (var item in list)
             {
@@ -376,17 +353,11 @@ namespace Prison.App.Web.Controllers
                 });
             }
 
-
-
             return ResultList;
         }
 
         private DetentionDetailsViewModel ToDetentionDetailsViewModel(Detention detention)
         {
-            if (detention == null)
-            {
-                return null;
-            }
                return new DetentionDetailsViewModel
                {
                    DetentionID = detention.DetentionID,
@@ -400,15 +371,8 @@ namespace Prison.App.Web.Controllers
                    PaidAmount=detention.PaidAmount,
                    AmountForStaying=detention.AmountForStaying
                 };
-
-
-
-           
         }
 
         #endregion
-
-
-
     }
 }

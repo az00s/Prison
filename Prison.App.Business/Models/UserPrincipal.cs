@@ -1,10 +1,6 @@
 ﻿using Prison.App.Common.Entities;
-using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Security.Principal;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Prison.App.Business.Services
 {
@@ -16,6 +12,7 @@ namespace Prison.App.Business.Services
             Roles = user.Roles;
             Identity = new GenericIdentity(user.UserName);
         }
+
         public string UserName { get; set; }
 
         public Role[] Roles { get; set; }

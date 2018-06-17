@@ -1,5 +1,4 @@
-﻿using Prison.App.Business.Services;
-using Prison.App.Common.Entities;
+﻿using Prison.App.Common.Entities;
 using Prison.App.Common.Helpers;
 using Prison.App.Data.Repositories;
 using System;
@@ -11,18 +10,14 @@ namespace Prison.App.Business.Providers.Impl
     {
         private IPlaceOfStayRepository _rep;
 
-        private ICachingService _cacheService;
-
-        public PlaceProvider(IPlaceOfStayRepository rep, ICachingService cacheService)
+        public PlaceProvider(IPlaceOfStayRepository rep)
         {
             ArgumentHelper.ThrowExceptionIfNull(rep, "IPlaceOfStayRepository");
-            ArgumentHelper.ThrowExceptionIfNull(cacheService, "ICachingService");
 
             _rep = rep;
-            _cacheService = cacheService;
         }
 
-        public IEnumerable<PlaceOfStay> GetAllPlaces()
+        public IReadOnlyCollection<PlaceOfStay> GetAllPlaces()
         {            
             var  result = _rep.GetAllPlaces();
 

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data.SqlClient;
 using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
@@ -17,11 +16,11 @@ namespace Prison.App.Data.Tests
 
         DetaineeRepository _detaineeRepository;
 
-        IList<Detainee> _testlist;
+        List<Detainee> _testlist;
 
         Detainee _detainee;
 
-        IList<MaritalStatus> _mStatusTestList;
+        List<MaritalStatus> _mStatusTestList;
 
         [TestInitialize]
         public void TestInitialize()

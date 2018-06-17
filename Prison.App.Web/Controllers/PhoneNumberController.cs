@@ -108,7 +108,12 @@ namespace Prison.App.Web.Controllers
 
         private PhoneNumber ToPhoneNumber(NumberViewModel model)
         {
-            return new PhoneNumber { NumberID = model.NumberID, Number = model.Number,DetaineeID=model.DetaineeID };
+            return new PhoneNumber
+            {
+                NumberID = model.NumberID,
+                Number = model.Number,
+                DetaineeID =model.DetaineeID
+            };
         }
 
         private NumberViewModel ToNumberViewModel(PhoneNumber number)
@@ -125,7 +130,7 @@ namespace Prison.App.Web.Controllers
 
         private IEnumerable<NumberViewModel> ToNumberIndexViewModel(IEnumerable<PhoneNumber> list)
         {
-            List<NumberViewModel> ResultList = new List<NumberViewModel>();
+            var ResultList = new List<NumberViewModel>();
             foreach (PhoneNumber item in list)
             {
                 ResultList.Add(new NumberViewModel

@@ -8,8 +8,6 @@
 <div>
     <hr />
     <dl class="dl-horizontal">
-        
-
         <dt>
             @Html.DisplayNameFor(model => model.StatusName)
         </dt>
@@ -20,12 +18,12 @@
 
     </dl>
 
-    @using (Html.BeginForm("DeleteFromDb", "Status", new { id = Model.StatusID })) {
+    @using (Html.BeginForm("DeleteConfirmed", "Status", new { id = Model.StatusID })) {
         @Html.AntiForgeryToken()
 
     <div class="form-actions no-color">
         <div class="btn-group">
-            @Html.ActionLink("Назад", "Index", null, new { @class = "btn btn-default" })
+            <input type="button" onclick="history.back()" class="btn btn-default" value="Назад">
             <input type="submit" value="Удалить" class="btn btn-danger" />
         </div>
     </div>

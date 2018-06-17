@@ -5,7 +5,7 @@ namespace Prison.App.Data.Repositories
 {
     public interface IEmployeeRepository
     {
-        IEnumerable<Employee> GetAllEmployees();
+        IReadOnlyCollection<Employee> GetAllEmployees();
         Employee GetEmployeeByID(int id);
         void Create(Employee emp);
         void Update(Employee emp);

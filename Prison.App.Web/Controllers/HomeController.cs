@@ -4,7 +4,6 @@ using System.Web.Mvc;
 
 namespace Prison.App.Web.Controllers
 {
-
     public class HomeController : Controller
     {
         private ILogger log;
@@ -20,7 +19,5 @@ namespace Prison.App.Web.Controllers
         {
             return View();
         }
-
-        
     }
 }

@@ -1,6 +1,5 @@
 ﻿using Prison.Service.Contracts;
 using Prison.Service.Repositories;
-using System;
 using System.Collections.Generic;
 using System.ServiceModel;
 
@@ -10,14 +9,13 @@ namespace Prison.Service.Services
     {
         public IEnumerable<Blurb> GetRandomElementsFromRep(int numOfElements)
         {
-            Repository rep = new Repository();
+            var rep = new Repository();
 
             var list = rep.GetRandomElementsFromRep(numOfElements);
-            
+
             if (list == null)
             {
-                ArgumentNullException ex = new ArgumentNullException("IEnumerable<Blurb>", "List of Blurbs is empty!");
-                throw new FaultException<ArgumentNullException>(ex);
+                throw new FaultException("List of Blurbs is empty!");
             }
             return list;
         }

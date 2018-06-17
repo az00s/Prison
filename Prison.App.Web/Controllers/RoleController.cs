@@ -13,21 +13,17 @@ namespace Prison.App.Web.Controllers
     [Admin]
     public class RoleController : Controller
     {
-        private ILogger _log;
-
         private IRoleProvider _roleProvider;
 
         private IRoleService _roleService;
 
-        public RoleController(ILogger log, IRoleProvider roleProvider, IRoleService roleService)
+        public RoleController(IRoleProvider roleProvider, IRoleService roleService)
         {
             ArgumentHelper.ThrowExceptionIfNull(roleProvider, "IRoleProvider");
             ArgumentHelper.ThrowExceptionIfNull(roleService, "IRoleService");
-            ArgumentHelper.ThrowExceptionIfNull(log, "ILogger");
 
             _roleService = roleService;
             _roleProvider = roleProvider;
-            _log = log;
         }
 
         public ActionResult Index()
@@ -87,16 +83,16 @@ namespace Prison.App.Web.Controllers
         }
 
         [HttpPost]
-        public ActionResult DeleteFromDb(int id)
+        public ActionResult DeleteConfirmed(int id)
         {
-                _roleService.Delete(id);
+            _roleService.Delete(id);
 
-                return RedirectToAction("Index");
+            return RedirectToAction("Index");
         }
 
         #region ViewModelHelpers
 
-        private IEnumerable<RoleViewModel> ToRoleIndexViewModel(IEnumerable<Role> list)
+        private IReadOnlyCollection<RoleViewModel> ToRoleIndexViewModel(IReadOnlyCollection<Role> list)
         {
             List<RoleViewModel> ResultList = new List<RoleViewModel>();
             foreach (var item in list)
@@ -113,12 +109,20 @@ namespace Prison.App.Web.Controllers
 
         private Role ToRole(RoleViewModel model)
         {
-            return new Role { RoleID = model.RoleID, RoleName = model.RoleName };
+            return new Role
+            {
+                RoleID = model.RoleID,
+                RoleName = model.RoleName
+            };
         }
 
         private RoleViewModel ToRoleViewModel(Role role)
         {
-            return new RoleViewModel { RoleID = role.RoleID, RoleName = role.RoleName };
+            return new RoleViewModel
+            {
+                RoleID = role.RoleID,
+                RoleName = role.RoleName
+            };
         }
 
         #endregion

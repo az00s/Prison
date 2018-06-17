@@ -42,12 +42,12 @@
 
     </dl>
 
-    @using (Html.BeginForm("DeleteFromDb","User",new { id=Model.UserID})) {
+    @using (Html.BeginForm("DeleteConfirmed", "User",new { id=Model.UserID})) {
         @Html.AntiForgeryToken()
 
     <div class="form-actions no-color">
         <div class="btn-group">
-            @Html.ActionLink("Назад", "Index", null, new { @class = "btn btn-default" })
+            <input type="button" onclick="history.back()" class="btn btn-default" value="Назад">
             <input type="submit" value="Удалить" class="btn btn-danger" />
         </div>
     </div>

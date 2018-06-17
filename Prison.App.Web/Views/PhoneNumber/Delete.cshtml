@@ -33,9 +33,9 @@
     @using (Html.BeginForm("DeleteFromDb", "PhoneNumber", new { id = Model.NumberID })) {
         @Html.AntiForgeryToken()
 
-        <div class="form-actions no-color">
-            <input type="submit" value="Удалить" class="btn btn-default" /> |
-            @Html.ActionLink("Назад", "Index")
-        </div>
+    <div class="form-actions no-color">
+        <input type="submit" value="Удалить" class="btn btn-default" /> |
+        <input type="button" onclick="history.back()" class="btn btn-default" value="Назад">
+    </div>
     }
 </div>

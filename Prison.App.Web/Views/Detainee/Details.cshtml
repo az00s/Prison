@@ -128,20 +128,10 @@
 
 </div>
 
-
-
 <div class="row">
     <hr />
 
-
     <div class="col-md-6">
-
-
-        <dl class="dl-horizontal">
-            
-
-          
-        </dl>
         <div class="btn-group">
             <input type="button" onclick="history.back()" class = "btn btn-default" value="Назад">
             @if (User.IsInRole("editor") || User.IsInRole("admin"))
@@ -150,9 +140,7 @@
                         @Html.ActionLink("Удалить", "Delete", new { id = Model.DetaineeID }, new { @class = "btn btn-danger" })
 
                     }
-            
         </div>
-
     </div>
 
     <div class="col-md-5 col-md-offset-1">

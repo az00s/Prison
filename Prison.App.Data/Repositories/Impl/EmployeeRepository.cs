@@ -16,7 +16,7 @@ namespace Prison.App.Data.Repositories
             _employeeContext = employeeContext;
         }
 
-        public IEnumerable<Employee> GetAllEmployees()
+        public IReadOnlyCollection<Employee> GetAllEmployees()
         {
             return _employeeContext.GetAllEmployees();
         }

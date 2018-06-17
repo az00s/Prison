@@ -23,8 +23,6 @@ namespace Prison.App.Web.Models
         [Display(Name = "Освобожден сотрудником")]
         public int ReleasedByWhomID { get; set; }
 
-
-
         [Display(Name = "Сотрудник")]
         public IEnumerable<Employee> Employees { get; set; }
     }

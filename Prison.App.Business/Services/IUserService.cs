@@ -4,11 +4,10 @@ namespace Prison.App.Business.Services
 {
     public interface IUserService
     {
-        void Create(User plc);
+        void Create(User user);
 
-        void Update(User plc);
+        void Update(User user);
 
         void Delete(int id);
-
     }
 }

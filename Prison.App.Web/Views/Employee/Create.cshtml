@@ -48,7 +48,7 @@
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
                 <div class="btn-group">
-                    @Html.ActionLink("Назад", "Index", null, new { @class = "btn btn-default" })
+                    <input type="button" onclick="history.back()" class="btn btn-default" value="Назад">
                     <input type="submit" value="Записать" class="btn btn-success" />
                 </div>
             </div>

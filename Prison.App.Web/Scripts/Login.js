@@ -1,5 +1,7 @@
-﻿document.onkeydown = function () {
-    if (window.event.keyCode == '13') {
-        var form = document.getElementById('LoginForm').submit();
-    }
-}
+﻿
+
+    document.onkeydown = function (e) {
+        if (e.keyCode == '13') {
+            document.getElementById('LoginForm').submit();
+        }
+    };

@@ -2,7 +2,7 @@
 
 namespace Prison.App.Common.Helpers
 {
-    public static class ArgumentHelper
+    public class ArgumentHelper
     {
         private const string START_DATE = "2018-05-01";
 
@@ -10,12 +10,10 @@ namespace Prison.App.Common.Helpers
 
         public static void ThrowExceptionIfNull(object obj,string name)
         {
-
             if (obj == null)
             {
                 throw new ArgumentNullException(name);
             }
-            
         }
 
         public static bool IsValidID(int id)

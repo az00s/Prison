@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using Prison.App.Business.Services;
 using Prison.App.Common.Entities;
 using Prison.App.Common.Helpers;
 using Prison.App.Data.Repositories;
@@ -11,18 +10,14 @@ namespace Prison.App.Business.Providers.Impl
     {
         private IPositionRepository _rep;
 
-        private ICachingService _cacheService;
-
-        public PositionProvider(IPositionRepository rep, ICachingService cacheService)
+        public PositionProvider(IPositionRepository rep)
         {
             ArgumentHelper.ThrowExceptionIfNull(rep, "IPositionRepository");
-            ArgumentHelper.ThrowExceptionIfNull(cacheService, "ICachingService");
 
-            _cacheService = cacheService;
             _rep = rep;
         }
 
-        public IEnumerable<Position> GetAllPositions()
+        public IReadOnlyCollection<Position> GetAllPositions()
         {
             var result = _rep.GetAllPositions();
 
@@ -52,6 +47,5 @@ namespace Prison.App.Business.Providers.Impl
                 throw new ArgumentException($"Идентификатор должности указан неверно.Пожалуйста укажите значение от 0 до {int.MaxValue}");
             }
         }
-
     }
 }

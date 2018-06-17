@@ -15,14 +15,16 @@ namespace Prison.App.Business.Services.Impl
             _rep = rep;
         }
 
-        public void Create(Position emp)
+        public void Create(Position pos)
         {
-            _rep.Create(emp);
+            _rep.Create(pos);
         }
-        public void Update(Position emp)
+
+        public void Update(Position pos)
         {
-            _rep.Update(emp);
+            _rep.Update(pos);
         }
+
         public void Delete(int id)
         {
             _rep.Delete(id);

@@ -1,7 +1,6 @@
 ﻿using Prison.App.Business.Providers;
 using Prison.App.Common.Entities;
 using Prison.App.Common.Helpers;
-using Prison.App.Common.Interfaces;
 using System.Web.Mvc;
 using Prison.App.Web.Attributes;
 using Prison.App.Web.Models;
@@ -13,21 +12,17 @@ namespace Prison.App.Web.Controllers
     [Editor]
     public class PositionController : Controller
     {
-        private ILogger _log;
-
         private IPositionProvider _positionProvider;
 
         private IPositionService _positionService;
 
-        public PositionController(IPositionProvider positionProvider, ILogger log, IPositionService positionService)
+        public PositionController(IPositionProvider positionProvider, IPositionService positionService)
         {
             ArgumentHelper.ThrowExceptionIfNull(positionProvider, "IPositionProvider");
             ArgumentHelper.ThrowExceptionIfNull(positionService, "IPositionService");
-            ArgumentHelper.ThrowExceptionIfNull(log, "ILogger");
 
             _positionService = positionService;
             _positionProvider = positionProvider;
-            _log = log;
         }
 
         public ActionResult Index()
@@ -93,7 +88,7 @@ namespace Prison.App.Web.Controllers
         }
 
         [HttpPost]
-        public ActionResult DeleteFromDb(int id)
+        public ActionResult DeleteConfirmed(int id)
         {
             _positionService.Delete(id);
 
@@ -104,17 +99,25 @@ namespace Prison.App.Web.Controllers
 
         private Position ToPosition(PositionViewModel model)
         {
-            return new Position { PositionID = model.PositionID, PositionName = model.PositionName };
+            return new Position
+            {
+                PositionID = model.PositionID,
+                PositionName = model.PositionName
+            };
         }
 
         private PositionViewModel ToPositionViewModel(Position position)
         {
-            return new PositionViewModel { PositionID= position.PositionID,PositionName = position.PositionName };
+            return new PositionViewModel
+            {
+                PositionID = position.PositionID,
+                PositionName = position.PositionName
+            };
         }
 
-        private IEnumerable<PositionViewModel> ToPositionIndexViewModel(IEnumerable<Position> list)
+        private IReadOnlyCollection<PositionViewModel> ToPositionIndexViewModel(IReadOnlyCollection<Position> list)
         {
-            List<PositionViewModel> ResultList = new List<PositionViewModel>();
+            var ResultList = new List<PositionViewModel>();
             foreach (Position item in list)
             {
                 ResultList.Add(new PositionViewModel

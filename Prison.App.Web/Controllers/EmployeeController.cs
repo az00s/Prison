@@ -2,11 +2,8 @@
 using Prison.App.Business.Providers;
 using Prison.App.Common.Entities;
 using Prison.App.Common.Helpers;
-using Prison.App.Common.Interfaces;
-using Prison.App.Web.Helpers;
 using Prison.App.Web.Models;
 using System.Web.Mvc;
-using System.Web.Routing;
 using System.Collections.Generic;
 using System.Linq;
 using Prison.App.Business.Services;
@@ -16,25 +13,21 @@ namespace Prison.App.Web.Controllers
     [Editor]
     public class EmployeeController : Controller
     {
-        private ILogger _log;
-
         private IEmployeeProvider _employeeProvider;
 
         private IPositionProvider _positionProvider;
 
         private IEmployeeService _employeeService;
 
-        public EmployeeController(IEmployeeProvider employeeProvider, ILogger log, IPositionProvider positionProvider, IEmployeeService employeeService)
+        public EmployeeController(IEmployeeProvider employeeProvider, IPositionProvider positionProvider, IEmployeeService employeeService)
         {
             ArgumentHelper.ThrowExceptionIfNull(positionProvider, "IPositionProvider");
             ArgumentHelper.ThrowExceptionIfNull(employeeProvider, "IEmployeeProvider");
             ArgumentHelper.ThrowExceptionIfNull(employeeService, "IEmployeeService");
-            ArgumentHelper.ThrowExceptionIfNull(log, "ILogger");
 
             _positionProvider = positionProvider;
             _employeeProvider = employeeProvider;
             _employeeService = employeeService;
-            _log = log;
         }
 
         public ActionResult Index()
@@ -53,7 +46,6 @@ namespace Prison.App.Web.Controllers
             var ViewModel=ToEmployeeIndexViewModel(Employee);
 
             return View(ViewModel);
-            
         }
 
         [HttpGet]
@@ -98,7 +90,6 @@ namespace Prison.App.Web.Controllers
         [HttpPost]
         public ActionResult Edit(EmployeeEditViewModel model)
         {
-            
             if (!ModelState.IsValid)
             {
                 model.Positions = _positionProvider.GetAllPositions();
@@ -123,7 +114,7 @@ namespace Prison.App.Web.Controllers
         }
 
         [HttpPost]
-        public ActionResult DeleteFromDb(int id)
+        public ActionResult DeleteConfirmed(int id)
         {
             _employeeService.Delete(id);
 
@@ -199,9 +190,6 @@ namespace Prison.App.Web.Controllers
             return Result;
         }
 
-
         #endregion
-
-
     }
 }

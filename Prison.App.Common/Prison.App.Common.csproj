@@ -85,8 +85,9 @@
     <Compile Include="Entities\Position.cs" />
     <Compile Include="Entities\Role.cs" />
     <Compile Include="Entities\User.cs" />
-    <Compile Include="Helpers\ArgumentHelper.cs" />
-    <Compile Include="Helpers\ConnectionStringHelper.cs" />
+    <Compile Include="Helpers\Impl\ArgumentHelper.cs" />
+    <Compile Include="Helpers\Impl\ConnectionStringHelper.cs" />
+    <Compile Include="Helpers\IConnectionStringHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Registers\CommonRegistry.cs" />
     <Compile Include="Services\Log\ILogger.cs" />

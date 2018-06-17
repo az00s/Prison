@@ -1,5 +1,4 @@
-﻿using Prison.App.Business.Services;
-using Prison.App.Common.Entities;
+﻿using Prison.App.Common.Entities;
 using Prison.App.Common.Helpers;
 using Prison.App.Data.Repositories;
 using System;
@@ -11,18 +10,14 @@ namespace Prison.App.Business.Providers.Impl
     {
         private IStatusRepository _rep;
 
-        private ICachingService _cacheService;
-
-        public StatusProvider(IStatusRepository rep, ICachingService cacheService)
+        public StatusProvider(IStatusRepository rep)
         {
             ArgumentHelper.ThrowExceptionIfNull(rep, "IStatusRepository");
-            ArgumentHelper.ThrowExceptionIfNull(cacheService, "ICachingService");
 
             _rep = rep;
-            _cacheService = cacheService;
         }
 
-        public IEnumerable<MaritalStatus> GetAllStatuses()
+        public IReadOnlyCollection<MaritalStatus> GetAllStatuses()
         {
             var result = _rep.GetAllStatuses();
 

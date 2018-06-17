@@ -4,8 +4,8 @@ namespace Prison.App.Business.Services
 {
     public interface IRoleService
     {
-        void Create(Role emp);
-        void Update(Role emp);
+        void Create(Role role);
+        void Update(Role role);
         void Delete(int id);
 
     }

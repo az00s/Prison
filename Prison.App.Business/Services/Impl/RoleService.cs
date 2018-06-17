@@ -15,18 +15,19 @@ namespace Prison.App.Business.Services.Impl
             _rep = rep;
         }
 
-        public void Create(Role emp)
+        public void Create(Role role)
         {
-            _rep.Create(emp);
+            _rep.Create(role);
         }
-        public void Update(Role emp)
+
+        public void Update(Role role)
         {
-            _rep.Update(emp);
+            _rep.Update(role);
         }
+
         public void Delete(int id)
         {
             _rep.Delete(id);
         }
-
     }
 }

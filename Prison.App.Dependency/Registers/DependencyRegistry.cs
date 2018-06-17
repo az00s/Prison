@@ -15,7 +15,6 @@ namespace Prison.App.Dependency
                 s.AssemblyContainingType<DataRegistry>();
                 s.AssemblyContainingType<BusinessRegistry>();
                 s.LookForRegistries();
-
             });
         }
     }
