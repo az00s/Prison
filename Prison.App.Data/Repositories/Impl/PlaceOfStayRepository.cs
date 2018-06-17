@@ -14,7 +14,6 @@ namespace Prison.App.Data.Repositories
             ArgumentHelper.ThrowExceptionIfNull(placeContext, "IPlaceDataContext");
 
             _placeContext = placeContext;
-
         }
 
         public IReadOnlyCollection<PlaceOfStay> GetAllPlaces()
@@ -27,14 +26,14 @@ namespace Prison.App.Data.Repositories
             return _placeContext.GetPlaceByID(id);
         }
 
-        public void Create(PlaceOfStay emp)
+        public void Create(PlaceOfStay place)
         {
-            _placeContext.Create(emp);
+            _placeContext.Create(place);
         }
 
-        public void Update(PlaceOfStay emp)
+        public void Update(PlaceOfStay place)
         {
-            _placeContext.Update(emp);
+            _placeContext.Update(place);
         }
 
         public void Delete(int id)

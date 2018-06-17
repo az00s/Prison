@@ -137,7 +137,7 @@ namespace Prison.App.Data.DataContext.Impl
 
         public List<IDataParameter> GetParameterList(IDictionary<string, object> parameters)
         {
-            List<IDataParameter> resultList = new List<IDataParameter>();
+            var resultList = new List<IDataParameter>();
 
             foreach (var param in parameters)
             {
@@ -179,8 +179,5 @@ namespace Prison.App.Data.DataContext.Impl
         }
 
         #endregion
-
-
-
     }
 }

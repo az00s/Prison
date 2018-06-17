@@ -13,21 +13,17 @@ namespace Prison.App.Web.Controllers
     [Admin]
     public class RoleController : Controller
     {
-        private ILogger _log;
-
         private IRoleProvider _roleProvider;
 
         private IRoleService _roleService;
 
-        public RoleController(ILogger log, IRoleProvider roleProvider, IRoleService roleService)
+        public RoleController(IRoleProvider roleProvider, IRoleService roleService)
         {
             ArgumentHelper.ThrowExceptionIfNull(roleProvider, "IRoleProvider");
             ArgumentHelper.ThrowExceptionIfNull(roleService, "IRoleService");
-            ArgumentHelper.ThrowExceptionIfNull(log, "ILogger");
 
             _roleService = roleService;
             _roleProvider = roleProvider;
-            _log = log;
         }
 
         public ActionResult Index()
@@ -87,11 +83,11 @@ namespace Prison.App.Web.Controllers
         }
 
         [HttpPost]
-        public ActionResult DeleteFromDb(int id)
+        public ActionResult DeleteConfirmed(int id)
         {
-                _roleService.Delete(id);
+            _roleService.Delete(id);
 
-                return RedirectToAction("Index");
+            return RedirectToAction("Index");
         }
 
         #region ViewModelHelpers

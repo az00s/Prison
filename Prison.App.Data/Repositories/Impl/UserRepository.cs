@@ -51,14 +51,14 @@ namespace Prison.App.Data.Repositories.Impl
             return _userContext.GetUnoccupiedEmployeeNames();
         }
 
-        public void Create(User emp)
+        public void Create(User user)
         {
-            _userContext.Create(emp);
+            _userContext.Create(user);
         }
 
-        public void Update(User emp)
+        public void Update(User user)
         {
-            _userContext.Update(emp);
+            _userContext.Update(user);
         }
 
         public void Delete(int id)

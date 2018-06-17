@@ -11,7 +11,7 @@ namespace Prison.App.Data.DataContext
         IReadOnlyCollection<MaritalStatus> GetAllMaritalStatuses();
         IReadOnlyCollection<Detainee> GetDetaineesByDate(DateTime date);
         IReadOnlyCollection<Detention> GetAllDetentions();
-        IReadOnlyCollection<Detainee> Find(string DetentionDate = null, string FirstName = null, string LastName = null, string MiddleName = null, string ResidenceAddress = null);
+        IReadOnlyCollection<Detainee> Find(string DetentionDate, string FirstName, string LastName, string MiddleName, string ResidenceAddress);
         Detention GetLastDetention(int id);
         void ReleaseDetainee(Detention detention);
         Detention GetDetentionByID(int id);

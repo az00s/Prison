@@ -49,6 +49,5 @@ namespace Prison.App.Business.Services.Impl
                 throw new ArgumentException($"Идентификатор сотрудника указан неверно.Пожалуйста укажите значение от 0 до {int.MaxValue}");
             }
         }
-
     }
 }

@@ -8,13 +8,11 @@ namespace Prison.Service.Repositories
 {
     public class Repository
     {
-        IList<Blurb> _list;
-
-        public IList<Blurb> List { get { return _list; } }
+        public IList<Blurb> List { get; }
 
         public Repository()
         {
-            _list = new List<Blurb> {
+            List = new List<Blurb> {
                 new Blurb{ BlurbID=1,BlurbHeader="Nissan LEAF",BlurbContent="Зачем ждать, если вы прямо сейчас можете управлять полностью электрическим Leaf?",Image=GetByteArrFromImage("~/Images/Nissan.jpg") },
                 new Blurb{ BlurbID=2,BlurbHeader="Tesla Model 3",BlurbContent="Жги резину, а не бензин!",Image=GetByteArrFromImage("~/Images/Tesla.jpg") },
                 new Blurb{ BlurbID=3,BlurbHeader="BMW i3",BlurbContent="Сделай свой вклад в защиту окружающей среды.",Image=GetByteArrFromImage("~/Images/BMW.jpg")},
@@ -30,12 +28,22 @@ namespace Prison.Service.Repositories
 
         public IEnumerable<Blurb> GetRandomElementsFromRep(int numOfElements)
         {
-            if (numOfElements > _list.Count ) throw new IndexOutOfRangeException("The requested number of items is greater than the items in the list!");
-            if (numOfElements < 1) throw new ArgumentException("Invalid number of elements!");
+            if (numOfElements > List.Count)
+            {
+                throw new IndexOutOfRangeException("The requested number of items is greater than the items in the list!");
+            }
 
-            if (numOfElements == _list.Count) return _list;
+            if (numOfElements < 1)
+            {
+                throw new ArgumentException("Invalid number of elements!");
+            }
 
-            List<Blurb> list=new List<Blurb>();
+            if (numOfElements == List.Count)
+            {
+                return List;
+            }
+
+            var list=new List<Blurb>();
 
             Random rnd = new Random();
 
@@ -43,16 +51,15 @@ namespace Prison.Service.Repositories
 
                 for (int i = 0,num=0 ; i < numOfElements; i++)
                 {
-                    num = rnd.Next(0, _list.Count);
+                    num = rnd.Next(0, List.Count);
 
                     while (arrOfRandomNum.Contains(num)) 
                     {
-                        num = rnd.Next(0, _list.Count);
+                        num = rnd.Next(0, List.Count);
                     }
                 
-                    list.Add(_list[num]);
+                    list.Add(List[num]);
                     arrOfRandomNum[i] = num;
-                    
                 }
 
             return list;          

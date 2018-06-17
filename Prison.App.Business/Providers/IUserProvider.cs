@@ -12,11 +12,11 @@ namespace Prison.App.Business.Providers
         IReadOnlyCollection<string> GetUserRoles(string user);
 
         string GetUserPasswordByLogin(string user);
+
         IReadOnlyCollection<Employee> GetUnoccupiedEmployeeNames();
 
         User GetUserByLogin(string login);
 
         User GetUserByID(int id);
-
     }
 }

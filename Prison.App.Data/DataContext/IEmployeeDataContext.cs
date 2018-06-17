@@ -7,8 +7,8 @@ namespace Prison.App.Data.DataContext
     {
         IReadOnlyCollection<Employee> GetAllEmployees();
         Employee GetEmployeeByID(int id);
-        void Create(Employee dtn);
-        void Update(Employee dtn);
+        void Create(Employee emp);
+        void Update(Employee emp);
         void Delete(int id);
     }
 }

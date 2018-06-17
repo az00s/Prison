@@ -1,7 +1,6 @@
 ﻿using Prison.App.Business.Providers;
 using Prison.App.Common.Entities;
 using Prison.App.Common.Helpers;
-using Prison.App.Common.Interfaces;
 using System.Web.Mvc;
 using Prison.App.Web.Attributes;
 using Prison.App.Web.Models;
@@ -13,21 +12,17 @@ namespace Prison.App.Web.Controllers
     [Editor]
     public class StatusController : Controller
     {
-        private ILogger _log;
-
         private IStatusProvider _statusProvider;
 
         private IStatusService _statusService;
 
-        public StatusController(IStatusProvider statusProvider, ILogger log, IStatusService statusService)
+        public StatusController(IStatusProvider statusProvider, IStatusService statusService)
         {
             ArgumentHelper.ThrowExceptionIfNull(statusProvider, "IStatusProvider");
             ArgumentHelper.ThrowExceptionIfNull(statusService, "IStatusService");
-            ArgumentHelper.ThrowExceptionIfNull(log, "ILogger");
 
             _statusService = statusService;
             _statusProvider = statusProvider;
-            _log = log;
         }
 
         public ActionResult Index()
@@ -78,7 +73,9 @@ namespace Prison.App.Web.Controllers
             {
                 return View(model);
             }
+
             var status = ToStatus(model);
+
             _statusService.Update(status);
 
             return RedirectToAction("Index");
@@ -92,7 +89,7 @@ namespace Prison.App.Web.Controllers
         }
 
         [HttpPost]
-        public ActionResult DeleteFromDb(int id)
+        public ActionResult DeleteConfirmed(int id)
         {
             _statusService.Delete(id);
 

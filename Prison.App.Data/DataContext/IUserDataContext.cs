@@ -12,8 +12,8 @@ namespace Prison.App.Data.DataContext
         string GetUserPasswordByLogin(string login);
         User GetUserByLogin(string login);
         IReadOnlyCollection<Employee> GetUnoccupiedEmployeeNames();
-        void Create(User dtn);
-        void Update(User dtn);
+        void Create(User user);
+        void Update(User user);
         void Delete(int id);
     }
 }

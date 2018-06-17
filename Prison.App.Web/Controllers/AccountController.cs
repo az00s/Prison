@@ -16,7 +16,6 @@ namespace Prison.App.Web.Controllers
 
         public AccountController(ILogInService service,ILogger log)
         {
-
             ArgumentHelper.ThrowExceptionIfNull(service,"ILogInService");
             ArgumentHelper.ThrowExceptionIfNull(log, "ILogger");
 
@@ -24,7 +23,6 @@ namespace Prison.App.Web.Controllers
             _log = log;
         }
 
-       
         public ActionResult Login()
         {
             var Model = new LoginViewModel();
@@ -58,7 +56,6 @@ namespace Prison.App.Web.Controllers
                     ModelState.AddModelError("", "Неверное имя пользователя или пароль!");
                     return View(model);
             }
-
         }
 
         [User]
@@ -69,6 +66,5 @@ namespace Prison.App.Web.Controllers
 
             return RedirectToAction("Login");
         }
-
     }
 }

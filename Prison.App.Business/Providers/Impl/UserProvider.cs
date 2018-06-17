@@ -2,6 +2,7 @@
 using Prison.App.Common.Helpers;
 using Prison.App.Common.Interfaces;
 using Prison.App.Data.Repositories;
+using System;
 using System.Collections.Generic;
 
 namespace Prison.App.Business.Providers.Impl
@@ -10,10 +11,14 @@ namespace Prison.App.Business.Providers.Impl
     {
         private IUserRepository _rep;
 
+        private ILogger _log;
+
         public UserProvider(ILogger log, IUserRepository rep)
         {
             ArgumentHelper.ThrowExceptionIfNull(rep, "IUserRepository");
+            ArgumentHelper.ThrowExceptionIfNull(log, "ILogger");
 
+            _log = log;
             _rep = rep;
         }
 
@@ -49,9 +54,15 @@ namespace Prison.App.Business.Providers.Impl
 
         public User GetUserByID(int id)
         {
-            return _rep.GetUserByID(id);
+            if (ArgumentHelper.IsValidID(id))
+            {
+                return _rep.GetUserByID(id);
+            }
+            else
+            {
+                _log.Error($"UserID {id} is not valid!");
+                throw new ArgumentException($"Идентификатор пользователя указан неверно.Пожалуйста укажите значение от 0 до {int.MaxValue}");
+            }
         }
-
-
     }
 }

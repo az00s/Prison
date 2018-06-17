@@ -1,20 +1,12 @@
 ﻿using Prison.App.Common.Entities;
 using Prison.App.Common.Helpers;
-using Prison.App.Common.Interfaces;
 using Prison.App.Data.DataContext;
-using System;
 using System.Collections.Generic;
-using System.Data;
-using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Prison.App.Data.Repositories.Impl
 {
     public class PositionRepository:IPositionRepository
     {
-
         private IPositionDataContext _positionContext;
 
         public PositionRepository(IPositionDataContext positionContext)
@@ -22,7 +14,6 @@ namespace Prison.App.Data.Repositories.Impl
             ArgumentHelper.ThrowExceptionIfNull(positionContext, "IPositionDataContext");
 
             _positionContext = positionContext;
-
         }
 
         public IReadOnlyCollection<Position> GetAllPositions()
@@ -35,21 +26,19 @@ namespace Prison.App.Data.Repositories.Impl
             return _positionContext.GetPositionByID(id);
         }
 
-        public void Create(Position emp)
+        public void Create(Position position)
         {
-            _positionContext.Create(emp);
+            _positionContext.Create(position);
         }
 
-        public void Update(Position emp)
+        public void Update(Position position)
         {
-            _positionContext.Update(emp);
+            _positionContext.Update(position);
         }
 
         public void Delete(int id)
         {
             _positionContext.Delete(id);
         }
-
-
     }
 }

@@ -17,7 +17,6 @@ namespace Prison.App.Common.Loggers
         {
             ConfigureLogger();
             logger = LogManager.GetLogger(LOGGER_NAME);
-            
         }
 
         private void ConfigureLogger()
@@ -40,24 +39,20 @@ namespace Prison.App.Common.Loggers
             }           
         }
 
-
         public void Debug(string message)
         {
             logger.Debug(message);
         }
-
 
         public void Debug(string message, Exception exception)
         {
             logger.Debug(message, exception);
         }
 
-
         public  void Info(string message)
         {
             logger.Info(message);
         }
-
 
         public  void Info(string message, Exception exception)
         {
@@ -83,7 +78,6 @@ namespace Prison.App.Common.Loggers
         {
             logger.Error(message, exception);
         }
-
 
         public  void Fatal(string message)
         {

@@ -3,7 +3,6 @@ using System.Web.Mvc;
 
 namespace Prison.App.Web.Controllers
 {
-
     public class ErrorController : Controller
     {
         public ViewResult NotFound()
@@ -24,33 +23,34 @@ namespace Prison.App.Web.Controllers
             return View();
         }
 
-        public ViewResult CustomError(string entity)
+        public ViewResult CustomError(string entity, string message)
         {
-            string message;
-            switch (entity)
+            if (entity != null)
             {
-                case "Employee":
-                    message = "Чтобы удалить этого сотрудника сначала удалите все задержания в которых он участвует!";
-                    break;
-                case "PlaceOfStay":
-                    message = "Чтобы удалить это место содержания сначала удалите все задержания, где оно упоминается!";
-                    break;
-                case "Position":
-                    message = "Чтобы удалить эту должность сначала удалите всех сотрудников с этой должностью!";
-                    break;
-                case "Status":
-                    message = "Чтобы удалить этот статус сначала удалите задержанных с этим статусом!";
-                    break;
-                case "Role":
-                    message = "Чтобы удалить эту роль сначала удалите пользователей с этой ролью!";
-                    break;
-                default:
-                    message = "Нарушено ограничение целостности связанных таблиц!";
-                    break;
+                switch (entity)
+                {
+                    case "Employee":
+                        message = "Чтобы удалить этого сотрудника сначала удалите все задержания в которых он участвует!";
+                        break;
+                    case "PlaceOfStay":
+                        message = "Чтобы удалить это место содержания сначала удалите все задержания, где оно упоминается!";
+                        break;
+                    case "Position":
+                        message = "Чтобы удалить эту должность сначала удалите всех сотрудников с этой должностью!";
+                        break;
+                    case "Status":
+                        message = "Чтобы удалить этот статус сначала удалите задержанных с этим статусом!";
+                        break;
+                    case "Role":
+                        message = "Чтобы удалить эту роль сначала удалите пользователей с этой ролью!";
+                        break;
+                    default:
+                        message = "Нарушено ограничение целостности связанных таблиц!";
+                        break;
+                }
             }
 
             return View("CustomError", new ErrorViewModel { Message = message });
         }
-
     }
 }

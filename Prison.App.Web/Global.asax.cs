@@ -16,7 +16,6 @@ namespace Prison
 {
     public class MvcApplication : System.Web.HttpApplication
     {
-        
         protected void Application_Start()
         {
             AreaRegistration.RegisterAllAreas();
@@ -87,13 +86,11 @@ namespace Prison
 
             Response.Redirect($"~/Error/{action}"+$"/{entity}");
         }
-
     }
 
     //adding new path for finding Partial Views in folder Shared/"Partials"
     public class PrisonViewEngine : RazorViewEngine
     {
-
         private static string[] NewPartialViewFormats = new[] {"~/Views/Shared/Partials/{0}.cshtml"};
 
         public PrisonViewEngine()

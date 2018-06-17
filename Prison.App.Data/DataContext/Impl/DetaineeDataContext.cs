@@ -21,38 +21,31 @@ namespace Prison.App.Data.Repositories.Impl
 
         public IReadOnlyCollection<Detainee> GetAllDetainees()
         {
-            IReadOnlyCollection<Detainee> detaineeList = new List<Detainee>();
-
             var dataSet = _context.ExecuteQuery("SelectAllDetainees", null, CommandType.StoredProcedure);
 
-            detaineeList = ToDetaineeList(dataSet);
+            var detaineeList = ToDetaineeList(dataSet);
 
             return detaineeList;
         }
 
         public IReadOnlyCollection<Detention> GetAllDetentions()
         {
-            IReadOnlyCollection<Detention> detentionList = new List<Detention>();
-
             var dataSet = _context.ExecuteQuery("SelectAllDetentions", null, CommandType.StoredProcedure);
 
-            detentionList = ToDetentionList(dataSet);
+            var detentionList = ToDetentionList(dataSet);
 
             return detentionList;
         }
 
         public Detainee GetDetaineeByID(int id)
         {
-            Detainee detainee;
-
-            IDictionary<string, object> parameters = new Dictionary<string, object> { { "@ID",id } };
+            var parameters = new Dictionary<string, object> { { "@ID",id } };
 
             var dataSet = _context.ExecuteQuery("SelectDetaineeByID", parameters, CommandType.StoredProcedure);
 
-            detainee = ToDetainee(dataSet);
+            var detainee = ToDetainee(dataSet);
 
             return detainee;
-
         }
 
         public IReadOnlyCollection<MaritalStatus> GetAllMaritalStatuses()
@@ -66,13 +59,11 @@ namespace Prison.App.Data.Repositories.Impl
 
         public IReadOnlyCollection<Detainee> GetDetaineesByDate(DateTime date)
         {
-            IReadOnlyCollection<Detainee> detaineeList = new List<Detainee>();
-
-            IDictionary<string, object> parameters = new Dictionary<string, object> { { "@Date", date } };
+            var parameters = new Dictionary<string, object> { { "@Date", date } };
 
             var dataSet = _context.ExecuteQuery("SelectDetaineesByDate", parameters, CommandType.StoredProcedure);
 
-            detaineeList = ToDetaineeList(dataSet);
+            var detaineeList = ToDetaineeList(dataSet);
 
             return detaineeList;
         }
@@ -98,7 +89,7 @@ namespace Prison.App.Data.Repositories.Impl
 
         public void Create(Detainee dtn)
         {
-            IDictionary<string, object> parametersDictionary =
+            var parametersDictionary =
                 new Dictionary<string, object>
                 {
                     { "@FirstName", dtn.FirstName },
@@ -129,7 +120,7 @@ namespace Prison.App.Data.Repositories.Impl
 
         public void Update(Detainee dtn)
         {
-            IDictionary<string, object> parametersDictionary =
+            var parametersDictionary =
                 new Dictionary<string, object>
                 {
                     { "@ID", dtn.DetaineeID },
@@ -156,7 +147,7 @@ namespace Prison.App.Data.Repositories.Impl
 
         public void ReleaseDetainee(Detention detention)
         {
-            IDictionary<string, object> parametersDictionary =
+            var parametersDictionary =
                 new Dictionary<string, object>
                 {
                     { "@ID", detention.DetentionID },
@@ -171,7 +162,7 @@ namespace Prison.App.Data.Repositories.Impl
 
         public Detention GetLastDetention(int id)
         {
-            IDictionary<string, object> parametersDictionary =
+            var parametersDictionary =
                 new Dictionary<string, object>
                 {
                     { "@ID", id }
@@ -185,7 +176,7 @@ namespace Prison.App.Data.Repositories.Impl
 
         public Detention GetDetentionByID(int id)
         {
-            IDictionary<string, object> parametersDictionary =
+            var parametersDictionary =
                 new Dictionary<string, object>
                 {
                     { "@ID", id }
@@ -199,7 +190,7 @@ namespace Prison.App.Data.Repositories.Impl
 
         public void Delete(int id)
         {
-            IDictionary<string, object> parameters =
+            var parameters =
                 new Dictionary<string, object>
                 {
                     { "@ID", id },
@@ -287,9 +278,6 @@ namespace Prison.App.Data.Repositories.Impl
                 AmountForStaying = row.IsNull("AmountForStaying") ? 0 : row.Field<decimal>("AmountForStaying"),
                 PaidAmount = row.IsNull("PaidAmount") ? 0 : row.Field<decimal>("PaidAmount"),
             };
-                   
-            
-             
         }
 
         private IReadOnlyCollection<Detention> ToDetentionList(DataTable table)
@@ -359,7 +347,6 @@ namespace Prison.App.Data.Repositories.Impl
                     StatusName = row.Field<string>(1),
                 }
             ).ToList();
-
         }
         #endregion
 

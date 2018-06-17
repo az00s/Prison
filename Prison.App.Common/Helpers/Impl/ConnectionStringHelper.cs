@@ -6,7 +6,7 @@ namespace Prison.App.Common.Helpers
 {
     public class ConnectionStringHelper: IConnectionStringHelper
     {
-        private string _connString=null;
+        private string _connString;
 
         //config file name
         private const string FILE_NAME = "app.config";

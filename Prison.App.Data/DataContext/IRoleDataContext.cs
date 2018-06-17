@@ -7,8 +7,8 @@ namespace Prison.App.Data.DataContext
     {
         IReadOnlyCollection<Role> GetAllRoles();
         Role GetRoleByID(int id);
-        void Create(Role dtn);
-        void Update(Role dtn);
+        void Create(Role role);
+        void Update(Role role);
         void Delete(int id);
     }
 }

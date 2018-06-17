@@ -4,8 +4,8 @@ namespace Prison.App.Business.Services
 {
     public interface IPositionService
     {
-        void Create(Position emp);
-        void Update(Position emp);
+        void Create(Position pos);
+        void Update(Position pos);
         void Delete(int id);
     }
 }

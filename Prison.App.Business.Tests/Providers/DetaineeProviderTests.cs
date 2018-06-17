@@ -88,7 +88,6 @@ namespace Prison.App.Business.Tests
                     },
                 PhoneNumbers = null
             };
-
         }
 
         [TestMethod]
@@ -122,10 +121,8 @@ namespace Prison.App.Business.Tests
             //assert
             Assert.AreEqual(id,result.DetaineeID);
             _detaineeRepository.Verify(r => r.GetDetaineeByID(It.IsAny<int>()), Times.Once);
-
         }
 
-        
         [TestMethod]
         [ExpectedException(typeof(ArgumentException))]
         public void GetDetaineeByID_InvalidId_ExceptionReturned()
@@ -185,7 +182,6 @@ namespace Prison.App.Business.Tests
 
             //act
             _detaineeProvider.GetDetaineesByDate(date);
-
         }
 
         [TestMethod]

@@ -35,7 +35,6 @@ namespace Prison.App.Data.DataContext.Impl
             var place = ToPlace(dataSet);
 
             return place;
-
         }
 
         public void Create(PlaceOfStay dtn)

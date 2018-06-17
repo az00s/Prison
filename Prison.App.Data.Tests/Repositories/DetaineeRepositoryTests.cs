@@ -86,7 +86,6 @@ namespace Prison.App.Data.Tests
                     },
                 PhoneNumbers = null
             };
-
         }
 
         [TestMethod]
@@ -244,7 +243,6 @@ namespace Prison.App.Data.Tests
             //assert
             Assert.IsNull(result);
             _detaineeContext.Verify(r => r.Find(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>()), Times.Once);
-
         }
 
     }

@@ -3,7 +3,7 @@ using System.Web.Mvc;
 
 namespace Prison.App.Web.Attributes
 {
-    public class UserAttribute: AuthorizeAttribute
+    internal class UserAttribute: AuthorizeAttribute
     {
         //because of 'admin' role is including 'editor' and 'user' roles this attribute checks not only 'user', but editor and admin roles too.
         private string[] RoleArray = {"user","editor","admin"};

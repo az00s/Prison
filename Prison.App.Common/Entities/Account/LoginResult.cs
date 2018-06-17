@@ -6,7 +6,5 @@
         InvalidPassword = 1,
         UserNotFound=2,
         Failure = 3,
-
-
     }
 }

@@ -6,7 +6,6 @@ using Prison.App.Common.Helpers;
 using Prison.App.Common.Interfaces;
 using System;
 using System.Linq;
-using System.Net.Http;
 using System.Web;
 using System.Web.Security;
 
@@ -14,7 +13,8 @@ namespace Prison.App.Business.Services
 {
     public class LogInService:ILogInService
     {
-        private IUserProvider _usr;
+        private IUserProvider _usrProvider;
+
         private ILogger _log;
 
         public LogInService(ILogger log,IUserProvider prov)
@@ -22,8 +22,9 @@ namespace Prison.App.Business.Services
             ArgumentHelper.ThrowExceptionIfNull(log, "ILogger");
             ArgumentHelper.ThrowExceptionIfNull(prov, "IUserProvider");
             _log = log;
-            _usr = prov;
+            _usrProvider = prov;
         }
+
         public LoginResult LogIn(string login,string password)
         {
             if (string.IsNullOrEmpty(login) || string.IsNullOrEmpty(password))
@@ -33,7 +34,7 @@ namespace Prison.App.Business.Services
 
             if (IsValidUser(login))
             {
-                if (_usr.GetUserPasswordByLogin(login).Equals(password))
+                if (_usrProvider.GetUserPasswordByLogin(login).Equals(password))
                 {
                     var User = GetUser(login);
 
@@ -44,8 +45,10 @@ namespace Prison.App.Business.Services
                         var encryptedTicket = FormsAuthentication.Encrypt(authTicket);
                         var cookie = new HttpCookie(FormsAuthentication.FormsCookieName, encryptedTicket);
                         HttpContext.Current.Response.Cookies.Add(cookie);
+                        return LoginResult.Success;
                     }
-                    return LoginResult.Success;
+
+                    return LoginResult.UserNotFound;
                 }
                 else
                 {
@@ -54,6 +57,7 @@ namespace Prison.App.Business.Services
                 }
 
             }
+
             return LoginResult.UserNotFound;
         }
         
@@ -64,25 +68,26 @@ namespace Prison.App.Business.Services
 
         private bool IsValidUser(string login)
         {
-
-            if (_usr.GetAllLogins().Contains(login))
+            if (_usrProvider.GetAllLogins().Contains(login))
             {
                 return true;
             }
             else
             {
-                _log.Warn($"Login '{login}' not fount!");
+                _log.Warn($"Login '{login}' not found!");
                 return false;
             }
         }
 
         private User GetUser(string login)
         {
-            var User = _usr.GetUserByLogin(login);
+            var User = _usrProvider.GetUserByLogin(login);
+
             if (User == null)
             {
                 _log.Warn($"User '{login}' not found!");
             }
+
             return User;
         }
     }
