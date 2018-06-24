@@ -19,9 +19,9 @@ namespace Prison.App.Business.Services.Impl
             _cacheService = cacheService;
         }
 
-        public void ReleaseDetainee(Detention detention)
+        public void ReleaseDetainee(Release release)
         {
-            _rep.ReleaseDetainee(detention);
+            _rep.ReleaseDetainee(release);
         }
 
         public void Create(Detainee dtn)

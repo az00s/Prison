@@ -170,10 +170,12 @@ namespace Prison.App.Web.Controllers
             return View("CreateDetention",model);
         }
 
+        
         [Editor]
+        [HttpGet]
         public ActionResult GetDetentions()
         {
-            var list = _detaineeProvider.GetAllDetentions();
+            var list = _detaineeProvider.GetDetentionsForLast3Days();
             var model = ToDetentionDropDownViewModel(list);
             return View("_DetentionsField", model);
         }
@@ -181,8 +183,9 @@ namespace Prison.App.Web.Controllers
         [Editor]
         public ActionResult ReleaseDetainee(int id)
         {
-            var model = new DetentionReleaseDetaineeViewModel
+            var model = new ReleaseDetaineeViewModel
             {
+                DetaineeID = id,
                 DetentionID = _detaineeProvider.GetLastDetention(id).DetentionID,
                 Employees = _employeeProvider.GetAllEmployees()
             };
@@ -191,13 +194,13 @@ namespace Prison.App.Web.Controllers
 
         [Editor]
         [HttpPost]
-        public ActionResult ReleaseDetainee(DetentionReleaseDetaineeViewModel model)
+        public ActionResult ReleaseDetainee(ReleaseDetaineeViewModel model)
         {
             if (ModelState.IsValid)
             {
-                var detention = ToDetention(model);
+                var release = ToRelease(model);
 
-                _detaineeService.ReleaseDetainee(detention);
+                _detaineeService.ReleaseDetainee(release);
             }
 
             return RedirectToAction("Index");
@@ -215,6 +218,8 @@ namespace Prison.App.Web.Controllers
         private DetaineeDetailsViewModel ToDetaineeDetailsViewModel(Detainee dtn)
         {
             var statuses = _detaineeProvider.GetAllMaritalStatuses();
+            var lastRelease = _detaineeProvider.GetLastRelease(dtn.DetaineeID);
+            var lastDetention = _detaineeProvider.GetLastDetention(dtn.DetaineeID);
 
             DetaineeDetailsViewModel Result = new DetaineeDetailsViewModel
             {
@@ -229,7 +234,8 @@ namespace Prison.App.Web.Controllers
                 ResidenceAddress = dtn.ResidenceAddress,
                 AdditionalData = dtn.AdditionalData,
                 Detentions = ToDetentionListViewModel(dtn.Detentions),
-                PhoneNumbers = dtn.PhoneNumbers
+                PhoneNumbers = dtn.PhoneNumbers,
+                IsReleased= lastRelease == null?false: (lastRelease.ReleasеDate.CompareTo(lastDetention.DetentionDate) < 0 ? false : true)
             };
 
             return Result;
@@ -296,17 +302,20 @@ namespace Prison.App.Web.Controllers
             };
         }
 
-        private Detention ToDetention(DetentionReleaseDetaineeViewModel model)
+
+        private Release ToRelease(ReleaseDetaineeViewModel model)
         {
-            return new Detention
+            return new Release
             {
-                DetentionID=model.DetentionID,
+                DetaineeID=model.DetaineeID,
+                DetentionID = model.DetentionID,
                 ReleasedByWhomID = model.ReleasedByWhomID,
                 ReleasеDate = model.ReleasеDate,
                 AmountForStaying = model.AmountForStaying,
                 PaidAmount = model.PaidAmount,
             };
         }
+
 
         private DetaineeEditViewModel ToDetaineeEditViewModel(Detainee dtn)
         {
@@ -343,13 +352,9 @@ namespace Prison.App.Web.Controllers
                     DetentionID = item.DetentionID,
                     DetentionDate = item.DetentionDate,
                     Employee = _employeeProvider.GetEmployeeByID(item.DetainedByWhomID).LastName,
-                    ReleasеDate=item.ReleasеDate,
-                    ReleasedByWhomID=item.ReleasedByWhomID,
                     DeliveryDate=item.DeliveryDate,
                     DeliveredByWhomID=item.DeliveredByWhomID,
                     PlaceID=item.PlaceID,
-                    AmountForStaying=item.AmountForStaying,
-                    PaidAmount=item.PaidAmount
                 });
             }
 
@@ -365,11 +370,7 @@ namespace Prison.App.Web.Controllers
                    DeliveryDate = detention.DeliveryDate,
                    DeliveredByWhom = _employeeProvider.GetEmployeeByID(detention.DeliveredByWhomID).LastName,
                    DetainedByWhom = _employeeProvider.GetEmployeeByID(detention.DetainedByWhomID).LastName,
-                   ReleasеDate = detention.ReleasеDate==DateTime.MinValue?"-": detention.ReleasеDate.ToShortDateString(),
-                   ReleasedByWhom = detention.ReleasedByWhomID==0?"-":_employeeProvider.GetEmployeeByID(detention.ReleasedByWhomID).LastName,
                    Place = _placeProvider.GetPlaceByID(detention.PlaceID).Address,
-                   PaidAmount=detention.PaidAmount,
-                   AmountForStaying=detention.AmountForStaying
                 };
         }
 

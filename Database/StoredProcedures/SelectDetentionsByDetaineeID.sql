@@ -8,11 +8,7 @@ Detention.[DetentionID],
 [DetainedByWhomID],
 [DeliveryDate],
 [DeliveredByWhomID],
-[ReleasåDate],
-[ReleasedByWhomID],
-[PlaceID],
-[AmountForStaying],
-[PaidAmount] 
+[PlaceID]
 from DetentionsOfDetainees 
 inner join Detention 
 on Detention.DetentionID = DetentionsOfDetainees.DetentionID 

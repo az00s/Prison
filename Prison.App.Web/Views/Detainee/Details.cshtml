@@ -6,17 +6,15 @@
     string elementName;
     string elementClass;
 
-    if (Model.Detentions.Last().ReleasеDate == DateTime.MinValue)
+    if (Model.IsReleased)
     {
-        elementName = "Освободить";
-        elementClass = "btn btn-success";
+        elementName = "Освобожден";
+        elementClass = "label label-danger";
     }
     else
     {
-
-        elementName = "Освобожден";
-        elementClass = "label label-danger";
-
+        elementName = "Освободить";
+        elementClass = "btn btn-success";
     }
 }
 

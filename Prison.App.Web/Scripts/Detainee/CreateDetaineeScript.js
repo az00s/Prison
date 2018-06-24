@@ -30,12 +30,21 @@
             success: function (data) {
 
                 $('#dvDetentionsField').html(data);
+
+                if ($('#dvDetentionsField select').length > 0)
+                {
+                    $("#btnCreateDetainee").removeAttr("disabled");
+                }
+                else
+                {
+                    $("#btnCreateDetainee").attr("disabled","disabled");
+                }
             }
 
 
         });
 
-        $("#btnCreateDetainee").removeAttr("disabled");
+        
 
     });
 

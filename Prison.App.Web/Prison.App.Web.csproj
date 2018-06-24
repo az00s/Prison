@@ -176,7 +176,7 @@
     <Compile Include="Models\Detention\DetentionDetailsViewModel.cs" />
     <Compile Include="Models\Detention\DetentionDropDownViewModel.cs" />
     <Compile Include="Models\Detention\DetentionListViewModel.cs" />
-    <Compile Include="Models\Detention\DetentionReleaseDetaineeViewModel.cs" />
+    <Compile Include="Models\Detention\ReleaseDetaineeViewModel.cs" />
     <Compile Include="Models\Employee\EmployeeEditViewModel.cs" />
     <Compile Include="Models\Employee\EmployeeIndexViewModel.cs" />
     <Compile Include="Models\ErrorViewModel.cs" />

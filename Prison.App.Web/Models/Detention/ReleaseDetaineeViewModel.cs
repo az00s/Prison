@@ -5,9 +5,11 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Prison.App.Web.Models
 {
-    public class DetentionReleaseDetaineeViewModel
+    public class ReleaseDetaineeViewModel
     {
         public int DetentionID { get; set; }
+
+        public int DetaineeID { get; set; }
 
         [DisplayFormat(DataFormatString = "{0:dd.MM.yyyy}", ApplyFormatInEditMode = true)]
         [Display(Name = "Дата освобождения")]

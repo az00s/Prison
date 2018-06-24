@@ -1,12 +1,10 @@
 USE prison
 go
-create procedure ReleaseDetainee(@ID int,@ReleaseDate date,@ReleasedByWhomID int,@AmountForStaying decimal=0,@PaidAmount decimal=0) 
+create procedure ReleaseDetainee(@ReleaseDate date,@ReleasedByWhomID int,@AmountForStaying decimal=0,@PaidAmount decimal=0,@DetentionID int,@DetaineeID int) 
 as
 begin
-update Detention
-set ReleasåDate=@ReleaseDate,
-ReleasedByWhomID=@ReleasedByWhomID,
-AmountForStaying=@AmountForStaying,
-PaidAmount=@PaidAmount
-where DetentionID=@ID
+
+insert into Release (ReleasåDate,ReleasedByWhomID,AmountForStaying,PaidAmount,DetentionID,DetaineeID)
+values (@ReleaseDate,@ReleasedByWhomID,@AmountForStaying,@PaidAmount,@DetentionID,@DetaineeID)
+
 end;

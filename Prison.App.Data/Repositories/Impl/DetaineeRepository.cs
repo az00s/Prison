@@ -32,6 +32,11 @@ namespace Prison.App.Data.Repositories
             return _detaineeContext.GetAllDetentions();
         }
 
+        public IReadOnlyCollection<Detention> GetDetentionsForLast3Days()
+        {
+            return _detaineeContext.GetDetentionsForLast3Days();
+        }
+
         public IReadOnlyCollection<Detainee> GetDetaineesByDate(DateTime date)
         {
             return _detaineeContext.GetDetaineesByDate(date);
@@ -47,14 +52,19 @@ namespace Prison.App.Data.Repositories
             return _detaineeContext.Find(DetentionDate, FirstName, LastName,MiddleName,ResidenceAddress);
         }
 
-        public void ReleaseDetainee(Detention detention)
+        public void ReleaseDetainee(Release release)
         {
-            _detaineeContext.ReleaseDetainee(detention);
+            _detaineeContext.ReleaseDetainee(release);
         }
 
         public Detention GetLastDetention(int id)
         {
             return _detaineeContext.GetLastDetention(id);
+        }
+
+        public Release GetLastRelease(int id)
+        {
+            return _detaineeContext.GetLastRelease(id);
         }
 
         public Detention GetDetentionByID(int id)

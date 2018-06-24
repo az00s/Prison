@@ -47,6 +47,12 @@ namespace Prison.App.Business.Providers.Impl
             return _rep.GetAllDetentions();
         }
 
+        public IReadOnlyCollection<Detention> GetDetentionsForLast3Days()
+        {
+            return _rep.GetDetentionsForLast3Days();
+        }
+
+
         public Detainee GetDetaineeByID(int id)
         {
             if (ArgumentHelper.IsValidID(id))
@@ -74,6 +80,11 @@ namespace Prison.App.Business.Providers.Impl
         public Detention GetLastDetention(int id)
         {
             return _rep.GetLastDetention(id);
+        }
+
+        public Release GetLastRelease(int id)
+        {
+            return _rep.GetLastRelease(id);
         }
 
         public IReadOnlyCollection<Detainee> GetDetaineesByDate(DateTime date)
