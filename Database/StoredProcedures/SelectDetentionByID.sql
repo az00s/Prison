@@ -10,11 +10,7 @@ dtn.DetentionDate,
 dtn.DetainedByWhomID,
 dtn.DeliveryDate,
 dtn.DeliveredByWhomID,
-dtn.ReleasåDate,
-dtn.ReleasedByWhomID,
-dtn.PlaceID,
-dtn.AmountForStaying,
-dtn.PaidAmount
+dtn.PlaceID
 FROM  Detention dtn
 where dtn.DetentionID=@ID
 

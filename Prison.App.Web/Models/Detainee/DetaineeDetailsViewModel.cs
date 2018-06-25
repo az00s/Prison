@@ -40,5 +40,7 @@ namespace Prison.App.Web.Models
         [Display(Name = "Задержания")]
         public IEnumerable<DetentionListViewModel> Detentions { get; set; }
 
+        public bool IsReleased { get; set; }
+
     }
 }

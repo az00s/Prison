@@ -1,4 +1,4 @@
-﻿@model Prison.App.Web.Models.DetentionReleaseDetaineeViewModel
+﻿@model ReleaseDetaineeViewModel
 @{
     Layout = null;
 }
@@ -21,10 +21,11 @@
                                 <fieldset>
                                     @Html.ValidationSummary(true, "", new { @class = "text-danger" })
                                     @Html.HiddenFor(model => model.DetentionID)
+                                    @Html.HiddenFor(model => model.DetaineeID)
                                     <div class="form-group">
                                         @Html.LabelFor(model => model.ReleasеDate, htmlAttributes: new { @class = "control-label col-md-5" })
                                         <div class="col-md-6">
-                                            <div class="input-group datetimepicker">
+                                            <div class="input-group datetimepicker" id="dtmReleaseDate">
                                                 <span class="input-group-addon">
                                                     <span class="glyphicon-calendar glyphicon"></span>
                                                 </span>

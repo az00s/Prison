@@ -72,9 +72,11 @@
     <Compile Include="Providers\IAdvertismentProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Providers\IDetaineeProvider.cs" />
+    <Compile Include="Providers\IDetentionProvider.cs" />
     <Compile Include="Providers\IEmployeeProvider.cs" />
     <Compile Include="Providers\Impl\AdvertismentProvider.cs" />
     <Compile Include="Providers\Impl\DetaineeProvider.cs" />
+    <Compile Include="Providers\Impl\DetentionProvider.cs" />
     <Compile Include="Providers\Impl\EmployeeProvider.cs" />
     <Compile Include="Providers\Impl\PlaceProvider.cs" />
     <Compile Include="Providers\Impl\PositionProvider.cs" />
@@ -89,9 +91,11 @@
     <Compile Include="Registers\BusinessRegistry.cs" />
     <Compile Include="Services\ICachingService.cs" />
     <Compile Include="Services\IDetaineeService.cs" />
+    <Compile Include="Services\IDetentionService.cs" />
     <Compile Include="Services\IEmployeeService.cs" />
     <Compile Include="Services\ILogInService.cs" />
     <Compile Include="Services\Impl\DetaineeService.cs" />
+    <Compile Include="Services\Impl\DetentionService.cs" />
     <Compile Include="Services\Impl\EmployeeService.cs" />
     <Compile Include="Services\Impl\LogInService.cs" />
     <Compile Include="Models\UserPrincipal.cs" />

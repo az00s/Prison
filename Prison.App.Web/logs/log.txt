@@ -588,3 +588,1691 @@ System.InvalidOperationException: Произошла ошибка при попытке создать контролле
    в System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
    в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
    в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-23 23:20:57,295 ERROR PrisonLogger - Значение не может быть неопределенным.
+Имя параметра: name
+System.ArgumentNullException: Значение не может быть неопределенным.
+Имя параметра: name
+   в System.Security.Principal.GenericIdentity..ctor(String name)
+   в Prison.App.Business.Services.UserPrincipal..ctor(User user) в C:\Users\Константин\source\repos\Prison\Prison.App.Business\Models\UserPrincipal.cs:строка 13
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 42
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-23 23:20:57,863 ERROR PrisonLogger - Значение не может быть неопределенным.
+Имя параметра: name
+System.ArgumentNullException: Значение не может быть неопределенным.
+Имя параметра: name
+   в System.Security.Principal.GenericIdentity..ctor(String name)
+   в Prison.App.Business.Services.UserPrincipal..ctor(User user) в C:\Users\Константин\source\repos\Prison\Prison.App.Business\Models\UserPrincipal.cs:строка 13
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 42
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-23 23:20:57,919 ERROR PrisonLogger - Значение не может быть неопределенным.
+Имя параметра: name
+System.ArgumentNullException: Значение не может быть неопределенным.
+Имя параметра: name
+   в System.Security.Principal.GenericIdentity..ctor(String name)
+   в Prison.App.Business.Services.UserPrincipal..ctor(User user) в C:\Users\Константин\source\repos\Prison\Prison.App.Business\Models\UserPrincipal.cs:строка 13
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 42
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-23 23:20:57,946 ERROR PrisonLogger - Значение не может быть неопределенным.
+Имя параметра: name
+System.ArgumentNullException: Значение не может быть неопределенным.
+Имя параметра: name
+   в System.Security.Principal.GenericIdentity..ctor(String name)
+   в Prison.App.Business.Services.UserPrincipal..ctor(User user) в C:\Users\Константин\source\repos\Prison\Prison.App.Business\Models\UserPrincipal.cs:строка 13
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 42
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-23 23:20:57,978 ERROR PrisonLogger - Значение не может быть неопределенным.
+Имя параметра: name
+System.ArgumentNullException: Значение не может быть неопределенным.
+Имя параметра: name
+   в System.Security.Principal.GenericIdentity..ctor(String name)
+   в Prison.App.Business.Services.UserPrincipal..ctor(User user) в C:\Users\Константин\source\repos\Prison\Prison.App.Business\Models\UserPrincipal.cs:строка 13
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 42
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-23 23:20:58,011 ERROR PrisonLogger - Значение не может быть неопределенным.
+Имя параметра: name
+System.ArgumentNullException: Значение не может быть неопределенным.
+Имя параметра: name
+   в System.Security.Principal.GenericIdentity..ctor(String name)
+   в Prison.App.Business.Services.UserPrincipal..ctor(User user) в C:\Users\Константин\source\repos\Prison\Prison.App.Business\Models\UserPrincipal.cs:строка 13
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 42
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-23 23:20:58,045 ERROR PrisonLogger - Значение не может быть неопределенным.
+Имя параметра: name
+System.ArgumentNullException: Значение не может быть неопределенным.
+Имя параметра: name
+   в System.Security.Principal.GenericIdentity..ctor(String name)
+   в Prison.App.Business.Services.UserPrincipal..ctor(User user) в C:\Users\Константин\source\repos\Prison\Prison.App.Business\Models\UserPrincipal.cs:строка 13
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 42
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-23 23:20:58,074 ERROR PrisonLogger - Значение не может быть неопределенным.
+Имя параметра: name
+System.ArgumentNullException: Значение не может быть неопределенным.
+Имя параметра: name
+   в System.Security.Principal.GenericIdentity..ctor(String name)
+   в Prison.App.Business.Services.UserPrincipal..ctor(User user) в C:\Users\Константин\source\repos\Prison\Prison.App.Business\Models\UserPrincipal.cs:строка 13
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 42
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-23 23:20:58,103 ERROR PrisonLogger - Значение не может быть неопределенным.
+Имя параметра: name
+System.ArgumentNullException: Значение не может быть неопределенным.
+Имя параметра: name
+   в System.Security.Principal.GenericIdentity..ctor(String name)
+   в Prison.App.Business.Services.UserPrincipal..ctor(User user) в C:\Users\Константин\source\repos\Prison\Prison.App.Business\Models\UserPrincipal.cs:строка 13
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 42
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-23 23:20:58,132 ERROR PrisonLogger - Значение не может быть неопределенным.
+Имя параметра: name
+System.ArgumentNullException: Значение не может быть неопределенным.
+Имя параметра: name
+   в System.Security.Principal.GenericIdentity..ctor(String name)
+   в Prison.App.Business.Services.UserPrincipal..ctor(User user) в C:\Users\Константин\source\repos\Prison\Prison.App.Business\Models\UserPrincipal.cs:строка 13
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 42
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-23 23:20:58,169 ERROR PrisonLogger - Значение не может быть неопределенным.
+Имя параметра: name
+System.ArgumentNullException: Значение не может быть неопределенным.
+Имя параметра: name
+   в System.Security.Principal.GenericIdentity..ctor(String name)
+   в Prison.App.Business.Services.UserPrincipal..ctor(User user) в C:\Users\Константин\source\repos\Prison\Prison.App.Business\Models\UserPrincipal.cs:строка 13
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 42
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-23 23:20:58,204 ERROR PrisonLogger - Значение не может быть неопределенным.
+Имя параметра: name
+System.ArgumentNullException: Значение не может быть неопределенным.
+Имя параметра: name
+   в System.Security.Principal.GenericIdentity..ctor(String name)
+   в Prison.App.Business.Services.UserPrincipal..ctor(User user) в C:\Users\Константин\source\repos\Prison\Prison.App.Business\Models\UserPrincipal.cs:строка 13
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 42
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-23 23:20:58,237 ERROR PrisonLogger - Значение не может быть неопределенным.
+Имя параметра: name
+System.ArgumentNullException: Значение не может быть неопределенным.
+Имя параметра: name
+   в System.Security.Principal.GenericIdentity..ctor(String name)
+   в Prison.App.Business.Services.UserPrincipal..ctor(User user) в C:\Users\Константин\source\repos\Prison\Prison.App.Business\Models\UserPrincipal.cs:строка 13
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 42
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-23 23:20:58,274 ERROR PrisonLogger - Значение не может быть неопределенным.
+Имя параметра: name
+System.ArgumentNullException: Значение не может быть неопределенным.
+Имя параметра: name
+   в System.Security.Principal.GenericIdentity..ctor(String name)
+   в Prison.App.Business.Services.UserPrincipal..ctor(User user) в C:\Users\Константин\source\repos\Prison\Prison.App.Business\Models\UserPrincipal.cs:строка 13
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 42
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-23 23:20:58,299 ERROR PrisonLogger - Значение не может быть неопределенным.
+Имя параметра: name
+System.ArgumentNullException: Значение не может быть неопределенным.
+Имя параметра: name
+   в System.Security.Principal.GenericIdentity..ctor(String name)
+   в Prison.App.Business.Services.UserPrincipal..ctor(User user) в C:\Users\Константин\source\repos\Prison\Prison.App.Business\Models\UserPrincipal.cs:строка 13
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 42
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-23 23:20:58,331 ERROR PrisonLogger - Значение не может быть неопределенным.
+Имя параметра: name
+System.ArgumentNullException: Значение не может быть неопределенным.
+Имя параметра: name
+   в System.Security.Principal.GenericIdentity..ctor(String name)
+   в Prison.App.Business.Services.UserPrincipal..ctor(User user) в C:\Users\Константин\source\repos\Prison\Prison.App.Business\Models\UserPrincipal.cs:строка 13
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 42
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-23 23:20:58,364 ERROR PrisonLogger - Значение не может быть неопределенным.
+Имя параметра: name
+System.ArgumentNullException: Значение не может быть неопределенным.
+Имя параметра: name
+   в System.Security.Principal.GenericIdentity..ctor(String name)
+   в Prison.App.Business.Services.UserPrincipal..ctor(User user) в C:\Users\Константин\source\repos\Prison\Prison.App.Business\Models\UserPrincipal.cs:строка 13
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 42
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-23 23:20:58,394 ERROR PrisonLogger - Значение не может быть неопределенным.
+Имя параметра: name
+System.ArgumentNullException: Значение не может быть неопределенным.
+Имя параметра: name
+   в System.Security.Principal.GenericIdentity..ctor(String name)
+   в Prison.App.Business.Services.UserPrincipal..ctor(User user) в C:\Users\Константин\source\repos\Prison\Prison.App.Business\Models\UserPrincipal.cs:строка 13
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 42
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-23 23:20:58,418 ERROR PrisonLogger - Значение не может быть неопределенным.
+Имя параметра: name
+System.ArgumentNullException: Значение не может быть неопределенным.
+Имя параметра: name
+   в System.Security.Principal.GenericIdentity..ctor(String name)
+   в Prison.App.Business.Services.UserPrincipal..ctor(User user) в C:\Users\Константин\source\repos\Prison\Prison.App.Business\Models\UserPrincipal.cs:строка 13
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 42
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-23 23:20:58,442 ERROR PrisonLogger - Значение не может быть неопределенным.
+Имя параметра: name
+System.ArgumentNullException: Значение не может быть неопределенным.
+Имя параметра: name
+   в System.Security.Principal.GenericIdentity..ctor(String name)
+   в Prison.App.Business.Services.UserPrincipal..ctor(User user) в C:\Users\Константин\source\repos\Prison\Prison.App.Business\Models\UserPrincipal.cs:строка 13
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 42
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-23 23:20:59,213 ERROR PrisonLogger - Значение не может быть неопределенным.
+Имя параметра: name
+System.ArgumentNullException: Значение не может быть неопределенным.
+Имя параметра: name
+   в System.Security.Principal.GenericIdentity..ctor(String name)
+   в Prison.App.Business.Services.UserPrincipal..ctor(User user) в C:\Users\Константин\source\repos\Prison\Prison.App.Business\Models\UserPrincipal.cs:строка 13
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 42
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-23 23:20:59,239 ERROR PrisonLogger - Значение не может быть неопределенным.
+Имя параметра: name
+System.ArgumentNullException: Значение не может быть неопределенным.
+Имя параметра: name
+   в System.Security.Principal.GenericIdentity..ctor(String name)
+   в Prison.App.Business.Services.UserPrincipal..ctor(User user) в C:\Users\Константин\source\repos\Prison\Prison.App.Business\Models\UserPrincipal.cs:строка 13
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 42
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-23 23:20:59,262 ERROR PrisonLogger - Значение не может быть неопределенным.
+Имя параметра: name
+System.ArgumentNullException: Значение не может быть неопределенным.
+Имя параметра: name
+   в System.Security.Principal.GenericIdentity..ctor(String name)
+   в Prison.App.Business.Services.UserPrincipal..ctor(User user) в C:\Users\Константин\source\repos\Prison\Prison.App.Business\Models\UserPrincipal.cs:строка 13
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 42
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-23 23:20:59,287 ERROR PrisonLogger - Значение не может быть неопределенным.
+Имя параметра: name
+System.ArgumentNullException: Значение не может быть неопределенным.
+Имя параметра: name
+   в System.Security.Principal.GenericIdentity..ctor(String name)
+   в Prison.App.Business.Services.UserPrincipal..ctor(User user) в C:\Users\Константин\source\repos\Prison\Prison.App.Business\Models\UserPrincipal.cs:строка 13
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 42
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-23 23:20:59,312 ERROR PrisonLogger - Значение не может быть неопределенным.
+Имя параметра: name
+System.ArgumentNullException: Значение не может быть неопределенным.
+Имя параметра: name
+   в System.Security.Principal.GenericIdentity..ctor(String name)
+   в Prison.App.Business.Services.UserPrincipal..ctor(User user) в C:\Users\Константин\source\repos\Prison\Prison.App.Business\Models\UserPrincipal.cs:строка 13
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 42
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-23 23:20:59,341 ERROR PrisonLogger - Значение не может быть неопределенным.
+Имя параметра: name
+System.ArgumentNullException: Значение не может быть неопределенным.
+Имя параметра: name
+   в System.Security.Principal.GenericIdentity..ctor(String name)
+   в Prison.App.Business.Services.UserPrincipal..ctor(User user) в C:\Users\Константин\source\repos\Prison\Prison.App.Business\Models\UserPrincipal.cs:строка 13
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 42
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-23 23:20:59,367 ERROR PrisonLogger - Значение не может быть неопределенным.
+Имя параметра: name
+System.ArgumentNullException: Значение не может быть неопределенным.
+Имя параметра: name
+   в System.Security.Principal.GenericIdentity..ctor(String name)
+   в Prison.App.Business.Services.UserPrincipal..ctor(User user) в C:\Users\Константин\source\repos\Prison\Prison.App.Business\Models\UserPrincipal.cs:строка 13
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 42
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-23 23:20:59,393 ERROR PrisonLogger - Значение не может быть неопределенным.
+Имя параметра: name
+System.ArgumentNullException: Значение не может быть неопределенным.
+Имя параметра: name
+   в System.Security.Principal.GenericIdentity..ctor(String name)
+   в Prison.App.Business.Services.UserPrincipal..ctor(User user) в C:\Users\Константин\source\repos\Prison\Prison.App.Business\Models\UserPrincipal.cs:строка 13
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 42
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-23 23:20:59,423 ERROR PrisonLogger - Значение не может быть неопределенным.
+Имя параметра: name
+System.ArgumentNullException: Значение не может быть неопределенным.
+Имя параметра: name
+   в System.Security.Principal.GenericIdentity..ctor(String name)
+   в Prison.App.Business.Services.UserPrincipal..ctor(User user) в C:\Users\Константин\source\repos\Prison\Prison.App.Business\Models\UserPrincipal.cs:строка 13
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 42
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-23 23:20:59,447 ERROR PrisonLogger - Значение не может быть неопределенным.
+Имя параметра: name
+System.ArgumentNullException: Значение не может быть неопределенным.
+Имя параметра: name
+   в System.Security.Principal.GenericIdentity..ctor(String name)
+   в Prison.App.Business.Services.UserPrincipal..ctor(User user) в C:\Users\Константин\source\repos\Prison\Prison.App.Business\Models\UserPrincipal.cs:строка 13
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 42
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-23 23:20:59,472 ERROR PrisonLogger - Значение не может быть неопределенным.
+Имя параметра: name
+System.ArgumentNullException: Значение не может быть неопределенным.
+Имя параметра: name
+   в System.Security.Principal.GenericIdentity..ctor(String name)
+   в Prison.App.Business.Services.UserPrincipal..ctor(User user) в C:\Users\Константин\source\repos\Prison\Prison.App.Business\Models\UserPrincipal.cs:строка 13
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 42
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-23 23:20:59,495 ERROR PrisonLogger - Значение не может быть неопределенным.
+Имя параметра: name
+System.ArgumentNullException: Значение не может быть неопределенным.
+Имя параметра: name
+   в System.Security.Principal.GenericIdentity..ctor(String name)
+   в Prison.App.Business.Services.UserPrincipal..ctor(User user) в C:\Users\Константин\source\repos\Prison\Prison.App.Business\Models\UserPrincipal.cs:строка 13
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 42
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-23 23:20:59,516 ERROR PrisonLogger - Значение не может быть неопределенным.
+Имя параметра: name
+System.ArgumentNullException: Значение не может быть неопределенным.
+Имя параметра: name
+   в System.Security.Principal.GenericIdentity..ctor(String name)
+   в Prison.App.Business.Services.UserPrincipal..ctor(User user) в C:\Users\Константин\source\repos\Prison\Prison.App.Business\Models\UserPrincipal.cs:строка 13
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 42
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-23 23:20:59,540 ERROR PrisonLogger - Значение не может быть неопределенным.
+Имя параметра: name
+System.ArgumentNullException: Значение не может быть неопределенным.
+Имя параметра: name
+   в System.Security.Principal.GenericIdentity..ctor(String name)
+   в Prison.App.Business.Services.UserPrincipal..ctor(User user) в C:\Users\Константин\source\repos\Prison\Prison.App.Business\Models\UserPrincipal.cs:строка 13
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 42
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-23 23:20:59,565 ERROR PrisonLogger - Значение не может быть неопределенным.
+Имя параметра: name
+System.ArgumentNullException: Значение не может быть неопределенным.
+Имя параметра: name
+   в System.Security.Principal.GenericIdentity..ctor(String name)
+   в Prison.App.Business.Services.UserPrincipal..ctor(User user) в C:\Users\Константин\source\repos\Prison\Prison.App.Business\Models\UserPrincipal.cs:строка 13
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 42
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-23 23:20:59,588 ERROR PrisonLogger - Значение не может быть неопределенным.
+Имя параметра: name
+System.ArgumentNullException: Значение не может быть неопределенным.
+Имя параметра: name
+   в System.Security.Principal.GenericIdentity..ctor(String name)
+   в Prison.App.Business.Services.UserPrincipal..ctor(User user) в C:\Users\Константин\source\repos\Prison\Prison.App.Business\Models\UserPrincipal.cs:строка 13
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 42
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-23 23:20:59,611 ERROR PrisonLogger - Значение не может быть неопределенным.
+Имя параметра: name
+System.ArgumentNullException: Значение не может быть неопределенным.
+Имя параметра: name
+   в System.Security.Principal.GenericIdentity..ctor(String name)
+   в Prison.App.Business.Services.UserPrincipal..ctor(User user) в C:\Users\Константин\source\repos\Prison\Prison.App.Business\Models\UserPrincipal.cs:строка 13
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 42
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-23 23:20:59,633 ERROR PrisonLogger - Значение не может быть неопределенным.
+Имя параметра: name
+System.ArgumentNullException: Значение не может быть неопределенным.
+Имя параметра: name
+   в System.Security.Principal.GenericIdentity..ctor(String name)
+   в Prison.App.Business.Services.UserPrincipal..ctor(User user) в C:\Users\Константин\source\repos\Prison\Prison.App.Business\Models\UserPrincipal.cs:строка 13
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 42
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-23 23:20:59,659 ERROR PrisonLogger - Значение не может быть неопределенным.
+Имя параметра: name
+System.ArgumentNullException: Значение не может быть неопределенным.
+Имя параметра: name
+   в System.Security.Principal.GenericIdentity..ctor(String name)
+   в Prison.App.Business.Services.UserPrincipal..ctor(User user) в C:\Users\Константин\source\repos\Prison\Prison.App.Business\Models\UserPrincipal.cs:строка 13
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 42
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-23 23:20:59,684 ERROR PrisonLogger - Значение не может быть неопределенным.
+Имя параметра: name
+System.ArgumentNullException: Значение не может быть неопределенным.
+Имя параметра: name
+   в System.Security.Principal.GenericIdentity..ctor(String name)
+   в Prison.App.Business.Services.UserPrincipal..ctor(User user) в C:\Users\Константин\source\repos\Prison\Prison.App.Business\Models\UserPrincipal.cs:строка 13
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 42
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-23 23:21:04,720 ERROR PrisonLogger - Значение не может быть неопределенным.
+Имя параметра: name
+System.ArgumentNullException: Значение не может быть неопределенным.
+Имя параметра: name
+   в System.Security.Principal.GenericIdentity..ctor(String name)
+   в Prison.App.Business.Services.UserPrincipal..ctor(User user) в C:\Users\Константин\source\repos\Prison\Prison.App.Business\Models\UserPrincipal.cs:строка 13
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 42
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-23 23:21:04,750 ERROR PrisonLogger - Значение не может быть неопределенным.
+Имя параметра: name
+System.ArgumentNullException: Значение не может быть неопределенным.
+Имя параметра: name
+   в System.Security.Principal.GenericIdentity..ctor(String name)
+   в Prison.App.Business.Services.UserPrincipal..ctor(User user) в C:\Users\Константин\source\repos\Prison\Prison.App.Business\Models\UserPrincipal.cs:строка 13
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 42
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-23 23:21:04,783 ERROR PrisonLogger - Значение не может быть неопределенным.
+Имя параметра: name
+System.ArgumentNullException: Значение не может быть неопределенным.
+Имя параметра: name
+   в System.Security.Principal.GenericIdentity..ctor(String name)
+   в Prison.App.Business.Services.UserPrincipal..ctor(User user) в C:\Users\Константин\source\repos\Prison\Prison.App.Business\Models\UserPrincipal.cs:строка 13
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 42
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-23 23:21:04,814 ERROR PrisonLogger - Значение не может быть неопределенным.
+Имя параметра: name
+System.ArgumentNullException: Значение не может быть неопределенным.
+Имя параметра: name
+   в System.Security.Principal.GenericIdentity..ctor(String name)
+   в Prison.App.Business.Services.UserPrincipal..ctor(User user) в C:\Users\Константин\source\repos\Prison\Prison.App.Business\Models\UserPrincipal.cs:строка 13
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 42
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-23 23:21:04,843 ERROR PrisonLogger - Значение не может быть неопределенным.
+Имя параметра: name
+System.ArgumentNullException: Значение не может быть неопределенным.
+Имя параметра: name
+   в System.Security.Principal.GenericIdentity..ctor(String name)
+   в Prison.App.Business.Services.UserPrincipal..ctor(User user) в C:\Users\Константин\source\repos\Prison\Prison.App.Business\Models\UserPrincipal.cs:строка 13
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 42
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-23 23:21:04,875 ERROR PrisonLogger - Значение не может быть неопределенным.
+Имя параметра: name
+System.ArgumentNullException: Значение не может быть неопределенным.
+Имя параметра: name
+   в System.Security.Principal.GenericIdentity..ctor(String name)
+   в Prison.App.Business.Services.UserPrincipal..ctor(User user) в C:\Users\Константин\source\repos\Prison\Prison.App.Business\Models\UserPrincipal.cs:строка 13
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 42
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-23 23:21:04,908 ERROR PrisonLogger - Значение не может быть неопределенным.
+Имя параметра: name
+System.ArgumentNullException: Значение не может быть неопределенным.
+Имя параметра: name
+   в System.Security.Principal.GenericIdentity..ctor(String name)
+   в Prison.App.Business.Services.UserPrincipal..ctor(User user) в C:\Users\Константин\source\repos\Prison\Prison.App.Business\Models\UserPrincipal.cs:строка 13
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 42
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-23 23:21:04,931 ERROR PrisonLogger - Значение не может быть неопределенным.
+Имя параметра: name
+System.ArgumentNullException: Значение не может быть неопределенным.
+Имя параметра: name
+   в System.Security.Principal.GenericIdentity..ctor(String name)
+   в Prison.App.Business.Services.UserPrincipal..ctor(User user) в C:\Users\Константин\source\repos\Prison\Prison.App.Business\Models\UserPrincipal.cs:строка 13
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 42
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-23 23:21:04,955 ERROR PrisonLogger - Значение не может быть неопределенным.
+Имя параметра: name
+System.ArgumentNullException: Значение не может быть неопределенным.
+Имя параметра: name
+   в System.Security.Principal.GenericIdentity..ctor(String name)
+   в Prison.App.Business.Services.UserPrincipal..ctor(User user) в C:\Users\Константин\source\repos\Prison\Prison.App.Business\Models\UserPrincipal.cs:строка 13
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 42
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-23 23:21:04,979 ERROR PrisonLogger - Значение не может быть неопределенным.
+Имя параметра: name
+System.ArgumentNullException: Значение не может быть неопределенным.
+Имя параметра: name
+   в System.Security.Principal.GenericIdentity..ctor(String name)
+   в Prison.App.Business.Services.UserPrincipal..ctor(User user) в C:\Users\Константин\source\repos\Prison\Prison.App.Business\Models\UserPrincipal.cs:строка 13
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 42
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-23 23:21:05,003 ERROR PrisonLogger - Значение не может быть неопределенным.
+Имя параметра: name
+System.ArgumentNullException: Значение не может быть неопределенным.
+Имя параметра: name
+   в System.Security.Principal.GenericIdentity..ctor(String name)
+   в Prison.App.Business.Services.UserPrincipal..ctor(User user) в C:\Users\Константин\source\repos\Prison\Prison.App.Business\Models\UserPrincipal.cs:строка 13
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 42
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-23 23:21:05,032 ERROR PrisonLogger - Значение не может быть неопределенным.
+Имя параметра: name
+System.ArgumentNullException: Значение не может быть неопределенным.
+Имя параметра: name
+   в System.Security.Principal.GenericIdentity..ctor(String name)
+   в Prison.App.Business.Services.UserPrincipal..ctor(User user) в C:\Users\Константин\source\repos\Prison\Prison.App.Business\Models\UserPrincipal.cs:строка 13
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 42
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-23 23:21:05,058 ERROR PrisonLogger - Значение не может быть неопределенным.
+Имя параметра: name
+System.ArgumentNullException: Значение не может быть неопределенным.
+Имя параметра: name
+   в System.Security.Principal.GenericIdentity..ctor(String name)
+   в Prison.App.Business.Services.UserPrincipal..ctor(User user) в C:\Users\Константин\source\repos\Prison\Prison.App.Business\Models\UserPrincipal.cs:строка 13
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 42
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-23 23:21:05,082 ERROR PrisonLogger - Значение не может быть неопределенным.
+Имя параметра: name
+System.ArgumentNullException: Значение не может быть неопределенным.
+Имя параметра: name
+   в System.Security.Principal.GenericIdentity..ctor(String name)
+   в Prison.App.Business.Services.UserPrincipal..ctor(User user) в C:\Users\Константин\source\repos\Prison\Prison.App.Business\Models\UserPrincipal.cs:строка 13
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 42
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-23 23:21:05,116 ERROR PrisonLogger - Значение не может быть неопределенным.
+Имя параметра: name
+System.ArgumentNullException: Значение не может быть неопределенным.
+Имя параметра: name
+   в System.Security.Principal.GenericIdentity..ctor(String name)
+   в Prison.App.Business.Services.UserPrincipal..ctor(User user) в C:\Users\Константин\source\repos\Prison\Prison.App.Business\Models\UserPrincipal.cs:строка 13
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 42
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-23 23:21:05,146 ERROR PrisonLogger - Значение не может быть неопределенным.
+Имя параметра: name
+System.ArgumentNullException: Значение не может быть неопределенным.
+Имя параметра: name
+   в System.Security.Principal.GenericIdentity..ctor(String name)
+   в Prison.App.Business.Services.UserPrincipal..ctor(User user) в C:\Users\Константин\source\repos\Prison\Prison.App.Business\Models\UserPrincipal.cs:строка 13
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 42
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-23 23:21:05,175 ERROR PrisonLogger - Значение не может быть неопределенным.
+Имя параметра: name
+System.ArgumentNullException: Значение не может быть неопределенным.
+Имя параметра: name
+   в System.Security.Principal.GenericIdentity..ctor(String name)
+   в Prison.App.Business.Services.UserPrincipal..ctor(User user) в C:\Users\Константин\source\repos\Prison\Prison.App.Business\Models\UserPrincipal.cs:строка 13
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 42
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-23 23:21:05,208 ERROR PrisonLogger - Значение не может быть неопределенным.
+Имя параметра: name
+System.ArgumentNullException: Значение не может быть неопределенным.
+Имя параметра: name
+   в System.Security.Principal.GenericIdentity..ctor(String name)
+   в Prison.App.Business.Services.UserPrincipal..ctor(User user) в C:\Users\Константин\source\repos\Prison\Prison.App.Business\Models\UserPrincipal.cs:строка 13
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 42
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-23 23:21:05,237 ERROR PrisonLogger - Значение не может быть неопределенным.
+Имя параметра: name
+System.ArgumentNullException: Значение не может быть неопределенным.
+Имя параметра: name
+   в System.Security.Principal.GenericIdentity..ctor(String name)
+   в Prison.App.Business.Services.UserPrincipal..ctor(User user) в C:\Users\Константин\source\repos\Prison\Prison.App.Business\Models\UserPrincipal.cs:строка 13
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 42
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-23 23:21:05,263 ERROR PrisonLogger - Значение не может быть неопределенным.
+Имя параметра: name
+System.ArgumentNullException: Значение не может быть неопределенным.
+Имя параметра: name
+   в System.Security.Principal.GenericIdentity..ctor(String name)
+   в Prison.App.Business.Services.UserPrincipal..ctor(User user) в C:\Users\Константин\source\repos\Prison\Prison.App.Business\Models\UserPrincipal.cs:строка 13
+   в Prison.MvcApplication.Application_PostAuthenticateRequest(Object sender, EventArgs e) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Global.asax.cs:строка 42
+   в System.Web.HttpApplication.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-23 23:21:18,158 ERROR PrisonLogger - Произошла ошибка при попытке создать контроллер типа "Prison.App.Web.Controllers.AccountController". Убедитесь в том, что контроллер имеет общедоступный конструктор без параметров.
+System.InvalidOperationException: Произошла ошибка при попытке создать контроллер типа "Prison.App.Web.Controllers.AccountController". Убедитесь в том, что контроллер имеет общедоступный конструктор без параметров. ---> System.MissingMethodException: Для данного объекта не определено беспараметрических конструкторов.
+   в System.RuntimeTypeHandle.CreateInstance(RuntimeType type, Boolean publicOnly, Boolean noCheck, Boolean& canBeCached, RuntimeMethodHandleInternal& ctor, Boolean& bNeedSecurityCheck)
+   в System.RuntimeType.CreateInstanceSlow(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   в System.Activator.CreateInstance(Type type, Boolean nonPublic)
+   в System.Activator.CreateInstance(Type type)
+   в System.Web.Mvc.DefaultControllerFactory.DefaultControllerActivator.Create(RequestContext requestContext, Type controllerType)
+   --- Конец трассировки внутреннего стека исключений ---
+   в System.Web.Mvc.DefaultControllerFactory.DefaultControllerActivator.Create(RequestContext requestContext, Type controllerType)
+   в System.Web.Mvc.DefaultControllerFactory.CreateController(RequestContext requestContext, String controllerName)
+   в System.Web.Mvc.MvcHandler.ProcessRequestInit(HttpContextBase httpContext, IController& controller, IControllerFactory& factory)
+   в System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContextBase httpContext, AsyncCallback callback, Object state)
+   в System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-23 23:21:24,894 ERROR PrisonLogger - Произошла ошибка при попытке создать контроллер типа "Prison.App.Web.Controllers.AccountController". Убедитесь в том, что контроллер имеет общедоступный конструктор без параметров.
+System.InvalidOperationException: Произошла ошибка при попытке создать контроллер типа "Prison.App.Web.Controllers.AccountController". Убедитесь в том, что контроллер имеет общедоступный конструктор без параметров. ---> System.MissingMethodException: Для данного объекта не определено беспараметрических конструкторов.
+   в System.RuntimeTypeHandle.CreateInstance(RuntimeType type, Boolean publicOnly, Boolean noCheck, Boolean& canBeCached, RuntimeMethodHandleInternal& ctor, Boolean& bNeedSecurityCheck)
+   в System.RuntimeType.CreateInstanceSlow(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   в System.Activator.CreateInstance(Type type, Boolean nonPublic)
+   в System.Activator.CreateInstance(Type type)
+   в System.Web.Mvc.DefaultControllerFactory.DefaultControllerActivator.Create(RequestContext requestContext, Type controllerType)
+   --- Конец трассировки внутреннего стека исключений ---
+   в System.Web.Mvc.DefaultControllerFactory.DefaultControllerActivator.Create(RequestContext requestContext, Type controllerType)
+   в System.Web.Mvc.DefaultControllerFactory.CreateController(RequestContext requestContext, String controllerName)
+   в System.Web.Mvc.MvcHandler.ProcessRequestInit(HttpContextBase httpContext, IController& controller, IControllerFactory& factory)
+   в System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContextBase httpContext, AsyncCallback callback, Object state)
+   в System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-23 23:21:28,710 ERROR PrisonLogger - Произошла ошибка при попытке создать контроллер типа "Prison.App.Web.Controllers.AdvertismentController". Убедитесь в том, что контроллер имеет общедоступный конструктор без параметров.
+System.InvalidOperationException: Произошла ошибка при попытке создать контроллер типа "Prison.App.Web.Controllers.AdvertismentController". Убедитесь в том, что контроллер имеет общедоступный конструктор без параметров. ---> System.MissingMethodException: Для данного объекта не определено беспараметрических конструкторов.
+   в System.RuntimeTypeHandle.CreateInstance(RuntimeType type, Boolean publicOnly, Boolean noCheck, Boolean& canBeCached, RuntimeMethodHandleInternal& ctor, Boolean& bNeedSecurityCheck)
+   в System.RuntimeType.CreateInstanceSlow(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   в System.Activator.CreateInstance(Type type, Boolean nonPublic)
+   в System.Activator.CreateInstance(Type type)
+   в System.Web.Mvc.DefaultControllerFactory.DefaultControllerActivator.Create(RequestContext requestContext, Type controllerType)
+   --- Конец трассировки внутреннего стека исключений ---
+   в System.Web.Mvc.DefaultControllerFactory.DefaultControllerActivator.Create(RequestContext requestContext, Type controllerType)
+   в System.Web.Mvc.DefaultControllerFactory.CreateController(RequestContext requestContext, String controllerName)
+   в System.Web.Mvc.MvcHandler.ProcessRequestInit(HttpContextBase httpContext, IController& controller, IControllerFactory& factory)
+   в System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContextBase httpContext, AsyncCallback callback, Object state)
+   в System.Web.Mvc.HttpHandlerUtil.ServerExecuteHttpHandlerWrapper.Wrap[TResult](Func`1 func)
+   в System.Web.HttpServerUtility.ExecuteInternal(IHttpHandler handler, TextWriter writer, Boolean preserveForm, Boolean setPreviousPage, VirtualPath path, VirtualPath filePath, String physPath, Exception error, String queryStringOverride)
+   в System.Web.HttpServerUtility.Execute(IHttpHandler handler, TextWriter writer, Boolean preserveForm, Boolean setPreviousPage)
+   в System.Web.HttpServerUtility.Execute(IHttpHandler handler, TextWriter writer, Boolean preserveForm)
+   в System.Web.Mvc.Html.ChildActionExtensions.ActionHelper(HtmlHelper htmlHelper, String actionName, String controllerName, RouteValueDictionary routeValues, TextWriter textWriter)
+   в System.Web.Mvc.Html.ChildActionExtensions.Action(HtmlHelper htmlHelper, String actionName, String controllerName, RouteValueDictionary routeValues)
+   в ASP._Page_Views_Home_Index_cshtml.Execute() в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Views\Home\Index.cshtml:строка 30
+   в System.Web.WebPages.WebPageBase.ExecutePageHierarchy()
+   в System.Web.Mvc.WebViewPage.ExecutePageHierarchy()
+   в System.Web.WebPages.StartPage.ExecutePageHierarchy()
+   в System.Web.WebPages.WebPageBase.ExecutePageHierarchy(WebPageContext pageContext, TextWriter writer, WebPageRenderingBase startPage)
+   в System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   в System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   в System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   в System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.<BeginExecuteCore>b__1d(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   в System.Web.Mvc.MvcHandler.<BeginProcessRequest>b__5(IAsyncResult asyncResult, ProcessRequestState innerState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   в System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-23 23:23:13,825 ERROR PrisonLogger - Произошла ошибка при попытке создать контроллер типа "Prison.App.Web.Controllers.AdvertismentController". Убедитесь в том, что контроллер имеет общедоступный конструктор без параметров.
+System.InvalidOperationException: Произошла ошибка при попытке создать контроллер типа "Prison.App.Web.Controllers.AdvertismentController". Убедитесь в том, что контроллер имеет общедоступный конструктор без параметров. ---> System.MissingMethodException: Для данного объекта не определено беспараметрических конструкторов.
+   в System.RuntimeTypeHandle.CreateInstance(RuntimeType type, Boolean publicOnly, Boolean noCheck, Boolean& canBeCached, RuntimeMethodHandleInternal& ctor, Boolean& bNeedSecurityCheck)
+   в System.RuntimeType.CreateInstanceSlow(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   в System.Activator.CreateInstance(Type type, Boolean nonPublic)
+   в System.Activator.CreateInstance(Type type)
+   в System.Web.Mvc.DefaultControllerFactory.DefaultControllerActivator.Create(RequestContext requestContext, Type controllerType)
+   --- Конец трассировки внутреннего стека исключений ---
+   в System.Web.Mvc.DefaultControllerFactory.DefaultControllerActivator.Create(RequestContext requestContext, Type controllerType)
+   в System.Web.Mvc.DefaultControllerFactory.CreateController(RequestContext requestContext, String controllerName)
+   в System.Web.Mvc.MvcHandler.ProcessRequestInit(HttpContextBase httpContext, IController& controller, IControllerFactory& factory)
+   в System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContextBase httpContext, AsyncCallback callback, Object state)
+   в System.Web.Mvc.HttpHandlerUtil.ServerExecuteHttpHandlerWrapper.Wrap[TResult](Func`1 func)
+   в System.Web.HttpServerUtility.ExecuteInternal(IHttpHandler handler, TextWriter writer, Boolean preserveForm, Boolean setPreviousPage, VirtualPath path, VirtualPath filePath, String physPath, Exception error, String queryStringOverride)
+   в System.Web.HttpServerUtility.Execute(IHttpHandler handler, TextWriter writer, Boolean preserveForm, Boolean setPreviousPage)
+   в System.Web.HttpServerUtility.Execute(IHttpHandler handler, TextWriter writer, Boolean preserveForm)
+   в System.Web.Mvc.Html.ChildActionExtensions.ActionHelper(HtmlHelper htmlHelper, String actionName, String controllerName, RouteValueDictionary routeValues, TextWriter textWriter)
+   в System.Web.Mvc.Html.ChildActionExtensions.Action(HtmlHelper htmlHelper, String actionName, String controllerName, RouteValueDictionary routeValues)
+   в ASP._Page_Views_Home_Index_cshtml.Execute() в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Views\Home\Index.cshtml:строка 30
+   в System.Web.WebPages.WebPageBase.ExecutePageHierarchy()
+   в System.Web.Mvc.WebViewPage.ExecutePageHierarchy()
+   в System.Web.WebPages.StartPage.ExecutePageHierarchy()
+   в System.Web.WebPages.WebPageBase.ExecutePageHierarchy(WebPageContext pageContext, TextWriter writer, WebPageRenderingBase startPage)
+   в System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   в System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   в System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   в System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.<BeginExecuteCore>b__1d(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   в System.Web.Mvc.MvcHandler.<BeginProcessRequest>b__5(IAsyncResult asyncResult, ProcessRequestState innerState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   в System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-23 23:25:15,281 ERROR PrisonLogger - Произошла ошибка при попытке создать контроллер типа "Prison.App.Web.Controllers.AdvertismentController". Убедитесь в том, что контроллер имеет общедоступный конструктор без параметров.
+System.InvalidOperationException: Произошла ошибка при попытке создать контроллер типа "Prison.App.Web.Controllers.AdvertismentController". Убедитесь в том, что контроллер имеет общедоступный конструктор без параметров. ---> System.MissingMethodException: Для данного объекта не определено беспараметрических конструкторов.
+   в System.RuntimeTypeHandle.CreateInstance(RuntimeType type, Boolean publicOnly, Boolean noCheck, Boolean& canBeCached, RuntimeMethodHandleInternal& ctor, Boolean& bNeedSecurityCheck)
+   в System.RuntimeType.CreateInstanceSlow(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   в System.Activator.CreateInstance(Type type, Boolean nonPublic)
+   в System.Activator.CreateInstance(Type type)
+   в System.Web.Mvc.DefaultControllerFactory.DefaultControllerActivator.Create(RequestContext requestContext, Type controllerType)
+   --- Конец трассировки внутреннего стека исключений ---
+   в System.Web.Mvc.DefaultControllerFactory.DefaultControllerActivator.Create(RequestContext requestContext, Type controllerType)
+   в System.Web.Mvc.DefaultControllerFactory.GetControllerInstance(RequestContext requestContext, Type controllerType)
+   в System.Web.Mvc.DefaultControllerFactory.CreateController(RequestContext requestContext, String controllerName)
+   в System.Web.Mvc.MvcHandler.ProcessRequestInit(HttpContextBase httpContext, IController& controller, IControllerFactory& factory)
+   в System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContextBase httpContext, AsyncCallback callback, Object state)
+   в System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContext httpContext, AsyncCallback callback, Object state)
+   в System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.BeginProcessRequest(HttpContext context, AsyncCallback cb, Object extraData)
+   в System.Web.Mvc.HttpHandlerUtil.ServerExecuteHttpHandlerAsyncWrapper.<>c__DisplayClass7.<BeginProcessRequest>b__6()
+   в System.Web.Mvc.HttpHandlerUtil.ServerExecuteHttpHandlerWrapper.Wrap[TResult](Func`1 func)
+   в System.Web.Mvc.HttpHandlerUtil.ServerExecuteHttpHandlerAsyncWrapper.BeginProcessRequest(HttpContext context, AsyncCallback cb, Object extraData)
+   в System.Web.HttpServerUtility.ExecuteInternal(IHttpHandler handler, TextWriter writer, Boolean preserveForm, Boolean setPreviousPage, VirtualPath path, VirtualPath filePath, String physPath, Exception error, String queryStringOverride)
+   в System.Web.HttpServerUtility.Execute(IHttpHandler handler, TextWriter writer, Boolean preserveForm, Boolean setPreviousPage)
+   в System.Web.HttpServerUtility.Execute(IHttpHandler handler, TextWriter writer, Boolean preserveForm)
+   в System.Web.Mvc.Html.ChildActionExtensions.ActionHelper(HtmlHelper htmlHelper, String actionName, String controllerName, RouteValueDictionary routeValues, TextWriter textWriter)
+   в System.Web.Mvc.Html.ChildActionExtensions.Action(HtmlHelper htmlHelper, String actionName, String controllerName, RouteValueDictionary routeValues)
+   в System.Web.Mvc.Html.ChildActionExtensions.Action(HtmlHelper htmlHelper, String actionName, String controllerName)
+   в ASP._Page_Views_Home_Index_cshtml.Execute() в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Views\Home\Index.cshtml:строка 30
+   в System.Web.WebPages.WebPageBase.ExecutePageHierarchy()
+   в System.Web.Mvc.WebViewPage.ExecutePageHierarchy()
+   в System.Web.WebPages.StartPage.RunPage()
+   в System.Web.WebPages.StartPage.ExecutePageHierarchy()
+   в System.Web.WebPages.WebPageBase.ExecutePageHierarchy(WebPageContext pageContext, TextWriter writer, WebPageRenderingBase startPage)
+   в System.Web.Mvc.RazorView.RenderView(ViewContext viewContext, TextWriter writer, Object instance)
+   в System.Web.Mvc.BuildManagerCompiledView.Render(ViewContext viewContext, TextWriter writer)
+   в System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   в System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   в System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   в System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   в System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   в System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.<BeginExecuteCore>b__1d(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   в System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   в System.Web.Mvc.Async.AsyncResultWrapper.End(IAsyncResult asyncResult, Object tag)
+   в System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.<BeginExecute>b__15(IAsyncResult asyncResult, Controller controller)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   в System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   в System.Web.Mvc.Async.AsyncResultWrapper.End(IAsyncResult asyncResult, Object tag)
+   в System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.System.Web.Mvc.Async.IAsyncController.EndExecute(IAsyncResult asyncResult)
+   в System.Web.Mvc.MvcHandler.<BeginProcessRequest>b__5(IAsyncResult asyncResult, ProcessRequestState innerState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   в System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   в System.Web.Mvc.Async.AsyncResultWrapper.End(IAsyncResult asyncResult, Object tag)
+   в System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   в System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.EndProcessRequest(IAsyncResult result)
+   в System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-23 23:27:58,885 ERROR PrisonLogger - Действие "GetDetentions" доступно только с помощью дочернего запроса.
+System.InvalidOperationException: Действие "GetDetentions" доступно только с помощью дочернего запроса.
+   в System.Web.Mvc.ChildActionOnlyAttribute.OnAuthorization(AuthorizationContext filterContext)
+   в System.Web.Mvc.ControllerActionInvoker.InvokeAuthorizationFilters(ControllerContext controllerContext, IList`1 filters, ActionDescriptor actionDescriptor)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__19(AsyncCallback asyncCallback, Object asyncState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.Begin(AsyncCallback callback, Object state, Int32 timeout)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.BeginInvokeAction(ControllerContext controllerContext, String actionName, AsyncCallback callback, Object state)
+   в System.Web.Mvc.Controller.<BeginExecuteCore>b__1c(AsyncCallback asyncCallback, Object asyncState, ExecuteCoreState innerState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallBeginDelegate(AsyncCallback callback, Object callbackState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.Begin(AsyncCallback callback, Object state, Int32 timeout)
+   в System.Web.Mvc.Controller.BeginExecuteCore(AsyncCallback callback, Object state)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.Begin(AsyncCallback callback, Object state, Int32 timeout)
+   в System.Web.Mvc.Controller.BeginExecute(RequestContext requestContext, AsyncCallback callback, Object state)
+   в System.Web.Mvc.MvcHandler.<BeginProcessRequest>b__4(AsyncCallback asyncCallback, Object asyncState, ProcessRequestState innerState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallBeginDelegate(AsyncCallback callback, Object callbackState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.Begin(AsyncCallback callback, Object state, Int32 timeout)
+   в System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContextBase httpContext, AsyncCallback callback, Object state)
+   в System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-23 23:28:12,914 ERROR PrisonLogger - Действие "GetDetentions" доступно только с помощью дочернего запроса.
+System.InvalidOperationException: Действие "GetDetentions" доступно только с помощью дочернего запроса.
+   в System.Web.Mvc.ChildActionOnlyAttribute.OnAuthorization(AuthorizationContext filterContext)
+   в System.Web.Mvc.ControllerActionInvoker.InvokeAuthorizationFilters(ControllerContext controllerContext, IList`1 filters, ActionDescriptor actionDescriptor)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__19(AsyncCallback asyncCallback, Object asyncState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.Begin(AsyncCallback callback, Object state, Int32 timeout)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.BeginInvokeAction(ControllerContext controllerContext, String actionName, AsyncCallback callback, Object state)
+   в System.Web.Mvc.Controller.<BeginExecuteCore>b__1c(AsyncCallback asyncCallback, Object asyncState, ExecuteCoreState innerState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallBeginDelegate(AsyncCallback callback, Object callbackState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.Begin(AsyncCallback callback, Object state, Int32 timeout)
+   в System.Web.Mvc.Controller.BeginExecuteCore(AsyncCallback callback, Object state)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.Begin(AsyncCallback callback, Object state, Int32 timeout)
+   в System.Web.Mvc.Controller.BeginExecute(RequestContext requestContext, AsyncCallback callback, Object state)
+   в System.Web.Mvc.MvcHandler.<BeginProcessRequest>b__4(AsyncCallback asyncCallback, Object asyncState, ProcessRequestState innerState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallBeginDelegate(AsyncCallback callback, Object callbackState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.Begin(AsyncCallback callback, Object state, Int32 timeout)
+   в System.Web.Mvc.MvcHandler.BeginProcessRequest(HttpContextBase httpContext, AsyncCallback callback, Object state)
+   в System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-23 23:30:04,679 ERROR PrisonLogger - Не удалось найти хранимую процедуру "SelectDetentionsForLast3Days".
+System.Data.SqlClient.SqlException (0x80131904): Не удалось найти хранимую процедуру "SelectDetentionsForLast3Days".
+   в System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   в System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   в System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   в System.Data.SqlClient.SqlDataReader.get_MetaData()
+   в System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   в System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   в System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   в System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   в Prison.App.Data.DataContext.Impl.DataContext`1.ExecuteQuery(String cmdText, IDictionary`2 parameters, CommandType commandType) в C:\Users\Константин\source\repos\Prison\Prison.App.Data\DataContext\Impl\DataContext.cs:строка 32
+   в Prison.App.Data.Repositories.Impl.DetaineeDataContext.GetDetentionsForLast3Days() в C:\Users\Константин\source\repos\Prison\Prison.App.Data\DataContext\Impl\DetaineeDataContext.cs:строка 42
+   в Prison.App.Web.Controllers.DetaineeController.GetDetentions() в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Controllers\DetaineeController.cs:строка 178
+   в lambda_method(Closure , ControllerBase , Object[] )
+   в System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   в System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.<BeginInvokeSynchronousActionMethod>b__39(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3d()
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.<BeginExecuteCore>b__1d(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   в System.Web.Mvc.MvcHandler.<BeginProcessRequest>b__5(IAsyncResult asyncResult, ProcessRequestState innerState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   в System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+ClientConnectionId:858d04a8-30fc-4075-923c-286c088d5b61
+Error Number: 2812, State: 62, Class: 16
+2018-06-23 23:30:17,328 ERROR PrisonLogger - Не удалось найти хранимую процедуру "SelectDetentionsForLast3Days".
+System.Data.SqlClient.SqlException (0x80131904): Не удалось найти хранимую процедуру "SelectDetentionsForLast3Days".
+   в System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   в System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   в System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   в System.Data.SqlClient.SqlDataReader.get_MetaData()
+   в System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   в System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   в System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   в System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   в Prison.App.Data.DataContext.Impl.DataContext`1.ExecuteQuery(String cmdText, IDictionary`2 parameters, CommandType commandType) в C:\Users\Константин\source\repos\Prison\Prison.App.Data\DataContext\Impl\DataContext.cs:строка 32
+   в Prison.App.Data.Repositories.Impl.DetaineeDataContext.GetDetentionsForLast3Days() в C:\Users\Константин\source\repos\Prison\Prison.App.Data\DataContext\Impl\DetaineeDataContext.cs:строка 42
+   в Prison.App.Web.Controllers.DetaineeController.GetDetentions() в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Controllers\DetaineeController.cs:строка 178
+   в lambda_method(Closure , ControllerBase , Object[] )
+   в System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   в System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.<BeginInvokeSynchronousActionMethod>b__39(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3d()
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.<BeginExecuteCore>b__1d(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   в System.Web.Mvc.MvcHandler.<BeginProcessRequest>b__5(IAsyncResult asyncResult, ProcessRequestState innerState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   в System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+ClientConnectionId:858d04a8-30fc-4075-923c-286c088d5b61
+Error Number: 2812, State: 62, Class: 16
+2018-06-23 23:30:29,254 ERROR PrisonLogger - Не удалось найти хранимую процедуру "SelectDetentionsForLast3Days".
+System.Data.SqlClient.SqlException (0x80131904): Не удалось найти хранимую процедуру "SelectDetentionsForLast3Days".
+   в System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   в System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   в System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   в System.Data.SqlClient.SqlDataReader.get_MetaData()
+   в System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   в System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   в System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   в System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   в Prison.App.Data.DataContext.Impl.DataContext`1.ExecuteQuery(String cmdText, IDictionary`2 parameters, CommandType commandType) в C:\Users\Константин\source\repos\Prison\Prison.App.Data\DataContext\Impl\DataContext.cs:строка 32
+   в Prison.App.Data.Repositories.Impl.DetaineeDataContext.GetDetentionsForLast3Days() в C:\Users\Константин\source\repos\Prison\Prison.App.Data\DataContext\Impl\DetaineeDataContext.cs:строка 42
+   в Prison.App.Web.Controllers.DetaineeController.GetDetentions() в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Controllers\DetaineeController.cs:строка 178
+   в lambda_method(Closure , ControllerBase , Object[] )
+   в System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   в System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.<BeginInvokeSynchronousActionMethod>b__39(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3d()
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.<BeginExecuteCore>b__1d(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   в System.Web.Mvc.MvcHandler.<BeginProcessRequest>b__5(IAsyncResult asyncResult, ProcessRequestState innerState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   в System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+ClientConnectionId:858d04a8-30fc-4075-923c-286c088d5b61
+Error Number: 2812, State: 62, Class: 16
+2018-06-23 23:30:30,119 ERROR PrisonLogger - Не удалось найти хранимую процедуру "SelectDetentionsForLast3Days".
+System.Data.SqlClient.SqlException (0x80131904): Не удалось найти хранимую процедуру "SelectDetentionsForLast3Days".
+   в System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   в System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   в System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   в System.Data.SqlClient.SqlDataReader.get_MetaData()
+   в System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   в System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   в System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   в System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   в Prison.App.Data.DataContext.Impl.DataContext`1.ExecuteQuery(String cmdText, IDictionary`2 parameters, CommandType commandType) в C:\Users\Константин\source\repos\Prison\Prison.App.Data\DataContext\Impl\DataContext.cs:строка 32
+   в Prison.App.Data.Repositories.Impl.DetaineeDataContext.GetDetentionsForLast3Days() в C:\Users\Константин\source\repos\Prison\Prison.App.Data\DataContext\Impl\DetaineeDataContext.cs:строка 42
+   в Prison.App.Web.Controllers.DetaineeController.GetDetentions() в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Controllers\DetaineeController.cs:строка 178
+   в lambda_method(Closure , ControllerBase , Object[] )
+   в System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   в System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.<BeginInvokeSynchronousActionMethod>b__39(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3d()
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.<BeginExecuteCore>b__1d(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   в System.Web.Mvc.MvcHandler.<BeginProcessRequest>b__5(IAsyncResult asyncResult, ProcessRequestState innerState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   в System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+ClientConnectionId:858d04a8-30fc-4075-923c-286c088d5b61
+Error Number: 2812, State: 62, Class: 16
+2018-06-24 18:52:20,264 ERROR PrisonLogger - В позиции 0 строка отсутствует.
+System.IndexOutOfRangeException: В позиции 0 строка отсутствует.
+   в System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   в Prison.App.Data.Repositories.Impl.DetaineeDataContext.ToRelease(DataSet dataset) в C:\Users\Константин\source\repos\Prison\Prison.App.Data\DataContext\Impl\DetaineeDataContext.cs:строка 310
+   в Prison.App.Web.Controllers.DetaineeController.ToDetaineeDetailsViewModel(Detainee dtn) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Controllers\DetaineeController.cs:строка 221
+   в Prison.App.Web.Controllers.DetaineeController.Details(Int32 id) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Controllers\DetaineeController.cs:строка 60
+   в lambda_method(Closure , ControllerBase , Object[] )
+   в System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   в System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.<BeginInvokeSynchronousActionMethod>b__39(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3d()
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.<BeginExecuteCore>b__1d(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   в System.Web.Mvc.MvcHandler.<BeginProcessRequest>b__5(IAsyncResult asyncResult, ProcessRequestState innerState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   в System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-24 18:57:26,508 ERROR PrisonLogger - В позиции 0 строка отсутствует.
+System.IndexOutOfRangeException: В позиции 0 строка отсутствует.
+   в System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   в Prison.App.Data.Repositories.Impl.DetaineeDataContext.ToRelease(DataSet dataset) в C:\Users\Константин\source\repos\Prison\Prison.App.Data\DataContext\Impl\DetaineeDataContext.cs:строка 313
+   в Prison.App.Web.Controllers.DetaineeController.ToDetaineeDetailsViewModel(Detainee dtn) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Controllers\DetaineeController.cs:строка 221
+   в Prison.App.Web.Controllers.DetaineeController.Details(Int32 id) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Controllers\DetaineeController.cs:строка 60
+   в lambda_method(Closure , ControllerBase , Object[] )
+   в System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   в System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.<BeginInvokeSynchronousActionMethod>b__39(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3d()
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.<BeginExecuteCore>b__1d(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   в System.Web.Mvc.MvcHandler.<BeginProcessRequest>b__5(IAsyncResult asyncResult, ProcessRequestState innerState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   в System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-24 18:58:27,833 ERROR PrisonLogger - В позиции 0 строка отсутствует.
+System.IndexOutOfRangeException: В позиции 0 строка отсутствует.
+   в System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   в Prison.App.Data.Repositories.Impl.DetaineeDataContext.ToRelease(DataSet dataset) в C:\Users\Константин\source\repos\Prison\Prison.App.Data\DataContext\Impl\DetaineeDataContext.cs:строка 314
+   в Prison.App.Web.Controllers.DetaineeController.ToDetaineeDetailsViewModel(Detainee dtn) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Controllers\DetaineeController.cs:строка 221
+   в Prison.App.Web.Controllers.DetaineeController.Details(Int32 id) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Controllers\DetaineeController.cs:строка 60
+   в lambda_method(Closure , ControllerBase , Object[] )
+   в System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   в System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.<BeginInvokeSynchronousActionMethod>b__39(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3d()
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.<BeginExecuteCore>b__1d(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   в System.Web.Mvc.MvcHandler.<BeginProcessRequest>b__5(IAsyncResult asyncResult, ProcessRequestState innerState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   в System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-24 19:00:00,581 ERROR PrisonLogger - В позиции 0 строка отсутствует.
+System.IndexOutOfRangeException: В позиции 0 строка отсутствует.
+   в System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   в Prison.App.Data.Repositories.Impl.DetaineeDataContext.ToRelease(DataSet dataset) в C:\Users\Константин\source\repos\Prison\Prison.App.Data\DataContext\Impl\DetaineeDataContext.cs:строка 314
+   в Prison.App.Web.Controllers.DetaineeController.ToDetaineeDetailsViewModel(Detainee dtn) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Controllers\DetaineeController.cs:строка 221
+   в Prison.App.Web.Controllers.DetaineeController.Details(Int32 id) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Controllers\DetaineeController.cs:строка 60
+   в lambda_method(Closure , ControllerBase , Object[] )
+   в System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   в System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.<BeginInvokeSynchronousActionMethod>b__39(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3d()
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.<BeginExecuteCore>b__1d(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   в System.Web.Mvc.MvcHandler.<BeginProcessRequest>b__5(IAsyncResult asyncResult, ProcessRequestState innerState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   в System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-24 19:02:55,147 ERROR PrisonLogger - В позиции 0 строка отсутствует.
+System.IndexOutOfRangeException: В позиции 0 строка отсутствует.
+   в System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   в System.Data.DataRowCollection.get_Item(Int32 index)
+   в Prison.App.Data.Repositories.Impl.DetaineeDataContext.ToRelease(DataSet dataset) в C:\Users\Константин\source\repos\Prison\Prison.App.Data\DataContext\Impl\DetaineeDataContext.cs:строка 312
+   в Prison.App.Data.Repositories.Impl.DetaineeDataContext.GetLastRelease(Int32 id) в C:\Users\Константин\source\repos\Prison\Prison.App.Data\DataContext\Impl\DetaineeDataContext.cs:строка 196
+   в Prison.App.Data.Repositories.DetaineeRepository.GetLastRelease(Int32 id) в C:\Users\Константин\source\repos\Prison\Prison.App.Data\Repositories\Impl\DetaineeRepository.cs:строка 67
+   в Prison.App.Business.Providers.Impl.DetaineeProvider.GetLastRelease(Int32 id) в C:\Users\Константин\source\repos\Prison\Prison.App.Business\Providers\Impl\DetaineeProvider.cs:строка 87
+   в Prison.App.Web.Controllers.DetaineeController.ToDetaineeDetailsViewModel(Detainee dtn) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Controllers\DetaineeController.cs:строка 221
+   в Prison.App.Web.Controllers.DetaineeController.Details(Int32 id) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Controllers\DetaineeController.cs:строка 60
+   в lambda_method(Closure , ControllerBase , Object[] )
+   в System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   в System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   в System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.ActionInvocation.InvokeSynchronousActionMethod()
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.<BeginInvokeSynchronousActionMethod>b__39(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   в System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3d()
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass33.<BeginInvokeActionMethodWithFilters>b__32(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   в System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   в System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.<BeginExecuteCore>b__1d(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   в System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   в System.Web.Mvc.Async.AsyncResultWrapper.End(IAsyncResult asyncResult, Object tag)
+   в System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.<BeginExecute>b__15(IAsyncResult asyncResult, Controller controller)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   в System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   в System.Web.Mvc.Async.AsyncResultWrapper.End(IAsyncResult asyncResult, Object tag)
+   в System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.System.Web.Mvc.Async.IAsyncController.EndExecute(IAsyncResult asyncResult)
+   в System.Web.Mvc.MvcHandler.<BeginProcessRequest>b__5(IAsyncResult asyncResult, ProcessRequestState innerState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   в System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   в System.Web.Mvc.Async.AsyncResultWrapper.End(IAsyncResult asyncResult, Object tag)
+   в System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   в System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.EndProcessRequest(IAsyncResult result)
+   в System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-24 19:04:47,503 ERROR PrisonLogger - Ссылка на объект не указывает на экземпляр объекта.
+System.NullReferenceException: Ссылка на объект не указывает на экземпляр объекта.
+   в Prison.App.Web.Controllers.DetaineeController.ToDetaineeDetailsViewModel(Detainee dtn) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Controllers\DetaineeController.cs:строка 224
+   в Prison.App.Web.Controllers.DetaineeController.Details(Int32 id) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Controllers\DetaineeController.cs:строка 60
+   в lambda_method(Closure , ControllerBase , Object[] )
+   в System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   в System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.<BeginInvokeSynchronousActionMethod>b__39(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3d()
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.<BeginExecuteCore>b__1d(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   в System.Web.Mvc.MvcHandler.<BeginProcessRequest>b__5(IAsyncResult asyncResult, ProcessRequestState innerState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   в System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-24 19:08:04,443 ERROR PrisonLogger - Ссылка на объект не указывает на экземпляр объекта.
+System.NullReferenceException: Ссылка на объект не указывает на экземпляр объекта.
+   в Prison.App.Web.Controllers.DetaineeController.ToDetaineeDetailsViewModel(Detainee dtn) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Controllers\DetaineeController.cs:строка 224
+   в Prison.App.Web.Controllers.DetaineeController.Details(Int32 id) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Controllers\DetaineeController.cs:строка 60
+   в lambda_method(Closure , ControllerBase , Object[] )
+   в System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   в System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   в System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.ActionInvocation.InvokeSynchronousActionMethod()
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.<BeginInvokeSynchronousActionMethod>b__39(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   в System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3d()
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass33.<BeginInvokeActionMethodWithFilters>b__32(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   в System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   в System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.<BeginExecuteCore>b__1d(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   в System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   в System.Web.Mvc.Async.AsyncResultWrapper.End(IAsyncResult asyncResult, Object tag)
+   в System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.<BeginExecute>b__15(IAsyncResult asyncResult, Controller controller)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   в System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   в System.Web.Mvc.Async.AsyncResultWrapper.End(IAsyncResult asyncResult, Object tag)
+   в System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.System.Web.Mvc.Async.IAsyncController.EndExecute(IAsyncResult asyncResult)
+   в System.Web.Mvc.MvcHandler.<BeginProcessRequest>b__5(IAsyncResult asyncResult, ProcessRequestState innerState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   в System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   в System.Web.Mvc.Async.AsyncResultWrapper.End(IAsyncResult asyncResult, Object tag)
+   в System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   в System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.EndProcessRequest(IAsyncResult result)
+   в System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-24 19:08:28,537 ERROR PrisonLogger - Ссылка на объект не указывает на экземпляр объекта.
+System.NullReferenceException: Ссылка на объект не указывает на экземпляр объекта.
+   в Prison.App.Web.Controllers.DetaineeController.ToDetaineeDetailsViewModel(Detainee dtn) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Controllers\DetaineeController.cs:строка 224
+   в Prison.App.Web.Controllers.DetaineeController.Details(Int32 id) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Controllers\DetaineeController.cs:строка 60
+   в lambda_method(Closure , ControllerBase , Object[] )
+   в System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   в System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   в System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.ActionInvocation.InvokeSynchronousActionMethod()
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.<BeginInvokeSynchronousActionMethod>b__39(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   в System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3d()
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass33.<BeginInvokeActionMethodWithFilters>b__32(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   в System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   в System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.<BeginExecuteCore>b__1d(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   в System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   в System.Web.Mvc.Async.AsyncResultWrapper.End(IAsyncResult asyncResult, Object tag)
+   в System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.<BeginExecute>b__15(IAsyncResult asyncResult, Controller controller)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   в System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   в System.Web.Mvc.Async.AsyncResultWrapper.End(IAsyncResult asyncResult, Object tag)
+   в System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.System.Web.Mvc.Async.IAsyncController.EndExecute(IAsyncResult asyncResult)
+   в System.Web.Mvc.MvcHandler.<BeginProcessRequest>b__5(IAsyncResult asyncResult, ProcessRequestState innerState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   в System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   в System.Web.Mvc.Async.AsyncResultWrapper.End(IAsyncResult asyncResult, Object tag)
+   в System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   в System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.EndProcessRequest(IAsyncResult result)
+   в System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-24 19:28:34,440 ERROR PrisonLogger - Ссылка на объект не указывает на экземпляр объекта.
+System.NullReferenceException: Ссылка на объект не указывает на экземпляр объекта.
+   в Prison.App.Web.Controllers.DetaineeController.ToDetaineeDetailsViewModel(Detainee dtn) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Controllers\DetaineeController.cs:строка 222
+   в Prison.App.Web.Controllers.DetaineeController.Details(Int32 id) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Controllers\DetaineeController.cs:строка 60
+   в lambda_method(Closure , ControllerBase , Object[] )
+   в System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   в System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.<BeginInvokeSynchronousActionMethod>b__39(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3d()
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.<BeginExecuteCore>b__1d(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   в System.Web.Mvc.MvcHandler.<BeginProcessRequest>b__5(IAsyncResult asyncResult, ProcessRequestState innerState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   в System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-24 19:29:26,975 ERROR PrisonLogger - Ссылка на объект не указывает на экземпляр объекта.
+System.NullReferenceException: Ссылка на объект не указывает на экземпляр объекта.
+   в Prison.App.Web.Controllers.DetaineeController.ToDetaineeDetailsViewModel(Detainee dtn) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Controllers\DetaineeController.cs:строка 222
+   в Prison.App.Web.Controllers.DetaineeController.Details(Int32 id) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Controllers\DetaineeController.cs:строка 60
+   в lambda_method(Closure , ControllerBase , Object[] )
+   в System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   в System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.<BeginInvokeSynchronousActionMethod>b__39(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3d()
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.<BeginExecuteCore>b__1d(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   в System.Web.Mvc.MvcHandler.<BeginProcessRequest>b__5(IAsyncResult asyncResult, ProcessRequestState innerState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   в System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-24 19:30:24,173 ERROR PrisonLogger - Ссылка на объект не указывает на экземпляр объекта.
+System.NullReferenceException: Ссылка на объект не указывает на экземпляр объекта.
+   в Prison.App.Web.Controllers.DetaineeController.ToDetaineeDetailsViewModel(Detainee dtn) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Controllers\DetaineeController.cs:строка 223
+   в Prison.App.Web.Controllers.DetaineeController.Details(Int32 id) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Controllers\DetaineeController.cs:строка 60
+   в lambda_method(Closure , ControllerBase , Object[] )
+   в System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   в System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   в System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.ActionInvocation.InvokeSynchronousActionMethod()
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.<BeginInvokeSynchronousActionMethod>b__39(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   в System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3d()
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass33.<BeginInvokeActionMethodWithFilters>b__32(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   в System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   в System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.<BeginExecuteCore>b__1d(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   в System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   в System.Web.Mvc.Async.AsyncResultWrapper.End(IAsyncResult asyncResult, Object tag)
+   в System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.<BeginExecute>b__15(IAsyncResult asyncResult, Controller controller)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   в System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   в System.Web.Mvc.Async.AsyncResultWrapper.End(IAsyncResult asyncResult, Object tag)
+   в System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.System.Web.Mvc.Async.IAsyncController.EndExecute(IAsyncResult asyncResult)
+   в System.Web.Mvc.MvcHandler.<BeginProcessRequest>b__5(IAsyncResult asyncResult, ProcessRequestState innerState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   в System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   в System.Web.Mvc.Async.AsyncResultWrapper.End(IAsyncResult asyncResult, Object tag)
+   в System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   в System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.EndProcessRequest(IAsyncResult result)
+   в System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2018-06-24 19:52:02,579 ERROR PrisonLogger - Недопустимое имя столбца "ReleasеDate".
+Недопустимое имя столбца "ReleasedByWhomID".
+Недопустимое имя столбца "AmountForStaying".
+Недопустимое имя столбца "PaidAmount".
+System.Data.SqlClient.SqlException (0x80131904): Недопустимое имя столбца "ReleasеDate".
+Недопустимое имя столбца "ReleasedByWhomID".
+Недопустимое имя столбца "AmountForStaying".
+Недопустимое имя столбца "PaidAmount".
+   в System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   в System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   в System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   в System.Data.SqlClient.SqlDataReader.get_MetaData()
+   в System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   в System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   в System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   в System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   в Prison.App.Data.DataContext.Impl.DataContext`1.ExecuteQuery(String cmdText, IDictionary`2 parameters, CommandType commandType) в C:\Users\Константин\source\repos\Prison\Prison.App.Data\DataContext\Impl\DataContext.cs:строка 32
+   в Prison.App.Data.Repositories.Impl.DetaineeDataContext.GetDetaineeByID(Int32 id) в C:\Users\Константин\source\repos\Prison\Prison.App.Data\DataContext\Impl\DetaineeDataContext.cs:строка 53
+   в Prison.App.Business.Providers.Impl.DetaineeProvider.GetDetaineeByID(Int32 id) в C:\Users\Константин\source\repos\Prison\Prison.App.Business\Providers\Impl\DetaineeProvider.cs:строка 60
+   в Prison.App.Web.Controllers.DetaineeController.Details(Int32 id) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Controllers\DetaineeController.cs:строка 58
+   в lambda_method(Closure , ControllerBase , Object[] )
+   в System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   в System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.<BeginInvokeSynchronousActionMethod>b__39(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3d()
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.<BeginExecuteCore>b__1d(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   в System.Web.Mvc.MvcHandler.<BeginProcessRequest>b__5(IAsyncResult asyncResult, ProcessRequestState innerState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   в System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+ClientConnectionId:cab7cec6-b129-4127-84af-5b051d166fbe
+Error Number: 207, State: 1, Class: 16
+2018-06-24 19:56:38,306 ERROR PrisonLogger - Недопустимое имя столбца "ReleasеDate".
+Недопустимое имя столбца "ReleasedByWhomID".
+Недопустимое имя столбца "AmountForStaying".
+Недопустимое имя столбца "PaidAmount".
+System.Data.SqlClient.SqlException (0x80131904): Недопустимое имя столбца "ReleasеDate".
+Недопустимое имя столбца "ReleasedByWhomID".
+Недопустимое имя столбца "AmountForStaying".
+Недопустимое имя столбца "PaidAmount".
+   в System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   в System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   в System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   в System.Data.SqlClient.SqlDataReader.get_MetaData()
+   в System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   в System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   в System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   в System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   в Prison.App.Data.DataContext.Impl.DataContext`1.ExecuteQuery(String cmdText, IDictionary`2 parameters, CommandType commandType) в C:\Users\Константин\source\repos\Prison\Prison.App.Data\DataContext\Impl\DataContext.cs:строка 32
+   в Prison.App.Data.Repositories.Impl.DetaineeDataContext.GetLastDetention(Int32 id) в C:\Users\Константин\source\repos\Prison\Prison.App.Data\DataContext\Impl\DetaineeDataContext.cs:строка 181
+   в Prison.App.Web.Controllers.DetaineeController.ToDetaineeDetailsViewModel(Detainee dtn) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Controllers\DetaineeController.cs:строка 222
+   в Prison.App.Web.Controllers.DetaineeController.Details(Int32 id) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Controllers\DetaineeController.cs:строка 60
+   в lambda_method(Closure , ControllerBase , Object[] )
+   в System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   в System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.<BeginInvokeSynchronousActionMethod>b__39(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3d()
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.<BeginExecuteCore>b__1d(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   в System.Web.Mvc.MvcHandler.<BeginProcessRequest>b__5(IAsyncResult asyncResult, ProcessRequestState innerState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   в System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+ClientConnectionId:7b943301-ec4e-44b8-9711-ef315bf2ffc2
+Error Number: 207, State: 1, Class: 16
+2018-06-24 19:58:26,448 ERROR PrisonLogger - Недопустимое имя столбца "ReleasеDate".
+Недопустимое имя столбца "ReleasedByWhomID".
+Недопустимое имя столбца "AmountForStaying".
+Недопустимое имя столбца "PaidAmount".
+System.Data.SqlClient.SqlException (0x80131904): Недопустимое имя столбца "ReleasеDate".
+Недопустимое имя столбца "ReleasedByWhomID".
+Недопустимое имя столбца "AmountForStaying".
+Недопустимое имя столбца "PaidAmount".
+   в System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   в System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   в System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   в System.Data.SqlClient.SqlDataReader.get_MetaData()
+   в System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   в System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   в System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   в System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   в Prison.App.Data.DataContext.Impl.DataContext`1.ExecuteQuery(String cmdText, IDictionary`2 parameters, CommandType commandType) в C:\Users\Константин\source\repos\Prison\Prison.App.Data\DataContext\Impl\DataContext.cs:строка 32
+   в Prison.App.Data.Repositories.Impl.DetaineeDataContext.GetDetentionByID(Int32 id) в C:\Users\Константин\source\repos\Prison\Prison.App.Data\DataContext\Impl\DetaineeDataContext.cs:строка 210
+   в Prison.App.Web.Controllers.DetaineeController.DetentionDetails(Int32 id) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Controllers\DetaineeController.cs:строка 212
+   в lambda_method(Closure , ControllerBase , Object[] )
+   в System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   в System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.<BeginInvokeSynchronousActionMethod>b__39(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3d()
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.<BeginExecuteCore>b__1d(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   в System.Web.Mvc.MvcHandler.<BeginProcessRequest>b__5(IAsyncResult asyncResult, ProcessRequestState innerState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   в System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+ClientConnectionId:7b943301-ec4e-44b8-9711-ef315bf2ffc2
+Error Number: 207, State: 1, Class: 16
+2018-06-24 19:58:27,677 ERROR PrisonLogger - Недопустимое имя столбца "ReleasеDate".
+Недопустимое имя столбца "ReleasedByWhomID".
+Недопустимое имя столбца "AmountForStaying".
+Недопустимое имя столбца "PaidAmount".
+System.Data.SqlClient.SqlException (0x80131904): Недопустимое имя столбца "ReleasеDate".
+Недопустимое имя столбца "ReleasedByWhomID".
+Недопустимое имя столбца "AmountForStaying".
+Недопустимое имя столбца "PaidAmount".
+   в System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   в System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   в System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   в System.Data.SqlClient.SqlDataReader.get_MetaData()
+   в System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   в System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   в System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   в System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   в Prison.App.Data.DataContext.Impl.DataContext`1.ExecuteQuery(String cmdText, IDictionary`2 parameters, CommandType commandType) в C:\Users\Константин\source\repos\Prison\Prison.App.Data\DataContext\Impl\DataContext.cs:строка 32
+   в Prison.App.Data.Repositories.Impl.DetaineeDataContext.GetDetentionByID(Int32 id) в C:\Users\Константин\source\repos\Prison\Prison.App.Data\DataContext\Impl\DetaineeDataContext.cs:строка 210
+   в Prison.App.Web.Controllers.DetaineeController.DetentionDetails(Int32 id) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Controllers\DetaineeController.cs:строка 212
+   в lambda_method(Closure , ControllerBase , Object[] )
+   в System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   в System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.<BeginInvokeSynchronousActionMethod>b__39(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3d()
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.<BeginExecuteCore>b__1d(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   в System.Web.Mvc.MvcHandler.<BeginProcessRequest>b__5(IAsyncResult asyncResult, ProcessRequestState innerState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   в System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+ClientConnectionId:7b943301-ec4e-44b8-9711-ef315bf2ffc2
+Error Number: 207, State: 1, Class: 16
+2018-06-24 19:58:28,295 ERROR PrisonLogger - Недопустимое имя столбца "ReleasеDate".
+Недопустимое имя столбца "ReleasedByWhomID".
+Недопустимое имя столбца "AmountForStaying".
+Недопустимое имя столбца "PaidAmount".
+System.Data.SqlClient.SqlException (0x80131904): Недопустимое имя столбца "ReleasеDate".
+Недопустимое имя столбца "ReleasedByWhomID".
+Недопустимое имя столбца "AmountForStaying".
+Недопустимое имя столбца "PaidAmount".
+   в System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   в System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   в System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   в System.Data.SqlClient.SqlDataReader.get_MetaData()
+   в System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   в System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   в System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   в System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   в Prison.App.Data.DataContext.Impl.DataContext`1.ExecuteQuery(String cmdText, IDictionary`2 parameters, CommandType commandType) в C:\Users\Константин\source\repos\Prison\Prison.App.Data\DataContext\Impl\DataContext.cs:строка 32
+   в Prison.App.Data.Repositories.Impl.DetaineeDataContext.GetDetentionByID(Int32 id) в C:\Users\Константин\source\repos\Prison\Prison.App.Data\DataContext\Impl\DetaineeDataContext.cs:строка 210
+   в Prison.App.Web.Controllers.DetaineeController.DetentionDetails(Int32 id) в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Controllers\DetaineeController.cs:строка 212
+   в lambda_method(Closure , ControllerBase , Object[] )
+   в System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   в System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.<BeginInvokeSynchronousActionMethod>b__39(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3d()
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.<BeginExecuteCore>b__1d(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   в System.Web.Mvc.MvcHandler.<BeginProcessRequest>b__5(IAsyncResult asyncResult, ProcessRequestState innerState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   в System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+ClientConnectionId:7b943301-ec4e-44b8-9711-ef315bf2ffc2
+Error Number: 207, State: 1, Class: 16
+2018-06-24 20:23:42,148 ERROR PrisonLogger - Недопустимое имя столбца "ReleasеDate".
+Недопустимое имя столбца "ReleasedByWhomID".
+Недопустимое имя столбца "AmountForStaying".
+Недопустимое имя столбца "PaidAmount".
+System.Data.SqlClient.SqlException (0x80131904): Недопустимое имя столбца "ReleasеDate".
+Недопустимое имя столбца "ReleasedByWhomID".
+Недопустимое имя столбца "AmountForStaying".
+Недопустимое имя столбца "PaidAmount".
+   в System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   в System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   в System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   в System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   в System.Data.SqlClient.SqlDataReader.get_MetaData()
+   в System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   в System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   в System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   в System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   в System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   в System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   в Prison.App.Data.DataContext.Impl.DataContext`1.ExecuteQuery(String cmdText, IDictionary`2 parameters, CommandType commandType) в C:\Users\Константин\source\repos\Prison\Prison.App.Data\DataContext\Impl\DataContext.cs:строка 32
+   в Prison.App.Data.Repositories.Impl.DetaineeDataContext.GetAllDetainees() в C:\Users\Константин\source\repos\Prison\Prison.App.Data\DataContext\Impl\DetaineeDataContext.cs:строка 24
+   в Prison.App.Business.Providers.Impl.DetaineeProvider.GetAllDetainees() в C:\Users\Константин\source\repos\Prison\Prison.App.Business\Providers\Impl\DetaineeProvider.cs:строка 31
+   в Prison.App.Web.Controllers.DetaineeController.Index() в C:\Users\Константин\source\repos\Prison\Prison.App.Web\Controllers\DetaineeController.cs:строка 48
+   в lambda_method(Closure , ControllerBase , Object[] )
+   в System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   в System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.<BeginInvokeSynchronousActionMethod>b__39(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3d()
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.<BeginExecuteCore>b__1d(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   в System.Web.Mvc.MvcHandler.<BeginProcessRequest>b__5(IAsyncResult asyncResult, ProcessRequestState innerState)
+   в System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   в System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   в System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   в System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   в System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+ClientConnectionId:753beeac-216a-43ea-a9d4-fb331f354cb0
+Error Number: 207, State: 1, Class: 16

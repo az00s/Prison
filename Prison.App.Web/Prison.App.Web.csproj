@@ -176,7 +176,7 @@
     <Compile Include="Models\Detention\DetentionDetailsViewModel.cs" />
     <Compile Include="Models\Detention\DetentionDropDownViewModel.cs" />
     <Compile Include="Models\Detention\DetentionListViewModel.cs" />
-    <Compile Include="Models\Detention\DetentionReleaseDetaineeViewModel.cs" />
+    <Compile Include="Models\Detention\ReleaseDetaineeViewModel.cs" />
     <Compile Include="Models\Employee\EmployeeEditViewModel.cs" />
     <Compile Include="Models\Employee\EmployeeIndexViewModel.cs" />
     <Compile Include="Models\ErrorViewModel.cs" />
@@ -252,12 +252,13 @@
     <Content Include="Views\Position\Create.cshtml" />
     <Content Include="Views\Position\Edit.cshtml" />
     <Content Include="Views\Position\Delete.cshtml" />
-    <Content Include="Views\Detainee\CreateDetention.cshtml" />
+    <Content Include="Views\Detainee\CreateDetentionModal.cshtml" />
     <Content Include="Views\Detainee\_DetentionsField.cshtml" />
     <Content Include="Views\Detainee\_DetentionList.cshtml" />
     <Content Include="Views\Detainee\ReleaseDetainee.cshtml" />
     <Content Include="Views\Detainee\DetentionDetails.cshtml" />
     <Content Include="Views\Status\_MaritalDropDown.cshtml" />
+    <Content Include="Views\Detainee\CreateDetention.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

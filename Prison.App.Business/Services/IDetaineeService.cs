@@ -4,7 +4,7 @@ namespace Prison.App.Business.Services
 {
     public interface IDetaineeService
     {
-        void ReleaseDetainee(Detention detention);
+        void ReleaseDetainee(Release release);
         void Create(Detainee dtn);
         void Update(Detainee dtn);
         void Delete(int id);
