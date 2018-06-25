@@ -8,7 +8,7 @@ namespace Prison.App.Web.Models
         [Display(Name ="Номер задержания")]
         public int DetentionID { get; set; }
 
-        [DisplayFormat(DataFormatString = "{0:dd.MM.yyyy}")]
+        [DisplayFormat(DataFormatString = "{0:dd.MM.yyyy H:mm}")]
         [Display(Name = "Дата задержания")]
         public DateTime DetentionDate { get; set; }
 

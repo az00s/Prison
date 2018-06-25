@@ -26,6 +26,7 @@ namespace Prison.App.Data.Registers
             For<IRoleRepository>().Use<RoleRepository>();
             For<IUserRepository>().Use<UserRepository>();
             For<IStatusRepository>().Use<StatusRepository>();
+            For<IDetentionRepository>().Use<DetentionRepository>();
 
             //dataContext
             For(typeof(IDataContext<>)).Use(typeof(DataContext<>));
@@ -36,6 +37,7 @@ namespace Prison.App.Data.Registers
             For<IUserDataContext>().Use<UserDataContext>();
             For<IRoleDataContext>().Use<RoleDataContext>();
             For<IMaritalStatusDataContext>().Use<MaritalStatusDataContext>();
+            For<IDetentionDataContext>().Use<DetentionDataContext>();
         }
     }
 }

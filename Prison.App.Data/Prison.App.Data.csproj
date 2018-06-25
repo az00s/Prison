@@ -67,8 +67,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="DataContext\IDetentionDataContext.cs" />
     <Compile Include="DataContext\IEmployeeDataContext.cs" />
     <Compile Include="DataContext\IMaritalStatusDataContext.cs" />
+    <Compile Include="DataContext\Impl\DetentionDataContext.cs" />
     <Compile Include="DataContext\Impl\EmployeeDataContext.cs" />
     <Compile Include="DataContext\Impl\MaritalStatusDataContext.cs" />
     <Compile Include="DataContext\Impl\PlaceDataContext.cs" />
@@ -84,7 +86,9 @@
     <Compile Include="DataContext\IDetaineeDataContext.cs" />
     <Compile Include="DataContext\Impl\DataContext.cs" />
     <Compile Include="DataContext\Impl\DetaineeDataContext.cs" />
+    <Compile Include="Repositories\IDetentionRepository.cs" />
     <Compile Include="Repositories\Impl\DetaineeRepository.cs" />
+    <Compile Include="Repositories\Impl\DetentionRepository.cs" />
     <Compile Include="Repositories\Impl\EmployeeRepository.cs" />
     <Compile Include="Repositories\IDetaineeRepository.cs" />
     <Compile Include="Repositories\IEmployeeRepository.cs" />

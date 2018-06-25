@@ -42,17 +42,6 @@ namespace Prison.App.Business.Providers.Impl
             return result;
         }
 
-        public IReadOnlyCollection<Detention> GetAllDetentions()
-        {
-            return _rep.GetAllDetentions();
-        }
-
-        public IReadOnlyCollection<Detention> GetDetentionsForLast3Days()
-        {
-            return _rep.GetDetentionsForLast3Days();
-        }
-
-
         public Detainee GetDetaineeByID(int id)
         {
             if (ArgumentHelper.IsValidID(id))
@@ -72,19 +61,14 @@ namespace Prison.App.Business.Providers.Impl
             }
         }
 
-        public Detention GetDetentionByID(int id)
-        {
-            return _rep.GetDetentionByID(id);
-        }
-
-        public Detention GetLastDetention(int id)
-        {
-            return _rep.GetLastDetention(id);
-        }
-
         public Release GetLastRelease(int id)
         {
             return _rep.GetLastRelease(id);
+        }
+
+        public Release GetRelease(int detaineeID, int detentionID)
+        {
+            return _rep.GetRelease(detaineeID, detentionID);
         }
 
         public IReadOnlyCollection<Detainee> GetDetaineesByDate(DateTime date)

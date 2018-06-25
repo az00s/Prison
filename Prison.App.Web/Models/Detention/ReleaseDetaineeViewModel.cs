@@ -11,9 +11,9 @@ namespace Prison.App.Web.Models
 
         public int DetaineeID { get; set; }
 
-        [DisplayFormat(DataFormatString = "{0:dd.MM.yyyy}", ApplyFormatInEditMode = true)]
+        [DisplayFormat(DataFormatString = "{0:dd.MM.yyyy H:mm}", ApplyFormatInEditMode = true)]
         [Display(Name = "Дата освобождения")]
-        public DateTime ReleasеDate { get; set; } = DateTime.Today;
+        public DateTime ReleasеDate { get; set; } = DateTime.Now;
 
         [Display(Name = "Начислено за содержание")]
         public decimal AmountForStaying { get; set; }

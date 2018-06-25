@@ -23,20 +23,28 @@ namespace Prison.App.Web.Controllers
 
         private IDetaineeService _detaineeService;
 
+        private IDetentionProvider _detentionProvider;
+
+        private IDetentionService _detentionService;
+
         private IPlaceProvider _placeProvider;
 
         private IEmployeeProvider _employeeProvider;
 
-        public DetaineeController(IDetaineeProvider detaineeProvider, ILogger log, IDetaineeService detaineeService, IPlaceProvider placeProvider, IEmployeeProvider employeeProvider)
+        public DetaineeController(IDetaineeProvider detaineeProvider, ILogger log, IDetaineeService detaineeService, IPlaceProvider placeProvider, IEmployeeProvider employeeProvider, IDetentionProvider detentionProvider,IDetentionService detentionService)
         {
             ArgumentHelper.ThrowExceptionIfNull(detaineeProvider, "IDetaineeProvider");
             ArgumentHelper.ThrowExceptionIfNull(detaineeService, "IDetaineeService");
+            ArgumentHelper.ThrowExceptionIfNull(detentionProvider, "IDetentionProvider");
+            ArgumentHelper.ThrowExceptionIfNull(detentionService, "IDetentionService");
             ArgumentHelper.ThrowExceptionIfNull(placeProvider, "IPlaceProvider");
             ArgumentHelper.ThrowExceptionIfNull(employeeProvider, "IEmployeeProvider");
             ArgumentHelper.ThrowExceptionIfNull(log, "ILogger");
 
             _detaineeService = detaineeService;
             _detaineeProvider = detaineeProvider;
+            _detentionProvider = detentionProvider;
+            _detentionService = detentionService;
             _placeProvider = placeProvider;
             _employeeProvider = employeeProvider;
             _log = log;
@@ -161,21 +169,39 @@ namespace Prison.App.Web.Controllers
         }
 
         [Editor]
-        public ActionResult CreateDetention()
+        public ActionResult CreateDetention(int id=0)
         {
             var model = new DetentionCreateViewModel {
+                DetaineeID=id,
                 Places = _placeProvider.GetAllPlaces(),
                 Employees=_employeeProvider.GetAllEmployees()
             };
+
+            if (id > 0)
+            {
+                return View("CreateDetentionModal", model);
+            }
+
             return View("CreateDetention",model);
         }
 
-        
+        [Editor]
+        [HttpPost]
+        public ActionResult CreateDetention(DetentionCreateViewModel model)
+        {
+            var detention = ToDetention(model);
+
+            _detentionService.Create(detention);
+
+            return RedirectToAction("Details",new { id=model.DetaineeID});
+        }
+
+
         [Editor]
         [HttpGet]
         public ActionResult GetDetentions()
         {
-            var list = _detaineeProvider.GetDetentionsForLast3Days();
+            var list = _detentionProvider.GetDetentionsForLast3Days();
             var model = ToDetentionDropDownViewModel(list);
             return View("_DetentionsField", model);
         }
@@ -186,7 +212,7 @@ namespace Prison.App.Web.Controllers
             var model = new ReleaseDetaineeViewModel
             {
                 DetaineeID = id,
-                DetentionID = _detaineeProvider.GetLastDetention(id).DetentionID,
+                DetentionID = _detentionProvider.GetLast(id).DetentionID,
                 Employees = _employeeProvider.GetAllEmployees()
             };
             return View("ReleaseDetainee", model);
@@ -203,14 +229,15 @@ namespace Prison.App.Web.Controllers
                 _detaineeService.ReleaseDetainee(release);
             }
 
-            return RedirectToAction("Index");
+            return RedirectToAction("Details",new { id=model.DetaineeID});
         }
 
         [User]
-        public ActionResult DetentionDetails(int id)
+        public ActionResult DetentionDetails(int detentionID,int detaineeID)
         {
-            var detention = _detaineeProvider.GetDetentionByID(id);
-            var model = ToDetentionDetailsViewModel(detention);
+            var detention = _detentionProvider.GetByID(detentionID);
+            var release = _detaineeProvider.GetRelease(detaineeID, detentionID);
+            var model = ToDetentionDetailsViewModel(detention, release);
             return View(model);
         }
 
@@ -219,7 +246,7 @@ namespace Prison.App.Web.Controllers
         {
             var statuses = _detaineeProvider.GetAllMaritalStatuses();
             var lastRelease = _detaineeProvider.GetLastRelease(dtn.DetaineeID);
-            var lastDetention = _detaineeProvider.GetLastDetention(dtn.DetaineeID);
+            var lastDetention = _detentionProvider.GetLast(dtn.DetaineeID);
 
             DetaineeDetailsViewModel Result = new DetaineeDetailsViewModel
             {
@@ -361,7 +388,21 @@ namespace Prison.App.Web.Controllers
             return ResultList;
         }
 
-        private DetentionDetailsViewModel ToDetentionDetailsViewModel(Detention detention)
+        private Detention ToDetention(DetentionCreateViewModel model)
+        {
+
+            return new Detention
+            {
+                DetentionID = model.DetaineeID,
+                DetentionDate = model.DetentionDate,
+                DetainedByWhomID=model.DetainedByWhomID,
+                DeliveryDate = model.DeliveryDate,
+                DeliveredByWhomID = model.DeliveredByWhomID,
+                PlaceID = model.PlaceID
+            };
+        }
+
+        private DetentionDetailsViewModel ToDetentionDetailsViewModel(Detention detention,Release release)
         {
                return new DetentionDetailsViewModel
                {
@@ -371,6 +412,10 @@ namespace Prison.App.Web.Controllers
                    DeliveredByWhom = _employeeProvider.GetEmployeeByID(detention.DeliveredByWhomID).LastName,
                    DetainedByWhom = _employeeProvider.GetEmployeeByID(detention.DetainedByWhomID).LastName,
                    Place = _placeProvider.GetPlaceByID(detention.PlaceID).Address,
+                   ReleasеDate= release == null ? "-" : release.ReleasеDate.ToString(),
+                   ReleasedByWhom= release == null ? "-" : _employeeProvider.GetEmployeeByID(release.ReleasedByWhomID).LastName,
+                   AmountForStaying=release==null?0:release.AmountForStaying,
+                   PaidAmount = release == null ? 0 : release.PaidAmount
                 };
         }
 

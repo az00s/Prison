@@ -10,11 +10,8 @@ namespace Prison.App.Business.Providers
         IReadOnlyCollection<Detainee> GetDetaineesByDate(DateTime date);
         Detainee GetDetaineeByID(int id);
         IReadOnlyCollection<MaritalStatus> GetAllMaritalStatuses();
-        IReadOnlyCollection<Detention> GetAllDetentions();
-        IReadOnlyCollection<Detention> GetDetentionsForLast3Days();
-        Detention GetLastDetention(int id);
         Release GetLastRelease(int id);
-        Detention GetDetentionByID(int id);
+        Release GetRelease(int detaineeID, int detentionID);
         IReadOnlyCollection<Detainee> Find(string DetentionDate, string FirstName, string LastName, string MiddleName, string ResidenceAddress);
     }
 }

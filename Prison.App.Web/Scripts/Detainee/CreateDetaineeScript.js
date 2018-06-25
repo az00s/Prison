@@ -11,6 +11,7 @@
 
                 $('#dvCreateDetention').html(data);
                 $('.datetimepicker').datetimepicker({ pickTime: false, language: 'ru', format: 'DD.MM.Y' });
+                $('#dtpDateTime').datetimepicker({ pickTime: true, language: 'ru' });
             }
 
 

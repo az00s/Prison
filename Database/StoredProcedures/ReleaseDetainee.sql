@@ -1,6 +1,6 @@
 USE prison
 go
-create procedure ReleaseDetainee(@ReleaseDate date,@ReleasedByWhomID int,@AmountForStaying decimal=0,@PaidAmount decimal=0,@DetentionID int,@DetaineeID int) 
+create procedure ReleaseDetainee(@ReleaseDate datetime,@ReleasedByWhomID int,@AmountForStaying decimal=0,@PaidAmount decimal=0,@DetentionID int,@DetaineeID int) 
 as
 begin
 

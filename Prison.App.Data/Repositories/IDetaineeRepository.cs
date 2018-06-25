@@ -10,11 +10,8 @@ namespace Prison.App.Data.Repositories
         Detainee GetDetaineeByID(int id);
         IReadOnlyCollection<Detainee> GetDetaineesByDate(DateTime date);
         IReadOnlyCollection<MaritalStatus> GetAllMaritalStatuses();
-        IReadOnlyCollection<Detention> GetAllDetentions();
-        IReadOnlyCollection<Detention> GetDetentionsForLast3Days();
-        Detention GetLastDetention(int id);
         Release GetLastRelease(int id);
-        Detention GetDetentionByID(int id);
+        Release GetRelease(int detaineeID, int detentionID);
         void ReleaseDetainee(Release release);
         void Create(Detainee dtn);
         void Update(Detainee dtn);
