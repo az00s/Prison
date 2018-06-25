@@ -28,15 +28,6 @@ namespace Prison.App.Data.Repositories.Impl
             return detaineeList;
         }
 
-        public IReadOnlyCollection<Detention> GetAllDetentions()
-        {
-            var dataSet = _context.ExecuteQuery("SelectAllDetentions", null, CommandType.StoredProcedure);
-
-            var detentionList = ToDetentionList(dataSet);
-
-            return detentionList;
-        }
-
         public Detainee GetDetaineeByID(int id)
         {
             var parameters = new Dictionary<string, object> { { "@ID",id } };
@@ -145,22 +136,23 @@ namespace Prison.App.Data.Repositories.Impl
             _context.ExecuteNonQuery("UpdateDetainee", parameters.ToArray(), CommandType.StoredProcedure);
         }
 
-        public void ReleaseDetainee(Detention detention)
+        public void ReleaseDetainee(Release release)
         {
             var parametersDictionary =
                 new Dictionary<string, object>
                 {
-                    { "@ID", detention.DetentionID },
-                    { "@ReleaseDate", detention.ReleasеDate },
-                    { "@ReleasedByWhomID", detention.ReleasedByWhomID },
-                    { "@PaidAmount", detention.PaidAmount },
-                    { "@AmountForStaying", detention.AmountForStaying },
+                    { "@DetaineeID", release.DetaineeID },
+                    { "@DetentionID", release.DetentionID },
+                    { "@ReleaseDate", release.ReleasеDate },
+                    { "@ReleasedByWhomID", release.ReleasedByWhomID },
+                    { "@PaidAmount", release.PaidAmount },
+                    { "@AmountForStaying", release.AmountForStaying },
                 };
 
             _context.ExecuteNonQuery("ReleaseDetainee", parametersDictionary, CommandType.StoredProcedure);
         }
 
-        public Detention GetLastDetention(int id)
+        public Release GetLastRelease(int id)
         {
             var parametersDictionary =
                 new Dictionary<string, object>
@@ -168,24 +160,25 @@ namespace Prison.App.Data.Repositories.Impl
                     { "@ID", id }
                 };
 
-            var dataSet = _context.ExecuteQuery("SelectLastDetention", parametersDictionary, CommandType.StoredProcedure);
-            var detention = ToDetention(dataSet);
+            var dataSet = _context.ExecuteQuery("SelectLastRelease", parametersDictionary, CommandType.StoredProcedure);
+            var release = ToRelease(dataSet);
 
-            return detention;
+            return release;
         }
 
-        public Detention GetDetentionByID(int id)
+        public Release GetRelease(int detaineeID,int detentionID)
         {
             var parametersDictionary =
                 new Dictionary<string, object>
                 {
-                    { "@ID", id }
+                    { "@DetaineeID", detaineeID },
+                     { "@DetentionID", detentionID }
                 };
 
-            var dataSet = _context.ExecuteQuery("SelectDetentionByID", parametersDictionary, CommandType.StoredProcedure);
-            var detention = ToDetention(dataSet);
+            var dataSet = _context.ExecuteQuery("SelectRelease", parametersDictionary, CommandType.StoredProcedure);
+            var release = ToRelease(dataSet);
 
-            return detention;
+            return release;
         }
 
         public void Delete(int id)
@@ -219,85 +212,21 @@ namespace Prison.App.Data.Repositories.Impl
                 .ToList();
         }
 
-        private IReadOnlyCollection<Detention> ToDetentionList(DataTable table, int id)
+        private Release ToRelease(DataSet dataset)
         {
-            return table.AsEnumerable()
-                .Where(dr => dr.Field<int>("DetaineeID") == id)
-                .Select(row=>
-                    new Detention
-                        {
-                            DetentionID = row.Field<int>("DetentionID"),
-                            DetentionDate = row.Field<DateTime>("DetentionDate"),
-                            DetainedByWhomID = row.Field<int>("DetainedByWhomID"),
-                            DeliveryDate = row.Field<DateTime>("DeliveryDate"),
-                            DeliveredByWhomID = row.Field<int>("DeliveredByWhomID"),
-                            ReleasеDate = row.Field<DateTime>("ReleasеDate"),
-                            ReleasedByWhomID = row.Field<int>("ReleasedByWhomID"),
-                            PlaceID = row.Field<int>("PlaceID"),
-                            AmountForStaying = row.Field<decimal>("AmountForStaying"),
-                            PaidAmount = row.Field<decimal>("PaidAmount"),
-                        }
-                ).ToList();
-        }
+            if (dataset.Tables[0].Rows.Count<1) return null;
 
-        private IReadOnlyCollection<Detention> ToDetentionList(DataSet dataset)
-        {
-            return dataset.Tables[0]
-                .AsEnumerable()
-                .Select(row=>
-                    new Detention
-                    {
-                        DetentionID = row.Field<int>("DetentionID"),
-                        DetentionDate = row.Field<DateTime>("DetentionDate"),
-                        DetainedByWhomID = row.Field<int>("DetainedByWhomID"),
-                        DeliveryDate = row.Field<DateTime>("DeliveryDate"),
-                        DeliveredByWhomID = row.Field<int>("DeliveredByWhomID"),
-                        ReleasеDate = row.IsNull("ReleasеDate") ? DateTime.MinValue : row.Field<DateTime>("ReleasеDate"),
-                        ReleasedByWhomID = row.IsNull("ReleasedByWhomID") ? 0 : row.Field<int>("ReleasedByWhomID"),
-                        PlaceID = row.Field<int>("PlaceID"),
-                        AmountForStaying = row.IsNull("AmountForStaying") ? 0 : row.Field<decimal>("AmountForStaying"),
-                        PaidAmount = row.IsNull("PaidAmount") ? 0 : row.Field<decimal>("PaidAmount"),
-                    }
-                ).ToList();
-        }
-
-        private Detention ToDetention(DataSet dataset)
-        {
             var row = dataset.Tables[0].Rows[0];
 
-            return new Detention
+            return new Release
             {
+                DetaineeID = row.Field<int>("DetaineeID"),
                 DetentionID = row.Field<int>("DetentionID"),
-                DetentionDate = row.Field<DateTime>("DetentionDate"),
-                DetainedByWhomID = row.Field<int>("DetainedByWhomID"),
-                DeliveryDate = row.Field<DateTime>("DeliveryDate"),
-                DeliveredByWhomID = row.Field<int>("DeliveredByWhomID"),
                 ReleasеDate = row.IsNull("ReleasеDate") ? DateTime.MinValue : row.Field<DateTime>("ReleasеDate"),
                 ReleasedByWhomID = row.IsNull("ReleasedByWhomID") ? 0 : row.Field<int>("ReleasedByWhomID"),
-                PlaceID = row.Field<int>("PlaceID"),
                 AmountForStaying = row.IsNull("AmountForStaying") ? 0 : row.Field<decimal>("AmountForStaying"),
                 PaidAmount = row.IsNull("PaidAmount") ? 0 : row.Field<decimal>("PaidAmount"),
             };
-        }
-
-        private IReadOnlyCollection<Detention> ToDetentionList(DataTable table)
-        {
-            return table.AsEnumerable().Select(row=>
-                new Detention
-                {
-                    DetentionID = row.Field<int>("DetentionID"),
-                    DetentionDate = row.Field<DateTime>("DetentionDate"),
-                    DetainedByWhomID = row.Field<int>("DetainedByWhomID"),
-                    DeliveryDate = row.Field<DateTime>("DeliveryDate"),
-                    DeliveredByWhomID = row.Field<int>("DeliveredByWhomID"),
-                    ReleasеDate = row.IsNull("ReleasеDate") ? DateTime.MinValue : row.Field<DateTime>("ReleasеDate"),
-                    ReleasedByWhomID = row.IsNull("ReleasedByWhomID") ? 0 : row.Field<int>("ReleasedByWhomID"),
-                    PlaceID = row.Field<int>("PlaceID"),
-                    AmountForStaying = row.IsNull("AmountForStaying") ? 0 : row.Field<decimal>("AmountForStaying"),
-                    PaidAmount = row.IsNull("PaidAmount") ? 0 : row.Field<decimal>("PaidAmount"),
-                }
-
-            ).ToList();
         }
 
         private IReadOnlyCollection<string> ToPhoneNumberList(DataTable table)
@@ -326,6 +255,21 @@ namespace Prison.App.Data.Repositories.Impl
                 Detentions = ToDetentionList(DetentionTable),
                 PhoneNumbers=ToPhoneNumberList(phoneNumberTable)
             };
+        }
+        private IReadOnlyCollection<Detention> ToDetentionList(DataTable table)
+        {
+            return table.AsEnumerable().Select(row =>
+                new Detention
+                {
+                    DetentionID = row.Field<int>("DetentionID"),
+                    DetentionDate = row.Field<DateTime>("DetentionDate"),
+                    DetainedByWhomID = row.Field<int>("DetainedByWhomID"),
+                    DeliveryDate = row.Field<DateTime>("DeliveryDate"),
+                    DeliveredByWhomID = row.Field<int>("DeliveredByWhomID"),
+                    PlaceID = row.Field<int>("PlaceID"),
+                }
+
+            ).ToList();
         }
 
         private MaritalStatus ToMaritalStatus(DataSet dataset)

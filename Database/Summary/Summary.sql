@@ -61,16 +61,12 @@ GO
 use Prison
 go
 CREATE TABLE [dbo].[Detention](
-	[DetentionID] [int] Primary Key clustered identity(1,1) NOT NULL,
+	[DetentionID] [int] Primary Key identity(1,1) NOT NULL,
 	[DetentionDate] [date] NOT NULL,
 	[DetainedByWhomID] [int] NOT NULL,
 	[DeliveryDate] [date] NOT NULL,
 	[DeliveredByWhomID] [int] NOT NULL,
-	[ReleasåDate] [date] NULL,
-	[ReleasedByWhomID] [int] NULL,
-	[PlaceID] [int] NOT NULL,
-	[AmountForStaying] [decimal](18, 0) NULL,
-	[PaidAmount] [decimal](18, 0) NULL,
+	[PlaceID] [int] NOT NULL
 ) 
 
 GO
@@ -410,15 +406,13 @@ end;
 go
 USE prison
 go
-create procedure ReleaseDetainee(@ID int,@ReleaseDate date,@ReleasedByWhomID int,@AmountForStaying decimal=0,@PaidAmount decimal=0) 
+create procedure ReleaseDetainee(@ReleaseDate date,@ReleasedByWhomID int,@AmountForStaying decimal=0,@PaidAmount decimal=0,@DetentionID int,@DetaineeID int) 
 as
 begin
-update Detention
-set ReleasåDate=@ReleaseDate,
-ReleasedByWhomID=@ReleasedByWhomID,
-AmountForStaying=@AmountForStaying,
-PaidAmount=@PaidAmount
-where DetentionID=@ID
+
+insert into Release (ReleasåDate,ReleasedByWhomID,AmountForStaying,PaidAmount,DetentionID,DetaineeID)
+values (@ReleaseDate,@ReleasedByWhomID,@AmountForStaying,@PaidAmount,@DetentionID,@DetaineeID)
+
 end;
 go
 use Prison
@@ -447,11 +441,7 @@ det.DetentionDate,
 det.DetainedByWhomID,
 det.DeliveryDate,
 det.DeliveredByWhomID,
-det.ReleasåDate,
-det.ReleasedByWhomID,
-det.PlaceID,
-det.AmountForStaying,
-det.PaidAmount
+det.PlaceID
 from DetentionsOfDetainees as dof
 left join Detention as det on dof.DetentionID=det.DetentionID
 
@@ -589,11 +579,7 @@ Detention.[DetentionID],
 [DetainedByWhomID],
 [DeliveryDate],
 [DeliveredByWhomID],
-[ReleasåDate],
-[ReleasedByWhomID],
-[PlaceID],
-[AmountForStaying],
-[PaidAmount] 
+[PlaceID]
 from DetentionsOfDetainees 
 inner join Detention 
 on Detention.DetentionID = DetentionsOfDetainees.DetentionID 
@@ -693,11 +679,7 @@ dtn.DetentionDate,
 dtn.DetainedByWhomID,
 dtn.DeliveryDate,
 dtn.DeliveredByWhomID,
-dtn.ReleasåDate,
-dtn.ReleasedByWhomID,
-dtn.PlaceID,
-dtn.AmountForStaying,
-dtn.PaidAmount
+dtn.PlaceID
 FROM  Detention dtn
 where dtn.DetentionID=@ID
 
@@ -714,11 +696,7 @@ Detention.[DetentionID],
 [DetainedByWhomID],
 [DeliveryDate],
 [DeliveredByWhomID],
-[ReleasåDate],
-[ReleasedByWhomID],
-[PlaceID],
-[AmountForStaying],
-[PaidAmount] 
+[PlaceID]
 from DetentionsOfDetainees 
 inner join Detention 
 on Detention.DetentionID = DetentionsOfDetainees.DetentionID 
@@ -749,11 +727,7 @@ dtn.DetentionDate,
 dtn.DetainedByWhomID,
 dtn.DeliveryDate,
 dtn.DeliveredByWhomID,
-dtn.ReleasåDate,
-dtn.ReleasedByWhomID,
-dtn.PlaceID,
-dtn.AmountForStaying,
-dtn.PaidAmount
+dtn.PlaceID
 FROM  Detention dtn
 left join DetentionsOfDetainees dof 
 on dtn.DetentionID=dof.DetentionID
@@ -1053,22 +1027,18 @@ INSERT INTO [dbo].[Detention]
            ,[DetainedByWhomID]
            ,[DeliveryDate]
            ,[DeliveredByWhomID]
-           ,[ReleasåDate]
-           ,[ReleasedByWhomID]
-           ,[PlaceID]
-           ,[AmountForStaying]
-           ,[PaidAmount])
+           ,[PlaceID])
      VALUES
-           ('21-04-2018',5,'21-04-2018',6,'22-04-2018',2,1,10,0),
-		   ('01-05-2018',6,'01-05-2018',7,'03-05-2018',3,1,30,30),
-		   ('02-05-2018',7,'02-05-2018',6,'06-05-2018',1,1,40,10),
-		   ('02-02-2018',5,'02-05-2018',6,'10-05-2018',3,2,80,0),
-		   ('03-05-2018',5,'04-05-2018',6,'05-05-2018',2,2,10,10),
-		   ('03-05-2018',4,'03-05-2018',4,'04-05-2018',2,3,10,0),
-		   ('03-05-2018',4,'04-05-2018',4,'14-05-2018',1,4,100,10),
-		   ('04-05-2018',4,'04-05-2018',4,'09-05-2018',3,4,50,40),
-		   ('04-05-2018',4,'04-05-2018',4,'06-05-2018',2,3,20,0),
-		   ('05-05-2018',5,'06-05-2018',7,'07-05-2018',1,3,10,0)
+           ('21-04-2018',5,'21-04-2018',6,1),
+		   ('01-05-2018',6,'01-05-2018',7,1),
+		   ('02-05-2018',7,'02-05-2018',6,1),
+		   ('02-02-2018',5,'02-05-2018',6,2),
+		   ('03-05-2018',5,'04-05-2018',6,2),
+		   ('03-05-2018',4,'03-05-2018',4,3),
+		   ('03-05-2018',4,'04-05-2018',4,4),
+		   ('04-05-2018',4,'04-05-2018',4,4),
+		   ('04-05-2018',4,'04-05-2018',4,3),
+		   ('05-05-2018',5,'06-05-2018',7,3)
 		   
 GO
 

@@ -1,5 +1,5 @@
 ﻿@model Prison.App.Web.Models.DetentionCreateViewModel
-@{ 
+@{
     Layout = null;
 }
 @using (Html.BeginForm())
@@ -14,7 +14,7 @@
             <div class="form-group">
                 @Html.LabelFor(model => model.DetentionDate, htmlAttributes: new { @class = "control-label col-md-4" })
                 <div class="col-md-6">
-                    <div class="input-group datetimepicker">
+                    <div class="input-group" id="dtpDateTime">
                         <span class="input-group-addon">
                             <span class="glyphicon-calendar glyphicon"></span>
                         </span>
@@ -64,5 +64,3 @@
         </div>
     </div>
 }
-
-

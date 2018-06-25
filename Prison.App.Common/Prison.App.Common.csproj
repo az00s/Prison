@@ -83,6 +83,7 @@
     <Compile Include="Entities\PhoneNumber.cs" />
     <Compile Include="Entities\PlaceOfStay.cs" />
     <Compile Include="Entities\Position.cs" />
+    <Compile Include="Entities\Release.cs" />
     <Compile Include="Entities\Role.cs" />
     <Compile Include="Entities\User.cs" />
     <Compile Include="Helpers\Impl\ArgumentHelper.cs" />

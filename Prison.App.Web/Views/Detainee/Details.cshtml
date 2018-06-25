@@ -6,23 +6,23 @@
     string elementName;
     string elementClass;
 
-    if (Model.Detentions.Last().ReleasеDate == DateTime.MinValue)
+    if (Model.IsReleased)
     {
-        elementName = "Освободить";
-        elementClass = "btn btn-success";
+        elementName = "Освобожден";
+        elementClass = "label label-danger";
     }
     else
     {
-
-        elementName = "Освобожден";
-        elementClass = "label label-danger";
-
+        elementName = "Освободить";
+        elementClass = "btn btn-success";
     }
 }
 
 
 <div id="dvReleaseModal"></div>
 <div id="dvDetentionDetailsModal"></div>
+<div id="dvCreateDetentionModal">
+</div>
 <h2>О задержанном
     @if (User.IsInRole("editor") || User.IsInRole("admin"))
     {
@@ -132,20 +132,26 @@
     <hr />
 
     <div class="col-md-6">
-        <div class="btn-group">
-            <input type="button" onclick="history.back()" class = "btn btn-default" value="Назад">
-            @if (User.IsInRole("editor") || User.IsInRole("admin"))
-                    {
-                        @Html.ActionLink("Редактировать", "Edit", new { id = Model.DetaineeID },new { @class="btn btn-primary"})
-                        @Html.ActionLink("Удалить", "Delete", new { id = Model.DetaineeID }, new { @class = "btn btn-danger" })
 
-                    }
+        <div class="btn-group">
+            <input type="button" onclick="history.back()" class="btn btn-default" value="Назад">
+            @if (User.IsInRole("editor") || User.IsInRole("admin"))
+            {
+                @Html.ActionLink("Редактировать", "Edit", new { id = Model.DetaineeID }, new { @class = "btn btn-primary" })
+                if (Model.IsReleased)
+                {
+                    <input type="button" value="Добавить задержание" class="btn btn-warning" id="btnCreateDetention" />
+                }
+                @Html.ActionLink("Удалить", "Delete", new { id = Model.DetaineeID }, new { @class = "btn btn-danger" })
+            }
         </div>
     </div>
 
     <div class="col-md-5 col-md-offset-1">
-        
+
     </div>
+    @*This input helps to get right url address of action using Url helper.-becaue of @Url helper is not work inside .js script*@
+    <input type="hidden" id="CreateDetentionUrl" value="@Url.Action("CreateDetention", "Detainee")" />
     <input type="hidden" id="urlField" value="@Url.Action("ReleaseDetainee", "Detainee")" />
 </div>
 @section scripts {

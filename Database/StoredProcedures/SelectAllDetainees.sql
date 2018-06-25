@@ -13,11 +13,7 @@ det.DetentionDate,
 det.DetainedByWhomID,
 det.DeliveryDate,
 det.DeliveredByWhomID,
-det.ReleasåDate,
-det.ReleasedByWhomID,
-det.PlaceID,
-det.AmountForStaying,
-det.PaidAmount
+det.PlaceID
 from DetentionsOfDetainees as dof
 left join Detention as det on dof.DetentionID=det.DetentionID
 

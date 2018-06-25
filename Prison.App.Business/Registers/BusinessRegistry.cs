@@ -24,6 +24,7 @@ namespace Prison.App.Business.Registers
             For<IUserProvider>().Use<UserProvider>();
             For<IRoleProvider>().Use<RoleProvider>();
             For<IStatusProvider>().Use<StatusProvider>();
+            For<IDetentionProvider>().Use<DetentionProvider>();
 
             //services
             For<ILogInService>().Use<LogInService>();
@@ -35,6 +36,7 @@ namespace Prison.App.Business.Registers
             For<IRoleService>().Use<RoleService>();
             For<IPositionService>().Use<PositionService>();
             For<IStatusService>().Use<StatusService>();
+            For<IDetentionService>().Use<DetentionService>();
         }
     }
 }
