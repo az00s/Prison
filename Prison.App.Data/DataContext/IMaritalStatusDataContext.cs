@@ -5,10 +5,10 @@ namespace Prison.App.Data.DataContext
 {
     public interface IMaritalStatusDataContext
     {
-        IEnumerable<MaritalStatus> GetAllStatuses();
+        IReadOnlyCollection<MaritalStatus> GetAllStatuses();
         MaritalStatus GetStatusByID(int id);
-        void Create(MaritalStatus dtn);
-        void Update(MaritalStatus dtn);
+        void Create(MaritalStatus status);
+        void Update(MaritalStatus status);
         void Delete(int id);
     }
 }

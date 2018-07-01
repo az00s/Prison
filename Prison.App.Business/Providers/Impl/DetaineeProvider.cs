@@ -13,7 +13,6 @@ namespace Prison.App.Business.Providers.Impl
 
         private ICachingService _cacheService;
 
-
         public DetaineeProvider(IDetaineeRepository rep,ICachingService cacheService)
         {
             ArgumentHelper.ThrowExceptionIfNull(rep, "IDetaineeRepository");
@@ -22,9 +21,9 @@ namespace Prison.App.Business.Providers.Impl
             _cacheService = cacheService;
         }
 
-        public IEnumerable<Detainee> GetAllDetainees()
+        public IReadOnlyCollection<Detainee> GetAllDetainees()
         {           
-            var  result = _cacheService.Get<IEnumerable<Detainee>>("AllDetaineeList");
+            var  result = _cacheService.Get<IReadOnlyCollection<Detainee>>("AllDetaineeList");
             
             if(result==null)
             {
@@ -37,39 +36,22 @@ namespace Prison.App.Business.Providers.Impl
                 }
 
                 //put data into cache
-                else _cacheService.Add("AllDetaineeList", result, 7);
+                else _cacheService.Add("AllDetaineeList", result, 10);
             }
 
             return result;
-
         }
 
-        public IEnumerable<Detention> GetAllDetentions()
-        {
-            return _rep.GetAllDetentions();
-        }
         public Detainee GetDetaineeByID(int id)
         {
-
             if (ArgumentHelper.IsValidID(id))
-            {
-                //get data from cache
-                var  result = _cacheService.Get<Detainee>($"Detainee{id}");
-                
-
-                if(result==null)
-                {
-                    //get data from dataBase if cache hasn't this data
-                    result = _rep.GetDetaineeByID(id);
+            {                
+                   var result = _rep.GetDetaineeByID(id);
 
                     if (result == null)
                     {
                         throw new NullReferenceException($"Задержанный с идентификатором: {id} не найден!");
                     }
-
-                    //put data into cache
-                    else _cacheService.Add($"Detainee{id}", result, 60);
-                }
 
                 return result;
             }
@@ -79,36 +61,26 @@ namespace Prison.App.Business.Providers.Impl
             }
         }
 
-        public Detention GetDetentionByID(int id)
+        public Release GetLastRelease(int id)
         {
-            return _rep.GetDetentionByID(id);
-        }
-        public Detention GetLastDetention(int id)
-        {
-            return _rep.GetLastDetention(id);
+            return _rep.GetLastRelease(id);
         }
 
-        public IEnumerable<Detainee> GetDetaineesByDate(DateTime date)
+        public Release GetRelease(int detaineeID, int detentionID)
+        {
+            return _rep.GetRelease(detaineeID, detentionID);
+        }
+
+        public IReadOnlyCollection<Detainee> GetDetaineesByDate(DateTime date)
         {
             if (ArgumentHelper.IsValidDate(date))
             {
-                //get data from cache
-                var result = _cacheService.Get<IEnumerable<Detainee>>($"DetaineesBy{date}");
-
-                if(result==null)
-                {
-                    //get data from dataBase if cache hasn't this data
-                    result = _rep.GetDetaineesByDate(date);
+                    var result = _rep.GetDetaineesByDate(date);
 
                     if (result == null)
                     {
                         throw new NullReferenceException($"Задержанные на дату: {date} не найдены!");
                     }
-
-                    //put data into cache
-                    else _cacheService.Add($"DetaineesBy{date}", result, 15);
-                }
-
                 return result;
 
             }
@@ -118,32 +90,26 @@ namespace Prison.App.Business.Providers.Impl
             }
         }
 
-        public IEnumerable<MaritalStatus> GetAllMaritalStatuses()
+        public IReadOnlyCollection<MaritalStatus> GetAllMaritalStatuses()
         {
-            //get data from cache
-            var result = _cacheService.Get<IEnumerable<MaritalStatus>>("AllMaritalStatusList");
-
-            if(result==null)
-            {
-                //get data from dataBase if cache hasn't this data
-                result = _rep.GetAllMaritalStatuses();
+                var result = _rep.GetAllMaritalStatuses();
 
                 if (result == null)
                 {
                     throw new NullReferenceException($"Не удалось получить список семейных статусов!");
                 }
 
-                //because of Marital satauses are not changing all time or could be changed rarely, cache for it was setted to 5 min
-                else _cacheService.Add("AllMaritalStatusList", result, 300);
-            }
-
             return result;
-
         }
 
-        public IEnumerable<Detainee> GetDetaineesByParams(string DetentionDate=null, string FirstName = null, string LastName = null, string MiddleName = null, string ResidenceAddress = null)
+        public IReadOnlyCollection<Detainee> Find(string DetentionDate, string FirstName, string LastName, string MiddleName, string ResidenceAddress)
         {
-            return _rep.GetDetaineesByParams(DetentionDate, FirstName, LastName, MiddleName, ResidenceAddress);
+            if (string.IsNullOrEmpty(DetentionDate) && string.IsNullOrEmpty(FirstName) && string.IsNullOrEmpty(LastName) && string.IsNullOrEmpty(MiddleName) && string.IsNullOrEmpty(ResidenceAddress))
+            {
+                return null;
+            }
+
+            return _rep.Find(DetentionDate, FirstName, LastName, MiddleName, ResidenceAddress);
         }
     }
 }

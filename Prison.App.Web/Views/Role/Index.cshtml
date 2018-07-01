@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Prison.App.Common.Entities.Role>
+﻿@model IEnumerable<RoleViewModel>
 
 @{
     ViewBag.Title = "Index";
@@ -6,9 +6,12 @@
 
 <h2>Роли</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
+@if (User.IsInRole("editor") || User.IsInRole("admin"))
+{
+    <p>
+        @Html.ActionLink("Добавить", "Create", null, new { @class = "btn btn-primary" })
+    </p>
+}
 <table class="table">
     <tr>
         <th>
@@ -17,16 +20,27 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.RoleName)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.RoleID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.RoleID })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                    <div class="btn-group">
+                        <div class="input-group-btn">
+                            @Html.ActionLink(item.RoleName, "Details", new { id = item.RoleID },new {@class= "btn btn-link btn-default dropdown-toggle", @data_toggle="dropdown" })
+                            <ul class="dropdown-menu">
+                                @if (User.IsInRole("editor") || User.IsInRole("admin"))
+                                {
+                                    <li>@Html.ActionLink("Редактировать", "Edit", new { id = item.RoleID })</li>
+                                    <li class="divider"></li>
+                                    <li class = "text-danger">@Html.ActionLink("Удалить", "Delete", new { id = item.RoleID }, new { @class = "text-danger" })</li>
+                                }                                
+                            </ul>
+                        </div>
+                    </div>
+
+            </td>
+            <td></td>
+        </tr>
+    }
 
 </table>

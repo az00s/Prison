@@ -2,42 +2,34 @@
 using Prison.App.Business.Providers;
 using Prison.App.Common.Entities;
 using Prison.App.Common.Helpers;
-using Prison.App.Common.Interfaces;
-using Prison.App.Web.Helpers;
 using Prison.App.Web.Models;
 using System.Web.Mvc;
-using System.Web.Routing;
 using System.Collections.Generic;
 using System.Linq;
 using Prison.App.Business.Services;
 
 namespace Prison.App.Web.Controllers
 {
-    
+    [Editor]
     public class EmployeeController : Controller
     {
-        private ILogger _log;
-
         private IEmployeeProvider _employeeProvider;
 
         private IPositionProvider _positionProvider;
 
         private IEmployeeService _employeeService;
 
-        public EmployeeController(IEmployeeProvider employeeProvider, ILogger log, IPositionProvider positionProvider, IEmployeeService employeeService)
+        public EmployeeController(IEmployeeProvider employeeProvider, IPositionProvider positionProvider, IEmployeeService employeeService)
         {
             ArgumentHelper.ThrowExceptionIfNull(positionProvider, "IPositionProvider");
             ArgumentHelper.ThrowExceptionIfNull(employeeProvider, "IEmployeeProvider");
             ArgumentHelper.ThrowExceptionIfNull(employeeService, "IEmployeeService");
-            ArgumentHelper.ThrowExceptionIfNull(log, "ILogger");
 
             _positionProvider = positionProvider;
             _employeeProvider = employeeProvider;
             _employeeService = employeeService;
-            _log = log;
         }
 
-        [User]
         public ActionResult Index()
         {
             var Employees = _employeeProvider.GetAllEmployees();
@@ -47,7 +39,6 @@ namespace Prison.App.Web.Controllers
             return View(ViewModelList);
         }
 
-        [Editor]
         public ActionResult Details(int id)
         {
             var Employee = _employeeProvider.GetEmployeeByID(id);
@@ -55,10 +46,8 @@ namespace Prison.App.Web.Controllers
             var ViewModel=ToEmployeeIndexViewModel(Employee);
 
             return View(ViewModel);
-            
         }
 
-        [Editor]
         [HttpGet]
         public ActionResult Create()
         {
@@ -72,7 +61,7 @@ namespace Prison.App.Web.Controllers
             return View(ViewModel);
         }
 
-        
+        [HttpPost]
         public ActionResult Create(EmployeeEditViewModel model)
         {
             if (!ModelState.IsValid)
@@ -89,7 +78,6 @@ namespace Prison.App.Web.Controllers
             return RedirectToAction("Index");
         }
 
-        [Editor]
         public ActionResult Edit(int id)
         {
             var emp = _employeeProvider.GetEmployeeByID(id);
@@ -99,11 +87,9 @@ namespace Prison.App.Web.Controllers
             return View(ViewModel);
         }
 
-        [Editor]
         [HttpPost]
         public ActionResult Edit(EmployeeEditViewModel model)
         {
-            
             if (!ModelState.IsValid)
             {
                 model.Positions = _positionProvider.GetAllPositions();
@@ -118,7 +104,6 @@ namespace Prison.App.Web.Controllers
             return RedirectToAction("Index");
         }
 
-        [Editor]
         public ActionResult Delete(int id)
         {
             var Employee = _employeeProvider.GetEmployeeByID(id);
@@ -128,9 +113,8 @@ namespace Prison.App.Web.Controllers
             return View(ViewModel);
         }
 
-        [Editor]
         [HttpPost]
-        public ActionResult DeleteFromDb(int id)
+        public ActionResult DeleteConfirmed(int id)
         {
             _employeeService.Delete(id);
 
@@ -206,9 +190,6 @@ namespace Prison.App.Web.Controllers
             return Result;
         }
 
-
         #endregion
-
-
     }
 }

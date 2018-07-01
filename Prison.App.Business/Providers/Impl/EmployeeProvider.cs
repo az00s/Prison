@@ -1,7 +1,6 @@
 ﻿using Prison.App.Business.Services;
 using Prison.App.Common.Entities;
 using Prison.App.Common.Helpers;
-using Prison.App.Common.Interfaces;
 using Prison.App.Data.Repositories;
 using System;
 using System.Collections.Generic;
@@ -22,10 +21,10 @@ namespace Prison.App.Business.Providers.Impl
             _cacheService = cacheService;
         }
 
-        public IEnumerable<Employee> GetAllEmployees()
+        public IReadOnlyCollection<Employee> GetAllEmployees()
         {
             //get data from cache
-            var  result = _cacheService.Get<IEnumerable<Employee>>("AllEmployeeList");
+            var  result = _cacheService.Get<IReadOnlyCollection<Employee>>("AllEmployeeList");
 
             if(result==null)
             {
@@ -38,7 +37,7 @@ namespace Prison.App.Business.Providers.Impl
                 }
 
                 //put data into cache
-                else _cacheService.Add("AllEmployeeList", result, 7);
+                else _cacheService.Add("AllEmployeeList", result, 10);
             }
 
             return result;
@@ -48,21 +47,11 @@ namespace Prison.App.Business.Providers.Impl
         {
             if (ArgumentHelper.IsValidID(id))
             {
-                    //get data from cache
-                var result = _cacheService.Get<Employee>($"Employee{id}");
+                var result = _rep.GetEmployeeByID(id);
 
                 if (result == null)
                 {
-                    //get data from dataBase if cache hasn't this data
-                    result = _rep.GetEmployeeByID(id);
-
-                    if (result == null)
-                    {
-                        throw new NullReferenceException($"Сотрудник с идентификатором: {id} не найден!");
-                    }
-
-                    //put data into cache
-                    else _cacheService.Add($"Employee{id}", result, 300);
+                    throw new NullReferenceException($"Сотрудник с идентификатором: {id} не найден!");
                 }
 
                 return result;
@@ -72,6 +61,5 @@ namespace Prison.App.Business.Providers.Impl
                 throw new ArgumentException($"Идентификатор сотрудника указан неверно.Пожалуйста укажите значение от 0 до {int.MaxValue}");
             }
         }
-
     }
 }

@@ -3,12 +3,16 @@
         $('#dvDetentionDetailsModal').empty();
 
         var td = $(this).children()[0];
-        var ID = td.innerText;
+        var detentionId = td.innerText;
+        var detaineeId = $("input[type='hidden'][name='DetaineeID']").val();
         $.ajax(
             {
                 url: "/Detainee/DetentionDetails",
                 method: "GET",
-                data: { id: ID },
+                data: {
+                    detentionID: detentionId,
+                    detaineeID:detaineeId
+                },
                 success: function (data) {
 
                     $('#dvDetentionDetailsModal').html(data);

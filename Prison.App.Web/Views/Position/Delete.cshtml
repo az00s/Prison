@@ -9,14 +9,6 @@
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.PositionID)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.PositionID)
-        </dd>
-
-        <dt>
             @Html.DisplayNameFor(model => model.PositionName)
         </dt>
 
@@ -26,12 +18,14 @@
 
     </dl>
 
-    @using (Html.BeginForm("DeleteFromDb", "Position", new { id = Model.PositionID })) {
+    @using (Html.BeginForm("DeleteConfirmed", "Position", new { id = Model.PositionID })) {
                 @Html.AntiForgeryToken()
 
-                <div class="form-actions no-color">
-            <input type="submit" value="Удалить" class="btn btn-default" /> |
-            @Html.ActionLink("Назад", "Index")
+    <div class="form-actions no-color">
+        <div class="btn-group">
+            <input type="button" onclick="history.back()" class="btn btn-default" value="Назад">
+            <input type="submit" value="Удалить" class="btn btn-danger" />
         </div>
+    </div>
     }
 </div>

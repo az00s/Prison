@@ -8,7 +8,7 @@ namespace Prison.App.Data.DataContext.Impl
 {
     internal class PlaceDataContext:IPlaceDataContext
     {
-        private IDataContext<PlaceOfStay> _context;
+        private readonly IDataContext<PlaceOfStay> _context;
 
         public PlaceDataContext(IDataContext<PlaceOfStay> context)
         {
@@ -17,34 +17,29 @@ namespace Prison.App.Data.DataContext.Impl
             _context = context;
         }
 
-        public IEnumerable<PlaceOfStay> GetAllPlaces()
+        public IReadOnlyCollection<PlaceOfStay> GetAllPlaces()
         {
-            IEnumerable<PlaceOfStay> placeList = new List<PlaceOfStay>();
-
             var dataSet = _context.ExecuteQuery("SelectAllPlacesOfStay", null, CommandType.StoredProcedure);
 
-            placeList = ToPlaceList(dataSet);
+            var placeList = ToPlaceList(dataSet);
 
             return placeList;
         }
 
         public PlaceOfStay GetPlaceByID(int id)
         {
-            PlaceOfStay place;
-
-            IDictionary<string, object> parameters = new Dictionary<string, object> { { "@ID", id } };
+            var parameters = new Dictionary<string, object> { { "@ID", id } };
 
             var dataSet = _context.ExecuteQuery("SelectPlaceOfStayByID", parameters, CommandType.StoredProcedure);
 
-            place = ToPlace(dataSet);
+            var place = ToPlace(dataSet);
 
             return place;
-
         }
 
         public void Create(PlaceOfStay dtn)
         {
-            IDictionary<string, object> parameters =
+            var parameters =
                 new Dictionary<string, object>
                 {
                     { "@Address", dtn.Address },
@@ -55,7 +50,7 @@ namespace Prison.App.Data.DataContext.Impl
 
         public void Update(PlaceOfStay dtn)
         {
-            IDictionary<string, object> parameters =
+            var parameters =
                  new Dictionary<string, object>
                  {
                     { "@ID", dtn.PlaceID },
@@ -67,7 +62,7 @@ namespace Prison.App.Data.DataContext.Impl
 
         public void Delete(int id)
         {
-            IDictionary<string, object> parameters =
+            var parameters =
                 new Dictionary<string, object>
                 {
                     { "@ID", id },
@@ -76,24 +71,17 @@ namespace Prison.App.Data.DataContext.Impl
             _context.ExecuteNonQuery("DeletePlaceOfStay", parameters, CommandType.StoredProcedure);
         }
 
-
-
         #region Converters
-        private IEnumerable<PlaceOfStay> ToPlaceList(DataSet dataset)
+        private IReadOnlyCollection<PlaceOfStay> ToPlaceList(DataSet dataset)
         {
-            List<PlaceOfStay> list = new List<PlaceOfStay>();
+            return dataset.Tables[0].AsEnumerable().Select(row=>
+                new PlaceOfStay
+                    {
+                        PlaceID = row.Field<int>("PlaceID"),
+                        Address = row.Field<string>("Address")
+                    }
+            ).ToList();
 
-            var placeTable = dataset.Tables[0];
-
-            foreach (var row in placeTable.AsEnumerable())
-            {
-                list.Add(new PlaceOfStay
-                {
-                    PlaceID = row.Field<int>("PlaceID"),
-                    Address = row.Field<string>("Address")
-                });
-            }
-            return list;
         }
 
         private PlaceOfStay ToPlace(DataSet dataset)
@@ -104,7 +92,6 @@ namespace Prison.App.Data.DataContext.Impl
             {
                 PlaceID = row.Field<int>("PlaceID"),
                 Address = row.Field<string>("Address"),
-
             };
         }
 

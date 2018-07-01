@@ -11,10 +11,13 @@
 
                 $('#dvCreateDetention').html(data);
                 $('.datetimepicker').datetimepicker({ pickTime: false, language: 'ru', format: 'DD.MM.Y' });
+                $('#dtpDateTime').datetimepicker({ pickTime: true, language: 'ru' });
             }
 
 
         });
+
+        $("#btnCreateDetainee").removeAttr("disabled");
     });
 
     $("#btnChooseDetention").click(function () {
@@ -28,10 +31,22 @@
             success: function (data) {
 
                 $('#dvDetentionsField').html(data);
+
+                if ($('#dvDetentionsField select').length > 0)
+                {
+                    $("#btnCreateDetainee").removeAttr("disabled");
+                }
+                else
+                {
+                    $("#btnCreateDetainee").attr("disabled","disabled");
+                }
             }
 
 
         });
+
+        
+
     });
 
     var num = $("input[name^='PhoneNumbers[']").length - 1;
@@ -56,4 +71,5 @@
             num = num - 1;
         }
     });
+
 });

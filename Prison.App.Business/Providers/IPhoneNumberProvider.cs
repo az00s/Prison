@@ -5,8 +5,8 @@ namespace Prison.App.Business.Providers
 {
     public interface IPhoneNumberProvider
     {
-        IEnumerable<PhoneNumber> GetAllNumbers();
+        IReadOnlyCollection<PhoneNumber> GetAllNumbers();
         PhoneNumber GetNumberByID(int id);
-        IEnumerable<Detainee> GetAllDetaineeLastNames();
+        IReadOnlyCollection<Detainee> GetAllDetaineeLastNames();
     }
 }

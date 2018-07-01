@@ -4,8 +4,8 @@ namespace Prison.App.Business.Services
 {
     public interface IStatusService
     {
-        void Create(MaritalStatus emp);
-        void Update(MaritalStatus emp);
+        void Create(MaritalStatus status);
+        void Update(MaritalStatus status);
         void Delete(int id);
     }
 }

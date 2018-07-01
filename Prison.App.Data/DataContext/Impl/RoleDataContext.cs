@@ -8,7 +8,7 @@ namespace Prison.App.Data.DataContext.Impl
 {
     internal class RoleDataContext:IRoleDataContext
     {
-        private IDataContext<Role> _context;
+        private readonly IDataContext<Role> _context;
 
         public RoleDataContext(IDataContext<Role> context)
         {
@@ -17,34 +17,29 @@ namespace Prison.App.Data.DataContext.Impl
             _context = context;
         }
 
-        public IEnumerable<Role> GetAllRoles()
+        public IReadOnlyCollection<Role> GetAllRoles()
         {
-            IEnumerable<Role> roleList = new List<Role>();
-
             var dataSet = _context.ExecuteQuery("SelectAllRoles", null, CommandType.StoredProcedure);
 
-            roleList = ToRoleList(dataSet);
+            var roleList = ToRoleList(dataSet);
 
             return roleList;
         }
 
         public Role GetRoleByID(int id)
         {
-            Role role;
-
-            IDictionary<string, object> parameters = new Dictionary<string, object> { { "@ID", id } };
+            var parameters = new Dictionary<string, object> { { "@ID", id } };
 
             var dataSet = _context.ExecuteQuery("SelectRoleByID", parameters, CommandType.StoredProcedure);
 
-            role = ToRole(dataSet);
+            var role = ToRole(dataSet);
 
             return role;
-
         }
 
         public void Create(Role dtn)
         {
-            IDictionary<string, object> parameters =
+            var parameters =
                 new Dictionary<string, object>
                 {
                     { "@RoleName", dtn.RoleName },
@@ -55,7 +50,7 @@ namespace Prison.App.Data.DataContext.Impl
 
         public void Update(Role dtn)
         {
-            IDictionary<string, object> parameters =
+            var parameters =
                  new Dictionary<string, object>
                  {
                     { "@ID", dtn.RoleID },
@@ -67,7 +62,7 @@ namespace Prison.App.Data.DataContext.Impl
 
         public void Delete(int id)
         {
-            IDictionary<string, object> parameters =
+            var parameters =
                 new Dictionary<string, object>
                 {
                     { "@ID", id },
@@ -76,24 +71,16 @@ namespace Prison.App.Data.DataContext.Impl
             _context.ExecuteNonQuery("DeleteRole", parameters, CommandType.StoredProcedure);
         }
 
-
-
         #region Converters
-        private IEnumerable<Role> ToRoleList(DataSet dataset)
+        private IReadOnlyCollection<Role> ToRoleList(DataSet dataset)
         {
-            List<Role> list = new List<Role>();
-
-            var roleTable = dataset.Tables[0];
-
-            foreach (var row in roleTable.AsEnumerable())
-            {
-                list.Add(new Role
+           return dataset.Tables[0].AsEnumerable().Select(row=>
+                new Role
                 {
                     RoleID = row.Field<int>("RoleID"),
                     RoleName = row.Field<string>("RoleName")
-                });
-            }
-            return list;
+                }
+            ).ToList();
         }
 
         private Role ToRole(DataSet dataset)

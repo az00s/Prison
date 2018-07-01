@@ -19,26 +19,27 @@ namespace Prison.App.Business.Services.Impl
             _cacheService = cacheService;
         }
 
-        public void ReleaseDetainee(Detention detention)
+        public void ReleaseDetainee(Release release)
         {
-            _rep.ReleaseDetainee(detention);
+            _rep.ReleaseDetainee(release);
         }
+
         public void Create(Detainee dtn)
         {
             _rep.Create(dtn);
+
+            //when new detainee added - detaineeList removed from cache because it's not valid
+           _cacheService.Delete("AllDetaineeList");
+
         }
 
         public void Update(Detainee dtn)
         {
             _rep.Update(dtn);
 
-            if (_cacheService.Contains($"Detainee{dtn.DetaineeID}"))
-            {
-                _cacheService.Update($"Detainee{dtn.DetaineeID}", dtn, 60);
-            }
+            //when new data changed - detaineeList removed from cache because it's not valid
+            _cacheService.Delete("AllDetaineeList");
 
-            else //put data into cache
-                _cacheService.Add($"Detainee{dtn.DetaineeID}", dtn, 60);
         }
 
         public void Delete(int id)
@@ -47,15 +48,13 @@ namespace Prison.App.Business.Services.Impl
             {
                 _rep.Delete(id);
 
-                _cacheService.Delete($"Detainee{id}");
-
+                //when new data changed - detaineeList removed from cache because it's not valid
+                _cacheService.Delete("AllDetaineeList");
             }
             else
             {
                 throw new ArgumentException($"Идентификатор задержанного указан неверно.Пожалуйста укажите значение от 0 до {int.MaxValue}");
             }
         }
-
-
     }
 }

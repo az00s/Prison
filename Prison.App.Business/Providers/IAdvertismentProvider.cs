@@ -5,6 +5,6 @@ namespace Prison.App.Business.Interfaces
 {
     public interface IAdvertismentProvider
     {
-        IEnumerable<IBlurb> GetElementsFromRep(int numOfElements);
+        IEnumerable<IBlurb> GetAds(int numOfElements);
     }
 }

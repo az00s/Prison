@@ -7,6 +7,5 @@ namespace Prison.App.Business.Services
         void Create(PlaceOfStay plc);
         void Update(PlaceOfStay plc);
         void Delete(int id);
-
     }
 }

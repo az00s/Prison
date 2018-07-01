@@ -11,7 +11,7 @@ using System.Linq;
 
 namespace Prison.App.Web.Controllers
 {
-
+    [Editor]
     public class PhoneNumberController : Controller
     {
         private ILogger _log;
@@ -31,7 +31,6 @@ namespace Prison.App.Web.Controllers
             _log = log;
         }
 
-        [User]
         public ActionResult Index()
         {
             var numbers = _numberProvider.GetAllNumbers();
@@ -39,7 +38,6 @@ namespace Prison.App.Web.Controllers
             return View(ViewModel);
         }
 
-        [Editor]
         public ActionResult Details(int id)
         {
             var number = _numberProvider.GetNumberByID(id);
@@ -47,7 +45,6 @@ namespace Prison.App.Web.Controllers
             return View(model);
         }
 
-        [Editor]
         public ActionResult Create()
         {
             var model = new NumberViewModel
@@ -57,7 +54,6 @@ namespace Prison.App.Web.Controllers
             return View(model);
         }
 
-        [Editor]
         [HttpPost]
         public ActionResult Create(NumberViewModel model)
         {
@@ -73,7 +69,6 @@ namespace Prison.App.Web.Controllers
             return RedirectToAction("Index");
         }
 
-        [Editor]
         public ActionResult Edit(int id)
         {
             var number = _numberProvider.GetNumberByID(id);
@@ -81,7 +76,6 @@ namespace Prison.App.Web.Controllers
             return View(ViewModel);
         }
 
-        [Editor]
         [HttpPost]
         public ActionResult Edit(NumberViewModel model)
         {
@@ -95,7 +89,6 @@ namespace Prison.App.Web.Controllers
             return RedirectToAction("Index");
         }
 
-        [Editor]
         public ActionResult Delete(int id)
         {
             var number = _numberProvider.GetNumberByID(id);
@@ -103,7 +96,6 @@ namespace Prison.App.Web.Controllers
             return View(model);
         }
 
-        [Editor]
         [HttpPost]
         public ActionResult DeleteFromDb(int id)
         {
@@ -116,7 +108,12 @@ namespace Prison.App.Web.Controllers
 
         private PhoneNumber ToPhoneNumber(NumberViewModel model)
         {
-            return new PhoneNumber { NumberID = model.NumberID, Number = model.Number,DetaineeID=model.DetaineeID };
+            return new PhoneNumber
+            {
+                NumberID = model.NumberID,
+                Number = model.Number,
+                DetaineeID =model.DetaineeID
+            };
         }
 
         private NumberViewModel ToNumberViewModel(PhoneNumber number)
@@ -133,7 +130,7 @@ namespace Prison.App.Web.Controllers
 
         private IEnumerable<NumberViewModel> ToNumberIndexViewModel(IEnumerable<PhoneNumber> list)
         {
-            List<NumberViewModel> ResultList = new List<NumberViewModel>();
+            var ResultList = new List<NumberViewModel>();
             foreach (PhoneNumber item in list)
             {
                 ResultList.Add(new NumberViewModel

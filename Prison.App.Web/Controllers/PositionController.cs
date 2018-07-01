@@ -1,7 +1,6 @@
 ﻿using Prison.App.Business.Providers;
 using Prison.App.Common.Entities;
 using Prison.App.Common.Helpers;
-using Prison.App.Common.Interfaces;
 using System.Web.Mvc;
 using Prison.App.Web.Attributes;
 using Prison.App.Web.Models;
@@ -10,27 +9,22 @@ using Prison.App.Business.Services;
 
 namespace Prison.App.Web.Controllers
 {
-
+    [Editor]
     public class PositionController : Controller
     {
-        private ILogger _log;
-
         private IPositionProvider _positionProvider;
 
         private IPositionService _positionService;
 
-        public PositionController(IPositionProvider positionProvider, ILogger log, IPositionService positionService)
+        public PositionController(IPositionProvider positionProvider, IPositionService positionService)
         {
             ArgumentHelper.ThrowExceptionIfNull(positionProvider, "IPositionProvider");
             ArgumentHelper.ThrowExceptionIfNull(positionService, "IPositionService");
-            ArgumentHelper.ThrowExceptionIfNull(log, "ILogger");
 
             _positionService = positionService;
             _positionProvider = positionProvider;
-            _log = log;
         }
 
-        [User]
         public ActionResult Index()
         {
             var positions = _positionProvider.GetAllPositions();
@@ -38,7 +32,6 @@ namespace Prison.App.Web.Controllers
             return View(ViewModel);
         }
 
-        [Editor]
         public ActionResult Details(int id)
         {
             var position = _positionProvider.GetPositionByID(id);
@@ -46,13 +39,11 @@ namespace Prison.App.Web.Controllers
             return View(model);
         }
 
-        [Editor]
         public ActionResult Create()
         {
             return View();
         }
 
-        [Editor]
         [HttpPost]
         public ActionResult Create(PositionViewModel model)
         {
@@ -68,7 +59,6 @@ namespace Prison.App.Web.Controllers
             return RedirectToAction("Index");
         }
 
-        [Editor]
         public ActionResult Edit(int id)
         {
             var position = _positionProvider.GetPositionByID(id);
@@ -76,7 +66,6 @@ namespace Prison.App.Web.Controllers
             return View(ViewModel);
         }
 
-        [Editor]
         [HttpPost]
         public ActionResult Edit(PositionViewModel model)
         {
@@ -90,7 +79,6 @@ namespace Prison.App.Web.Controllers
             return RedirectToAction("Index");
         }
 
-        [Editor]
         public ActionResult Delete(int id)
         {
             var position = _positionProvider.GetPositionByID(id);
@@ -99,9 +87,8 @@ namespace Prison.App.Web.Controllers
             return View(model);
         }
 
-        [Editor]
         [HttpPost]
-        public ActionResult DeleteFromDb(int id)
+        public ActionResult DeleteConfirmed(int id)
         {
             _positionService.Delete(id);
 
@@ -112,17 +99,25 @@ namespace Prison.App.Web.Controllers
 
         private Position ToPosition(PositionViewModel model)
         {
-            return new Position { PositionID = model.PositionID, PositionName = model.PositionName };
+            return new Position
+            {
+                PositionID = model.PositionID,
+                PositionName = model.PositionName
+            };
         }
 
         private PositionViewModel ToPositionViewModel(Position position)
         {
-            return new PositionViewModel { PositionID= position.PositionID,PositionName = position.PositionName };
+            return new PositionViewModel
+            {
+                PositionID = position.PositionID,
+                PositionName = position.PositionName
+            };
         }
 
-        private IEnumerable<PositionViewModel> ToPositionIndexViewModel(IEnumerable<Position> list)
+        private IReadOnlyCollection<PositionViewModel> ToPositionIndexViewModel(IReadOnlyCollection<Position> list)
         {
-            List<PositionViewModel> ResultList = new List<PositionViewModel>();
+            var ResultList = new List<PositionViewModel>();
             foreach (Position item in list)
             {
                 ResultList.Add(new PositionViewModel

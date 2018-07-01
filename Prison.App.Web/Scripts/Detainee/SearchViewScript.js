@@ -4,11 +4,6 @@
 
     $("#btnSearchDetainee").click(function () {
 
-        //var WrongDate = $("#dateField").val();
-        //var day = WrongDate.substring(3, 5);
-        //var month = WrongDate.substring(0, 2);
-        //var Year = WrongDate.substring(6, 10);
-        //var RightDate = day + "." + month + "." + Year
         var URL = $("#urlField").val();
 
         $.ajax({
@@ -31,4 +26,14 @@
         });
     });
 
+    document.onkeydown = function () {
+        if (window.event.keyCode == '13') {
+            $("#btnSearchDetainee").click();
+        }
+    }
+
+    $(".clear").click(function () {
+
+        $(this).closest("div").find("input[type='text'].form-control").val("")
+    });
 });

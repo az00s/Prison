@@ -44,16 +44,22 @@
             @Html.DisplayNameFor(model => model.Roles)
         </dt>
         <dd>
-                @foreach(var role in Model.Roles)
-                {
-                   @role.RoleName<br />
-                }
+            @foreach (var role in Model.Roles)
+            {
+                @role.RoleName<br />
+            }
 
         </dd>
 
     </dl>
 </div>
-<p>
-    @Html.ActionLink("Редактировать", "Edit", new { id = Model.UserID }) |
-    @Html.ActionLink("Назад", "Index")
-</p>
+<div class="btn-group">
+    <input type="button" onclick="history.back()" class="btn btn-default" value="Назад">
+    @if (User.IsInRole("editor") || User.IsInRole("admin"))
+    {
+        @Html.ActionLink("Редактировать", "Edit", new { id = Model.UserID }, new { @class = "btn btn-primary" })
+        @Html.ActionLink("Удалить", "Delete", new { id = Model.UserID }, new { @class = "btn btn-danger" })
+
+    }
+
+</div>

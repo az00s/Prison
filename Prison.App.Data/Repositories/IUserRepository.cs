@@ -5,21 +5,24 @@ namespace Prison.App.Data.Repositories
 {
     public interface IUserRepository
     {
-        IEnumerable<User> GetAllUsers();
+        IReadOnlyCollection<User> GetAllUsers();
 
-        IEnumerable<string> GetAllLogins();
+        IReadOnlyCollection<string> GetAllLogins();
 
-        IEnumerable<string> GetUserRoles(string login);
-        IEnumerable<Employee> GetUnoccupiedEmployeeNames();
+        IReadOnlyCollection<string> GetUserRoles(string login);
+
+        IReadOnlyCollection<Employee> GetUnoccupiedEmployeeNames();
+
         string GetUserPasswordByLogin(string login);
 
         User GetUserByLogin(string login);
+
         User GetUserByID(int id);
 
-        void Create(User emp);
+        void Create(User user);
 
-        void Update(User emp);
+        void Update(User user);
+
         void Delete(int id);
-
     }
 }

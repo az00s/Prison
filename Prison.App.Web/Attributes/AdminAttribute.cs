@@ -3,9 +3,8 @@ using System.Web.Mvc;
 
 namespace Prison.App.Web.Attributes
 {
-    public class AdminAttribute : AuthorizeAttribute
+    internal class AdminAttribute : AuthorizeAttribute
     {
-
         protected override bool AuthorizeCore(HttpContextBase httpContext)
         {
             var currentUser = HttpContext.Current.User;
@@ -17,6 +16,5 @@ namespace Prison.App.Web.Attributes
 
             return false;
         }
-
     }
 }

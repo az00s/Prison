@@ -1,6 +1,5 @@
 ﻿using Prison.App.Common.Entities;
 using Prison.App.Common.Helpers;
-using Prison.App.Common.Interfaces;
 using Prison.App.Data.Repositories;
 using System.Collections.Generic;
 
@@ -17,7 +16,7 @@ namespace Prison.App.Business.Providers.Impl
             _rep = rep;
         }
 
-        public IEnumerable<Role> GetAllRoles()
+        public IReadOnlyCollection<Role> GetAllRoles()
         {
             return _rep.GetAllRoles();
         }
@@ -26,6 +25,5 @@ namespace Prison.App.Business.Providers.Impl
         {
             return _rep.GetRoleByID(id);
         }
-
     }
 }

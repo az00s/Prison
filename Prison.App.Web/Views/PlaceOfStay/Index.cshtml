@@ -4,14 +4,15 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Места содержания задержанных</h2>
-
-<p>
-    @Html.ActionLink("Добавить место", "Create")
-</p>
+@if (User.IsInRole("editor") || User.IsInRole("admin"))
+{
+    <p>
+        @Html.ActionLink("Добавить", "Create", null, new { @class = "btn btn-primary" })
+    </p>
+}
 <table class="table">
     <tr>
-        
+
         <th>
             @Html.DisplayNameFor(model => model.Address)
         </th>
@@ -20,16 +21,28 @@
         </th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Address)
-        </td>
-        <td>
-            @Html.ActionLink("Редактировать", "Edit", new {id=item.PlaceID }) |
-            @Html.ActionLink("Удалить", "Delete", new { id = item.PlaceID })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                
+                <div class="btn-group">
+                        <div class="input-group-btn">
+                            @Html.ActionLink(item.Address, "Details", new { id = item.PlaceID },new {@class= "btn btn-link btn-default dropdown-toggle", @data_toggle="dropdown" })
+                            <ul class="dropdown-menu">
+                                @if (User.IsInRole("editor") || User.IsInRole("admin"))
+                                {
+                                    <li>@Html.ActionLink("Редактировать", "Edit", new { id = item.PlaceID })</li>
+                                    <li class="divider"></li>
+                                    <li class = "text-danger">@Html.ActionLink("Удалить", "Delete", new { id = item.PlaceID }, new { @class = "text-danger" })</li>
+                                }                                
+                            </ul>
+                        </div>
+                    </div>
+            </td>
+            <td>
+            </td>
+        </tr>
+    }
 
 </table>

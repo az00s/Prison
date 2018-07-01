@@ -6,17 +6,16 @@ namespace Prison.App.Data.Repositories
 {
     public interface IDetaineeRepository
     {
-        IEnumerable<Detainee> GetAllDetainees();
+        IReadOnlyCollection<Detainee> GetAllDetainees();
         Detainee GetDetaineeByID(int id);
-        IEnumerable<Detainee> GetDetaineesByDate(DateTime date);
-        IEnumerable<MaritalStatus> GetAllMaritalStatuses();
-        IEnumerable<Detention> GetAllDetentions();
-        Detention GetLastDetention(int id);
-        Detention GetDetentionByID(int id);
-        void ReleaseDetainee(Detention detention);
+        IReadOnlyCollection<Detainee> GetDetaineesByDate(DateTime date);
+        IReadOnlyCollection<MaritalStatus> GetAllMaritalStatuses();
+        Release GetLastRelease(int id);
+        Release GetRelease(int detaineeID, int detentionID);
+        void ReleaseDetainee(Release release);
         void Create(Detainee dtn);
         void Update(Detainee dtn);
         void Delete(int id);
-        IEnumerable<Detainee> GetDetaineesByParams(string DetentionDate=null, string FirstName = null, string LastName = null, string MiddleName = null, string ResidenceAddress = null);
+        IReadOnlyCollection<Detainee> Find(string DetentionDate, string FirstName, string LastName, string MiddleName, string ResidenceAddress);
     }
 }

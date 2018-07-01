@@ -5,7 +5,7 @@ namespace Prison.App.Business.Providers
 {
     public interface IPositionProvider
     {
-        IEnumerable<Position> GetAllPositions();
+        IReadOnlyCollection<Position> GetAllPositions();
         Position GetPositionByID(int id);
     }
 }

@@ -15,14 +15,16 @@ namespace Prison.App.Business.Services.Impl
             _rep = rep;
         }
 
-        public void Create(MaritalStatus emp)
+        public void Create(MaritalStatus status)
         {
-            _rep.Create(emp);
+            _rep.Create(status);
         }
-        public void Update(MaritalStatus emp)
+
+        public void Update(MaritalStatus status)
         {
-            _rep.Update(emp);
+            _rep.Update(status);
         }
+
         public void Delete(int id)
         {
             _rep.Delete(id);

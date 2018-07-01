@@ -4,11 +4,13 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Должности</h2>
+@if (User.IsInRole("editor") || User.IsInRole("admin"))
+{
+    <p>
+        @Html.ActionLink("Добавить", "Create", null, new { @class = "btn btn-primary" })
+    </p>
+}
 
-<p>
-    @Html.ActionLink("Добавить должность", "Create")
-</p>
 <table class="table">
     <tr>
 
@@ -23,14 +25,24 @@
         <tr>
 
             <td>
-                @Html.DisplayFor(modelItem => item.PositionName)
+                    <div class="btn-group">
+                        <div class="input-group-btn">
+                            @Html.ActionLink(item.PositionName, "Details", new { id = item.PositionID },new {@class= "btn btn-link btn-default dropdown-toggle", @data_toggle="dropdown" })
+                            <ul class="dropdown-menu">
+                                @if (User.IsInRole("editor") || User.IsInRole("admin"))
+                                {
+                                    <li>@Html.ActionLink("Редактировать", "Edit", new { id = item.PositionID })</li>
+                                    <li class="divider"></li>
+                                    <li class = "text-danger">@Html.ActionLink("Удалить", "Delete", new { id = item.PositionID }, new { @class = "text-danger" })</li>
+                                }                                
+                            </ul>
+                        </div>
+                    </div>
+
             </td>
-            <td>
-                @Html.ActionLink("Редактировать", "Edit", new { id = item.PositionID }) |
-                @Html.ActionLink("Подробнее", "Details", new { id = item.PositionID }) |
-                @Html.ActionLink("Удалить", "Delete", new { id = item.PositionID })
-            </td>
-        </tr>
+        <td>
+        </td>
+    </tr>
     }
 
 </table>

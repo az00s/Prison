@@ -8,7 +8,7 @@ namespace Prison.App.Data.DataContext.Impl
 {
     internal class PhoneNumberDataContext:IPhoneNumberDataContext
     {
-        private IDataContext<PhoneNumber> _context;
+        private readonly IDataContext<PhoneNumber> _context;
 
         public PhoneNumberDataContext(IDataContext<PhoneNumber> context)
         {
@@ -17,45 +17,38 @@ namespace Prison.App.Data.DataContext.Impl
             _context = context;
         }
 
-        public IEnumerable<PhoneNumber> GetAllNumbers()
+        public IReadOnlyCollection<PhoneNumber> GetAllNumbers()
         {
-            IEnumerable<PhoneNumber> numberList = new List<PhoneNumber>();
-
             var dataSet = _context.ExecuteQuery("SelectAllNumbers", null, CommandType.StoredProcedure);
 
-            numberList = ToNumberList(dataSet);
+            var numberList = ToNumberList(dataSet);
 
             return numberList;
         }
 
-        public IEnumerable<Detainee> GetAllDetaineeLastNames()
+        public IReadOnlyCollection<Detainee> GetAllDetaineeLastNames()
         {
-            IEnumerable<Detainee> numberList = new List<Detainee>();
-
             var dataSet = _context.ExecuteQuery("SelectAllDetaineeLastNames", null, CommandType.StoredProcedure);
 
-            numberList = ToDetaineeList(dataSet);
+            var numberList = ToDetaineeList(dataSet);
 
             return numberList;
         }
 
         public PhoneNumber GetNumberByID(int id)
         {
-            PhoneNumber number;
-
-            IDictionary<string, object> parameters = new Dictionary<string, object> { { "@ID", id } };
+            var parameters = new Dictionary<string, object> { { "@ID", id } };
 
             var dataSet = _context.ExecuteQuery("SelectNumberByID", parameters, CommandType.StoredProcedure);
 
-            number = ToNumber(dataSet);
+            var number = ToNumber(dataSet);
 
             return number;
-
         }
 
         public void Create(PhoneNumber dtn)
         {
-            IDictionary<string, object> parameters =
+            var parameters =
                 new Dictionary<string, object>
                 {
                     { "@Number", dtn.Number },
@@ -67,7 +60,7 @@ namespace Prison.App.Data.DataContext.Impl
 
         public void Update(PhoneNumber dtn)
         {
-            IDictionary<string, object> parameters =
+            var parameters =
                  new Dictionary<string, object>
                  {
                      { "@ID", dtn.NumberID },
@@ -80,7 +73,7 @@ namespace Prison.App.Data.DataContext.Impl
 
         public void Delete(int id)
         {
-            IDictionary<string, object> parameters =
+            var parameters =
                 new Dictionary<string, object>
                 {
                     { "@ID", id },
@@ -90,41 +83,28 @@ namespace Prison.App.Data.DataContext.Impl
         }
 
         #region Converters
-        private IEnumerable<PhoneNumber> ToNumberList(DataSet dataset)
+        private IReadOnlyCollection<PhoneNumber> ToNumberList(DataSet dataset)
         {
-            List<PhoneNumber> list = new List<PhoneNumber>();
-
-            var numberTable = dataset.Tables[0];
-
-            foreach (var row in numberTable.AsEnumerable())
-            {
-                list.Add(new PhoneNumber
-                {
-                    NumberID = row.Field<int>("NumberID"),
-                    Number = row.Field<string>("Number"),
-                    DetaineeID= row.Field<int>("DetaineeID")
-                });
-            }
-            return list;
+            return dataset.Tables[0].AsEnumerable().Select(row=>
+                new PhoneNumber
+                    {
+                        NumberID = row.Field<int>("NumberID"),
+                        Number = row.Field<string>("Number"),
+                        DetaineeID = row.Field<int>("DetaineeID")
+                    }
+            ).ToList();
         }
 
-        private IEnumerable<Detainee> ToDetaineeList(DataSet dataset)
+        private IReadOnlyCollection<Detainee> ToDetaineeList(DataSet dataset)
         {
-            List<Detainee> list = new List<Detainee>();
-
-            var numberTable = dataset.Tables[0];
-
-            foreach (var row in numberTable.AsEnumerable())
-            {
-                list.Add(new Detainee {
-                    DetaineeID = row.Field<int>(0),
-                    LastName= row.Field<string>(1)
-                }
-                     );
-            }
-            return list;
+           return dataset.Tables[0].AsEnumerable().Select(row=>
+                new Detainee
+                    {
+                        DetaineeID = row.Field<int>(0),
+                        LastName = row.Field<string>(1)
+                    }
+            ).ToList();
         }
-
 
         private PhoneNumber ToNumber(DataSet dataset)
         {

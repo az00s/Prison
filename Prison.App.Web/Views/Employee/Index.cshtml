@@ -4,12 +4,13 @@
     ViewBag.Title = "Сотрудники";
 }
 
-<h2>Сотрудники изолятора</h2>
-
-<p>
-    @Html.ActionLink("Добавить сотрудника", "Create")
-</p>
-<table class="table">
+@if (User.IsInRole("editor") || User.IsInRole("admin"))
+    {
+        <p>
+            @Html.ActionLink("Добавить", "Create", null, new { @class = "btn btn-primary" })
+        </p>
+    }
+    <table class="table">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.LastName)
@@ -26,26 +27,38 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.ActionLink(item.LastName, "Details", new { id = item.EmployeeID })
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.FirstName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.MiddleName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Position)
-        </td>
-        <td>
-            @Html.ActionLink("Редактировать", "Edit", new { id=item.EmployeeID }) |
-            @Html.ActionLink("Подробнее", "Details", new { id=item.EmployeeID }) |
-            @Html.ActionLink("Удалить", "Delete", new {  id=item.EmployeeID })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.ActionLink(item.LastName, "Details", new { id = item.EmployeeID })
+            </td>
+            <td>
+                    <div class="btn-group">
+                        <div class="input-group-btn">
+                            @Html.ActionLink(item.FirstName, "Details", new { id = item.EmployeeID },new {@class= "btn btn-link btn-default dropdown-toggle", @data_toggle="dropdown" })
+                            <ul class="dropdown-menu">
+                                <li>@Html.ActionLink("Подробнее", "Details", new { id = item.EmployeeID })</li>
+                                @if (User.IsInRole("editor") || User.IsInRole("admin"))
+                                {
+                                    <li>@Html.ActionLink("Редактировать", "Edit", new { id = item.EmployeeID })</li>
+                                    <li class="divider"></li>
+                                    <li class = "text-danger">@Html.ActionLink("Удалить", "Delete", new { id = item.EmployeeID }, new { @class = "text-danger" })</li>
+                                }                                
+                            </ul>
+                        </div>
+                    </div>
+
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MiddleName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Position)
+            </td>
+            <td>
+            </td>
+        </tr>
+    }
 
 </table>

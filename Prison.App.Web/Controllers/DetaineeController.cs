@@ -23,28 +23,33 @@ namespace Prison.App.Web.Controllers
 
         private IDetaineeService _detaineeService;
 
+        private IDetentionProvider _detentionProvider;
+
+        private IDetentionService _detentionService;
+
         private IPlaceProvider _placeProvider;
 
         private IEmployeeProvider _employeeProvider;
 
-
-        public DetaineeController(IDetaineeProvider detaineeProvider, ILogger log, IDetaineeService detaineeService, IPlaceProvider placeProvider, IEmployeeProvider employeeProvider)
+        public DetaineeController(IDetaineeProvider detaineeProvider, ILogger log, IDetaineeService detaineeService, IPlaceProvider placeProvider, IEmployeeProvider employeeProvider, IDetentionProvider detentionProvider,IDetentionService detentionService)
         {
-
             ArgumentHelper.ThrowExceptionIfNull(detaineeProvider, "IDetaineeProvider");
             ArgumentHelper.ThrowExceptionIfNull(detaineeService, "IDetaineeService");
+            ArgumentHelper.ThrowExceptionIfNull(detentionProvider, "IDetentionProvider");
+            ArgumentHelper.ThrowExceptionIfNull(detentionService, "IDetentionService");
             ArgumentHelper.ThrowExceptionIfNull(placeProvider, "IPlaceProvider");
             ArgumentHelper.ThrowExceptionIfNull(employeeProvider, "IEmployeeProvider");
             ArgumentHelper.ThrowExceptionIfNull(log, "ILogger");
 
             _detaineeService = detaineeService;
             _detaineeProvider = detaineeProvider;
+            _detentionProvider = detentionProvider;
+            _detentionService = detentionService;
             _placeProvider = placeProvider;
             _employeeProvider = employeeProvider;
             _log = log;
         }
 
-        
         [User]
         public ActionResult Index()
         {
@@ -63,34 +68,26 @@ namespace Prison.App.Web.Controllers
             var ViewModel =ToDetaineeDetailsViewModel(Detainee);
 
             return View(ViewModel);
-            
         }
 
         [Editor]
         public ActionResult Create()
         {
-            var statuses = _detaineeProvider.GetAllMaritalStatuses();
-
-            var ViewModel = new DetaineeEditViewModel
-            {
-                MaritalStatus = statuses,
-                
-            };
-
-            return View(ViewModel);
+            return View();
         }
 
         [Editor]
         [HttpPost]
-        public ActionResult Create(DetaineeEditViewModel detaineeModel)
+        public ActionResult Create(DetaineeEditViewModel model)
         {
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
-                var detainee = ToDetainee(detaineeModel);
-
-                _detaineeService.Create(detainee);
+                return View(model);
             }
+            var detainee = ToDetainee(model);
 
+            _detaineeService.Create(detainee);
+            
             return RedirectToAction("Index");
         }
 
@@ -115,7 +112,6 @@ namespace Prison.App.Web.Controllers
                     FileHelper.SaveFileOnServer(file);
                     
                     dtn.ImagePath = FileHelper.GetFilePath(file.FileName);
-
                 }
 
                 var Entity = ToDetainee(dtn);
@@ -136,7 +132,7 @@ namespace Prison.App.Web.Controllers
 
         [Editor]
         [HttpPost]
-        public ActionResult DeleteFromDb(int id)
+        public ActionResult DeleteConfirmed(int id)
         {
             _detaineeService.Delete(id);
 
@@ -158,64 +154,90 @@ namespace Prison.App.Web.Controllers
         }
 
         [User]
-        [HttpPost]
-        public ActionResult Search(SearchViewModel model)
+        public ActionResult FindDetainees(SearchViewModel model)
         {
             if (!ModelState.IsValid)
             {
                 return View("ValidationError", model);
             }
 
-            var Detainees = _detaineeProvider.GetDetaineesByParams(model.DetentionDate, model.FirstName, model.LastName, model.Middlename, model.ResidenceAddress);
+            var Detainees = _detaineeProvider.Find(model.DetentionDate, model.FirstName, model.LastName, model.Middlename, model.ResidenceAddress);
             
             var resultList = ToDetaineeIndexViewModel(Detainees);
+
             return View("DetaineeList", resultList);
-            
         }
 
-        public ActionResult CreateDetention()
+        [Editor]
+        public ActionResult CreateDetention(int id=0)
         {
             var model = new DetentionCreateViewModel {
+                DetaineeID=id,
                 Places = _placeProvider.GetAllPlaces(),
                 Employees=_employeeProvider.GetAllEmployees()
             };
+
+            if (id > 0)
+            {
+                return View("CreateDetentionModal", model);
+            }
+
             return View("CreateDetention",model);
         }
 
+        [Editor]
+        [HttpPost]
+        public ActionResult CreateDetention(DetentionCreateViewModel model)
+        {
+            var detention = ToDetention(model);
+
+            _detentionService.Create(detention);
+
+            return RedirectToAction("Details",new { id=model.DetaineeID});
+        }
+
+
+        [Editor]
+        [HttpGet]
         public ActionResult GetDetentions()
         {
-            var list = _detaineeProvider.GetAllDetentions();
+            var list = _detentionProvider.GetDetentionsForLast3Days();
             var model = ToDetentionDropDownViewModel(list);
             return View("_DetentionsField", model);
         }
 
+        [Editor]
         public ActionResult ReleaseDetainee(int id)
         {
-            var model = new DetentionReleaseDetaineeViewModel
+            var model = new ReleaseDetaineeViewModel
             {
-                DetentionID = _detaineeProvider.GetLastDetention(id).DetentionID,
+                DetaineeID = id,
+                DetentionID = _detentionProvider.GetLast(id).DetentionID,
                 Employees = _employeeProvider.GetAllEmployees()
             };
             return View("ReleaseDetainee", model);
         }
 
+        [Editor]
         [HttpPost]
-        public ActionResult ReleaseDetainee(DetentionReleaseDetaineeViewModel model)
+        public ActionResult ReleaseDetainee(ReleaseDetaineeViewModel model)
         {
             if (ModelState.IsValid)
             {
-                var detention = ToDetention(model);
+                var release = ToRelease(model);
 
-                _detaineeService.ReleaseDetainee(detention);
+                _detaineeService.ReleaseDetainee(release);
             }
 
-            return RedirectToAction("Index");
+            return RedirectToAction("Details",new { id=model.DetaineeID});
         }
 
-        public ActionResult DetentionDetails(int id)
+        [User]
+        public ActionResult DetentionDetails(int detentionID,int detaineeID)
         {
-            var detention = _detaineeProvider.GetDetentionByID(id);
-            var model = ToDetentionDetailsViewModel(detention);
+            var detention = _detentionProvider.GetByID(detentionID);
+            var release = _detaineeProvider.GetRelease(detaineeID, detentionID);
+            var model = ToDetentionDetailsViewModel(detention, release);
             return View(model);
         }
 
@@ -223,6 +245,8 @@ namespace Prison.App.Web.Controllers
         private DetaineeDetailsViewModel ToDetaineeDetailsViewModel(Detainee dtn)
         {
             var statuses = _detaineeProvider.GetAllMaritalStatuses();
+            var lastRelease = _detaineeProvider.GetLastRelease(dtn.DetaineeID);
+            var lastDetention = _detentionProvider.GetLast(dtn.DetaineeID);
 
             DetaineeDetailsViewModel Result = new DetaineeDetailsViewModel
             {
@@ -237,20 +261,21 @@ namespace Prison.App.Web.Controllers
                 ResidenceAddress = dtn.ResidenceAddress,
                 AdditionalData = dtn.AdditionalData,
                 Detentions = ToDetentionListViewModel(dtn.Detentions),
-                PhoneNumbers = dtn.PhoneNumbers
+                PhoneNumbers = dtn.PhoneNumbers,
+                IsReleased= lastRelease == null?false: (lastRelease.ReleasеDate.CompareTo(lastDetention.DetentionDate) < 0 ? false : true)
             };
 
             return Result;
         }
 
-        private IEnumerable<DetaineeIndexViewModel> ToDetaineeIndexViewModel(IEnumerable<Detainee> list)
+        private IReadOnlyCollection<DetaineeIndexViewModel> ToDetaineeIndexViewModel(IEnumerable<Detainee> list)
         {
-            if (list==null)
+            if (list == null)
             {
                 return null;
             }
 
-            List<DetaineeIndexViewModel> ResultList = new List<DetaineeIndexViewModel>();
+            var ResultList = new List<DetaineeIndexViewModel>();
 
             foreach (Detainee item in list)
             {
@@ -265,20 +290,13 @@ namespace Prison.App.Web.Controllers
                 });
             }
 
-
-
             return ResultList;
         }
 
-        private IEnumerable<DetentionDropDownViewModel> ToDetentionDropDownViewModel(IEnumerable<Detention> list)
+        private IReadOnlyCollection<DetentionDropDownViewModel> ToDetentionDropDownViewModel(IEnumerable<Detention> list)
         {
-            if (list == null)
-            {
-                return null;
-            }
-
-            List<DetentionDropDownViewModel> ResultList = new List<DetentionDropDownViewModel>();
-            IEnumerable<Employee> employees = _employeeProvider.GetAllEmployees();
+            var ResultList = new List<DetentionDropDownViewModel>();
+            var employees = _employeeProvider.GetAllEmployees();
             foreach (Detention item in list)
             {
                 ResultList.Add(new DetentionDropDownViewModel
@@ -288,11 +306,8 @@ namespace Prison.App.Web.Controllers
                 });
             }
 
-
-
             return ResultList;
         }
-
 
         private Detainee ToDetainee(DetaineeEditViewModel dtn)
         {
@@ -302,7 +317,7 @@ namespace Prison.App.Web.Controllers
                 FirstName=dtn.FirstName,
                 LastName=dtn.LastName,
                 MiddleName=dtn.MiddleName,
-                BirstDate=dtn.BirstDate,
+                BirstDate=DateTime.Parse(dtn.BirstDate),
                 WorkPlace=dtn.WorkPlace,
                 ResidenceAddress=dtn.ResidenceAddress,
                 MaritalStatusID=dtn.MaritalStatusID,
@@ -314,17 +329,17 @@ namespace Prison.App.Web.Controllers
             };
         }
 
-        private Detention ToDetention(DetentionReleaseDetaineeViewModel model)
+
+        private Release ToRelease(ReleaseDetaineeViewModel model)
         {
-            return new Detention
+            return new Release
             {
-                DetentionID=model.DetentionID,
+                DetaineeID=model.DetaineeID,
+                DetentionID = model.DetentionID,
                 ReleasedByWhomID = model.ReleasedByWhomID,
                 ReleasеDate = model.ReleasеDate,
                 AmountForStaying = model.AmountForStaying,
                 PaidAmount = model.PaidAmount,
-
-
             };
         }
 
@@ -339,7 +354,7 @@ namespace Prison.App.Web.Controllers
                 FirstName = dtn.FirstName,
                 LastName = dtn.LastName,
                 MiddleName = dtn.MiddleName,
-                BirstDate = dtn.BirstDate.ToLocalTime(),
+                BirstDate = dtn.BirstDate.ToShortDateString(),
                 MaritalStatus = statuses,
                 MaritalStatusID = dtn.MaritalStatusID,
                 ImagePath = dtn.ImagePath,
@@ -353,14 +368,9 @@ namespace Prison.App.Web.Controllers
             return Result;
         }
 
-        private IEnumerable<DetentionListViewModel> ToDetentionListViewModel(IEnumerable<Detention> list)
+        private IReadOnlyCollection<DetentionListViewModel> ToDetentionListViewModel(IEnumerable<Detention> list)
         {
-            if (list == null)
-            {
-                return null;
-            }
-
-            List<DetentionListViewModel> ResultList = new List<DetentionListViewModel>();
+            var ResultList = new List<DetentionListViewModel>();
 
             foreach (var item in list)
             {
@@ -369,27 +379,31 @@ namespace Prison.App.Web.Controllers
                     DetentionID = item.DetentionID,
                     DetentionDate = item.DetentionDate,
                     Employee = _employeeProvider.GetEmployeeByID(item.DetainedByWhomID).LastName,
-                    ReleasеDate=item.ReleasеDate,
-                    ReleasedByWhomID=item.ReleasedByWhomID,
                     DeliveryDate=item.DeliveryDate,
                     DeliveredByWhomID=item.DeliveredByWhomID,
                     PlaceID=item.PlaceID,
-                    AmountForStaying=item.AmountForStaying,
-                    PaidAmount=item.PaidAmount
                 });
             }
-
-
 
             return ResultList;
         }
 
-        private DetentionDetailsViewModel ToDetentionDetailsViewModel(Detention detention)
+        private Detention ToDetention(DetentionCreateViewModel model)
         {
-            if (detention == null)
+
+            return new Detention
             {
-                return null;
-            }
+                DetentionID = model.DetaineeID,
+                DetentionDate = model.DetentionDate,
+                DetainedByWhomID=model.DetainedByWhomID,
+                DeliveryDate = model.DeliveryDate,
+                DeliveredByWhomID = model.DeliveredByWhomID,
+                PlaceID = model.PlaceID
+            };
+        }
+
+        private DetentionDetailsViewModel ToDetentionDetailsViewModel(Detention detention,Release release)
+        {
                return new DetentionDetailsViewModel
                {
                    DetentionID = detention.DetentionID,
@@ -397,21 +411,14 @@ namespace Prison.App.Web.Controllers
                    DeliveryDate = detention.DeliveryDate,
                    DeliveredByWhom = _employeeProvider.GetEmployeeByID(detention.DeliveredByWhomID).LastName,
                    DetainedByWhom = _employeeProvider.GetEmployeeByID(detention.DetainedByWhomID).LastName,
-                   ReleasеDate = detention.ReleasеDate==DateTime.MinValue?"-": detention.ReleasеDate.ToShortDateString(),
-                   ReleasedByWhom = detention.ReleasedByWhomID==0?"-":_employeeProvider.GetEmployeeByID(detention.ReleasedByWhomID).LastName,
                    Place = _placeProvider.GetPlaceByID(detention.PlaceID).Address,
-                   PaidAmount=detention.PaidAmount,
-                   AmountForStaying=detention.AmountForStaying
+                   ReleasеDate= release == null ? "-" : release.ReleasеDate.ToString(),
+                   ReleasedByWhom= release == null ? "-" : _employeeProvider.GetEmployeeByID(release.ReleasedByWhomID).LastName,
+                   AmountForStaying=release==null?0:release.AmountForStaying,
+                   PaidAmount = release == null ? 0 : release.PaidAmount
                 };
-
-
-
-           
         }
 
         #endregion
-
-
-
     }
 }

@@ -31,6 +31,6 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Редактировать", "Edit", new {  id = Model.NumberID  }) |
-    @Html.ActionLink("Назад", "Index")
+    @Html.ActionLink("Редактировать", "Edit", new { id = Model.NumberID }) |
+    <input type="button" onclick="history.back()" class="btn btn-default" value="Назад">
 </p>

@@ -6,8 +6,6 @@
 <div id="DetentionModal" class="modal">
     <div class="modal-dialog">
         <div class="modal-content">
-
-
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                 <h4 class="modal-title text-center">Сведения о задержании</h4>
@@ -55,6 +53,16 @@
                             @Html.DisplayFor(model => model.DeliveredByWhom)
                         </dd>
 
+
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Place)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.Place)
+                        </dd>
+
                         <dt>
                             @Html.DisplayNameFor(model => model.ReleasеDate)
                         </dt>
@@ -87,34 +95,15 @@
                             @Html.DisplayFor(model => model.PaidAmount)
                         </dd>
 
-
-
-
-
-
-
-                        <dt>
-                            @Html.DisplayNameFor(model => model.Place)
-                        </dt>
-
-                        <dd>
-                            @Html.DisplayFor(model => model.Place)
-                        </dd>
-
                     </dl>
                 </div>
 
             </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal" data-toggle="modal">Закрыть</button>
-                </div>
-
-            
+                </div>           
         </div>
     </div>
 </div>
 
 
-<script>
-   
-</script>

@@ -1,5 +1,4 @@
-﻿using Prison.App.Business.Services;
-using Prison.App.Common.Entities;
+﻿using Prison.App.Common.Entities;
 using Prison.App.Common.Helpers;
 using Prison.App.Data.Repositories;
 using System;
@@ -11,60 +10,34 @@ namespace Prison.App.Business.Providers.Impl
     {
         private IStatusRepository _rep;
 
-        private ICachingService _cacheService;
-
-        public StatusProvider(IStatusRepository rep, ICachingService cacheService)
+        public StatusProvider(IStatusRepository rep)
         {
             ArgumentHelper.ThrowExceptionIfNull(rep, "IStatusRepository");
-            ArgumentHelper.ThrowExceptionIfNull(cacheService, "ICachingService");
 
             _rep = rep;
-            _cacheService = cacheService;
         }
 
-        public IEnumerable<MaritalStatus> GetAllStatuses()
+        public IReadOnlyCollection<MaritalStatus> GetAllStatuses()
         {
-            //get data from cache
-            var result = _cacheService.Get<IEnumerable<MaritalStatus>>("AllStatusesList");
+            var result = _rep.GetAllStatuses();
 
             if (result == null)
             {
-                //get data from dataBase if cache hasn't this data
-                result = _rep.GetAllStatuses();
-
-                if (result == null)
-                {
-                    throw new NullReferenceException("Не удалось получить список статусов!");
-                }
-
-                //put data into cache
-                else _cacheService.Add("AllStatusesList", result, 7);
+                throw new NullReferenceException("Не удалось получить список статусов!");
             }
 
             return result;
-
         }
 
         public MaritalStatus GetStatusByID(int id)
         {
-
             if (ArgumentHelper.IsValidID(id))
             {
-                //get data from cache
-                var result = _cacheService.Get<MaritalStatus>($"MaritalStatus{id}");
+                var result = _rep.GetStatusByID(id);
 
                 if (result == null)
                 {
-                    //get data from dataBase if cache hasn't this data
-                    result = _rep.GetStatusByID(id);
-
-                    if (result == null)
-                    {
-                        throw new NullReferenceException($"Статус с идентификатором: {id} не найдено!");
-                    }
-
-                    //put data into cache
-                    else _cacheService.Add($"MaritalStatus{id}", result, 300);
+                    throw new NullReferenceException($"Статус с идентификатором: {id} не найдено!");
                 }
 
                 return result;
@@ -73,7 +46,6 @@ namespace Prison.App.Business.Providers.Impl
             {
                 throw new ArgumentException($"Идентификатор Места содержания указан неверно.Пожалуйста укажите значение от 0 до {int.MaxValue}");
             }
-
         }
     }
 }

@@ -5,11 +5,23 @@
 }
 
 
-@Html.Partial("DateNavigation")
+
+<div class="navbar navbar-form navbar-static-top" id="dateNavigation">
+    <div class="container-fluid text-center">
+
+        @if (User.IsInRole("editor") || User.IsInRole("admin"))
+        {
+            <div class="nav pull-left">
+                @Html.ActionLink("Добавить", "Create", null, new { @class = "btn btn-primary" })
+            </div>
+        }
+
+        @Html.Partial("DateNavigation")
+    </div>
+</div>
+
 <div id="ResultTable">
-    <p>
-        @Html.ActionLink("Добавить задержанного", "Create")
-    </p>
+
     <table class="table">
         <tr>
             <th>
@@ -44,7 +56,20 @@
                     }
                 </td>
                 <td>
-                    @Html.ActionLink(item.LastName, "Details", new { id = item.DetaineeID })
+                    <div class="btn-group">
+                        <div class="input-group-btn">
+                            @Html.ActionLink(item.LastName, "Details", new { id = item.DetaineeID }, new { @class = "btn btn-link btn-default dropdown-toggle", @data_toggle = "dropdown" })
+                            <ul class="dropdown-menu">
+                                <li>@Html.ActionLink("Подробнее", "Details", new { id = item.DetaineeID })</li>
+                                @if (User.IsInRole("editor") || User.IsInRole("admin"))
+                                {
+                                    <li>@Html.ActionLink("Редактировать", "Edit", new { id = item.DetaineeID })</li>
+                                    <li class="divider"></li>
+                                    <li class="text-danger">@Html.ActionLink("Удалить", "Delete", new { id = item.DetaineeID }, new { @class = "text-danger" })</li>
+                                }
+                            </ul>
+                        </div>
+                    </div>
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.FirstName)
@@ -55,11 +80,7 @@
                 <td>
                     @Html.DisplayFor(modelItem => item.BirstDate)
                 </td>
-                <td>
-                    @Html.ActionLink("Редактировать", "Edit", new { id = item.DetaineeID }) |
-                    @Html.ActionLink("Подробнее", "Details", new { id = item.DetaineeID }) |
-                    @Html.ActionLink("Удалить", "Delete", new { id = item.DetaineeID })
-                </td>
+                <td></td>
             </tr>
         }
 

@@ -22,50 +22,43 @@ namespace Prison.App.Data.Repositories
             return _detaineeContext.GetDetaineeByID(id);
         }
 
-        public IEnumerable<Detainee> GetAllDetainees()
+        public IReadOnlyCollection<Detainee> GetAllDetainees()
         {
            return _detaineeContext.GetAllDetainees();
         }
 
-        public IEnumerable<Detention> GetAllDetentions()
-        {
-            return _detaineeContext.GetAllDetentions();
-        }
-
-        public IEnumerable<Detainee> GetDetaineesByDate(DateTime date)
+        public IReadOnlyCollection<Detainee> GetDetaineesByDate(DateTime date)
         {
             return _detaineeContext.GetDetaineesByDate(date);
         }
 
-        public IEnumerable<MaritalStatus> GetAllMaritalStatuses()
+        public IReadOnlyCollection<MaritalStatus> GetAllMaritalStatuses()
         {
            return _detaineeContext.GetAllMaritalStatuses();
         }
 
-        public IEnumerable<Detainee> GetDetaineesByParams(string DetentionDate=null, string FirstName = null, string LastName = null, string MiddleName = null, string ResidenceAddress = null)
-        {
+        public IReadOnlyCollection<Detainee> Find(string DetentionDate, string FirstName, string LastName, string MiddleName, string ResidenceAddress)
+        { 
             return _detaineeContext.Find(DetentionDate, FirstName, LastName,MiddleName,ResidenceAddress);
         }
 
-        public void ReleaseDetainee(Detention detention)
+        public void ReleaseDetainee(Release release)
         {
-            _detaineeContext.ReleaseDetainee(detention);
+            _detaineeContext.ReleaseDetainee(release);
         }
 
-        public Detention GetLastDetention(int id)
+        public Release GetLastRelease(int id)
         {
-            return _detaineeContext.GetLastDetention(id);
+            return _detaineeContext.GetLastRelease(id);
         }
 
-        public Detention GetDetentionByID(int id)
+        public Release GetRelease(int detaineeID, int detentionID)
         {
-            return _detaineeContext.GetDetentionByID(id);
+            return _detaineeContext.GetRelease(detaineeID, detentionID);
         }
-
         public void Create(Detainee dtn)
         {
             _detaineeContext.Create(dtn);
-
         }
 
         public void Update(Detainee dtn)
@@ -77,6 +70,5 @@ namespace Prison.App.Data.Repositories
         {
             _detaineeContext.Delete(id);
         }
-
     }
 }

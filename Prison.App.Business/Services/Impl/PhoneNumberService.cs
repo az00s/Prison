@@ -23,19 +23,17 @@ namespace Prison.App.Business.Services.Impl
         public void Create(PhoneNumber plc)
         {
             _rep.Create(plc);
+
+            //data changed - list invalid
+            _cacheService.Delete("AllNumbersList");
         }
 
         public void Update(PhoneNumber plc)
         {
             _rep.Update(plc);
 
-            if (_cacheService.Contains($"PhoneNumber{plc.NumberID}"))
-            {
-                _cacheService.Update($"PhoneNumber{plc.NumberID}", plc, 15);
-            }
-
-            else //put data into cache
-                _cacheService.Add($"PhoneNumber{plc.NumberID}", plc, 15);
+            //data changed - list invalid
+            _cacheService.Delete("AllNumbersList");
         }
 
         public void Delete(int id)
@@ -44,8 +42,8 @@ namespace Prison.App.Business.Services.Impl
             {
                 _rep.Delete(id);
 
-                _cacheService.Delete($"PhoneNumber{id}");
-
+                //data changed - list invalid
+                _cacheService.Delete("AllNumbersList");
             }
             else
             {

@@ -5,9 +5,9 @@ namespace Prison.App.Data.Repositories
 {
     public interface IStatusRepository
     {
-        IEnumerable<MaritalStatus> GetAllStatuses();
-        void Create(MaritalStatus emp);
-        void Update(MaritalStatus emp);
+        IReadOnlyCollection<MaritalStatus> GetAllStatuses();
+        void Create(MaritalStatus status);
+        void Update(MaritalStatus status);
         void Delete(int id);
         MaritalStatus GetStatusByID(int id);
     }

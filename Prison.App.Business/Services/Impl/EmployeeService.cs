@@ -19,25 +19,20 @@ namespace Prison.App.Business.Services.Impl
             _cacheService = cacheService;
         }
 
-
         public void Create(Employee emp)
         {
             _rep.Create(emp);
+
+            //data changed - list invalid
+            _cacheService.Delete("AllEmployeeList");
         }
 
         public void Update(Employee emp)
         {
             _rep.Update(emp);
 
-            //get data from cache
-
-            if (_cacheService.Contains($"Employee{emp.EmployeeID}"))
-            {
-                _cacheService.Update($"Employee{emp.EmployeeID}", emp, 300);
-            }
-
-            else //put data into cache
-                _cacheService.Add($"Employee{emp.EmployeeID}", emp, 300);
+            //data changed - list invalid
+            _cacheService.Delete("AllEmployeeList");
         }
 
         public void Delete(int id)
@@ -46,14 +41,13 @@ namespace Prison.App.Business.Services.Impl
             {
                 _rep.Delete(id);
 
-                _cacheService.Delete($"Employee{id}");
-
+                //data changed - list invalid
+                _cacheService.Delete("AllEmployeeList");
             }
             else
             {
                 throw new ArgumentException($"Идентификатор сотрудника указан неверно.Пожалуйста укажите значение от 0 до {int.MaxValue}");
             }
         }
-
     }
 }

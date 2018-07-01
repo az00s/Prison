@@ -10,8 +10,6 @@
         $('.datetimepicker').datetimepicker({ pickTime: false, language: 'ru', format: 'DD.MM.Y' });
     }
 
-    //function UploadFilePath() { $("#upload-file-info").html($(this).val()); }
-
     $(function () {
 
         // We can attach the `fileselect` event to all file inputs on the page
