@@ -4,7 +4,6 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Data;
-using System.Data.Common;
 using System.Data.SqlClient;
 
 namespace Prison.App.Data.DataContext.Impl
@@ -21,11 +20,11 @@ namespace Prison.App.Data.DataContext.Impl
 
         public DataSet ExecuteQuery(string cmdText,IDictionary<string,object> parameters, CommandType commandType)
         {
-            using (IDbConnection connection = new SqlConnection(_connection))
+            using (var connection = new SqlConnection(_connection))
             {
-                using (IDbCommand command = GetCommand(cmdText, connection, parameters, commandType))
+                using (var command = GetCommand(cmdText, connection, parameters, commandType))
                 {
-                    using (DbDataAdapter adapter = new SqlDataAdapter(command as SqlCommand))
+                    using (var adapter = new SqlDataAdapter(command as SqlCommand))
                     {
                         var dataset = new DataSet();
                         adapter.Fill(dataset);
@@ -39,11 +38,11 @@ namespace Prison.App.Data.DataContext.Impl
 
         public void ExecuteNonQuery(string cmdText, IDictionary<string, object> parameters, CommandType commandType)
         {
-            using (IDbConnection connection = new SqlConnection(_connection))
+            using (var connection = new SqlConnection(_connection))
             {
-                using (IDbCommand command = GetCommand(cmdText, connection, parameters, commandType))
+                using (var command = GetCommand(cmdText, connection, parameters, commandType))
                 {
-                    using (DbDataAdapter adapter = new SqlDataAdapter(command as SqlCommand))
+                    using (var adapter = new SqlDataAdapter(command as SqlCommand))
                     {
                         connection.Open();
                         command.ExecuteNonQuery();
@@ -54,11 +53,11 @@ namespace Prison.App.Data.DataContext.Impl
 
         public void ExecuteNonQuery(string cmdText, IDataParameter[] parameters, CommandType commandType)
         {
-            using (IDbConnection connection = new SqlConnection(_connection))
+            using (var connection = new SqlConnection(_connection))
             {
-                using (IDbCommand command = GetCommand(cmdText, connection, parameters, commandType))
+                using (var command = GetCommand(cmdText, connection, parameters, commandType))
                 {
-                    using (DbDataAdapter adapter = new SqlDataAdapter(command as SqlCommand))
+                    using (var adapter = new SqlDataAdapter(command as SqlCommand))
                     {
                         connection.Open();
                         command.ExecuteNonQuery();
@@ -71,7 +70,7 @@ namespace Prison.App.Data.DataContext.Impl
         #region HelperMethods
         private IDbCommand GetCommand(string cmdText, IDbConnection connection, IDictionary<string, object> parameters, CommandType commandType)
         {
-            SqlCommand command=new SqlCommand(cmdText, connection as SqlConnection) { CommandType = commandType };
+            var command=new SqlCommand(cmdText, connection as SqlConnection) { CommandType = commandType };
 
             if (parameters != null)
             {
@@ -84,7 +83,7 @@ namespace Prison.App.Data.DataContext.Impl
 
         private IDbCommand GetCommand(string cmdText, IDbConnection connection, IDataParameter[] parameters, CommandType commandType)
         {
-            IDbCommand command = new SqlCommand(cmdText, connection as SqlConnection) { CommandType = commandType };
+            var command = new SqlCommand(cmdText, connection as SqlConnection) { CommandType = commandType };
             foreach (var item in parameters)
             {
                 command.Parameters.Add(item);
@@ -148,7 +147,7 @@ namespace Prison.App.Data.DataContext.Impl
 
         private DataTable CreateDataTable(Detention detention)
         {
-            DataTable table = new DataTable();
+            var table = new DataTable();
             table.Columns.Add("DetentionID", typeof(int));
             table.Columns.Add("DetentionDate", typeof(DateTime));
             table.Columns.Add("DetainedByWhomID", typeof(int));
@@ -169,7 +168,7 @@ namespace Prison.App.Data.DataContext.Impl
 
         private DataTable CreateDataTable(IEnumerable values, string columnName)
         {
-            DataTable table = new DataTable();
+            var table = new DataTable();
             table.Columns.Add(columnName);
             foreach (var val in values)
             {

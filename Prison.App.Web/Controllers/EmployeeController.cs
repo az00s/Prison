@@ -127,7 +127,7 @@ namespace Prison.App.Web.Controllers
         {
             var Positions = _positionProvider.GetAllPositions();
 
-            List<EmployeeIndexViewModel> ResultList = new List<EmployeeIndexViewModel>();
+            var ResultList = new List<EmployeeIndexViewModel>();
             foreach (Employee item in list)
             {
                 ResultList.Add(new EmployeeIndexViewModel
@@ -147,7 +147,7 @@ namespace Prison.App.Web.Controllers
         {
             var Positions = _positionProvider.GetAllPositions();
 
-            EmployeeIndexViewModel Result = new EmployeeIndexViewModel
+            return new EmployeeIndexViewModel
             {
                 EmployeeID = emp.EmployeeID,
                 FirstName = emp.FirstName,
@@ -156,14 +156,13 @@ namespace Prison.App.Web.Controllers
                 Position = Positions.First(p => p.PositionID == emp.PositionID).PositionName
             };
 
-            return Result;
         }
 
         private EmployeeEditViewModel ToEmployeeEditViewModel(Employee emp)
         {
             var Positions = _positionProvider.GetAllPositions();
 
-            EmployeeEditViewModel Result = new EmployeeEditViewModel
+            return new EmployeeEditViewModel
             {
                 EmployeeID = emp.EmployeeID,
                 FirstName = emp.FirstName,
@@ -173,12 +172,11 @@ namespace Prison.App.Web.Controllers
                 PositionID = emp.PositionID
             };
 
-            return Result;
         }
 
         private Employee ToEmployee(EmployeeEditViewModel model)
         {
-            Employee Result = new Employee
+            return new Employee
             {
                 EmployeeID = model.EmployeeID,
                 FirstName = model.FirstName,
@@ -187,7 +185,6 @@ namespace Prison.App.Web.Controllers
                 PositionID = model.PositionID
             };
 
-            return Result;
         }
 
         #endregion

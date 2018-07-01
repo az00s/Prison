@@ -45,9 +45,9 @@ namespace Prison.Service.Repositories
 
             var list=new List<Blurb>();
 
-            Random rnd = new Random();
+            var rnd = new Random();
 
-            int[] arrOfRandomNum = new int[numOfElements];
+            var arrOfRandomNum = new int[numOfElements];
 
                 for (int i = 0,num=0 ; i < numOfElements; i++)
                 {
@@ -68,7 +68,7 @@ namespace Prison.Service.Repositories
         public byte[] GetByteArrFromImage(string path)
         {
             //get the physical path
-            string physicalPath = HttpContext.Current.Server.MapPath(path);
+            var physicalPath = HttpContext.Current.Server.MapPath(path);
             //read and return byte[]
             return File.ReadAllBytes(physicalPath);
         }

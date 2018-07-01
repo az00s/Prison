@@ -129,7 +129,7 @@ namespace Prison.App.Web.Controllers
         private IReadOnlyCollection<StatusViewModel> ToStatusIndexViewModel(IReadOnlyCollection<MaritalStatus> list)
         {
             var ResultList = new List<StatusViewModel>();
-            foreach (MaritalStatus item in list)
+            foreach (var item in list)
             {
                 ResultList.Add(new StatusViewModel
                 {

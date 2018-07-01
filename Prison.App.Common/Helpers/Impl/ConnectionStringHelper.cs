@@ -21,11 +21,11 @@ namespace Prison.App.Common.Helpers
             }
 
             //get the full absolute path of config file
-            string absolutePath = Path.Combine
+            var absolutePath = Path.Combine
                 (AppDomain.CurrentDomain.SetupInformation.PrivateBinPath, FILE_NAME);
 
             //build configuration object 
-            Configuration conf = ConfigurationManager.OpenMappedExeConfiguration(
+            var conf = ConfigurationManager.OpenMappedExeConfiguration(
                 new ExeConfigurationFileMap { ExeConfigFilename = absolutePath }, ConfigurationUserLevel.None);
 
             //get the connection string from section of config file

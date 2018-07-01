@@ -10,8 +10,8 @@ namespace Prison.App.Web.Helpers
         {
             ArgumentHelper.ThrowExceptionIfNull(arr, "byte[]");
 
-            string base64 = Convert.ToBase64String(arr);
-            string imgSrc = $"data:image;base64,{base64}";
+            var base64 = Convert.ToBase64String(arr);
+            var imgSrc = $"data:image;base64,{base64}";
 
             return imgSrc;
         }

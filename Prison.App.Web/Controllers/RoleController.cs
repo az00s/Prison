@@ -94,7 +94,7 @@ namespace Prison.App.Web.Controllers
 
         private IReadOnlyCollection<RoleViewModel> ToRoleIndexViewModel(IReadOnlyCollection<Role> list)
         {
-            List<RoleViewModel> ResultList = new List<RoleViewModel>();
+            var ResultList = new List<RoleViewModel>();
             foreach (var item in list)
             {
                 ResultList.Add(new RoleViewModel

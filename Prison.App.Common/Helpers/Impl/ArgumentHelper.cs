@@ -42,8 +42,8 @@ namespace Prison.App.Common.Helpers
 
         public static bool IsValidDate(DateTime date)
         {
-            DateTime startDate = DateTime.Parse(START_DATE);
-            DateTime endDate = DateTime.Now;
+            var startDate = DateTime.Parse(START_DATE);
+            var endDate = DateTime.Now;
 
             if (date >= startDate && date <= endDate)
             {

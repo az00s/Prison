@@ -1,11 +1,7 @@
 ﻿using Prison.App.Common.Entities;
 using Prison.App.Common.Helpers;
 using Prison.App.Data.Repositories;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Prison.App.Business.Providers.Impl
 {
@@ -38,7 +34,5 @@ namespace Prison.App.Business.Providers.Impl
         {
             return _rep.GetLast(id);
         }
-
-
     }
 }

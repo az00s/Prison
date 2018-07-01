@@ -256,6 +256,7 @@ namespace Prison.App.Data.Repositories.Impl
                 PhoneNumbers=ToPhoneNumberList(phoneNumberTable)
             };
         }
+
         private IReadOnlyCollection<Detention> ToDetentionList(DataTable table)
         {
             return table.AsEnumerable().Select(row =>
@@ -293,9 +294,5 @@ namespace Prison.App.Data.Repositories.Impl
             ).ToList();
         }
         #endregion
-
-
-
-
     }
 }

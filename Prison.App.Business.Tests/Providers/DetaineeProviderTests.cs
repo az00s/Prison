@@ -99,7 +99,7 @@ namespace Prison.App.Business.Tests
 
 
             //act
-            List<Detainee> resultList = _detaineeProvider.GetAllDetainees().ToList();
+            var resultList = _detaineeProvider.GetAllDetainees().ToList();
 
 
             //assert
@@ -116,7 +116,7 @@ namespace Prison.App.Business.Tests
             _detaineeRepository.Setup(m => m.GetDetaineeByID(It.IsAny<int>())).Returns(_detainee);
 
             //act
-            Detainee result = _detaineeProvider.GetDetaineeByID(id);
+            var result = _detaineeProvider.GetDetaineeByID(id);
 
             //assert
             Assert.AreEqual(id,result.DetaineeID);
@@ -149,11 +149,11 @@ namespace Prison.App.Business.Tests
         public void GetDetaineesByDate_ValidDate_DetaineeListReturned()
         {
             //arrange
-            DateTime date = new DateTime(2018,5,3);
+            var date = new DateTime(2018,5,3);
             _detaineeRepository.Setup(m => m.GetDetaineesByDate(It.IsAny<DateTime>())).Returns(_testlist);
 
             //act
-            List<Detainee> resultList = _detaineeProvider.GetDetaineesByDate(date).ToList();
+            var resultList = _detaineeProvider.GetDetaineesByDate(date).ToList();
 
             //assert
             Assert.IsNotNull(resultList);
@@ -167,7 +167,7 @@ namespace Prison.App.Business.Tests
         public void GetDetaineesByDate_InvalidDate_ExceptionReturned()
         {
             //arrange
-            DateTime date = new DateTime(2019, 5, 3);
+            var date = new DateTime(2019, 5, 3);
 
             //act
             _detaineeProvider.GetDetaineesByDate(date);
@@ -178,7 +178,7 @@ namespace Prison.App.Business.Tests
         public void GetDetaineesByDate_ValidDate_ExceptionReturned()
         {
             //arrange
-            DateTime date = new DateTime(2018, 5, 3);
+            var date = new DateTime(2018, 5, 3);
 
             //act
             _detaineeProvider.GetDetaineesByDate(date);
@@ -191,7 +191,7 @@ namespace Prison.App.Business.Tests
             _detaineeRepository.Setup(m => m.GetAllMaritalStatuses()).Returns(_mStatusTestList);
 
             //act
-            List<MaritalStatus> resultList = _detaineeProvider.GetAllMaritalStatuses().ToList();
+            var resultList = _detaineeProvider.GetAllMaritalStatuses().ToList();
 
 
             //assert
@@ -204,16 +204,16 @@ namespace Prison.App.Business.Tests
         {
             //arrange
             //Arguments:
-            string FirstName = "John";
-            string LastName = "Doe";
-            string MiddleName = "";
-            string ResidenceAddress = "someAddress";
-            string DetentionDate = "03.05.2018";
+            var FirstName = "John";
+            var LastName = "Doe";
+            var MiddleName = "";
+            var ResidenceAddress = "someAddress";
+            var DetentionDate = "03.05.2018";
             _testlist.Add(_detainee);
             _detaineeRepository.Setup(m => m.Find(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>())).Returns(_testlist);
             
             //act
-            List<Detainee> result = _detaineeProvider.Find(DetentionDate,FirstName, LastName,MiddleName,ResidenceAddress).ToList();
+            var result = _detaineeProvider.Find(DetentionDate,FirstName, LastName,MiddleName,ResidenceAddress).ToList();
 
             //assert
             Assert.AreEqual(FirstName, result[2].FirstName);
@@ -229,7 +229,7 @@ namespace Prison.App.Business.Tests
         public void GetDetaineesByParams_InvalidArguments_NullReturned()
         {
             //arrange
-            string DetentionDate = "-----";
+            var DetentionDate = "-----";
             _detaineeRepository.Setup(m => m.Find(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>())).Returns(()=>null);
 
             //act

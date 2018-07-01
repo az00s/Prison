@@ -39,7 +39,7 @@ namespace Prison.App.Web.Controllers
                 return View(model);
             }
 
-           LoginResult result=_logInService.LogIn(model.UserName, model.Password);
+           var result=_logInService.LogIn(model.UserName, model.Password);
 
             switch (result)
             {

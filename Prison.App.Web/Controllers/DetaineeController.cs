@@ -329,7 +329,6 @@ namespace Prison.App.Web.Controllers
             };
         }
 
-
         private Release ToRelease(ReleaseDetaineeViewModel model)
         {
             return new Release
@@ -342,7 +341,6 @@ namespace Prison.App.Web.Controllers
                 PaidAmount = model.PaidAmount,
             };
         }
-
 
         private DetaineeEditViewModel ToDetaineeEditViewModel(Detainee dtn)
         {

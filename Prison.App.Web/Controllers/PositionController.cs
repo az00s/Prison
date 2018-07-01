@@ -118,7 +118,7 @@ namespace Prison.App.Web.Controllers
         private IReadOnlyCollection<PositionViewModel> ToPositionIndexViewModel(IReadOnlyCollection<Position> list)
         {
             var ResultList = new List<PositionViewModel>();
-            foreach (Position item in list)
+            foreach (var item in list)
             {
                 ResultList.Add(new PositionViewModel
                 {

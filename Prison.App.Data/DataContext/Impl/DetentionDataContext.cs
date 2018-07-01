@@ -132,7 +132,6 @@ namespace Prison.App.Data.DataContext.Impl
             };
         }
 
-
         #endregion
     }
 }

@@ -48,14 +48,14 @@ namespace Prison
             var exc = Server.GetLastError();
             Response.Clear();
 
-            string action = "ServerError";
+            var action = "ServerError";
             string entity = null;
 
             if (exc.GetType() == typeof(SqlException))
             {
                 if ((exc as SqlException).Number == 547 && exc.Message.Contains("DELETE"))
                 {
-                    string controller=Request.RequestContext.RouteData.Values["controller"].ToString();
+                    var controller=Request.RequestContext.RouteData.Values["controller"].ToString();
                     action = "CustomError";
                     entity = $"?entity={controller}";
 

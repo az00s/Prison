@@ -9,8 +9,8 @@ namespace Prison.App.Web.Helpers
 
         public static void SaveFileOnServer(HttpPostedFileBase file)
         {
-            string fileName = System.IO.Path.GetFileName(file.FileName);
-            string physicalPath = System.IO.Path.Combine(HostingEnvironment.MapPath("~"+LOCATION_PHOTOS_DETAINEES), fileName);
+            var fileName = System.IO.Path.GetFileName(file.FileName);
+            var physicalPath = System.IO.Path.Combine(HostingEnvironment.MapPath("~"+LOCATION_PHOTOS_DETAINEES), fileName);
             file.SaveAs(physicalPath);
         }
 

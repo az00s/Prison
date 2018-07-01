@@ -22,11 +22,11 @@ namespace Prison.App.Common.Loggers
         private void ConfigureLogger()
         {
             //get base directory
-            string baseDirectory = AppDomain.CurrentDomain.SetupInformation.PrivateBinPath;
+            var baseDirectory = AppDomain.CurrentDomain.SetupInformation.PrivateBinPath;
             //get the path of config file
-            string filePath = Path.Combine(baseDirectory, FILE_NAME);
+            var filePath = Path.Combine(baseDirectory, FILE_NAME);
             //get FileInfo
-            FileInfo fileInfo = new FileInfo(filePath);
+            var fileInfo = new FileInfo(filePath);
 
             if (fileInfo.Exists)
             {

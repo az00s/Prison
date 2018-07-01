@@ -92,11 +92,11 @@ namespace Prison.App.Data.Tests
         public void GetDetaineeByID_ValidId_DetaineeReturned()
         {
             //arrange
-            int id = 3;
+            var id = 3;
             _detaineeContext.Setup(m => m.GetDetaineeByID(It.IsAny<int>())).Returns(_detainee);
 
             //act
-            Detainee result = _detaineeRepository.GetDetaineeByID(id);
+            var result = _detaineeRepository.GetDetaineeByID(id);
 
             //assert
             Assert.AreEqual(id, result.DetaineeID);
@@ -107,10 +107,10 @@ namespace Prison.App.Data.Tests
         public void GetDetaineeByID_InvalidId_NullReturned()
         {
             //arrange
-            int id = -3;
+            var id = -3;
 
             //act
-            Detainee result = _detaineeRepository.GetDetaineeByID(id);
+            var result = _detaineeRepository.GetDetaineeByID(id);
 
             //assert
             Assert.IsNull(result);
@@ -124,7 +124,7 @@ namespace Prison.App.Data.Tests
             _detaineeContext.Setup(m => m.GetAllDetainees()).Returns(_testlist);
 
             //act
-            List<Detainee> resultList = _detaineeRepository.GetAllDetainees().ToList();
+            var resultList = _detaineeRepository.GetAllDetainees().ToList();
 
             //assert
             CollectionAssert.AreEqual(_testlist,resultList);
@@ -147,7 +147,7 @@ namespace Prison.App.Data.Tests
         public void GetDetaineesByDate_ValidDate_DetaineeListReturned()
         {
             //arrange
-            DateTime date = new DateTime(2018, 5, 3);
+            var date = new DateTime(2018, 5, 3);
             _detaineeContext.Setup(m => m.GetDetaineesByDate(It.IsAny<DateTime>())).Returns(_testlist);
 
             //act
@@ -164,7 +164,7 @@ namespace Prison.App.Data.Tests
         public void GetDetaineesByDate_InvalidDate_NullReturned()
         {
             //arrange
-            DateTime date = new DateTime(2019, 5, 3);
+            var date = new DateTime(2019, 5, 3);
 
             //act
             var result = _detaineeRepository.GetDetaineesByDate(date);
@@ -181,7 +181,7 @@ namespace Prison.App.Data.Tests
             _detaineeContext.Setup(m => m.GetAllMaritalStatuses()).Returns(_mStatusTestList);
 
             //act
-            List<MaritalStatus> resultList = _detaineeRepository.GetAllMaritalStatuses().ToList();
+            var resultList = _detaineeRepository.GetAllMaritalStatuses().ToList();
 
             //assert
             CollectionAssert.AreEqual(_mStatusTestList,resultList);
@@ -204,17 +204,17 @@ namespace Prison.App.Data.Tests
         {
             //arrange
             //Arguments:
-            string FirstName = "John";
-            string LastName = "Doe";
-            string MiddleName = "";
-            string ResidenceAddress = "someAddress";
-            string DetentionDate = "03.05.2018";
+            var FirstName = "John";
+            var LastName = "Doe";
+            var MiddleName = "";
+            var ResidenceAddress = "someAddress";
+            var DetentionDate = "03.05.2018";
 
             _testlist.Add(_detainee);
             _detaineeContext.Setup(m => m.Find(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>())).Returns(_testlist);
 
             //act
-            List<Detainee> result = _detaineeRepository.Find(DetentionDate, FirstName, LastName, MiddleName, ResidenceAddress).ToList();
+            var result = _detaineeRepository.Find(DetentionDate, FirstName, LastName, MiddleName, ResidenceAddress).ToList();
 
             //assert
             Assert.AreEqual(FirstName, result[2].FirstName);
@@ -231,11 +231,11 @@ namespace Prison.App.Data.Tests
         {
             //arrange
             //Arguments:
-            string FirstName = "-2";
-            string LastName = "^&";
+            var FirstName = "-2";
+            var LastName = "^&";
             string MiddleName = null;
-            string ResidenceAddress = "___";
-            string DetentionDate = "+";
+            var ResidenceAddress = "___";
+            var DetentionDate = "+";
 
             //act
             var result=_detaineeRepository.Find(DetentionDate, FirstName, LastName, MiddleName, ResidenceAddress);

@@ -31,26 +31,26 @@ namespace Prison.App.Data.Services
         private void InitializeAdService()
         {
             //get the full absolute path of config file
-            string absolutePath = Path.Combine
+            var absolutePath = Path.Combine
                 (AppDomain.CurrentDomain.SetupInformation.PrivateBinPath,FILE_NAME);
 
             //set config file for using it in configuration object
-            ExeConfigurationFileMap fileMap = new ExeConfigurationFileMap
+            var fileMap = new ExeConfigurationFileMap
             {
                 ExeConfigFilename = absolutePath
             };
 
             //get configuration object for using it in ConfigurationChannelFactory
-            Configuration configuration = ConfigurationManager.OpenMappedExeConfiguration(fileMap, ConfigurationUserLevel.None);
+            var configuration = ConfigurationManager.OpenMappedExeConfiguration(fileMap, ConfigurationUserLevel.None);
 
             //get service model section from config
             var serviceModel = ServiceModelSectionGroup.GetSectionGroup(configuration);
 
             //get bindingConfiguration name of first end point
-            string endpointConfigurationName = serviceModel.Client.Endpoints[0].BindingConfiguration;
+            var endpointConfigurationName = serviceModel.Client.Endpoints[0].BindingConfiguration;
 
             //build new factory using configuration object
-            ConfigurationChannelFactory<IAdContract> ChannelFactory = new ConfigurationChannelFactory<IAdContract>(endpointConfigurationName, configuration, null);
+            var ChannelFactory = new ConfigurationChannelFactory<IAdContract>(endpointConfigurationName, configuration, null);
 
             //create channel and initialize field
             _adService = ChannelFactory.CreateChannel();
@@ -64,11 +64,11 @@ namespace Prison.App.Data.Services
             {
                 ((IClientChannel)_adService).Open();
 
-                ServiceReference.Blurb[] listOfBlurbsFromService = _adService.GetRandomElementsFromRep(numOfElements);
+                var listOfBlurbsFromService = _adService.GetRandomElementsFromRep(numOfElements);
 
                 listOfBlurbsOnClient = new List<Common.Entities.Blurb>();
 
-                foreach (ServiceReference.Blurb blrb in listOfBlurbsFromService)
+                foreach (var blrb in listOfBlurbsFromService)
                 {
                     listOfBlurbsOnClient.Add(
                         new Common.Entities.Blurb()
