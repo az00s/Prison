@@ -40,20 +40,32 @@ namespace Prison.App.Data.Services
                 ExeConfigFilename = absolutePath
             };
 
-            //get configuration object for using it in ConfigurationChannelFactory
-            var configuration = ConfigurationManager.OpenMappedExeConfiguration(fileMap, ConfigurationUserLevel.None);
+            try
+            {
+                //get configuration object for using it in ConfigurationChannelFactory
+                var configuration = ConfigurationManager.OpenMappedExeConfiguration(fileMap, ConfigurationUserLevel.None);
 
-            //get service model section from config
-            var serviceModel = ServiceModelSectionGroup.GetSectionGroup(configuration);
+                //get service model section from config
+                var serviceModel = ServiceModelSectionGroup.GetSectionGroup(configuration);
 
-            //get bindingConfiguration name of first end point
-            var endpointConfigurationName = serviceModel.Client.Endpoints[0].BindingConfiguration;
+                //get bindingConfiguration name of first end point
+                var endpointConfigurationName = serviceModel.Client.Endpoints[0].BindingConfiguration;
 
-            //build new factory using configuration object
-            var ChannelFactory = new ConfigurationChannelFactory<IAdContract>(endpointConfigurationName, configuration, null);
+                //build new factory using configuration object
+                var ChannelFactory = new ConfigurationChannelFactory<IAdContract>(endpointConfigurationName, configuration, null);
 
-            //create channel and initialize field
-            _adService = ChannelFactory.CreateChannel();
+                //create channel and initialize field
+                _adService = ChannelFactory.CreateChannel();
+            }
+            catch (ConfigurationErrorsException ex)
+            {
+                _log.Error("Can't read config file or config section! Config file is corrupt or does not exist!",ex);
+            }
+
+            catch (Exception ex)
+            {
+                _log.Error("Can't initialize AdService!", ex);
+            }
         }
 
         public IReadOnlyCollection<IBlurb> GetAds(int numOfElements)
