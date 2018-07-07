@@ -1,6 +1,6 @@
 ﻿namespace Prison.App.Common.Entities.Account
 {
-    public enum LoginResult
+    public enum LoginResult:byte
     {
         Success = 0,
         InvalidPassword = 1,
