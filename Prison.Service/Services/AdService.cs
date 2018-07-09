@@ -9,9 +9,9 @@ namespace Prison.Service.Services
     {
         public IEnumerable<Blurb> GetRandomElementsFromRep(int numOfElements)
         {
-            var rep = new Repository();
+            var rep = new AdRepository();
 
-            var list = rep.GetRandomElementsFromRep(numOfElements);
+            var list = rep.GetRandomAd(numOfElements);
 
             if (list == null)
             {
