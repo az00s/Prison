@@ -1,6 +1,6 @@
 ﻿using System.Runtime.Serialization;
 
-namespace Prison.Service
+namespace Prison.AdvertismentService
 {
     [DataContract]
     public class Blurb

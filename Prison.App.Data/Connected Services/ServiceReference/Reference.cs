@@ -15,7 +15,7 @@ namespace Prison.App.Data.ServiceReference {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Blurb", Namespace="http://schemas.datacontract.org/2004/07/Prison.Service")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Blurb", Namespace="http://schemas.datacontract.org/2004/07/Prison.AdvertismentService")]
     [System.SerializableAttribute()]
     public partial class Blurb : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
@@ -107,14 +107,14 @@ namespace Prison.App.Data.ServiceReference {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(Namespace="http://Prison.Service.Contracts", ConfigurationName="ServiceReference.IAdContract")]
+    [System.ServiceModel.ServiceContractAttribute(Namespace="http://Prison.AdvertismentService.Contracts", ConfigurationName="ServiceReference.IAdContract")]
     public interface IAdContract {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://Prison.Service.Contracts/IAdContract/GetRandomElementsFromRep", ReplyAction="http://Prison.Service.Contracts/IAdContract/GetRandomElementsFromRepResponse")]
-        Prison.App.Data.ServiceReference.Blurb[] GetRandomElementsFromRep(int numOfElements);
+        [System.ServiceModel.OperationContractAttribute(Action="http://Prison.AdvertismentService.Contracts/IAdContract/GetAd", ReplyAction="http://Prison.AdvertismentService.Contracts/IAdContract/GetAdResponse")]
+        Prison.App.Data.ServiceReference.Blurb[] GetAd(int numOfElements);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://Prison.Service.Contracts/IAdContract/GetRandomElementsFromRep", ReplyAction="http://Prison.Service.Contracts/IAdContract/GetRandomElementsFromRepResponse")]
-        System.Threading.Tasks.Task<Prison.App.Data.ServiceReference.Blurb[]> GetRandomElementsFromRepAsync(int numOfElements);
+        [System.ServiceModel.OperationContractAttribute(Action="http://Prison.AdvertismentService.Contracts/IAdContract/GetAd", ReplyAction="http://Prison.AdvertismentService.Contracts/IAdContract/GetAdResponse")]
+        System.Threading.Tasks.Task<Prison.App.Data.ServiceReference.Blurb[]> GetAdAsync(int numOfElements);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -144,12 +144,12 @@ namespace Prison.App.Data.ServiceReference {
                 base(binding, remoteAddress) {
         }
         
-        public Prison.App.Data.ServiceReference.Blurb[] GetRandomElementsFromRep(int numOfElements) {
-            return base.Channel.GetRandomElementsFromRep(numOfElements);
+        public Prison.App.Data.ServiceReference.Blurb[] GetAd(int numOfElements) {
+            return base.Channel.GetAd(numOfElements);
         }
         
-        public System.Threading.Tasks.Task<Prison.App.Data.ServiceReference.Blurb[]> GetRandomElementsFromRepAsync(int numOfElements) {
-            return base.Channel.GetRandomElementsFromRepAsync(numOfElements);
+        public System.Threading.Tasks.Task<Prison.App.Data.ServiceReference.Blurb[]> GetAdAsync(int numOfElements) {
+            return base.Channel.GetAdAsync(numOfElements);
         }
     }
 }

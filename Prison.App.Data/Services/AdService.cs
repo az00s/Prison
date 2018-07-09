@@ -76,7 +76,7 @@ namespace Prison.App.Data.Services
             {
                 ((IClientChannel)_adService).Open();
 
-                var listOfBlurbsFromService = _adService.GetRandomElementsFromRep(numOfElements);
+                var listOfBlurbsFromService = _adService.GetAd(numOfElements);
 
                 listOfBlurbsOnClient = new List<Common.Entities.Blurb>();
 

@@ -1,11 +1,11 @@
 ﻿using System.Reflection;
 using System.Runtime.InteropServices;
 
-[assembly: AssemblyTitle("Prison.Service")]
+[assembly: AssemblyTitle("Prison.AdvertismentService")]
 [assembly: AssemblyDescription("This Assembly contains dependency container")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Prison.Service")]
+[assembly: AssemblyProduct("Prison.AdvertismentService")]
 [assembly: AssemblyCopyright("Copyright © Zinkevich Kanstantsin 2018")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

@@ -27,17 +27,17 @@ namespace Prison.App.Business.Providers
         {
             if (ArgumentHelper.IsValidNumber(numOfElements))
             {
-                var result = _cacheService.Get<IEnumerable<IBlurb>>("Ads");
+                //var result = _cacheService.Get<IEnumerable<IBlurb>>("Ads");
 
-                if (result == null)
-                {
-                    result=_adService.GetAds(numOfElements);
+                //if (result == null)
+                //{
+                  var  result=_adService.GetAds(numOfElements);
 
-                    if (result != null)
-                    {
-                        _cacheService.Add("Ads", result, 20);
-                    }
-                }
+                //    if (result != null)
+                //    {
+                //        _cacheService.Add("Ads", result, 20);
+                //    }
+                //}
 
                 return result;
             }

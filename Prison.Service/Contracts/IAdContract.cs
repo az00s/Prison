@@ -1,13 +1,12 @@
 ﻿using System.Collections.Generic;
 using System.ServiceModel;
 
-namespace Prison.Service.Contracts
+namespace Prison.AdvertismentService.Contracts
 {
-    [ServiceContract(Namespace = "http://Prison.Service.Contracts")]
+    [ServiceContract(Namespace = "http://Prison.AdvertismentService.Contracts")]
     public interface IAdContract
     {
         [OperationContract]
-        IEnumerable<Blurb> GetRandomElementsFromRep(int numOfElements);
-        
+        IEnumerable<Blurb> GetAd(int numOfElements);
     }
 }
