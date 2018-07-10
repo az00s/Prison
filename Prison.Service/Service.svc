@@ -1,1 +1,1 @@
-﻿<%@ ServiceHost Language="C#" Debug="true" Service="Prison.AdvertismentService.Services.AdService"  %>
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="Prison.AdvertismentService.Services.AdService" Factory="Ninject.Extensions.Wcf.NinjectServiceHostFactory" %>

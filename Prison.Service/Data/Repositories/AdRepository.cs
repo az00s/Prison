@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Prison.AdvertismentService.Data.Repositories;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -6,9 +7,9 @@ using System.Web;
 
 namespace Prison.AdvertismentService.Repositories
 {
-    internal class AdRepository
+    internal class AdRepository:IAdRepository
     {
-        private IReadOnlyCollection<Blurb> List { get; }
+        public IReadOnlyCollection<Blurb> List { get; private set; }
 
         public AdRepository()
         {

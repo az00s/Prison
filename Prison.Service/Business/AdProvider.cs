@@ -1,20 +1,20 @@
-﻿using Prison.AdvertismentService.Repositories;
+﻿using Prison.AdvertismentService.Data.Repositories;
 using System.Collections.Generic;
 
 namespace Prison.AdvertismentService.Business
 {
-    internal class AdProvider
+    internal class AdProvider:IAdProvider
     {
-        private AdRepository _rep;
+        private IAdRepository _repository;
 
-        public AdProvider()
+        public AdProvider(IAdRepository repository)
         {
-            _rep = new AdRepository();
+            _repository = repository;
         }
 
         public IReadOnlyCollection<Blurb> GetAd(int numOfElements)
         {
-            return _rep.GetRandomAd(numOfElements);
+            return _repository.GetRandomAd(numOfElements);
         }
     }
 }

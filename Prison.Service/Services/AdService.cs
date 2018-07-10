@@ -5,13 +5,13 @@ using System.ServiceModel;
 
 namespace Prison.AdvertismentService.Services
 {
-    public class AdService:IAdContract
+    internal class AdService:IAdContract
     {
-        private AdProvider _adProvider;
+        private IAdProvider _adProvider;
 
-        public AdService()
+        public AdService(IAdProvider adProvider)
         {
-            _adProvider = new AdProvider();
+            _adProvider = adProvider;
         }
 
         public IEnumerable<Blurb> GetAd(int numOfElements)
