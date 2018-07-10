@@ -4,6 +4,6 @@ namespace Prison.AdvertismentService.Data.Repositories
 {
     public interface IAdRepository
     {
-        IReadOnlyCollection<Blurb> GetRandomAd(int numOfElements);
+        IReadOnlyCollection<Blurb> GetAll();
     }
 }

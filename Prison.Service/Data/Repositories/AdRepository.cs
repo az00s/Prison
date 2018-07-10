@@ -1,8 +1,6 @@
 ﻿using Prison.AdvertismentService.Data.Repositories;
-using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Web;
 
 namespace Prison.AdvertismentService.Repositories
@@ -27,43 +25,12 @@ namespace Prison.AdvertismentService.Repositories
             };
         }
 
-        public IReadOnlyCollection<Blurb> GetRandomAd(int numOfElements)
+        public IReadOnlyCollection<Blurb> GetAll()
         {
-            if (numOfElements > List.Count)
-            {
-                throw new IndexOutOfRangeException("The requested number of items is greater than the items in the list!");
-            }
-
-            if (numOfElements < 1)
-            {
-                throw new ArgumentException("Invalid number of elements!");
-            }
-
-            if (numOfElements == List.Count)
-            {
-                return List;
-            }
-
-            var rnd = new Random();
-
-            var arrOfRandomNum = new int[numOfElements];
-
-                for (int i = 0,num=0 ; i < numOfElements; i++)
-                {
-                    num = rnd.Next(List.Count);
-
-                    while (arrOfRandomNum.Contains(num)) 
-                    {
-                        num = rnd.Next(List.Count);
-                    }
-                
-                    arrOfRandomNum[i] = num;
-                }
-
-            int index = -1;
-            
-            return List.Where(x => { ++index; return arrOfRandomNum.Contains(index) ? true : false; }).ToList();          
+            return List;       
         }
+
+        #region Helpers
 
         private byte[] GetByteArray(string ImagePath)
         {
@@ -72,5 +39,7 @@ namespace Prison.AdvertismentService.Repositories
             //read and return byte[]
             return File.ReadAllBytes(physicalPath);
         }
+
+        #endregion
     }
 }

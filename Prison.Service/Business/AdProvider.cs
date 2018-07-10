@@ -12,9 +12,9 @@ namespace Prison.AdvertismentService.Business
             _repository = repository;
         }
 
-        public IReadOnlyCollection<Blurb> GetAd(int numOfElements)
+        public IReadOnlyCollection<Blurb> GetAll()
         {
-            return _repository.GetRandomAd(numOfElements);
+            return _repository.GetAll();
         }
     }
 }

@@ -4,6 +4,6 @@ namespace Prison.AdvertismentService.Business
 {
     public interface IAdProvider
     {
-        IReadOnlyCollection<Blurb> GetAd(int numOfElements);
+        IReadOnlyCollection<Blurb> GetAll();
     }
 }
