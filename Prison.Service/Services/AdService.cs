@@ -18,6 +18,7 @@ namespace Prison.AdvertismentService.Services
 
         public IEnumerable<Blurb> GetAd(int numOfElements)
         {
+            
             var List = _adProvider.GetAll();
 
             if (numOfElements > List.Count)
@@ -43,7 +44,6 @@ namespace Prison.AdvertismentService.Services
             {
                 throw new FaultException("List of Blurbs is empty!");
             }
-
             return ResultList;
         }
 

@@ -98,7 +98,7 @@ namespace Prison.App.Data.Services
             {
                 _log.Error(ex.Message, ex);
             }
-           
+
             catch (EndpointNotFoundException ex)
             {
                 _log.Error(ex.InnerException.Message,ex);

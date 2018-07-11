@@ -79,7 +79,6 @@
   <ItemGroup>
     <Content Include="Global.asax" />
     <Content Include="Service.svc" />
-    <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Business\AdProvider.cs" />
@@ -90,7 +89,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Ioc\Ioc.cs" />
+    <Compile Include="Ioc\DIModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Data\Repositories\AdRepository.cs" />
     <Compile Include="Services\AdService.cs" />
@@ -98,6 +97,7 @@
   <ItemGroup />
   <ItemGroup>
     <None Include="packages.config" />
+    <Content Include="Web.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
